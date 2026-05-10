@@ -6,6 +6,7 @@
   "homepage": "https://s-shahriar.github.io/general-quiz",
   "scripts": {
     "dev": "vite",
+    "api": "node dev-server.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "lucide-react": "^1.14.0",
+    "mongodb": "^7.2.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },

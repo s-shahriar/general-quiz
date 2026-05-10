@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
+import { fetchRemote, pushRemote } from './lib/api.js'
 import { BANGLA_TOPICS, ENGLISH_TOPICS, ALL_TOPICS } from './data/index.js'
 import HomeScreen   from './components/HomeScreen.jsx'
 import ModeSelect   from './components/ModeSelect.jsx'
@@ -28,13 +29,33 @@ export default function App() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('gq-theme', theme)
+    pushRemote(mastered, theme)
   }, [theme])
+
+  useEffect(() => {
+    fetchRemote().then(remote => {
+      if (!remote) return
+      const local = loadMastered()
+      const merged = new Set([...local, ...remote.mastered])
+      saveMastered(merged)
+      setMastered(merged)
+      if (!localStorage.getItem('gq-theme')) setTheme(remote.theme)
+    })
+  }, [])
 
   const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
   const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null) }
 
-  const nail   = (qid) => setMastered(prev => { const n = new Set(prev); n.add(qid);    saveMastered(n); return n })
-  const unnail = (qid) => setMastered(prev => { const n = new Set(prev); n.delete(qid); saveMastered(n); return n })
+  const nail = (qid) => setMastered(prev => {
+    const next = new Set(prev); next.add(qid); saveMastered(next)
+    pushRemote(next, theme)
+    return next
+  })
+  const unnail = (qid) => setMastered(prev => {
+    const next = new Set(prev); next.delete(qid); saveMastered(next)
+    pushRemote(next, theme)
+    return next
+  })
 
   return (
     <div className="app-root">
