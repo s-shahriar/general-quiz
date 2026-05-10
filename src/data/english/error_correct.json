@@ -1,0 +1,369 @@
+{
+  "topic": "Error Correct",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following sentences is incorrect?",
+      "options": {
+        "a": "She was waiting since four hours.",
+        "b": "I've been swimming from the age of three.",
+        "c": "It's a long time since your last letter.",
+        "d": "All of the above"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "She was waiting since four hours.",
+      "explanation": "Period of time (কত সময় ধরে) বুঝাতে for বসে। She was waiting for four hours। Point of time (কোন সময় থেকে শুরু) বুঝাতে since বসে।"
+    },
+    {
+      "id": 2,
+      "question": "Which of the following sentence is correct?",
+      "options": {
+        "a": "I don't like to discuss about politics",
+        "b": "I don't like to discuss politics",
+        "c": "I don't like discussing politics",
+        "d": "I don't discussing in politics"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "I don't like discussing politics",
+      "explanation": "না-বোধক অর্থে like + verb (ing) হয়। তাছাড়া discuss-এর সাথে about বসে না।"
+    },
+    {
+      "id": 3,
+      "question": "Which sentence is the correct one?",
+      "options": {
+        "a": "A number of students was present in the class.",
+        "b": "The number of his mistakes are immeasurable.",
+        "c": "Every year a lot of children dies of cholera.",
+        "d": "Many a man dies by accident every day."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Many a man dies by accident every day.",
+      "explanation": "A number of = কিছু সংখ্যক, এর পর Noun ও Verb plural হয়। The number of এর পর Noun plural হয়, কিন্তু Verb Singular হয়। Many a এর পর Noun ও Verb Singular হয়।"
+    },
+    {
+      "id": 4,
+      "question": "Choose the correct sentence -",
+      "options": {
+        "a": "The matter was informed to the police.",
+        "b": "The matter has been informed of the police.",
+        "c": "The police was informed of the matter.",
+        "d": "The police were informed of the matter."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "The police were informed of the matter.",
+      "explanation": "The police- Collective noun টি সবসময় 'singular' রূপ, কিন্তু 'plural verb' সহ ব্যবহৃত হয়।"
+    },
+    {
+      "id": 5,
+      "question": "Which of the following sentence is incorrect?",
+      "options": {
+        "a": "There were blizzards over night and the whole town had got snowed.",
+        "b": "I've got good news for you.",
+        "c": "Jim finally got promoted.",
+        "d": "They had only known each other for six months when they got married in Las Vegas."
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "There were blizzards over night and the whole town had got snowed.",
+      "explanation": "Correct form: There were blizzards over night and the whole town got snowed in. ('Get snowed in' means to be unable to leave the town because of heavy falls of snow.)"
+    },
+    {
+      "id": 6,
+      "question": "Neither mr. Karim nor his friends is invited to speak at the seminar.",
+      "options": {
+        "a": "is invited to speak at the seminar.",
+        "b": "are invited to speak at the seminar.",
+        "c": "is speaking at the seminar.",
+        "d": "are speaking on the seminar."
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "are invited to speak at the seminar.",
+      "explanation": "either"
+    },
+    {
+      "id": 7,
+      "question": "________ Bangladesh has many new growth sectors, foreign investors are coming here in great numbers.",
+      "options": {
+        "a": "As a result",
+        "b": "On account of",
+        "c": "Ever since",
+        "d": "Because"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Because",
+      "explanation": "Because- কারণ, সে-কারণে, কেননা, যেহেতু।"
+    },
+    {
+      "id": 8,
+      "question": "The future of the planet doesn't look too good, but there isn't much __",
+      "options": {
+        "a": "I can make about it",
+        "b": "I can do about it",
+        "c": "can I do about it",
+        "d": "I can't do about it"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "I can do about it",
+      "explanation": "Do about something অর্থ কোনো কিছুর সাথে পেরে উঠার জন্য পদক্ষেপ নেয়া। but- এর পর negative বাক্য থাকার কারণে পরের অংশটি positive statement হবে।"
+    },
+    {
+      "id": 9,
+      "question": "There is ___ dust on these books.",
+      "options": {
+        "a": "a good deal of",
+        "b": "a lot of",
+        "c": "plenty of",
+        "d": "lots of"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "a lot of",
+      "explanation": "some, a lot of হয় countable/uncountable noun এর ক্ষেত্রে। lots of হয় countable plural noun এর ক্ষেত্রে।"
+    },
+    {
+      "id": 10,
+      "question": "He did not study hard;_____he passed the examination.",
+      "options": {
+        "a": "But",
+        "b": "Nevertheless",
+        "c": "In case",
+        "d": "Although"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Nevertheless",
+      "explanation": "nevertheless/nonetheless একই অর্থ প্রকাশ করে। এর অর্থ হল তারপরেও/তবুও।"
+    },
+    {
+      "id": 11,
+      "question": "Which of the following sentences is incorrect?",
+      "options": {
+        "a": "The weather of this place is suitable for me.",
+        "b": "He will pay his schooling fees.",
+        "c": "Put your sign here.",
+        "d": "Get this poem by heart."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Get this poem by heart.",
+      "explanation": "Get by heart - মুখস্থ করা। Correct forms: The Climate of this is suitable for me। He will pay his school fees। Put your signature here।"
+    },
+    {
+      "id": 12,
+      "question": "Many people have law degrees, …..",
+      "options": {
+        "a": "but some of them do not practice it.",
+        "b": "however it isn't practised by all.",
+        "c": "but not all of them practice law.",
+        "d": "yet some are not undergoing practices."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "but not all of them practice law.",
+      "explanation": "Many people have law degrees, but not all of them practice law."
+    },
+    {
+      "id": 13,
+      "question": "Whatever the outcome, the momentum in buying gold is unlikely to half anytime soon.",
+      "options": {
+        "a": "are unlikely to half anytime",
+        "b": "is unlikely in halving anytime",
+        "c": "is unlikely to have halved anytime",
+        "d": "No correction required"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "No correction required",
+      "explanation": "The original sentence is absolutely correct and hence the bold part needs no replacement."
+    },
+    {
+      "id": 14,
+      "question": "Most of us recognise our moral obligation towards leave children a decent future, which obviously includes a decent planet.",
+      "options": {
+        "a": "our moral obligations towards",
+        "b": "our moral obligatory towards",
+        "c": "our moral obligatory to",
+        "d": "our moral obligation to"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "our moral obligation to",
+      "explanation": "The word 'obligation' must be followed by the preposition 'to' instead of 'towards' in this context."
+    },
+    {
+      "id": 15,
+      "question": "Select the sentence which is grammatically wrong among the given sentences.",
+      "options": {
+        "a": "He has no desire for fame.",
+        "b": "I intend on going to Calcutta.",
+        "c": "He is too miserly in part with his money.",
+        "d": "He has invited me for dinner."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He has invited me for dinner.",
+      "explanation": "Corrected Sentence: \"He has invited me to dinner.\""
+    },
+    {
+      "id": 16,
+      "question": "Choose the correct word to complete the sentence: He bought ______.",
+      "options": {
+        "a": "two pair of shoes",
+        "b": "two pairs of shoes",
+        "c": "two pairs of shoe",
+        "d": "two pair of shoe"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "two pair of shoes",
+      "explanation": "Definite numeral adjective (এখানে two) থাকায় pair হবে; pairs নয়। pair দ্বারা যেহেতু plural sense প্রকাশ করে তাই shoes ব্যবহার করতে হবে।"
+    },
+    {
+      "id": 17,
+      "question": "Choose the correct sentence:",
+      "options": {
+        "a": "His English Knowledge is good.",
+        "b": "I have a little friend here.",
+        "c": "He has a strong headache.",
+        "d": "He has a small amount of money."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He has a small amount of money.",
+      "explanation": "Amount/number এর আগে a small বসে। Correct forms: His Knowledge of English is good। I have a few friends here। He has a bad headache।"
+    },
+    {
+      "id": 18,
+      "question": "Can you tell me why did you not speak the truth?",
+      "options": {
+        "a": "why did not you speak",
+        "b": "that why did you not speak",
+        "c": "why you did not speak",
+        "d": "why did you not spoke"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "why you did not speak",
+      "explanation": "Embedded question এ auxiliary verb main question এর subject এর পরে আসে। Do you know where he is? (not where is he?)"
+    },
+    {
+      "id": 19,
+      "question": "Which one is the correct sentence?",
+      "options": {
+        "a": "The man advanced as if he has killed me.",
+        "b": "It is high time I do the work.",
+        "c": "The wind was made blow.",
+        "d": "He did everything except follow my example."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He did everything except follow my example.",
+      "explanation": "অপশন a) has killed এর স্থলে had killed হবে। অপশন b) do এর স্থলে did হবে। অপশন c) made to blow হবে। Correct: He did everything except follow my example।"
+    },
+    {
+      "id": 20,
+      "question": "Choose the correct sentence -",
+      "options": {
+        "a": "Let he and you be witness",
+        "b": "Let you and him be witnesses",
+        "c": "Let you and he be witness",
+        "d": "Let you and he be witness"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Let you and him be witnesses",
+      "explanation": "Let + Pronoun এর Object form [you (2nd) → him (3rd) → I (1st)] + verb। Correct: Let you and him be witnesses।"
+    },
+    {
+      "id": 21,
+      "question": "Choose the correct sentence - (Question 49)",
+      "options": {
+        "a": "I will go after a month.",
+        "b": "He absented from the school",
+        "c": "One of the passers-by rescued her.",
+        "d": "I could not make justice to it."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "One of the passers-by rescued her.",
+      "explanation": "অপশন a) after এর স্থলে in হবে। অপশন b) absented এর পরে himself হবে। অপশন d) make এর স্থলে do হবে। do justice = সুবিচার করা।"
+    },
+    {
+      "id": 22,
+      "question": "(a) Unlike most liquids, which contract when they (b) solidify, water expands (c) by nine (d) percentage when it freezes. Which underlined word is not the correct word?",
+      "options": {
+        "a": "unlike most",
+        "b": "solidify",
+        "c": "by",
+        "d": "percentage"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "percentage",
+      "explanation": "The correct word should be \"percent\" not \"percentage\" in this context."
+    },
+    {
+      "id": 23,
+      "question": "A bus arrived after we have been waiting about ten minutes. Find the error.",
+      "options": {
+        "a": "arrived",
+        "b": "have",
+        "c": "been",
+        "d": "about"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "have",
+      "explanation": "have এর স্থলে had হবে।"
+    },
+    {
+      "id": 24,
+      "question": "Although the two families have always been involved in some form of bickering since they moved into the same neighborhood, there was no major quarrel for the past two years. Find the error.",
+      "options": {
+        "a": "have always been",
+        "b": "in some form",
+        "c": "since",
+        "d": "was no major quarrel"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "was no major quarrel",
+      "explanation": "was no major quarrel এর স্থলে has been no major quarrel হবে।"
+    },
+    {
+      "id": 25,
+      "question": "Find error: The government has several bureauex dedicated to environmental conservation.",
+      "options": {
+        "a": "several",
+        "b": "bureauex",
+        "c": "environmental conservation",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "bureauex",
+      "explanation": "Bureau এর plural form হয় Bureaux or Bureaus। Bureauex বলে কোনো শব্দ হয় না।"
+    },
+    {
+      "id": 26,
+      "question": "Find out whether there is any grammatical error: Scarcely had / I arrived than / the train left.",
+      "options": {
+        "a": "Scarcely had",
+        "b": "I arrived than",
+        "c": "the train left",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "I arrived than",
+      "explanation": "Solution: 'I arrived when'. Scarcely...when ব্যবহার হয়।"
+    },
+    {
+      "id": 27,
+      "question": "A bus arrived after we have been waiting about ten minutes. Find the error. (second instance)",
+      "options": {
+        "a": "arrived",
+        "b": "have",
+        "c": "been",
+        "d": "about"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "have",
+      "explanation": "have এর স্থলে had হবে।"
+    },
+    {
+      "id": 28,
+      "question": "Although the two families have always been involved in some form of bickering since they moved into the same neighborhood, there was no major quarrel for the past two years. (second instance)",
+      "options": {
+        "a": "have always been",
+        "b": "in some form",
+        "c": "since",
+        "d": "was no major quarrel"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "was no major quarrel",
+      "explanation": "was no major quarrel এর স্থলে has been no major quarrel হবে।"
+    }
+  ]
+}

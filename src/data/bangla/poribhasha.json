@@ -1,0 +1,421 @@
+{
+  "topic": "পরিভাষা",
+  "questions": [
+    {
+      "id": 1,
+      "question": "'পরিভাষা' শব্দটি কী অর্থ জ্ঞাপন করে?",
+      "options": {
+        "a": "সংক্ষেপনার্থ",
+        "b": "ব্যঞ্জনাত্মক",
+        "c": "রক্ষণাত্মক",
+        "d": "সম্মানার্থক\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সংক্ষেপনার্থ",
+      "explanation": "'পরিভাষা'-র আক্ষরিক অর্থ বিশেষ ভাষা। বাংলা ভাষায় প্রচলিত বিদেশি শব্দের ভাবানুবাদমূলক প্রতিশব্দকে পারিভাষিক শব্দ বলে।"
+    },
+    {
+      "id": 2,
+      "question": "'Xerophytes' এর বাংলা কি হবে?",
+      "options": {
+        "a": "পরিবেশ",
+        "b": "উদ্ভিদ",
+        "c": "জাঙ্গল",
+        "d": "বাগান\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জাঙ্গল",
+      "explanation": "Xerophytes = জাঙ্গল (মরু অঞ্চলের উদ্ভিদ)।"
+    },
+    {
+      "id": 3,
+      "question": "'Lien' এর বাংলা অর্থ কোনটি?",
+      "options": {
+        "a": "পরশর্ত",
+        "b": "পূর্বশর্ত",
+        "c": "মিথ্যুক",
+        "d": "চুক্তি\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পূর্বশর্ত",
+      "explanation": "Lien = পূর্বশর্ত। Contract = চুক্তি।"
+    },
+    {
+      "id": 4,
+      "question": "'Buoyancy' এর বাংলা অর্থ কোনটি?",
+      "options": {
+        "a": "আমলাতন্ত্র",
+        "b": "গুচ্ছ",
+        "c": "নিমগ্নতা",
+        "d": "প্লবতা\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্লবতা",
+      "explanation": "Buoyancy = প্লবতা। Bureaucracy = আমলাতন্ত্র, Bunch = গুচ্ছ।"
+    },
+    {
+      "id": 5,
+      "question": "Hymn কী?",
+      "options": {
+        "a": "শোককবিতা",
+        "b": "প্রার্থনাসংগীত",
+        "c": "কোরাসগান",
+        "d": "খণ্ড কবিতা\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রার্থনাসংগীত",
+      "explanation": "Hymn = প্রার্থনাসংগীত। Elegy = শোককবিতা, Ode = কোরাসগান।"
+    },
+    {
+      "id": 6,
+      "question": "'Artisan' শব্দের বাংলা পরিভাষা-",
+      "options": {
+        "a": "কারিগর",
+        "b": "কৃত্রিমতা",
+        "c": "গ্রহণ",
+        "d": "কারুশিল্প\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কারিগর",
+      "explanation": "Artisan = কারিগর। Artificiality = কৃত্রিমতা, Crafts = কারুশিল্প।"
+    },
+    {
+      "id": 7,
+      "question": "'Syntax' শব্দটির বাংলা পারিভাষিক রূপ হলো-",
+      "options": {
+        "a": "শব্দ-প্রকরণ",
+        "b": "ধ্বনি-প্রকরণ",
+        "c": "বাক্য-প্রকরণ",
+        "d": "শব্দ-গঠন\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাক্য-প্রকরণ",
+      "explanation": "Syntax = বাক্য-প্রকরণ। Morphology = শব্দ-প্রকরণ, Phonology = ধ্বনি-প্রকরণ।"
+    },
+    {
+      "id": 8,
+      "question": "'Beauty Sleep' বলতে বোঝায়-",
+      "options": {
+        "a": "গভীর ঘুম",
+        "b": "প্রথম রাত্রির ঘুম",
+        "c": "সুন্দর ঘুম",
+        "d": "দুপুর বেলার ঘুম\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রথম রাত্রির ঘুম",
+      "explanation": "Beauty Sleep = প্রথম রাত্রির ঘুম।"
+    },
+    {
+      "id": 9,
+      "question": "'Bad Blood'-এর অর্থ-",
+      "options": {
+        "a": "খারাপ মানুষ",
+        "b": "কুলাঙ্গার",
+        "c": "মনোমালিন্য",
+        "d": "দানবীয়\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মনোমালিন্য",
+      "explanation": "Bad Blood = মনোমালিন্য।"
+    },
+    {
+      "id": 10,
+      "question": "'Epicurism' এর যথার্থ পরিভাষা-",
+      "options": {
+        "a": "নিয়তিবাদ",
+        "b": "ভোগবাদ",
+        "c": "পরিবেশবাদ",
+        "d": "অস্তিত্ববাদ\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভোগবাদ",
+      "explanation": "Epicurism = ভোগবাদ। Fatalism = নিয়তিবাদ, Existentialism = অস্তিত্ববাদ।"
+    },
+    {
+      "id": 11,
+      "question": "'Loggerheads' এর অর্থ কি?",
+      "options": {
+        "a": "নির্বোধ",
+        "b": "মাথাধরা",
+        "c": "দা-কুমড়া সম্পর্ক",
+        "d": "হরিহর আত্মা\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দা-কুমড়া সম্পর্ক",
+      "explanation": "Loggerheads = দা-কুমড়া সম্পর্ক।"
+    },
+    {
+      "id": 12,
+      "question": "Apartheid এর পারিভাষিক অর্থ-",
+      "options": {
+        "a": "হুমকি",
+        "b": "বর্ণবৈষম্য",
+        "c": "দেউলিয়া",
+        "d": "ত্যাগ\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বর্ণবৈষম্য",
+      "explanation": "Apartheid = বর্ণবৈষম্য। Bankrupt = দেউলিয়া।"
+    },
+    {
+      "id": 13,
+      "question": "'Mania' শব্দটির পারিভাষিক অর্থ-",
+      "options": {
+        "a": "দেউলিয়া",
+        "b": "সংকলক",
+        "c": "বাতিক",
+        "d": "আধিক্য\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাতিক",
+      "explanation": "Mania = বাতিক। Bankrupt = দেউলিয়া, Compiler = সংকলক, Surplus = আধিক্য।"
+    },
+    {
+      "id": 14,
+      "question": "'Absconder'-এর পারিভাষিক অর্থ-",
+      "options": {
+        "a": "গুপ্তহত্যা",
+        "b": "ক্রোক",
+        "c": "পথিকৃৎ",
+        "d": "ফেরারি\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ফেরারি",
+      "explanation": "Absconder = ফেরারি।"
+    },
+    {
+      "id": 15,
+      "question": "'Divulge' অর্থ-",
+      "options": {
+        "a": "অল্প পরিমাণ",
+        "b": "প্রকাশ করা",
+        "c": "বেশি পরিমাণ",
+        "d": "ছড়িয়ে দেওয়া\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রকাশ করা",
+      "explanation": "Divulge = প্রকাশ করা।"
+    },
+    {
+      "id": 16,
+      "question": "'Constituency' এর বাংলা-",
+      "options": {
+        "a": "সংবিধান",
+        "b": "সংগঠন",
+        "c": "নির্মাণ সামগ্রী",
+        "d": "নির্বাচনী এলাকা\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নির্বাচনী এলাকা",
+      "explanation": "Constituency = নির্বাচনী এলাকা।"
+    },
+    {
+      "id": 17,
+      "question": "'Intellectual' শব্দের বাংলা অর্থ-",
+      "options": {
+        "a": "বুদ্ধিমান",
+        "b": "মননশীল",
+        "c": "বুদ্ধিজীবী",
+        "d": "মেধাবী\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বুদ্ধিজীবী",
+      "explanation": "Intellectual = বুদ্ধিজীবী।"
+    },
+    {
+      "id": 18,
+      "question": "'অদ্বৈতবাদ' শব্দের ইংরেজি পারিভাষিক শব্দ কোনটি?",
+      "options": {
+        "a": "Surrealism",
+        "b": "Rationalism",
+        "c": "Feudalism",
+        "d": "Monism\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Monism",
+      "explanation": "Monism=অদ্বৈতবাদ। Feudalism=সামন্ততন্ত্র। Rationalism=যুক্তিবাদ। Surrealism=অধিবাস্তববাদ।"
+    },
+    {
+      "id": 19,
+      "question": "'Call money' শব্দের সঠিক পারিভাষিক শব্দ কোনটি?",
+      "options": {
+        "a": "মাল",
+        "b": "ডাক মাশুল",
+        "c": "পাওনা টাকা আদায়",
+        "d": "তলবি টাকা\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তলবি টাকা",
+      "explanation": "Call money=তলবি টাকা। Cargo=মাল।"
+    },
+    {
+      "id": 20,
+      "question": "'Medical Officer' শব্দের পারিভাষিক শব্দ হলো—",
+      "options": {
+        "a": "স্বাস্থ্য-কর্মকর্তা",
+        "b": "চিকিৎসা কর্মকর্তা",
+        "c": "রাষ্ট্রদূত",
+        "d": "প্রধান কার্যালয়\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "চিকিৎসা কর্মকর্তা",
+      "explanation": "Medical Officer=চিকিৎসা কর্মকর্তা। Health Officer=স্বাস্থ্য-কর্মকর্তা। Head Office=প্রধান কার্যালয়। High Commissioner=রাষ্ট্রদূত।"
+    },
+    {
+      "id": 21,
+      "question": "'Fauna' শব্দের বাংলা পরিভাষা কোনটি?",
+      "options": {
+        "a": "উদ্ভিদকুল",
+        "b": "প্রাণিকুল",
+        "c": "জীববৈচিত্র্য",
+        "d": "সবগুলোই\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রাণিকুল",
+      "explanation": "Fauna=প্রাণিকুল। Flora=উদ্ভিদকুল।"
+    },
+    {
+      "id": 22,
+      "question": "'Semantic' এর বাংলা পরিভাষা কোনটি?",
+      "options": {
+        "a": "ধ্বনিতত্ত্ব",
+        "b": "রূপতত্ত্ব",
+        "c": "বাক্যতত্ত্ব",
+        "d": "অর্থতত্ত্ব\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অর্থতত্ত্ব",
+      "explanation": "Semantic=অর্থতত্ত্ব। Phonology=ধ্বনিতত্ত্ব। Morphology=রূপতত্ত্ব। Syntax=বাক্যতত্ত্ব।"
+    },
+    {
+      "id": 23,
+      "question": "'Hand out' শব্দের পরিভাষা কোনটি?",
+      "options": {
+        "a": "তথ্যপত্র",
+        "b": "প্রচারপত্র",
+        "c": "হস্তপত্র",
+        "d": "জ্ঞাপনপত্র\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জ্ঞাপনপত্র",
+      "explanation": "Hand out=জ্ঞাপনপত্র। Hand Bill=প্রচারপত্র।"
+    },
+    {
+      "id": 24,
+      "question": "'Filing' শব্দের বাংলা পরিভাষা-",
+      "options": {
+        "a": "নথি রক্ষা",
+        "b": "নথি দাখিল",
+        "c": "নথিভুক্তি",
+        "d": "নথি খাতা\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নথিভুক্তি",
+      "explanation": "Filing=নথিভুক্তি।"
+    },
+    {
+      "id": 25,
+      "question": "'Galaxy' শব্দের বাংলা অর্থ কোনটি?",
+      "options": {
+        "a": "ছায়াপথ",
+        "b": "মহাকাশ রশ্মি",
+        "c": "মহাপ্রলয়",
+        "d": "মহাজাগতিক\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ছায়াপথ",
+      "explanation": "Galaxy=ছায়াপথ। Cosmic=মহাজাগতিক।"
+    },
+    {
+      "id": 26,
+      "question": "'Animal husbandry' শব্দের বাংলা পরিভাষা-",
+      "options": {
+        "a": "গোরপালন",
+        "b": "পশুপালন",
+        "c": "ছাগলপালন",
+        "d": "মুরগিপালন\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পশুপালন",
+      "explanation": "Animal husbandry=পশুপালন।"
+    },
+    {
+      "id": 27,
+      "question": "'Educationist' শব্দের বাংলা পরিভাষা-",
+      "options": {
+        "a": "শিক্ষাসচিব",
+        "b": "শিক্ষাবিদ",
+        "c": "শিক্ষকবৃন্দ",
+        "d": "শিক্ষামন্ত্রী\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শিক্ষাবিদ",
+      "explanation": "Educationist=শিক্ষাবিদ।"
+    },
+    {
+      "id": 28,
+      "question": "'Notification' শব্দের পরিভাষা কোনটি?",
+      "options": {
+        "a": "বিজ্ঞপ্তি",
+        "b": "পরিপত্র",
+        "c": "প্রজ্ঞাপন",
+        "d": "বিবরণ\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রজ্ঞাপন",
+      "explanation": "Notification=প্রজ্ঞাপন।"
+    },
+    {
+      "id": 29,
+      "question": "'Ordnance' শব্দটির বাংলা প্রতিশব্দ-",
+      "options": {
+        "a": "অধ্যাদেশ",
+        "b": "সমরাস্ত্র",
+        "c": "ক্রমান্বয়ে",
+        "d": "আদেশ\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সমরাস্ত্র",
+      "explanation": "Ordnance=সমরাস্ত্র (যুদ্ধের সরঞ্জাম)। Ordinance=অধ্যাদেশ। Gradually=ক্রমান্বয়ে।"
+    },
+    {
+      "id": 30,
+      "question": "'Licence' শব্দের বাংলা পরিভাষা-",
+      "options": {
+        "a": "ছাড়পত্র",
+        "b": "নিয়োগপত্র",
+        "c": "পরিচয়পত্র",
+        "d": "অনুজ্ঞাপত্র\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনুজ্ঞাপত্র",
+      "explanation": "Licence=অনুজ্ঞাপত্র।"
+    },
+    {
+      "id": 31,
+      "question": "'Anaptyxis' শব্দের সঠিক অর্থ কোনটি?",
+      "options": {
+        "a": "আদি স্বরাগম",
+        "b": "মধ্য স্বরাগম",
+        "c": "অন্ত স্বরাগম",
+        "d": "অপিনিহিত\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মধ্য স্বরাগম",
+      "explanation": "Anaptyxis=মধ্যস্বরাগম। Prothesis=আদি স্বরাগম। Apocope=অন্ত স্বরাগম।"
+    },
+    {
+      "id": 32,
+      "question": "'Apocope' এর বাংলা প্রতিশব্দ কী?",
+      "options": {
+        "a": "অভিশ্রুতি",
+        "b": "মধ্যস্বর লোপ",
+        "c": "অন্ত্যস্বর লোপ",
+        "d": "সমীভবন\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অন্ত্যস্বর লোপ",
+      "explanation": "Apocope=অন্ত্যস্বর লোপ। Umlaut=অভিশ্রুতি। Syncope=মধ্যস্বর লোপ। Assimilation=সমীভবন।"
+    }
+  ]
+}

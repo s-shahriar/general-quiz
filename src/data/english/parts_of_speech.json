@@ -1,0 +1,525 @@
+{
+  "topic": "Parts of Speech",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Noun can be modified with-",
+      "options": {
+        "a": "adjective",
+        "b": "adverb",
+        "c": "pronoun",
+        "d": "both a and b"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "adjective",
+      "explanation": "noun কেবল adjective দ্বারাই modified হতে পারে। যে word ই noun কে modify করবে সেটি adjective বলেই গণ্য হবে।"
+    },
+    {
+      "id": 2,
+      "question": "He actually wanted to have motherly affection from her. Here 'motherly' is ___",
+      "options": {
+        "a": "an adverb",
+        "b": "an adjective",
+        "c": "a noun",
+        "d": "none of them"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "an adjective",
+      "explanation": "Noun এর পূর্বে যদি কোন Noun, Article কিংবা Pronoun বসে তাহলে তারা Adjective এর মত কাজ করে। এখানে affection হচ্ছে noun, তার আগে বসে 'motherly' শব্দটি adjective এর কাজ করেছে।"
+    },
+    {
+      "id": 3,
+      "question": "I do not have much money to purchase a car. The word 'much' is ___",
+      "options": {
+        "a": "Adverb",
+        "b": "Noun",
+        "c": "adjective",
+        "d": "pronoun"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "adjective",
+      "explanation": "বাক্যে noun 'money' এর পূর্বে much ব্যবহৃত হয়েছে টাকার পরিমাণ বুঝানোর জন্য। সুতরাং much শব্দটি adjective। Here much is a quantitative adjective।"
+    },
+    {
+      "id": 4,
+      "question": "The word 'neutral' is—",
+      "options": {
+        "a": "an adverb",
+        "b": "verb",
+        "c": "an adjective",
+        "d": "noun"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "an adjective",
+      "explanation": "The word 'neutral' is an adjective because it is used to describe a noun or pronoun. Such as 'Neutral Color' here Neutral describes the color, meaning it's not intense or bright, but more balanced."
+    },
+    {
+      "id": 5,
+      "question": "It costs about 500 tk. Here 'about' is a/an-",
+      "options": {
+        "a": "adverb",
+        "b": "preposition",
+        "c": "adjective",
+        "d": "conjunction"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "adverb",
+      "explanation": "It costs about 500 tk. - এটার দাম প্রায় ৫০০ টাকা। উল্লেখ about এর অর্থ \"প্রায়\" হলে তা adverb হয়। তাই \"about\" এখানে adverb."
+    },
+    {
+      "id": 6,
+      "question": "Come on, it's time to go home. Here 'home' is a/an-",
+      "options": {
+        "a": "noun",
+        "b": "adjective",
+        "c": "adverb",
+        "d": "pronoun"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "adverb",
+      "explanation": "Here 'home' is being used as a modifier of verb 'go'. Hence it is an adverb."
+    },
+    {
+      "id": 7,
+      "question": "Shihab always runs quite last. Here 'always' is a/an-",
+      "options": {
+        "a": "preposition",
+        "b": "adjective",
+        "c": "adverb",
+        "d": "verb"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "adverb",
+      "explanation": "বাক্যে always শব্দটি verb-এর কার্যসম্পন্ন হওয়ার সময় নির্দেশ করায় always শব্দটি adverb।"
+    },
+    {
+      "id": 8,
+      "question": "Identify the correct parts of speech of the underlined word. The days in all places are hotter than the nights.",
+      "options": {
+        "a": "Interjection",
+        "b": "Preposition",
+        "c": "conjunction",
+        "d": "Adverb"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "conjunction",
+      "explanation": "যে word দুটি শব্দ বা বাক্যকে সংযুক্ত করে, তাকে Conjunction বলে। দুটি অবস্থার তুলনা করা বোঝাতেও \"than\" Conjunction টি ব্যবহৃত হয়।"
+    },
+    {
+      "id": 9,
+      "question": "I bought these flowers for you. The underlined word 'these' is a -",
+      "options": {
+        "a": "Conjunction",
+        "b": "Adjective",
+        "c": "Pronoun",
+        "d": "Adverb"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Adjective",
+      "explanation": "This, that, these, those বাক্যে স্বতন্ত্র ভাবে ব্যবহৃত হলে Pronoun। আর যদি এদের দ্বারা এর পরের noun টি modify হয় তবে তা adjective। এখানে 'these' noun 'flowers' কে modify করেছে।"
+    },
+    {
+      "id": 10,
+      "question": "What part of speech is 'scarcity'?",
+      "options": {
+        "a": "verb",
+        "b": "adverb",
+        "c": "noun",
+        "d": "adjective"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "noun",
+      "explanation": "সাধারণত 'ity' suffix যোগে noun গঠিত হয়। সুতরাং scarcity (দুষ্প্রাপ্তা, আকাল) শব্দটি noun।"
+    },
+    {
+      "id": 11,
+      "question": "Frailty, thy name is women. Here 'frailty' is a/an-",
+      "options": {
+        "a": "noun",
+        "b": "adjective",
+        "c": "adverb",
+        "d": "verb"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "noun",
+      "explanation": "Frailty শব্দটি noun যার অর্থ দুর্বলতা। 'Frailty, thy name is woman' বাক্যটি William Shakespeare এর বিখ্যাত Tragedy 'Hamlet' থেকে নেওয়া।"
+    },
+    {
+      "id": 12,
+      "question": "The time for sleep is past. The word 'past' in the above sentence is a/an-",
+      "options": {
+        "a": "noun",
+        "b": "adverb",
+        "c": "preposition",
+        "d": "adjective"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "adjective",
+      "explanation": "'Be' verb-এর পরে past শব্দটি adjective হিসেবে ব্যবহৃত হয়েছে। The time কে modify করছে, তাই past এখানে adjective।"
+    },
+    {
+      "id": 13,
+      "question": "What is the noun form of the word 'Indeterminate'?",
+      "options": {
+        "a": "Indeterminacy",
+        "b": "Indetermination",
+        "c": "Indeterminateness",
+        "d": "All of these"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "All of these",
+      "explanation": "Indeterminate (adjective) অর্থ অনির্দিষ্ট; অনিয়ত; অস্পষ্ট। এর সব তিনটি noun form সঠিক।"
+    },
+    {
+      "id": 14,
+      "question": "'soldier' is a/an ___ Noun",
+      "options": {
+        "a": "Common",
+        "b": "Proper",
+        "c": "Collective",
+        "d": "Material"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Common",
+      "explanation": "Soldier অর্থ সৈনিক। যা একটি নির্দিষ্ট শ্রেণির মানুষকে বোঝাচ্ছে, তাই এটি common noun। Army- collective কিন্তু তার একজন সৈনিক soldier যেটি একটি common noun।"
+    },
+    {
+      "id": 15,
+      "question": "Delete four _____ and add two fours.",
+      "options": {
+        "a": "5",
+        "b": "5's",
+        "c": "five",
+        "d": "5s"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "5's",
+      "explanation": "প্রশ্নোক্ত বাকে যেহেতু four সংখ্যাবচক শব্দ আছে, তাই এর পরে যেটি বসবে সেটিও plural হবে। সুতরাং five এর plural form- 5's/ fives।"
+    },
+    {
+      "id": 16,
+      "question": "Which of the following words has the same singular and plural?",
+      "options": {
+        "a": "Alms",
+        "b": "Eaves",
+        "c": "Alphabet",
+        "d": "Forget me not"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Alphabet",
+      "explanation": "Alphabet মানেই বর্ণমালা যার singular এবং plural একই। alms- ভিক্ষা, Eaves- ঘরের ছাউনি এই শব্দ দুইটি সর্বদাই plural হিসেবে ব্যবহৃত হয়।"
+    },
+    {
+      "id": 17,
+      "question": "Identify the word which remains the same in its plural form-",
+      "options": {
+        "a": "thesis",
+        "b": "swine",
+        "c": "intention",
+        "d": "mouse"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "swine",
+      "explanation": "Intention (singular)- Intentions (Plural). Mouse (singular)- Mice (Plural). Thesis (singular)- Theses (Plural). Swine অর্থ শুকর ছানা, যার singular/plural form একই।"
+    },
+    {
+      "id": 18,
+      "question": "The water of this jar is very pure. Here \"water\" is-",
+      "options": {
+        "a": "material noun",
+        "b": "common noun",
+        "c": "abstract noun",
+        "d": "proper noun"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "common noun",
+      "explanation": "সাধারণত 'water' material noun, কিন্তু এর আগে 'the' বসাতে এটি এখানে common noun।"
+    },
+    {
+      "id": 19,
+      "question": "'Almighty' is a/an-",
+      "options": {
+        "a": "common noun",
+        "b": "abstract noun",
+        "c": "collective noun",
+        "d": "proper noun"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "proper noun",
+      "explanation": "সৃষ্টিকর্তার নাম মূলত proper noun হয়।"
+    },
+    {
+      "id": 20,
+      "question": "There is no mother but loves her child. Here \"but\" is-",
+      "options": {
+        "a": "relative pronoun",
+        "b": "conjuntive pronoun",
+        "c": "personal pronoun",
+        "d": "reciprocal pronoun"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "relative pronoun",
+      "explanation": "যদিও \"but\" একটি conjunction, তবে এই বাকে relative pronoun 'who' এর মতো অর্থ দিচ্ছে। There is no mother but loves her child. এখানে এমন কোনো মা নেই যে তার সন্তানকে ভালোবাসে না।"
+    },
+    {
+      "id": 21,
+      "question": "The Titanic could save ____.",
+      "options": {
+        "a": "himself",
+        "b": "herself",
+        "c": "itself",
+        "d": "themself"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "herself",
+      "explanation": "দেশ, নদী, জাহাজ এর জন্য feminine gender ব্যবহার হয়।"
+    },
+    {
+      "id": 22,
+      "question": "Which one is correct sentence?",
+      "options": {
+        "a": "This book contains ten page.",
+        "b": "Emily is enough beautiful to love.",
+        "c": "It is a 50 student class.",
+        "d": "Only few students are present here."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "It is a 50 student class.",
+      "explanation": "It is a 50 student class হবে কারণ student এখানে adjective। Adjective এর সাথে s/es যুক্ত হয় না। This book contains ten pages হবে। Emily is beautiful enough হবে। Only a few students are present here হবে।"
+    },
+    {
+      "id": 23,
+      "question": "Whether you like it or not, you have to go to bed now. Here 'Whether you like it or not' is-",
+      "options": {
+        "a": "adverbial clause",
+        "b": "adjective clause",
+        "c": "noun clause",
+        "d": "main clause"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "adverbial clause",
+      "explanation": "Whether, if, unless যুক্ত হলে adverb clause of condition হয়। Whether you like it or not তুমি পছন্দ করো বা না করো, এটা একটা condition বোঝাচ্ছে।"
+    },
+    {
+      "id": 24,
+      "question": "Which one is genitive adverb?",
+      "options": {
+        "a": "Once",
+        "b": "here",
+        "c": "there",
+        "d": "surely"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Once",
+      "explanation": "Genitive Adverb: যেসকল Adverb কোনো Possessive Noun থেকে গঠিত হয় তাদেরকে Genitive Adverb বলে। যেমন: Once (of one time). Introductory Adverb: কোনো Sentence শুরু করতে যখন Here ও there ব্যবহৃত হয়, তখন তাদেরকে introductory adverb বলে।"
+    },
+    {
+      "id": 25,
+      "question": "I spent ________ with the patient.",
+      "options": {
+        "a": "some time",
+        "b": "sometime",
+        "c": "some times",
+        "d": "sometimes"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "some time",
+      "explanation": "Sometimes অর্থ মাঝে মধ্যে, sometime অর্থ কোনো এক সময়, some time অর্থ কিছু সময়/খানিকটা সময়।"
+    },
+    {
+      "id": 26,
+      "question": "Only after food has been dried or canned ____",
+      "options": {
+        "a": "that it should be stored for later consumption.",
+        "b": "should be stored for later consumption.",
+        "c": "should it be stored for later consumption.",
+        "d": "it should be stored for later consumption."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "should it be stored for later consumption.",
+      "explanation": "'Only after'- Negative Adverb। Inversion এর নিয়ম অনুযায়ী বাক্যের শুরুতে only after বসলে auxiliary verb টি subject এর পূর্বে চলে আসে।"
+    },
+    {
+      "id": 27,
+      "question": "A lost opportunity never returns'. Here 'lost' is -",
+      "options": {
+        "a": "gerund",
+        "b": "verbal noun",
+        "c": "gerundial infinitive",
+        "d": "participle"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "participle",
+      "explanation": "কোনো verb, adjective হিসেবে ব্যবহার হলে তাকে participle বলো। Shortcut: Article + participle + noun। Lost, opportunity কে modify করে adjective এর কাজ করেছে।"
+    },
+    {
+      "id": 28,
+      "question": "Going there he found his friend absent. Here going is a-",
+      "options": {
+        "a": "gerund",
+        "b": "present participle",
+        "c": "noun",
+        "d": "past participle"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "present participle",
+      "explanation": "Verb + ing = adjective হলে তাকে present participle বলো। আবার, Verb + ing বাক্যে Non-finite verb হিসেবে বসলে সেটিও present participle হবে।"
+    },
+    {
+      "id": 29,
+      "question": "The bridge _____ recently for the railroad has been found faulty.",
+      "options": {
+        "a": "was constructed",
+        "b": "constructed",
+        "c": "has been constructed",
+        "d": "has constructed"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "constructed",
+      "explanation": "The bridge which has been constructed recently = the bridge constructed recently — relative pronoun + verb এর পরিবর্তে participle বসে। Active voice হলে present participle এবং passive হলে past participle বসে।"
+    },
+    {
+      "id": 30,
+      "question": "She sleeps early. Here 'sleeps' is a/an-",
+      "options": {
+        "a": "linking verb",
+        "b": "be verb",
+        "c": "transitive verb",
+        "d": "intransitive verb"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "intransitive verb",
+      "explanation": "যে verb এর object নেই তাকে intransitive verb বলো।"
+    },
+    {
+      "id": 31,
+      "question": "He found parking was difficult there. Here 'parking' is -",
+      "options": {
+        "a": "past continuous",
+        "b": "participle",
+        "c": "present continuous",
+        "d": "gerund"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "gerund",
+      "explanation": "verb + ing যখন noun এর কাজ করে, তখন তাকে gerund বলো।"
+    },
+    {
+      "id": 32,
+      "question": "Which of the following types of Verb itself can complete a sentence?",
+      "options": {
+        "a": "non-finite verb",
+        "b": "auxiliary verb",
+        "c": "intransitive verb",
+        "d": "transitive verb"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "intransitive verb",
+      "explanation": "An intransitive verb is a verb that doesn't need a direct object but makes a complete sentence with a sense. eg. He goes. we came. they swim."
+    },
+    {
+      "id": 33,
+      "question": "By working hard, you can prosper in life. Here 'working' is a –",
+      "options": {
+        "a": "participle",
+        "b": "verbal noun",
+        "c": "gerund",
+        "d": "infinitive"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "gerund",
+      "explanation": "Preposition এর Object হওয়ায় এটি Noun। আর verb+ing যখন noun হিসেবে কাজ করে তাকে gerund বলো।"
+    },
+    {
+      "id": 34,
+      "question": "Sanguine is the adjective form of ___",
+      "options": {
+        "a": "bird",
+        "b": "reptile",
+        "c": "blood",
+        "d": "body"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "blood",
+      "explanation": "Blood = রক্ত (Noun), Sanguine = রক্তিম (Adjective)।"
+    },
+    {
+      "id": 35,
+      "question": "What is the adjective form of 'clarity'?",
+      "options": {
+        "a": "claritable",
+        "b": "clarifiable",
+        "c": "clarification",
+        "d": "clear"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "clear",
+      "explanation": "Clarity = স্পষ্টতা (noun), Clear = স্পষ্ট (adjective)।"
+    },
+    {
+      "id": 36,
+      "question": "The house was ____ building.",
+      "options": {
+        "a": "a nice stone old",
+        "b": "a nice old stone",
+        "c": "a stone old nice",
+        "d": "an old nice stone"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "a nice old stone",
+      "explanation": "Order of Adjectives: Number-Opinion-Size-Shape-Condition-Age-Color-Pattern-Origin-Material-Purpose. Adjective ক্রম অনুযায়ী ২য় বাক্য সঠিক।"
+    },
+    {
+      "id": 37,
+      "question": "All the people at the NAM conference are ___",
+      "options": {
+        "a": "mathematic teachers",
+        "b": "mathematics teachers",
+        "c": "mathematics teacher",
+        "d": "mathmatic's teacher"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "mathematics teachers",
+      "explanation": "যেহেতু verb হিসেবে are (be verb) আছে তাহলে অবশ্যই Plural হবে। অর্থাৎ Teachers হবে। Mathematics সাবজেক্টের নাম।"
+    },
+    {
+      "id": 38,
+      "question": "There's _____ dust on these books.",
+      "options": {
+        "a": "a many of",
+        "b": "plenty of",
+        "c": "lots of",
+        "d": "a good deal of"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "a good deal of",
+      "explanation": "a lot of, plenty of, lots of এরা informal এবং countable ও uncountable উভয় ধরনের noun এর আগে বসে। a good/great deal of হচ্ছে formal এবং শুধুমাত্র uncountable noun এর আগে বসে।"
+    },
+    {
+      "id": 39,
+      "question": "Adjective of the word 'Ox' is ___",
+      "options": {
+        "a": "Oxen",
+        "b": "Bovine",
+        "c": "Canine",
+        "d": "Oxy"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Bovine",
+      "explanation": "Ox অর্থ ষাড়, এটি একটি Noun। এটির Adjective form হলো bovine অর্থাৎ গোজাতি সম্পর্কীয়। Ox এর plural হচ্ছে oxen।"
+    },
+    {
+      "id": 40,
+      "question": "Adjective of the word 'Heaven' is ___",
+      "options": {
+        "a": "Infernal",
+        "b": "Celestial",
+        "c": "Sylvan",
+        "d": "Austral"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Celestial",
+      "explanation": "Heaven অর্থ স্বর্গ, এটি একটি Noun। এটির Adjective form হলো Celestial অর্থ স্বর্গীয়।"
+    }
+  ]
+}

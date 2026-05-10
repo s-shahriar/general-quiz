@@ -1,0 +1,499 @@
+{
+  "topic": "Final Exam",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which one is a simple sentence?",
+      "options": {
+        "a": "He was rejected, for his performance was not satisfactory.",
+        "b": "The patient died after the doctor had arrived.",
+        "c": "The man becoming repentant, Allah at last took pity on him.",
+        "d": "Where there is a will, there is a way."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The man becoming repentant, Allah at last took pity on him.",
+      "explanation": "Simple Sentence-এ কেবল একটি Clause এবং একটি finite verb থাকে। ক, খ ও ঘ সবগুলোতে ২টি করে Clause আছে। কেবল গ-তে একটি Clause এবং একটি finite verb 'took' আছে।"
+    },
+    {
+      "id": 2,
+      "question": "His family comprises _____ nine members.",
+      "options": {
+        "a": "in",
+        "b": "with",
+        "c": "to",
+        "d": "no preposition"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "no preposition",
+      "explanation": "Comprise = অন্তর্ভুক্ত করা। এর পর কোনো Preposition বসে না।"
+    },
+    {
+      "id": 3,
+      "question": "It rests ....... the management to justify our actions.",
+      "options": {
+        "a": "upon",
+        "b": "for",
+        "c": "with",
+        "d": "to"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "with",
+      "explanation": "rest with = কারো দায়িত্বে থাকা। rest upon/on = নির্ভর করা / কোনো জায়গায় স্থির হওয়া।"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is not a feminine gender?",
+      "options": {
+        "a": "Sorcerer",
+        "b": "Jane",
+        "c": "Blonde",
+        "d": "Termagant"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Sorcerer",
+      "explanation": "Sorcerer (যাদুকর) - Sorceress (যাদুকরী)। Jane (আদর্শ ইংরেজ নারী)। Blonde (সোনালী চুল ও বর্ণবিশিষ্ট রমণী)। Termagant (কলহপ্রিয় মহিলা)।"
+    },
+    {
+      "id": 5,
+      "question": "I turned pale. Here \"turned\" is a/an -",
+      "options": {
+        "a": "Transitive verb",
+        "b": "Linking verb",
+        "c": "Causative Verb",
+        "d": "Factitive Verb"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Linking verb",
+      "explanation": "যে verb-এর অর্থ প্রকাশের জন্য complement-এর প্রয়োজন হয় তাকে Linking verb বলে। এখানে 'turned' subject 'I' ও complement 'pale'-এর সম্পর্ক নির্দেশ করছে।"
+    },
+    {
+      "id": 6,
+      "question": "Choose the correct meaning of the idiom: \"To blow hot and cold\"",
+      "options": {
+        "a": "To be very angry",
+        "b": "To behave aggressively",
+        "c": "To be inconsistent in opinion or attitude",
+        "d": "To exaggerate facts"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "To be inconsistent in opinion or attitude",
+      "explanation": "এই idiom বোঝায়—একই বিষয়ে কখনো সমর্থন, কখনো বিরোধিতা করা।"
+    },
+    {
+      "id": 7,
+      "question": "She prides herself ___ her ability to remain calm under pressure.",
+      "options": {
+        "a": "in",
+        "b": "on",
+        "c": "upon",
+        "d": "with"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "on",
+      "explanation": "Verb pride oneself সর্বদা on নেয়। \"upon\" literary variation হলেও competitive exam-এ on সবচেয়ে নিরাপদ।"
+    },
+    {
+      "id": 8,
+      "question": "You must do the work. (Change the Voice)",
+      "options": {
+        "a": "The work should be done by you.",
+        "b": "The work must be done by you.",
+        "c": "The work may be done by you.",
+        "d": "The work might be done by you."
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The work must be done by you.",
+      "explanation": "May, might, can, could, must, ought to যুক্ত Active Voice-কে Passive Voice-এ পরিবর্তন করার সময় এদের পরে be বসে এবং মূল verb-টির Past Participle বসে।"
+    },
+    {
+      "id": 9,
+      "question": "Choose the synonym of \"Nexus\".",
+      "options": {
+        "a": "Modest",
+        "b": "Savor",
+        "c": "Junction",
+        "d": "Languid"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Junction",
+      "explanation": "Nexus: A connection or series of connections linking two or more things. Synonyms: join, junction, juncture, intersection, link, connection।"
+    },
+    {
+      "id": 10,
+      "question": "At that very moment, he was very tired. Here, 'very' is used respectively as",
+      "options": {
+        "a": "adjective, adverb",
+        "b": "adverb, adjective",
+        "c": "adjective, adjective",
+        "d": "adverb, adverb"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "adjective, adverb",
+      "explanation": "প্রথম very – moment (noun) কে modify করায় Adjective। ২য় very – tired (adjective) কে modify করায় Adverb।"
+    },
+    {
+      "id": 11,
+      "question": "Fill in the gap: Before leaving for the workplace, I spent ____ with my children.",
+      "options": {
+        "a": "sometimes",
+        "b": "sometime",
+        "c": "some time",
+        "d": "some times"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "some time",
+      "explanation": "Sometime অর্থ কোন এক সময়, Sometimes অর্থ মাঝে মাঝে, Some time অর্থ কিছু সময়।"
+    },
+    {
+      "id": 12,
+      "question": "In which sentence is the word 'since' used as a preposition?",
+      "options": {
+        "a": "I have not seen him since.",
+        "b": "Nine months have passed since I met him.",
+        "c": "Since he was tired, he could not wait for you.",
+        "d": "Till now since his birth, he has not been taken care of by his parents."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Till now since his birth, he has not been taken care of by his parents.",
+      "explanation": "দুটি Noun এর মধ্যে সংযুক্তসূচক পদকে Preposition বলে। এখানে 'since' দুটি noun (his birth ও the time) এর মধ্যে সংযুক্ত।"
+    },
+    {
+      "id": 13,
+      "question": "Choose the correct sentence.",
+      "options": {
+        "a": "Would that he could understand my feelings better.",
+        "b": "Would that he could understanded my feelings better.",
+        "c": "Would that he could understanding my feelings better.",
+        "d": "Would that he understand my feelings better."
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Would that he could understand my feelings better.",
+      "explanation": "Would that দিয়ে sentence শুরু হলে Subject এরপর could বসে এবং verb এর Present form বসে।"
+    },
+    {
+      "id": 14,
+      "question": "Which one is a correct sentence?",
+      "options": {
+        "a": "Ten kilometers are too far to walk.",
+        "b": "One should take care of his health.",
+        "c": "Students each are present at today.",
+        "d": "The furniture in the living room need to be cleaned regularly."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Students each are present at today.",
+      "explanation": "Plural Noun/Pronoun এর পর Each বসলে verb Plural হয়।"
+    },
+    {
+      "id": 15,
+      "question": "\"To forgive is divine.\" What part of speech is the underlined part -",
+      "options": {
+        "a": "Infinitive",
+        "b": "Participle",
+        "c": "Verb",
+        "d": "Noun"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Noun",
+      "explanation": "To + Verb (To forgive) এখানে বাক্যের শুরুতে বসে subject এর কাজ করেছে। তাই To forgive এখানে Noun।"
+    },
+    {
+      "id": 16,
+      "question": "Choose the correct sentence.",
+      "options": {
+        "a": "You need not worrying about the test; everything will be fine.",
+        "b": "You need not worries about the test; everything will be fine.",
+        "c": "You need not to worry about the test; everything will be fine.",
+        "d": "You need not worry about the test; everything will be fine."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "You need not worry about the test; everything will be fine.",
+      "explanation": "Negative sentence এ 'need' modal auxiliary হিসেবে ব্যবহৃত হলে need not এর পরে to বসাতে হয় না।"
+    },
+    {
+      "id": 17,
+      "question": "They ___ be waiting for you at the station now.",
+      "options": {
+        "a": "shall",
+        "b": "may",
+        "c": "will",
+        "d": "can"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "may",
+      "explanation": "Speculation (অনুমান) বুঝাতে Present Tense এ May/might ব্যবহার হয়। Structure: Subject + may/might + be + মূল verb এর সাথে ing।"
+    },
+    {
+      "id": 18,
+      "question": "Identify the correct sentence.",
+      "options": {
+        "a": "It is high time followed your heart.",
+        "b": "It is high time to following your heart.",
+        "c": "It is high time to be followed your heart.",
+        "d": "It is high time to follow your heart."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "It is high time to follow your heart.",
+      "explanation": "It is time/It is high time এরপর যদি subject না থাকে তবে to + verb হয়।"
+    },
+    {
+      "id": 19,
+      "question": "It was she _____ they invited to the party.",
+      "options": {
+        "a": "who",
+        "b": "whom",
+        "c": "that",
+        "d": "which"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "whom",
+      "explanation": "শূন্যস্থানে who এর object form বসবে। কোনো ব্যক্তি (Person) + whom + subject + verb।"
+    },
+    {
+      "id": 20,
+      "question": "All he needed was ________ dollars to fuel his road trips and wandering spirit.",
+      "options": {
+        "a": "little",
+        "b": "a little",
+        "c": "few",
+        "d": "a few"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "a few",
+      "explanation": "A few + Countable Noun হয়। 'dollar' countable noun তাই এর পূর্বে a few বসবে।"
+    },
+    {
+      "id": 21,
+      "question": "A justice, With every decision, shapes not just the law, but the very fabric of society itself. The underlined word is -",
+      "options": {
+        "a": "Abstract noun",
+        "b": "Collective noun",
+        "c": "Common noun",
+        "d": "Material noun"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Common noun",
+      "explanation": "Justice সাধারণত Abstract noun। কিন্তু uncountable ও abstract nouns এর আগে article ব্যবহার হয় না। এখানে 'A justice' তে article আছে তাই Common noun।"
+    },
+    {
+      "id": 22,
+      "question": "He was standing ______ a crowd of children.",
+      "options": {
+        "a": "in",
+        "b": "into",
+        "c": "on",
+        "d": "among"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "among",
+      "explanation": "Among: তিনটির বেশি ব্যক্তি বা বস্তুর মাঝে।"
+    },
+    {
+      "id": 23,
+      "question": "_ pair of socks_ too small for me.",
+      "options": {
+        "a": "These, are",
+        "b": "These, is",
+        "c": "This, are",
+        "d": "This, is"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "This, is",
+      "explanation": "A/The/This + pair of + plural noun + singular verb। যে সকল noun এর দুটো অংশ থাকে সেগুলো singular determiner + pair of ব্যবহার করলে singular verb নেয়।"
+    },
+    {
+      "id": 24,
+      "question": "Pick out the correctly spelt word.",
+      "options": {
+        "a": "Inundate",
+        "b": "Innundate",
+        "c": "Inandate",
+        "d": "Innandate"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Inundate",
+      "explanation": "Inundate = প্লাবিত করা; অভিভূত করা।"
+    },
+    {
+      "id": 25,
+      "question": "Each union elects several delegates ______ the annual conference.",
+      "options": {
+        "a": "for",
+        "b": "to",
+        "c": "into",
+        "d": "at"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "to",
+      "explanation": "Delegates to a conference।"
+    },
+    {
+      "id": 26,
+      "question": "Satyendranath was a contemporary ____ Rabindranath Tagore.",
+      "options": {
+        "a": "to",
+        "b": "of",
+        "c": "off",
+        "d": "on"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "of",
+      "explanation": "Contemporary of: সমসাময়িক।"
+    },
+    {
+      "id": 27,
+      "question": "Priya bears --- the first position.",
+      "options": {
+        "a": "With",
+        "b": "On",
+        "c": "Out",
+        "d": "Away"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Away",
+      "explanation": "Bear away/off: জয় করে নেওয়া। Bear on: সম্পর্ক/সংযুক্ত হওয়া। Bear out: সমর্থন করা। Bear with: সহ্য করা।"
+    },
+    {
+      "id": 28,
+      "question": "The word \"affect\" is a/an -",
+      "options": {
+        "a": "Noun",
+        "b": "Adjective",
+        "c": "Verb",
+        "d": "Adverb"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Verb",
+      "explanation": "Affect - আক্রান্ত করা (Verb)। Effect = ফলাফল বা প্রতিক্রিয়া (Noun)।"
+    },
+    {
+      "id": 29,
+      "question": "What a nice bird it is! The word \"What\" is a/an-",
+      "options": {
+        "a": "Adjective",
+        "b": "Noun",
+        "c": "Adverb",
+        "d": "Pronoun"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Adjective",
+      "explanation": "এখানে 'a nice bird' noun phrase কে modify করার কারণে 'what' adjective হয়েছে। 'How' Adjective/Adverb Modify করে।"
+    },
+    {
+      "id": 30,
+      "question": "More than one book ___ bought.",
+      "options": {
+        "a": "has",
+        "b": "are",
+        "c": "is",
+        "d": "were"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "is",
+      "explanation": "More than one এর পর singular noun এবং singular verb বসে। More than two এর পর plural noun এবং plural verb বসে।"
+    },
+    {
+      "id": 31,
+      "question": "Which one is a plural number?",
+      "options": {
+        "a": "Loci",
+        "b": "hives",
+        "c": "draughts",
+        "d": "Ellipse"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Loci",
+      "explanation": "Locus (singular) - Loci (plural)। hives, draughts দেখতে Plural হলেও singular। Ellipse (singular) - Ellipses (plural)।"
+    },
+    {
+      "id": 32,
+      "question": "The antonym of 'confide' is-",
+      "options": {
+        "a": "hurt",
+        "b": "abuse",
+        "c": "suspect",
+        "d": "exploit"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "suspect",
+      "explanation": "confide = বিশ্বাস করা। suspect = সন্দেহ করা।"
+    },
+    {
+      "id": 33,
+      "question": "What is the meaning of 'Few and far between'?",
+      "options": {
+        "a": "rarely",
+        "b": "not very far",
+        "c": "in between",
+        "d": "long distance"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "rarely",
+      "explanation": "Few and far between অর্থ কদাচিৎ (rarely)।"
+    },
+    {
+      "id": 34,
+      "question": "\"Harp on\" means-",
+      "options": {
+        "a": "to play on the flute",
+        "b": "to listen attentively",
+        "c": "play music",
+        "d": "talk about the same object"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "talk about the same object",
+      "explanation": "\"Harp on\" অর্থ বারবার একই কথা বলা।"
+    },
+    {
+      "id": 35,
+      "question": "No more for today. Here 'no' is -",
+      "options": {
+        "a": "Noun",
+        "b": "Adjective",
+        "c": "Pronoun",
+        "d": "Adverb"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Adverb",
+      "explanation": "No more for today। এখানে 'No' Adjective 'More' কে Modify করেছে। তাই 'No' এখানে Adverb।"
+    },
+    {
+      "id": 36,
+      "question": "The antonym of 'dear' is-",
+      "options": {
+        "a": "eager",
+        "b": "cheap",
+        "c": "indifferent",
+        "d": "hate"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "cheap",
+      "explanation": "dear অর্থ প্রিয়, দুর্মূল্য। cheap = সস্তা (দুর্মূল্য এর বিপরীত)।"
+    },
+    {
+      "id": 37,
+      "question": "Identify the correct sentence-",
+      "options": {
+        "a": "He talks as if he knows everything.",
+        "b": "He talks as if he had known everything.",
+        "c": "He talked as though he knew about the matter.",
+        "d": "He talked as though he had known about the matter."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He talked as though he had known about the matter.",
+      "explanation": "Present Tense + as if/as though + past ind। Past ind Tense + as if/as though + past perfect।"
+    },
+    {
+      "id": 38,
+      "question": "He helped me finish the work. (Make it passive)",
+      "options": {
+        "a": "I was helped by him for finishing the work.",
+        "b": "I was helped for finishing the work by him.",
+        "c": "I was helped by him to finish the work.",
+        "d": "I was helped finishing the work by him."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "I was helped by him to finish the work.",
+      "explanation": "Help someone (to) do something এর Passive: be helped by someone to do something।"
+    }
+  ]
+}

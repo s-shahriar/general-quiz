@@ -1,0 +1,304 @@
+{
+  "topic": "Right Form of Verbs",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Hardly had we reached the school _______.",
+      "options": {
+        "a": "when the bell rang",
+        "b": "then the bell rang",
+        "c": "the bell rang",
+        "d": "after the bell rang\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "when the bell rang",
+      "explanation": "Scarcely/Hardly + had + V3 + **when** + Past Indefinite. → \"Hardly had we reached the school when the bell rang.\""
+    },
+    {
+      "id": 2,
+      "question": "As soon as I came in, she ______ the room.",
+      "options": {
+        "a": "was leaving",
+        "b": "had left",
+        "c": "left",
+        "d": "had been leaving\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "left",
+      "explanation": "Two past actions joined by \"As soon as\" → both use Past Indefinite. → \"As soon as I came in, she left the room.\""
+    },
+    {
+      "id": 3,
+      "question": "My mother ______ suffering from fever since Friday.",
+      "options": {
+        "a": "will",
+        "b": "will have",
+        "c": "will have been",
+        "d": "have\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "will have been",
+      "explanation": "Future action continuing from a point in time → Future Perfect Continuous: will have been + V-ing. → \"will have been suffering.\""
+    },
+    {
+      "id": 4,
+      "question": "Just now he_________ his dinner but he says he will see you when he's finished.",
+      "options": {
+        "a": "is having",
+        "b": "has had",
+        "c": "was having",
+        "d": "had\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "has had",
+      "explanation": "\"Just now,\" \"yet,\" \"already,\" \"recently\" → Present Perfect tense. \"have\" + past participle \"had\" → \"has had.\""
+    },
+    {
+      "id": 5,
+      "question": "The teacher failed to make the students ______ to him.",
+      "options": {
+        "a": "listened",
+        "b": "listen",
+        "c": "to listen",
+        "d": "listening\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "listen",
+      "explanation": "Causative verb \"make\" + object → base form of verb (no \"to\"). → \"make the students listen.\""
+    },
+    {
+      "id": 6,
+      "question": "The rest of the page __ illegible.",
+      "options": {
+        "a": "is",
+        "b": "Are",
+        "c": "Been",
+        "d": "Is being\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "is",
+      "explanation": "\"The rest of the page\" treated as a single collective unit → singular verb. → \"is illegible.\""
+    },
+    {
+      "id": 7,
+      "question": "My brother could not help but ______ at his condition.",
+      "options": {
+        "a": "cry",
+        "b": "cry on",
+        "c": "crying",
+        "d": "cried\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "cry",
+      "explanation": "\"Cannot/could not help but\" → base form of verb. \"Can't help\" → verb + ing. \"Can't but\" → base form. → \"could not help but cry.\""
+    },
+    {
+      "id": 8,
+      "question": "Arafat's behavior is worthy of ________ by the youngers.",
+      "options": {
+        "a": "trial",
+        "b": "emulation",
+        "c": "exploration",
+        "d": "following\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "following",
+      "explanation": "After preposition \"of\" → verb + ing. The question tests both vocabulary (emulation/following) and grammar. \"Following\" fits contextually here."
+    },
+    {
+      "id": 9,
+      "question": "The path ______ paved, so we were able to walk through the path.",
+      "options": {
+        "a": "being",
+        "b": "was",
+        "c": "had been",
+        "d": "has been\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "had been",
+      "explanation": "Two past clauses: earlier completed action → Past Perfect. \"The path had been paved\" (earlier) + \"we were able to walk\" (later)."
+    },
+    {
+      "id": 10,
+      "question": "He talked as though he ______ the matter.",
+      "options": {
+        "a": "knew",
+        "b": "had known",
+        "c": "know",
+        "d": "have known\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "had known",
+      "explanation": "Past Simple + \"as though/as if\" → Past Perfect. → \"He talked as though he had known the matter.\""
+    },
+    {
+      "id": 11,
+      "question": "I had Sumi ______ from the class for her reckless activities.",
+      "options": {
+        "a": "expelled",
+        "b": "to expel",
+        "c": "to be expelled",
+        "d": "expel\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "expel",
+      "explanation": "Causative \"had/have\" + animate object (Sumi) → base form. → \"had Sumi expel.\" (Inanimate object → past participle: \"had my car washed.\")"
+    },
+    {
+      "id": 12,
+      "question": "Masum will get an electrician ______ the heating.",
+      "options": {
+        "a": "repair",
+        "b": "for repairing",
+        "c": "to mend",
+        "d": "mend\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "to mend",
+      "explanation": "Causative \"get\" + animate object → infinitive (to + verb). → \"get an electrician to mend.\" (Inanimate object → past participle: \"get the house painted.\")"
+    },
+    {
+      "id": 13,
+      "question": "Which one is not correct?",
+      "options": {
+        "a": "Majority are present in this meeting.",
+        "b": "Majority of them are poor.",
+        "c": "Only a small minority of students is opposed to the scheme.",
+        "d": "Majority is present in this meeting.\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Majority are present in this meeting.",
+      "explanation": "\"Majority\" alone (without \"of\") → singular verb. \"Majority of + plural noun\" → plural verb. Option A should be \"Majority is present.\""
+    },
+    {
+      "id": 14,
+      "question": "Fill in the blank: I couldn't mend the computer myself, so I ___ at a shop.",
+      "options": {
+        "a": "had it mended",
+        "b": "had it mend",
+        "c": "did it mend",
+        "d": "had mended\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "had it mended",
+      "explanation": "Causative \"had\" + inanimate object (it/computer) → past participle. → \"had it mended at a shop.\""
+    },
+    {
+      "id": 15,
+      "question": "I was accustomed to ___ long hours to meet project deadlines.",
+      "options": {
+        "a": "work",
+        "b": "working",
+        "c": "worked",
+        "d": "had worked\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "working",
+      "explanation": "After \"accustomed to,\" \"used to\" (adjective sense), \"look forward to,\" \"with a view to,\" \"worth\" → verb + ing. → \"accustomed to working.\""
+    },
+    {
+      "id": 16,
+      "question": "If it rains, ___.",
+      "options": {
+        "a": "the ground got wet",
+        "b": "the ground gets wet",
+        "c": "the ground will become wet",
+        "d": "the ground will have been wet\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "the ground gets wet",
+      "explanation": "Zero conditional (universal truth): if + Present Simple → Present Simple. → \"If it rains, the ground gets wet.\""
+    },
+    {
+      "id": 17,
+      "question": "Let's arrange a party in case ___.",
+      "options": {
+        "a": "Dipa comes",
+        "b": "Dipa will come",
+        "c": "Dipa is coming",
+        "d": "Dipa will be coming\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Dipa comes",
+      "explanation": "\"In case\" → always followed by Present Indefinite (for future reference). → \"in case Dipa comes.\""
+    },
+    {
+      "id": 18,
+      "question": "Coffee and tea ___ now-a-days offered as alternative.",
+      "options": {
+        "a": "is",
+        "b": "are",
+        "c": "has",
+        "d": "is being\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "are",
+      "explanation": "Two distinct items joined by \"and\" → plural verb. Coffee and tea are separate things → \"are offered.\""
+    },
+    {
+      "id": 19,
+      "question": "Which sentence is the correct one?",
+      "options": {
+        "a": "I wish I were a bird!",
+        "b": "I wish I have been a bird.",
+        "c": "I wish I was a bird.",
+        "d": "I wish I were a bird.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "I wish I were a bird.",
+      "explanation": "Optative/wish sentence expressing unreal wish → subjunctive \"were\" (not \"was\"). \"I wish I were a bird.\" (without exclamation mark — pure optative form)."
+    },
+    {
+      "id": 20,
+      "question": "If I ___ enough riches, I would have established a school for street children.",
+      "options": {
+        "a": "have had",
+        "b": "had had",
+        "c": "had",
+        "d": "had been\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "had had",
+      "explanation": "Third conditional (unreal past): If + Past Perfect → would have + V3. \"If I had had enough riches\" — first \"had\" = Past Perfect auxiliary, second \"had\" = past participle of \"have.\""
+    },
+    {
+      "id": 21,
+      "question": "Fill in the gap: If these criminals ___, it would have created mass dissatisfaction.",
+      "options": {
+        "a": "had forgiven",
+        "b": "were forgiven",
+        "c": "had been forgiven",
+        "d": "forgave\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "had been forgiven",
+      "explanation": "Third conditional + Passive: main clause has \"would have\" → if-clause needs Past Perfect Passive. \"criminals\" is semantic object acting as subject → \"had been forgiven.\""
+    },
+    {
+      "id": 22,
+      "question": "Fill in the gap: She kept utterly silent as if the dead man ___ to her.",
+      "options": {
+        "a": "was not known",
+        "b": "were not known",
+        "c": "had not known",
+        "d": "had not been known\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "had not been known",
+      "explanation": "Main clause = Past Indefinite → \"as if\" clause = Past Perfect. \"The dead man\" = semantic object acting as subject → Passive. → \"had not been known.\""
+    },
+    {
+      "id": 23,
+      "question": "The scientist attempted to ___ the error before publishing.",
+      "options": {
+        "a": "Conceal",
+        "b": "Rectify",
+        "c": "Promote",
+        "d": "Encourage\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Rectify",
+      "explanation": "\"Rectify\" means to put right or correct an error. The scientist wanted to fix/correct the error before publishing."
+    }
+  ]
+}

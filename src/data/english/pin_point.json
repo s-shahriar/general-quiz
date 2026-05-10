@@ -1,0 +1,499 @@
+{
+  "topic": "Pin Point",
+  "questions": [
+    {
+      "id": 1,
+      "question": "It was him who came running into the class room. The error of the sentence lies in -",
+      "options": {
+        "a": "It was him",
+        "b": "who came",
+        "c": "running",
+        "d": "into the class room"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "It was him",
+      "explanation": "It was him এর পরিবর্তে It was he হবে। Copulative verb এর complement হওয়ার কারণে Nominative case বসাতে হবে।"
+    },
+    {
+      "id": 2,
+      "question": "Read the sentence to find out whether there is any error in it. I intend to go straight back home, but I sort of wandered inside a bookstore.",
+      "options": {
+        "a": "I intend",
+        "b": "to go straight back home",
+        "c": "but I sort of wandered",
+        "d": "inside a bookstore"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "I intend",
+      "explanation": "বাক্যে 'wandered' থেকে বুঝা যায় যে বাক্যটি Past tense এ। So, instead of 'intend', 'intended' is to be used here."
+    },
+    {
+      "id": 3,
+      "question": "Select the segment that contains a grammatical error. We love to just lay on the beach.",
+      "options": {
+        "a": "We love",
+        "b": "to just",
+        "c": "lay on the beach",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "lay on the beach",
+      "explanation": "Correct: We love to just lie on the beach. Lie/lay/lain is used without an object. Lay/laid/laid must have an object."
+    },
+    {
+      "id": 4,
+      "question": "Heliograph was an (a) instrument employed to (b) send signals (c) by reflecting (d) sunlight a mirror or mirrors. Find the error.",
+      "options": {
+        "a": "instrument",
+        "b": "send signals",
+        "c": "by reflecting",
+        "d": "sunlight"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "sunlight",
+      "explanation": "by reflecting sunlight a mirror এর জায়গায় by reflecting sunlight with a mirror হবে।"
+    },
+    {
+      "id": 5,
+      "question": "Students who wish to become a doctor must begin planning their studies long before they apply to medical school. Identify the incorrect segment.",
+      "options": {
+        "a": "a doctor",
+        "b": "their",
+        "c": "long before",
+        "d": "apply"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "a doctor",
+      "explanation": "Subject plural + are/were/become + plural noun অনুসারে students (subject) plural হওয়ায় a doctor না হয়ে doctors হবে।"
+    },
+    {
+      "id": 6,
+      "question": "Passive smoking is defined as the exposure of nonsmoker to environmental tobacco smoke. Find the error.",
+      "options": {
+        "a": "defined",
+        "b": "exposure",
+        "c": "nonsmoker",
+        "d": "environmental"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "nonsmoker",
+      "explanation": "Nonsmoker এককভাবে এখানে ভুল। এটা singular হিসেবে ব্যবহার করতে চাইলে এর পূর্বে 'a' দিতে হবে অথবা একে plural (nonsmokers) করতে হবে।"
+    },
+    {
+      "id": 7,
+      "question": "If one plans to hike in the backcountry, you should prepare for the possibility of encountering a bear. Find the error.",
+      "options": {
+        "a": "to hike",
+        "b": "you should",
+        "c": "for",
+        "d": "possibility"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "you should",
+      "explanation": "you should এর পরিবর্তে they should হবে। প্রথমে বলা হয়েছে If one plans, তাই they should ব্যবহার করতে হবে।"
+    },
+    {
+      "id": 8,
+      "question": "Find the error part of the sentence. It is not difficult to believe that a man (A) who has lived in this city (B) for a long time (C) he will never feel at home anywhere else in the world (D)",
+      "options": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "D",
+      "explanation": "'he will never feel at home anywhere else in the world' এই অংশ থেকে 'he' বাদ দিতে হবে। প্রদত্ত বাক্যের প্রধান কর্তা 'the man' এর বিপরীতে 'who' ব্যবহার করা হয়েছে।"
+    },
+    {
+      "id": 9,
+      "question": "Find the error: I and my colleague / have carefully considered the important issues raised by / the report which you sent me and / we have decided to take the following action.",
+      "options": {
+        "a": "I and my colleague",
+        "b": "have carefully considered the important issues raised by",
+        "c": "the report which you sent me and",
+        "d": "we have decided to take the following"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "I and my colleague",
+      "explanation": "Solution: Change, I and my colleague → My colleague and I."
+    },
+    {
+      "id": 10,
+      "question": "Find the error: The gambling stall / was a grand success / because almost everyone / tried their luck.",
+      "options": {
+        "a": "The gambling stall",
+        "b": "was a grand success",
+        "c": "because almost everyone",
+        "d": "tried their luck"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "tried their luck",
+      "explanation": "Solution: Substitute, their → his/her. EVERYONE is a singular subject and must be followed by a singular pronoun."
+    },
+    {
+      "id": 11,
+      "question": "Find the error: There are / no conducted tours / for tourist to visit all the / important places.",
+      "options": {
+        "a": "There are",
+        "b": "no conducted tours",
+        "c": "for tourist to visit all the",
+        "d": "important places"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "for tourist to visit all the",
+      "explanation": "Solution: Replace, tourist by tourists."
+    },
+    {
+      "id": 12,
+      "question": "Find the error: This girl / wrote an essay / so well that / her teacher was exceedingly pleased with her.",
+      "options": {
+        "a": "This girl",
+        "b": "wrote an essay",
+        "c": "so well that",
+        "d": "her teacher was exceedingly pleased with her"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "wrote an essay",
+      "explanation": "Solution: Substitute, 'an' by 'the'. The sentence lays emphasis on essay."
+    },
+    {
+      "id": 13,
+      "question": "Find the error: Everyone of the students / has bought / his / identity card.",
+      "options": {
+        "a": "Everyone of the students",
+        "b": "has bought",
+        "c": "his",
+        "d": "identity card"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Everyone of the students",
+      "explanation": "Solution: Change, everyone → each one. When the number is limited, 'each one' will be better usage than 'everyone'."
+    },
+    {
+      "id": 14,
+      "question": "Find the error: As he stood / below the shower / the sharp jets of / ice cold water revived his spirit.",
+      "options": {
+        "a": "As he stood",
+        "b": "below the shower",
+        "c": "the sharp jets of",
+        "d": "ice cold water revived his spirit"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ice cold water revived his spirit",
+      "explanation": "Solution: Change, spirit → spirits. Spirits refers to a person's mood or attitude."
+    },
+    {
+      "id": 15,
+      "question": "Find the error: I have / two sister-in-laws / whose husbands / are all well settled.",
+      "options": {
+        "a": "I have",
+        "b": "two sister-in-laws",
+        "c": "whose husbands",
+        "d": "are all well settled"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "two sister-in-laws",
+      "explanation": "Solution: Change, sister-in-laws → sisters-in-law. Plural of compound words is formed by adding 's' in the first constituent."
+    },
+    {
+      "id": 16,
+      "question": "Find the error: I told him / the story / in details / to make him understand it fully.",
+      "options": {
+        "a": "I told him",
+        "b": "the story",
+        "c": "in details",
+        "d": "to make him understand it fully"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "in details",
+      "explanation": "Solution: Change, details → detail."
+    },
+    {
+      "id": 17,
+      "question": "Find the error: Vijay is / very much / sorry about her misconduct.",
+      "options": {
+        "a": "Vijay is",
+        "b": "very much",
+        "c": "sorry about her misconduct",
+        "d": "No Error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "very much",
+      "explanation": "Solution: Very is used without 'much' before adjectives in the positive degree. Correct: Vijay is very sorry about her misconduct."
+    },
+    {
+      "id": 18,
+      "question": "Find the error: Our knowledge of history does not come to / Our help and some times we / even fail to remember / who invented America.",
+      "options": {
+        "a": "Our knowledge of history does not come to",
+        "b": "Our help and some times we",
+        "c": "even fail to remember",
+        "d": "who invented America"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "who invented America",
+      "explanation": "Solution: who discovered America."
+    },
+    {
+      "id": 19,
+      "question": "Find the error: The Moon may be the best place / to look for aliens as their / footprints on their surface would / last far longer than radio signals.",
+      "options": {
+        "a": "The Moon may be the best place",
+        "b": "to look for aliens as their",
+        "c": "footprints on their surface would",
+        "d": "last far longer than radio signals"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "footprints on their surface would",
+      "explanation": "Solution: change, footprints on their surface would → footprints on its surface would."
+    },
+    {
+      "id": 20,
+      "question": "Find out the error: The ruling party stood (A)/ for implementation of the Bill (B)/ and was ready to stake their political existence (C)/ No error(D).",
+      "options": {
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "C",
+      "explanation": "'and was ready to stake their political existence' এই অংশে ভুল। Their এর পরিবর্তে It's হবে।"
+    },
+    {
+      "id": 21,
+      "question": "Find the error: Summons were / issued yesterday / by Sessions judge / against the suspected thief.",
+      "options": {
+        "a": "Summons were",
+        "b": "issued yesterday",
+        "c": "by Sessions judge",
+        "d": "against the suspected thief"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Summons were",
+      "explanation": "Solution: Change, Summons were → Summons was. The word Summons is singular and should carry a singular verb."
+    },
+    {
+      "id": 22,
+      "question": "Find the error: The fact of me/ being a stranger/ does not excuse his conduct.",
+      "options": {
+        "a": "The fact of me",
+        "b": "being a stranger",
+        "c": "does not excuse his conduct",
+        "d": "No error"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "The fact of me",
+      "explanation": "Solution: Objective Case should be replaced by Possessive Case. Correct: the fact of my being."
+    },
+    {
+      "id": 23,
+      "question": "Find the error: An Indian ship / laden with merchandise / got drowned in the Pacific Ocean.",
+      "options": {
+        "a": "An Indian ship",
+        "b": "laden with merchandise",
+        "c": "got drowned in the Pacific Ocean",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "got drowned in the Pacific Ocean",
+      "explanation": "Solution: sank in the Pacific Ocean."
+    },
+    {
+      "id": 24,
+      "question": "Find the error: One of the members / expressed doubt if / the Minister was an atheist.",
+      "options": {
+        "a": "One of the members",
+        "b": "expressed doubt if",
+        "c": "the Minister was an atheist",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "expressed doubt if",
+      "explanation": "Solution: expressed doubt that."
+    },
+    {
+      "id": 25,
+      "question": "Find the error: Do the roses in your garden smell / more sweetly / than those in ours?",
+      "options": {
+        "a": "Do the roses in your garden smell",
+        "b": "more sweetly",
+        "c": "than those in ours",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "more sweetly",
+      "explanation": "Solution: sweeter."
+    },
+    {
+      "id": 26,
+      "question": "Find the error: The students were / awaiting for / the arrival of the chief guest.",
+      "options": {
+        "a": "The students were",
+        "b": "awaiting for",
+        "c": "the arrival of the chief guest",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "awaiting for",
+      "explanation": "Solution: awaiting (no preposition needed)."
+    },
+    {
+      "id": 27,
+      "question": "Find the error: They have been / very close friends / until they quarrelled.",
+      "options": {
+        "a": "They have been",
+        "b": "very close friends",
+        "c": "until they quarrelled",
+        "d": "No error"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "They have been",
+      "explanation": "Solution: 'They had been'."
+    },
+    {
+      "id": 28,
+      "question": "Find the error: You must / remember me / to post this letter.",
+      "options": {
+        "a": "You must",
+        "b": "remember me",
+        "c": "to post this letter",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "remember me",
+      "explanation": "Solution: remind me."
+    },
+    {
+      "id": 29,
+      "question": "Find the error: I shall certainly / write you / when I shall reach New Delhi.",
+      "options": {
+        "a": "I shall certainly",
+        "b": "write you",
+        "c": "when I shall reach New Delhi",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "when I shall reach New Delhi",
+      "explanation": "Solution: when I reach New Delhi."
+    },
+    {
+      "id": 30,
+      "question": "Find out whether there is any grammatical error: The crews were on board, / and they soon busied themselves / in preparing to meet the storm.",
+      "options": {
+        "a": "The crews were on board,",
+        "b": "and they soon busied themselves",
+        "c": "in preparing to meet the storm",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "in preparing to meet the storm",
+      "explanation": "Solution: in preparing to face the storm."
+    },
+    {
+      "id": 31,
+      "question": "Find out whether there is any grammatical error: Troy was taken by Greeks / this formed the basis of a story / which has become famous.",
+      "options": {
+        "a": "Troy was taken by Greeks",
+        "b": "this formed the basis of a story",
+        "c": "which has become famous",
+        "d": "No error"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Troy was taken by Greeks",
+      "explanation": "Solution: Troy was taken by the Greeks."
+    },
+    {
+      "id": 32,
+      "question": "Find out whether there is any grammatical error: Twice twelve / makes / twenty-four.",
+      "options": {
+        "a": "Twice twelve",
+        "b": "makes",
+        "c": "twenty-four",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "makes",
+      "explanation": "Solution: make."
+    },
+    {
+      "id": 33,
+      "question": "Find out whether there is any grammatical error: If I were him, / I would have taught / those cheats a lesson.",
+      "options": {
+        "a": "If I were him,",
+        "b": "I would have taught",
+        "c": "those cheats a lesson",
+        "d": "No error"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "If I were him,",
+      "explanation": "Solution: If I were he, I would have taught those cheats a lesson."
+    },
+    {
+      "id": 34,
+      "question": "Find out whether there is any grammatical error: We are four brothers and sisters living in this house / but neither of us is / satisfied with it.",
+      "options": {
+        "a": "We are four brothers and sisters living in this house",
+        "b": "but neither of us is",
+        "c": "satisfied with it",
+        "d": "No error"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "but neither of us is",
+      "explanation": "Solution: but none of us are."
+    },
+    {
+      "id": 35,
+      "question": "Find out whether there is any grammatical error: The scientist must follow / his hunches and his data / wherever it may lead.",
+      "options": {
+        "a": "The scientist must follow",
+        "b": "his hunches and his data",
+        "c": "wherever it may lead",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "wherever it may lead",
+      "explanation": "Solution: 'whenever they may lead'."
+    },
+    {
+      "id": 36,
+      "question": "Find out whether there is any grammatical error: Will you be / at Board meeting / on next Wednesday?",
+      "options": {
+        "a": "Will you be",
+        "b": "at Board meeting",
+        "c": "on next Wednesday?",
+        "d": "No error"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "on next Wednesday?",
+      "explanation": "Solution: next Wednesday (remove 'on')."
+    },
+    {
+      "id": 37,
+      "question": "Find out whether there is any grammatical error: At last the rain ceased / and the sky was / cleared by clouds / and lightning.",
+      "options": {
+        "a": "At last the rain ceased",
+        "b": "and the sky was",
+        "c": "cleared by clouds",
+        "d": "and lightning"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "cleared by clouds",
+      "explanation": "Solution: cleared of clouds."
+    },
+    {
+      "id": 38,
+      "question": "Find out whether there is any grammatical error: When I stood up spontaneously / and questioned the speaker; / someone commented that / it was a boldly step.",
+      "options": {
+        "a": "When I stood up spontaneously",
+        "b": "and questioned the speaker",
+        "c": "someone commented that",
+        "d": "it was a boldly step"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "it was a boldly step",
+      "explanation": "Solution: it was a bold step."
+    }
+  ]
+}

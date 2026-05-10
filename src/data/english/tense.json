@@ -1,0 +1,239 @@
+{
+  "topic": "Tense",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which one is a stative verb?",
+      "options": {
+        "a": "belong",
+        "b": "run",
+        "c": "jump",
+        "d": "break\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "belong",
+      "explanation": "Stative verbs describe a state, not an action, and are not used in continuous tense. Groups: emotion (love, hate), possession (have, own, belong), sense (see, hear, smell)."
+    },
+    {
+      "id": 2,
+      "question": "I shall meet my friend when _____.",
+      "options": {
+        "a": "he will come",
+        "b": "he came",
+        "c": "he comes",
+        "d": "he will have come\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "he comes",
+      "explanation": "When two future actions are joined by \"when\": the \"when\" clause uses Present Indefinite, the main clause uses Future Indefinite. → \"when he comes\"."
+    },
+    {
+      "id": 3,
+      "question": "When I ___ money, I will buy a dictionary.",
+      "options": {
+        "a": "may get",
+        "b": "may be get",
+        "c": "will get",
+        "d": "get\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "get",
+      "explanation": "\"When\" clause for future → Present Indefinite. \"When I get money, I will buy a dictionary.\""
+    },
+    {
+      "id": 4,
+      "question": "The ring that I was looking at is gone, someone else ___ it.",
+      "options": {
+        "a": "must buy",
+        "b": "must have bought",
+        "c": "must had bought",
+        "d": "must buying\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "must have bought",
+      "explanation": "To express a certain inference about past action: must have + V3. → \"someone else must have bought it\"."
+    },
+    {
+      "id": 5,
+      "question": "We _____ to Dhaka just a few months ago.",
+      "options": {
+        "a": "have moved",
+        "b": "had moved",
+        "c": "moved",
+        "d": "would moved\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "moved",
+      "explanation": "Time expressions like \"ago\", \"yesterday\", \"last month\" → Past Indefinite tense. → \"We moved to Dhaka just a few months ago.\""
+    },
+    {
+      "id": 6,
+      "question": "The past participle form of the verb 'Fell' is-",
+      "options": {
+        "a": "felt",
+        "b": "fallen",
+        "c": "felled",
+        "d": "fled\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "felled",
+      "explanation": "\"Fell\" (to knock down) → past: fell, past participle: felled. Note: \"Fall\" (to drop) → fell → fallen."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is a strong verb?",
+      "options": {
+        "a": "Run",
+        "b": "Walk",
+        "c": "Make",
+        "d": "Jog\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Run",
+      "explanation": "Strong/Irregular verbs change their internal vowel: Run – Ran – Run. Weak/Regular verbs add -d/-ed/-t: Walk – Walked – Walked."
+    },
+    {
+      "id": 8,
+      "question": "I waited for my friend until he_______.",
+      "options": {
+        "a": "have come",
+        "b": "came",
+        "c": "had come",
+        "d": "has come\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "came",
+      "explanation": "Sequence of tense: first clause is Past Indefinite → following clause must also be Past Indefinite. → \"until he came\"."
+    },
+    {
+      "id": 9,
+      "question": "Rina proceeded as though she (know) everything.",
+      "options": {
+        "a": "knows",
+        "b": "had known",
+        "c": "knew",
+        "d": "known\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "had known",
+      "explanation": "\"as if/as though\" with Past Simple main clause → Past Perfect in subordinate clause. → \"as though she had known everything.\""
+    },
+    {
+      "id": 10,
+      "question": "He expressed his opinion in a way as if he _______ a PhD in the subject.",
+      "options": {
+        "a": "did",
+        "b": "had done",
+        "c": "has done",
+        "d": "have done\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "had done",
+      "explanation": "Main clause in Past Indefinite + \"as if/as though\" → subordinate clause uses Past Perfect. → \"as if he had done a PhD\"."
+    },
+    {
+      "id": 11,
+      "question": "I opened the door as soon as I _______ the bell.",
+      "options": {
+        "a": "have heard",
+        "b": "was hearing",
+        "c": "heard",
+        "d": "listen\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "heard",
+      "explanation": "Both clauses are about past events in sequence. \"as soon as\" joins two Past Simple actions. → \"as soon as I heard the bell.\""
+    },
+    {
+      "id": 12,
+      "question": "The example of present progressive is-",
+      "options": {
+        "a": "Walking is a good exercise",
+        "b": "He was reading a novel",
+        "c": "You have had your meal",
+        "d": "They are gossiping\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "They are gossiping",
+      "explanation": "Present Progressive/Continuous: Subject + am/is/are + verb-ing. → \"They are gossiping.\""
+    },
+    {
+      "id": 13,
+      "question": "How much did you_______ the book?",
+      "options": {
+        "a": "pay",
+        "b": "paid",
+        "c": "pay for",
+        "d": "pay on\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "pay for",
+      "explanation": "\"Pay for\" is the correct collocation when expressing the price paid for something. → \"How much did you pay for the book?\""
+    },
+    {
+      "id": 14,
+      "question": "By the middle of the twenty-first century, the computer _____ a necessity in every home.",
+      "options": {
+        "a": "became",
+        "b": "becoming",
+        "c": "has become",
+        "d": "will have become\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "will have become",
+      "explanation": "\"By + future time\" → Future Perfect tense: will/shall + have + V3. → \"will have become\"."
+    },
+    {
+      "id": 15,
+      "question": "I could not do it until ten minutes _____ over.",
+      "options": {
+        "a": "is",
+        "b": "are",
+        "c": "had been",
+        "d": "have been\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "had been",
+      "explanation": "\"Until\" joining two past actions where one completes before the other → Past Perfect. → \"until ten minutes had been over.\""
+    },
+    {
+      "id": 16,
+      "question": "It is many years since I _____ there.",
+      "options": {
+        "a": "Go",
+        "b": "Went",
+        "c": "Had gone",
+        "d": "Have gone\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Went",
+      "explanation": "\"Since\" with Present Indefinite/Present Perfect in first clause → Past Indefinite in following clause. → \"since I went there.\""
+    },
+    {
+      "id": 17,
+      "question": "We _____ for the bus before we decided to walk.",
+      "options": {
+        "a": "were waiting",
+        "b": "waited",
+        "c": "had been waiting",
+        "d": "None\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "had been waiting",
+      "explanation": "An action that was ongoing before another past action → Past Perfect Continuous: had been + V-ing. → \"We had been waiting for the bus before we decided to walk.\""
+    },
+    {
+      "id": 18,
+      "question": "I _______ the work before I leave my office.",
+      "options": {
+        "a": "had finished",
+        "b": "have finished",
+        "c": "shall have finished",
+        "d": "will finish\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "shall have finished",
+      "explanation": "One future action completed before another → Future Perfect: shall/will + have + V3. → \"I shall have finished the work before I leave.\""
+    }
+  ]
+}

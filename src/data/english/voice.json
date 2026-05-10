@@ -1,0 +1,226 @@
+{
+  "topic": "Voice",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Change the voice: Do you understand what I mean?",
+      "options": {
+        "a": "What I mean is that understood by you?",
+        "b": "Was what I mean understood by you?",
+        "c": "Is what I mean understood by you?",
+        "d": "What I mean is understood by you?\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Is what I mean understood by you?",
+      "explanation": "Interrogative Active → Passive: the auxiliary moves to the front. Present Simple question → \"Is ... understood by you?\""
+    },
+    {
+      "id": 2,
+      "question": "Change the voice: Circumstances will oblige me to go.",
+      "options": {
+        "a": "I will oblige the circumstances and go.",
+        "b": "I shall be obliged to go by the circumstances.",
+        "c": "Under the circumstances, I should go.",
+        "d": "I shall be obliged by the circumstances to go.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Under the circumstances, I should go.",
+      "explanation": "\"Circumstances will oblige me to go\" → passive/idiomatic: \"Under the circumstances, I should go.\""
+    },
+    {
+      "id": 3,
+      "question": "Change the voice: You need to clean your shoes properly.",
+      "options": {
+        "a": "Your shoes are needed to clean properly.",
+        "b": "You are needed to clean your shoes properly.",
+        "c": "Your shoes need to be cleaned properly.",
+        "d": "Your shoes are needed by you to clean properly.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Your shoes need to be cleaned properly.",
+      "explanation": "\"need to + verb\" → Passive: \"need to be + past participle\". Object (your shoes) becomes subject."
+    },
+    {
+      "id": 4,
+      "question": "Change the voice: You can play with these kittens quite safely.",
+      "options": {
+        "a": "These kittens can played with quite safely.",
+        "b": "These kittens can play with you quite safely.",
+        "c": "These kittens can be played with you quite safely.",
+        "d": "These kittens can be played with quite safely.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "These kittens can be played with quite safely.",
+      "explanation": "Modal + active verb → Modal + be + past participle. \"can play with\" → \"can be played with\"."
+    },
+    {
+      "id": 5,
+      "question": "Change the voice: You should open the wine about three hours before you use it.",
+      "options": {
+        "a": "Wine should be opened about three hours before use.",
+        "b": "Wine should be opened by you three hours before use.",
+        "c": "Wine should be opened about three hours before you use it.",
+        "d": "Wine should be opened about three hours before it is used.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Wine should be opened about three hours before it is used.",
+      "explanation": "Both clauses become passive. \"you use it\" → \"it is used\"."
+    },
+    {
+      "id": 6,
+      "question": "Change the voice: Mona was writing a letter to her father.",
+      "options": {
+        "a": "A letter was written to her father by Mona.",
+        "b": "A letter has been written to her father by Mona.",
+        "c": "A letter was being written by Mona to her father.",
+        "d": "A letter was written by Mona to her father.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "A letter was being written by Mona to her father.",
+      "explanation": "Past Continuous Active → Passive: Subject + was/were + being + V3. \"was writing\" → \"was being written\"."
+    },
+    {
+      "id": 7,
+      "question": "Change the voice: Someone gave her a bull dog.",
+      "options": {
+        "a": "She was given a bull dog.",
+        "b": "A bull dog was given to her.",
+        "c": "She has been given a bull dog.",
+        "d": "She is being given a bull dog by someone.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "A bull dog was given to her.",
+      "explanation": "Past Simple Active → Passive: Subject + was/were + V3. Indirect object (her) → \"to her\"."
+    },
+    {
+      "id": 8,
+      "question": "Change the voice: A stone struck me on the head.",
+      "options": {
+        "a": "I was struck by a stone on the head.",
+        "b": "My head was struck by a stone.",
+        "c": "I had been struck by a stone on the head.",
+        "d": "I was struck on the head by a stone.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "I was struck on the head by a stone.",
+      "explanation": "Past Simple Active → Passive. Adverbial phrase \"on the head\" stays in position: \"I was struck on the head by a stone.\""
+    },
+    {
+      "id": 9,
+      "question": "Change the voice: He was arrested on the charge of theft, but for lack of evidence he was released.",
+      "options": {
+        "a": "He was arrested on a charge of theft, but was released for lack of evidence.",
+        "b": "The police arrested him on a charge of theft, but for lack of evidence he was released.",
+        "c": "The police arrested him on a charge of theft, but for lack of evidence released him.",
+        "d": "None of these.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The police arrested him on a charge of theft, but for lack of evidence released him.",
+      "explanation": "Both passive clauses become active. Implied agent \"the police\" is used."
+    },
+    {
+      "id": 10,
+      "question": "Change the voice: I saw him conducting the rehearsal.",
+      "options": {
+        "a": "He was seen conducting the rehearsal.",
+        "b": "I saw the rehearsal to be conducted by him.",
+        "c": "He was seen by me to conduct the rehearsal.",
+        "d": "I saw the rehearsal being conducted by him.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "I saw the rehearsal being conducted by him.",
+      "explanation": "Verb of perception (see) + object + V-ing → Passive: Subject + saw + object + being + V3."
+    },
+    {
+      "id": 11,
+      "question": "Change the voice: Have the box broken.",
+      "options": {
+        "a": "Have the broken box.",
+        "b": "Break the box.",
+        "c": "Get someone to break the box.",
+        "d": "They have broken the box.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Get someone to break the box.",
+      "explanation": "Causative \"Have + object + V3\" → Active equivalent: \"Get someone to + base verb + object\"."
+    },
+    {
+      "id": 12,
+      "question": "Change the voice: The Romans expected to conquer Carthage.",
+      "options": {
+        "a": "Carthage was expected to be conquered by the Romans.",
+        "b": "The Romans were expected to conquer Carthage.",
+        "c": "It was expected by the Romans that they would conquer Carthage.",
+        "d": "The Romans expected to have conquered Carthage.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "It was expected by the Romans that they would conquer Carthage.",
+      "explanation": "\"Subject + expected + to + verb\" → Passive: \"It was expected by + agent + that + clause\"."
+    },
+    {
+      "id": 13,
+      "question": "Change the voice: Each member of the academy was given a prize.",
+      "options": {
+        "a": "Every member of the academy got a prize.",
+        "b": "They give a prize to each member of the academy.",
+        "c": "They are giving a prize to each member of the academy.",
+        "d": "They gave a prize to each member of the academy.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "They gave a prize to each member of the academy.",
+      "explanation": "Past Simple Passive → Active: Subject (they) + V2 + object. \"was given\" → \"gave\"."
+    },
+    {
+      "id": 14,
+      "question": "Change the voice: The thieves victimise the innocent commoners.",
+      "options": {
+        "a": "The innocent commoners had been victimised by the thieves.",
+        "b": "The innocent commoners will be victimised by the thieves.",
+        "c": "The innocent commoners are victimised by the thieves.",
+        "d": "The innocent commoners were victimised by the thieves.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The innocent commoners are victimised by the thieves.",
+      "explanation": "Present Simple Active → Passive: Subject + is/am/are + V3. \"victimise\" → \"are victimised\"."
+    },
+    {
+      "id": 15,
+      "question": "Change into active form: 'I was surprised to see that he had been beaten black and blue.'",
+      "options": {
+        "a": "I was surprised to see he had been beaten black and blue.",
+        "b": "It surprised me to see that he had been beaten black and blue.",
+        "c": "It was surprising that he had been beaten black and blue.",
+        "d": "That he had been beaten black and blue was surprising.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "It surprised me to see that he had been beaten black and blue.",
+      "explanation": "\"I was surprised\" (passive) → \"It surprised me\" (active). The subordinate clause remains."
+    },
+    {
+      "id": 16,
+      "question": "The active form of the sentence 'The visitors were shown a collection of old manuscripts.'",
+      "options": {
+        "a": "A collection of old manuscripts was shown to the visitors.",
+        "b": "The hostess was showing the visitors a collection of old manuscripts.",
+        "c": "The hostess showed the visitors a collection of old manuscripts.",
+        "d": "The hostess was showed a collection of old manuscripts.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The hostess showed the visitors a collection of old manuscripts.",
+      "explanation": "Past Simple Passive → Active: implied subject (the hostess) + showed + indirect object + direct object."
+    },
+    {
+      "id": 17,
+      "question": "Change the voice: He was congratulated by his teacher on his brilliant success in the recent examination.",
+      "options": {
+        "a": "He congratulated his teacher on his brilliant success in the examination.",
+        "b": "His teacher congratulated him for his brilliant success in the recent examination.",
+        "c": "His teacher congratulated him on his brilliant success in the examination.",
+        "d": "His teacher congratulated him.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "His teacher congratulated him for his brilliant success in the recent examination.",
+      "explanation": "Passive → Active: \"by his teacher\" becomes subject. \"was congratulated\" → \"congratulated\"."
+    }
+  ]
+}

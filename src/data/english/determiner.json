@@ -1,0 +1,200 @@
+{
+  "topic": "Determiner Article Number Gender",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Mr. Robert lives in ________ Hague.",
+      "options": {
+        "a": "the",
+        "b": "a",
+        "c": "an",
+        "d": "no article\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "the",
+      "explanation": "\"The Hague\" is a proper name where \"The\" is part of the name itself (from Dutch \"Den Haag\"), not an article. So \"the\" is used."
+    },
+    {
+      "id": 2,
+      "question": "England is ________ European country.",
+      "options": {
+        "a": "the",
+        "b": "no article",
+        "c": "an",
+        "d": "a\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "a",
+      "explanation": "\"European\" begins with a vowel letter but has a consonant sound /j/ (like \"you-ropean\"). When vowel sounds like \"iu/wa\", use \"a\" not \"an.\" → \"a European country.\""
+    },
+    {
+      "id": 3,
+      "question": "I found ________ old lady came to our house.",
+      "options": {
+        "a": "the",
+        "b": "no article",
+        "c": "a",
+        "d": "an\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "an",
+      "explanation": "\"Old\" begins with a vowel sound /ɒ/ → use \"an\". → \"an old lady.\""
+    },
+    {
+      "id": 4,
+      "question": "She is now a student of ________ university.",
+      "options": {
+        "a": "a",
+        "b": "the",
+        "c": "an",
+        "d": "none\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "a",
+      "explanation": "\"University\" begins with vowel letter \"u\" but pronounced /juː/ (consonant sound) → use \"a\". → \"a university.\""
+    },
+    {
+      "id": 5,
+      "question": "Iron is ______ useful metal.",
+      "options": {
+        "a": "an",
+        "b": "the",
+        "c": "a",
+        "d": "none\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "a",
+      "explanation": "\"Useful\" begins with \"u\" but is pronounced /juːs/ (consonant sound) → use \"a\". → \"a useful metal.\""
+    },
+    {
+      "id": 6,
+      "question": "Which one of the followings is in plural form?",
+      "options": {
+        "a": "media",
+        "b": "datum",
+        "c": "locus",
+        "d": "radius\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "media",
+      "explanation": "Media = plural of medium. Datum (s) → Data (p). Locus (s) → Loci (p). Radius (s) → Radii (p)."
+    },
+    {
+      "id": 7,
+      "question": "Which is the plural form of 'Mr.'?",
+      "options": {
+        "a": "Mrs.",
+        "b": "Misters",
+        "c": "Ms.",
+        "d": "Messrs\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Messrs",
+      "explanation": "Messrs is the formal abbreviation for the plural of Mr. (from French \"Messieurs\")."
+    },
+    {
+      "id": 8,
+      "question": "Identify singular number-",
+      "options": {
+        "a": "fungi",
+        "b": "agenda",
+        "c": "formula",
+        "d": "data\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "formula",
+      "explanation": "Formula (s) → Formulae/Formulas (p). Fungi (p) → Fungus (s). Agenda (p) → Agendum (s). Data (p) → Datum (s)."
+    },
+    {
+      "id": 9,
+      "question": "What is the feminine gender of 'earl'?",
+      "options": {
+        "a": "lady",
+        "b": "queen",
+        "c": "countess",
+        "d": "heroine\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "countess",
+      "explanation": "Earl (masculine) → Countess (feminine). An earl is a British nobleman; his wife/female equivalent is a countess."
+    },
+    {
+      "id": 10,
+      "question": "The feminine gender of the word 'bull' is-",
+      "options": {
+        "a": "calf",
+        "b": "ewe",
+        "c": "cow",
+        "d": "mare\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "cow",
+      "explanation": "Bull (masculine) → Cow (feminine). Ewe = female sheep. Mare = female horse. Calf = young of cattle (common gender)."
+    },
+    {
+      "id": 11,
+      "question": "What is the feminine gender of 'swain'?",
+      "options": {
+        "a": "swainess",
+        "b": "witch",
+        "c": "nymph",
+        "d": "bitch\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "nymph",
+      "explanation": "Swain (masculine, young man) → Nymph (feminine). Witch (feminine) → Wizard (masculine). Bitch (feminine) → Dog (masculine)."
+    },
+    {
+      "id": 12,
+      "question": "Which one of the following is a masculine gender?",
+      "options": {
+        "a": "stag",
+        "b": "doe",
+        "c": "roe",
+        "d": "vixen\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "stag",
+      "explanation": "Stag (masculine deer) → Hind/Doe (feminine). Buck (masculine deer). Roe (feminine deer). Vixen (feminine fox) → Fox (masculine)."
+    },
+    {
+      "id": 13,
+      "question": "Which one is the opposite gender of doctor?",
+      "options": {
+        "a": "lady doctor",
+        "b": "doctress",
+        "c": "nurse",
+        "d": "doctorex\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "lady doctor",
+      "explanation": "Doctor is a common gender word. To specify feminine → \"lady doctor.\" \"Doctress\" is not standard English."
+    },
+    {
+      "id": 14,
+      "question": "Which of the following is not used as a dual gender?",
+      "options": {
+        "a": "professor",
+        "b": "doctor",
+        "c": "steward",
+        "d": "cook\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "steward",
+      "explanation": "Steward (masculine) → Stewardess (feminine) — distinct forms, not dual gender. Professor, Doctor, Cook are common/dual gender words."
+    },
+    {
+      "id": 15,
+      "question": "She eagerly flipped through the latest issue of ________ Time magazine to check out the upcoming fashion trends.",
+      "options": {
+        "a": "a",
+        "b": "the",
+        "c": "an",
+        "d": "Zero article\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Zero article",
+      "explanation": "Magazine names do NOT take \"the\" (unlike newspaper names). → \"Time magazine\" (no article)."
+    }
+  ]
+}

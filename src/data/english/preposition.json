@@ -1,0 +1,811 @@
+{
+  "topic": "Preposition",
+  "questions": [
+    {
+      "id": 1,
+      "question": "She aspires _____ a scientific career.",
+      "options": {
+        "a": "to",
+        "b": "for",
+        "c": "from",
+        "d": "by"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "to",
+      "explanation": "Aspire to: আকাঙ্ক্ষা করা। Aspiration হচ্ছে noun, এরপর for বসে। Aspire হচ্ছে verb, এরপর to বসে।"
+    },
+    {
+      "id": 2,
+      "question": "Your conduct admits ____ no excuse.",
+      "options": {
+        "a": "to",
+        "b": "for",
+        "c": "of",
+        "d": "at"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "of",
+      "explanation": "Admit of: স্বীকৃতি পাওয়া। Admit to: ভর্তি হওয়া। Admit into: যোগ দেওয়া।"
+    },
+    {
+      "id": 3,
+      "question": "The mother was anxious _____ the safety of her son.",
+      "options": {
+        "a": "at",
+        "b": "for",
+        "c": "about",
+        "d": "upon"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "about",
+      "explanation": "Anxious about: কোন বিষয়ে উদ্বিগ্ন। Anxious for: কোন কিছুর জন্য উদ্বিগ্ন।"
+    },
+    {
+      "id": 4,
+      "question": "Dogs have antipathy ____ cats.",
+      "options": {
+        "a": "at",
+        "b": "with",
+        "c": "for",
+        "d": "to"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "to",
+      "explanation": "Antipathy to someone or something: কোন কিছুর প্রতি বিদ্বেষ। Antipathy against: কারও প্রতি বিদ্বেষ।"
+    },
+    {
+      "id": 5,
+      "question": "He pleaded ....... me for justice.",
+      "options": {
+        "a": "about",
+        "b": "with",
+        "c": "for",
+        "d": "on"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "with",
+      "explanation": "Plead with: কাকুতি-মিনতি করা।"
+    },
+    {
+      "id": 6,
+      "question": "A new moon hung _______ the mountains.",
+      "options": {
+        "a": "by",
+        "b": "around",
+        "c": "over",
+        "d": "beside"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "around",
+      "explanation": "Hang around: ঘোরাঘুরি করা।"
+    },
+    {
+      "id": 7,
+      "question": "He prohibited me _____.",
+      "options": {
+        "a": "to do it",
+        "b": "do it",
+        "c": "in doing it",
+        "d": "from doing it"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "from doing it",
+      "explanation": "Prohibit from doing something: কোন কিছু করতে নিষেধ করা।"
+    },
+    {
+      "id": 8,
+      "question": "Why are you so angry _____?",
+      "options": {
+        "a": "about",
+        "b": "at",
+        "c": "with",
+        "d": "for"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "for",
+      "explanation": "Angry with: কোন ব্যক্তির উপর রাগ করা। Angry about: কোন বস্তুর উপর রাগ করা। Angry for: কোন কারণে রাগ করা।"
+    },
+    {
+      "id": 9,
+      "question": "Hurry up! We have to go ____ five minutes.",
+      "options": {
+        "a": "in",
+        "b": "on",
+        "c": "by",
+        "d": "for"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "in",
+      "explanation": "Point of time এ by হয়। Period of time এ in হয়। In 5 minutes।"
+    },
+    {
+      "id": 10,
+      "question": "He parted _____ his friends in tears.",
+      "options": {
+        "a": "with",
+        "b": "from",
+        "c": "against",
+        "d": "beside"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "from",
+      "explanation": "Part from: বিচ্ছেদ হওয়া।"
+    },
+    {
+      "id": 11,
+      "question": "The children were entrusted ____ the care of their uncle.",
+      "options": {
+        "a": "with",
+        "b": "for",
+        "c": "to",
+        "d": "at"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "to",
+      "explanation": "Entrust to: কারও উপর কারো বা কোন কিছুর দায়িত্ব প্রদান করা।"
+    },
+    {
+      "id": 12,
+      "question": "Rizvi requested Rimi _____ telephone to attend the meeting.",
+      "options": {
+        "a": "over",
+        "b": "through",
+        "c": "with",
+        "d": "by"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "by",
+      "explanation": "ফোনের মাধ্যমে কোনো কাজ করা over the phone বা by telephone হবে (Be verb না থাকলে)। ফোনে কথা বলছে অবস্থায় on the phone (Be verb থাকলে)।"
+    },
+    {
+      "id": 13,
+      "question": "Please pass the book _______ her when you've finished reading it.",
+      "options": {
+        "a": "out",
+        "b": "over",
+        "c": "on",
+        "d": "away"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "on",
+      "explanation": "Pass on: অতিক্রম করা, হস্তান্তর করা।"
+    },
+    {
+      "id": 14,
+      "question": "Cultural exchanges are a way of building bridges ___ countries.",
+      "options": {
+        "a": "of",
+        "b": "between",
+        "c": "over",
+        "d": "among"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "between",
+      "explanation": "পারস্পরিক সম্পর্ক বুঝতে দুইয়ের অধিকের মাঝও between হয়।"
+    },
+    {
+      "id": 15,
+      "question": "I went here ___ a helicopter.",
+      "options": {
+        "a": "In",
+        "b": "On",
+        "c": "By",
+        "d": "Of"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "In",
+      "explanation": "যে সব যানবাহনে চলাচল করা সম্ভব না সেসব যানবাহনের আগে In বসে। in a car, in a taxi, in a helicopter। যানবাহনের সাথে Article না থাকলে By: By bus, By train।"
+    },
+    {
+      "id": 16,
+      "question": "Japan is ____ the east of Bangladesh.",
+      "options": {
+        "a": "Of",
+        "b": "On",
+        "c": "To",
+        "d": "In"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "To",
+      "explanation": "সীমানার মধ্যে হলে In। সীমানার বাইরে হলে To - Japan is to the east of Bangladesh। সীমানার উপরে হলে On।"
+    },
+    {
+      "id": 17,
+      "question": "He ran ___ the building.",
+      "options": {
+        "a": "into",
+        "b": "to",
+        "c": "onto",
+        "d": "under"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "into",
+      "explanation": "He ran into the building means he entered the building while running."
+    },
+    {
+      "id": 18,
+      "question": "The plane flew ___ the clouds.",
+      "options": {
+        "a": "below",
+        "b": "to",
+        "c": "under",
+        "d": "at"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "under",
+      "explanation": "The plane flew under the clouds."
+    },
+    {
+      "id": 19,
+      "question": "Do you know the solution ___ the problem?",
+      "options": {
+        "a": "to",
+        "b": "into",
+        "c": "for",
+        "d": "of"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "to",
+      "explanation": "Solution to something: কোন কিছুর সমাধান অর্থে ব্যবহৃত হয়।"
+    },
+    {
+      "id": 20,
+      "question": "Rahim paid the salary ___ cheque.",
+      "options": {
+        "a": "in",
+        "b": "by",
+        "c": "to",
+        "d": "with"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "by",
+      "explanation": "Paid in cash। Paid by cheque।"
+    },
+    {
+      "id": 21,
+      "question": "He stopped ___ London on the way ___ New York.",
+      "options": {
+        "a": "in, to",
+        "b": "in, towards",
+        "c": "at, to",
+        "d": "in, into"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "at, to",
+      "explanation": "destination এর পূর্বে to বসে। Journey করার সময় কোনো শহরে থেকে যাওয়া বা যাত্রা বিরতি বোঝাতে শহরের পূর্বে at বসে।"
+    },
+    {
+      "id": 22,
+      "question": "The cat ___ a rat.",
+      "options": {
+        "a": "run down",
+        "b": "run into",
+        "c": "run at",
+        "d": "run out"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "run at",
+      "explanation": "Run at: পিছনে পিছনে দৌড়ানো/তাড়া করা।"
+    },
+    {
+      "id": 23,
+      "question": "Please don't ____ on your payments.",
+      "options": {
+        "a": "fall back",
+        "b": "fall behind",
+        "c": "fall on",
+        "d": "fall of"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "fall back",
+      "explanation": "Fall back: পিছানো/বিলম্ব করা।"
+    },
+    {
+      "id": 24,
+      "question": "Everyone admires him __ his success.",
+      "options": {
+        "a": "of",
+        "b": "for",
+        "c": "to",
+        "d": "at"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "of",
+      "explanation": "Admires of: প্রশংসা করা।"
+    },
+    {
+      "id": 25,
+      "question": "They live ____ catching fish.",
+      "options": {
+        "a": "by",
+        "b": "on",
+        "c": "with",
+        "d": "for"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "by",
+      "explanation": "Live by: জীবিকা নির্বাহ করা।"
+    },
+    {
+      "id": 26,
+      "question": "It is difficult to sympathize ______ an unfortunate man.",
+      "options": {
+        "a": "for",
+        "b": "with",
+        "c": "by",
+        "d": "at"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "with",
+      "explanation": "Sympathize with someone: কারো প্রতি সহানুভূতিশীল হওয়া।"
+    },
+    {
+      "id": 27,
+      "question": "The bus was late this morning, but it is usually _____.",
+      "options": {
+        "a": "in time",
+        "b": "at time",
+        "c": "on time",
+        "d": "just time"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "on time",
+      "explanation": "নির্দিষ্ট সময় বুঝাতে on time বসে। নির্দিষ্ট সময়ের পূর্বে বা পরে বুঝাতে in time বসে।"
+    },
+    {
+      "id": 28,
+      "question": "He is resolved ____ going away.",
+      "options": {
+        "a": "on",
+        "b": "of",
+        "c": "from",
+        "d": "in"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "on",
+      "explanation": "Resolved on: দৃঢ়প্রতিজ্ঞ।"
+    },
+    {
+      "id": 29,
+      "question": "Professor Kamal is an authority ____ Sociology.",
+      "options": {
+        "a": "on",
+        "b": "of",
+        "c": "to",
+        "d": "for"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "on",
+      "explanation": "Authority on something: কোন বিষয়ে বিশেষ জ্ঞানসম্পন্ন।"
+    },
+    {
+      "id": 30,
+      "question": "He persists ____ disturbing me.",
+      "options": {
+        "a": "on",
+        "b": "at",
+        "c": "with",
+        "d": "in"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "in",
+      "explanation": "Persist in: নেতিবাচক হওয়া সত্বেও অবস্থায় অনড় থাকা।"
+    },
+    {
+      "id": 31,
+      "question": "As she was talking, he suddenly broke __________, saying, 'That's a lie!'",
+      "options": {
+        "a": "off",
+        "b": "in",
+        "c": "down",
+        "d": "into"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "in",
+      "explanation": "Break in: কথার মাঝে কথা বলা; চলমান কোন কিছুতে হস্তক্ষেপ করা। Break off: সাময়িকভাবে থামা। Break down: ভেঙে পড়া। Break into: বলপূর্বক প্রবেশ করা।"
+    },
+    {
+      "id": 32,
+      "question": "Eight men were concerned ________ the plot.",
+      "options": {
+        "a": "at",
+        "b": "with",
+        "c": "in",
+        "d": "for"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "in",
+      "explanation": "Concerned in: সংশ্লিষ্ট/জড়িত। Concerned for: উদ্বিগ্ন।"
+    },
+    {
+      "id": 33,
+      "question": "You cannot do this _ your home.",
+      "options": {
+        "a": "At",
+        "b": "To",
+        "c": "In",
+        "d": "Into"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "In",
+      "explanation": "বাড়িতে বোঝাতে at home কিংবা in my home/in your home ব্যবহার করা যাবে।"
+    },
+    {
+      "id": 34,
+      "question": "Nabiha is confined _ a room for five days.",
+      "options": {
+        "a": "To",
+        "b": "With",
+        "c": "For",
+        "d": "In"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "In",
+      "explanation": "কক্ষে আবদ্ধ থাকা অর্থে Confined in বসে।"
+    },
+    {
+      "id": 35,
+      "question": "We arrived _ time to get good seats.",
+      "options": {
+        "a": "On",
+        "b": "In",
+        "c": "Late",
+        "d": "At"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "In",
+      "explanation": "ব্যাপক সময়ের শেষ মুহূর্তে In। Mahbub will do the work in a month।"
+    },
+    {
+      "id": 36,
+      "question": "No one could tell whether he was ____ earnest or ___ jest.",
+      "options": {
+        "a": "in, in",
+        "b": "in, at",
+        "c": "at, in",
+        "d": "at, at"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "in, in",
+      "explanation": "Jest at: ঠাট্টা। In jest: মজার ছলে। In earnest: in a serious way."
+    },
+    {
+      "id": 37,
+      "question": "What are you so angry _____ ?",
+      "options": {
+        "a": "about",
+        "b": "at",
+        "c": "with",
+        "d": "for"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "about",
+      "explanation": "কোনো ব্যক্তির (somebody) ওপর রাগান্বিত হলে angry এর সাথে with/at বসে। কোনো কিছু নিয়ে রাগান্বিত হলে angry এর সাথে about বসে।"
+    },
+    {
+      "id": 38,
+      "question": "Please ________ the necessity of arriving early.",
+      "options": {
+        "a": "emphasise about",
+        "b": "emphasise to",
+        "c": "emphasise on",
+        "d": "emphasise"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "emphasise",
+      "explanation": "Emphasise (verb) এর পর কোনো preposition হবে না।"
+    },
+    {
+      "id": 39,
+      "question": "Are you doing anything special __________ the weekend?",
+      "options": {
+        "a": "in",
+        "b": "for",
+        "c": "on",
+        "d": "at"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "at",
+      "explanation": "weekend এর পূর্বে at ব্যবহার হয়। at the weekend হলো British English। on the weekend (American English) ও সঠিক।"
+    },
+    {
+      "id": 40,
+      "question": "The word 'seek' is closest ___ meaning of pursue.",
+      "options": {
+        "a": "of",
+        "b": "in",
+        "c": "the",
+        "d": "to"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "in",
+      "explanation": "pursue in means \"continue or proceed along\" that is same as \"seek\"."
+    },
+    {
+      "id": 41,
+      "question": "Anis had a talent ___ making people laugh.",
+      "options": {
+        "a": "of",
+        "b": "in",
+        "c": "on",
+        "d": "for"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "for",
+      "explanation": "Talent এর পর for বসে। talent for: প্রতিভা/দক্ষতা।"
+    },
+    {
+      "id": 42,
+      "question": "Excess working can be fatal ____ health.",
+      "options": {
+        "a": "in",
+        "b": "for",
+        "c": "to",
+        "d": "at"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "to",
+      "explanation": "ধ্বংসাত্মক কিছু বোঝাতে fatal to হয়।"
+    },
+    {
+      "id": 43,
+      "question": "The whole case hinges ___ this point.",
+      "options": {
+        "a": "to",
+        "b": "at",
+        "c": "upon",
+        "d": "for"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "upon",
+      "explanation": "hinge upon: নির্ভর করা।"
+    },
+    {
+      "id": 44,
+      "question": "Don't trespass ____ my land.",
+      "options": {
+        "a": "into",
+        "b": "for",
+        "c": "to",
+        "d": "upon"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "upon",
+      "explanation": "trespass on/upon: অনাধিকার প্রবেশ।"
+    },
+    {
+      "id": 45,
+      "question": "He sprang quickly ____ action.",
+      "options": {
+        "a": "for",
+        "b": "on",
+        "c": "to",
+        "d": "with"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "on",
+      "explanation": "Quickly on: চমকে দেওয়া।"
+    },
+    {
+      "id": 46,
+      "question": "___ sharks, whales and dolphins are warm blooded mammals.",
+      "options": {
+        "a": "alike",
+        "b": "unlike",
+        "c": "dislike",
+        "d": "not likeness"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "unlike",
+      "explanation": "unlike something: কোন কিছুর মতো না।"
+    },
+    {
+      "id": 47,
+      "question": "The government has stepped ____ measures to curb swine flu.",
+      "options": {
+        "a": "in",
+        "b": "out",
+        "c": "on",
+        "d": "up"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "up",
+      "explanation": "step up: গতি বাড়ানো।"
+    },
+    {
+      "id": 48,
+      "question": "My father called me many times ________ .",
+      "options": {
+        "a": "In the night",
+        "b": "at night",
+        "c": "on the night",
+        "d": "over the night"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "In the night",
+      "explanation": "রাতের নির্দিষ্ট সময় বোঝাতে 'in the night' ব্যবহৃত হয়। সম্পূর্ণ রাত বোঝাতে at হয়।"
+    },
+    {
+      "id": 49,
+      "question": "The criminal died _____ the scaffold.",
+      "options": {
+        "a": "at",
+        "b": "in",
+        "c": "on",
+        "d": "of"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "on",
+      "explanation": "Die on = ফাঁসির মঞ্চে মারা যাওয়া। Die at = পণ করে মারা যাওয়া। Die for = দেশের জন্য মারা যাওয়া।"
+    },
+    {
+      "id": 50,
+      "question": "He was disappointed _____ my attitude.",
+      "options": {
+        "a": "from",
+        "b": "of",
+        "c": "with",
+        "d": "in"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "in",
+      "explanation": "Disappointed + in/at = আমরা যা আশা করেছিলাম তা না হওয়ায় হতাশ। Disappointed + of = অন্যদিক থেকে কিছু পেতে ব্যর্থ হলে।"
+    },
+    {
+      "id": 51,
+      "question": "The criminal has been warned many times _____ his wrongdoing.",
+      "options": {
+        "a": "for",
+        "b": "to",
+        "c": "about",
+        "d": "against"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "against",
+      "explanation": "'against' ব্যবহার করা হয় যদি কাউকে তার অবৈধ কার্যকলাপের জন্য সতর্ক করা হয়।"
+    },
+    {
+      "id": 52,
+      "question": "A defect can be caused __________ negligence by one of the members of a team.",
+      "options": {
+        "a": "to",
+        "b": "by",
+        "c": "at",
+        "d": "in"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "by",
+      "explanation": "Caused by negligence অর্থ অবহেলাজনিত কারণে।"
+    },
+    {
+      "id": 53,
+      "question": "The children are _____ the river.",
+      "options": {
+        "a": "in",
+        "b": "at",
+        "c": "with",
+        "d": "from"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "at",
+      "explanation": "Sea, river, Lake ইত্যাদির পূর্বে in/at উভয়ই ব্যবহৃত হতে পারে। In ব্যবহৃত হলে পানির মধ্যে থাকা বোঝায়। At ব্যবহৃত হলে পানির কাছাকাছি বোঝায়।"
+    },
+    {
+      "id": 54,
+      "question": "Samantha has already written _______ the principle application.",
+      "options": {
+        "a": "to",
+        "b": "at",
+        "c": "for",
+        "d": "no preposition"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "no preposition",
+      "explanation": "Write এরপর বস্তুবাচক objective থাকলে preposition হয় না। তবে Write to a person হয়।"
+    },
+    {
+      "id": 55,
+      "question": "The shirt will be exchanged _____ Bangladeshi taka.",
+      "options": {
+        "a": "for",
+        "b": "of",
+        "c": "with",
+        "d": "no preposition"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "for",
+      "explanation": "Exchange + for + something: He will exchange pounds for dollar। Exchange + with + something: Would you exchange the marker with your teacher।"
+    },
+    {
+      "id": 56,
+      "question": "On the night before the exam, she was seen poring _____ the books.",
+      "options": {
+        "a": "into",
+        "b": "through",
+        "c": "over",
+        "d": "none of these"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "over",
+      "explanation": "Pore over / Poring over = reading it with great attention বা কোন কিছু সতর্কতার সাথে পড়া।"
+    },
+    {
+      "id": 57,
+      "question": "Ratna unnecessarily _____ a quarrel with Rekha and left the party.",
+      "options": {
+        "a": "has picked up",
+        "b": "picked on",
+        "c": "picking up",
+        "d": "picked"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "picked",
+      "explanation": "Pick a quarrel with somebody মানে কারো সাথে ঝগড়া করা।"
+    },
+    {
+      "id": 58,
+      "question": "It's time for you to give _____ your examination papers.",
+      "options": {
+        "a": "out",
+        "b": "in",
+        "c": "up",
+        "d": "away"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "in",
+      "explanation": "Give in: যথাযথ কর্তৃপক্ষের হাতে তুলে দেওয়া।"
+    },
+    {
+      "id": 59,
+      "question": "The speaker was not clear and I couldn't make ___ what he meant.",
+      "options": {
+        "a": "out",
+        "b": "at",
+        "c": "for",
+        "d": "of"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "out",
+      "explanation": "Make out (Phrasal verb): manage with some difficulty to see or hear someone or something. অর্থ: বুঝতে পারা।"
+    },
+    {
+      "id": 60,
+      "question": "The flowers withered _____ the hot sun.",
+      "options": {
+        "a": "off",
+        "b": "from",
+        "c": "in",
+        "d": "under"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "under",
+      "explanation": "'Under' means the process of being affected or controlled by a particular action, situation, or state."
+    },
+    {
+      "id": 61,
+      "question": "You must dispense _____ his services.",
+      "options": {
+        "a": "of",
+        "b": "in",
+        "c": "at",
+        "d": "with"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "with",
+      "explanation": "Dispense with: to get rid of or do without something."
+    },
+    {
+      "id": 62,
+      "question": "It was ____ midnight when three cars dropped ____ the passengers and disappeared.",
+      "options": {
+        "a": "during, away",
+        "b": "in, out",
+        "c": "around, off",
+        "d": "on, down"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "around, off",
+      "explanation": "Around means nearly at. Drop off: to take someone or something to a particular place."
+    }
+  ]
+}

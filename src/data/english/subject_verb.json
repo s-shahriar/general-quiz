@@ -1,0 +1,83 @@
+{
+  "topic": "Subject Verb",
+  "questions": [
+    {
+      "id": 1,
+      "question": "He and I ______ well.",
+      "options": {
+        "a": "are",
+        "b": "is",
+        "c": "was",
+        "d": "am\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "are",
+      "explanation": "When two subjects are joined by \"and\", the verb is plural. \"He and I\" → \"are\"."
+    },
+    {
+      "id": 2,
+      "question": "One of the ______ of globalization is cultural ______.",
+      "options": {
+        "a": "effect, shock",
+        "b": "effect, confusion",
+        "c": "affects, surprise",
+        "d": "effects, assault\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "effects, assault",
+      "explanation": "\"One of the\" is followed by a plural noun (effects) and a singular verb. First blank = \"effects\" (plural noun after \"one of the\")."
+    },
+    {
+      "id": 3,
+      "question": "More than one book ___ bought.",
+      "options": {
+        "a": "has",
+        "b": "are",
+        "c": "is",
+        "d": "were\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "is",
+      "explanation": "\"More than one\" + singular noun + singular verb. (More than two → plural noun + plural verb.)"
+    },
+    {
+      "id": 4,
+      "question": "A number of banks ___ technology widely.",
+      "options": {
+        "a": "are using",
+        "b": "use",
+        "c": "uses",
+        "d": "have used\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "use",
+      "explanation": "\"A number of\" + plural noun + plural verb. \"The number of\" + plural noun + singular verb."
+    },
+    {
+      "id": 5,
+      "question": "Which sentence is the correct one?",
+      "options": {
+        "a": "Five thousands taka was spent in the function.",
+        "b": "Five thousand taka were spent in the function.",
+        "c": "Five thousands taka were spent in the function.",
+        "d": "Five thousand taka was spent in the function.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Five thousand taka was spent in the function.",
+      "explanation": "Money, time, distance, age treated as a single unit → singular verb. \"Thousand\" preceded by a number stays singular."
+    },
+    {
+      "id": 6,
+      "question": "The majority of the employees ___ university degrees.",
+      "options": {
+        "a": "has",
+        "b": "have",
+        "c": "was",
+        "d": "has had\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "have",
+      "explanation": "\"Majority of + plural noun\" → plural verb. When majority refers to a collection of individuals, use plural verb."
+    }
+  ]
+}

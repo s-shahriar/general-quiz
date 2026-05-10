@@ -1,0 +1,291 @@
+{
+  "topic": "Narration",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Change the narration: Kiran asked me, \"Did you see the Cricket match on television last night?\"",
+      "options": {
+        "a": "Kiran asked me whether I saw the Cricket match on television the earlier night.",
+        "b": "Kiran asked me whether I had seen the Cricket match on television the earlier night.",
+        "c": "Kiran asked me did I see the Cricket match on television the last night.",
+        "d": "Kiran asked me whether I had seen the Cricket match on television the last night.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Kiran asked me whether I had seen the Cricket match on television the earlier night.",
+      "explanation": "\"Did you see\" (Simple Past) → \"whether I had seen\" (Past Perfect). \"Last night\" → \"the earlier night/the previous night\"."
+    },
+    {
+      "id": 2,
+      "question": "Change the narration: He said to interviewer, \"Could you please repeat the question?\"",
+      "options": {
+        "a": "He requested the interviewer if he could please repeat the question.",
+        "b": "He requested the interviewer to please repeat the question.",
+        "c": "He requested the interviewer to repeat the question.",
+        "d": "He requested the interviewer if he could repeat the question.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "He requested the interviewer to repeat the question.",
+      "explanation": "Polite request \"Could you please…\" → \"requested + object + to + base verb\". \"Please\" is dropped."
+    },
+    {
+      "id": 3,
+      "question": "Change the narration: The government has announced, \"Taxes will be raised\":",
+      "options": {
+        "a": "The government has announced that taxes would be raised.",
+        "b": "The government has announced that taxes would raised.",
+        "c": "The government has announced that taxes will be raised.",
+        "d": "The government has announced taxes will be raised.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The government has announced that taxes will be raised.",
+      "explanation": "Reporting verb is Present Tense (\"has announced\") → tense of reported speech does NOT change. \"will be raised\" stays as is."
+    },
+    {
+      "id": 4,
+      "question": "Change the narration: I told him that he was not working hard.",
+      "options": {
+        "a": "I said to him, \"You are not working hard.\"",
+        "b": "I told to him, \"You are not working hard.\"",
+        "c": "I said, \"You are not working hard.\"",
+        "d": "I said to him, \"He is not working hard.\"\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "I said to him, \"You are not working hard.\"",
+      "explanation": "Indirect → Direct: \"told him that he was not working hard\" → \"said to him, 'You are not working hard.'\" Pronoun \"he\" → \"you\"."
+    },
+    {
+      "id": 5,
+      "question": "Change the narration: The doctor says, \"It is better you undergo a surgery next week.\"",
+      "options": {
+        "a": "The doctor advised me to undergo a surgery the following week.",
+        "b": "The doctor says that it is better I undergo a surgery the following week.",
+        "c": "The doctor says that it was better I underwent a surgery the coming week.",
+        "d": "The doctor advises that it is better I underwent a surgery the following week.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The doctor says that it is better I undergo a surgery the following week.",
+      "explanation": "Reporting verb \"says\" is Present → tense unchanged. \"Next week\" → \"the following week\"."
+    },
+    {
+      "id": 6,
+      "question": "Change the narration: Sachin said, \"My grandfather recites the Geeta every morning.\"",
+      "options": {
+        "a": "Sachin told that his grandfather has cited the Geeta every morning.",
+        "b": "Sachin told that his grandfather recited the Geeta every morning.",
+        "c": "Sachin said that his grandfather recites the Geeta every morning.",
+        "d": "Sachin said that his grandfather recited the Geeta every morning.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Sachin said that his grandfather recites the Geeta every morning.",
+      "explanation": "Universal/habitual truth → tense remains unchanged in indirect speech. \"recites the Geeta every morning\" stays unchanged."
+    },
+    {
+      "id": 7,
+      "question": "Change the narration: Suma said to him, \"Am I to wait for you forever?\"",
+      "options": {
+        "a": "Suma asked him if she were to wait for him forever.",
+        "b": "Suma said to him if she can wait for him forever.",
+        "c": "Suma asked him if she was to wait for him forever.",
+        "d": "Suma asked him if she had to wait for him forever.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Suma asked him if she was to wait for him forever.",
+      "explanation": "\"Am I to wait\" → \"if she was to wait\". Pronoun \"I\" → \"she\", \"you\" → \"him\"."
+    },
+    {
+      "id": 8,
+      "question": "Change the narration: \"Don't pull the dog's tail,\" his father said.",
+      "options": {
+        "a": "His father said that he did not pull the dog's tail.",
+        "b": "His father forbade him not to pull the dog's tail.",
+        "c": "His father told him to pull the dog's tail.",
+        "d": "His father told him not to pull the dog's tail.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "His father told him not to pull the dog's tail.",
+      "explanation": "Negative imperative \"Don't + verb\" → \"told + object + not to + base verb\"."
+    },
+    {
+      "id": 9,
+      "question": "Change the narration: \"And you believe all this?\" asked Sriram, in surprise.",
+      "options": {
+        "a": "Sriram asked me in surprise if I believed all this.",
+        "b": "Sriram asked me in disbelief if I was believing all this.",
+        "c": "Surprised, Sriram asked me whether I believed all that.",
+        "d": "Sriram was amazed that I believed all that.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Surprised, Sriram asked me whether I believed all that.",
+      "explanation": "\"In surprise\" → participle \"Surprised\". \"this\" → \"that\". \"Believe\" → \"believed\"."
+    },
+    {
+      "id": 10,
+      "question": "Change the narration: She yelled, \"Please help me.\"",
+      "options": {
+        "a": "She yelled at one for some help.",
+        "b": "She yelled for someone to help.",
+        "c": "She yelled for someone to help her.",
+        "d": "She yelled at someone to help her.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "She yelled for someone to help her.",
+      "explanation": "Earnest plea \"Please help me\" → \"yelled for someone to help her\". \"me\" → \"her\"."
+    },
+    {
+      "id": 11,
+      "question": "Change the narration: He said, \"If I had the key with me, I could give you the solution\".",
+      "options": {
+        "a": "He said that if he had the key with him, he could give him/her the solution.",
+        "b": "He said if he could have the key with him, he would give him/her the solution.",
+        "c": "He told that if he could have the key with him, he would give him/her the solution.",
+        "d": "He said that if he have had the key with him, he could have given him/her the solution.\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "He said that if he had the key with him, he could give him/her the solution.",
+      "explanation": "Type 2 conditional: structure remains the same. Pronouns change: \"I\" → \"he\", \"me\" → \"him\", \"you\" → \"him/her\"."
+    },
+    {
+      "id": 12,
+      "question": "Change the narration: The poor examinee said, \"O God, take pity on me.\"",
+      "options": {
+        "a": "The poor examinee prayed God to take pity on him.",
+        "b": "The poor examinee, invoking God, implored him to take pity on him.",
+        "c": "The poor examinee exclaimed that God take pity on him.",
+        "d": "The poor examinee asked God to take pity on him.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The poor examinee, invoking God, implored him to take pity on him.",
+      "explanation": "\"O God\" = invocation → \"invoking God\". The earnest plea \"take pity on me\" → \"implored him to take pity on him\"."
+    },
+    {
+      "id": 13,
+      "question": "Change the narration: Gavaskar said, \"Bravo! Azhar, you have done well.\"",
+      "options": {
+        "a": "Gavaskar exclaimed with joy that Azhar had done well.",
+        "b": "Gavaskar called Azhar and exclaimed that he had done well.",
+        "c": "Gavaskar congratulated Azhar, saying that he had done well.",
+        "d": "Gavaskar praised Azhar for his having done well.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Gavaskar congratulated Azhar, saying that he had done well.",
+      "explanation": "\"Bravo!\" addressed to a person = congratulation → \"congratulated Azhar, saying that he had done well\". \"have done\" → \"had done\"."
+    },
+    {
+      "id": 14,
+      "question": "Change the narration: Mary said to Robert, \"Let him come, then we shall see.\"",
+      "options": {
+        "a": "Mary said to Robert that if he came, they would see him.",
+        "b": "Mary told Robert that they shall see him if he came.",
+        "c": "Mary told Robert that once he came, they would see him.",
+        "d": "Mary told Robert that they would see him if he might come.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Mary told Robert that they would see him if he might come.",
+      "explanation": "Conditional suggestion → \"told Robert that they would see him if he might come\". \"shall\" → \"would\", \"let him come\" → \"if he might come\"."
+    },
+    {
+      "id": 15,
+      "question": "Change the narration: The spectators said, \"Bravo! well played, Ravi.\"",
+      "options": {
+        "a": "The spectators called Ravi bravo because he had played well.",
+        "b": "The spectators said that Ravi played well and applauded him.",
+        "c": "The spectators encouraged Ravi saying that he played well.",
+        "d": "The spectators applauded Ravi, saying that he had played well.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "The spectators applauded Ravi, saying that he had played well.",
+      "explanation": "\"Bravo! well played\" = applause/praise → \"applauded Ravi, saying that he had played well\". \"played\" → \"had played\"."
+    },
+    {
+      "id": 16,
+      "question": "Change the narration: He said, \"The mice will play, when the cat is away.\"",
+      "options": {
+        "a": "He said that the mice will play when the cat is away.",
+        "b": "He said that the mice would play when the cat was away.",
+        "c": "He said that the mice would play when the cat would be away.",
+        "d": "He said that the mice shall play, when the cat is away.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "He said that the mice would play when the cat was away.",
+      "explanation": "Reporting verb \"said\" is past → \"will play\" → \"would play\", \"is away\" → \"was away\"."
+    },
+    {
+      "id": 17,
+      "question": "Change the narration: Rajan said, \"O that I were a child again!\"",
+      "options": {
+        "a": "Rajan exclaimed with wonder that he was a child again.",
+        "b": "Rajan wondered that were he a child again.",
+        "c": "Rajan strongly wished that he had been a child again.",
+        "d": "Rajan prayed that he were a child again.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Rajan strongly wished that he had been a child again.",
+      "explanation": "\"O that I were…!\" = strong wish → \"strongly wished that he had been a child again\". Subjunctive \"were\" → past perfect \"had been\"."
+    },
+    {
+      "id": 18,
+      "question": "Change the narration: He said to her, \"Don't read so fast.\"",
+      "options": {
+        "a": "He told her not to read so fast.",
+        "b": "He advised her don't read so fast.",
+        "c": "He requested her not to read so fast.",
+        "d": "He ordered her not to read so fast.\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "He told her not to read so fast.",
+      "explanation": "Negative imperative → \"told + object + not to + base verb\"."
+    },
+    {
+      "id": 19,
+      "question": "Change the narration: The Manager said, \"Well, what can I do for you?\"",
+      "options": {
+        "a": "The Manager asked what he could do for him.",
+        "b": "The Manager wondered what he could do for him.",
+        "c": "The Manager wanted to know what he could do for him.",
+        "d": "The Manager said that he couldn't do anything for him.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The Manager wanted to know what he could do for him.",
+      "explanation": "Polite enquiry → \"wanted to know what he could do for him\". \"Well\" dropped. \"can\" → \"could\"."
+    },
+    {
+      "id": 20,
+      "question": "Change the narration: \"Are we never to meet?\" Amit asked him.",
+      "options": {
+        "a": "Amit questioned him whether they were ever to be meet.",
+        "b": "Amit wondered whether they are never to meet.",
+        "c": "Amit said whether they were never to meet.",
+        "d": "Amit asked him whether they were never to meet.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Amit asked him whether they were never to meet.",
+      "explanation": "Yes/No question → \"asked him whether…\". \"Are\" → \"were\", \"we\" → \"they\"."
+    },
+    {
+      "id": 21,
+      "question": "Change the narration: I said to the boy, \"You have no ticket, get out before you are driven out.\"",
+      "options": {
+        "a": "I told the boy get out before you are driven out.",
+        "b": "I told the boy to get out before he was driven out as he had no ticket.",
+        "c": "I ordered the boy to get out before he was driven out.",
+        "d": "I told the boy that he had no ticket and that he should get out before he was driven out.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "I told the boy to get out before he was driven out as he had no ticket.",
+      "explanation": "Combined statement + command. \"told the boy to get out before he was driven out as he had no ticket.\" Reason embedded using \"as\"."
+    },
+    {
+      "id": 22,
+      "question": "Change the narration: Sachin said, \"My grandfather recites the Geeta every morning.\" (Repeat for practice)",
+      "options": {
+        "a": "Sachin told that his grandfather has cited the Geeta every morning.",
+        "b": "Sachin told that his grandfather recited the Geeta every morning.",
+        "c": "Sachin said that his grandfather recites the Geeta every morning.",
+        "d": "Sachin said that his grandfather recited the Geeta every morning.\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Sachin said that his grandfather recites the Geeta every morning.",
+      "explanation": "Habitual truth → tense unchanged in indirect speech."
+    }
+  ]
+}

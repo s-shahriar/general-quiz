@@ -1,0 +1,148 @@
+{
+  "topic": "Transformation of Sentence",
+  "questions": [
+    {
+      "id": 1,
+      "question": "John is as intelligent as Tom. (Make it Comparative)",
+      "options": {
+        "a": "Tom is more intelligent than John.",
+        "b": "John is not less intelligent than Tom.",
+        "c": "John is less intelligent than Tom.",
+        "d": "Tom is not less intelligent than John.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "John is not less intelligent than Tom.",
+      "explanation": "Positive → Comparative: subject-object swap, affirmative→negative, degree changes. \"John is not less intelligent than Tom\" uses less+positive degree method."
+    },
+    {
+      "id": 2,
+      "question": "I made a mistake. (Make it interrogative)",
+      "options": {
+        "a": "Do I made a mistake?",
+        "b": "Don't I make a mistake?",
+        "c": "Did I make a mistake?",
+        "d": "Didn't I make a mistake?\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Didn't I make a mistake?",
+      "explanation": "Assertive → Interrogative: use negative interrogative form. Past Indefinite → \"Didn't\" + base form."
+    },
+    {
+      "id": 3,
+      "question": "What an excellent idea! (Assertive)",
+      "options": {
+        "a": "It is an excellent idea.",
+        "b": "It is a very excellent idea.",
+        "c": "It is more excellent idea.",
+        "d": "It is a very good idea.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "It is a very excellent idea.",
+      "explanation": "Exclamatory → Assertive: Subject + verb + a/an + very/great + adjective + noun."
+    },
+    {
+      "id": 4,
+      "question": "Choose the simple form of the sentence 'Stand here and die'.",
+      "options": {
+        "a": "Stand here so that you can die",
+        "b": "Stand here only to die",
+        "c": "Without standing here you will die.",
+        "d": "As you stand here you will die\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Stand here only to die",
+      "explanation": "Compound → Simple: the verb after \"and\" becomes infinitive (to + verb). \"die\" → \"only to die\"."
+    },
+    {
+      "id": 5,
+      "question": "The negative form of the sentence 'Neela is taller than Bushra' is ___",
+      "options": {
+        "a": "Bushra is shorter than Neela",
+        "b": "Bushra is not taller than Neela.",
+        "c": "Neela is not shorter than Bushra.",
+        "d": "Bushra is not so tall as Neela.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Bushra is not so tall as Neela.",
+      "explanation": "Comparative → Negative: 2nd Subject + is not so + positive degree + as + 1st Subject. → \"Bushra is not so tall as Neela.\""
+    },
+    {
+      "id": 6,
+      "question": "He must do it. (Make it Negative)",
+      "options": {
+        "a": "He cannot but doing this.",
+        "b": "He cannot help do this.",
+        "c": "He must not, but do this.",
+        "d": "He cannot help doing this.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He cannot help doing this.",
+      "explanation": "Affirmative with \"must\" → Negative: \"cannot help + verb-ing\"."
+    },
+    {
+      "id": 7,
+      "question": "Our present house suits us. Make it complex.",
+      "options": {
+        "a": "The house which we live suits us.",
+        "b": "The house is suitable where we live.",
+        "c": "The house in which we live is suitable.",
+        "d": "The house in which we live at present suits us.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "The house in which we live at present suits us.",
+      "explanation": "Simple → Complex: introduce a relative clause. \"present house\" → \"the house in which we live at present\"."
+    },
+    {
+      "id": 8,
+      "question": "Ten years have passed since his father died. Make it simple:",
+      "options": {
+        "a": "His father has died ten years ago.",
+        "b": "His father died since ten years ago.",
+        "c": "His father has died for ten years.",
+        "d": "His father died ten years ago.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "His father died ten years ago.",
+      "explanation": "Complex → Simple: \"Ten years have passed since his father died\" = \"His father died ten years ago.\""
+    },
+    {
+      "id": 9,
+      "question": "It is more than honesty. (Make positive)",
+      "options": {
+        "a": "Honesty is not as much as it",
+        "b": "Honesty are not as much as it",
+        "c": "Honesty is as much as it",
+        "d": "Honesty is less much as it\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Honesty is not as much as it",
+      "explanation": "Comparative → Positive: swap subject/object, affirmative→negative, change degree. \"more\" → \"as much as\". → \"Honesty is not as much as it.\""
+    },
+    {
+      "id": 10,
+      "question": "Joseph is as disciplined as Tom. (Comparative)",
+      "options": {
+        "a": "Tom is more disciplined than Joseph.",
+        "b": "Joseph is not less disciplined than Tom.",
+        "c": "Joseph is less disciplined than Tom.",
+        "d": "Tom is not less disciplined than Joseph.\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Joseph is not less disciplined than Tom.",
+      "explanation": "Positive → Comparative using \"less\": keep same subject, add \"not less + positive degree + than + object\"."
+    },
+    {
+      "id": 11,
+      "question": "You must be submissive to the Almighty. (Make it Negative)",
+      "options": {
+        "a": "You cannot be submissive to the Almighty.",
+        "b": "You cannot but being submissive to the Almighty.",
+        "c": "You cannot but submissive to the Almighty.",
+        "d": "You cannot help being submissive to the Almighty.\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "You cannot help being submissive to the Almighty.",
+      "explanation": "\"must\" → Negative: \"cannot help + verb-ing\" or \"cannot but + base verb\". Here \"being submissive\" → D is correct."
+    }
+  ]
+}

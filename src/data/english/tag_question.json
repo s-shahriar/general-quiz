@@ -1,0 +1,57 @@
+{
+  "topic": "Tag Question",
+  "questions": [
+    {
+      "id": 1,
+      "question": "One should keep promises, ——?",
+      "options": {
+        "a": "shouldn't they",
+        "b": "shouldn't one",
+        "c": "should one",
+        "d": "shouldn't he\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "shouldn't one",
+      "explanation": "If \"one\" is the subject, the tag pronoun remains \"one\"."
+    },
+    {
+      "id": 2,
+      "question": "He'd finished the work, ——?",
+      "options": {
+        "a": "didn't he",
+        "b": "hadn't he",
+        "c": "wouldn't he",
+        "d": "shouldn't he\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "hadn't he",
+      "explanation": "\"He'd + V3\" is the contraction for \"had\" (past perfect), so the tag uses \"hadn't he\"."
+    },
+    {
+      "id": 3,
+      "question": "He used to play, ——?",
+      "options": {
+        "a": "didn't he",
+        "b": "usedn't he",
+        "c": "hadn't he",
+        "d": "both a & b\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "both a & b",
+      "explanation": "Both \"didn't he\" and \"usedn't he\" are correct tag questions for \"used to\"."
+    },
+    {
+      "id": 4,
+      "question": "You must go now, ——?",
+      "options": {
+        "a": "mustn't you",
+        "b": "needn't you",
+        "c": "don't you",
+        "d": "won't you\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "needn't you",
+      "explanation": "When \"must\" expresses necessity/obligation, \"needn't\" is used in the tag."
+    }
+  ]
+}
