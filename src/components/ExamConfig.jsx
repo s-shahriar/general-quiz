@@ -10,15 +10,18 @@ function shuffle(arr) {
   return a
 }
 
-export default function ExamConfig({ banglaTopic, englishTopics, onStart, onBack }) {
+export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, onStart, onBack }) {
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
 
   const validQ = (q) => q.options && q.correct_answer
 
-  const allTopics = [...banglaTopic, ...englishTopics]
-  const filteredTopics = groupId === 'all' ? allTopics : groupId === 'bangla' ? banglaTopic : englishTopics
+  const allTopics = [...banglaTopic, ...englishTopics, ...gkTopics]
+  const filteredTopics = groupId === 'all' ? allTopics
+    : groupId === 'bangla' ? banglaTopic
+    : groupId === 'english' ? englishTopics
+    : gkTopics
 
   const maxCount = useMemo(() => {
     if (topicId === 'all') return filteredTopics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
@@ -39,7 +42,7 @@ export default function ExamConfig({ banglaTopic, englishTopics, onStart, onBack
     )
     const questions = shuffle(pool).slice(0, safeCount)
     const label = topicId === 'all'
-      ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : 'English Grammar')
+      ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : 'সাধারণ জ্ঞান')
       : allTopics.find(t => t.id === topicId)?.name
     onStart({ questions, label })
   }
@@ -61,6 +64,7 @@ export default function ExamConfig({ banglaTopic, englishTopics, onStart, onBack
             <option value="all">🌐 All Topics</option>
             <option value="bangla">🇧🇩 বাংলা ব্যাকরণ</option>
             <option value="english">🇬🇧 English Grammar</option>
+            <option value="gk">📚 সাধারণ জ্ঞান</option>
           </select>
         </div>
 

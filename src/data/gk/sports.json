@@ -1,0 +1,161 @@
+{
+  "topic": "ক্রীড়া জগত",
+  "questions": [
+    {
+      "id": 1,
+      "question": "২০২৬ ফুটবল বিশ্বকাপ কততম আসর?",
+      "options": {
+        "a": "২৪তম",
+        "b": "২৫তম",
+        "c": "২৬তম",
+        "d": "২৭তম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "২৬তম",
+      "explanation": "২০২৬ সালের ফুটবল বিশ্বকাপ ২৬তম আসর। এটি USA, Mexico ও Canada-তে অনুষ্ঠিত হবে।"
+    },
+    {
+      "id": 2,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের আয়োজক দেশ কোনগুলো?",
+      "options": {
+        "a": "USA, Mexico, Brazil",
+        "b": "USA, Canada, Argentina",
+        "c": "USA, Mexico, Canada",
+        "d": "Canada, Mexico, Colombia"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "USA, Mexico, Canada",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপ যৌথভাবে আয়োজন করবে USA, Mexico ও Canada।"
+    },
+    {
+      "id": 3,
+      "question": "২০২৬ ফুটবল বিশ্বকাপে মোট কতটি দল অংশ নেবে?",
+      "options": {
+        "a": "৩২টি",
+        "b": "৪০টি",
+        "c": "৪৮টি",
+        "d": "৫৬টি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "৪৮টি",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপে মোট ৪৮টি দল অংশ নেবে — ১২টি গ্রুপে বিভক্ত হয়ে মোট ১০৪টি ম্যাচ অনুষ্ঠিত হবে।"
+    },
+    {
+      "id": 4,
+      "question": "২০২৬ ফুটবল বিশ্বকাপে মোট কতটি ম্যাচ অনুষ্ঠিত হবে?",
+      "options": {
+        "a": "৬৪টি",
+        "b": "৮০টি",
+        "c": "৯৬টি",
+        "d": "১০৪টি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "১০৪টি",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপে মোট ১০৪টি ম্যাচ অনুষ্ঠিত হবে। ৪৮টি দল ১২টি গ্রুপে বিভক্ত।"
+    },
+    {
+      "id": 5,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের থিম সং কোনটি?",
+      "options": {
+        "a": "Wavin' Flag",
+        "b": "Waka Waka",
+        "c": "Shakira",
+        "d": "Lighter"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Lighter",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপের থিম সং 'Lighter'।"
+    },
+    {
+      "id": 6,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের অফিশিয়াল বলের নাম কী?",
+      "options": {
+        "a": "Al Rihla",
+        "b": "Jabulani",
+        "c": "Triomda",
+        "d": "Telstar"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Triomda",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপের অফিশিয়াল বলের নাম Triomda — বলটি ত্রিভুজ আকৃতির ডিজাইনে তৈরি।"
+    },
+    {
+      "id": 7,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের ফাইনাল ম্যাচ কোন স্টেডিয়ামে অনুষ্ঠিত হবে?",
+      "options": {
+        "a": "Rose Bowl Stadium",
+        "b": "MetLife Stadium",
+        "c": "Allegiant Stadium",
+        "d": "SoFi Stadium"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "MetLife Stadium",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপের ফাইনাল ম্যাচ ১৯ জুলাই MetLife Stadium-এ অনুষ্ঠিত হবে।"
+    },
+    {
+      "id": 8,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের উদ্বোধনী ম্যাচ কবে?",
+      "options": {
+        "a": "১ জুন ২০২৬",
+        "b": "৮ জুন ২০২৬",
+        "c": "১১ জুন ২০২৬",
+        "d": "১৫ জুন ২০২৬"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "১১ জুন ২০২৬",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপের উদ্বোধনী ম্যাচ ১১ জুন ২০২৬ তারিখে এবং ফাইনাল ১৯ জুলাই MetLife Stadium-এ।"
+    },
+    {
+      "id": 9,
+      "question": "ফুটবলের আইন প্রণেতা সংস্থার নাম কী?",
+      "options": {
+        "a": "FIFA",
+        "b": "UEFA",
+        "c": "IFAB",
+        "d": "AFC"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "IFAB",
+      "explanation": "ফুটবলের আইন প্রণেতা সংস্থার নাম IFAB (International Football Association Board)।"
+    },
+    {
+      "id": 10,
+      "question": "নারী T20 বিশ্বকাপ ২০২৬ কোথায় অনুষ্ঠিত হবে?",
+      "options": {
+        "a": "অস্ট্রেলিয়া ও নিউজিল্যান্ড",
+        "b": "ভারত ও শ্রীলঙ্কা",
+        "c": "দক্ষিণ আফ্রিকা",
+        "d": "ইংল্যান্ড ও ওয়েলস"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ইংল্যান্ড ও ওয়েলস",
+      "explanation": "নারী T20 বিশ্বকাপ ২০২৬ ইংল্যান্ড ও ওয়েলসে অনুষ্ঠিত হবে।"
+    },
+    {
+      "id": 11,
+      "question": "Big Bash League (BBL)-এ ২০২৫ সালের Player of the Year কে?",
+      "options": {
+        "a": "শাকিব আল হাসান",
+        "b": "মুস্তাফিজুর রহমান",
+        "c": "Rishad Hossain",
+        "d": "তাসকিন আহমেদ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Rishad Hossain",
+      "explanation": "Big Bash League (BBL)-এ ২০২৫ সালের Player of the Year পুরস্কার জিতেছেন Rishad Hossain।"
+    },
+    {
+      "id": 12,
+      "question": "২০২৬ ফুটবল বিশ্বকাপের মাসকটের নাম কী?",
+      "options": {
+        "a": "Fuleco, Zabivaka, Shueme",
+        "b": "Mapple, Zayu, Clutch",
+        "c": "Striker, Spike, Ciao",
+        "d": "Ato, Kaz, Nik"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Mapple, Zayu, Clutch",
+      "explanation": "২০২৬ ফুটবল বিশ্বকাপের তিনটি মাসকটের নাম Mapple, Zayu ও Clutch।"
+    }
+  ]
+}

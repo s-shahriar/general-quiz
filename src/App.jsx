@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { fetchRemote, pushRemote } from './lib/api.js'
-import { BANGLA_TOPICS, ENGLISH_TOPICS, ALL_TOPICS } from './data/index.js'
+import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, ALL_TOPICS } from './data/index.js'
 import HomeScreen   from './components/HomeScreen.jsx'
 import ModeSelect   from './components/ModeSelect.jsx'
 import QuizMode     from './components/QuizMode.jsx'
@@ -9,6 +9,7 @@ import StudyMode    from './components/StudyMode.jsx'
 import ExamConfig   from './components/ExamConfig.jsx'
 import ExamMode     from './components/ExamMode.jsx'
 import NailedScreen from './components/NailedScreen.jsx'
+import ImportantScreen from './components/ImportantScreen.jsx'
 
 function loadMastered() {
   try { return new Set(JSON.parse(localStorage.getItem('gq-nailed') ?? '[]')) }
@@ -18,6 +19,14 @@ function saveMastered(set) {
   localStorage.setItem('gq-nailed', JSON.stringify([...set]))
 }
 
+function loadImportant() {
+  try { return new Set(JSON.parse(localStorage.getItem('gq-important') ?? '[]')) }
+  catch { return new Set() }
+}
+function saveImportant(set) {
+  localStorage.setItem('gq-important', JSON.stringify([...set]))
+}
+
 export default function App() {
   const [screen, setScreen]               = useState('home')
   const [activeGroup, setActiveGroup]     = useState('bangla')
@@ -25,20 +34,25 @@ export default function App() {
   const [examData, setExamData]           = useState(null)
   const [theme, setTheme]                 = useState(() => localStorage.getItem('gq-theme') || 'light')
   const [mastered, setMastered]           = useState(loadMastered)
+  const [important, setImportant]         = useState(loadImportant)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('gq-theme', theme)
-    pushRemote(mastered, theme)
+    pushRemote(mastered, theme, important)
   }, [theme])
 
   useEffect(() => {
     fetchRemote().then(remote => {
       if (!remote) return
-      const local = loadMastered()
-      const merged = new Set([...local, ...remote.mastered])
-      saveMastered(merged)
-      setMastered(merged)
+      const localM = loadMastered()
+      const mergedM = new Set([...localM, ...remote.mastered])
+      saveMastered(mergedM)
+      setMastered(mergedM)
+      const localI = loadImportant()
+      const mergedI = new Set([...localI, ...(remote.important ?? [])])
+      saveImportant(mergedI)
+      setImportant(mergedI)
       if (!localStorage.getItem('gq-theme')) setTheme(remote.theme)
     })
   }, [])
@@ -48,12 +62,23 @@ export default function App() {
 
   const nail = (qid) => setMastered(prev => {
     const next = new Set(prev); next.add(qid); saveMastered(next)
-    pushRemote(next, theme)
+    pushRemote(next, theme, important)
     return next
   })
   const unnail = (qid) => setMastered(prev => {
     const next = new Set(prev); next.delete(qid); saveMastered(next)
-    pushRemote(next, theme)
+    pushRemote(next, theme, important)
+    return next
+  })
+
+  const markImportant = (qid) => setImportant(prev => {
+    const next = new Set(prev); next.add(qid); saveImportant(next)
+    pushRemote(mastered, theme, next)
+    return next
+  })
+  const unmarkImportant = (qid) => setImportant(prev => {
+    const next = new Set(prev); next.delete(qid); saveImportant(next)
+    pushRemote(mastered, theme, next)
     return next
   })
 
@@ -74,13 +99,24 @@ export default function App() {
         <HomeScreen
           banglaTopic={BANGLA_TOPICS}
           englishTopics={ENGLISH_TOPICS}
+          gkTopics={GK_TOPICS}
           mastered={mastered}
+          important={important}
           activeGroup={activeGroup}
           onGroupChange={setActiveGroup}
           onSelectTopic={(t) => { setSelectedTopic(t); setScreen('mode') }}
           onExam={() => setScreen('exam_config')}
           onNailed={() => setScreen('nailed')}
+          onImportant={() => setScreen('important')}
           onUnnail={unnail}
+        />
+      )}
+      {screen === 'important' && (
+        <ImportantScreen
+          topics={ALL_TOPICS}
+          important={important}
+          onUnmark={unmarkImportant}
+          onHome={goHome}
         />
       )}
       {screen === 'nailed' && (
@@ -104,8 +140,11 @@ export default function App() {
           key={selectedTopic.id + '-quiz'}
           topic={selectedTopic}
           mastered={mastered}
+          important={important}
           onNail={nail}
           onUnnail={unnail}
+          onMarkImportant={markImportant}
+          onUnmarkImportant={unmarkImportant}
           onBack={() => setScreen('mode')}
           onHome={goHome}
         />
@@ -115,7 +154,10 @@ export default function App() {
           key={selectedTopic.id + '-study'}
           topic={selectedTopic}
           mastered={mastered}
+          important={important}
           onNail={nail}
+          onMarkImportant={markImportant}
+          onUnmarkImportant={unmarkImportant}
           onBack={() => setScreen('mode')}
           onHome={goHome}
         />
@@ -124,6 +166,7 @@ export default function App() {
         <ExamConfig
           banglaTopic={BANGLA_TOPICS}
           englishTopics={ENGLISH_TOPICS}
+          gkTopics={GK_TOPICS}
           onStart={(data) => { setExamData(data); setScreen('exam') }}
           onBack={goHome}
         />
@@ -134,8 +177,11 @@ export default function App() {
           questions={examData.questions}
           label={examData.label}
           mastered={mastered}
+          important={important}
           onNail={nail}
           onUnnail={unnail}
+          onMarkImportant={markImportant}
+          onUnmarkImportant={unmarkImportant}
           onHome={goHome}
         />
       )}

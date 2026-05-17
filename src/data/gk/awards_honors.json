@@ -1,0 +1,226 @@
+{
+  "topic": "পুরস্কার ও সম্মাননা",
+  "questions": [
+    {
+      "id": 1,
+      "question": "স্বাধীনতা পুরস্কার কত সাল থেকে দেওয়া হচ্ছে?",
+      "options": {
+        "a": "১৯৭২ সাল থেকে",
+        "b": "১৯৭৫ সাল থেকে",
+        "c": "১৯৭৭ সাল থেকে",
+        "d": "১৯৮০ সাল থেকে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "১৯৭৭ সাল থেকে",
+      "explanation": "বাংলাদেশের স্বাধীনতা পুরস্কার ১৯৭৭ সাল থেকে প্রদান করা হচ্ছে।"
+    },
+    {
+      "id": 2,
+      "question": "২০২৫ সালে স্বাধীনতা ও গণতন্ত্র বিভাগে স্বাধীনতা পুরস্কার কে পান?",
+      "options": {
+        "a": "কল্পনা আক্তার",
+        "b": "বেগম খালেদা জিয়া",
+        "c": "জোবেরা রহমান",
+        "d": "আইয়ুব বাচ্চু"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বেগম খালেদা জিয়া",
+      "explanation": "২০২৫ সালে স্বাধীনতা ও গণতন্ত্র বিভাগে স্বাধীনতা পুরস্কার পান বেগম খালেদা জিয়া।"
+    },
+    {
+      "id": 3,
+      "question": "২০২৬ সালে অ্যাবেল পুরস্কার কে পান?",
+      "options": {
+        "a": "Andrew Wiles",
+        "b": "Terence Tao",
+        "c": "Gerd Faltings",
+        "d": "Peter Scholze"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Gerd Faltings",
+      "explanation": "২০২৬ সালে অ্যাবেল পুরস্কার পান জার্মান গণিতবিদ Gerd Faltings — সংখ্যামূলক জ্যামিতির ক্ষেত্রে অবদানের জন্য।"
+    },
+    {
+      "id": 4,
+      "question": "অ্যাবেল পুরস্কার ২০২৬-এর বিজয়ী Gerd Faltings কোন দেশের গণিতবিদ?",
+      "options": {
+        "a": "ফ্রান্স",
+        "b": "যুক্তরাজ্য",
+        "c": "অস্ট্রিয়া",
+        "d": "জার্মানি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জার্মানি",
+      "explanation": "২০২৬ সালের অ্যাবেল পুরস্কারজয়ী Gerd Faltings জার্মানির গণিতবিদ। তিনি সংখ্যামূলক জ্যামিতির ক্ষেত্রে অবদানের জন্য এই পুরস্কার পান।"
+    },
+    {
+      "id": 5,
+      "question": "৯৮তম অস্কারে শ্রেষ্ঠ চলচ্চিত্রের পুরস্কার কোন ছবি পায়?",
+      "options": {
+        "a": "Oppenheimer",
+        "b": "The Brutalist",
+        "c": "One Battle After Another",
+        "d": "Conclave"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "One Battle After Another",
+      "explanation": "৯৮তম অ্যাকাডেমি অ্যাওয়ার্ডস (অস্কার)-এ শ্রেষ্ঠ চলচ্চিত্রের পুরস্কার পায় 'One Battle After Another'।"
+    },
+    {
+      "id": 6,
+      "question": "৯৮তম অস্কারে শ্রেষ্ঠ অভিনেতার পুরস্কার কে পান?",
+      "options": {
+        "a": "টিমোথি শালামে",
+        "b": "আদ্রিয়েন ব্রডি",
+        "c": "কলম্যান দোমিনো",
+        "d": "মাইকেল বি জর্ডন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মাইকেল বি জর্ডন",
+      "explanation": "৯৮তম অস্কারে শ্রেষ্ঠ অভিনেতার পুরস্কার পান মাইকেল বি জর্ডন।"
+    },
+    {
+      "id": 7,
+      "question": "২০২৬ সালে একুশে পদকে সংগীত বিভাগে কে পুরস্কৃত হন?",
+      "options": {
+        "a": "জেমস",
+        "b": "হাসান",
+        "c": "আইয়ুব বাচ্চু",
+        "d": "কুমার বিশ্বজিৎ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আইয়ুব বাচ্চু",
+      "explanation": "২০২৬ সালে একুশে পদকে সংগীত বিভাগে পুরস্কৃত হন আইয়ুব বাচ্চু।"
+    },
+    {
+      "id": 8,
+      "question": "ব্যামন ম্যাগাসেসে পুরস্কারকে কী বলা হয়?",
+      "options": {
+        "a": "ইউরোপের নোবেল",
+        "b": "আফ্রিকার নোবেল",
+        "c": "এশিয়ার নোবেল",
+        "d": "আমেরিকার নোবেল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "এশিয়ার নোবেল",
+      "explanation": "ব্যামন ম্যাগাসেসে পুরস্কারকে 'এশিয়ার নোবেল' বলা হয়। ২০২৫ সালে এই পুরস্কার পান Foundation to Educate Girls Globally (ভারত) সহ অন্যরা।"
+    },
+    {
+      "id": 9,
+      "question": "বুকার পুরস্কার ২০২৫ বিজয়ী কে?",
+      "options": {
+        "a": "বানু মুস্তফা",
+        "b": "ডেভিড লা-সাই",
+        "c": "সালমান রুশদি",
+        "d": "জিম্বাবুয়ে চি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ডেভিড লা-সাই",
+      "explanation": "২০২৫ সালে বুকার পুরস্কার পান ডেভিড লা-সাই। তাঁর পুরস্কারপ্রাপ্ত উপন্যাসের নাম 'Flesh'।"
+    },
+    {
+      "id": 10,
+      "question": "২০২৫ সালে বুকার পুরস্কারপ্রাপ্ত উপন্যাসটির নাম কী?",
+      "options": {
+        "a": "Heart Lamp",
+        "b": "The Bone People",
+        "c": "Flesh",
+        "d": "The Remains of the Day"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Flesh",
+      "explanation": "২০২৫ সালে বুকার পুরস্কার পান ডেভিড লা-সাই। তাঁর পুরস্কারপ্রাপ্ত উপন্যাসের নাম 'Flesh'।"
+    },
+    {
+      "id": 11,
+      "question": "আন্তর্জাতিক বুকার পুরস্কার ২০২৫ কে পান?",
+      "options": {
+        "a": "ডেভিড লা-সাই",
+        "b": "অরুন্ধতী রায়",
+        "c": "বানু মুস্তফা",
+        "d": "কিরণ দেশাই"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বানু মুস্তফা",
+      "explanation": "২০২৫ সালে আন্তর্জাতিক বুকার পুরস্কার পান ভারতের বানু মুস্তফা। তাঁর ছোটগল্প সংকলন 'Heart Lamp' বাংলা ভাষায় রচিত ৬টি গল্প নিয়ে গঠিত।"
+    },
+    {
+      "id": 12,
+      "question": "বানু মুস্তফার 'Heart Lamp' কোন ভাষায় রচিত?",
+      "options": {
+        "a": "হিন্দি",
+        "b": "তামিল",
+        "c": "উর্দু",
+        "d": "বাংলা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাংলা",
+      "explanation": "'Heart Lamp' বাংলা ভাষায় রচিত ৬টি ছোটগল্পের সংকলন। এটি ২০২৫ সালে আন্তর্জাতিক বুকার পুরস্কার পায়।"
+    },
+    {
+      "id": 13,
+      "question": "MBE-এর পূর্ণ রূপ কী?",
+      "options": {
+        "a": "Most Beneficial Enterprise",
+        "b": "Most Excellent Order of the British Empire",
+        "c": "Member of British Education",
+        "d": "Most Esteemed British Establishment"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Most Excellent Order of the British Empire",
+      "explanation": "MBE = Most Excellent Order of the British Empire। ২০২৫ সালে MBE-এর সর্বোচ্চ সম্মানে ভূষিত হন তারু তাহের।"
+    },
+    {
+      "id": 14,
+      "question": "TIME-100 ২০২৬ তালিকায় কোন বাংলাদেশি নেতা স্থান পান?",
+      "options": {
+        "a": "মুহাম্মদ ইউনূস",
+        "b": "ফখরুল ইসলাম",
+        "c": "তারেক রহমান",
+        "d": "মির্জা ফখরুল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "তারেক রহমান",
+      "explanation": "TIME-100 ২০২৬ তালিকায় ১৬তম স্থানে Leaders ক্যাটাগরিতে স্থান পান তারেক রহমান।"
+    },
+    {
+      "id": 15,
+      "question": "চ্যাম্পিয়নস অব দ্য আর্থ পুরস্কার কোন সংস্থা প্রদান করে?",
+      "options": {
+        "a": "WHO",
+        "b": "UNDP",
+        "c": "UNEP",
+        "d": "UNESCO"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "UNEP",
+      "explanation": "চ্যাম্পিয়নস অব দ্য আর্থ পুরস্কার UNEP (United Nations Environment Programme) প্রদান করে। ২০২৫ সালে এই পুরস্কার পান Pacific Island Students fighting climate change ও সুপ্রিয়া মান সহ অন্যরা।"
+    },
+    {
+      "id": 16,
+      "question": "৭৮তম কান চলচ্চিত্র উৎসবে স্বর্ণপাম পুরস্কার কোন ছবি পায়?",
+      "options": {
+        "a": "Emilia Pérez",
+        "b": "It Was Just an Accident",
+        "c": "Anora",
+        "d": "The Substance"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "It Was Just an Accident",
+      "explanation": "৭৮তম কান চলচ্চিত্র উৎসবে স্বর্ণপাম পুরস্কার পায় জাফর পানাহি পরিচালিত 'It Was Just an Accident'। ফ্রান্সের কান শহরে এই উৎসব অনুষ্ঠিত হয়।"
+    },
+    {
+      "id": 17,
+      "question": "২০২৫ সালে বেগম রোকেয়া পদকে শ্রম অধিকার বিভাগে কে পুরস্কৃত হন?",
+      "options": {
+        "a": "রুকেনা রাবিয়া",
+        "b": "নাবিলা ইজরিম",
+        "c": "কল্পনা আক্তার",
+        "d": "স্মরণীয় চারদনে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কল্পনা আক্তার",
+      "explanation": "২০২৫ সালে বেগম রোকেয়া পদকে শ্রম অধিকার বিভাগে পুরস্কৃত হন কল্পনা আক্তার। গবেষণায় রুকেনা রাবিয়া এবং মানবাধিকারে নাবিলা ইজরিম পুরস্কার পান।"
+    }
+  ]
+}
