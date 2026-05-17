@@ -702,6 +702,36 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 .quiz-nail-btn:hover svg { transform: scale(1.2) rotate(-8deg); }
 .quiz-nail-btn.nailed svg { filter: drop-shadow(0 0 4px rgba(245,158,11,0.7)); }
 
+/* ── Mark buttons row (Nail It + Important side by side) ── */
+.quiz-mark-btns {
+  display: flex; gap: 8px;
+}
+.quiz-mark-btns .quiz-nail-btn,
+.quiz-mark-btns .quiz-important-btn { flex: 1; justify-content: center; }
+
+/* ── Important button in quiz/exam ── */
+.quiz-important-btn {
+  display: flex; flex-direction: row; align-items: center; gap: 6px;
+  padding: 10px 14px; border-radius: 10px; cursor: pointer;
+  font-size: 0.82rem; font-weight: 600;
+  color: #ef4444; border: 1.5px solid rgba(239,68,68,0.3);
+  background: rgba(239,68,68,0.07);
+  transition: all 0.2s ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+[data-theme='dark'] .quiz-important-btn { color: #f87171; border-color: rgba(248,113,113,0.3); background: rgba(239,68,68,0.08); }
+.quiz-important-btn:hover { border-color: #ef4444; background: rgba(239,68,68,0.14); transform: translateY(-2px); }
+.quiz-important-btn.marked {
+  color: #ef4444; background: rgba(239,68,68,0.14);
+  border-color: rgba(239,68,68,0.55);
+  box-shadow: 0 0 14px rgba(239,68,68,0.25), inset 0 0 8px rgba(239,68,68,0.08);
+  font-weight: 700;
+}
+[data-theme='dark'] .quiz-important-btn.marked { color: #f87171; box-shadow: 0 0 14px rgba(248,113,113,0.3), inset 0 0 8px rgba(239,68,68,0.1); }
+.quiz-important-btn svg { transition: transform 0.2s ease; }
+.quiz-important-btn:hover svg { transform: scale(1.2) rotate(-8deg); }
+.quiz-important-btn.marked svg { filter: drop-shadow(0 0 4px rgba(239,68,68,0.6)); }
+
 .quiz-next-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
   width: 100%; margin-top: 20px; padding: 15px;
@@ -875,6 +905,21 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
   transform: scale(1.1);
   box-shadow: var(--shadow-glow);
 }
+
+/* ── Study filter bar ── */
+.study-filter-bar {
+  display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap;
+}
+.study-filter-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px; border-radius: 24px;
+  font-size: 0.78rem; font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--elevated); border: 1.5px solid var(--border);
+  color: var(--text-2); transition: all 0.18s ease;
+}
+.study-filter-btn:hover { border-color: var(--border-bright); background: var(--hover-bg); }
+.study-filter-btn.active { font-weight: 700; }
 
 .study-list { display: flex; flex-direction: column; gap: 12px; }
 
@@ -1396,6 +1441,40 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
   background: linear-gradient(135deg, #f59e0b, #f97316); color: #fff;
 }
 
+/* ── Important card ── */
+.important-card {
+  background: linear-gradient(145deg, rgba(239,68,68,0.10) 0%, var(--surface-glass) 60%);
+  border: 1px solid rgba(239,68,68,0.25);
+  box-shadow: var(--shadow-md), 0 0 40px rgba(239,68,68,0.07);
+}
+.important-card:hover {
+  border-color: rgba(239,68,68,0.50);
+  box-shadow: var(--shadow-lg), 0 0 60px rgba(239,68,68,0.18);
+}
+.ac-icon-wrap--important {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  box-shadow: 0 6px 20px rgba(239,68,68,0.45);
+}
+.ac-footer--important {
+  background: rgba(239,68,68,0.09);
+  color: #dc2626;
+}
+[data-theme='dark'] .ac-footer--important { color: #f87171; }
+.important-card:hover .ac-footer--important {
+  background: linear-gradient(135deg, #ef4444, #dc2626); color: #fff;
+}
+
+/* ── 3-card action row: exam full-width top, nailed+important side by side ── */
+.home-action-row--3 {
+  grid-template-columns: 1fr 1fr;
+}
+.home-action-row--3 .exam-card {
+  grid-column: 1 / -1;
+}
+
+/* ── Important total accent ── */
+.important-total { color: #ef4444 !important; }
+
 /* Exam Config Page */
 .exam-config-page {
   max-width: 520px; margin: 0 auto;
@@ -1767,6 +1846,13 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 .nailed-ans-text {
   font-size: 0.8rem; font-weight: 600; color: #10b981;
   font-family: 'Inter', sans-serif; line-height: 1.4;
+}
+.nailed-row-explanation {
+  display: flex; align-items: flex-start; gap: 6px;
+  padding: 6px 10px; border-radius: 8px; margin-top: 4px;
+  background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.15);
+  font-size: 0.78rem; line-height: 1.55; color: var(--text-2);
+  font-family: 'Inter', sans-serif;
 }
 
 @media (min-width: 600px) {

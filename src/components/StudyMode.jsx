@@ -1,13 +1,19 @@
 import { useState } from 'react'
-import { ChevronLeft, Home, Eye, EyeOff, CheckCircle, Lightbulb, Star } from 'lucide-react'
+import { ChevronLeft, Home, Eye, EyeOff, CheckCircle, Lightbulb, Star, Bookmark } from 'lucide-react'
 
-export default function StudyMode({ topic, mastered, onNail, onBack, onHome }) {
+export default function StudyMode({ topic, mastered, important, onNail, onMarkImportant, onUnmarkImportant, onBack, onHome }) {
+  const [filterImportant, setFilterImportant] = useState(false)
+
   const allQ = topic.questions
     .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
     .filter(({ q }) => q.options && q.correct_answer)
 
-  const visible  = allQ.filter(({ qid }) => !mastered.has(qid))
-  const nailedCt = allQ.length - visible.length
+  const nonNailed = allQ.filter(({ qid }) => !mastered.has(qid))
+  const nailedCt  = allQ.length - nonNailed.length
+  const importantCount = nonNailed.filter(({ qid }) => important?.has(qid)).length
+  const visible = filterImportant
+    ? nonNailed.filter(({ qid }) => important?.has(qid))
+    : nonNailed
 
   return (
     <div className="study-page anim-fade">
@@ -17,7 +23,25 @@ export default function StudyMode({ topic, mastered, onNail, onBack, onHome }) {
         <button className="study-home-btn" onClick={onHome} title="Home"><Home size={16} /></button>
       </div>
 
-      {nailedCt > 0 && (
+      <div className="study-filter-bar">
+        <button
+          className={`study-filter-btn${!filterImportant ? ' active' : ''}`}
+          onClick={() => setFilterImportant(false)}
+          style={!filterImportant ? { borderColor: topic.color, color: topic.color, background: `${topic.color}15` } : {}}
+        >
+          All ({nonNailed.length})
+        </button>
+        <button
+          className={`study-filter-btn${filterImportant ? ' active' : ''}`}
+          onClick={() => setFilterImportant(true)}
+          style={filterImportant ? { borderColor: '#ef4444', color: '#ef4444', background: 'rgba(239,68,68,0.12)' } : {}}
+        >
+          <Bookmark size={11} fill={filterImportant ? 'currentColor' : 'none'} />
+          Important ({importantCount})
+        </button>
+      </div>
+
+      {nailedCt > 0 && !filterImportant && (
         <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
           <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={onHome} className="nailed-notice-link">Nailed It</button></span>
@@ -26,14 +50,27 @@ export default function StudyMode({ topic, mastered, onNail, onBack, onHome }) {
 
       {visible.length === 0 ? (
         <div className="study-all-nailed">
-          <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
-          <p>All questions nailed! 🎉</p>
+          {filterImportant
+            ? <Bookmark size={38} style={{ color: '#ef4444', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
+            : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
+          }
+          <p>{filterImportant ? 'No Important questions yet.' : 'All questions nailed! 🎉'}</p>
           <button className="back-btn" style={{ marginTop: 16 }} onClick={onHome}>Go Home</button>
         </div>
       ) : (
         <div className="study-list">
           {visible.map(({ q, qid }, i) => (
-            <StudyCard key={qid} question={q} index={i} color={topic.color} nailed={mastered.has(qid)} onNail={() => onNail(qid)} />
+            <StudyCard
+              key={qid}
+              question={q}
+              index={i}
+              color={topic.color}
+              nailed={mastered.has(qid)}
+              isImportant={important?.has(qid) ?? false}
+              onNail={() => onNail(qid)}
+              onMarkImportant={() => onMarkImportant?.(qid)}
+              onUnmarkImportant={() => onUnmarkImportant?.(qid)}
+            />
           ))}
         </div>
       )}
@@ -41,7 +78,7 @@ export default function StudyMode({ topic, mastered, onNail, onBack, onHome }) {
   )
 }
 
-function StudyCard({ question: q, index, color, nailed, onNail }) {
+function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
   const [shown, setShown] = useState(false)
   const opts = ['a','b','c','d'].filter(k => q.options?.[k])
 
@@ -57,6 +94,15 @@ function StudyCard({ question: q, index, color, nailed, onNail }) {
           >
             <Star size={12} fill={nailed ? 'currentColor' : 'none'} />
             {nailed ? 'Nailed ✓' : 'Nail It'}
+          </button>
+          <button
+            className={`nail-btn important-study-btn${isImportant ? ' nailed' : ''}`}
+            onClick={isImportant ? onUnmarkImportant : onMarkImportant}
+            title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
+            style={isImportant ? { color: '#ef4444', borderColor: 'rgba(239,68,68,0.4)', background: 'rgba(239,68,68,0.1)' } : {}}
+          >
+            <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
+            {isImportant ? 'Important ✓' : 'Important'}
           </button>
           <button className="study-toggle" onClick={() => setShown(v => !v)} style={{ color: shown ? color : 'var(--text-2)' }}>
             {shown ? <Eye size={12} /> : <EyeOff size={12} />}

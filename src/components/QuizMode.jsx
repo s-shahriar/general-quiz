@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { ChevronLeft, CheckCircle, XCircle, ArrowRight, Home, Trophy, Lightbulb, Star } from 'lucide-react'
+import { ChevronLeft, CheckCircle, XCircle, ArrowRight, Home, Trophy, Lightbulb, Star, Bookmark } from 'lucide-react'
 
 function shuffle(arr) {
   const a = [...arr]
@@ -10,13 +10,13 @@ function shuffle(arr) {
   return a
 }
 
-export default function QuizMode({ topic, mastered, onNail, onUnnail, onBack, onHome }) {
+export default function QuizMode({ topic, mastered, important, onNail, onUnnail, onMarkImportant, onUnmarkImportant, onBack, onHome }) {
   const questions = useMemo(
     () => shuffle(
       topic.questions
         .map((q, i) => ({ ...q, _origIndex: i }))
         .filter(q => q.options && q.correct_answer)
-    ).slice(0, Math.min(topic.questions.length, 20)),
+    ),
     [topic]
   )
   const [idx, setIdx]         = useState(0)
@@ -29,6 +29,7 @@ export default function QuizMode({ topic, mastered, onNail, onUnnail, onBack, on
   const opts = q ? ['a','b','c','d'].filter(k => q.options?.[k]) : []
   const qid  = q ? `${topic.id}__${q._origIndex}` : null
   const isNailed = qid ? mastered?.has(qid) : false
+  const isImportant = qid ? important?.has(qid) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -105,16 +106,26 @@ export default function QuizMode({ topic, mastered, onNail, onUnnail, onBack, on
         )}
 
         {revealed && (
-          <div className="quiz-revealed-actions">
-            <button
-              className={`quiz-nail-btn${isNailed ? ' nailed' : ''}`}
-              onClick={() => isNailed ? onUnnail?.(qid) : onNail?.(qid)}
-              title={isNailed ? 'Nailed — click to un-nail' : 'Mark as Nailed It'}
-            >
-              <Star size={18} fill={isNailed ? 'currentColor' : 'none'} strokeWidth={1.8} />
-              {isNailed ? 'Nailed!' : 'Nail It'}
-            </button>
-            <button className="quiz-next-btn" onClick={next}>
+          <div className="quiz-revealed-actions" style={{ flexDirection: 'column' }}>
+            <div className="quiz-mark-btns">
+              <button
+                className={`quiz-nail-btn${isNailed ? ' nailed' : ''}`}
+                onClick={() => isNailed ? onUnnail?.(qid) : onNail?.(qid)}
+                title={isNailed ? 'Nailed — click to un-nail' : 'Mark as Nailed It'}
+              >
+                <Star size={16} fill={isNailed ? 'currentColor' : 'none'} strokeWidth={1.8} />
+                {isNailed ? 'Nailed!' : 'Nail It'}
+              </button>
+              <button
+                className={`quiz-important-btn${isImportant ? ' marked' : ''}`}
+                onClick={() => isImportant ? onUnmarkImportant?.(qid) : onMarkImportant?.(qid)}
+                title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
+              >
+                <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />
+                {isImportant ? 'Saved!' : 'Important'}
+              </button>
+            </div>
+            <button className="quiz-next-btn" onClick={next} style={{ marginTop: 0 }}>
               {idx + 1 >= questions.length ? 'See Results' : 'Next Question'}
               <ArrowRight size={16} />
             </button>

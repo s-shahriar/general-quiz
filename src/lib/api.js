@@ -11,10 +11,10 @@ export async function fetchRemote() {
   }
 }
 
-export function pushRemote(mastered, theme) {
+export function pushRemote(mastered, theme, important) {
   fetch(API_URL, {
     method: 'POST',
     headers,
-    body: JSON.stringify({ mastered: [...mastered], theme }),
+    body: JSON.stringify({ mastered: [...mastered], theme, important: [...(important ?? [])] }),
   }).catch(() => {})
 }
