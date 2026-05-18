@@ -9,6 +9,7 @@ import ExamConfig      from './components/ExamConfig.jsx'
 import ExamMode        from './components/ExamMode.jsx'
 import NailedScreen    from './components/NailedScreen.jsx'
 import ImportantScreen from './components/ImportantScreen.jsx'
+import BackupModal     from './components/BackupModal.jsx'
 
 function loadMastered() {
   try { return new Set(JSON.parse(localStorage.getItem('gq-nailed') ?? '[]')) }
@@ -34,6 +35,7 @@ export default function App() {
   const [theme, setTheme]                 = useState(() => localStorage.getItem('gq-theme') || 'light')
   const [mastered, setMastered]           = useState(loadMastered)
   const [important, setImportant]         = useState(loadImportant)
+  const [showBackup, setShowBackup]       = useState(false)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -61,6 +63,15 @@ export default function App() {
     return next
   })
 
+  const handleRestore = (nailedArr, importantArr) => {
+    setMastered(prev => {
+      const next = new Set([...prev, ...nailedArr]); saveMastered(next); return next
+    })
+    setImportant(prev => {
+      const next = new Set([...prev, ...importantArr]); saveImportant(next); return next
+    })
+  }
+
   return (
     <div className="app-root">
       <div className="bg-canvas" aria-hidden="true">
@@ -87,6 +98,7 @@ export default function App() {
           onExam={() => setScreen('exam_config')}
           onNailed={() => setScreen('nailed')}
           onImportant={() => setScreen('important')}
+          onBackup={() => setShowBackup(true)}
           onUnnail={unnail}
         />
       )}
@@ -146,6 +158,7 @@ export default function App() {
           banglaTopic={BANGLA_TOPICS}
           englishTopics={ENGLISH_TOPICS}
           gkTopics={GK_TOPICS}
+          important={important}
           onStart={(data) => { setExamData(data); setScreen('exam') }}
           onBack={goHome}
         />
@@ -162,6 +175,14 @@ export default function App() {
           onMarkImportant={markImportant}
           onUnmarkImportant={unmarkImportant}
           onHome={goHome}
+        />
+      )}
+      {showBackup && (
+        <BackupModal
+          mastered={mastered}
+          important={important}
+          onRestore={handleRestore}
+          onClose={() => setShowBackup(false)}
         />
       )}
     </div>

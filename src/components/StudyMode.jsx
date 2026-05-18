@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronLeft, Home, Eye, EyeOff, CheckCircle, Lightbulb, Star, Bookmark } from 'lucide-react'
+import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark } from 'lucide-react'
 
 export default function StudyMode({ topic, mastered, important, onNail, onMarkImportant, onUnmarkImportant, onBack, onHome }) {
   const [filterImportant, setFilterImportant] = useState(false)
@@ -79,8 +79,15 @@ export default function StudyMode({ topic, mastered, important, onNail, onMarkIm
 }
 
 function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
-  const [shown, setShown] = useState(false)
+  const [shown, setShown]       = useState(false)
+  const [selected, setSelected] = useState(null)
   const opts = ['a','b','c','d'].filter(k => q.options?.[k])
+
+  const pick = (key) => {
+    if (shown) return
+    setSelected(key)
+    setShown(true)
+  }
 
   return (
     <div className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
@@ -104,10 +111,15 @@ function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onM
             <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
             {isImportant ? 'Important ✓' : 'Important'}
           </button>
-          <button className="study-toggle" onClick={() => setShown(v => !v)} style={{ color: shown ? color : 'var(--text-2)' }}>
-            {shown ? <Eye size={12} /> : <EyeOff size={12} />}
-            {shown ? 'Hide' : 'Show Answer'}
-          </button>
+          {shown && (
+            <button
+              className="study-toggle"
+              onClick={() => { setShown(false); setSelected(null) }}
+              style={{ color }}
+            >
+              Hide
+            </button>
+          )}
         </div>
       </div>
 
@@ -115,13 +127,21 @@ function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onM
 
       <div className="study-options">
         {opts.map(key => {
-          const isCorrect = shown && key === q.correct_answer
+          const isCorrect = key === q.correct_answer
+          const isWrong   = shown && key === selected && !isCorrect
+          let cls = 'study-opt study-opt-clickable'
+          if (shown) {
+            if (isCorrect)     cls += ' correct'
+            else if (isWrong)  cls += ' wrong'
+            else               cls += ' dim'
+          }
           return (
-            <div key={key} className={`study-opt${isCorrect ? ' correct' : ''}`} style={isCorrect ? { color } : {}}>
+            <button key={key} className={cls} style={isCorrect && shown ? { '--c': color } : {}} onClick={() => pick(key)}>
               <span className="study-opt-key">{key.toUpperCase()}</span>
               <span className="study-opt-text">{q.options[key]}</span>
-              {isCorrect && <CheckCircle size={13} style={{ color, marginLeft: 'auto', flexShrink: 0 }} />}
-            </div>
+              {shown && isCorrect && <CheckCircle size={13} style={{ color, marginLeft: 'auto', flexShrink: 0 }} />}
+              {shown && isWrong   && <XCircle size={13} style={{ color: '#ef4444', marginLeft: 'auto', flexShrink: 0 }} />}
+            </button>
           )
         })}
       </div>

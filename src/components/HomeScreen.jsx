@@ -1,6 +1,6 @@
-import { Zap, Star, BookOpenText, Languages, Bookmark, Globe } from 'lucide-react'
+import { Zap, Star, BookOpenText, Languages, Bookmark, Globe, ShieldCheck } from 'lucide-react'
 
-export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSelectTopic, onExam, onNailed, onImportant, mastered, important, activeGroup, onGroupChange }) {
+export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSelectTopic, onExam, onNailed, onImportant, onBackup, mastered, important, activeGroup, onGroupChange }) {
   const allTopics = activeGroup === 'bangla' ? banglaTopic : activeGroup === 'english' ? englishTopics : gkTopics
   const allTopicsFlat = [...banglaTopic, ...englishTopics, ...gkTopics]
   const totalNailed = allTopicsFlat.reduce((s, t) =>
@@ -74,6 +74,12 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSel
           <div className="ac-footer ac-footer--important">
             View <span className="ac-arrow">→</span>
           </div>
+        </button>
+      </div>
+
+      <div className="backup-trigger-row">
+        <button className="backup-trigger-btn" onClick={onBackup}>
+          <ShieldCheck size={13} /> Backup & Restore
         </button>
       </div>
 

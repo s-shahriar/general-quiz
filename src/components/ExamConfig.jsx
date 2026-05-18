@@ -10,7 +10,7 @@ function shuffle(arr) {
   return a
 }
 
-export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, onStart, onBack }) {
+export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, important, onStart, onBack }) {
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
@@ -23,27 +23,48 @@ export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, onSta
     : groupId === 'english' ? englishTopics
     : gkTopics
 
+  const importantCount = useMemo(() =>
+    allTopics.reduce((s, t) =>
+      s + t.questions.filter((q, i) => validQ(q) && important.has(`${t.id}__${i}`)).length
+    , 0)
+  , [important])
+
   const maxCount = useMemo(() => {
+    if (topicId === 'important') return importantCount
     if (topicId === 'all') return filteredTopics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return allTopics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, groupId, filteredTopics])
+  }, [topicId, groupId, filteredTopics, importantCount])
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
 
   const handleGroupChange = (g) => { setGroupId(g); setTopicId('all'); setCount(10) }
 
+  const handleTopicChange = (val) => {
+    setTopicId(val)
+    setCount(val === 'important' ? 9999 : 10)
+  }
+
   const handleStart = () => {
     let pool
-    const topics = topicId === 'all' ? filteredTopics : allTopics.filter(t => t.id === topicId)
-    pool = topics.flatMap(t =>
-      t.questions.map((q, i) => ({ ...q, _color: t.color, _label: t.shortName, _topicId: t.id, _origIndex: i }))
-        .filter(q => validQ(q))
-    )
+    if (topicId === 'important') {
+      pool = allTopics.flatMap(t =>
+        t.questions
+          .map((q, i) => ({ ...q, _color: t.color, _label: t.shortName, _topicId: t.id, _origIndex: i }))
+          .filter(q => validQ(q) && important.has(`${q._topicId}__${q._origIndex}`))
+      )
+    } else {
+      const topics = topicId === 'all' ? filteredTopics : allTopics.filter(t => t.id === topicId)
+      pool = topics.flatMap(t =>
+        t.questions.map((q, i) => ({ ...q, _color: t.color, _label: t.shortName, _topicId: t.id, _origIndex: i }))
+          .filter(q => validQ(q))
+      )
+    }
     const questions = shuffle(pool).slice(0, safeCount)
-    const label = topicId === 'all'
-      ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : 'সাধারণ জ্ঞান')
-      : allTopics.find(t => t.id === topicId)?.name
+    const label = topicId === 'important' ? 'Important Questions'
+      : topicId === 'all'
+        ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : 'সাধারণ জ্ঞান')
+        : allTopics.find(t => t.id === topicId)?.name
     onStart({ questions, label })
   }
 
@@ -70,8 +91,11 @@ export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, onSta
 
         <div className="exam-field">
           <label className="exam-label">Topic</label>
-          <select className="exam-select" value={topicId} onChange={e => { setTopicId(e.target.value); setCount(10) }}>
+          <select className="exam-select" value={topicId} onChange={e => handleTopicChange(e.target.value)}>
             <option value="all">🎲 All in Group (Random Mix)</option>
+            <option value="important" disabled={importantCount === 0}>
+              🔖 Important Questions ({importantCount} Q)
+            </option>
             <optgroup label="────────────────">
               {filteredTopics.map(t => (
                 <option key={t.id} value={t.id}>{t.name} ({t.questions.filter(validQ).length} Q)</option>
