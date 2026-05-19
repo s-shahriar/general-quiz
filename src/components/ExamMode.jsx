@@ -64,7 +64,7 @@ export default function ExamMode({ questions, label, mastered, important, onNail
           <span className="quiz-pct">{Math.round(progress)}%</span>
         </div>
         <div className="quiz-progress-track">
-          <div className="quiz-progress-fill" style={{ width: `${progress}%`, background: accent }} />
+          <div className="quiz-progress-fill" style={{ '--progress': progress / 100, background: accent }} />
         </div>
       </div>
 
