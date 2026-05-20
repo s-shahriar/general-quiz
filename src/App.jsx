@@ -144,6 +144,7 @@ export default function App() {
         <StudyMode
           key={selectedTopic.id + '-study'}
           topic={selectedTopic}
+          topics={ALL_TOPICS}
           mastered={mastered}
           important={important}
           onNail={nail}
@@ -151,6 +152,7 @@ export default function App() {
           onUnmarkImportant={unmarkImportant}
           onBack={() => setScreen('mode')}
           onHome={goHome}
+          onChangeTopic={(t) => setSelectedTopic(t)}
         />
       )}
       {screen === 'exam_config' && (
