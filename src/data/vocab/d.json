@@ -1,0 +1,226 @@
+{
+  "topic": "Vocabulary — D",
+  "questions": [
+    {
+      "id": "vocab_d_001",
+      "question": "Deciduous এর অর্থ কি?",
+      "options": {
+        "a": "পর্ণমোচী",
+        "b": "আংশিকভাবে পোড়ানো",
+        "c": "চারদিকে ঘুরে হাঁটা",
+        "d": "ফ্যাকাশে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পর্ণমোচী; প্রতি বছর পাতা ঝরে যায় এমন",
+      "explanation": "Deciduous = পর্ণমোচী; প্রতি বছর পাতা ঝরে যায় এমন"
+    },
+    {
+      "id": "vocab_d_002",
+      "question": "Decimate এর অর্থ কি?",
+      "options": {
+        "a": "ব্যাপকভাবে ধ্বংস করা",
+        "b": "গোয়াল",
+        "c": "সব বিষয়ে কথা বলা",
+        "d": "ব্যয়বহুল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ব্যাপকভাবে ধ্বংস করা; দশ ভাগের একভাগ নষ্ট করা",
+      "explanation": "Decimate = ব্যাপকভাবে ধ্বংস করা; দশ ভাগের একভাগ নষ্ট করা"
+    },
+    {
+      "id": "vocab_d_003",
+      "question": "Deleterious এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষতিকর",
+        "b": "বিদেশীভীতি",
+        "c": "দেশ ছেড়ে অন্য দেশে যায় যে",
+        "d": "এগিয়ে দেওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ক্ষতিকর; বিষাক্ত",
+      "explanation": "Deleterious = ক্ষতিকর; বিষাক্ত"
+    },
+    {
+      "id": "vocab_d_004",
+      "question": "Delude এর অর্থ কি?",
+      "options": {
+        "a": "সরল",
+        "b": "সর্বশক্তিমান",
+        "c": "খণ্ডন",
+        "d": "প্রতারণা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রতারণা করা; বিভ্রান্ত করা",
+      "explanation": "Delude = প্রতারণা করা; বিভ্রান্ত করা"
+    },
+    {
+      "id": "vocab_d_005",
+      "question": "Democide এর অর্থ কি?",
+      "options": {
+        "a": "উজ্জ্বল",
+        "b": "পরিখা",
+        "c": "সরকার কর্তৃক নিজ জনগণকে হত্যা",
+        "d": "হিংস্রতা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সরকার কর্তৃক নিজ জনগণকে হত্যা; গণহত্যা",
+      "explanation": "Democide = সরকার কর্তৃক নিজ জনগণকে হত্যা; গণহত্যা"
+    },
+    {
+      "id": "vocab_d_006",
+      "question": "Demoeconomy এর অর্থ কি?",
+      "options": {
+        "a": "অনাহূত",
+        "b": "তেজ",
+        "c": "জনগণের অর্থনীতি",
+        "d": "ঘুমের মধ্যে কথা বলা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জনগণের অর্থনীতি; গণঅর্থনীতি",
+      "explanation": "Demoeconomy = জনগণের অর্থনীতি; গণঅর্থনীতি"
+    },
+    {
+      "id": "vocab_d_007",
+      "question": "Demomania এর অর্থ কি?",
+      "options": {
+        "a": "জনগণের প্রতি উন্মাদ আগ্রহ",
+        "b": "জনগণের অর্থনীতি",
+        "c": "সতর্ক",
+        "d": "টুকরো"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "জনগণের প্রতি উন্মাদ আগ্রহ; গণ-উন্মাদনা",
+      "explanation": "Demomania = জনগণের প্রতি উন্মাদ আগ্রহ; গণ-উন্মাদনা"
+    },
+    {
+      "id": "vocab_d_008",
+      "question": "Demonym এর অর্থ কি?",
+      "options": {
+        "a": "সাহস",
+        "b": "ভোঁতা",
+        "c": "কোনো স্থানের মানুষের পরিচয়মূলক নাম",
+        "d": "রোগের কারণ বিদ্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কোনো স্থানের মানুষের পরিচয়মূলক নাম; আঞ্চলিক নাম",
+      "explanation": "Demonym = কোনো স্থানের মানুষের পরিচয়মূলক নাম; আঞ্চলিক নাম"
+    },
+    {
+      "id": "vocab_d_009",
+      "question": "Demophile এর অর্থ কি?",
+      "options": {
+        "a": "শারীরিক",
+        "b": "অবাধ্য",
+        "c": "কর্মভারহীন পদ",
+        "d": "জনগণকে ভালোবাসে যে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জনগণকে ভালোবাসে যে; গণপ্রেমী",
+      "explanation": "Demophile = জনগণকে ভালোবাসে যে; গণপ্রেমী"
+    },
+    {
+      "id": "vocab_d_010",
+      "question": "Dendrology এর অর্থ কি?",
+      "options": {
+        "a": "খুঁটি দিয়ে তৈরি বেষ্টনী",
+        "b": "গাছপালা বিদ্যা",
+        "c": "সমগ্র মানবজাতির",
+        "d": "অতিরিক্ত আলোচনা করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গাছপালা বিদ্যা; বৃক্ষ গবেষণা",
+      "explanation": "Dendrology = গাছপালা বিদ্যা; বৃক্ষ গবেষণা"
+    },
+    {
+      "id": "vocab_d_011",
+      "question": "Derelict এর অর্থ কি?",
+      "options": {
+        "a": "ভিক্ষুক",
+        "b": "অন্ধকারময়",
+        "c": "বিজ্ঞ ব্যক্তি",
+        "d": "পরিত্যক্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পরিত্যক্ত; দায়িত্বহীন",
+      "explanation": "Derelict = পরিত্যক্ত; দায়িত্বহীন"
+    },
+    {
+      "id": "vocab_d_012",
+      "question": "Desecrate এর অর্থ কি?",
+      "options": {
+        "a": "গালি দেওয়া",
+        "b": "আশীর্বাদ",
+        "c": "দয়ালু",
+        "d": "অপবিত্র করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অপবিত্র করা",
+      "explanation": "Desecrate = অপবিত্র করা"
+    },
+    {
+      "id": "vocab_d_013",
+      "question": "Despot এর অর্থ কি?",
+      "options": {
+        "a": "উদ্বিগ্ন",
+        "b": "স্বৈরশাসক",
+        "c": "প্রবল আগ্রহ",
+        "d": "কর্মভারহীন পদ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বৈরশাসক; একনায়ক",
+      "explanation": "Despot = স্বৈরশাসক; একনায়ক"
+    },
+    {
+      "id": "vocab_d_014",
+      "question": "Disingenuous এর অর্থ কি?",
+      "options": {
+        "a": "অপ্রচলিত",
+        "b": "অপব্যয়ী",
+        "c": "অবশিষ্টাংশ",
+        "d": "কুটিল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "কুটিল; কপট",
+      "explanation": "Disingenuous = কুটিল; কপট"
+    },
+    {
+      "id": "vocab_d_015",
+      "question": "Dissension এর অর্থ কি?",
+      "options": {
+        "a": "অল্প",
+        "b": "ভিক্ষুক",
+        "c": "সব বিষয়ে কথা বলা",
+        "d": "মতভেদ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মতভেদ",
+      "explanation": "Dissension = মতভেদ"
+    },
+    {
+      "id": "vocab_d_016",
+      "question": "Doting এর অর্থ কি?",
+      "options": {
+        "a": "সব বিষয়ে দক্ষ",
+        "b": "পুনরুজ্জীবন",
+        "c": "অতিরিক্ত স্নেহশীল",
+        "d": "সুস্থতার আশ্রম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন",
+      "explanation": "Doting = অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন"
+    },
+    {
+      "id": "vocab_d_017",
+      "question": "Dross এর অর্থ কি?",
+      "options": {
+        "a": "উপকারী ব্যক্তি",
+        "b": "পুনরুজ্জীবন",
+        "c": "অনাহূত",
+        "d": "ধাতুমল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ধাতুমল; আবর্জনা; মূল্যহীন বস্তু",
+      "explanation": "Dross = ধাতুমল; আবর্জনা; মূল্যহীন বস্তু"
+    }
+  ]
+}

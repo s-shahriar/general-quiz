@@ -1,0 +1,265 @@
+{
+  "topic": "Vocabulary — I",
+  "questions": [
+    {
+      "id": "vocab_i_001",
+      "question": "Ignominy এর অর্থ কি?",
+      "options": {
+        "a": "পুস্তিকা",
+        "b": "কলঙ্ক",
+        "c": "ঝিনুক",
+        "d": "অচলাবস্থা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কলঙ্ক",
+      "explanation": "Ignominy = কলঙ্ক"
+    },
+    {
+      "id": "vocab_i_002",
+      "question": "Impinge এর অর্থ কি?",
+      "options": {
+        "a": "চিৎ হয়ে শোয়া",
+        "b": "প্রভাব ফেলা",
+        "c": "সবার সমান অধিকারের শাসন",
+        "d": "দমন করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রভাব ফেলা; অতিক্রম করা",
+      "explanation": "Impinge = প্রভাব ফেলা; অতিক্রম করা"
+    },
+    {
+      "id": "vocab_i_003",
+      "question": "Impute এর অর্থ কি?",
+      "options": {
+        "a": "দোষারোপ করা",
+        "b": "ভাগ্যের উত্থান-পতন",
+        "c": "প্রচুর উৎপাদনশীল",
+        "d": "ব্যয়বহুল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দোষারোপ করা",
+      "explanation": "Impute = দোষারোপ করা"
+    },
+    {
+      "id": "vocab_i_004",
+      "question": "Incoherent এর অর্থ কি?",
+      "options": {
+        "a": "অসংলগ্ন",
+        "b": "মুখমণ্ডল",
+        "c": "বাইরে প্রসারিত হওয়া",
+        "d": "মেনে নেওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অসংলগ্ন; অস্পষ্ট",
+      "explanation": "Incoherent = অসংলগ্ন; অস্পষ্ট"
+    },
+    {
+      "id": "vocab_i_005",
+      "question": "Incomprehensible এর অর্থ কি?",
+      "options": {
+        "a": "করুণার অনুভূতি",
+        "b": "দুর্বোধ্য",
+        "c": "দীপ্তিমান",
+        "d": "প্রতিশোধ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দুর্বোধ্য; অবোধ্য",
+      "explanation": "Incomprehensible = দুর্বোধ্য; অবোধ্য"
+    },
+    {
+      "id": "vocab_i_006",
+      "question": "Indignation এর অর্থ কি?",
+      "options": {
+        "a": "সংক্ষিপ্ত",
+        "b": "রসিক",
+        "c": "ক্ষোভ",
+        "d": "কঠিন করা বা হওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ক্ষোভ",
+      "explanation": "Indignation = ক্ষোভ"
+    },
+    {
+      "id": "vocab_i_007",
+      "question": "Indulgence এর অর্থ কি?",
+      "options": {
+        "a": "সর্বশক্তিমান",
+        "b": "তাৎক্ষণিক",
+        "c": "অসংযম",
+        "d": "এগিয়ে দেওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অসংযম; প্রশ্রয়",
+      "explanation": "Indulgence = অসংযম; প্রশ্রয়"
+    },
+    {
+      "id": "vocab_i_008",
+      "question": "Infallible এর অর্থ কি?",
+      "options": {
+        "a": "চারদিকে ঘুরে হাঁটা",
+        "b": "সাহসী",
+        "c": "দুর্দান্ত মহিলা",
+        "d": "অভ্রান্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অভ্রান্ত",
+      "explanation": "Infallible = অভ্রান্ত"
+    },
+    {
+      "id": "vocab_i_009",
+      "question": "Ingenious এর অর্থ কি?",
+      "options": {
+        "a": "উদ্ভাবনী",
+        "b": "শিশুর চাকার গাড়ি",
+        "c": "মিথ্যা শপথ",
+        "d": "আসীন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উদ্ভাবনী",
+      "explanation": "Ingenious = উদ্ভাবনী"
+    },
+    {
+      "id": "vocab_i_010",
+      "question": "Ingenuous এর অর্থ কি?",
+      "options": {
+        "a": "ভীরু",
+        "b": "অভিশাপমূলক",
+        "c": "ভর্ৎসনা",
+        "d": "সরল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সরল; নিষ্কপট",
+      "explanation": "Ingenuous = সরল; নিষ্কপট"
+    },
+    {
+      "id": "vocab_i_011",
+      "question": "Innocuous এর অর্থ কি?",
+      "options": {
+        "a": "দ্বিধা",
+        "b": "প্রতিশোধপরায়ণ",
+        "c": "নিরীহ",
+        "d": "অশ্রদ্ধা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিরীহ; ক্ষতিকর নয়",
+      "explanation": "Innocuous = নিরীহ; ক্ষতিকর নয়"
+    },
+    {
+      "id": "vocab_i_012",
+      "question": "Innuendo এর অর্থ কি?",
+      "options": {
+        "a": "পরোক্ষ ইঙ্গিত",
+        "b": "হতবাক",
+        "c": "তৃতীয় পর্যায়ের",
+        "d": "পুনরায় পূর্ণ করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পরোক্ষ ইঙ্গিত; অপ্রত্যক্ষ কটাক্ষ",
+      "explanation": "Innuendo = পরোক্ষ ইঙ্গিত; অপ্রত্যক্ষ কটাক্ষ"
+    },
+    {
+      "id": "vocab_i_013",
+      "question": "Inquisitive এর অর্থ কি?",
+      "options": {
+        "a": "কৌতূহলী",
+        "b": "গোয়াল",
+        "c": "নীতিবাক্য",
+        "d": "অভিনেতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কৌতূহলী; জিজ্ঞাসু",
+      "explanation": "Inquisitive = কৌতূহলী; জিজ্ঞাসু"
+    },
+    {
+      "id": "vocab_i_014",
+      "question": "Inscription এর অর্থ কি?",
+      "options": {
+        "a": "অতি সক্রিয়",
+        "b": "শিলালিপি",
+        "c": "তুচ্ছ",
+        "d": "চারদিকে ঘুরে হাঁটা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শিলালিপি; খোদাই লেখা",
+      "explanation": "Inscription = শিলালিপি; খোদাই লেখা"
+    },
+    {
+      "id": "vocab_i_015",
+      "question": "Insolent এর অর্থ কি?",
+      "options": {
+        "a": "অস্থির",
+        "b": "উদ্ধত",
+        "c": "দ্রুত বৃদ্ধি পাওয়া",
+        "d": "বিচক্ষণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উদ্ধত; ধৃষ্ট; অসম্মানজনক",
+      "explanation": "Insolent = উদ্ধত; ধৃষ্ট; অসম্মানজনক"
+    },
+    {
+      "id": "vocab_i_016",
+      "question": "Intemperate এর অর্থ কি?",
+      "options": {
+        "a": "নিজের সন্তান হত্যা",
+        "b": "বাতিল করা",
+        "c": "অসংযমী",
+        "d": "অশ্লীল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অসংযমী; অতিমাত্রায় আবেগী",
+      "explanation": "Intemperate = অসংযমী; অতিমাত্রায় আবেগী"
+    },
+    {
+      "id": "vocab_i_017",
+      "question": "Interlocution এর অর্থ কি?",
+      "options": {
+        "a": "চালনি",
+        "b": "বিদ্রূপাত্মক",
+        "c": "সাহস",
+        "d": "কথোপকথন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "কথোপকথন",
+      "explanation": "Interlocution = কথোপকথন"
+    },
+    {
+      "id": "vocab_i_018",
+      "question": "Interregnum এর অর্থ কি?",
+      "options": {
+        "a": "অজ্ঞাতসারে",
+        "b": "শাসনশূন্যতাকাল",
+        "c": "বাস্তববাদী",
+        "d": "উজ্জ্বল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শাসনশূন্যতাকাল",
+      "explanation": "Interregnum = শাসনশূন্যতাকাল"
+    },
+    {
+      "id": "vocab_i_019",
+      "question": "Invective এর অর্থ কি?",
+      "options": {
+        "a": "কটূক্তি",
+        "b": "শিথিলতা",
+        "c": "অবাধ্য",
+        "d": "খাপ খাওয়াতে অক্ষম"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কটূক্তি; গালাগালি",
+      "explanation": "Invective = কটূক্তি; গালাগালি"
+    },
+    {
+      "id": "vocab_i_020",
+      "question": "Itinerant এর অর্থ কি?",
+      "options": {
+        "a": "সত্য এড়িয়ে যাওয়া",
+        "b": "ভ্রমণশীল",
+        "c": "খাপ খাওয়াতে অক্ষম",
+        "d": "পার্থিব"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভ্রমণশীল; পরিভ্রমণকারী",
+      "explanation": "Itinerant = ভ্রমণশীল; পরিভ্রমণকারী"
+    }
+  ]
+}

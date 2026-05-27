@@ -1,0 +1,109 @@
+{
+  "topic": "Vocabulary — Q",
+  "questions": [
+    {
+      "id": "vocab_q_001",
+      "question": "Quaint এর অর্থ কি?",
+      "options": {
+        "a": "অদ্ভুত কিন্তু আকর্ষণীয়",
+        "b": "বিদেশীভীতি",
+        "c": "বিবর্ণ",
+        "d": "মঠ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের",
+      "explanation": "Quaint = অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের"
+    },
+    {
+      "id": "vocab_q_002",
+      "question": "Quandary এর অর্থ কি?",
+      "options": {
+        "a": "দ্বিধা",
+        "b": "খাপ খাওয়াতে অক্ষম",
+        "c": "ভ্রাতৃত্ব",
+        "d": "স্তুতিবচন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দ্বিধা; সংকট",
+      "explanation": "Quandary = দ্বিধা; সংকট"
+    },
+    {
+      "id": "vocab_q_003",
+      "question": "Quarry এর অর্থ কি?",
+      "options": {
+        "a": "শিকার",
+        "b": "অনুলিপি করা",
+        "c": "লুকানো",
+        "d": "অতিরিক্ত স্নেহশীল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "শিকার; পাথর খনি",
+      "explanation": "Quarry = শিকার; পাথর খনি"
+    },
+    {
+      "id": "vocab_q_004",
+      "question": "Quash এর অর্থ কি?",
+      "options": {
+        "a": "গদ্যময়",
+        "b": "উন্নত করা",
+        "c": "বাতিল করা",
+        "d": "অসংযম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাতিল করা",
+      "explanation": "Quash = বাতিল করা"
+    },
+    {
+      "id": "vocab_q_005",
+      "question": "Queer এর অর্থ কি?",
+      "options": {
+        "a": "আকস্মিক",
+        "b": "উন্মত্ত",
+        "c": "বিদ্রূপাত্মকভাবে বর্ণনা করা",
+        "d": "অদ্ভুত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অদ্ভুত; বিচিত্র",
+      "explanation": "Queer = অদ্ভুত; বিচিত্র"
+    },
+    {
+      "id": "vocab_q_006",
+      "question": "Quell এর অর্থ কি?",
+      "options": {
+        "a": "গোঁড়া উৎসাহী",
+        "b": "দমন করা",
+        "c": "অনাহূত",
+        "d": "নিষ্ক্রিয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দমন করা",
+      "explanation": "Quell = দমন করা"
+    },
+    {
+      "id": "vocab_q_007",
+      "question": "Querulousness এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত আলোচনা করা",
+        "b": "অভিযোগপ্রবণতা",
+        "c": "খুঁটি দিয়ে তৈরি বেষ্টনী",
+        "d": "অচলাবস্থা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভিযোগপ্রবণতা",
+      "explanation": "Querulousness = অভিযোগপ্রবণতা"
+    },
+    {
+      "id": "vocab_q_008",
+      "question": "Quiescent এর অর্থ কি?",
+      "options": {
+        "a": "প্রচুর উৎপাদনশীল",
+        "b": "স্বগতোক্তি",
+        "c": "নিষ্ক্রিয়",
+        "d": "অতিরিক্ত শব্দপ্রয়োগ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিষ্ক্রিয়; শান্ত",
+      "explanation": "Quiescent = নিষ্ক্রিয়; শান্ত"
+    }
+  ]
+}

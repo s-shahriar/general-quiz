@@ -2362,3 +2362,16 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
   border-color: var(--border-bright);
   color: var(--accent);
 }
+
+/* ── Vocabulary Module ─────────────────────────────────────────── */
+.vocab-letter-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.vlc-badge {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}

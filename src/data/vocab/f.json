@@ -1,0 +1,174 @@
+{
+  "topic": "Vocabulary — F",
+  "questions": [
+    {
+      "id": "vocab_f_001",
+      "question": "Fetid এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত",
+        "b": "রাজহত্যা",
+        "c": "বেড়া",
+        "d": "উদ্ধত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্গন্ধযুক্ত; পচা গন্ধওয়ালা",
+      "explanation": "Fetid = দুর্গন্ধযুক্ত; পচা গন্ধওয়ালা"
+    },
+    {
+      "id": "vocab_f_002",
+      "question": "Filicide এর অর্থ কি?",
+      "options": {
+        "a": "বিবাহ-বিরোধী",
+        "b": "নিজের সন্তান হত্যা",
+        "c": "রঙিন পেন্সিল",
+        "d": "শারীরিক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা",
+      "explanation": "Filicide = নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা"
+    },
+    {
+      "id": "vocab_f_003",
+      "question": "Flabbergasted এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক",
+        "b": "বিচ্ছিন্ন করা",
+        "c": "চালনি",
+        "d": "চোখের সংক্রামক রোগ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "হতবাক; স্তম্ভিত",
+      "explanation": "Flabbergasted = হতবাক; স্তম্ভিত"
+    },
+    {
+      "id": "vocab_f_004",
+      "question": "Fortuitous এর অর্থ কি?",
+      "options": {
+        "a": "তুচ্ছ",
+        "b": "আকস্মিক",
+        "c": "নোংরা অবস্থা",
+        "d": "বাইরে প্রসারিত হওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আকস্মিক; দৈবিক; অপ্রত্যাশিত",
+      "explanation": "Fortuitous = আকস্মিক; দৈবিক; অপ্রত্যাশিত"
+    },
+    {
+      "id": "vocab_f_005",
+      "question": "Frailty এর অর্থ কি?",
+      "options": {
+        "a": "মশলাদার",
+        "b": "দুর্বলতা",
+        "c": "বিস্ময়কর",
+        "d": "দুর্ভাগ্যসূচক বিষয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দুর্বলতা",
+      "explanation": "Frailty = দুর্বলতা"
+    },
+    {
+      "id": "vocab_f_006",
+      "question": "Frantic এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত",
+        "b": "উন্মত্ত",
+        "c": "উৎসাহ",
+        "d": "নিরাপত্তাহীন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উন্মত্ত; অতিশয় উদ্বিগ্ন",
+      "explanation": "Frantic = উন্মত্ত; অতিশয় উদ্বিগ্ন"
+    },
+    {
+      "id": "vocab_f_007",
+      "question": "Fraternity এর অর্থ কি?",
+      "options": {
+        "a": "তাৎক্ষণিক",
+        "b": "ঘোলাটে",
+        "c": "উদ্বেগ",
+        "d": "ভ্রাতৃত্ব"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভ্রাতৃত্ব; ভাইয়ের মতো সম্পর্ক",
+      "explanation": "Fraternity = ভ্রাতৃত্ব; ভাইয়ের মতো সম্পর্ক"
+    },
+    {
+      "id": "vocab_f_008",
+      "question": "Fratricide এর অর্থ কি?",
+      "options": {
+        "a": "পরিত্যক্ত",
+        "b": "অপব্যয়ী",
+        "c": "খামখেয়ালি",
+        "d": "ভাই হত্যা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভাই হত্যা; ভ্রাতৃহত্যা",
+      "explanation": "Fratricide = ভাই হত্যা; ভ্রাতৃহত্যা"
+    },
+    {
+      "id": "vocab_f_009",
+      "question": "Frenetic এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন করা",
+        "b": "সামান্য চুরি করা",
+        "c": "ক্ষিপ্ত",
+        "d": "নিরীহ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ক্ষিপ্ত; উন্মত্ত; উত্তেজিত",
+      "explanation": "Frenetic = ক্ষিপ্ত; উন্মত্ত; উত্তেজিত"
+    },
+    {
+      "id": "vocab_f_010",
+      "question": "Frisky এর অর্থ কি?",
+      "options": {
+        "a": "বাণিজ্যিক মন্দাভাব",
+        "b": "প্রাণচঞ্চল",
+        "c": "অতিরিক্ত আলোচনা করা",
+        "d": "হালকা-পাতলা ও দুর্বল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রাণচঞ্চল; চটপটে",
+      "explanation": "Frisky = প্রাণচঞ্চল; চটপটে"
+    },
+    {
+      "id": "vocab_f_011",
+      "question": "Frivolous এর অর্থ কি?",
+      "options": {
+        "a": "স্তবক",
+        "b": "উপলব্ধির ক্ষমতাসম্পন্ন",
+        "c": "করাতের দাঁতের মতো কাটা",
+        "d": "তুচ্ছ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তুচ্ছ; হালকা",
+      "explanation": "Frivolous = তুচ্ছ; হালকা"
+    },
+    {
+      "id": "vocab_f_012",
+      "question": "Frugivorous এর অর্থ কি?",
+      "options": {
+        "a": "ফল খেয়ে বাঁচে যে",
+        "b": "ধর্মতন্ত্র",
+        "c": "গুরুত্বহীনভাবে প্রেম করে এমন ব্যক্তি",
+        "d": "আঁকাবাঁকা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ফল খেয়ে বাঁচে যে; ফলভোজী",
+      "explanation": "Frugivorous = ফল খেয়ে বাঁচে যে; ফলভোজী"
+    },
+    {
+      "id": "vocab_f_013",
+      "question": "Funambulist এর অর্থ কি?",
+      "options": {
+        "a": "দীপ্তিমান",
+        "b": "সর্বশক্তিমান",
+        "c": "ভ্রাতৃত্ব",
+        "d": "দড়ির উপর হেঁটে খেলা দেখায় যে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দড়ির উপর হেঁটে খেলা দেখায় যে; দড়িনাট্যশিল্পী",
+      "explanation": "Funambulist = দড়ির উপর হেঁটে খেলা দেখায় যে; দড়িনাট্যশিল্পী"
+    }
+  ]
+}

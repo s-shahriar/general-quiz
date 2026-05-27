@@ -1,0 +1,382 @@
+{
+  "topic": "Vocabulary — R",
+  "questions": [
+    {
+      "id": "vocab_r_001",
+      "question": "Radiant এর অর্থ কি?",
+      "options": {
+        "a": "ফলাফল",
+        "b": "স্বতঃসিদ্ধ সত্য",
+        "c": "উজ্জ্বল",
+        "d": "খণ্ডন করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উজ্জ্বল; দীপ্তিমান",
+      "explanation": "Radiant = উজ্জ্বল; দীপ্তিমান"
+    },
+    {
+      "id": "vocab_r_002",
+      "question": "Ramification এর অর্থ কি?",
+      "options": {
+        "a": "পরিখা",
+        "b": "পরিণতি",
+        "c": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ",
+        "d": "পর্ণমোচী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পরিণতি; শাখা-প্রশাখা",
+      "explanation": "Ramification = পরিণতি; শাখা-প্রশাখা"
+    },
+    {
+      "id": "vocab_r_003",
+      "question": "Ratiocinate এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণ",
+        "b": "স্পষ্টভাবে উচ্চারণ করা",
+        "c": "কঠোর নিয়ম মেনে চলা ব্যক্তি",
+        "d": "যুক্তিতর্ক করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "যুক্তিতর্ক করা; বিচার-বিশ্লেষণ করা",
+      "explanation": "Ratiocinate = যুক্তিতর্ক করা; বিচার-বিশ্লেষণ করা"
+    },
+    {
+      "id": "vocab_r_004",
+      "question": "Raucous এর অর্থ কি?",
+      "options": {
+        "a": "কর্ক শ",
+        "b": "অভ্রান্ত",
+        "c": "বিপদ",
+        "d": "কৃ পণতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কর্ক শ; কোলাহলপূর্ণ",
+      "explanation": "Raucous = কর্ক শ; কোলাহলপূর্ণ"
+    },
+    {
+      "id": "vocab_r_005",
+      "question": "Rebuff এর অর্থ কি?",
+      "options": {
+        "a": "অভিযোগপ্রবণতা",
+        "b": "কৃ পণতা",
+        "c": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+        "d": "খিটখিটে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+      "explanation": "Rebuff = রূঢ়ভাবে প্রত্যাখ্যান করা"
+    },
+    {
+      "id": "vocab_r_006",
+      "question": "Rebut এর অর্থ কি?",
+      "options": {
+        "a": "নোংরা অবস্থা",
+        "b": "পুনরাবৃত্তি",
+        "c": "মুদ্রণশিল্প",
+        "d": "খণ্ডন করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "খণ্ডন করা",
+      "explanation": "Rebut = খণ্ডন করা"
+    },
+    {
+      "id": "vocab_r_007",
+      "question": "Recalcitrant এর অর্থ কি?",
+      "options": {
+        "a": "তৃতীয় পর্যায়ের",
+        "b": "গদ্যময়",
+        "c": "অবাধ্য",
+        "d": "ঝিনুক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অবাধ্য",
+      "explanation": "Recalcitrant = অবাধ্য"
+    },
+    {
+      "id": "vocab_r_008",
+      "question": "Recapitulation এর অর্থ কি?",
+      "options": {
+        "a": "শান্ত করা",
+        "b": "অদ্ভুত কিন্তু আকর্ষণীয়",
+        "c": "ক্ষতিকর",
+        "d": "পুনরাবৃত্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পুনরাবৃত্তি",
+      "explanation": "Recapitulation = পুনরাবৃত্তি"
+    },
+    {
+      "id": "vocab_r_009",
+      "question": "Recluse এর অর্থ কি?",
+      "options": {
+        "a": "শিলালিপি",
+        "b": "অনায়াসে কথা বলা",
+        "c": "গোয়াল",
+        "d": "একান্তবাসী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "একান্তবাসী; নিঃসঙ্গ জীবনযাপনকারী",
+      "explanation": "Recluse = একান্তবাসী; নিঃসঙ্গ জীবনযাপনকারী"
+    },
+    {
+      "id": "vocab_r_010",
+      "question": "Recoup এর অর্থ কি?",
+      "options": {
+        "a": "পুষিয়ে নেওয়া",
+        "b": "বাইরে প্রসারিত হওয়া",
+        "c": "বাতিল করা",
+        "d": "ধনী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পুষিয়ে নেওয়া; ক্ষতিপূরণ করা",
+      "explanation": "Recoup = পুষিয়ে নেওয়া; ক্ষতিপূরণ করা"
+    },
+    {
+      "id": "vocab_r_011",
+      "question": "Refulgent এর অর্থ কি?",
+      "options": {
+        "a": "অস্পষ্ট",
+        "b": "অভ্রান্ত",
+        "c": "খাপ খাওয়াতে অক্ষম",
+        "d": "দীপ্তিমান"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দীপ্তিমান",
+      "explanation": "Refulgent = দীপ্তিমান"
+    },
+    {
+      "id": "vocab_r_012",
+      "question": "Refutation এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন",
+        "b": "আন্ত্রিক",
+        "c": "লাম্পট্যপূর্ণ",
+        "d": "বিষাক্ত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "খণ্ডন",
+      "explanation": "Refutation = খণ্ডন"
+    },
+    {
+      "id": "vocab_r_013",
+      "question": "Regicide এর অর্থ কি?",
+      "options": {
+        "a": "দুর্দান্ত মহিলা",
+        "b": "দ্বিধা",
+        "c": "সুস্বাদু",
+        "d": "রাজহত্যা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "রাজহত্যা",
+      "explanation": "Regicide = রাজহত্যা"
+    },
+    {
+      "id": "vocab_r_014",
+      "question": "Remnants এর অর্থ কি?",
+      "options": {
+        "a": "অবশিষ্টাংশ",
+        "b": "ব্যয়বহুল",
+        "c": "বিচক্ষণ",
+        "d": "দমন করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অবশিষ্টাংশ",
+      "explanation": "Remnants = অবশিষ্টাংশ"
+    },
+    {
+      "id": "vocab_r_015",
+      "question": "Renegade এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাসঘাতক",
+        "b": "ক্ষতিকর",
+        "c": "খণ্ডন",
+        "d": "অভিযোগপ্রবণতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিশ্বাসঘাতক; দলত্যাগী",
+      "explanation": "Renegade = বিশ্বাসঘাতক; দলত্যাগী"
+    },
+    {
+      "id": "vocab_r_016",
+      "question": "Repine এর অর্থ কি?",
+      "options": {
+        "a": "অসন্তুষ্ট থাকা",
+        "b": "উপকারী ব্যক্তি",
+        "c": "গোঁড়া উৎসাহী",
+        "d": "প্রতিশোধপরায়ণ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অসন্তুষ্ট থাকা; মন খারাপ করা",
+      "explanation": "Repine = অসন্তুষ্ট থাকা; মন খারাপ করা"
+    },
+    {
+      "id": "vocab_r_017",
+      "question": "Replenish এর অর্থ কি?",
+      "options": {
+        "a": "নকল",
+        "b": "নোংরা অবস্থা",
+        "c": "জনগণের অর্থনীতি",
+        "d": "পুনরায় পূর্ণ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পুনরায় পূর্ণ করা; সরবরাহ নবায়ন করা",
+      "explanation": "Replenish = পুনরায় পূর্ণ করা; সরবরাহ নবায়ন করা"
+    },
+    {
+      "id": "vocab_r_018",
+      "question": "Repress এর অর্থ কি?",
+      "options": {
+        "a": "দমিয়ে রাখা",
+        "b": "প্রহসন",
+        "c": "নিজের সন্তান হত্যা",
+        "d": "শান্ত করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দমিয়ে রাখা; চেপে রাখা",
+      "explanation": "Repress = দমিয়ে রাখা; চেপে রাখা"
+    },
+    {
+      "id": "vocab_r_019",
+      "question": "Reprisal এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষোভ",
+        "b": "ঘুমের মধ্যে কথা বলা",
+        "c": "প্রতিশোধ",
+        "d": "অস্থির"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রতিশোধ",
+      "explanation": "Reprisal = প্রতিশোধ"
+    },
+    {
+      "id": "vocab_r_020",
+      "question": "Reproach এর অর্থ কি?",
+      "options": {
+        "a": "তিরস্কার",
+        "b": "প্রশ্নবাণে জর্জরিত করা",
+        "c": "ক্ষতিকর",
+        "d": "ভদ্র"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "তিরস্কার",
+      "explanation": "Reproach = তিরস্কার"
+    },
+    {
+      "id": "vocab_r_021",
+      "question": "Reproof এর অর্থ কি?",
+      "options": {
+        "a": "ভর্ৎসনা",
+        "b": "তীব্র বক্তৃতা",
+        "c": "নীরস",
+        "d": "ঘৃণ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভর্ৎসনা",
+      "explanation": "Reproof = ভর্ৎসনা"
+    },
+    {
+      "id": "vocab_r_022",
+      "question": "Repulse এর অর্থ কি?",
+      "options": {
+        "a": "প্রতিরোধ করা",
+        "b": "উদ্ভাবনী",
+        "c": "সুস্বাদু",
+        "d": "ধাতুমল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "প্রতিরোধ করা; বিতাড়িত করা",
+      "explanation": "Repulse = প্রতিরোধ করা; বিতাড়িত করা"
+    },
+    {
+      "id": "vocab_r_023",
+      "question": "Requiem এর অর্থ কি?",
+      "options": {
+        "a": "অদম্য",
+        "b": "নোংরা",
+        "c": "মৃত ব্যক্তির আত্মার জন্য নিবেদিত প্রার্থনাসংগীত",
+        "d": "ধর্মতন্ত্র"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মৃত ব্যক্তির আত্মার জন্য নিবেদিত প্রার্থনাসংগীত",
+      "explanation": "Requiem = মৃত ব্যক্তির আত্মার জন্য নিবেদিত প্রার্থনাসংগীত"
+    },
+    {
+      "id": "vocab_r_024",
+      "question": "Resilience এর অর্থ কি?",
+      "options": {
+        "a": "আসীন",
+        "b": "স্থিতিস্থাপকতা",
+        "c": "উচ্ছৃঙ্খল",
+        "d": "গোপন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্থিতিস্থাপকতা; দৃঢ়তা",
+      "explanation": "Resilience = স্থিতিস্থাপকতা; দৃঢ়তা"
+    },
+    {
+      "id": "vocab_r_025",
+      "question": "Resplendent এর অর্থ কি?",
+      "options": {
+        "a": "বজ্রকণ্ঠ",
+        "b": "ফোলা",
+        "c": "দেদীপ্যমান",
+        "d": "অত্যন্ত শোচনীয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দেদীপ্যমান",
+      "explanation": "Resplendent = দেদীপ্যমান"
+    },
+    {
+      "id": "vocab_r_026",
+      "question": "Resuscitation এর অর্থ কি?",
+      "options": {
+        "a": "উন্নত করা",
+        "b": "বিশ্বাসঘাতক",
+        "c": "হৈ-চৈ",
+        "d": "পুনরুজ্জীবন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পুনরুজ্জীবন; নতুন জীবনদান",
+      "explanation": "Resuscitation = পুনরুজ্জীবন; নতুন জীবনদান"
+    },
+    {
+      "id": "vocab_r_027",
+      "question": "Revile এর অর্থ কি?",
+      "options": {
+        "a": "গালি দেওয়া",
+        "b": "অপ্রচলিত",
+        "c": "গোয়াল",
+        "d": "কঠোর নিয়ম মেনে চলা ব্যক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "গালি দেওয়া",
+      "explanation": "Revile = গালি দেওয়া"
+    },
+    {
+      "id": "vocab_r_028",
+      "question": "Riptides এর অর্থ কি?",
+      "options": {
+        "a": "পোশাক সংক্রান্ত",
+        "b": "কলঙ্ক",
+        "c": "বিপরীত স্রোত",
+        "d": "সরকারি বা অন্যের অর্থ আত্মসাৎ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিপরীত স্রোত; শক্তিশালী জলস্রোত",
+      "explanation": "Riptides = বিপরীত স্রোত; শক্তিশালী জলস্রোত"
+    },
+    {
+      "id": "vocab_r_029",
+      "question": "Rue এর অর্থ কি?",
+      "options": {
+        "a": "বাইরে প্রসারিত হওয়া",
+        "b": "অনুতাপ করা",
+        "c": "ভাগ্যের উত্থান-পতন",
+        "d": "তেজ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অনুতাপ করা; দুঃখিত হওয়া",
+      "explanation": "Rue = অনুতাপ করা; দুঃখিত হওয়া"
+    }
+  ]
+}

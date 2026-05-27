@@ -1,0 +1,57 @@
+{
+  "topic": "Vocabulary — J-K",
+  "questions": [
+    {
+      "id": "vocab_jk_001",
+      "question": "Jaunt এর অর্থ কি?",
+      "options": {
+        "a": "শিশুর চাকার গাড়ি",
+        "b": "বাদী",
+        "c": "আনন্দভ্রমণ",
+        "d": "উপকারী ব্যক্তি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আনন্দভ্রমণ",
+      "explanation": "Jaunt = আনন্দভ্রমণ"
+    },
+    {
+      "id": "vocab_jk_002",
+      "question": "Jingoism এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষিপ্ত",
+        "b": "উগ্র জাতীয়তাবাদ",
+        "c": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+        "d": "রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উগ্র জাতীয়তাবাদ",
+      "explanation": "Jingoism = উগ্র জাতীয়তাবাদ"
+    },
+    {
+      "id": "vocab_jk_003",
+      "question": "Jocose এর অর্থ কি?",
+      "options": {
+        "a": "দ্বিধা",
+        "b": "রসিক",
+        "c": "সুস্থতার আশ্রম",
+        "d": "অভ্রান্ত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "রসিক; কৌতুকপ্রিয়",
+      "explanation": "Jocose = রসিক; কৌতুকপ্রিয়"
+    },
+    {
+      "id": "vocab_jk_004",
+      "question": "Kiln এর অর্থ কি?",
+      "options": {
+        "a": "ফেরিওয়ালা",
+        "b": "পোড়ানোর ভাঁটা",
+        "c": "বোন হত্যা",
+        "d": "অল্পোক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পোড়ানোর ভাঁটা; ইটভাটি",
+      "explanation": "Kiln = পোড়ানোর ভাঁটা; ইটভাটি"
+    }
+  ]
+}

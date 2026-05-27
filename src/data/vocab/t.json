@@ -1,0 +1,408 @@
+{
+  "topic": "Vocabulary — T",
+  "questions": [
+    {
+      "id": "vocab_t_001",
+      "question": "Taciturn এর অর্থ কি?",
+      "options": {
+        "a": "শিলাতত্ত্ব",
+        "b": "সস্তা ও চটকদার",
+        "c": "বিচক্ষণ",
+        "d": "স্বল্পভাষী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্বল্পভাষী; চুপচাপ",
+      "explanation": "Taciturn = স্বল্পভাষী; চুপচাপ"
+    },
+    {
+      "id": "vocab_t_002",
+      "question": "Taint এর অর্থ কি?",
+      "options": {
+        "a": "কলঙ্কিত করা",
+        "b": "স্বতঃসিদ্ধ সত্য",
+        "c": "কুটিল",
+        "d": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কলঙ্কিত করা; দূষিত করা",
+      "explanation": "Taint = কলঙ্কিত করা; দূষিত করা"
+    },
+    {
+      "id": "vocab_t_003",
+      "question": "Tardy এর অর্থ কি?",
+      "options": {
+        "a": "তৃতীয় পর্যায়ের",
+        "b": "ক্ষিপ্ত",
+        "c": "সম্পূর্ণ বাধ্য",
+        "d": "দেরি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দেরি; ধীর",
+      "explanation": "Tardy = দেরি; ধীর"
+    },
+    {
+      "id": "vocab_t_004",
+      "question": "Tawdry এর অর্থ কি?",
+      "options": {
+        "a": "স্বতঃসিদ্ধ সত্য",
+        "b": "সস্তা ও চটকদার",
+        "c": "অপ্রচলিত",
+        "d": "খাপ খাওয়াতে অক্ষম"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সস্তা ও চটকদার; ভড়ং",
+      "explanation": "Tawdry = সস্তা ও চটকদার; ভড়ং"
+    },
+    {
+      "id": "vocab_t_005",
+      "question": "Tenacious এর অর্থ কি?",
+      "options": {
+        "a": "বিদ্রূপাত্মক",
+        "b": "অদম্য",
+        "c": "শান্ত করা",
+        "d": "উদার"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অদম্য; দৃঢ়প্রতিজ্ঞ",
+      "explanation": "Tenacious = অদম্য; দৃঢ়প্রতিজ্ঞ"
+    },
+    {
+      "id": "vocab_t_006",
+      "question": "Tenterhooks এর অর্থ কি?",
+      "options": {
+        "a": "নিরাপত্তাহীন",
+        "b": "কঠিন করা বা হওয়া",
+        "c": "হৈ-চৈ",
+        "d": "উদ্বেগ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উদ্বেগ; উৎকণ্ঠা",
+      "explanation": "Tenterhooks = উদ্বেগ; উৎকণ্ঠা"
+    },
+    {
+      "id": "vocab_t_007",
+      "question": "Tepid এর অর্থ কি?",
+      "options": {
+        "a": "মেনে নেওয়া",
+        "b": "হতবাক",
+        "c": "কুসুম গরম",
+        "d": "ভাই হত্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কুসুম গরম; অনুৎসাহী",
+      "explanation": "Tepid = কুসুম গরম; অনুৎসাহী"
+    },
+    {
+      "id": "vocab_t_008",
+      "question": "Terrestrial এর অর্থ কি?",
+      "options": {
+        "a": "পার্থিব",
+        "b": "অনুলিপি করা",
+        "c": "অল্প",
+        "d": "অনুনয় বিনয় করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পার্থিব",
+      "explanation": "Terrestrial = পার্থিব"
+    },
+    {
+      "id": "vocab_t_009",
+      "question": "Terse এর অর্থ কি?",
+      "options": {
+        "a": "অপব্যয়ী",
+        "b": "প্রাতিনিধিক",
+        "c": "সংক্ষিপ্ত",
+        "d": "স্তবক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সংক্ষিপ্ত",
+      "explanation": "Terse = সংক্ষিপ্ত"
+    },
+    {
+      "id": "vocab_t_010",
+      "question": "Tertiary এর অর্থ কি?",
+      "options": {
+        "a": "তৃতীয় পর্যায়ের",
+        "b": "কঠিন করা বা হওয়া",
+        "c": "অদ্ভুত",
+        "d": "ফল খেয়ে বাঁচে যে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "তৃতীয় পর্যায়ের",
+      "explanation": "Tertiary = তৃতীয় পর্যায়ের"
+    },
+    {
+      "id": "vocab_t_011",
+      "question": "Theocracy এর অর্থ কি?",
+      "options": {
+        "a": "তীক্ষ্ণ",
+        "b": "দুর্বোধ্য",
+        "c": "ধর্মতন্ত্র",
+        "d": "সুস্বাদু"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ধর্মতন্ত্র",
+      "explanation": "Theocracy = ধর্মতন্ত্র"
+    },
+    {
+      "id": "vocab_t_012",
+      "question": "Thespian এর অর্থ কি?",
+      "options": {
+        "a": "উচ্ছ্বাসপ্রবণ",
+        "b": "দাসোচিত",
+        "c": "বিতর্কমূলক আলোচনা",
+        "d": "অভিনেতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অভিনেতা; নাট্যকলার সাথে সম্পর্কিত",
+      "explanation": "Thespian = অভিনেতা; নাট্যকলার সাথে সম্পর্কিত"
+    },
+    {
+      "id": "vocab_t_013",
+      "question": "Thrifty এর অর্থ কি?",
+      "options": {
+        "a": "ভিক্ষুক",
+        "b": "মিতব্যয়ী",
+        "c": "মাছ খেয়ে বাঁচে যে",
+        "d": "এগিয়ে দেওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মিতব্যয়ী",
+      "explanation": "Thrifty = মিতব্যয়ী"
+    },
+    {
+      "id": "vocab_t_014",
+      "question": "Timid এর অর্থ কি?",
+      "options": {
+        "a": "ভীরু",
+        "b": "সন্ধ্যাকালীন সামাজিক অনুষ্ঠান",
+        "c": "পুনরায় পূর্ণ করা",
+        "d": "আকস্মিক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভীরু",
+      "explanation": "Timid = ভীরু"
+    },
+    {
+      "id": "vocab_t_015",
+      "question": "Timorous এর অর্থ কি?",
+      "options": {
+        "a": "অদক্ষ",
+        "b": "পর্ণমোচী",
+        "c": "বাদী",
+        "d": "ভীরু"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভীরু; ভয়-ভয় স্বভাবের",
+      "explanation": "Timorous = ভীরু; ভয়-ভয় স্বভাবের"
+    },
+    {
+      "id": "vocab_t_016",
+      "question": "Tirade এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘ ক্রোধোদ্দীপ্ত বা তিরস্কারপূর্ণ বক্তৃ তা",
+        "b": "সবার সমান অধিকারের শাসন",
+        "c": "আসীন",
+        "d": "কঠোর নিয়ম মেনে চলা ব্যক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দীর্ঘ ক্রোধোদ্দীপ্ত বা তিরস্কারপূর্ণ বক্তৃ তা",
+      "explanation": "Tirade = দীর্ঘ ক্রোধোদ্দীপ্ত বা তিরস্কারপূর্ণ বক্তৃ তা"
+    },
+    {
+      "id": "vocab_t_017",
+      "question": "Topiary এর অর্থ কি?",
+      "options": {
+        "a": "গাছ ছেঁ টে নকশা তৈরি",
+        "b": "সম্পূর্ণ বাধ্য",
+        "c": "আড়ম্বর",
+        "d": "আত্মতুষ্ট"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "গাছ ছেঁ টে নকশা তৈরি",
+      "explanation": "Topiary = গাছ ছেঁ টে নকশা তৈরি"
+    },
+    {
+      "id": "vocab_t_018",
+      "question": "Torpor এর অর্থ কি?",
+      "options": {
+        "a": "সম্মতি",
+        "b": "প্রত্যক্ষ",
+        "c": "অভিনেতা",
+        "d": "অলসতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অলসতা; নিষ্ক্রিয়তা",
+      "explanation": "Torpor = অলসতা; নিষ্ক্রিয়তা"
+    },
+    {
+      "id": "vocab_t_019",
+      "question": "Tortuous এর অর্থ কি?",
+      "options": {
+        "a": "বাঁকানো",
+        "b": "সুস্বাদু",
+        "c": "প্রতিশোধ",
+        "d": "গদ্যময়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বাঁকানো; জটিল",
+      "explanation": "Tortuous = বাঁকানো; জটিল"
+    },
+    {
+      "id": "vocab_t_020",
+      "question": "Toupee এর অর্থ কি?",
+      "options": {
+        "a": "গোয়াল",
+        "b": "পরচুলা",
+        "c": "খিটখিটে",
+        "d": "ঘুরে বেড়ানো"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পরচুলা",
+      "explanation": "Toupee = পরচুলা"
+    },
+    {
+      "id": "vocab_t_021",
+      "question": "Tourniquet এর অর্থ কি?",
+      "options": {
+        "a": "রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া",
+        "b": "অসন্তুষ্ট থাকা",
+        "c": "দুর্দান্ত মহিলা",
+        "d": "চাটুকার"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া; পট্টি",
+      "explanation": "Tourniquet = রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া; পট্টি"
+    },
+    {
+      "id": "vocab_t_022",
+      "question": "Trachoma এর অর্থ কি?",
+      "options": {
+        "a": "চোখের সংক্রামক রোগ",
+        "b": "সামান্য বেতন",
+        "c": "কঠিন করা বা হওয়া",
+        "d": "সরকারি বা অন্যের অর্থ আত্মসাৎ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "চোখের সংক্রামক রোগ",
+      "explanation": "Trachoma = চোখের সংক্রামক রোগ"
+    },
+    {
+      "id": "vocab_t_023",
+      "question": "Tractable এর অর্থ কি?",
+      "options": {
+        "a": "সহজসাধ্য",
+        "b": "আশাবাদী",
+        "c": "প্রাণচঞ্চল",
+        "d": "জ্ঞানতত্ত্ব"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহজসাধ্য; বশ্যতাপূর্ণ",
+      "explanation": "Tractable = সহজসাধ্য; বশ্যতাপূর্ণ"
+    },
+    {
+      "id": "vocab_t_024",
+      "question": "Transcribe এর অর্থ কি?",
+      "options": {
+        "a": "অনুলিপি করা",
+        "b": "বাহুল্য",
+        "c": "চিরস্থায়ী",
+        "d": "স্বাস্থ্যকর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অনুলিপি করা",
+      "explanation": "Transcribe = অনুলিপি করা"
+    },
+    {
+      "id": "vocab_t_025",
+      "question": "Trepidation এর অর্থ কি?",
+      "options": {
+        "a": "চারদিকে ঘুরে হাঁটা",
+        "b": "ভয়",
+        "c": "প্রাসঙ্গিক",
+        "d": "দীর্ঘায়িত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভয়; উদ্বেগ",
+      "explanation": "Trepidation = ভয়; উদ্বেগ"
+    },
+    {
+      "id": "vocab_t_026",
+      "question": "Truculence এর অর্থ কি?",
+      "options": {
+        "a": "ক্রমশ জমা হওয়া",
+        "b": "ক্ষোভ",
+        "c": "বিতর্কমূলক আলোচনা",
+        "d": "হিংস্রতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "হিংস্রতা; আগ্রাসী মনোভাব",
+      "explanation": "Truculence = হিংস্রতা; আগ্রাসী মনোভাব"
+    },
+    {
+      "id": "vocab_t_027",
+      "question": "Truism এর অর্থ কি?",
+      "options": {
+        "a": "পৈতৃক সম্পত্তি",
+        "b": "স্বতঃসিদ্ধ সত্য",
+        "c": "ভর্ৎসনা",
+        "d": "সভা আহ্বান করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বতঃসিদ্ধ সত্য",
+      "explanation": "Truism = স্বতঃসিদ্ধ সত্য"
+    },
+    {
+      "id": "vocab_t_028",
+      "question": "Tumid এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত",
+        "b": "সব সুরের মিশ্রণ",
+        "c": "ফোলা",
+        "d": "ভদ্র"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ফোলা; স্ফীত; অতিরঞ্জিত",
+      "explanation": "Tumid = ফোলা; স্ফীত; অতিরঞ্জিত"
+    },
+    {
+      "id": "vocab_t_029",
+      "question": "Turbid এর অর্থ কি?",
+      "options": {
+        "a": "ভূগর্ভস্থ",
+        "b": "পক্ষিবিদ",
+        "c": "বহুপতিত্ব",
+        "d": "ঘোলাটে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ঘোলাটে; অস্বচ্ছ",
+      "explanation": "Turbid = ঘোলাটে; অস্বচ্ছ"
+    },
+    {
+      "id": "vocab_t_030",
+      "question": "Turmoil এর অর্থ কি?",
+      "options": {
+        "a": "শান্ত করা",
+        "b": "বিশৃঙ্খলা",
+        "c": "শিলাতত্ত্ব",
+        "d": "অশ্লীল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিশৃঙ্খলা",
+      "explanation": "Turmoil = বিশৃঙ্খলা"
+    },
+    {
+      "id": "vocab_t_031",
+      "question": "Typography এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘ ক্রোধোদ্দীপ্ত বা তিরস্কারপূর্ণ বক্তৃ তা",
+        "b": "মুদ্রণশিল্প",
+        "c": "অদ্ভুত",
+        "d": "হাবভাব দেখিয়ে অভিনয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মুদ্রণশিল্প",
+      "explanation": "Typography = মুদ্রণশিল্প"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "topic": "Vocabulary — W",
+  "questions": [
+    {
+      "id": "vocab_w_001",
+      "question": "Wan এর অর্থ কি?",
+      "options": {
+        "a": "বিবর্ণ",
+        "b": "সংযমী",
+        "c": "চারদিকে ঘুরে হাঁটা",
+        "d": "উন্নত করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিবর্ণ; ফ্যাকাশে; অনুজ্জ্বল",
+      "explanation": "Wan = বিবর্ণ; ফ্যাকাশে; অনুজ্জ্বল"
+    },
+    {
+      "id": "vocab_w_002",
+      "question": "Wanderlust এর অর্থ কি?",
+      "options": {
+        "a": "স্পষ্ট করা",
+        "b": "সাহস",
+        "c": "ভ্রমণ-আকাঙ্ক্ষা",
+        "d": "চাচার মতো"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভ্রমণ-আকাঙ্ক্ষা",
+      "explanation": "Wanderlust = ভ্রমণ-আকাঙ্ক্ষা"
+    },
+    {
+      "id": "vocab_w_003",
+      "question": "Wanton এর অর্থ কি?",
+      "options": {
+        "a": "বিচিত্র",
+        "b": "পূর্বাভাষ দেওয়া",
+        "c": "উচ্ছৃঙ্খল",
+        "d": "ফলবাগান"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উচ্ছৃঙ্খল; লাগামহীন",
+      "explanation": "Wanton = উচ্ছৃঙ্খল; লাগামহীন"
+    },
+    {
+      "id": "vocab_w_004",
+      "question": "Wardrobe এর অর্থ কি?",
+      "options": {
+        "a": "আত্মতুষ্ট",
+        "b": "পোশাক রাখার আলমারি",
+        "c": "অপবিত্র করা",
+        "d": "সত্য এড়িয়ে যাওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পোশাক রাখার আলমারি",
+      "explanation": "Wardrobe = পোশাক রাখার আলমারি"
+    },
+    {
+      "id": "vocab_w_005",
+      "question": "Welter এর অর্থ কি?",
+      "options": {
+        "a": "জাঁকজমক",
+        "b": "ক্ষতিকর",
+        "c": "বিশৃঙ্খলা",
+        "d": "চাবুক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিশৃঙ্খলা; এলোমেলো অবস্থা",
+      "explanation": "Welter = বিশৃঙ্খলা; এলোমেলো অবস্থা"
+    },
+    {
+      "id": "vocab_w_006",
+      "question": "Whip এর অর্থ কি?",
+      "options": {
+        "a": "মুখ না নাড়িয়ে কথা বলা",
+        "b": "রাজহত্যা",
+        "c": "দুর্গন্ধযুক্ত",
+        "d": "চাবুক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "চাবুক",
+      "explanation": "Whip = চাবুক"
+    },
+    {
+      "id": "vocab_w_007",
+      "question": "Wince এর অর্থ কি?",
+      "options": {
+        "a": "তৃতীয় পর্যায়ের",
+        "b": "ব্যথায় সিঁটকানো",
+        "c": "তিরস্কার",
+        "d": "রোগের কারণ বিদ্যা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ব্যথায় সিঁটকানো; কুঁকড়ে যাওয়া",
+      "explanation": "Wince = ব্যথায় সিঁটকানো; কুঁকড়ে যাওয়া"
+    },
+    {
+      "id": "vocab_w_008",
+      "question": "Windfall এর অর্থ কি?",
+      "options": {
+        "a": "গৃহপতি",
+        "b": "অপ্রত্যাশিত লাভ",
+        "c": "অন্ধকারময়",
+        "d": "অপ্রচলিত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অপ্রত্যাশিত লাভ",
+      "explanation": "Windfall = অপ্রত্যাশিত লাভ"
+    }
+  ]
+}

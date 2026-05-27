@@ -1,0 +1,122 @@
+{
+  "topic": "Vocabulary — G-H",
+  "questions": [
+    {
+      "id": "vocab_gh_001",
+      "question": "Gerontology এর অর্থ কি?",
+      "options": {
+        "a": "অবশিষ্টাংশ",
+        "b": "প্রাতিনিধিক",
+        "c": "নকল",
+        "d": "বৃদ্ধাবস্থা বিদ্যা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বৃদ্ধাবস্থা বিদ্যা; বার্ধক্য গবেষণা",
+      "explanation": "Gerontology = বৃদ্ধাবস্থা বিদ্যা; বার্ধক্য গবেষণা"
+    },
+    {
+      "id": "vocab_gh_002",
+      "question": "Glib এর অর্থ কি?",
+      "options": {
+        "a": "সহজসাধ্য",
+        "b": "নকল",
+        "c": "অনায়াসে কথা বলা",
+        "d": "বাহুল্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অনায়াসে কথা বলা; অগভীর; সড়গড়",
+      "explanation": "Glib = অনায়াসে কথা বলা; অগভীর; সড়গড়"
+    },
+    {
+      "id": "vocab_gh_003",
+      "question": "Grouse এর অর্থ কি?",
+      "options": {
+        "a": "ভোটদাতা",
+        "b": "বিতর্কমূলক আলোচনা",
+        "c": "অভিযোগ করা",
+        "d": "বাণিজ্যিক মন্দাভাব"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অভিযোগ করা; বিড়বিড় করা",
+      "explanation": "Grouse = অভিযোগ করা; বিড়বিড় করা"
+    },
+    {
+      "id": "vocab_gh_004",
+      "question": "Harangue এর অর্থ কি?",
+      "options": {
+        "a": "প্রচুর",
+        "b": "তীব্র বক্তৃতা",
+        "c": "নির্দয়",
+        "d": "গালিগালাজপূর্ণ কটূক্তি করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তীব্র বক্তৃতা; উত্তেজিত ভাষণ দেওয়া",
+      "explanation": "Harangue = তীব্র বক্তৃতা; উত্তেজিত ভাষণ দেওয়া"
+    },
+    {
+      "id": "vocab_gh_005",
+      "question": "Heckle এর অর্থ কি?",
+      "options": {
+        "a": "পুস্তিকা",
+        "b": "আড়ম্বর",
+        "c": "প্রশ্নবাণে জর্জরিত করা",
+        "d": "মৃত্যু সংবাদ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রশ্নবাণে জর্জরিত করা",
+      "explanation": "Heckle = প্রশ্নবাণে জর্জরিত করা"
+    },
+    {
+      "id": "vocab_gh_006",
+      "question": "Heretical এর অর্থ কি?",
+      "options": {
+        "a": "ধর্মবিরোধী",
+        "b": "চাবুক",
+        "c": "শান্তচিত্ততা",
+        "d": "পবিত্রতা নষ্ট করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ধর্মবিরোধী; বিধর্মী",
+      "explanation": "Heretical = ধর্মবিরোধী; বিধর্মী"
+    },
+    {
+      "id": "vocab_gh_007",
+      "question": "Herpetology এর অর্থ কি?",
+      "options": {
+        "a": "জনগণের অর্থনীতি",
+        "b": "সাপ ও সরীসৃপ বিদ্যা",
+        "c": "নোংরা",
+        "d": "অচলাবস্থা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সাপ ও সরীসৃপ বিদ্যা; উভচর প্রাণী গবেষণা",
+      "explanation": "Herpetology = সাপ ও সরীসৃপ বিদ্যা; উভচর প্রাণী গবেষণা"
+    },
+    {
+      "id": "vocab_gh_008",
+      "question": "Hex এর অর্থ কি?",
+      "options": {
+        "a": "দুর্ভাগ্যসূচক বিষয়",
+        "b": "কঠোর",
+        "c": "বাহুল্য",
+        "d": "কুটিল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্ভাগ্যসূচক বিষয়; অভিশাপ দেওয়া",
+      "explanation": "Hex = দুর্ভাগ্যসূচক বিষয়; অভিশাপ দেওয়া"
+    },
+    {
+      "id": "vocab_gh_009",
+      "question": "Homonym এর অর্থ কি?",
+      "options": {
+        "a": "প্রাতিনিধিক",
+        "b": "সমোচ্চারিত শব্দ",
+        "c": "কলঙ্কিত করা",
+        "d": "অদক্ষ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সমোচ্চারিত শব্দ",
+      "explanation": "Homonym = সমোচ্চারিত শব্দ"
+    }
+  ]
+}

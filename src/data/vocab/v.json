@@ -1,0 +1,265 @@
+{
+  "topic": "Vocabulary — V",
+  "questions": [
+    {
+      "id": "vocab_v_001",
+      "question": "Vacillation এর অর্থ কি?",
+      "options": {
+        "a": "অল্পোক্তি",
+        "b": "দ্বিধা",
+        "c": "অল্প",
+        "d": "সাহসী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দ্বিধা; দোদুল্যমানতা",
+      "explanation": "Vacillation = দ্বিধা; দোদুল্যমানতা"
+    },
+    {
+      "id": "vocab_v_002",
+      "question": "Vagaries এর অর্থ কি?",
+      "options": {
+        "a": "খামখেয়ালি",
+        "b": "বিবাহ-বিরোধী",
+        "c": "অতিরিক্ত আলোচনা করা",
+        "d": "পক্ষীবিদ্যা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "খামখেয়ালি; অনিশ্চিত পরিবর্তন",
+      "explanation": "Vagaries = খামখেয়ালি; অনিশ্চিত পরিবর্তন"
+    },
+    {
+      "id": "vocab_v_003",
+      "question": "Valorous এর অর্থ কি?",
+      "options": {
+        "a": "বিচ্ছিন্ন করা",
+        "b": "প্রত্যক্ষ",
+        "c": "সাহসী",
+        "d": "পক্ষীবিদ্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সাহসী",
+      "explanation": "Valorous = সাহসী"
+    },
+    {
+      "id": "vocab_v_004",
+      "question": "Vapid এর অর্থ কি?",
+      "options": {
+        "a": "সব বিষয়ে দক্ষ",
+        "b": "নীরস",
+        "c": "মঠ",
+        "d": "চারদিকে ঘুরে হাঁটা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নীরস; স্বাদহীন; প্রাণহীন",
+      "explanation": "Vapid = নীরস; স্বাদহীন; প্রাণহীন"
+    },
+    {
+      "id": "vocab_v_005",
+      "question": "Venal এর অর্থ কি?",
+      "options": {
+        "a": "চাচার মতো",
+        "b": "ঘুষযোগ্য",
+        "c": "কুসুম গরম",
+        "d": "রোধ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ঘুষযোগ্য; অর্থের বিনিময়ে বিক্রয়যোগ্য",
+      "explanation": "Venal = ঘুষযোগ্য; অর্থের বিনিময়ে বিক্রয়যোগ্য"
+    },
+    {
+      "id": "vocab_v_006",
+      "question": "Venerate এর অর্থ কি?",
+      "options": {
+        "a": "ভিক্ষুক",
+        "b": "শ্রদ্ধা করা",
+        "c": "ঘৃণ্য",
+        "d": "বিবর্ণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শ্রদ্ধা করা",
+      "explanation": "Venerate = শ্রদ্ধা করা"
+    },
+    {
+      "id": "vocab_v_007",
+      "question": "Ventriloquism এর অর্থ কি?",
+      "options": {
+        "a": "প্রতিশোধপরায়ণ",
+        "b": "ক্ষোভ",
+        "c": "উৎফুল্ল থাকা",
+        "d": "মুখ না নাড়িয়ে কথা বলা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মুখ না নাড়িয়ে কথা বলা",
+      "explanation": "Ventriloquism = মুখ না নাড়িয়ে কথা বলা"
+    },
+    {
+      "id": "vocab_v_008",
+      "question": "Veracity এর অর্থ কি?",
+      "options": {
+        "a": "সামান্য চুরি করা",
+        "b": "হাতা",
+        "c": "রোধ করা",
+        "d": "সত্যতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সত্যতা; সততা",
+      "explanation": "Veracity = সত্যতা; সততা"
+    },
+    {
+      "id": "vocab_v_009",
+      "question": "Verve এর অর্থ কি?",
+      "options": {
+        "a": "উৎসাহ",
+        "b": "নীরস",
+        "c": "সত্যতা",
+        "d": "বিশ্বাসঘাতক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উৎসাহ; প্রাণশক্তি; তেজ",
+      "explanation": "Verve = উৎসাহ; প্রাণশক্তি; তেজ"
+    },
+    {
+      "id": "vocab_v_010",
+      "question": "Vex এর অর্থ কি?",
+      "options": {
+        "a": "শাসনশূন্যতাকাল",
+        "b": "সহজসাধ্য",
+        "c": "বিরক্ত করা",
+        "d": "বিচিত্র"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিরক্ত করা; উত্যক্ত করা",
+      "explanation": "Vex = বিরক্ত করা; উত্যক্ত করা"
+    },
+    {
+      "id": "vocab_v_011",
+      "question": "Vicarious এর অর্থ কি?",
+      "options": {
+        "a": "দুর্ভাগ্যসূচক বিষয়",
+        "b": "অভ্রান্ত",
+        "c": "প্রাতিনিধিক",
+        "d": "পুস্তিকা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রাতিনিধিক; পরোক্ষভাবে অনুভূত",
+      "explanation": "Vicarious = প্রাতিনিধিক; পরোক্ষভাবে অনুভূত"
+    },
+    {
+      "id": "vocab_v_012",
+      "question": "Vicissitude এর অর্থ কি?",
+      "options": {
+        "a": "সর্বেশ্বরবাদী",
+        "b": "রাজহত্যা",
+        "c": "ভাগ্যের উত্থান-পতন",
+        "d": "চুরি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভাগ্যের উত্থান-পতন",
+      "explanation": "Vicissitude = ভাগ্যের উত্থান-পতন"
+    },
+    {
+      "id": "vocab_v_013",
+      "question": "Vigilant এর অর্থ কি?",
+      "options": {
+        "a": "উগ্র জাতীয়তাবাদ",
+        "b": "সত্যতা",
+        "c": "সতর্ক",
+        "d": "পরোক্ষ ইঙ্গিত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সতর্ক",
+      "explanation": "Vigilant = সতর্ক"
+    },
+    {
+      "id": "vocab_v_014",
+      "question": "Vigour এর অর্থ কি?",
+      "options": {
+        "a": "সতর্ক",
+        "b": "ক্ষতিকর",
+        "c": "ছলচাতুরি",
+        "d": "তেজ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তেজ; শক্তি; উদ্যম",
+      "explanation": "Vigour = তেজ; শক্তি; উদ্যম"
+    },
+    {
+      "id": "vocab_v_015",
+      "question": "Vindictive এর অর্থ কি?",
+      "options": {
+        "a": "হাতা",
+        "b": "কর্ক শ",
+        "c": "প্রতিশোধপরায়ণ",
+        "d": "বিভ্রান্ত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রতিশোধপরায়ণ",
+      "explanation": "Vindictive = প্রতিশোধপরায়ণ"
+    },
+    {
+      "id": "vocab_v_016",
+      "question": "Virago এর অর্থ কি?",
+      "options": {
+        "a": "দুর্দান্ত মহিলা",
+        "b": "ধর্মোপদেশ",
+        "c": "অভিযোগ করা",
+        "d": "রাত্রির গান"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্দান্ত মহিলা",
+      "explanation": "Virago = দুর্দান্ত মহিলা"
+    },
+    {
+      "id": "vocab_v_017",
+      "question": "Virulent এর অর্থ কি?",
+      "options": {
+        "a": "মিতব্যয়ী",
+        "b": "বিতর্কমূলক আলোচনা",
+        "c": "কুটিল",
+        "d": "বিষাক্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিষাক্ত; তীব্র",
+      "explanation": "Virulent = বিষাক্ত; তীব্র"
+    },
+    {
+      "id": "vocab_v_018",
+      "question": "Visage এর অর্থ কি?",
+      "options": {
+        "a": "সত্য এড়িয়ে যাওয়া",
+        "b": "বজ্রকণ্ঠ",
+        "c": "নীতিহীন",
+        "d": "মুখমণ্ডল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মুখমণ্ডল; চেহারা",
+      "explanation": "Visage = মুখমণ্ডল; চেহারা"
+    },
+    {
+      "id": "vocab_v_019",
+      "question": "Visceral এর অর্থ কি?",
+      "options": {
+        "a": "তুচ্ছ",
+        "b": "আন্ত্রিক",
+        "c": "অসংযম",
+        "d": "অবাধ্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আন্ত্রিক; শারীরিক; গভীরভাবে অনুভূত",
+      "explanation": "Visceral = আন্ত্রিক; শারীরিক; গভীরভাবে অনুভূত"
+    },
+    {
+      "id": "vocab_v_020",
+      "question": "Vituperate এর অর্থ কি?",
+      "options": {
+        "a": "পর্ণমোচী",
+        "b": "উগ্র জাতীয়তাবাদ",
+        "c": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "d": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "গালিগালাজপূর্ণ কটূক্তি করা",
+      "explanation": "Vituperate = গালিগালাজপূর্ণ কটূক্তি করা"
+    }
+  ]
+}

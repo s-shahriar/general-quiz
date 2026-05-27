@@ -1,0 +1,148 @@
+{
+  "topic": "Vocabulary — C",
+  "questions": [
+    {
+      "id": "vocab_c_001",
+      "question": "Callous এর অর্থ কি?",
+      "options": {
+        "a": "অসন্তুষ্ট থাকা",
+        "b": "বাহুল্য",
+        "c": "বৃদ্ধাবস্থা বিদ্যা",
+        "d": "নির্দয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নির্দয়",
+      "explanation": "Callous = নির্দয়"
+    },
+    {
+      "id": "vocab_c_002",
+      "question": "Calumny এর অর্থ কি?",
+      "options": {
+        "a": "উন্নত করা",
+        "b": "অপবাদ",
+        "c": "প্রতারণা করা",
+        "d": "স্তবক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অপবাদ; মিথ্যা দোষারোপ",
+      "explanation": "Calumny = অপবাদ; মিথ্যা দোষারোপ"
+    },
+    {
+      "id": "vocab_c_003",
+      "question": "Circumambulate এর অর্থ কি?",
+      "options": {
+        "a": "চারদিকে ঘুরে হাঁটা",
+        "b": "ধর্মোপদেশ",
+        "c": "উপকারী ব্যক্তি",
+        "d": "নির্দয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "চারদিকে ঘুরে হাঁটা; প্রদক্ষিণ করা",
+      "explanation": "Circumambulate = চারদিকে ঘুরে হাঁটা; প্রদক্ষিণ করা"
+    },
+    {
+      "id": "vocab_c_004",
+      "question": "Clamor এর অর্থ কি?",
+      "options": {
+        "a": "বিষাক্ত",
+        "b": "উৎসাহ",
+        "c": "অপ্রত্যাশিত লাভ",
+        "d": "হৈ-চৈ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "হৈ-চৈ; কোলাহল",
+      "explanation": "Clamor = হৈ-চৈ; কোলাহল"
+    },
+    {
+      "id": "vocab_c_005",
+      "question": "Clandestine এর অর্থ কি?",
+      "options": {
+        "a": "স্তুতিবচন",
+        "b": "সহজসাধ্য",
+        "c": "বিবর্ণ",
+        "d": "গোপন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "গোপন; লুকানো",
+      "explanation": "Clandestine = গোপন; লুকানো"
+    },
+    {
+      "id": "vocab_c_006",
+      "question": "Complacent এর অর্থ কি?",
+      "options": {
+        "a": "শিলালিপি",
+        "b": "আত্মতুষ্ট",
+        "c": "চোখের সংক্রামক রোগ",
+        "d": "সংযমী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আত্মতুষ্ট",
+      "explanation": "Complacent = আত্মতুষ্ট"
+    },
+    {
+      "id": "vocab_c_007",
+      "question": "Construe এর অর্থ কি?",
+      "options": {
+        "a": "বাহুল্য",
+        "b": "অর্থ নির্ধারণ করা",
+        "c": "প্রতারণা করা",
+        "d": "নীরস"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অর্থ নির্ধারণ করা; ব্যাখ্যা করা",
+      "explanation": "Construe = অর্থ নির্ধারণ করা; ব্যাখ্যা করা"
+    },
+    {
+      "id": "vocab_c_008",
+      "question": "Continence এর অর্থ কি?",
+      "options": {
+        "a": "গভীরভাবে ভাবা",
+        "b": "সংযমী",
+        "c": "বিরক্ত করা",
+        "d": "উন্নত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সংযমী",
+      "explanation": "Continence = সংযমী"
+    },
+    {
+      "id": "vocab_c_009",
+      "question": "Convoke এর অর্থ কি?",
+      "options": {
+        "a": "সর্বজ্ঞ",
+        "b": "ধর্মবিরোধী",
+        "c": "ব্যাপকভাবে ধ্বংস করা",
+        "d": "সভা আহ্বান করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সভা আহ্বান করা",
+      "explanation": "Convoke = সভা আহ্বান করা"
+    },
+    {
+      "id": "vocab_c_010",
+      "question": "Crayon এর অর্থ কি?",
+      "options": {
+        "a": "অন্ধকারাচ্ছন্ন",
+        "b": "রঙিন পেন্সিল",
+        "c": "জ্ঞানগর্ভ",
+        "d": "তাৎক্ষণিক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "রঙিন পেন্সিল; মোমের কাঠি",
+      "explanation": "Crayon = রঙিন পেন্সিল; মোমের কাঠি"
+    },
+    {
+      "id": "vocab_c_011",
+      "question": "Credence এর অর্থ কি?",
+      "options": {
+        "a": "উন্মত্ত",
+        "b": "সুস্থতার আশ্রম",
+        "c": "সব কিছু মনে রাখার ক্ষমতা",
+        "d": "বিশ্বাস"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিশ্বাস; আস্থা",
+      "explanation": "Credence = বিশ্বাস; আস্থা"
+    }
+  ]
+}

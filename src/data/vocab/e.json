@@ -1,0 +1,200 @@
+{
+  "topic": "Vocabulary — E",
+  "questions": [
+    {
+      "id": "vocab_e_001",
+      "question": "Effusive এর অর্থ কি?",
+      "options": {
+        "a": "উচ্ছ্বাসপ্রবণ",
+        "b": "জনগণের প্রতি উন্মাদ আগ্রহ",
+        "c": "তৃতীয় পর্যায়ের",
+        "d": "প্রচুর উৎপাদনশীল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উচ্ছ্বাসপ্রবণ; অতিমাত্রায় আবেগী",
+      "explanation": "Effusive = উচ্ছ্বাসপ্রবণ; অতিমাত্রায় আবেগী"
+    },
+    {
+      "id": "vocab_e_002",
+      "question": "Egregious এর অর্থ কি?",
+      "options": {
+        "a": "আনন্দভ্রমণ",
+        "b": "পুস্তিকা",
+        "c": "অত্যন্ত শোচনীয়",
+        "d": "শিলালিপি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অত্যন্ত শোচনীয়; গুরুতর",
+      "explanation": "Egregious = অত্যন্ত শোচনীয়; গুরুতর"
+    },
+    {
+      "id": "vocab_e_003",
+      "question": "Electorate এর অর্থ কি?",
+      "options": {
+        "a": "অন্ধকারাচ্ছন্ন",
+        "b": "স্তম্ভের ভিত্তি",
+        "c": "অতিরিক্ত স্নেহশীল",
+        "d": "ভোটদাতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভোটদাতা",
+      "explanation": "Electorate = ভোটদাতা"
+    },
+    {
+      "id": "vocab_e_004",
+      "question": "Elucidate এর অর্থ কি?",
+      "options": {
+        "a": "মোটাসোটা",
+        "b": "শিলালিপি",
+        "c": "বিষণ্ণ",
+        "d": "স্পষ্ট করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্পষ্ট করা; ব্যাখ্যা করা",
+      "explanation": "Elucidate = স্পষ্ট করা; ব্যাখ্যা করা"
+    },
+    {
+      "id": "vocab_e_005",
+      "question": "Emaciated এর অর্থ কি?",
+      "options": {
+        "a": "স্বল্পভাষী",
+        "b": "মাছ খেয়ে বাঁচে যে",
+        "c": "জনগণের অর্থনীতি",
+        "d": "হালকা-পাতলা ও দুর্বল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "হালকা-পাতলা ও দুর্বল",
+      "explanation": "Emaciated = হালকা-পাতলা ও দুর্বল"
+    },
+    {
+      "id": "vocab_e_006",
+      "question": "Emeritus এর অর্থ কি?",
+      "options": {
+        "a": "সবার সমান অধিকারের শাসন",
+        "b": "অবসরপ্রাপ্ত (সম্মানসূচক)",
+        "c": "খণ্ডন",
+        "d": "অদক্ষ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অবসরপ্রাপ্ত (সম্মানসূচক)",
+      "explanation": "Emeritus = অবসরপ্রাপ্ত (সম্মানসূচক)"
+    },
+    {
+      "id": "vocab_e_007",
+      "question": "Emigrant এর অর্থ কি?",
+      "options": {
+        "a": "ঝিনুক",
+        "b": "দেশ ছেড়ে অন্য দেশে যায় যে",
+        "c": "নিরীহ",
+        "d": "প্রসঙ্গ উত্থাপন করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দেশ ছেড়ে অন্য দেশে যায় যে; প্রবাসী",
+      "explanation": "Emigrant = দেশ ছেড়ে অন্য দেশে যায় যে; প্রবাসী"
+    },
+    {
+      "id": "vocab_e_008",
+      "question": "Endemic এর অর্থ কি?",
+      "options": {
+        "a": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ",
+        "b": "উদার",
+        "c": "অতিরিক্ত স্নেহশীল",
+        "d": "অল্পোক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়",
+      "explanation": "Endemic = নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়"
+    },
+    {
+      "id": "vocab_e_009",
+      "question": "Enunciate এর অর্থ কি?",
+      "options": {
+        "a": "স্পষ্টভাবে উচ্চারণ করা",
+        "b": "নম্র ও ধৈর্যশীল",
+        "c": "রোগের কারণ বিদ্যা",
+        "d": "এগিয়ে দেওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "স্পষ্টভাবে উচ্চারণ করা",
+      "explanation": "Enunciate = স্পষ্টভাবে উচ্চারণ করা"
+    },
+    {
+      "id": "vocab_e_010",
+      "question": "Epidemiologist এর অর্থ কি?",
+      "options": {
+        "a": "পরিণতি",
+        "b": "মহামারী বিশেষজ্ঞ",
+        "c": "সম্পূর্ণ বাধ্য",
+        "d": "সংকীর্ণ স্থানে আতঙ্ক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মহামারী বিশেষজ্ঞ; রোগ বিস্তার গবেষক",
+      "explanation": "Epidemiologist = মহামারী বিশেষজ্ঞ; রোগ বিস্তার গবেষক"
+    },
+    {
+      "id": "vocab_e_011",
+      "question": "Epistemology এর অর্থ কি?",
+      "options": {
+        "a": "ভোঁতা",
+        "b": "সম্পূর্ণ বাধ্য",
+        "c": "জ্ঞানতত্ত্ব",
+        "d": "সাহস"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জ্ঞানতত্ত্ব; জ্ঞানের উৎস বিষয়ক দর্শন",
+      "explanation": "Epistemology = জ্ঞানতত্ত্ব; জ্ঞানের উৎস বিষয়ক দর্শন"
+    },
+    {
+      "id": "vocab_e_012",
+      "question": "Etiology এর অর্থ কি?",
+      "options": {
+        "a": "নিরাপত্তাহীন",
+        "b": "পোশাক রাখার আলমারি",
+        "c": "রোগের কারণ বিদ্যা",
+        "d": "সরল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "রোগের কারণ বিদ্যা; কারণতত্ত্ব",
+      "explanation": "Etiology = রোগের কারণ বিদ্যা; কারণতত্ত্ব"
+    },
+    {
+      "id": "vocab_e_013",
+      "question": "Etymology এর অর্থ কি?",
+      "options": {
+        "a": "কুটিল",
+        "b": "শাসনশূন্যতাকাল",
+        "c": "দমিয়ে রাখা",
+        "d": "শব্দের উৎপত্তি বিদ্যা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শব্দের উৎপত্তি বিদ্যা; শব্দতত্ত্ব",
+      "explanation": "Etymology = শব্দের উৎপত্তি বিদ্যা; শব্দতত্ত্ব"
+    },
+    {
+      "id": "vocab_e_014",
+      "question": "Extempore এর অর্থ কি?",
+      "options": {
+        "a": "রসিক",
+        "b": "পুনরায় পূর্ণ করা",
+        "c": "তাৎক্ষণিক",
+        "d": "বাঁকানো"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "তাৎক্ষণিক; অপ্রস্তুতিতে",
+      "explanation": "Extempore = তাৎক্ষণিক; অপ্রস্তুতিতে"
+    },
+    {
+      "id": "vocab_e_015",
+      "question": "Exuberate এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন করা",
+        "b": "উৎফুল্ল থাকা",
+        "c": "অতি সক্রিয়",
+        "d": "পরিখা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া",
+      "explanation": "Exuberate = উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া"
+    }
+  ]
+}

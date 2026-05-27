@@ -1,0 +1,109 @@
+{
+  "topic": "Vocabulary — A",
+  "questions": [
+    {
+      "id": "vocab_a_001",
+      "question": "Abrogate এর অর্থ কি?",
+      "options": {
+        "a": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+        "b": "হালকা-পাতলা ও দুর্বল",
+        "c": "বাতিল করা",
+        "d": "দুর্ভাগ্যসূচক বিষয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাতিল করা",
+      "explanation": "Abrogate = বাতিল করা"
+    },
+    {
+      "id": "vocab_a_002",
+      "question": "Accrue এর অর্থ কি?",
+      "options": {
+        "a": "অত্যন্ত শোচনীয়",
+        "b": "বিভ্রান্ত",
+        "c": "পবিত্রতা",
+        "d": "ক্রমশ জমা হওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ক্রমশ জমা হওয়া; সঞ্চিত হওয়া",
+      "explanation": "Accrue = ক্রমশ জমা হওয়া; সঞ্চিত হওয়া"
+    },
+    {
+      "id": "vocab_a_003",
+      "question": "Amble এর অর্থ কি?",
+      "options": {
+        "a": "শারীরিক",
+        "b": "পুনরাবৃত্তি",
+        "c": "ধীরে ধীরে হাঁটা",
+        "d": "ভূগর্ভস্থ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ধীরে ধীরে হাঁটা; আরামে চলা",
+      "explanation": "Amble = ধীরে ধীরে হাঁটা; আরামে চলা"
+    },
+    {
+      "id": "vocab_a_004",
+      "question": "Ambulation এর অর্থ কি?",
+      "options": {
+        "a": "ঘুরে বেড়ানো",
+        "b": "গৃহপতি",
+        "c": "হাঁটাচলা",
+        "d": "প্রতিরোধ করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "হাঁটাচলা; পদচারণ",
+      "explanation": "Ambulation = হাঁটাচলা; পদচারণ"
+    },
+    {
+      "id": "vocab_a_005",
+      "question": "Anodyne এর অর্থ কি?",
+      "options": {
+        "a": "বেদনানাশক",
+        "b": "অভিযোগপ্রবণতা",
+        "c": "প্রভাব ফেলা",
+        "d": "হিংস্রতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বেদনানাশক; প্রশান্তিদায়ক",
+      "explanation": "Anodyne = বেদনানাশক; প্রশান্তিদায়ক"
+    },
+    {
+      "id": "vocab_a_006",
+      "question": "Antiquated এর অর্থ কি?",
+      "options": {
+        "a": "অবশিষ্টাংশ",
+        "b": "অপ্রচলিত",
+        "c": "খণ্ডন করা",
+        "d": "স্তুতিবচন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অপ্রচলিত; সেকেলে",
+      "explanation": "Antiquated = অপ্রচলিত; সেকেলে"
+    },
+    {
+      "id": "vocab_a_007",
+      "question": "Assent এর অর্থ কি?",
+      "options": {
+        "a": "সম্মতি",
+        "b": "অনুলিপি করা",
+        "c": "বিদ্রূপাত্মকভাবে বর্ণনা করা",
+        "d": "সহজে বাঁকানো যায়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সম্মতি; অনুমোদন",
+      "explanation": "Assent = সম্মতি; অনুমোদন"
+    },
+    {
+      "id": "vocab_a_008",
+      "question": "Avuncular এর অর্থ কি?",
+      "options": {
+        "a": "গালি দেওয়া",
+        "b": "প্রহসন",
+        "c": "জাহাজের ক্যাপ্টেন",
+        "d": "চাচার মতো"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "চাচার মতো; মামার মতো স্নেহময়",
+      "explanation": "Avuncular = চাচার মতো; মামার মতো স্নেহময়"
+    }
+  ]
+}

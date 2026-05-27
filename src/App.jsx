@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
-import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS } from './data/index.js'
+import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS, VOCAB_TOPICS } from './data/index.js'
 
 // General Quiz
 import HomeScreen      from './components/HomeScreen.jsx'
@@ -12,6 +12,10 @@ import ExamMode        from './components/ExamMode.jsx'
 import NailedScreen    from './components/NailedScreen.jsx'
 import ImportantScreen from './components/ImportantScreen.jsx'
 import BackupModal     from './components/BackupModal.jsx'
+
+// Vocabulary
+import VocabHomeScreen  from './components/vocab/HomeScreen.jsx'
+import VocabExamConfig  from './components/vocab/ExamConfig.jsx'
 
 // Utility Kit
 import UtilityHome         from './components/utility/HomeScreen.jsx'
@@ -74,6 +78,12 @@ export default function App() {
     setImportant(prev => { const n = new Set([...prev, ...importantArr]); saveSet('gq-important', n); return n })
   }
 
+  // ── Vocabulary module state ──────────────────────────
+  const [vocabScreen, setVocabScreen]           = useState('home')
+  const [vocabTopic, setVocabTopic]             = useState(null)
+  const [vocabExamData, setVocabExamData]       = useState(null)
+  const goVocabHome = () => { setVocabScreen('home'); setVocabTopic(null); setVocabExamData(null) }
+
   // ── Utility Kit state ────────────────────────────────
   const [utilityScreen, setUtilityScreen]       = useState('home')
   const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
@@ -83,6 +93,7 @@ export default function App() {
   // ── Module nav visibility ────────────────────────────
   const isHomeActive =
     (activeModule === 'general' && screen === 'home') ||
+    (activeModule === 'vocab'   && vocabScreen === 'home') ||
     (activeModule === 'utility' && utilityScreen === 'home')
 
   return (
@@ -96,8 +107,9 @@ export default function App() {
         <div className="module-nav-bar anim-fade">
           <div className="module-nav-links">
             {[
-              { id: 'general', label: 'General' },
-              { id: 'utility', label: 'Utility' },
+              { id: 'general',  label: 'General' },
+              { id: 'vocab',    label: 'Vocabulary' },
+              { id: 'utility',  label: 'Utility' },
             ].map(({ id, label }) => (
               <button
                 key={id}
@@ -206,7 +218,7 @@ export default function App() {
             <BackupModal
               mastered={mastered}
               important={important}
-              topics={ALL_TOPICS}
+              topics={[...ALL_TOPICS, ...VOCAB_TOPICS]}
               onRestore={handleRestore}
               onClose={() => setShowBackup(false)}
             />
@@ -215,7 +227,98 @@ export default function App() {
       )}
 
       {/* ================================================================= */}
-      {/* 2. UTILITY KIT MODULE                                              */}
+      {/* 2. VOCABULARY MODULE                                               */}
+      {/* ================================================================= */}
+      {activeModule === 'vocab' && (
+        <>
+          {vocabScreen === 'home' && (
+            <VocabHomeScreen
+              topics={VOCAB_TOPICS}
+              mastered={mastered}
+              important={important}
+              onSelectTopic={(t) => { setVocabTopic(t); setVocabScreen('mode') }}
+              onExam={() => setVocabScreen('exam_config')}
+              onNailed={() => setVocabScreen('nailed')}
+              onImportant={() => setVocabScreen('important')}
+              onBackup={() => setShowBackup(true)}
+            />
+          )}
+          {vocabScreen === 'exam_config' && (
+            <VocabExamConfig
+              topics={VOCAB_TOPICS}
+              important={important}
+              onStart={(data) => { setVocabExamData(data); setVocabScreen('exam') }}
+              onBack={goVocabHome}
+            />
+          )}
+          {vocabScreen === 'exam' && vocabExamData && (
+            <ExamMode
+              key={vocabExamData.label + vocabExamData.questions.length}
+              questions={vocabExamData.questions}
+              label={vocabExamData.label}
+              mastered={mastered}
+              important={important}
+              onNail={nail}
+              onUnnail={unnail}
+              onMarkImportant={markImportant}
+              onUnmarkImportant={unmarkImportant}
+              onHome={goVocabHome}
+            />
+          )}
+          {vocabScreen === 'important' && (
+            <ImportantScreen topics={VOCAB_TOPICS} important={important} onUnmark={unmarkImportant} onHome={goVocabHome} />
+          )}
+          {vocabScreen === 'nailed' && (
+            <NailedScreen topics={VOCAB_TOPICS} mastered={mastered} onUnnail={unnail} onHome={goVocabHome} />
+          )}
+          {vocabScreen === 'mode' && vocabTopic && (
+            <ModeSelect topic={vocabTopic} onQuiz={() => setVocabScreen('quiz')} onStudy={() => setVocabScreen('study')} onBack={goVocabHome} />
+          )}
+          {vocabScreen === 'quiz' && vocabTopic && (
+            <QuizMode
+              key={vocabTopic.id + '-quiz'}
+              topic={vocabTopic}
+              topics={VOCAB_TOPICS}
+              mastered={mastered}
+              important={important}
+              onNail={nail}
+              onUnnail={unnail}
+              onMarkImportant={markImportant}
+              onUnmarkImportant={unmarkImportant}
+              onBack={() => setVocabScreen('mode')}
+              onHome={goVocabHome}
+              onChangeTopic={(t) => setVocabTopic(t)}
+            />
+          )}
+          {vocabScreen === 'study' && vocabTopic && (
+            <StudyMode
+              key={vocabTopic.id + '-study'}
+              topic={vocabTopic}
+              topics={VOCAB_TOPICS}
+              mastered={mastered}
+              important={important}
+              onNail={nail}
+              onMarkImportant={markImportant}
+              onUnmarkImportant={unmarkImportant}
+              onBack={() => setVocabScreen('mode')}
+              onHome={goVocabHome}
+              onChangeTopic={(t) => setVocabTopic(t)}
+            />
+          )}
+          {showBackup && (
+            <BackupModal
+              mastered={mastered}
+              important={important}
+              topics={[...ALL_TOPICS, ...VOCAB_TOPICS]}
+              onRestore={handleRestore}
+              onClose={() => setShowBackup(false)}
+            />
+          )}
+        </>
+      )}
+
+      {/* ================================================================= */}
+      {/* 3. UTILITY KIT MODULE                                              */}
       {/* ================================================================= */}
       {activeModule === 'utility' && (
         <>

@@ -1,0 +1,109 @@
+{
+  "topic": "Vocabulary — L",
+  "questions": [
+    {
+      "id": "vocab_l_001",
+      "question": "Labile এর অর্থ কি?",
+      "options": {
+        "a": "ফ্যাকাশে",
+        "b": "নিরীহ",
+        "c": "মেনে নেওয়া",
+        "d": "অস্থির"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অস্থির; সহজে পরিবর্তনযোগ্য",
+      "explanation": "Labile = অস্থির; সহজে পরিবর্তনযোগ্য"
+    },
+    {
+      "id": "vocab_l_002",
+      "question": "Languish এর অর্থ কি?",
+      "options": {
+        "a": "বিজ্ঞ ব্যক্তি",
+        "b": "নিস্তেজ হয়ে পড়া",
+        "c": "মতভেদ",
+        "d": "শিকার"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নিস্তেজ হয়ে পড়া; দুর্বল হওয়া",
+      "explanation": "Languish = নিস্তেজ হয়ে পড়া; দুর্বল হওয়া"
+    },
+    {
+      "id": "vocab_l_003",
+      "question": "Laxity এর অর্থ কি?",
+      "options": {
+        "a": "উপকারী ব্যক্তি",
+        "b": "অল্প",
+        "c": "শিথিলতা",
+        "d": "অভিযোগ করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "শিথিলতা",
+      "explanation": "Laxity = শিথিলতা"
+    },
+    {
+      "id": "vocab_l_004",
+      "question": "Legible এর অর্থ কি?",
+      "options": {
+        "a": "স্পষ্ট",
+        "b": "বোন হত্যা",
+        "c": "ক্ষতিকর",
+        "d": "হৈ-চৈ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "স্পষ্ট; সহজে পাঠযোগ্য",
+      "explanation": "Legible = স্পষ্ট; সহজে পাঠযোগ্য"
+    },
+    {
+      "id": "vocab_l_005",
+      "question": "Licentious এর অর্থ কি?",
+      "options": {
+        "a": "রঙিন পেন্সিল",
+        "b": "গুরুত্বহীনভাবে প্রেম করে এমন ব্যক্তি",
+        "c": "প্রসঙ্গ উত্থাপন করা",
+        "d": "লাম্পট্যপূর্ণ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "লাম্পট্যপূর্ণ; অশ্লীল",
+      "explanation": "Licentious = লাম্পট্যপূর্ণ; অশ্লীল"
+    },
+    {
+      "id": "vocab_l_006",
+      "question": "Limpid এর অর্থ কি?",
+      "options": {
+        "a": "শান্তশিষ্ট",
+        "b": "চুরি",
+        "c": "অবসরপ্রাপ্ত (সম্মানসূচক)",
+        "d": "স্বচ্ছ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্বচ্ছ; পরিষ্কার",
+      "explanation": "Limpid = স্বচ্ছ; পরিষ্কার"
+    },
+    {
+      "id": "vocab_l_007",
+      "question": "Litany এর অর্থ কি?",
+      "options": {
+        "a": "সরল",
+        "b": "পুনরাবৃত্তি",
+        "c": "দীর্ঘ তালিকা",
+        "d": "গোয়াল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দীর্ঘ তালিকা; প্রার্থনার পুনরাবৃত্তিমূলক পাঠ",
+      "explanation": "Litany = দীর্ঘ তালিকা; প্রার্থনার পুনরাবৃত্তিমূলক পাঠ"
+    },
+    {
+      "id": "vocab_l_008",
+      "question": "Lustrous এর অর্থ কি?",
+      "options": {
+        "a": "অনুতাপ করা",
+        "b": "স্থিতিস্থাপকতা",
+        "c": "নীতিগল্প",
+        "d": "উজ্জ্বল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উজ্জ্বল; চকচকে",
+      "explanation": "Lustrous = উজ্জ্বল; চকচকে"
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "topic": "Vocabulary — O",
+  "questions": [
+    {
+      "id": "vocab_o_001",
+      "question": "Obituary এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণতা",
+        "b": "ভাগ্যের উত্থান-পতন",
+        "c": "মৃত্যু সংবাদ",
+        "d": "পুষিয়ে নেওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মৃত্যু সংবাদ; শোকসংবাদ",
+      "explanation": "Obituary = মৃত্যু সংবাদ; শোকসংবাদ"
+    },
+    {
+      "id": "vocab_o_002",
+      "question": "Obscure এর অর্থ কি?",
+      "options": {
+        "a": "অতি সক্রিয়",
+        "b": "খণ্ডন",
+        "c": "অস্পষ্ট",
+        "d": "পোশাক সংক্রান্ত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অস্পষ্ট; অখ্যাত",
+      "explanation": "Obscure = অস্পষ্ট; অখ্যাত"
+    },
+    {
+      "id": "vocab_o_003",
+      "question": "Obsequious এর অর্থ কি?",
+      "options": {
+        "a": "ভর্ৎসনা করা",
+        "b": "অবশিষ্টাংশ",
+        "c": "চাটুকার",
+        "d": "দীর্ঘ তালিকা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "চাটুকার; অতিরিক্ত বাধ্য",
+      "explanation": "Obsequious = চাটুকার; অতিরিক্ত বাধ্য"
+    },
+    {
+      "id": "vocab_o_004",
+      "question": "Obstreperous এর অর্থ কি?",
+      "options": {
+        "a": "অসংলগ্ন",
+        "b": "উচ্ছৃঙ্খল",
+        "c": "শব্দের উৎপত্তি বিদ্যা",
+        "d": "উগ্র জাতীয়তাবাদ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উচ্ছৃঙ্খল",
+      "explanation": "Obstreperous = উচ্ছৃঙ্খল"
+    },
+    {
+      "id": "vocab_o_005",
+      "question": "Obtuse এর অর্থ কি?",
+      "options": {
+        "a": "ঘুমের মধ্যে কথা বলা",
+        "b": "নীতিগল্প",
+        "c": "ভোঁতা",
+        "d": "উদ্বিগ্ন"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভোঁতা; বোকা",
+      "explanation": "Obtuse = ভোঁতা; বোকা"
+    },
+    {
+      "id": "vocab_o_006",
+      "question": "Occult এর অর্থ কি?",
+      "options": {
+        "a": "গোপন",
+        "b": "উদীয়মান",
+        "c": "অনুনয় বিনয় করা",
+        "d": "পরিখা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "গোপন; রহস্যময়; অতিপ্রাকৃত",
+      "explanation": "Occult = গোপন; রহস্যময়; অতিপ্রাকৃত"
+    },
+    {
+      "id": "vocab_o_007",
+      "question": "Odious এর অর্থ কি?",
+      "options": {
+        "a": "ঘৃণ্য",
+        "b": "পক্ষিবিদ",
+        "c": "বাঁকানো",
+        "d": "ঘুষযোগ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ঘৃণ্য; ঘৃণাযোগ্য",
+      "explanation": "Odious = ঘৃণ্য; ঘৃণাযোগ্য"
+    },
+    {
+      "id": "vocab_o_008",
+      "question": "Officious এর অর্থ কি?",
+      "options": {
+        "a": "দুর্বলতা",
+        "b": "স্তুতিবচন",
+        "c": "অশ্লীল",
+        "d": "অতি সক্রিয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অতি সক্রিয়; অপ্রয়োজনীয় সাহায্য চাপিয়ে দেওয়া স্বভাবের",
+      "explanation": "Officious = অতি সক্রিয়; অপ্রয়োজনীয় সাহায্য চাপিয়ে দেওয়া স্বভাবের"
+    },
+    {
+      "id": "vocab_o_009",
+      "question": "Omniloquence এর অর্থ কি?",
+      "options": {
+        "a": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ",
+        "b": "চরম দারিদ্র্য",
+        "c": "সব বিষয়ে কথা বলা",
+        "d": "দেশ ছেড়ে অন্য দেশে যায় যে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সব বিষয়ে কথা বলা",
+      "explanation": "Omniloquence = সব বিষয়ে কথা বলা"
+    },
+    {
+      "id": "vocab_o_010",
+      "question": "Omnipotent এর অর্থ কি?",
+      "options": {
+        "a": "সরকারি বা অন্যের অর্থ আত্মসাৎ",
+        "b": "ভ্রমণশীল",
+        "c": "সর্বশক্তিমান",
+        "d": "শ্রদ্ধা করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সর্বশক্তিমান",
+      "explanation": "Omnipotent = সর্বশক্তিমান"
+    },
+    {
+      "id": "vocab_o_011",
+      "question": "Omniscient এর অর্থ কি?",
+      "options": {
+        "a": "অর্থসংক্রান্ত",
+        "b": "সর্বজ্ঞ",
+        "c": "পীড়িত",
+        "d": "বাদী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সর্বজ্ঞ; সব জানে যে",
+      "explanation": "Omniscient = সর্বজ্ঞ; সব জানে যে"
+    },
+    {
+      "id": "vocab_o_012",
+      "question": "Opulence এর অর্থ কি?",
+      "options": {
+        "a": "ঐশ্বর্য",
+        "b": "উদ্ভাবনী",
+        "c": "অপবাদ",
+        "d": "সহজে বাঁকানো যায়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ঐশ্বর্য",
+      "explanation": "Opulence = ঐশ্বর্য"
+    },
+    {
+      "id": "vocab_o_013",
+      "question": "Opulent এর অর্থ কি?",
+      "options": {
+        "a": "পরচুলা",
+        "b": "ভাগ্যের উত্থান-পতন",
+        "c": "মতভেদ",
+        "d": "ধনী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ধনী; বিত্তবান; প্রাচুর্যময়",
+      "explanation": "Opulent = ধনী; বিত্তবান; প্রাচুর্যময়"
+    },
+    {
+      "id": "vocab_o_014",
+      "question": "Orchard এর অর্থ কি?",
+      "options": {
+        "a": "বিপরীত স্রোত",
+        "b": "ফলবাগান",
+        "c": "প্রতারণা করা",
+        "d": "গভীরভাবে ভাবা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ফলবাগান",
+      "explanation": "Orchard = ফলবাগান"
+    },
+    {
+      "id": "vocab_o_015",
+      "question": "Ore এর অর্থ কি?",
+      "options": {
+        "a": "শিলালিপি",
+        "b": "জ্ঞানগর্ভ",
+        "c": "ভদ্র",
+        "d": "আকরিক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আকরিক; কাঁচা খনিজ পদার্থ",
+      "explanation": "Ore = আকরিক; কাঁচা খনিজ পদার্থ"
+    },
+    {
+      "id": "vocab_o_016",
+      "question": "Ornery এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাস",
+        "b": "বশে আনা কঠিন",
+        "c": "সব বিষয়ে দক্ষ",
+        "d": "কৌতূহলী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বশে আনা কঠিন; রগচটা",
+      "explanation": "Ornery = বশে আনা কঠিন; রগচটা"
+    },
+    {
+      "id": "vocab_o_017",
+      "question": "Ornithologist এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষিবিদ",
+        "b": "উজ্জ্বল",
+        "c": "কথোপকথন",
+        "d": "প্রচুর উৎপাদনশীল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পক্ষিবিদ; পাখি বিশেষজ্ঞ",
+      "explanation": "Ornithologist = পক্ষিবিদ; পাখি বিশেষজ্ঞ"
+    },
+    {
+      "id": "vocab_o_018",
+      "question": "Ornithology এর অর্থ কি?",
+      "options": {
+        "a": "জনগণের অর্থনীতি",
+        "b": "পক্ষীবিদ্যা",
+        "c": "বজ্রকণ্ঠ",
+        "d": "অসংযম"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পক্ষীবিদ্যা",
+      "explanation": "Ornithology = পক্ষীবিদ্যা"
+    },
+    {
+      "id": "vocab_o_019",
+      "question": "Orwellian এর অর্থ কি?",
+      "options": {
+        "a": "উপকারী",
+        "b": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+        "c": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ",
+        "d": "সমগ্র মানবজাতির"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+      "explanation": "Orwellian = সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী"
+    },
+    {
+      "id": "vocab_o_020",
+      "question": "Ostentation এর অর্থ কি?",
+      "options": {
+        "a": "ভয়",
+        "b": "করাতের দাঁতের মতো কাটা",
+        "c": "জনগণের অর্থনীতি",
+        "d": "জাঁকজমক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জাঁকজমক; আড়ম্বর",
+      "explanation": "Ostentation = জাঁকজমক; আড়ম্বর"
+    },
+    {
+      "id": "vocab_o_021",
+      "question": "Overt এর অর্থ কি?",
+      "options": {
+        "a": "সত্যতা",
+        "b": "প্রত্যক্ষ",
+        "c": "নিস্তেজ হয়ে পড়া",
+        "d": "সামান্য চুরি করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রত্যক্ষ; প্রকাশ্য; খোলামেলা",
+      "explanation": "Overt = প্রত্যক্ষ; প্রকাশ্য; খোলামেলা"
+    },
+    {
+      "id": "vocab_o_022",
+      "question": "Oyster এর অর্থ কি?",
+      "options": {
+        "a": "ঝিনুক",
+        "b": "কৌতূহলী",
+        "c": "ফল খেয়ে বাঁচে যে",
+        "d": "দমন করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ঝিনুক",
+      "explanation": "Oyster = ঝিনুক"
+    }
+  ]
+}

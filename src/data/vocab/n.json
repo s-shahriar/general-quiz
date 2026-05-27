@@ -1,0 +1,31 @@
+{
+  "topic": "Vocabulary — N",
+  "questions": [
+    {
+      "id": "vocab_n_001",
+      "question": "Nascent এর অর্থ কি?",
+      "options": {
+        "a": "উদীয়মান",
+        "b": "পোড়ানোর ভাঁটা",
+        "c": "ভাগ্যের উত্থান-পতন",
+        "d": "ধনী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উদীয়মান",
+      "explanation": "Nascent = উদীয়মান"
+    },
+    {
+      "id": "vocab_n_002",
+      "question": "Neologism এর অর্থ কি?",
+      "options": {
+        "a": "নূতন শব্দ",
+        "b": "দাম্ভিক",
+        "c": "ছলচাতুরি",
+        "d": "তলোয়ারের খাপ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নূতন শব্দ",
+      "explanation": "Neologism = নূতন শব্দ"
+    }
+  ]
+}

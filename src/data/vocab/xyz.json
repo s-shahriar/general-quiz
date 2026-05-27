@@ -1,0 +1,44 @@
+{
+  "topic": "Vocabulary — X-Y-Z",
+  "questions": [
+    {
+      "id": "vocab_xyz_001",
+      "question": "Xenophobia এর অর্থ কি?",
+      "options": {
+        "a": "চোখের সংক্রামক রোগ",
+        "b": "বিদেশীভীতি",
+        "c": "দেরি",
+        "d": "সুস্বাদু"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিদেশীভীতি",
+      "explanation": "Xenophobia = বিদেশীভীতি"
+    },
+    {
+      "id": "vocab_xyz_002",
+      "question": "Yielding এর অর্থ কি?",
+      "options": {
+        "a": "দুর্দান্ত মহিলা",
+        "b": "প্রচুর",
+        "c": "স্ত্রীহত্যা",
+        "d": "নমনীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নমনীয়",
+      "explanation": "Yielding = নমনীয়"
+    },
+    {
+      "id": "vocab_xyz_003",
+      "question": "Zealot এর অর্থ কি?",
+      "options": {
+        "a": "ভূগর্ভস্থ",
+        "b": "গোঁড়া উৎসাহী",
+        "c": "পোশাক রাখার আলমারি",
+        "d": "দেদীপ্যমান"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গোঁড়া উৎসাহী",
+      "explanation": "Zealot = গোঁড়া উৎসাহী"
+    }
+  ]
+}

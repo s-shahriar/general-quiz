@@ -1,0 +1,161 @@
+{
+  "topic": "Vocabulary — U",
+  "questions": [
+    {
+      "id": "vocab_u_001",
+      "question": "Ulterior এর অর্থ কি?",
+      "options": {
+        "a": "লুকানো",
+        "b": "ঐকতানসংগীত",
+        "c": "অসন্তুষ্ট থাকা",
+        "d": "দমিয়ে রাখা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "লুকানো; গোপন উদ্দেশ্য",
+      "explanation": "Ulterior = লুকানো; গোপন উদ্দেশ্য"
+    },
+    {
+      "id": "vocab_u_002",
+      "question": "Understatement এর অর্থ কি?",
+      "options": {
+        "a": "চারদিকে ঘুরে হাঁটা",
+        "b": "অল্পোক্তি",
+        "c": "ধনী",
+        "d": "বিচিত্র"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অল্পোক্তি",
+      "explanation": "Understatement = অল্পোক্তি"
+    },
+    {
+      "id": "vocab_u_003",
+      "question": "Unkempt এর অর্থ কি?",
+      "options": {
+        "a": "অগোছালো",
+        "b": "সংস্কৃ তিবিমুখ",
+        "c": "প্রচুর",
+        "d": "স্বাস্থ্যকর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অগোছালো; অপরিচ্ছন্ন",
+      "explanation": "Unkempt = অগোছালো; অপরিচ্ছন্ন"
+    },
+    {
+      "id": "vocab_u_004",
+      "question": "Unruly এর অর্থ কি?",
+      "options": {
+        "a": "অবাধ্য",
+        "b": "দীর্ঘ তালিকা",
+        "c": "পুস্তিকা",
+        "d": "অভিনেতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অবাধ্য; উচ্ছৃঙ্খল",
+      "explanation": "Unruly = অবাধ্য; উচ্ছৃঙ্খল"
+    },
+    {
+      "id": "vocab_u_005",
+      "question": "Unscrupulous এর অর্থ কি?",
+      "options": {
+        "a": "সর্বশক্তিমান",
+        "b": "নীতিহীন",
+        "c": "বিচ্ছিন্ন করা",
+        "d": "আনন্দভ্রমণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নীতিহীন; বিবেকহীন",
+      "explanation": "Unscrupulous = নীতিহীন; বিবেকহীন"
+    },
+    {
+      "id": "vocab_u_006",
+      "question": "Unsolicited এর অর্থ কি?",
+      "options": {
+        "a": "অনাহূত",
+        "b": "ব্যাপকভাবে ধ্বংস করা",
+        "c": "মশলাদার",
+        "d": "দমিয়ে রাখা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অনাহূত; অনুরোধ ছাড়া",
+      "explanation": "Unsolicited = অনাহূত; অনুরোধ ছাড়া"
+    },
+    {
+      "id": "vocab_u_007",
+      "question": "Untenable এর অর্থ কি?",
+      "options": {
+        "a": "অদ্ভুত কিন্তু আকর্ষণীয়",
+        "b": "অসমর্থনযোগ্য",
+        "c": "গৃহপতি",
+        "d": "দীপ্তিমান"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অসমর্থনযোগ্য",
+      "explanation": "Untenable = অসমর্থনযোগ্য"
+    },
+    {
+      "id": "vocab_u_008",
+      "question": "Unwitting এর অর্থ কি?",
+      "options": {
+        "a": "অজ্ঞাতসারে",
+        "b": "মুখমণ্ডল",
+        "c": "সস্তা ও চটকদার",
+        "d": "উপকারী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অজ্ঞাতসারে",
+      "explanation": "Unwitting = অজ্ঞাতসারে"
+    },
+    {
+      "id": "vocab_u_009",
+      "question": "Upbraid এর অর্থ কি?",
+      "options": {
+        "a": "ফোলা",
+        "b": "ভবিষ্যৎ বক্তা",
+        "c": "ভর্ৎসনা করা",
+        "d": "অশ্রদ্ধা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভর্ৎসনা করা; তিরস্কার করা",
+      "explanation": "Upbraid = ভর্ৎসনা করা; তিরস্কার করা"
+    },
+    {
+      "id": "vocab_u_010",
+      "question": "Upshot এর অর্থ কি?",
+      "options": {
+        "a": "ফলাফল",
+        "b": "প্রতিরোধ করা",
+        "c": "ধাতুমল",
+        "d": "যুক্তিতর্ককে ঘৃণা করে যে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ফলাফল; পরিণাম",
+      "explanation": "Upshot = ফলাফল; পরিণাম"
+    },
+    {
+      "id": "vocab_u_011",
+      "question": "Urbane এর অর্থ কি?",
+      "options": {
+        "a": "ভদ্র",
+        "b": "অস্পষ্ট",
+        "c": "সব সুরের মিশ্রণ",
+        "d": "স্তম্ভের ভিত্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভদ্র; রুচিসম্মত",
+      "explanation": "Urbane = ভদ্র; রুচিসম্মত"
+    },
+    {
+      "id": "vocab_u_012",
+      "question": "Uxoricide এর অর্থ কি?",
+      "options": {
+        "a": "অভ্রান্ত",
+        "b": "কলঙ্কিত করা",
+        "c": "স্ত্রীহত্যা",
+        "d": "কঠোর নিয়ম মেনে চলা ব্যক্তি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "স্ত্রীহত্যা",
+      "explanation": "Uxoricide = স্ত্রীহত্যা"
+    }
+  ]
+}

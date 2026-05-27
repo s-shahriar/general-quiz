@@ -1,0 +1,161 @@
+{
+  "topic": "Vocabulary — B",
+  "questions": [
+    {
+      "id": "vocab_b_001",
+      "question": "Belabor এর অর্থ কি?",
+      "options": {
+        "a": "উৎসাহ",
+        "b": "অতিরিক্ত আলোচনা করা",
+        "c": "কলঙ্ক",
+        "d": "অগোছালো"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অতিরিক্ত আলোচনা করা; বারবার একই কথা বলা",
+      "explanation": "Belabor = অতিরিক্ত আলোচনা করা; বারবার একই কথা বলা"
+    },
+    {
+      "id": "vocab_b_002",
+      "question": "Benediction এর অর্থ কি?",
+      "options": {
+        "a": "পোশাক রাখার আলমারি",
+        "b": "আশীর্বাদ",
+        "c": "দুর্দান্ত মহিলা",
+        "d": "দমিয়ে রাখা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আশীর্বাদ; দোয়া",
+      "explanation": "Benediction = আশীর্বাদ; দোয়া"
+    },
+    {
+      "id": "vocab_b_003",
+      "question": "Benefactor এর অর্থ কি?",
+      "options": {
+        "a": "উপকারী ব্যক্তি",
+        "b": "সহজে বাঁকানো যায়",
+        "c": "নূতন শব্দ",
+        "d": "পক্ষীবিদ্যা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উপকারী ব্যক্তি; দাতা",
+      "explanation": "Benefactor = উপকারী ব্যক্তি; দাতা"
+    },
+    {
+      "id": "vocab_b_004",
+      "question": "Benignant এর অর্থ কি?",
+      "options": {
+        "a": "দয়ালু",
+        "b": "ব্যথায় সিঁটকানো",
+        "c": "প্রাসঙ্গিক",
+        "d": "আশাবাদী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দয়ালু; সদয়",
+      "explanation": "Benignant = দয়ালু; সদয়"
+    },
+    {
+      "id": "vocab_b_005",
+      "question": "Benison এর অর্থ কি?",
+      "options": {
+        "a": "কোনো স্থানের মানুষের পরিচয়মূলক নাম",
+        "b": "চুরি",
+        "c": "খামখেয়ালি",
+        "d": "আশীর্বাদ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আশীর্বাদ; দোয়া",
+      "explanation": "Benison = আশীর্বাদ; দোয়া"
+    },
+    {
+      "id": "vocab_b_006",
+      "question": "Bonify এর অর্থ কি?",
+      "options": {
+        "a": "উন্নত করা",
+        "b": "লুকানো",
+        "c": "সরল",
+        "d": "উদ্বিগ্ন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উন্নত করা; ভালো করা",
+      "explanation": "Bonify = উন্নত করা; ভালো করা"
+    },
+    {
+      "id": "vocab_b_007",
+      "question": "Bonny এর অর্থ কি?",
+      "options": {
+        "a": "সুন্দর",
+        "b": "কৌতূহলী",
+        "c": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+        "d": "অভ্রান্ত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সুন্দর; প্রফুল্ল",
+      "explanation": "Bonny = সুন্দর; প্রফুল্ল"
+    },
+    {
+      "id": "vocab_b_008",
+      "question": "Bountiful এর অর্থ কি?",
+      "options": {
+        "a": "অপবাদ",
+        "b": "তিরস্কার",
+        "c": "উদার",
+        "d": "বিবর্ণ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উদার; দানশীল",
+      "explanation": "Bountiful = উদার; দানশীল"
+    },
+    {
+      "id": "vocab_b_009",
+      "question": "Brazen এর অর্থ কি?",
+      "options": {
+        "a": "নির্লজ্জ",
+        "b": "চরম দারিদ্র্য",
+        "c": "করাতের দাঁতের মতো কাটা",
+        "d": "দেশ ছেড়ে অন্য দেশে যায় যে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নির্লজ্জ",
+      "explanation": "Brazen = নির্লজ্জ"
+    },
+    {
+      "id": "vocab_b_010",
+      "question": "Broach এর অর্থ কি?",
+      "options": {
+        "a": "প্রসঙ্গ উত্থাপন করা",
+        "b": "ভোঁতা",
+        "c": "ভর্ৎসনা",
+        "d": "অদ্ভুত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "প্রসঙ্গ উত্থাপন করা; আলোচনা শুরু করা",
+      "explanation": "Broach = প্রসঙ্গ উত্থাপন করা; আলোচনা শুরু করা"
+    },
+    {
+      "id": "vocab_b_011",
+      "question": "Bucolic এর অর্থ কি?",
+      "options": {
+        "a": "গ্রামীণ",
+        "b": "ভয়",
+        "c": "ভাই হত্যা",
+        "d": "ফোলা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "গ্রামীণ; পল্লি সংক্রান্ত",
+      "explanation": "Bucolic = গ্রামীণ; পল্লি সংক্রান্ত"
+    },
+    {
+      "id": "vocab_b_012",
+      "question": "Byre এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত",
+        "b": "গোয়াল",
+        "c": "তলোয়ারের খাপ",
+        "d": "মতভেদ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গোয়াল",
+      "explanation": "Byre = গোয়াল"
+    }
+  ]
+}

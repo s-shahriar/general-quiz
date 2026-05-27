@@ -1,0 +1,226 @@
+{
+  "topic": "Vocabulary — M",
+  "questions": [
+    {
+      "id": "vocab_m_001",
+      "question": "Maladaptive এর অর্থ কি?",
+      "options": {
+        "a": "মেনে নেওয়া",
+        "b": "সর্বেশ্বরবাদী",
+        "c": "খাপ খাওয়াতে অক্ষম",
+        "d": "বহুপতিত্ব"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "খাপ খাওয়াতে অক্ষম; অপ্রতিযোজ্য",
+      "explanation": "Maladaptive = খাপ খাওয়াতে অক্ষম; অপ্রতিযোজ্য"
+    },
+    {
+      "id": "vocab_m_002",
+      "question": "Maladroit এর অর্থ কি?",
+      "options": {
+        "a": "অদম্য",
+        "b": "স্বগতোক্তি",
+        "c": "আশাবাদী",
+        "d": "অদক্ষ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অদক্ষ; আনাড়ি",
+      "explanation": "Maladroit = অদক্ষ; আনাড়ি"
+    },
+    {
+      "id": "vocab_m_003",
+      "question": "Maledictory এর অর্থ কি?",
+      "options": {
+        "a": "শিশুর চাকার গাড়ি",
+        "b": "অভিশাপমূলক",
+        "c": "শান্ত করা",
+        "d": "কটূক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভিশাপমূলক; গালিগালাজপূর্ণ",
+      "explanation": "Maledictory = অভিশাপমূলক; গালিগালাজপূর্ণ"
+    },
+    {
+      "id": "vocab_m_004",
+      "question": "Malefic এর অর্থ কি?",
+      "options": {
+        "a": "নিস্তেজ হয়ে পড়া",
+        "b": "মশলাদার",
+        "c": "ক্ষতিকর",
+        "d": "বিস্ময়কর"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ক্ষতিকর; অশুভ",
+      "explanation": "Malefic = ক্ষতিকর; অশুভ"
+    },
+    {
+      "id": "vocab_m_005",
+      "question": "Malodorous এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন",
+        "b": "অতিরিক্ত শব্দপ্রয়োগ",
+        "c": "বশে আনা কঠিন",
+        "d": "দুর্গন্ধযুক্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দুর্গন্ধযুক্ত; বাজে গন্ধওয়ালা",
+      "explanation": "Malodorous = দুর্গন্ধযুক্ত; বাজে গন্ধওয়ালা"
+    },
+    {
+      "id": "vocab_m_006",
+      "question": "Meek এর অর্থ কি?",
+      "options": {
+        "a": "পোশাক রাখার আলমারি",
+        "b": "ধনী",
+        "c": "নম্র ও ধৈর্যশীল",
+        "d": "প্রাসঙ্গিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নম্র ও ধৈর্যশীল",
+      "explanation": "Meek = নম্র ও ধৈর্যশীল"
+    },
+    {
+      "id": "vocab_m_007",
+      "question": "Mendicant এর অর্থ কি?",
+      "options": {
+        "a": "ভিক্ষুক",
+        "b": "মুখ না নাড়িয়ে কথা বলা",
+        "c": "আকস্মিক",
+        "d": "নীরস"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভিক্ষুক; সন্ন্যাসী",
+      "explanation": "Mendicant = ভিক্ষুক; সন্ন্যাসী"
+    },
+    {
+      "id": "vocab_m_008",
+      "question": "Mettle এর অর্থ কি?",
+      "options": {
+        "a": "সাহস",
+        "b": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "c": "উন্নত করা",
+        "d": "ঘুমের মধ্যে কথা বলা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সাহস; মনোবল; উদ্যম",
+      "explanation": "Mettle = সাহস; মনোবল; উদ্যম"
+    },
+    {
+      "id": "vocab_m_009",
+      "question": "Misandrist এর অর্থ কি?",
+      "options": {
+        "a": "পুরুষ-বিদ্বেষী",
+        "b": "শান্তচিত্ততা",
+        "c": "চিৎ হয়ে শোয়া",
+        "d": "হাবভাব দেখিয়ে অভিনয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পুরুষ-বিদ্বেষী; যে পুরুষদের ঘৃণা করে",
+      "explanation": "Misandrist = পুরুষ-বিদ্বেষী; যে পুরুষদের ঘৃণা করে"
+    },
+    {
+      "id": "vocab_m_010",
+      "question": "Misogamist এর অর্থ কি?",
+      "options": {
+        "a": "সব কিছু মনে রাখার ক্ষমতা",
+        "b": "পুষিয়ে নেওয়া",
+        "c": "বিবাহ-বিরোধী",
+        "d": "নিস্তেজ হয়ে পড়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিবাহ-বিরোধী; যে বিয়েকে ঘৃণা করে",
+      "explanation": "Misogamist = বিবাহ-বিরোধী; যে বিয়েকে ঘৃণা করে"
+    },
+    {
+      "id": "vocab_m_011",
+      "question": "Misologist এর অর্থ কি?",
+      "options": {
+        "a": "যুক্তিতর্ককে ঘৃণা করে যে",
+        "b": "অবশিষ্টাংশ",
+        "c": "দ্রুত পালানো",
+        "d": "অভিশাপমূলক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "যুক্তিতর্ককে ঘৃণা করে যে; আলোচনা-বিরোধী",
+      "explanation": "Misologist = যুক্তিতর্ককে ঘৃণা করে যে; আলোচনা-বিরোধী"
+    },
+    {
+      "id": "vocab_m_012",
+      "question": "Moat এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত ভোগ",
+        "b": "বোন হত্যা",
+        "c": "পরিখা",
+        "d": "বিপদ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পরিখা; দুর্গখাল",
+      "explanation": "Moat = পরিখা; দুর্গখাল"
+    },
+    {
+      "id": "vocab_m_013",
+      "question": "Mollify এর অর্থ কি?",
+      "options": {
+        "a": "শান্ত করা",
+        "b": "জাঁকজমকভাবে",
+        "c": "ব্যয়বহুল",
+        "d": "খুঁটি দিয়ে তৈরি বেষ্টনী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "শান্ত করা; নরম করা",
+      "explanation": "Mollify = শান্ত করা; নরম করা"
+    },
+    {
+      "id": "vocab_m_014",
+      "question": "Monastery এর অর্থ কি?",
+      "options": {
+        "a": "মাছ খেয়ে বাঁচে যে",
+        "b": "দ্রুত বৃদ্ধি পাওয়া",
+        "c": "কোনো স্থানের মানুষের পরিচয়মূলক নাম",
+        "d": "মঠ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মঠ",
+      "explanation": "Monastery = মঠ"
+    },
+    {
+      "id": "vocab_m_015",
+      "question": "Morbid এর অর্থ কি?",
+      "options": {
+        "a": "অনুতাপ করা",
+        "b": "পীড়িত",
+        "c": "উন্মত্ত",
+        "d": "কঠোর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পীড়িত; ব্যাধিগ্রস্ত; অস্বাস্থ্যকরভাবে মৃত্যুচিন্তাগ্রস্ত",
+      "explanation": "Morbid = পীড়িত; ব্যাধিগ্রস্ত; অস্বাস্থ্যকরভাবে মৃত্যুচিন্তাগ্রস্ত"
+    },
+    {
+      "id": "vocab_m_016",
+      "question": "Morose এর অর্থ কি?",
+      "options": {
+        "a": "স্থিতিস্থাপকতা",
+        "b": "বিষণ্ণ",
+        "c": "মশলাদার",
+        "d": "নম্র ও ধৈর্যশীল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিষণ্ণ; গোমড়ামুখো",
+      "explanation": "Morose = বিষণ্ণ; গোমড়ামুখো"
+    },
+    {
+      "id": "vocab_m_017",
+      "question": "Motley এর অর্থ কি?",
+      "options": {
+        "a": "বিদ্রূপাত্মকভাবে বর্ণনা করা",
+        "b": "বিচিত্র",
+        "c": "অগোছালো",
+        "d": "ধর্মতন্ত্র"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিচিত্র; মিশ্রিত; রঙবেরঙা",
+      "explanation": "Motley = বিচিত্র; মিশ্রিত; রঙবেরঙা"
+    }
+  ]
+}
