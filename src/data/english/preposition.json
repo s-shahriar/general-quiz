@@ -806,6 +806,110 @@
       "correct_answer": "c",
       "correct_answer_text": "around, off",
       "explanation": "Around means nearly at. Drop off: to take someone or something to a particular place."
+    },
+    {
+      "question": "His family comprises _____ nine members.",
+      "options": {
+        "a": "in",
+        "b": "with",
+        "c": "to",
+        "d": "no preposition"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "no preposition",
+      "explanation": "'Comprise' is a transitive verb meaning 'to consist of'. It takes a direct object without any preposition.",
+      "id": 63
+    },
+    {
+      "question": "It rests _______ the management to justify our actions.",
+      "options": {
+        "a": "upon",
+        "b": "for",
+        "c": "with",
+        "d": "to"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "with",
+      "explanation": "'Rest with' means 'to be the responsibility of someone'. 'It rests with the management' means it is their responsibility.",
+      "id": 64
+    },
+    {
+      "question": "She prides herself ___ her ability to remain calm under pressure.",
+      "options": {
+        "a": "in",
+        "b": "on",
+        "c": "upon",
+        "d": "with"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "on",
+      "explanation": "The fixed collocation is 'pride oneself on something'. 'On' is the standard correct preposition here.",
+      "id": 65
+    },
+    {
+      "question": "SAARC is a treaty _____ eight countries.",
+      "options": {
+        "a": "between",
+        "b": "among",
+        "c": "of",
+        "d": "in"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "between",
+      "explanation": "'Between' is used for defined distinct parties individually, even if more than two. SAARC is a treaty between eight specific named countries.",
+      "id": 66
+    },
+    {
+      "question": "In which sentence is the word 'since' used as a preposition?",
+      "options": {
+        "a": "I have not seen him since.",
+        "b": "Nine months have passed since I met him.",
+        "c": "Since he was tired, he could not wait for you.",
+        "d": "Till now since his birth, he has not been taken care of by his parents."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Till now since his birth, he has not been taken care of by his parents.",
+      "explanation": "In option d, 'since' is followed by a noun phrase ('his birth'), making it a preposition. In other options, 'since' acts as an adverb or conjunction.",
+      "id": 67
+    },
+    {
+      "question": "He was standing ______ a crowd of children.",
+      "options": {
+        "a": "in",
+        "b": "into",
+        "c": "on",
+        "d": "among"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "among",
+      "explanation": "'Among' is used when something is in the middle of a group of more than two. Since there is a crowd of children, 'among' is correct.",
+      "id": 68
+    },
+    {
+      "question": "Each union elects several delegates ______ the annual conference.",
+      "options": {
+        "a": "for",
+        "b": "to",
+        "c": "into",
+        "d": "at"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "to",
+      "explanation": "'To' shows direction/purpose. 'Elect delegates to' is the correct collocation — delegates are elected to attend the conference.",
+      "id": 69
+    },
+    {
+      "question": "Satyendranath was a contemporary ____ Rabindranath Tagore.",
+      "options": {
+        "a": "to",
+        "b": "of",
+        "c": "off",
+        "d": "on"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "of",
+      "explanation": "The correct collocation is 'contemporary of' — meaning belonging to the same period. We say 'a contemporary of' a person.",
+      "id": 70
     }
   ]
 }

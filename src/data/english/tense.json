@@ -234,6 +234,19 @@
       "correct_answer": "c",
       "correct_answer_text": "shall have finished",
       "explanation": "One future action completed before another → Future Perfect: shall/will + have + V3. → \"I shall have finished the work before I leave.\""
+    },
+    {
+      "question": "Had the media exposed the government's plans, the genocide ___________________.",
+      "options": {
+        "a": "might not have occured",
+        "b": "might not have occurred",
+        "c": "may not have occurred",
+        "d": "will not have occurred"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "might not have occurred",
+      "explanation": "Third conditional (unreal past) structure: Had + subject + V3, subject + might/would + have + V3. 'Might not have occurred' is correct.",
+      "id": 19
     }
   ]
 }

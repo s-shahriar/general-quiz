@@ -141,6 +141,36 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
         </div>
       ) : (
         <>
+          {totalPages > 1 && (
+            <div className="study-pagination">
+              <button
+                className="study-pag-btn"
+                onClick={() => goTo(page - 1)}
+                disabled={page === 1}
+              >
+                <ChevronLeft size={14} />
+              </button>
+              {getPageNums().map((p, i) =>
+                p === '...'
+                  ? <span key={`e${i}`} style={{ width: 24, textAlign: 'center', color: 'var(--text-dim)', fontSize: 12 }}>…</span>
+                  : <button
+                      key={p}
+                      className={`study-pag-btn${p === page ? ' active' : ''}`}
+                      onClick={() => goTo(p)}
+                    >
+                      {p}
+                    </button>
+              )}
+              <button
+                className="study-pag-btn"
+                onClick={() => goTo(page + 1)}
+                disabled={page === totalPages}
+              >
+                <ChevronRight size={14} />
+              </button>
+            </div>
+          )}
+
           <div className="study-list">
             {pageItems.map(({ q, qid }, i) => (
               <StudyCard

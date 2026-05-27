@@ -221,6 +221,32 @@
       "correct_answer": "b",
       "correct_answer_text": "His teacher congratulated him for his brilliant success in the recent examination.",
       "explanation": "Passive → Active: \"by his teacher\" becomes subject. \"was congratulated\" → \"congratulated\"."
+    },
+    {
+      "question": "You must do the work. (Change the Voice)",
+      "options": {
+        "a": "The work should be done by you.",
+        "b": "The work must be done by you.",
+        "c": "The work may be done by you.",
+        "d": "The work might be done by you."
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The work must be done by you.",
+      "explanation": "With modal verbs in passive voice, the modal remains unchanged: modal + be + past participle. 'Must do' becomes 'must be done'.",
+      "id": 18
+    },
+    {
+      "question": "He helped me finish the work. (Make it passive)",
+      "options": {
+        "a": "I was helped by him for finishing the work.",
+        "b": "I was helped for finishing the work by him.",
+        "c": "I was helped by him to finish the work.",
+        "d": "I was helped finishing the work by him."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "I was helped by him to finish the work.",
+      "explanation": "When 'help + bare infinitive' is made passive, the bare infinitive becomes 'to + infinitive'. 'Helped me finish' becomes 'was helped by him to finish'.",
+      "id": 19
     }
   ]
 }

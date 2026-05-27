@@ -364,6 +364,19 @@
       "correct_answer": "d",
       "correct_answer_text": "was no major quarrel",
       "explanation": "was no major quarrel এর স্থলে has been no major quarrel হবে।"
+    },
+    {
+      "question": "Identify the correct sentence -",
+      "options": {
+        "a": "He talks as if he knows everything.",
+        "b": "He talks as if he had known everything.",
+        "c": "He talked as though he knew about the matter.",
+        "d": "He talked as though he had known about the matter."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "He talked as though he had known about the matter.",
+      "explanation": "When the main verb is past tense, 'as if/as though' must be followed by past perfect. 'He talked (past) as though he had known (past perfect)' is correct.",
+      "id": 29
     }
   ]
 }

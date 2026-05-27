@@ -52,6 +52,19 @@
       "correct_answer": "b",
       "correct_answer_text": "needn't you",
       "explanation": "When \"must\" expresses necessity/obligation, \"needn't\" is used in the tag."
+    },
+    {
+      "question": "We needed more time to finish the project, ___________?",
+      "options": {
+        "a": "needn't we",
+        "b": "hadn't we",
+        "c": "don't we",
+        "d": "didn't we"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "didn't we",
+      "explanation": "The main clause uses simple past 'needed', so the tag requires 'did' in negative form: 'didn't we'.",
+      "id": 5
     }
   ]
 }

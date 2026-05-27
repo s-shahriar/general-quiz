@@ -195,6 +195,32 @@
       "correct_answer": "d",
       "correct_answer_text": "Zero article",
       "explanation": "Magazine names do NOT take \"the\" (unlike newspaper names). → \"Time magazine\" (no article)."
+    },
+    {
+      "question": "All he needed was ________ dollars to fuel his road trips and wandering spirit.",
+      "options": {
+        "a": "little",
+        "b": "a little",
+        "c": "few",
+        "d": "a few"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "a few",
+      "explanation": "'A few' is used before countable nouns for a small but positive number. 'Dollar' is countable. 'A little' is for uncountable nouns.",
+      "id": 16
+    },
+    {
+      "question": "_____ pair of socks _____ too small for me.",
+      "options": {
+        "a": "These, are",
+        "b": "These, is",
+        "c": "This, are",
+        "d": "This, is"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "This, is",
+      "explanation": "With 'This/A/The + pair of + plural noun', the verb must be singular. 'This pair of socks is' — the verb agrees with 'pair', not 'socks'.",
+      "id": 17
     }
   ]
 }

@@ -299,6 +299,71 @@
       "correct_answer": "b",
       "correct_answer_text": "Rectify",
       "explanation": "\"Rectify\" means to put right or correct an error. The scientist wanted to fix/correct the error before publishing."
+    },
+    {
+      "question": "Would that he could _____ my feelings better.",
+      "options": {
+        "a": "understand",
+        "b": "understanded",
+        "c": "understanding",
+        "d": "understood"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "understand",
+      "explanation": "'Would that' introduces an unreal wish, followed by Subject + could + base form of verb. So 'could understand' is correct.",
+      "id": 24
+    },
+    {
+      "question": "You need not _____ about the test; everything will be fine.",
+      "options": {
+        "a": "worrying",
+        "b": "worries",
+        "c": "to worry",
+        "d": "worry"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "worry",
+      "explanation": "When 'need' is used as a modal auxiliary in negative sentences, it takes 'not' + bare infinitive. 'Need not worry' is correct.",
+      "id": 25
+    },
+    {
+      "question": "They ___ be waiting for you at the station now.",
+      "options": {
+        "a": "shall",
+        "b": "may",
+        "c": "will",
+        "d": "can"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "may",
+      "explanation": "To express present possibility/speculation, 'may' is used: Subject + may + be + V-ing. 'May be waiting' expresses that it is possible they are waiting.",
+      "id": 26
+    },
+    {
+      "question": "It is high time _____ your heart.",
+      "options": {
+        "a": "followed",
+        "b": "to following",
+        "c": "to be followed",
+        "d": "to follow"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "to follow",
+      "explanation": "'It is high time' without a following subject takes 'to + base verb'. The correct form is 'to follow'.",
+      "id": 27
+    },
+    {
+      "question": "I got my brother _______ paint the wall.",
+      "options": {
+        "a": "painted",
+        "b": "paint",
+        "c": "to paint",
+        "d": "have painted"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "to paint",
+      "explanation": "With causative verb 'get': get + object + to + infinitive. 'Make/let/have' use bare infinitive, but 'get' requires 'to + infinitive'.",
+      "id": 28
     }
   ]
 }

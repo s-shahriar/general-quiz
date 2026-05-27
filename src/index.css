@@ -993,7 +993,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 /* Pagination */
 .study-pagination {
   display: flex; align-items: center; justify-content: center;
-  gap: 4px; margin-top: 20px;
+  gap: 4px; margin-top: 20px; margin-bottom: 20px;
 }
 .study-pag-btn {
   background: var(--surface); border: 1px solid var(--border);

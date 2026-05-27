@@ -78,6 +78,45 @@
       "correct_answer": "b",
       "correct_answer_text": "have",
       "explanation": "\"Majority of + plural noun\" → plural verb. When majority refers to a collection of individuals, use plural verb."
+    },
+    {
+      "question": "Which one is a correct sentence?",
+      "options": {
+        "a": "Ten kilometers are too far to walk.",
+        "b": "One should take care of his health.",
+        "c": "Students each are present today.",
+        "d": "The furniture in the living room need to be cleaned regularly."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Students each are present today.",
+      "explanation": "When 'each' comes after a plural noun/pronoun, the verb is plural. 'Students each are present' is correct as 'are' agrees with the plural 'Students'.",
+      "id": 7
+    },
+    {
+      "question": "More than one book ___ bought.",
+      "options": {
+        "a": "has",
+        "b": "are",
+        "c": "is",
+        "d": "were"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "is",
+      "explanation": "'More than one + singular noun' takes a singular verb. So 'More than one book is bought' is correct.",
+      "id": 8
+    },
+    {
+      "question": "Either the manager or his assistants ____ the company's personnel needs.",
+      "options": {
+        "a": "reviews",
+        "b": "review",
+        "c": "is reviewing",
+        "d": "has been reviewed"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "review",
+      "explanation": "With 'Either...or', the verb agrees with the closest subject (proximity rule). 'His assistants' (plural) is closest, so 'review' is correct.",
+      "id": 9
     }
   ]
 }

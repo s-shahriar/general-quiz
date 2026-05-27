@@ -494,6 +494,292 @@
       "correct_answer": "d",
       "correct_answer_text": "it was a boldly step",
       "explanation": "Solution: it was a bold step."
+    },
+    {
+      "question": "Patrician is -",
+      "options": {
+        "a": "a person of noble rank",
+        "b": "the male head of a family",
+        "c": "a person who loves his country very much",
+        "d": "a person who provides shelter"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "a person of noble rank",
+      "explanation": "'Patrician' refers to a person of noble birth or high social rank. Option b = patriarch, c = patriot, d = patron.",
+      "id": 39
+    },
+    {
+      "question": "A person who believes that all events are predetermined and human free will is an illusion -",
+      "options": {
+        "a": "Optimist",
+        "b": "Fatalist",
+        "c": "Stoic",
+        "d": "Determinist"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Determinist",
+      "explanation": "A Determinist believes all events are determined by prior causes and free will is an illusion. A Fatalist believes fate controls outcomes.",
+      "id": 40
+    },
+    {
+      "question": "A person who secretly collects and enjoys observing private lives of others -",
+      "options": {
+        "a": "Exhibitionist",
+        "b": "Voyeur",
+        "c": "Narcissist",
+        "d": "Recluse"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Voyeur",
+      "explanation": "A Voyeur derives pleasure from watching others in private moments. An Exhibitionist shows themselves publicly, a Narcissist is self-obsessed, a Recluse avoids society.",
+      "id": 41
+    },
+    {
+      "question": "Choose the correct meaning of the idiom: \"To blow hot and cold\"",
+      "options": {
+        "a": "To be very angry",
+        "b": "To behave aggressively",
+        "c": "To be inconsistent in opinion or attitude",
+        "d": "To exaggerate facts"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "To be inconsistent in opinion or attitude",
+      "explanation": "'To blow hot and cold' means to keep changing one's opinion — sometimes supporting something and sometimes opposing it.",
+      "id": 42
+    },
+    {
+      "question": "Choose the synonym of \"Nexus\".",
+      "options": {
+        "a": "Modest",
+        "b": "Savor",
+        "c": "Junction",
+        "d": "Languid"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Junction",
+      "explanation": "Nexus means a connection or series of connections linking things. Synonyms include junction, link, and linkage.",
+      "id": 43
+    },
+    {
+      "question": "Antonym of \"Philogynist\"?",
+      "options": {
+        "a": "Lover of wisdom",
+        "b": "Lover of music",
+        "c": "Misogynist",
+        "d": "Hater of children"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Misogynist",
+      "explanation": "A Philogynist loves or admires women. The antonym is Misogynist — a person with prejudice against women.",
+      "id": 44
+    },
+    {
+      "question": "The correct analogy of \"Enfranchise : Emancipate\" is -",
+      "options": {
+        "a": "Appeasement: Hostilities",
+        "b": "Bondage: Thraldom",
+        "c": "Liberate: Confine",
+        "d": "Cerebral: Physiological"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Bondage: Thraldom",
+      "explanation": "Enfranchise and Emancipate are synonyms (both mean to free). Similarly, Bondage (slavery) and Thraldom (enslavement) are synonymous.",
+      "id": 45
+    },
+    {
+      "question": "The best analogy of \"Tacit : Words\" is -",
+      "options": {
+        "a": "Flagrant: Terrible",
+        "b": "Visible: Scenes",
+        "c": "Colourful: Hues",
+        "d": "Unanimous: Disagreements"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Unanimous: Disagreements",
+      "explanation": "Tacit = understood without words (absence of Words). Unanimous = total agreement (absence of Disagreements). Both pairs show a word that negates the second concept.",
+      "id": 46
+    },
+    {
+      "question": "SOOT : COMBUSTION ::",
+      "options": {
+        "a": "lint: brushing",
+        "b": "sawdust: woodcutting",
+        "c": "gristle: tenderizing",
+        "d": "gravel: crushing"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "sawdust: woodcutting",
+      "explanation": "Soot is the byproduct of Combustion. Similarly, Sawdust is the byproduct of Woodcutting. Analogy: byproduct : process.",
+      "id": 47
+    },
+    {
+      "question": "Which of the following words is connected to an argument?",
+      "options": {
+        "a": "Alias",
+        "b": "Altercation",
+        "c": "Alienation",
+        "d": "Alteration"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Altercation",
+      "explanation": "Altercation means a noisy argument. Alias = alternative name, Alienation = isolation, Alteration = change.",
+      "id": 48
+    },
+    {
+      "question": "Fill in the gap: Before leaving for the workplace, I spent ____ with my children.",
+      "options": {
+        "a": "sometimes",
+        "b": "sometime",
+        "c": "some time",
+        "d": "some times"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "some time",
+      "explanation": "'Some time' (two words) means a period of time. 'Sometime' = at an unspecified time, 'sometimes' = occasionally.",
+      "id": 49
+    },
+    {
+      "question": "Pick out the correctly spelt word.",
+      "options": {
+        "a": "Inundate",
+        "b": "Innundate",
+        "c": "Inandate",
+        "d": "Innandate"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Inundate",
+      "explanation": "The correct spelling is 'Inundate', meaning to overwhelm or flood. The other options have incorrect letters.",
+      "id": 50
+    },
+    {
+      "question": "Priya bears _____ the first position.",
+      "options": {
+        "a": "With",
+        "b": "On",
+        "c": "Out",
+        "d": "Away"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Away",
+      "explanation": "'Bear away' means to win or carry off a prize. 'Bear on' = relate to, 'bear out' = confirm, 'bear with' = tolerate.",
+      "id": 51
+    },
+    {
+      "question": "The antonym of 'dear' is -",
+      "options": {
+        "a": "eager",
+        "b": "cheap",
+        "c": "indifferent",
+        "d": "hate"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "cheap",
+      "explanation": "'Dear' means beloved or expensive. Its antonym is 'cheap' (inexpensive).",
+      "id": 52
+    },
+    {
+      "question": "The antonym of 'confide' is -",
+      "options": {
+        "a": "hurt",
+        "b": "abuse",
+        "c": "suspect",
+        "d": "exploit"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "suspect",
+      "explanation": "'Confide' means to trust someone with a secret. Its antonym is 'suspect' (to distrust or doubt).",
+      "id": 53
+    },
+    {
+      "question": "What is the meaning of 'Few and far between'?",
+      "options": {
+        "a": "rarely",
+        "b": "not very far",
+        "c": "in between",
+        "d": "long distance"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "rarely",
+      "explanation": "The idiom 'few and far between' means occurring rarely or infrequently.",
+      "id": 54
+    },
+    {
+      "question": "\"Harp on\" means -",
+      "options": {
+        "a": "to play on the flute",
+        "b": "to listen attentively",
+        "c": "play music",
+        "d": "talk about the same subject repeatedly"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "talk about the same subject repeatedly",
+      "explanation": "The phrasal verb 'harp on' means to talk persistently and tediously about the same subject.",
+      "id": 55
+    },
+    {
+      "question": "One who specializes in the ways diseases spread among people -",
+      "options": {
+        "a": "Entomologist",
+        "b": "Epidemeologist",
+        "c": "Archaeologist",
+        "d": "Epidemiologist"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Epidemiologist",
+      "explanation": "An Epidemiologist studies how diseases spread among populations. An Entomologist studies insects, an Archaeologist studies human history.",
+      "id": 56
+    },
+    {
+      "question": "'Milk-and-water' means -",
+      "options": {
+        "a": "Something that is very easy to perform.",
+        "b": "Neat and clean.",
+        "c": "Daily activities or regular work.",
+        "d": "Lacking the will or ability to act effectively."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Lacking the will or ability to act effectively.",
+      "explanation": "The idiom 'milk-and-water' describes something feeble, insipid, or lacking strength and conviction.",
+      "id": 57
+    },
+    {
+      "question": "A quotation placed at the beginning of a work to suggest its theme -",
+      "options": {
+        "a": "Epigram",
+        "b": "Epistle",
+        "c": "Epigraph",
+        "d": "Epilogue"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Epigraph",
+      "explanation": "An 'Epigraph' is a quotation at the beginning of a literary work to suggest its theme. An 'Epigram' is a short witty saying, an 'Epistle' is a formal letter.",
+      "id": 58
+    },
+    {
+      "question": "Conspicuous means ___",
+      "options": {
+        "a": "Hidden",
+        "b": "Penury",
+        "c": "Scoff",
+        "d": "Visible"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Visible",
+      "explanation": "'Conspicuous' means clearly visible or attracting notice. 'Hidden' is its antonym.",
+      "id": 59
+    },
+    {
+      "question": "To accustom oneself to a foreign climate -",
+      "options": {
+        "a": "Accustom",
+        "b": "Acclimatize",
+        "c": "Adapt",
+        "d": "Adopt"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Acclimatize",
+      "explanation": "'Acclimatize' means to become accustomed to a new climate. 'Adapt' is more general, 'Adopt' = to take up, 'Accustom' = to make familiar through habit.",
+      "id": 60
     }
   ]
 }

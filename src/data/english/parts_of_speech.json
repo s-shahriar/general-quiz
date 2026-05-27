@@ -520,6 +520,162 @@
       "correct_answer": "b",
       "correct_answer_text": "Celestial",
       "explanation": "Heaven অর্থ স্বর্গ, এটি একটি Noun। এটির Adjective form হলো Celestial অর্থ স্বর্গীয়।"
+    },
+    {
+      "question": "Which of the following is not a feminine gender?",
+      "options": {
+        "a": "Sorcerer",
+        "b": "Jane",
+        "c": "Blonde",
+        "d": "Termagant"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Sorcerer",
+      "explanation": "'Sorcerer' is masculine; its feminine form is 'Sorceress'. Jane is a feminine name, Blonde refers to a fair-haired woman, and Termagant means a quarrelsome woman — all three are feminine.",
+      "id": 41
+    },
+    {
+      "question": "I turned pale. Here 'turned' is a/an -",
+      "options": {
+        "a": "Transitive verb",
+        "b": "Linking verb",
+        "c": "Causative Verb",
+        "d": "Factitive Verb"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Linking verb",
+      "explanation": "A linking verb connects the subject to a complement rather than expressing action. 'Turned' connects 'I' to 'pale', describing the subject's state, so it is a linking verb.",
+      "id": 42
+    },
+    {
+      "question": "At that very moment, he was very tired. Here 'very' is used respectively as -",
+      "options": {
+        "a": "adjective, adverb",
+        "b": "adverb, adjective",
+        "c": "adjective, adjective",
+        "d": "adverb, adverb"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "adjective, adverb",
+      "explanation": "In 'that very moment', 'very' modifies the noun 'moment' — it is an adjective. In 'very tired', 'very' modifies the adjective 'tired' — it is an adverb.",
+      "id": 43
+    },
+    {
+      "question": "After the thief had fled, he awoke. The train left before their arrival. Here 'after' and 'before' are respectively -",
+      "options": {
+        "a": "preposition and conjunction",
+        "b": "conjunction and preposition",
+        "c": "conjunction and conjunction",
+        "d": "adverb and conjunction"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "conjunction and preposition",
+      "explanation": "'After' connects two clauses, so it is a conjunction. 'Before' precedes a noun phrase ('their arrival'), so it is a preposition.",
+      "id": 44
+    },
+    {
+      "question": "\"To forgive is divine.\" What part of speech is 'To forgive'?",
+      "options": {
+        "a": "Infinitive",
+        "b": "Participle",
+        "c": "Verb",
+        "d": "Noun"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Noun",
+      "explanation": "'To forgive' is a to-infinitive used as the subject of the sentence, functioning as a Noun. When a 'to + verb' phrase acts as the subject, it functions as a noun.",
+      "id": 45
+    },
+    {
+      "question": "It was she _____ they invited to the party.",
+      "options": {
+        "a": "who",
+        "b": "whom",
+        "c": "that",
+        "d": "which"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "whom",
+      "explanation": "'Whom' is the objective case of 'who'. Here, 'she' is the object of 'invited', so 'whom' is correct.",
+      "id": 46
+    },
+    {
+      "question": "A justice, with every decision, shapes not just the law, but the very fabric of society. The underlined word 'justice' is -",
+      "options": {
+        "a": "Abstract noun",
+        "b": "Collective noun",
+        "c": "Common noun",
+        "d": "Material noun"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Common noun",
+      "explanation": "'Justice' here is used with the article 'a', referring to a judge — a countable person — making it a common noun.",
+      "id": 47
+    },
+    {
+      "question": "The word 'affect' is a/an -",
+      "options": {
+        "a": "Noun",
+        "b": "Adjective",
+        "c": "Verb",
+        "d": "Adverb"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Verb",
+      "explanation": "'Affect' is a verb meaning to influence or make a difference to. Its noun form is 'effect'.",
+      "id": 48
+    },
+    {
+      "question": "What a nice bird it is! The word 'What' is a/an -",
+      "options": {
+        "a": "Adjective",
+        "b": "Noun",
+        "c": "Adverb",
+        "d": "Pronoun"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Adjective",
+      "explanation": "In exclamatory sentences, 'What' modifies the noun phrase 'a nice bird', functioning as an exclamatory adjective.",
+      "id": 49
+    },
+    {
+      "question": "Which one is a plural number?",
+      "options": {
+        "a": "Loci",
+        "b": "Hives",
+        "c": "Draughts",
+        "d": "Ellipse"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Loci",
+      "explanation": "'Loci' is the plural of 'locus' (Latin). 'Hives' = skin condition (singular), 'Draughts' = board game (singular), 'Ellipse' is singular.",
+      "id": 50
+    },
+    {
+      "question": "No more for today. Here 'no' is -",
+      "options": {
+        "a": "Noun",
+        "b": "Adjective",
+        "c": "Pronoun",
+        "d": "Adverb"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Adverb",
+      "explanation": "In 'No more for today', 'no' modifies the adverb 'more', functioning as an adverb. When 'no' modifies an adjective/adverb rather than a noun, it is an adverb.",
+      "id": 51
+    },
+    {
+      "question": "Point out the plural number.",
+      "options": {
+        "a": "Cattle",
+        "b": "Luggage",
+        "c": "Athletics",
+        "d": "News"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Cattle",
+      "explanation": "'Cattle' is always plural and refers to bovine animals collectively. 'Luggage', 'Athletics', and 'News' are uncountable/singular despite their appearance.",
+      "id": 52
     }
   ]
 }

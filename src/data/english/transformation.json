@@ -143,6 +143,32 @@
       "correct_answer": "d",
       "correct_answer_text": "You cannot help being submissive to the Almighty.",
       "explanation": "\"must\" → Negative: \"cannot help + verb-ing\" or \"cannot but + base verb\". Here \"being submissive\" → D is correct."
+    },
+    {
+      "question": "Which one is a simple sentence?",
+      "options": {
+        "a": "He was rejected, for his performance was not satisfactory.",
+        "b": "The patient died after the doctor had arrived.",
+        "c": "The man becoming repentant, Allah at last took pity on him.",
+        "d": "Where there is a will, there is a way."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The man becoming repentant, Allah at last took pity on him.",
+      "explanation": "A simple sentence contains only one finite verb. 'The man becoming repentant, Allah at last took pity on him' has only one finite verb 'took'. Options a, b, d each contain two clauses.",
+      "id": 12
+    },
+    {
+      "question": "No other river in Africa is as big as the Nile. (Make it Comparative)",
+      "options": {
+        "a": "The Nile is the biggest river in Africa.",
+        "b": "The Nile is bigger than any other rivers in Africa.",
+        "c": "The Nile is bigger than all other rivers in Africa.",
+        "d": "The Nile is bigger than many other rivers in Africa."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The Nile is bigger than all other rivers in Africa.",
+      "explanation": "Converting 'No other...as...as' to comparative: use 'comparative + than all other + plural noun'. So 'The Nile is bigger than all other rivers in Africa' is correct.",
+      "id": 13
     }
   ]
 }
