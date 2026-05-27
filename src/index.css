@@ -248,8 +248,8 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 /* ── Module Toggle ─── */
 .module-toggle {
   display: flex; align-items: center;
-  gap: 4px;
-  width: 100%; max-width: 480px;
+  gap: 6px;
+  width: 100%; max-width: 640px;
   margin: 0 auto 20px;
   background: var(--elevated);
   border: 1px solid var(--border-md);
@@ -262,7 +262,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 .module-btn {
   flex: 1; min-width: 0;
   display: flex; align-items: center; justify-content: center; gap: 6px;
-  padding: 9px 10px;
+  padding: 9px 18px;
   border-radius: 22px;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.82rem; font-weight: 700;
@@ -283,6 +283,21 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
   background: var(--grad-brand);
   color: #fff;
   box-shadow: 0 4px 18px rgba(99,102,241,0.38), 0 0 0 1px rgba(99,102,241,0.20);
+}
+
+/* ── Two-row layout on mobile ─────────────────────── */
+@media (max-width: 480px) {
+  .module-toggle {
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 4px;
+  }
+  .module-btn {
+    flex: 1 1 calc(50% - 6px);
+    border-radius: 16px;
+    font-size: 0.8rem;
+    padding: 9px 8px;
+  }
 }
 
 .home-stats-row {
@@ -1152,11 +1167,6 @@ button { cursor: pointer; border: none; background: none; color: inherit; font-f
 }
 
 /* ── Responsive ───────────────────────────────────── */
-/* Hide group-tab icons on narrow screens so text fits */
-@media (max-width: 400px) {
-  .module-btn svg { display: none; }
-  .module-btn { gap: 0; font-size: 0.76rem; padding: 9px 6px; }
-}
 
 @media (min-width: 600px) {
   .home { padding: 64px 24px 90px; }

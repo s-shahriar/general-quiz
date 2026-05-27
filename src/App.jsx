@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
-import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, ALL_TOPICS } from './data/index.js'
+import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS } from './data/index.js'
 
 // General Quiz
 import HomeScreen      from './components/HomeScreen.jsx'
@@ -59,6 +59,7 @@ export default function App() {
     if (!topic) return []
     if (BANGLA_TOPICS.some(t => t.id === topic.id)) return BANGLA_TOPICS
     if (ENGLISH_TOPICS.some(t => t.id === topic.id)) return ENGLISH_TOPICS
+    if (BANGLA_SAHITYA_TOPICS.some(t => t.id === topic.id)) return BANGLA_SAHITYA_TOPICS
     return GK_TOPICS
   }
 
@@ -123,6 +124,7 @@ export default function App() {
               banglaTopic={BANGLA_TOPICS}
               englishTopics={ENGLISH_TOPICS}
               gkTopics={GK_TOPICS}
+              sahityaTopics={BANGLA_SAHITYA_TOPICS}
               mastered={mastered}
               important={important}
               activeGroup={activeGroup}
@@ -180,6 +182,7 @@ export default function App() {
               banglaTopic={BANGLA_TOPICS}
               englishTopics={ENGLISH_TOPICS}
               gkTopics={GK_TOPICS}
+              sahityaTopics={BANGLA_SAHITYA_TOPICS}
               important={important}
               onStart={(data) => { setExamData(data); setScreen('exam') }}
               onBack={goHome}

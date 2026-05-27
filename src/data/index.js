@@ -3,7 +3,8 @@ import {
   BookOpen, Hash, Globe, CheckSquare, FileText,
   Type, Clock, PenTool, Users, Mic, MessageSquare, ArrowLeftRight,
   HelpCircle, MapPin, Layout, AlertCircle, Crosshair, Trophy,
-  Award, Star, TrendingUp, DollarSign, Landmark, Cpu, Newspaper
+  Award, Star, TrendingUp, DollarSign, Landmark, Cpu, Newspaper,
+  Shuffle
 } from 'lucide-react'
 
 // ── Bangla Grammar topics ──────────────────────────────────────
@@ -20,6 +21,7 @@ import shobdo          from './bangla/shobdo.json'
 import poribhasha      from './bangla/poribhasha.json'
 import bananBakko      from './bangla/banan_bakko.json'
 import practiceExam    from './bangla/practice_exam.json'
+import somarthokShobdo from './bangla/somarthok_shobdo.json'
 
 // ── General Knowledge topics ───────────────────────────────────
 import intlSummits      from './gk/international_summits.json'
@@ -60,7 +62,8 @@ export const BANGLA_TOPICS = [
   { id: 'shobdo',            name: 'শব্দ',                    shortName: 'শব্দ',              icon: Hash,          color: '#c084fc', questions: shobdo.questions        || [] },
   { id: 'poribhasha',        name: 'পরিভাষা',                 shortName: 'পরিভাষা',           icon: Globe,         color: '#4ade80', questions: poribhasha.questions    || [] },
   { id: 'banan_bakko',       name: 'বানান ও বাক্য শুদ্ধি',    shortName: 'বানান শুদ্ধি',     icon: CheckSquare,   color: '#fb7185', questions: bananBakko.questions    || [] },
-  { id: 'practice_exam',     name: 'প্র্যাকটিস পরীক্ষা',      shortName: 'প্র্যাকটিস',       icon: FileText,      color: '#f59e0b', questions: practiceExam.questions  || [] },
+  { id: 'practice_exam',     name: 'প্র্যাকটিস পরীক্ষা',      shortName: 'প্র্যাকটিস',       icon: FileText,      color: '#f59e0b', questions: practiceExam.questions    || [] },
+  { id: 'somarthok_shobdo', name: 'সমার্থক শব্দ',             shortName: 'সমার্থক শব্দ',     icon: Shuffle,       color: '#e879f9', questions: somarthokShobdo.questions || [] },
 ]
 
 export const ENGLISH_TOPICS = [
@@ -91,4 +94,23 @@ export const GK_TOPICS = [
   { id: 'bangladesh_current',    name: 'বাংলাদেশ সাম্প্রতিক',        shortName: 'সাম্প্রতিক',    icon: Newspaper,   color: '#4ade80', questions: bdCurrent.questions     || [] },
 ]
 
-export const ALL_TOPICS = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS]
+// ── Bangla Sahitya topics ──────────────────────────────────────
+import prachinJug        from './sahitya/prachin_jug.json'
+import muktijudho        from './sahitya/muktijudho.json'
+import potrika           from './sahitya/potrika.json'
+import rabindranathNazrul from './sahitya/rabindranath_nazrul.json'
+import moddhoJug         from './sahitya/moddho_jug.json'
+import uktiChoritro      from './sahitya/ukti_choritro.json'
+import others           from './sahitya/others.json'
+
+export const BANGLA_SAHITYA_TOPICS = [
+  { id: 'prachin_jug',        name: 'প্রাচীন যুগ',              shortName: 'প্রাচীন যুগ',    icon: BookOpen, color: '#f97316', questions: prachinJug.questions        || [] },
+  { id: 'moddho_jug',         name: 'মধ্য যুগ',                 shortName: 'মধ্য যুগ',       icon: BookOpen, color: '#eab308', questions: moddhoJug.questions         || [] },
+  { id: 'muktijudho',         name: 'মুক্তিযুদ্ধ ও ভাষা আন্দোলন', shortName: 'মুক্তিযুদ্ধ',    icon: BookOpen, color: '#ef4444', questions: muktijudho.questions        || [] },
+  { id: 'potrika',            name: 'পত্রিকা ও সাময়িকী',          shortName: 'পত্রিকা',        icon: BookOpen, color: '#3b82f6', questions: potrika.questions           || [] },
+  { id: 'rabindranath_nazrul', name: 'রবীন্দ্রনাথ ও নজরুল',      shortName: 'রবীন্দ্র-নজরুল', icon: BookOpen, color: '#8b5cf6', questions: rabindranathNazrul.questions || [] },
+  { id: 'ukti_choritro',      name: 'উক্তি ও চরিত্র',           shortName: 'উক্তি-চরিত্র',   icon: BookOpen, color: '#ec4899', questions: uktiChoritro.questions      || [] },
+  { id: 'others',             name: 'বিবিধ সাহিত্য',            shortName: 'বিবিধ',           icon: BookOpen, color: '#06b6d4', questions: others.questions            || [] },
+]
+
+export const ALL_TOPICS = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]

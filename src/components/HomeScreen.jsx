@@ -1,8 +1,8 @@
-import { Zap, Star, BookOpenText, Languages, Bookmark, Globe, ShieldCheck } from 'lucide-react'
+import { Zap, Star, BookOpenText, Languages, Bookmark, Globe, ShieldCheck, BookOpen } from 'lucide-react'
 
-export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSelectTopic, onExam, onNailed, onImportant, onBackup, mastered, important, activeGroup, onGroupChange }) {
-  const allTopics = activeGroup === 'bangla' ? banglaTopic : activeGroup === 'english' ? englishTopics : gkTopics
-  const allTopicsFlat = [...banglaTopic, ...englishTopics, ...gkTopics]
+export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahityaTopics, onSelectTopic, onExam, onNailed, onImportant, onBackup, mastered, important, activeGroup, onGroupChange }) {
+  const allTopics = activeGroup === 'bangla' ? banglaTopic : activeGroup === 'english' ? englishTopics : activeGroup === 'sahitya' ? sahityaTopics : gkTopics
+  const allTopicsFlat = [...banglaTopic, ...englishTopics, ...gkTopics, ...sahityaTopics]
   const totalNailed = allTopicsFlat.reduce((s, t) =>
     s + t.questions.filter((_, i) => mastered.has(`${t.id}__${i}`)).length
   , 0)
@@ -28,6 +28,9 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSel
           </button>
           <button className={`module-btn${activeGroup === 'gk' ? ' active' : ''}`} onClick={() => onGroupChange('gk')}>
             <Globe size={15} /> সাধারণ জ্ঞান
+          </button>
+          <button className={`module-btn${activeGroup === 'sahitya' ? ' active' : ''}`} onClick={() => onGroupChange('sahitya')}>
+            <BookOpen size={15} /> বাংলা সাহিত্য
           </button>
         </div>
       </header>
@@ -84,7 +87,7 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, onSel
       </div>
 
       <p className="section-label">
-        {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
+        {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
       </p>
       <main className="topics-grid">
         {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => onSelectTopic(t)} />)}
