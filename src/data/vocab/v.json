@@ -260,6 +260,110 @@
       "correct_answer": "c",
       "correct_answer_text": "গালিগালাজপূর্ণ কটূক্তি করা",
       "explanation": "Vituperate = গালিগালাজপূর্ণ কটূক্তি করা"
+    },
+    {
+      "id": "vocab_v_021",
+      "question": "Vacillate এর অর্থ কি?",
+      "options": {
+        "a": "দ্বিধা করা বা ইতস্তত করা",
+        "b": "সমাজচ্যুত করা",
+        "c": "স্তম্ভের ভিত্তি; মূর্তির বেদি",
+        "d": "গোপনে ষড়যন্ত্র করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দ্বিধা করা বা ইতস্তত করা",
+      "explanation": "Vacillate = দ্বিধা করা বা ইতস্তত করা"
+    },
+    {
+      "id": "vocab_v_022",
+      "question": "Vacuous এর অর্থ কি?",
+      "options": {
+        "a": "শূন্যগর্ভ বা বুদ্ধিহীন",
+        "b": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+        "c": "মুখমণ্ডল; চেহারা",
+        "d": "অস্থির; সহজে পরিবর্তনযোগ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "শূন্যগর্ভ বা বুদ্ধিহীন",
+      "explanation": "Vacuous = শূন্যগর্ভ বা বুদ্ধিহীন"
+    },
+    {
+      "id": "vocab_v_023",
+      "question": "Veracious এর অর্থ কি?",
+      "options": {
+        "a": "সত্যবাদী বা নির্ভুল",
+        "b": "সুস্থতার আশ্রম",
+        "c": "নৈতিকভাবে দূষিত করা",
+        "d": "পোশাক সংক্রান্ত; দর্জি বিষয়ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সত্যবাদী বা নির্ভুল",
+      "explanation": "Veracious = সত্যবাদী বা নির্ভুল"
+    },
+    {
+      "id": "vocab_v_024",
+      "question": "Verbose এর অর্থ কি?",
+      "options": {
+        "a": "তীব্র সমালোচনা করা",
+        "b": "পশ্চাৎভাগ",
+        "c": "সচ্ছল বা ধনী",
+        "d": "বাচাল বা শব্দবহুল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাচাল বা শব্দবহুল",
+      "explanation": "Verbose = বাচাল বা শব্দবহুল"
+    },
+    {
+      "id": "vocab_v_025",
+      "question": "Viable এর অর্থ কি?",
+      "options": {
+        "a": "কার্যকর বা সম্ভাব্য",
+        "b": "উদাসীন",
+        "c": "পীড়িত; ব্যাধিগ্রস্ত; অস্বাস্থ্যকরভাবে মৃত্যুচিন্তাগ্রস্ত",
+        "d": "তোষামোদ করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কার্যকর বা সম্ভাব্য",
+      "explanation": "Viable = কার্যকর বা সম্ভাব্য"
+    },
+    {
+      "id": "vocab_v_026",
+      "question": "Viscous এর অর্থ কি?",
+      "options": {
+        "a": "প্রবল আগ্রহ; ঝোঁক",
+        "b": "আঠালো বা ঘন",
+        "c": "প্রতারণা বা কপটতা",
+        "d": "দূর করা বা প্রতিরোধ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আঠালো বা ঘন",
+      "explanation": "Viscous = আঠালো বা ঘন"
+    },
+    {
+      "id": "vocab_v_027",
+      "question": "Vituperative এর অর্থ কি?",
+      "options": {
+        "a": "উদার; দানশীল",
+        "b": "হাবভাব দেখিয়ে অভিনয়",
+        "c": "বোন হত্যা; ভগিনীহত্যা",
+        "d": "নিন্দাপূর্ণ বা কটুক্তিযুক্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নিন্দাপূর্ণ বা কটুক্তিযুক্ত",
+      "explanation": "Vituperative = নিন্দাপূর্ণ বা কটুক্তিযুক্ত"
+    },
+    {
+      "id": "vocab_v_028",
+      "question": "Volatile এর অর্থ কি?",
+      "options": {
+        "a": "জরুরি বা দাবিদার",
+        "b": "ক্ষোভ",
+        "c": "অস্থিতিশীল বা পরিবর্তনশীল",
+        "d": "বিচক্ষণ; জ্ঞানী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অস্থিতিশীল বা পরিবর্তনশীল",
+      "explanation": "Volatile = অস্থিতিশীল বা পরিবর্তনশীল"
     }
   ]
 }

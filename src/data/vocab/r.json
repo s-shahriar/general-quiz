@@ -377,6 +377,344 @@
       "correct_answer": "b",
       "correct_answer_text": "অনুতাপ করা; দুঃখিত হওয়া",
       "explanation": "Rue = অনুতাপ করা; দুঃখিত হওয়া"
+    },
+    {
+      "id": "vocab_r_030",
+      "question": "Rancor এর অর্থ কি?",
+      "options": {
+        "a": "অনুনয় বিনয় করা; কাকুতি মিনতি করা",
+        "b": "তীব্র ঘৃণা বা বিদ্বেষ",
+        "c": "স্বচ্ছ; পরিষ্কার",
+        "d": "খুঁত ধরা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তীব্র ঘৃণা বা বিদ্বেষ",
+      "explanation": "Rancor = তীব্র ঘৃণা বা বিদ্বেষ"
+    },
+    {
+      "id": "vocab_r_031",
+      "question": "Rapport এর অর্থ কি?",
+      "options": {
+        "a": "বাতিল করা",
+        "b": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়",
+        "c": "সৌহার্দ্যপূর্ণ সম্পর্ক",
+        "d": "ভবিষ্যৎ বক্তা; দ্রষ্টা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সৌহার্দ্যপূর্ণ সম্পর্ক",
+      "explanation": "Rapport = সৌহার্দ্যপূর্ণ সম্পর্ক"
+    },
+    {
+      "id": "vocab_r_032",
+      "question": "Rarefy এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত বা অনাবশ্যক",
+        "b": "উন্নত করা; ভালো করা",
+        "c": "মিতাহারী বা সংযমী",
+        "d": "বিরল বা পাতলা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিরল বা পাতলা করা",
+      "explanation": "Rarefy = বিরল বা পাতলা করা"
+    },
+    {
+      "id": "vocab_r_033",
+      "question": "Raze এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাসঘাতক",
+        "b": "সম্পূর্ণরূপে ধ্বংস করা",
+        "c": "ধাঁধা বা কঠিন সমস্যা",
+        "d": "প্রত্যক্ষ; প্রকাশ্য; খোলামেলা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সম্পূর্ণরূপে ধ্বংস করা",
+      "explanation": "Raze = সম্পূর্ণরূপে ধ্বংস করা"
+    },
+    {
+      "id": "vocab_r_034",
+      "question": "Recant এর অর্থ কি?",
+      "options": {
+        "a": "মত বা বিশ্বাস প্রত্যাহার করা",
+        "b": "সমর্থন করা",
+        "c": "কুটিল; কপট",
+        "d": "অভিযোগপ্রবণতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মত বা বিশ্বাস প্রত্যাহার করা",
+      "explanation": "Recant = মত বা বিশ্বাস প্রত্যাহার করা"
+    },
+    {
+      "id": "vocab_r_035",
+      "question": "Recondite এর অর্থ কি?",
+      "options": {
+        "a": "উদীয়মান",
+        "b": "ঢকঢক করে পান করা",
+        "c": "চুরি",
+        "d": "দুর্বোধ্য বা গভীর"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দুর্বোধ্য বা গভীর",
+      "explanation": "Recondite = দুর্বোধ্য বা গভীর"
+    },
+    {
+      "id": "vocab_r_036",
+      "question": "Redoubtable এর অর্থ কি?",
+      "options": {
+        "a": "অবাধ্য",
+        "b": "সামঞ্জস্য বা মিল",
+        "c": "করাতের দাঁতের মতো কাটা; দাঁতযুক্ত প্রান্ত",
+        "d": "ভীতিপ্রদ বা সম্মানযোগ্য"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভীতিপ্রদ বা সম্মানযোগ্য",
+      "explanation": "Redoubtable = ভীতিপ্রদ বা সম্মানযোগ্য"
+    },
+    {
+      "id": "vocab_r_037",
+      "question": "Refractory এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণ বা বোধসম্পন্ন",
+        "b": "অবাধ্য",
+        "c": "অসন্তুষ্ট ও বিদ্রোহী",
+        "d": "প্রতারণা করা বা মোহিত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অবাধ্য",
+      "explanation": "Refractory = অবাধ্য"
+    },
+    {
+      "id": "vocab_r_038",
+      "question": "Refute এর অর্থ কি?",
+      "options": {
+        "a": "উপলব্ধির ক্ষমতাসম্পন্ন",
+        "b": "প্রচণ্ড ক্রুদ্ধ",
+        "c": "খণ্ডন করা বা ভুল প্রমাণ করা",
+        "d": "সমগ্র মানবজাতির; সর্বমানবিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "খণ্ডন করা বা ভুল প্রমাণ করা",
+      "explanation": "Refute = খণ্ডন করা বা ভুল প্রমাণ করা"
+    },
+    {
+      "id": "vocab_r_039",
+      "question": "Regale এর অর্থ কি?",
+      "options": {
+        "a": "আনন্দ দেওয়া",
+        "b": "শান্ত করা বা তুষ্ট করা",
+        "c": "বাতিল করা",
+        "d": "দুর্বল হওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "আনন্দ দেওয়া",
+      "explanation": "Regale = আনন্দ দেওয়া"
+    },
+    {
+      "id": "vocab_r_040",
+      "question": "Relegate এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষপাত বা বিশেষ পছন্দ",
+        "b": "দৈনন্দিন বা সাধারণ",
+        "c": "পদাবনতি ঘটানো",
+        "d": "নিন্দনীয় বা দোষী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পদাবনতি ঘটানো",
+      "explanation": "Relegate = পদাবনতি ঘটানো"
+    },
+    {
+      "id": "vocab_r_041",
+      "question": "Remiss এর অর্থ কি?",
+      "options": {
+        "a": "অলঙ্কারশাস্ত্র বা বাগাড়ম্বর",
+        "b": "নম্র ও ধৈর্যশীল",
+        "c": "অবহেলাকারী বা দায়িত্বহীন",
+        "d": "স্ত্রীহত্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অবহেলাকারী বা দায়িত্বহীন",
+      "explanation": "Remiss = অবহেলাকারী বা দায়িত্বহীন"
+    },
+    {
+      "id": "vocab_r_042",
+      "question": "Replete এর অর্থ কি?",
+      "options": {
+        "a": "পরিপূর্ণ",
+        "b": "অধ্যবসায়ী বা পরিশ্রমী",
+        "c": "অন্তর্নিহিত বা অব্যক্ত",
+        "d": "বিচক্ষণ বা কৌশলী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পরিপূর্ণ",
+      "explanation": "Replete = পরিপূর্ণ"
+    },
+    {
+      "id": "vocab_r_043",
+      "question": "Reprehensible এর অর্থ কি?",
+      "options": {
+        "a": "খাদ্যরসিক",
+        "b": "বিশ্বাসঘাতক; দলত্যাগী",
+        "c": "জন্ম দেওয়া বা কারণ হওয়া",
+        "d": "নিন্দনীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নিন্দনীয়",
+      "explanation": "Reprehensible = নিন্দনীয়"
+    },
+    {
+      "id": "vocab_r_044",
+      "question": "Reprobate এর অর্থ কি?",
+      "options": {
+        "a": "নমনীয়তা",
+        "b": "দুশ্চরিত্র ব্যক্তি",
+        "c": "দ্বিধা; সংকট",
+        "d": "ভিক্ষুক; সন্ন্যাসী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দুশ্চরিত্র ব্যক্তি",
+      "explanation": "Reprobate = দুশ্চরিত্র ব্যক্তি"
+    },
+    {
+      "id": "vocab_r_045",
+      "question": "Repudiate এর অর্থ কি?",
+      "options": {
+        "a": "ভদ্রতা বা সামাজিক শিষ্টাচার",
+        "b": "স্ফীত বা আড়ম্বরপূর্ণ",
+        "c": "নিরাপত্তাহীন; অনিশ্চিত",
+        "d": "অস্বীকার করা বা ত্যাগ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অস্বীকার করা বা ত্যাগ করা",
+      "explanation": "Repudiate = অস্বীকার করা বা ত্যাগ করা"
+    },
+    {
+      "id": "vocab_r_046",
+      "question": "Rescind এর অর্থ কি?",
+      "options": {
+        "a": "বাতিল করা",
+        "b": "গোঁড়া বা মতান্ধ",
+        "c": "দরিদ্র বা নিঃস্ব",
+        "d": "ব্যয়বহুল; জাঁকালো"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বাতিল করা",
+      "explanation": "Rescind = বাতিল করা"
+    },
+    {
+      "id": "vocab_r_047",
+      "question": "Resolute এর অর্থ কি?",
+      "options": {
+        "a": "সংকল্প বা সমাধান",
+        "b": "অনুলিপি করা",
+        "c": "দৃঢ়প্রতিজ্ঞ",
+        "d": "গোপন; লুকানো"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দৃঢ়প্রতিজ্ঞ",
+      "explanation": "Resolute = দৃঢ়প্রতিজ্ঞ"
+    },
+    {
+      "id": "vocab_r_048",
+      "question": "Reticent এর অর্থ কি?",
+      "options": {
+        "a": "আপাতবিরোধী উক্তি",
+        "b": "একত্রিত হওয়া বা মিলিত হওয়া",
+        "c": "স্বল্পভাষী বা চুপচাপ",
+        "d": "দুর্বলতা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "স্বল্পভাষী বা চুপচাপ",
+      "explanation": "Reticent = স্বল্পভাষী বা চুপচাপ"
+    },
+    {
+      "id": "vocab_r_049",
+      "question": "Reverent এর অর্থ কি?",
+      "options": {
+        "a": "রোধ করা",
+        "b": "প্লাবিত করা",
+        "c": "দম্ভের সাথে হাঁটা; গর্বিত পদক্ষেপ",
+        "d": "শ্রদ্ধাশীল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শ্রদ্ধাশীল",
+      "explanation": "Reverent = শ্রদ্ধাশীল"
+    },
+    {
+      "id": "vocab_r_050",
+      "question": "Rhetoric এর অর্থ কি?",
+      "options": {
+        "a": "আকস্মিক; দৈবিক; অপ্রত্যাশিত",
+        "b": "আনন্দভ্রমণ",
+        "c": "অলঙ্কারশাস্ত্র বা বাগাড়ম্বর",
+        "d": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অলঙ্কারশাস্ত্র বা বাগাড়ম্বর",
+      "explanation": "Rhetoric = অলঙ্কারশাস্ত্র বা বাগাড়ম্বর"
+    },
+    {
+      "id": "vocab_r_051",
+      "question": "Risible এর অর্থ কি?",
+      "options": {
+        "a": "স্পষ্টভাবে উচ্চারণ করা",
+        "b": "হাস্যকর",
+        "c": "ক্ষণস্থায়ী",
+        "d": "অহংকারী বা দুঃসাহসী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "হাস্যকর",
+      "explanation": "Risible = হাস্যকর"
+    },
+    {
+      "id": "vocab_r_052",
+      "question": "Ruminate এর অর্থ কি?",
+      "options": {
+        "a": "আংশিকভাবে পোড়ানো; ঝলসানো",
+        "b": "গভীরভাবে চিন্তা করা",
+        "c": "পাতন করা বা নির্যাস বের করা",
+        "d": "চারদিকে ঘুরে হাঁটা; প্রদক্ষিণ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গভীরভাবে চিন্তা করা",
+      "explanation": "Ruminate = গভীরভাবে চিন্তা করা"
+    },
+    {
+      "id": "vocab_r_053",
+      "question": "Rarefied এর অর্থ কি?",
+      "options": {
+        "a": "শক্ত বা অনমনীয় হয়ে যাওয়া",
+        "b": "গোঁড়া বা মতান্ধ",
+        "c": "বিরল বা পাতলা",
+        "d": "বিচিত্র; মিশ্রিত; রঙবেরঙা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিরল বা পাতলা",
+      "explanation": "Rarefied = বিরল বা পাতলা"
+    },
+    {
+      "id": "vocab_r_054",
+      "question": "Resolution এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত বা ক্ষতিকর",
+        "b": "নিরীহ; ক্ষতিকর নয়",
+        "c": "ধনতন্ত্র",
+        "d": "সংকল্প বা সমাধান"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সংকল্প বা সমাধান",
+      "explanation": "Resolution = সংকল্প বা সমাধান"
+    },
+    {
+      "id": "vocab_r_055",
+      "question": "Resolve এর অর্থ কি?",
+      "options": {
+        "a": "সমাধান করা বা দৃঢ় সংকল্প",
+        "b": "জাঁকজমকভাবে",
+        "c": "শারীরিক সৌন্দর্য",
+        "d": "গোপন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সমাধান করা বা দৃঢ় সংকল্প",
+      "explanation": "Resolve = সমাধান করা বা দৃঢ় সংকল্প"
     }
   ]
 }

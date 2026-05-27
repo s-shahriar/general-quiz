@@ -1079,6 +1079,656 @@
       "correct_answer": "b",
       "correct_answer_text": "ঐকতানসংগীত",
       "explanation": "Symphony = ঐকতানসংগীত"
+    },
+    {
+      "id": "vocab_s_084",
+      "question": "Salient এর অর্থ কি?",
+      "options": {
+        "a": "জরুরি বা দাবিদার",
+        "b": "স্ত্রীহত্যা",
+        "c": "প্রধান বা লক্ষণীয়",
+        "d": "উদীয়মান"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রধান বা লক্ষণীয়",
+      "explanation": "Salient = প্রধান বা লক্ষণীয়"
+    },
+    {
+      "id": "vocab_s_085",
+      "question": "Sanction এর অর্থ কি?",
+      "options": {
+        "a": "ভ্রাতৃত্ব; ভাইয়ের মতো সম্পর্ক",
+        "b": "অনুমোদন বা নিষেধাজ্ঞা",
+        "c": "গ্রামীণ; পল্লি সংক্রান্ত",
+        "d": "সংস্কৃ তিবিমুখ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অনুমোদন বা নিষেধাজ্ঞা",
+      "explanation": "Sanction = অনুমোদন বা নিষেধাজ্ঞা"
+    },
+    {
+      "id": "vocab_s_086",
+      "question": "Sardonic এর অর্থ কি?",
+      "options": {
+        "a": "গুরুত্বহীনভাবে প্রেম করে এমন ব্যক্তি",
+        "b": "উদ্বিগ্ন; অতিরিক্ত যত্নশীল",
+        "c": "বিদ্রূপাত্মক",
+        "d": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিদ্রূপাত্মক",
+      "explanation": "Sardonic = বিদ্রূপাত্মক"
+    },
+    {
+      "id": "vocab_s_087",
+      "question": "Satiate এর অর্থ কি?",
+      "options": {
+        "a": "মসৃণ; আপাতমধুর",
+        "b": "পরিতৃপ্ত করা",
+        "c": "বৃক্ষसंबंधীয়",
+        "d": "জটিল বা বক্র"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পরিতৃপ্ত করা",
+      "explanation": "Satiate = পরিতৃপ্ত করা"
+    },
+    {
+      "id": "vocab_s_088",
+      "question": "Saturnine এর অর্থ কি?",
+      "options": {
+        "a": "দারিদ্র্য বা অভাব",
+        "b": "বিষণ্ণ বা গম্ভীর",
+        "c": "ঘুরে বেড়ানো; পরিভ্রমণ করা",
+        "d": "মহিমান্বিত বা অসাধারণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিষণ্ণ বা গম্ভীর",
+      "explanation": "Saturnine = বিষণ্ণ বা গম্ভীর"
+    },
+    {
+      "id": "vocab_s_089",
+      "question": "Scurrilous এর অর্থ কি?",
+      "options": {
+        "a": "বাস্তব অভিজ্ঞতানির্ভর",
+        "b": "অপমানজনক বা কুরুচিপূর্ণ",
+        "c": "শ্রেণিগর্বী",
+        "d": "সংস্কৃ তিবিমুখ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অপমানজনক বা কুরুচিপূর্ণ",
+      "explanation": "Scurrilous = অপমানজনক বা কুরুচিপূর্ণ"
+    },
+    {
+      "id": "vocab_s_090",
+      "question": "Sedulous এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাসযোগ্য",
+        "b": "ভ্রমণসূচি বা কর্মসূচি",
+        "c": "পরিশ্রমী বা অধ্যবসায়ী",
+        "d": "পরিত্যক্ত; দায়িত্বহীন"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পরিশ্রমী বা অধ্যবসায়ী",
+      "explanation": "Sedulous = পরিশ্রমী বা অধ্যবসায়ী"
+    },
+    {
+      "id": "vocab_s_091",
+      "question": "Seminal এর অর্থ কি?",
+      "options": {
+        "a": "মৌলিক বা প্রভাবশালী",
+        "b": "সত্য এড়িয়ে যাওয়া; কৌশলে মিথ্যা বলা",
+        "c": "বিপর্যয় বা চরম ব্যর্থতা",
+        "d": "নির্লজ্জতা বা ঔদ্ধত্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মৌলিক বা প্রভাবশালী",
+      "explanation": "Seminal = মৌলিক বা প্রভাবশালী"
+    },
+    {
+      "id": "vocab_s_092",
+      "question": "Sentient এর অর্থ কি?",
+      "options": {
+        "a": "ধনী; বিত্তবান; প্রাচুর্যময়",
+        "b": "চেতনাসম্পন্ন",
+        "c": "জনহিতকর বা পরোপকারী",
+        "d": "অস্থিতিশীল বা পরিবর্তনশীল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "চেতনাসম্পন্ন",
+      "explanation": "Sentient = চেতনাসম্পন্ন"
+    },
+    {
+      "id": "vocab_s_093",
+      "question": "Sequester এর অর্থ কি?",
+      "options": {
+        "a": "আদিম বা বিশুদ্ধ",
+        "b": "নির্লজ্জতা বা ঔদ্ধত্য",
+        "c": "ক্ষণস্থায়ী",
+        "d": "পৃথক বা আলাদা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পৃথক বা আলাদা করা",
+      "explanation": "Sequester = পৃথক বা আলাদা করা"
+    },
+    {
+      "id": "vocab_s_094",
+      "question": "Serendipity এর অর্থ কি?",
+      "options": {
+        "a": "শিশুর চাকার গাড়ি; বেবি ক্যারেজ",
+        "b": "আকস্মিক সৌভাগ্য",
+        "c": "চোখের সংক্রামক রোগ",
+        "d": "বিদ্রূপাত্মক; ব্যঙ্গাত্মক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আকস্মিক সৌভাগ্য",
+      "explanation": "Serendipity = আকস্মিক সৌভাগ্য"
+    },
+    {
+      "id": "vocab_s_095",
+      "question": "Skulk এর অর্থ কি?",
+      "options": {
+        "a": "লুকিয়ে বেড়ানো",
+        "b": "আত্মতুষ্ট",
+        "c": "তিতিরজাতীয় পাখি",
+        "d": "ভ্রান্ত বা প্রতারণামূলক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "লুকিয়ে বেড়ানো",
+      "explanation": "Skulk = লুকিয়ে বেড়ানো"
+    },
+    {
+      "id": "vocab_s_096",
+      "question": "Slake এর অর্থ কি?",
+      "options": {
+        "a": "ফেরিওয়ালা; হকার",
+        "b": "তৃষ্ণা মেটানো",
+        "c": "হাঁটাচলা; পদচারণ",
+        "d": "অন্ধকারাচ্ছন্ন; বিষণ্ণ; গুরুগম্ভীর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তৃষ্ণা মেটানো",
+      "explanation": "Slake = তৃষ্ণা মেটানো"
+    },
+    {
+      "id": "vocab_s_097",
+      "question": "Slovenly এর অর্থ কি?",
+      "options": {
+        "a": "দ্রুত পালানো",
+        "b": "পুষিয়ে নেওয়া; ক্ষতিপূরণ করা",
+        "c": "অপরিচ্ছন্ন বা অগোছালো",
+        "d": "রূঢ়ভাবে প্রত্যাখ্যান করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অপরিচ্ছন্ন বা অগোছালো",
+      "explanation": "Slovenly = অপরিচ্ছন্ন বা অগোছালো"
+    },
+    {
+      "id": "vocab_s_098",
+      "question": "Sojourn এর অর্থ কি?",
+      "options": {
+        "a": "ত্বরান্বিত করা বা হঠকারী",
+        "b": "চালনি; ছাঁকনি",
+        "c": "অস্থায়ী বসবাস",
+        "d": "বিচক্ষণ বা কৌশলী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অস্থায়ী বসবাস",
+      "explanation": "Sojourn = অস্থায়ী বসবাস"
+    },
+    {
+      "id": "vocab_s_099",
+      "question": "Solace এর অর্থ কি?",
+      "options": {
+        "a": "স্বেচ্ছাচারী বা চরিত্রহীন ব্যক্তি",
+        "b": "ক্রমশ জমা হওয়া; সঞ্চিত হওয়া",
+        "c": "সান্ত্বনা",
+        "d": "সমঝোতামূলক বা শান্তিপ্রিয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সান্ত্বনা",
+      "explanation": "Solace = সান্ত্বনা"
+    },
+    {
+      "id": "vocab_s_100",
+      "question": "Solvent এর অর্থ কি?",
+      "options": {
+        "a": "দুর্বল করা",
+        "b": "অচলাবস্থা",
+        "c": "ভীরু; ভয়-ভয় স্বভাবের",
+        "d": "সচ্ছল বা ঋণ পরিশোধে সক্ষম"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সচ্ছল বা ঋণ পরিশোধে সক্ষম",
+      "explanation": "Solvent = সচ্ছল বা ঋণ পরিশোধে সক্ষম"
+    },
+    {
+      "id": "vocab_s_101",
+      "question": "Somnolent এর অর্থ কি?",
+      "options": {
+        "a": "জ্ঞানী বা প্রজ্ঞাবান",
+        "b": "অমিল বা পার্থক্য",
+        "c": "স্বচ্ছ বা পরিষ্কার",
+        "d": "ঘুম ঘুম ভাব"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ঘুম ঘুম ভাব",
+      "explanation": "Somnolent = ঘুম ঘুম ভাব"
+    },
+    {
+      "id": "vocab_s_102",
+      "question": "Sonorous এর অর্থ কি?",
+      "options": {
+        "a": "সমাজচ্যুত করা",
+        "b": "নির্বিকার",
+        "c": "তীব্র বক্তৃতা; উত্তেজিত ভাষণ দেওয়া",
+        "d": "সুমধুর বা গম্ভীর"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সুমধুর বা গম্ভীর",
+      "explanation": "Sonorous = সুমধুর বা গম্ভীর"
+    },
+    {
+      "id": "vocab_s_103",
+      "question": "Sophistry এর অর্থ কি?",
+      "options": {
+        "a": "ভ্রমণশীল; পরিভ্রমণকারী",
+        "b": "সংশয় বা অস্বস্তি",
+        "c": "কুযুক্তি বা প্রতারণামূলক তর্ক",
+        "d": "হতবাক বা স্তম্ভিত করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কুযুক্তি বা প্রতারণামূলক তর্ক",
+      "explanation": "Sophistry = কুযুক্তি বা প্রতারণামূলক তর্ক"
+    },
+    {
+      "id": "vocab_s_104",
+      "question": "Soporific এর অর্থ কি?",
+      "options": {
+        "a": "মসৃণ; আপাতমধুর",
+        "b": "ঘুমপাড়ানি",
+        "c": "বিচ্ছিন্ন হওয়া বা আলাদা হওয়া",
+        "d": "গভীর বা তাৎপর্যপূর্ণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ঘুমপাড়ানি",
+      "explanation": "Soporific = ঘুমপাড়ানি"
+    },
+    {
+      "id": "vocab_s_105",
+      "question": "Specious এর অর্থ কি?",
+      "options": {
+        "a": "ছড়িয়ে দেওয়া বা বিস্তৃত করা",
+        "b": "দরিদ্র বা নিঃস্ব",
+        "c": "আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা",
+        "d": "শিশুর চাকার গাড়ি; বেবি ক্যারেজ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা",
+      "explanation": "Specious = আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা"
+    },
+    {
+      "id": "vocab_s_106",
+      "question": "Staid এর অর্থ কি?",
+      "options": {
+        "a": "মিতব্যয়ী",
+        "b": "গম্ভীর বা রক্ষণশীল",
+        "c": "তিরস্কার",
+        "d": "ভিতরের দিকে ফেটে যাওয়া বা ধসে পড়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গম্ভীর বা রক্ষণশীল",
+      "explanation": "Staid = গম্ভীর বা রক্ষণশীল"
+    },
+    {
+      "id": "vocab_s_107",
+      "question": "Stoic এর অর্থ কি?",
+      "options": {
+        "a": "নির্বিকার",
+        "b": "উদাসীনতা বা নির্লিপ্ততা",
+        "c": "সংযুক্ত করা",
+        "d": "ছলচাতুরি; ধোঁকা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নির্বিকার",
+      "explanation": "Stoic = নির্বিকার"
+    },
+    {
+      "id": "vocab_s_108",
+      "question": "Stolid এর অর্থ কি?",
+      "options": {
+        "a": "আসীন; কম সক্রিয়",
+        "b": "ভাবলেশহীন বা আবেগহীন",
+        "c": "যৌক্তিক ও বিশ্বাসযোগ্য",
+        "d": "নির্বিকার"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভাবলেশহীন বা আবেগহীন",
+      "explanation": "Stolid = ভাবলেশহীন বা আবেগহীন"
+    },
+    {
+      "id": "vocab_s_109",
+      "question": "Striated এর অর্থ কি?",
+      "options": {
+        "a": "আশীর্বাদ; দোয়া",
+        "b": "কঠোর নিয়ম মেনে চলা ব্যক্তি",
+        "c": "ডোরাকাটা",
+        "d": "ঘৃণ্য; ঘৃণাযোগ্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ডোরাকাটা",
+      "explanation": "Striated = ডোরাকাটা"
+    },
+    {
+      "id": "vocab_s_110",
+      "question": "Strident এর অর্থ কি?",
+      "options": {
+        "a": "অন্ধকারময়; নরকতুল্য",
+        "b": "কর্কশ",
+        "c": "উপসংহার বা সমাপ্তি অংশ",
+        "d": "দৃঢ়ভাবে বলা বা জোর দেওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কর্কশ",
+      "explanation": "Strident = কর্কশ"
+    },
+    {
+      "id": "vocab_s_111",
+      "question": "Stupefy এর অর্থ কি?",
+      "options": {
+        "a": "সম্মতি; অনুমোদন",
+        "b": "জঘন্য বা অত্যন্ত ঘৃণ্য",
+        "c": "হতবাক বা স্তম্ভিত করা",
+        "d": "বর্ণালী বা পরিসর"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "হতবাক বা স্তম্ভিত করা",
+      "explanation": "Stupefy = হতবাক বা স্তম্ভিত করা"
+    },
+    {
+      "id": "vocab_s_112",
+      "question": "Subjugate এর অর্থ কি?",
+      "options": {
+        "a": "সহনশীলতা বা ধৈর্য",
+        "b": "সম্পূর্ণ বাধ্য; অধীনতাপ্রবণ",
+        "c": "তীক্ষ্ণ বা ক্ষয়কারী",
+        "d": "বশীভূত করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বশীভূত করা",
+      "explanation": "Subjugate = বশীভূত করা"
+    },
+    {
+      "id": "vocab_s_113",
+      "question": "Sublime এর অর্থ কি?",
+      "options": {
+        "a": "মহিমান্বিত বা অসাধারণ",
+        "b": "শারীরিক; দেহসংক্রান্ত",
+        "c": "ভ্রমণরত",
+        "d": "আদর্শ বা মূল prototypical"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মহিমান্বিত বা অসাধারণ",
+      "explanation": "Sublime = মহিমান্বিত বা অসাধারণ"
+    },
+    {
+      "id": "vocab_s_114",
+      "question": "Succinct এর অর্থ কি?",
+      "options": {
+        "a": "সংক্ষিপ্ত ও পরিষ্কার",
+        "b": "সরকার কর্তৃক নিজ জনগণকে হত্যা; গণহত্যা",
+        "c": "মুচি",
+        "d": "উচ্ছৃঙ্খল; লাগামহীন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সংক্ষিপ্ত ও পরিষ্কার",
+      "explanation": "Succinct = সংক্ষিপ্ত ও পরিষ্কার"
+    },
+    {
+      "id": "vocab_s_115",
+      "question": "Superfluous এর অর্থ কি?",
+      "options": {
+        "a": "অদম্য; দৃঢ়প্রতিজ্ঞ",
+        "b": "বিপথগামী বা অস্বাভাবিক",
+        "c": "বোন হত্যা; ভগিনীহত্যা",
+        "d": "অতিরিক্ত বা অনাবশ্যক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অতিরিক্ত বা অনাবশ্যক",
+      "explanation": "Superfluous = অতিরিক্ত বা অনাবশ্যক"
+    },
+    {
+      "id": "vocab_s_116",
+      "question": "Surreptitious এর অর্থ কি?",
+      "options": {
+        "a": "অনুমোদন বা প্রশংসা",
+        "b": "অভিযোগ করা; বিড়বিড় করা",
+        "c": "অস্পষ্টভাবে বর্ণনা করা",
+        "d": "গোপন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "গোপন",
+      "explanation": "Surreptitious = গোপন"
+    },
+    {
+      "id": "vocab_s_117",
+      "question": "Sycophant এর অর্থ কি?",
+      "options": {
+        "a": "চাটুকার",
+        "b": "ডোরাকাটা",
+        "c": "স্বতঃসিদ্ধ সত্য",
+        "d": "ভীরু; ভয়-ভয় স্বভাবের"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "চাটুকার",
+      "explanation": "Sycophant = চাটুকার"
+    },
+    {
+      "id": "vocab_s_118",
+      "question": "Sage এর অর্থ কি?",
+      "options": {
+        "a": "বিরস বা স্বাদহীন",
+        "b": "উন্নত করা বা ভালো করা",
+        "c": "জ্ঞানী বা প্রজ্ঞাবান",
+        "d": "সমজাতীয় বা একরকম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জ্ঞানী বা প্রজ্ঞাবান",
+      "explanation": "Sage = জ্ঞানী বা প্রজ্ঞাবান"
+    },
+    {
+      "id": "vocab_s_119",
+      "question": "Saturate এর অর্থ কি?",
+      "options": {
+        "a": "সতর্ক বা সন্দেহপ্রবণ",
+        "b": "সর্বরোগহর ঔষধ বা সমাধান",
+        "c": "সম্পৃক্ত করা বা ভিজিয়ে দেওয়া",
+        "d": "বিখ্যাত ব্যক্তি হিসেবে সমাদর করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সম্পৃক্ত করা বা ভিজিয়ে দেওয়া",
+      "explanation": "Saturate = সম্পৃক্ত করা বা ভিজিয়ে দেওয়া"
+    },
+    {
+      "id": "vocab_s_120",
+      "question": "Savor এর অর্থ কি?",
+      "options": {
+        "a": "বৃক্ষसंबंधীয়",
+        "b": "বহুভাষী",
+        "c": "মহিমান্বিত বা অসাধারণ",
+        "d": "স্বাদ নেওয়া বা উপভোগ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্বাদ নেওয়া বা উপভোগ করা",
+      "explanation": "Savor = স্বাদ নেওয়া বা উপভোগ করা"
+    },
+    {
+      "id": "vocab_s_121",
+      "question": "Secrete এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষরণ করা বা লুকিয়ে রাখা",
+        "b": "সতর্ক",
+        "c": "অসমর্থনযোগ্য",
+        "d": "অবসাদ বা ক্লান্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ক্ষরণ করা বা লুকিয়ে রাখা",
+      "explanation": "Secrete = ক্ষরণ করা বা লুকিয়ে রাখা"
+    },
+    {
+      "id": "vocab_s_122",
+      "question": "Shard এর অর্থ কি?",
+      "options": {
+        "a": "টুকরা বা খণ্ড",
+        "b": "বাতিল করা",
+        "c": "খুঁটি দিয়ে তৈরি বেষ্টনী",
+        "d": "ক্ষরণ করা বা লুকিয়ে রাখা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "টুকরা বা খণ্ড",
+      "explanation": "Shard = টুকরা বা খণ্ড"
+    },
+    {
+      "id": "vocab_s_123",
+      "question": "Skeptic এর অর্থ কি?",
+      "options": {
+        "a": "সংশয়বাদী বা অবিশ্বাসী",
+        "b": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন",
+        "c": "সতর্ক",
+        "d": "কলঙ্ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সংশয়বাদী বা অবিশ্বাসী",
+      "explanation": "Skeptic = সংশয়বাদী বা অবিশ্বাসী"
+    },
+    {
+      "id": "vocab_s_124",
+      "question": "Spectrum এর অর্থ কি?",
+      "options": {
+        "a": "নিষ্ক্রিয় বা জড়",
+        "b": "অনুনয় বিনয় করা; কাকুতি মিনতি করা",
+        "c": "বর্ণালী বা পরিসর",
+        "d": "অপ্রত্যাশিত লাভ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বর্ণালী বা পরিসর",
+      "explanation": "Spectrum = বর্ণালী বা পরিসর"
+    },
+    {
+      "id": "vocab_s_125",
+      "question": "Sporadic এর অর্থ কি?",
+      "options": {
+        "a": "অভি্যোগপ্রবণ বা খিটখিটে",
+        "b": "জনগণের অর্থনীতি; গণঅর্থনীতি",
+        "c": "বিক্ষিপ্ত বা অনিয়মিত",
+        "d": "সামঞ্জস্য বা মিল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিক্ষিপ্ত বা অনিয়মিত",
+      "explanation": "Sporadic = বিক্ষিপ্ত বা অনিয়মিত"
+    },
+    {
+      "id": "vocab_s_126",
+      "question": "Stigma এর অর্থ কি?",
+      "options": {
+        "a": "বিভ্রান্ত",
+        "b": "চিৎ হয়ে শোয়া; নিষ্ক্রিয়",
+        "c": "কলঙ্ক বা দাগ",
+        "d": "নিরাপত্তাহীন; অনিশ্চিত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কলঙ্ক বা দাগ",
+      "explanation": "Stigma = কলঙ্ক বা দাগ"
+    },
+    {
+      "id": "vocab_s_127",
+      "question": "Stint এর অর্থ কি?",
+      "options": {
+        "a": "অবসন্ন বা শক্তিহীন",
+        "b": "সীমিত সময় বা কৃপণতা করা",
+        "c": "বিরল বা পাতলা",
+        "d": "মানববিদ্বেষী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সীমিত সময় বা কৃপণতা করা",
+      "explanation": "Stint = সীমিত সময় বা কৃপণতা করা"
+    },
+    {
+      "id": "vocab_s_128",
+      "question": "Stipulate এর অর্থ কি?",
+      "options": {
+        "a": "যৌক্তিক ও বিশ্বাসযোগ্য",
+        "b": "শর্ত আরোপ করা বা নির্দিষ্ট করা",
+        "c": "অন্তর্ভুক্ত করা; শ্রেণীভুক্ত করা",
+        "d": "চাটুকার; অতিরিক্ত বাধ্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শর্ত আরোপ করা বা নির্দিষ্ট করা",
+      "explanation": "Stipulate = শর্ত আরোপ করা বা নির্দিষ্ট করা"
+    },
+    {
+      "id": "vocab_s_129",
+      "question": "Subpoena এর অর্থ কি?",
+      "options": {
+        "a": "গোপনে ষড়যন্ত্র করা",
+        "b": "আদালতের সমন বা তলব করা",
+        "c": "অভ্রান্ত",
+        "d": "অসংযম; প্রশ্রয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আদালতের সমন বা তলব করা",
+      "explanation": "Subpoena = আদালতের সমন বা তলব করা"
+    },
+    {
+      "id": "vocab_s_130",
+      "question": "Subside এর অর্থ কি?",
+      "options": {
+        "a": "শিশুসুলভ বা অপরিণত",
+        "b": "শ্রদ্ধাশীল",
+        "c": "সমষ্টি বা সংগ্রহ করা",
+        "d": "প্রশমিত হওয়া বা কমে যাওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রশমিত হওয়া বা কমে যাওয়া",
+      "explanation": "Subside = প্রশমিত হওয়া বা কমে যাওয়া"
+    },
+    {
+      "id": "vocab_s_131",
+      "question": "Substantiate এর অর্থ কি?",
+      "options": {
+        "a": "উপযুক্ত বা যথাযথ",
+        "b": "মুখোশ খুলে দেওয়া বা ভুল প্রমাণ করা",
+        "c": "পীড়িত; ব্যাধিগ্রস্ত; অস্বাস্থ্যকরভাবে মৃত্যুচিন্তাগ্রস্ত",
+        "d": "প্রমাণ করা বা সমর্থন করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রমাণ করা বা সমর্থন করা",
+      "explanation": "Substantiate = প্রমাণ করা বা সমর্থন করা"
+    },
+    {
+      "id": "vocab_s_132",
+      "question": "Supersede এর অর্থ কি?",
+      "options": {
+        "a": "অনুঘটক বা প্রেরণাদাতা",
+        "b": "পরিখা; দুর্গখাল",
+        "c": "উদ্বেগ; উৎকণ্ঠা",
+        "d": "প্রতিস্থাপন করা বা বাতিল করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রতিস্থাপন করা বা বাতিল করা",
+      "explanation": "Supersede = প্রতিস্থাপন করা বা বাতিল করা"
+    },
+    {
+      "id": "vocab_s_133",
+      "question": "Supposition এর অর্থ কি?",
+      "options": {
+        "a": "মুখমণ্ডল; চেহারা",
+        "b": "অক্লান্ত বা ক্লান্তিহীন",
+        "c": "অনুমান বা ধারণা",
+        "d": "জ্ঞানী বা প্রজ্ঞাবান"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অনুমান বা ধারণা",
+      "explanation": "Supposition = অনুমান বা ধারণা"
     }
   ]
 }

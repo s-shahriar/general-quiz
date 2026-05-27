@@ -156,6 +156,71 @@
       "correct_answer": "c",
       "correct_answer_text": "স্ত্রীহত্যা",
       "explanation": "Uxoricide = স্ত্রীহত্যা"
+    },
+    {
+      "id": "vocab_u_013",
+      "question": "Ubiquitous এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক; স্তম্ভিত",
+        "b": "ঐকতানসংগীত",
+        "c": "পণ্ডিত বা জ্ঞানী",
+        "d": "সর্বব্যাপী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সর্বব্যাপী",
+      "explanation": "Ubiquitous = সর্বব্যাপী"
+    },
+    {
+      "id": "vocab_u_014",
+      "question": "Umbrage এর অর্থ কি?",
+      "options": {
+        "a": "নিন্দনীয় বা দোষী",
+        "b": "পাশাপাশি স্থাপন করা",
+        "c": "আকস্মিক সৌভাগ্য",
+        "d": "বিরক্তি বা অপমান বোধ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিরক্তি বা অপমান বোধ",
+      "explanation": "Umbrage = বিরক্তি বা অপমান বোধ"
+    },
+    {
+      "id": "vocab_u_015",
+      "question": "Unctuous এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত বা অত্যধিক",
+        "b": "চাটুকার বা মেকি আন্তরিক",
+        "c": "ক্ষতিকর বা বিষাক্ত",
+        "d": "দুশ্চরিত্র ব্যক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "চাটুকার বা মেকি আন্তরিক",
+      "explanation": "Unctuous = চাটুকার বা মেকি আন্তরিক"
+    },
+    {
+      "id": "vocab_u_016",
+      "question": "Untoward এর অর্থ কি?",
+      "options": {
+        "a": "মিথ্যা প্রমাণ করা বা বিপরীত ইঙ্গিত দেওয়া",
+        "b": "সমর্থন করা বা শক্তিশালী করা",
+        "c": "অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক",
+        "d": "অর্থসংক্রান্ত; আর্থিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক",
+      "explanation": "Untoward = অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক"
+    },
+    {
+      "id": "vocab_u_017",
+      "question": "Usury এর অর্থ কি?",
+      "options": {
+        "a": "সুদখোরি",
+        "b": "গভীরভাবে ভাবা",
+        "c": "বিচিত্র; মিশ্রিত; রঙবেরঙা",
+        "d": "বিলুপ্ত করা বা ছিনিয়ে নেওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সুদখোরি",
+      "explanation": "Usury = সুদখোরি"
     }
   ]
 }

@@ -169,6 +169,331 @@
       "correct_answer": "d",
       "correct_answer_text": "দড়ির উপর হেঁটে খেলা দেখায় যে; দড়িনাট্যশিল্পী",
       "explanation": "Funambulist = দড়ির উপর হেঁটে খেলা দেখায় যে; দড়িনাট্যশিল্পী"
+    },
+    {
+      "id": "vocab_f_014",
+      "question": "Facetious এর অর্থ কি?",
+      "options": {
+        "a": "রসিক বা ইয়ার্কিপূর্ণ",
+        "b": "হৈ-চৈ; কোলাহল",
+        "c": "উজ্জ্বল বা আলো ছড়ায় এমন",
+        "d": "ব্যয়বহুল; জাঁকালো"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "রসিক বা ইয়ার্কিপূর্ণ",
+      "explanation": "Facetious = রসিক বা ইয়ার্কিপূর্ণ"
+    },
+    {
+      "id": "vocab_f_015",
+      "question": "Facile এর অর্থ কি?",
+      "options": {
+        "a": "সহজলভ্য বা অগভীর",
+        "b": "ছলচাতুরি; ধোঁকা",
+        "c": "বাণিজ্যিক মন্দাভাব",
+        "d": "ঝিনুক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহজলভ্য বা অগভীর",
+      "explanation": "Facile = সহজলভ্য বা অগভীর"
+    },
+    {
+      "id": "vocab_f_016",
+      "question": "Fallacious এর অর্থ কি?",
+      "options": {
+        "a": "নিস্তেজ হয়ে পড়া; দুর্বল হওয়া",
+        "b": "বিশ্বাসঘাতকতা; বিশ্বাসভঙ্গ",
+        "c": "ভ্রান্ত বা প্রতারণামূলক",
+        "d": "বোন হত্যা; ভগিনীহত্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভ্রান্ত বা প্রতারণামূলক",
+      "explanation": "Fallacious = ভ্রান্ত বা প্রতারণামূলক"
+    },
+    {
+      "id": "vocab_f_017",
+      "question": "Fatuous এর অর্থ কি?",
+      "options": {
+        "a": "বোকা বা নির্বোধ",
+        "b": "ধীরে ধীরে হাঁটা; আরামে চলা",
+        "c": "সুপ্ত বা অপ্রকাশিত",
+        "d": "অভিশাপ বা তীব্র ঘৃণার পাত্র"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বোকা বা নির্বোধ",
+      "explanation": "Fatuous = বোকা বা নির্বোধ"
+    },
+    {
+      "id": "vocab_f_018",
+      "question": "Fawn এর অর্থ কি?",
+      "options": {
+        "a": "অপ্রাসঙ্গিক বা বাইরের",
+        "b": "মঠ",
+        "c": "লঙ্ঘন বা অপরাধ",
+        "d": "তোষামোদ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তোষামোদ করা",
+      "explanation": "Fawn = তোষামোদ করা"
+    },
+    {
+      "id": "vocab_f_019",
+      "question": "Fecund এর অর্থ কি?",
+      "options": {
+        "a": "উর্বর বা উৎপাদনশীল",
+        "b": "শারীরিক; দেহসংক্রান্ত",
+        "c": "চাটুকার",
+        "d": "দীপ্তিমান"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উর্বর বা উৎপাদনশীল",
+      "explanation": "Fecund = উর্বর বা উৎপাদনশীল"
+    },
+    {
+      "id": "vocab_f_020",
+      "question": "Feign এর অর্থ কি?",
+      "options": {
+        "a": "তীক্ষ্ণ বা জোরালো",
+        "b": "অবহিত করা বা জানানো",
+        "c": "ভান করা",
+        "d": "ভীত করা বা নিরুৎসাহিত করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভান করা",
+      "explanation": "Feign = ভান করা"
+    },
+    {
+      "id": "vocab_f_021",
+      "question": "Felicitous এর অর্থ কি?",
+      "options": {
+        "a": "পুনরাবৃত্তি",
+        "b": "খুঁত ধরা",
+        "c": "বিতর্কিত বা বিবাদমূলক",
+        "d": "উপযুক্ত বা মনোরম"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উপযুক্ত বা মনোরম",
+      "explanation": "Felicitous = উপযুক্ত বা মনোরম"
+    },
+    {
+      "id": "vocab_f_022",
+      "question": "Fervor এর অর্থ কি?",
+      "options": {
+        "a": "ধীরে ধীরে হাঁটা; আরামে চলা",
+        "b": "সমর্থন করা",
+        "c": "প্রবল আবেগ বা উৎসাহ",
+        "d": "কাজ এড়ানোর জন্য অসুস্থতার ভান করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রবল আবেগ বা উৎসাহ",
+      "explanation": "Fervor = প্রবল আবেগ বা উৎসাহ"
+    },
+    {
+      "id": "vocab_f_023",
+      "question": "Fetter এর অর্থ কি?",
+      "options": {
+        "a": "স্বল্পভাষী; চুপচাপ",
+        "b": "লিপিবদ্ধ করা বা দিনলিপি",
+        "c": "শৃঙ্খল বা বাধা দেওয়া",
+        "d": "রহস্য বা ধাঁধা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "শৃঙ্খল বা বাধা দেওয়া",
+      "explanation": "Fetter = শৃঙ্খল বা বাধা দেওয়া"
+    },
+    {
+      "id": "vocab_f_024",
+      "question": "Flag এর অর্থ কি?",
+      "options": {
+        "a": "দুর্বল হওয়া",
+        "b": "অনুমোদন বা নিষেধাজ্ঞা",
+        "c": "বিচক্ষণতা",
+        "d": "সর্বব্যাপী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্বল হওয়া",
+      "explanation": "Flag = দুর্বল হওয়া"
+    },
+    {
+      "id": "vocab_f_025",
+      "question": "Fledgling এর অর্থ কি?",
+      "options": {
+        "a": "সহজে বাঁকানো যায়; নমনীয়",
+        "b": "নিস্তেজ হয়ে পড়া; দুর্বল হওয়া",
+        "c": "আদর্শ বা মূল prototypical",
+        "d": "অনভিজ্ঞ বা নবীন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনভিজ্ঞ বা নবীন",
+      "explanation": "Fledgling = অনভিজ্ঞ বা নবীন"
+    },
+    {
+      "id": "vocab_f_026",
+      "question": "Flout এর অর্থ কি?",
+      "options": {
+        "a": "মুলতবি অবস্থা বা স্থগিত অবস্থা",
+        "b": "অবজ্ঞা করা",
+        "c": "যুদ্ধংদেহী বা ঝগড়াটে",
+        "d": "ভর্ৎসনা করা; তিরস্কার করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অবজ্ঞা করা",
+      "explanation": "Flout = অবজ্ঞা করা"
+    },
+    {
+      "id": "vocab_f_027",
+      "question": "Foment এর অর্থ কি?",
+      "options": {
+        "a": "দুশ্চরিত্র ব্যক্তি",
+        "b": "উসকানি দেওয়া",
+        "c": "ঘুমে কথা বলা",
+        "d": "উৎসাহ; প্রাণশক্তি; তেজ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উসকানি দেওয়া",
+      "explanation": "Foment = উসকানি দেওয়া"
+    },
+    {
+      "id": "vocab_f_028",
+      "question": "Forbearance এর অর্থ কি?",
+      "options": {
+        "a": "সহনশীলতা বা ধৈর্য",
+        "b": "সংশয়বাদী বা অবিশ্বাসী",
+        "c": "দুঃসাহস বা ঔদ্ধত্য",
+        "d": "ধীরে ধীরে হাঁটা; আরামে চলা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহনশীলতা বা ধৈর্য",
+      "explanation": "Forbearance = সহনশীলতা বা ধৈর্য"
+    },
+    {
+      "id": "vocab_f_029",
+      "question": "Forestall এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণ বা কৌশলী",
+        "b": "অকাট্য বা অনস্বীকার্য",
+        "c": "আগেই প্রতিরোধ করা",
+        "d": "ভয়; উদ্বেগ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আগেই প্রতিরোধ করা",
+      "explanation": "Forestall = আগেই প্রতিরোধ করা"
+    },
+    {
+      "id": "vocab_f_030",
+      "question": "Forswear এর অর্থ কি?",
+      "options": {
+        "a": "দানশীল",
+        "b": "ঘৃণ্য; ঘৃণাযোগ্য",
+        "c": "সন্তুষ্ট করা",
+        "d": "শপথ করে ত্যাগ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শপথ করে ত্যাগ করা",
+      "explanation": "Forswear = শপথ করে ত্যাগ করা"
+    },
+    {
+      "id": "vocab_f_031",
+      "question": "Fractious এর অর্থ কি?",
+      "options": {
+        "a": "বাকচাতুরী বা ঘুরিয়ে কথা বলা",
+        "b": "অপবাদ; মিথ্যা দোষারোপ",
+        "c": "বিচ্ছিন্ন করা",
+        "d": "ঝগড়াটে বা খিটখিটে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ঝগড়াটে বা খিটখিটে",
+      "explanation": "Fractious = ঝগড়াটে বা খিটখিটে"
+    },
+    {
+      "id": "vocab_f_032",
+      "question": "Frugal এর অর্থ কি?",
+      "options": {
+        "a": "সামান্য বেতন; অল্প পারিশ্রমিক",
+        "b": "পূর্বাভাস",
+        "c": "দ্রুত বৃদ্ধি পাওয়া; বিস্তার লাভ করা",
+        "d": "মিতব্যয়ী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মিতব্যয়ী",
+      "explanation": "Frugal = মিতব্যয়ী"
+    },
+    {
+      "id": "vocab_f_033",
+      "question": "Fulminate এর অর্থ কি?",
+      "options": {
+        "a": "তীব্র সমালোচনা করা",
+        "b": "গোঁড়া বা মতান্ধ",
+        "c": "আঁকড়ে থাকা বা বিভক্ত করা",
+        "d": "স্থূলতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "তীব্র সমালোচনা করা",
+      "explanation": "Fulminate = তীব্র সমালোচনা করা"
+    },
+    {
+      "id": "vocab_f_034",
+      "question": "Furtive এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক বা স্তম্ভিত করা",
+        "b": "ক্ষিপ্ত; উন্মত্ত; উত্তেজিত",
+        "c": "উদ্যমহীন বা নিস্পৃহ",
+        "d": "গোপন বা চোরা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "গোপন বা চোরা",
+      "explanation": "Furtive = গোপন বা চোরা"
+    },
+    {
+      "id": "vocab_f_035",
+      "question": "Facilitate এর অর্থ কি?",
+      "options": {
+        "a": "অভিশাপ",
+        "b": "বিদ্রূপাত্মকভাবে বর্ণনা করা",
+        "c": "প্রাথমিক বা সবে শুরু হচ্ছে",
+        "d": "সহজ করা বা সুবিধা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সহজ করা বা সুবিধা করা",
+      "explanation": "Facilitate = সহজ করা বা সুবিধা করা"
+    },
+    {
+      "id": "vocab_f_036",
+      "question": "Fawning এর অর্থ কি?",
+      "options": {
+        "a": "প্রধান বা লক্ষণীয়",
+        "b": "নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা",
+        "c": "কৃ পণতা করা; সংক্ষেপ করা",
+        "d": "তোষামোদপূর্ণ বা চাটুকারিতাপূর্ণ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তোষামোদপূর্ণ বা চাটুকারিতাপূর্ণ",
+      "explanation": "Fawning = তোষামোদপূর্ণ বা চাটুকারিতাপূর্ণ"
+    },
+    {
+      "id": "vocab_f_037",
+      "question": "Frugality এর অর্থ কি?",
+      "options": {
+        "a": "আদর্শ বা মূল prototypical",
+        "b": "বিচ্ছিন্ন হওয়া বা আলাদা হওয়া",
+        "c": "মিতব্যয়িতা বা কৃপণতা",
+        "d": "প্রভাব ফেলা; অতিক্রম করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মিতব্যয়িতা বা কৃপণতা",
+      "explanation": "Frugality = মিতব্যয়িতা বা কৃপণতা"
+    },
+    {
+      "id": "vocab_f_038",
+      "question": "Futile এর অর্থ কি?",
+      "options": {
+        "a": "নিরর্থক বা বৃথা",
+        "b": "করুণার অনুভূতি; বেদনাবোধ",
+        "c": "খাপ খাওয়াতে অক্ষম; অপ্রতিযোজ্য",
+        "d": "নিন্দা বা অপমান"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নিরর্থক বা বৃথা",
+      "explanation": "Futile = নিরর্থক বা বৃথা"
     }
   ]
 }

@@ -104,6 +104,266 @@
       "correct_answer": "d",
       "correct_answer_text": "উজ্জ্বল; চকচকে",
       "explanation": "Lustrous = উজ্জ্বল; চকচকে"
+    },
+    {
+      "id": "vocab_l_009",
+      "question": "Laconic এর অর্থ কি?",
+      "options": {
+        "a": "প্রচুর উৎপাদনশীল",
+        "b": "অস্বাভাবিক বা নিয়মবহির্ভূত",
+        "c": "অহংকারী বা দুঃসাহসী",
+        "d": "স্বল্পভাষী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্বল্পভাষী",
+      "explanation": "Laconic = স্বল্পভাষী"
+    },
+    {
+      "id": "vocab_l_010",
+      "question": "Languid এর অর্থ কি?",
+      "options": {
+        "a": "রহস্যময় বা গুপ্ত",
+        "b": "অবসন্ন বা শক্তিহীন",
+        "c": "ঘুমপাড়ানি",
+        "d": "বশীভূত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অবসন্ন বা শক্তিহীন",
+      "explanation": "Languid = অবসন্ন বা শক্তিহীন"
+    },
+    {
+      "id": "vocab_l_011",
+      "question": "Largess এর অর্থ কি?",
+      "options": {
+        "a": "দানশীলতা",
+        "b": "অবহেলাকারী বা দায়িত্বহীন",
+        "c": "প্রশ্নবাণে জর্জরিত করা",
+        "d": "প্রতিরোধ করা; বিতাড়িত করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দানশীলতা",
+      "explanation": "Largess = দানশীলতা"
+    },
+    {
+      "id": "vocab_l_012",
+      "question": "Lassitude এর অর্থ কি?",
+      "options": {
+        "a": "অবসাদ বা ক্লান্তি",
+        "b": "বৃক্ষसंबंधীয়",
+        "c": "রোধ করা",
+        "d": "রূঢ়ভাবে প্রত্যাখ্যান করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অবসাদ বা ক্লান্তি",
+      "explanation": "Lassitude = অবসাদ বা ক্লান্তি"
+    },
+    {
+      "id": "vocab_l_013",
+      "question": "Latent এর অর্থ কি?",
+      "options": {
+        "a": "উপসংহার বা সমাপ্তি অংশ",
+        "b": "সুপ্ত বা অপ্রকাশিত",
+        "c": "অলস বা নিস্তেজ",
+        "d": "সংক্ষিপ্ত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সুপ্ত বা অপ্রকাশিত",
+      "explanation": "Latent = সুপ্ত বা অপ্রকাশিত"
+    },
+    {
+      "id": "vocab_l_014",
+      "question": "Laud এর অর্থ কি?",
+      "options": {
+        "a": "বের করে আনা",
+        "b": "প্রশংসা করা",
+        "c": "সচ্ছল বা ধনী",
+        "d": "মুখমণ্ডল; চেহারা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রশংসা করা",
+      "explanation": "Laud = প্রশংসা করা"
+    },
+    {
+      "id": "vocab_l_015",
+      "question": "Lethargic এর অর্থ কি?",
+      "options": {
+        "a": "কষ্টসাধ্য বা কঠিন",
+        "b": "অলস বা নিস্তেজ",
+        "c": "আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা",
+        "d": "কুটিল; কপট"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অলস বা নিস্তেজ",
+      "explanation": "Lethargic = অলস বা নিস্তেজ"
+    },
+    {
+      "id": "vocab_l_016",
+      "question": "Levee এর অর্থ কি?",
+      "options": {
+        "a": "যোগ্য বা শর্তসাপেক্ষ",
+        "b": "বিচক্ষণ বা বোধসম্পন্ন",
+        "c": "নদীবাঁধ",
+        "d": "লিপিবদ্ধ করা বা দিনলিপি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নদীবাঁধ",
+      "explanation": "Levee = নদীবাঁধ"
+    },
+    {
+      "id": "vocab_l_017",
+      "question": "Levity এর অর্থ কি?",
+      "options": {
+        "a": "ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া",
+        "b": "অপরিচ্ছন্ন বা অগোছালো",
+        "c": "সাহসী",
+        "d": "লঘুত্ব বা চপলতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "লঘুত্ব বা চপলতা",
+      "explanation": "Levity = লঘুত্ব বা চপলতা"
+    },
+    {
+      "id": "vocab_l_018",
+      "question": "Libertine এর অর্থ কি?",
+      "options": {
+        "a": "কার্যকর বা সম্ভাব্য",
+        "b": "স্বতঃসিদ্ধ সত্য",
+        "c": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+        "d": "স্বেচ্ছাচারী বা চরিত্রহীন ব্যক্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "স্বেচ্ছাচারী বা চরিত্রহীন ব্যক্তি",
+      "explanation": "Libertine = স্বেচ্ছাচারী বা চরিত্রহীন ব্যক্তি"
+    },
+    {
+      "id": "vocab_l_019",
+      "question": "Lionize এর অর্থ কি?",
+      "options": {
+        "a": "বিখ্যাত ব্যক্তি হিসেবে সমাদর করা",
+        "b": "অবহিত করা বা জানানো",
+        "c": "অত্যন্ত শোচনীয়; গুরুতর",
+        "d": "চাটুকার; অতিরিক্ত বাধ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিখ্যাত ব্যক্তি হিসেবে সমাদর করা",
+      "explanation": "Lionize = বিখ্যাত ব্যক্তি হিসেবে সমাদর করা"
+    },
+    {
+      "id": "vocab_l_020",
+      "question": "Lissome এর অর্থ কি?",
+      "options": {
+        "a": "সংশয় বা অস্বস্তি",
+        "b": "অমিল বা পার্থক্য",
+        "c": "কাজ এড়ানোর জন্য অসুস্থতার ভান করা",
+        "d": "নমনীয় বা কমনীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নমনীয় বা কমনীয়",
+      "explanation": "Lissome = নমনীয় বা কমনীয়"
+    },
+    {
+      "id": "vocab_l_021",
+      "question": "Listless এর অর্থ কি?",
+      "options": {
+        "a": "কঠোর",
+        "b": "দানশীল বা উপকারী",
+        "c": "সংকীর্ণতা বা বিচ্ছিন্নতা",
+        "d": "উদ্যমহীন বা নিস্পৃহ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উদ্যমহীন বা নিস্পৃহ",
+      "explanation": "Listless = উদ্যমহীন বা নিস্পৃহ"
+    },
+    {
+      "id": "vocab_l_022",
+      "question": "Livid এর অর্থ কি?",
+      "options": {
+        "a": "প্রচণ্ড ক্রুদ্ধ",
+        "b": "জননেতা যিনি আবেগ ব্যবহার করেন",
+        "c": "শ্রদ্ধা করা",
+        "d": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "প্রচণ্ড ক্রুদ্ধ",
+      "explanation": "Livid = প্রচণ্ড ক্রুদ্ধ"
+    },
+    {
+      "id": "vocab_l_023",
+      "question": "Loquacious এর অর্থ কি?",
+      "options": {
+        "a": "বাচাল",
+        "b": "ভীত করা বা নিরুৎসাহিত করা",
+        "c": "লোক দেখানো কিন্তু অন্তঃসারশূন্য",
+        "d": "আসীন; কম সক্রিয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বাচাল",
+      "explanation": "Loquacious = বাচাল"
+    },
+    {
+      "id": "vocab_l_024",
+      "question": "Lucid এর অর্থ কি?",
+      "options": {
+        "a": "রোগসংক্রান্ত বা অস্বাভাবিক",
+        "b": "স্বচ্ছ বা সহজে বোঝা যায় এমন",
+        "c": "লিপিবদ্ধ করা বা দিনলিপি",
+        "d": "করাতের দাঁতের মতো কাটা; দাঁতযুক্ত প্রান্ত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বচ্ছ বা সহজে বোঝা যায় এমন",
+      "explanation": "Lucid = স্বচ্ছ বা সহজে বোঝা যায় এমন"
+    },
+    {
+      "id": "vocab_l_025",
+      "question": "Lugubrious এর অর্থ কি?",
+      "options": {
+        "a": "যৌক্তিক ও বিশ্বাসযোগ্য",
+        "b": "উপযুক্ত বা মনোরম",
+        "c": "অসংখ্য",
+        "d": "শোকাতুর বা বিষণ্ণ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শোকাতুর বা বিষণ্ণ",
+      "explanation": "Lugubrious = শোকাতুর বা বিষণ্ণ"
+    },
+    {
+      "id": "vocab_l_026",
+      "question": "Lumber এর অর্থ কি?",
+      "options": {
+        "a": "ভারীভাবে ও ধীরে চলা",
+        "b": "সম্পূর্ণরূপে ধ্বংস করা",
+        "c": "দুর্গন্ধযুক্ত বা ক্ষতিকর",
+        "d": "উগ্র জাতীয়তাবাদ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভারীভাবে ও ধীরে চলা",
+      "explanation": "Lumber = ভারীভাবে ও ধীরে চলা"
+    },
+    {
+      "id": "vocab_l_027",
+      "question": "Luminous এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘসূত্রী বা বিলম্বকারী",
+        "b": "উজ্জ্বল বা আলো ছড়ায় এমন",
+        "c": "উগ্র জাতীয়তাবাদ",
+        "d": "বিরক্ত করা; উত্যক্ত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উজ্জ্বল বা আলো ছড়ায় এমন",
+      "explanation": "Luminous = উজ্জ্বল বা আলো ছড়ায় এমন"
+    },
+    {
+      "id": "vocab_l_028",
+      "question": "Log এর অর্থ কি?",
+      "options": {
+        "a": "লিপিবদ্ধ করা বা দিনলিপি",
+        "b": "জাঁকজমক; আড়ম্বর",
+        "c": "উদ্ভাবনী",
+        "d": "দমন করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "লিপিবদ্ধ করা বা দিনলিপি",
+      "explanation": "Log = লিপিবদ্ধ করা বা দিনলিপি"
     }
   ]
 }

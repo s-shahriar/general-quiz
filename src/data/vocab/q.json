@@ -104,6 +104,136 @@
       "correct_answer": "c",
       "correct_answer_text": "নিষ্ক্রিয়; শান্ত",
       "explanation": "Quiescent = নিষ্ক্রিয়; শান্ত"
+    },
+    {
+      "id": "vocab_q_009",
+      "question": "Quaff এর অর্থ কি?",
+      "options": {
+        "a": "আনুষ্ঠানিকভাবে ত্যাগ করা",
+        "b": "ঢকঢক করে পান করা",
+        "c": "অসম্মান করা বা বিশ্বাসযোগ্যতা নষ্ট করা",
+        "d": "ভীরু; ভয়-ভয় স্বভাবের"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ঢকঢক করে পান করা",
+      "explanation": "Quaff = ঢকঢক করে পান করা"
+    },
+    {
+      "id": "vocab_q_010",
+      "question": "Quagmire এর অর্থ কি?",
+      "options": {
+        "a": "নীতিহীন; বিবেকহীন",
+        "b": "সম্পূর্ণরূপে ধ্বংস করা",
+        "c": "জলাভূমি বা জটিল পরিস্থিতি",
+        "d": "একগুঁয়ে বা কঠোর"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জলাভূমি বা জটিল পরিস্থিতি",
+      "explanation": "Quagmire = জলাভূমি বা জটিল পরিস্থিতি"
+    },
+    {
+      "id": "vocab_q_011",
+      "question": "Quail এর অর্থ কি?",
+      "options": {
+        "a": "বাধ্য বা আজ্ঞাকারী",
+        "b": "অভি্যোগপ্রবণ বা খিটখিটে",
+        "c": "ভয়ে পিছিয়ে যাওয়া",
+        "d": "স্বগতোক্তি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভয়ে পিছিয়ে যাওয়া",
+      "explanation": "Quail = ভয়ে পিছিয়ে যাওয়া"
+    },
+    {
+      "id": "vocab_q_012",
+      "question": "Qualm এর অর্থ কি?",
+      "options": {
+        "a": "মদ্যপান করে হৈ-হুল্লোড় করা",
+        "b": "ভীতিপ্রদ বা সম্মানযোগ্য",
+        "c": "সংশয় বা অস্বস্তি",
+        "d": "মশলাদার; উদ্দীপক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সংশয় বা অস্বস্তি",
+      "explanation": "Qualm = সংশয় বা অস্বস্তি"
+    },
+    {
+      "id": "vocab_q_013",
+      "question": "Querulous এর অর্থ কি?",
+      "options": {
+        "a": "লঘুত্ব বা চপলতা",
+        "b": "অভি্যোগপ্রবণ বা খিটখিটে",
+        "c": "রাজহত্যা",
+        "d": "অসংখ্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভি্যোগপ্রবণ বা খিটখিটে",
+      "explanation": "Querulous = অভি্যোগপ্রবণ বা খিটখিটে"
+    },
+    {
+      "id": "vocab_q_014",
+      "question": "Quibble এর অর্থ কি?",
+      "options": {
+        "a": "দৃষ্টান্ত বা মডেল",
+        "b": "একত্রিত হওয়া বা মিলিত হওয়া",
+        "c": "লজ্জাজনক বা অপমানজনক",
+        "d": "ছোটখাটো বিষয়ে তর্ক করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ছোটখাটো বিষয়ে তর্ক করা",
+      "explanation": "Quibble = ছোটখাটো বিষয়ে তর্ক করা"
+    },
+    {
+      "id": "vocab_q_015",
+      "question": "Quintessential এর অর্থ কি?",
+      "options": {
+        "a": "সর্বোৎকৃষ্ট বা আদর্শ উদাহরণ",
+        "b": "বিদ্বেষ বা ঘৃণা",
+        "c": "বিজ্ঞ ব্যক্তি; পণ্ডিত",
+        "d": "পুস্তিকা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সর্বোৎকৃষ্ট বা আদর্শ উদাহরণ",
+      "explanation": "Quintessential = সর্বোৎকৃষ্ট বা আদর্শ উদাহরণ"
+    },
+    {
+      "id": "vocab_q_016",
+      "question": "Quixotic এর অর্থ কি?",
+      "options": {
+        "a": "উপসংহার বা সমাপ্তি অংশ",
+        "b": "সম্পৃক্ত করা বা ভিজিয়ে দেওয়া",
+        "c": "বিলোপ বা বিচ্ছেদ",
+        "d": "আদর্শবাদী কিন্তু অবাস্তব"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আদর্শবাদী কিন্তু অবাস্তব",
+      "explanation": "Quixotic = আদর্শবাদী কিন্তু অবাস্তব"
+    },
+    {
+      "id": "vocab_q_017",
+      "question": "Quotidian এর অর্থ কি?",
+      "options": {
+        "a": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+        "b": "দৈনন্দিন বা সাধারণ",
+        "c": "উপশম করা বা লাঘব করা",
+        "d": "দীর্ঘায়িত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দৈনন্দিন বা সাধারণ",
+      "explanation": "Quotidian = দৈনন্দিন বা সাধারণ"
+    },
+    {
+      "id": "vocab_q_018",
+      "question": "Qualified এর অর্থ কি?",
+      "options": {
+        "a": "যোগ্য বা শর্তসাপেক্ষ",
+        "b": "সাজসজ্জা করা",
+        "c": "বিখ্যাত ব্যক্তি হিসেবে সমাদর করা",
+        "d": "কঠোর নিয়ম মেনে চলা ব্যক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "যোগ্য বা শর্তসাপেক্ষ",
+      "explanation": "Qualified = যোগ্য বা শর্তসাপেক্ষ"
     }
   ]
 }

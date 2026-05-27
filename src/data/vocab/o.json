@@ -286,6 +286,201 @@
       "correct_answer": "a",
       "correct_answer_text": "ঝিনুক",
       "explanation": "Oyster = ঝিনুক"
+    },
+    {
+      "id": "vocab_o_023",
+      "question": "Obdurate এর অর্থ কি?",
+      "options": {
+        "a": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়",
+        "b": "অসামঞ্জস্যপূর্ণ বা বেসুরো",
+        "c": "একগুঁয়ে বা কঠোর",
+        "d": "বিভ্রান্ত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "একগুঁয়ে বা কঠোর",
+      "explanation": "Obdurate = একগুঁয়ে বা কঠোর"
+    },
+    {
+      "id": "vocab_o_024",
+      "question": "Obfuscate এর অর্থ কি?",
+      "options": {
+        "a": "চোখের সংক্রামক রোগ",
+        "b": "ছলচাতুরি; ধোঁকা",
+        "c": "পাতলা বা দুর্বল",
+        "d": "বিভ্রান্ত করা বা অস্পষ্ট করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিভ্রান্ত করা বা অস্পষ্ট করা",
+      "explanation": "Obfuscate = বিভ্রান্ত করা বা অস্পষ্ট করা"
+    },
+    {
+      "id": "vocab_o_025",
+      "question": "Oblique এর অর্থ কি?",
+      "options": {
+        "a": "পার্থিব বা সাধারণ",
+        "b": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা",
+        "c": "ক্ষরণ করা বা লুকিয়ে রাখা",
+        "d": "তির্যক বা পরোক্ষ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তির্যক বা পরোক্ষ",
+      "explanation": "Oblique = তির্যক বা পরোক্ষ"
+    },
+    {
+      "id": "vocab_o_026",
+      "question": "Obstinate এর অর্থ কি?",
+      "options": {
+        "a": "স্পষ্ট; সহজে পাঠযোগ্য",
+        "b": "লজ্জাজনক বা অপমানজনক",
+        "c": "একগুঁয়ে বা জেদি",
+        "d": "নমনীয় বা কমনীয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "একগুঁয়ে বা জেদি",
+      "explanation": "Obstinate = একগুঁয়ে বা জেদি"
+    },
+    {
+      "id": "vocab_o_027",
+      "question": "Obviate এর অর্থ কি?",
+      "options": {
+        "a": "কালবিরুদ্ধ বা বেমানান",
+        "b": "দূর করা বা প্রতিরোধ করা",
+        "c": "নির্দয়",
+        "d": "গাছপালা বিদ্যা; বৃক্ষ গবেষণা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দূর করা বা প্রতিরোধ করা",
+      "explanation": "Obviate = দূর করা বা প্রতিরোধ করা"
+    },
+    {
+      "id": "vocab_o_028",
+      "question": "Occlude এর অর্থ কি?",
+      "options": {
+        "a": "গুরুত্বহীন বা তুচ্ছ",
+        "b": "প্রতিশোধপরায়ণ",
+        "c": "বন্ধ করা",
+        "d": "উপশম করা বা লাঘব করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বন্ধ করা",
+      "explanation": "Occlude = বন্ধ করা"
+    },
+    {
+      "id": "vocab_o_029",
+      "question": "Onerous এর অর্থ কি?",
+      "options": {
+        "a": "কষ্টসাধ্য বা দুর্বহ",
+        "b": "অতিরিক্ত বা অত্যধিক",
+        "c": "নির্বিকার বা ভাবলেশহীন",
+        "d": "সুপ্ত বা অপ্রকাশিত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কষ্টসাধ্য বা দুর্বহ",
+      "explanation": "Onerous = কষ্টসাধ্য বা দুর্বহ"
+    },
+    {
+      "id": "vocab_o_030",
+      "question": "Opaque এর অর্থ কি?",
+      "options": {
+        "a": "অস্বচ্ছ",
+        "b": "নীরস; স্বাদহীন; প্রাণহীন",
+        "c": "শিশুর চাকার গাড়ি; বেবি ক্যারেজ",
+        "d": "নোংরা; ঘৃণ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অস্বচ্ছ",
+      "explanation": "Opaque = অস্বচ্ছ"
+    },
+    {
+      "id": "vocab_o_031",
+      "question": "Opprobrium এর অর্থ কি?",
+      "options": {
+        "a": "নিন্দা বা অপমান",
+        "b": "নাছোড়বান্দা বা জেদি",
+        "c": "প্রতারণা বা কপটতা",
+        "d": "অলস বা নিস্তেজ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নিন্দা বা অপমান",
+      "explanation": "Opprobrium = নিন্দা বা অপমান"
+    },
+    {
+      "id": "vocab_o_032",
+      "question": "Ornate এর অর্থ কি?",
+      "options": {
+        "a": "সুসজ্জিত",
+        "b": "প্রচুর উৎপাদনশীল",
+        "c": "নৈতিকভাবে দূষিত করা",
+        "d": "নালি বা মাধ্যম"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সুসজ্জিত",
+      "explanation": "Ornate = সুসজ্জিত"
+    },
+    {
+      "id": "vocab_o_033",
+      "question": "Orthodox এর অর্থ কি?",
+      "options": {
+        "a": "অবহেলাকারী বা দায়িত্বহীন",
+        "b": "দৃঢ়প্রতিজ্ঞ",
+        "c": "প্রচলিত বা ঐতিহ্যবাহী",
+        "d": "প্রাসঙ্গিক নয় এমন বা স্পর্শক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রচলিত বা ঐতিহ্যবাহী",
+      "explanation": "Orthodox = প্রচলিত বা ঐতিহ্যবাহী"
+    },
+    {
+      "id": "vocab_o_034",
+      "question": "Ossify এর অর্থ কি?",
+      "options": {
+        "a": "অশ্লীল; কামোত্তেজক",
+        "b": "বৃক্ষसंबंधীয়",
+        "c": "ঘুরে বেড়ানো; পরিভ্রমণ করা",
+        "d": "শক্ত বা অনমনীয় হয়ে যাওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শক্ত বা অনমনীয় হয়ে যাওয়া",
+      "explanation": "Ossify = শক্ত বা অনমনীয় হয়ে যাওয়া"
+    },
+    {
+      "id": "vocab_o_035",
+      "question": "Ostentatious এর অর্থ কি?",
+      "options": {
+        "a": "বিক্ষিপ্ত বা অনিয়মিত",
+        "b": "লোক দেখানো বা জাঁকজমকপূর্ণ",
+        "c": "সুসজ্জিত",
+        "d": "মামুলি বা গতানুগতিক উক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "লোক দেখানো বা জাঁকজমকপূর্ণ",
+      "explanation": "Ostentatious = লোক দেখানো বা জাঁকজমকপূর্ণ"
+    },
+    {
+      "id": "vocab_o_036",
+      "question": "Ostracize এর অর্থ কি?",
+      "options": {
+        "a": "অর্থ আত্মসাৎ করা",
+        "b": "মিশুক বা সঙ্গপ্রিয়",
+        "c": "সমাজচ্যুত করা",
+        "d": "জমকালো বা আড়ম্বরপূর্ণ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সমাজচ্যুত করা",
+      "explanation": "Ostracize = সমাজচ্যুত করা"
+    },
+    {
+      "id": "vocab_o_037",
+      "question": "Oscillate এর অর্থ কি?",
+      "options": {
+        "a": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া",
+        "b": "শিষ্টাচার বা শালীনতা",
+        "c": "অস্বীকার করা বা বিরোধিতা করা",
+        "d": "বিশ্বাসঘাতক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া",
+      "explanation": "Oscillate = দোলায়মান হওয়া বা পরিবর্তিত হওয়া"
     }
   ]
 }

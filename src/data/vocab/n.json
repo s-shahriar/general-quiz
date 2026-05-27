@@ -26,6 +26,136 @@
       "correct_answer": "a",
       "correct_answer_text": "নূতন শব্দ",
       "explanation": "Neologism = নূতন শব্দ"
+    },
+    {
+      "id": "vocab_n_003",
+      "question": "Nadir এর অর্থ কি?",
+      "options": {
+        "a": "স্বচ্ছ; পরিষ্কার",
+        "b": "উপশম করা",
+        "c": "দীপ্তিমান",
+        "d": "সর্বনিম্ন বিন্দু"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সর্বনিম্ন বিন্দু",
+      "explanation": "Nadir = সর্বনিম্ন বিন্দু"
+    },
+    {
+      "id": "vocab_n_004",
+      "question": "Nebulous এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষমতা বা খ্যাতি বৃদ্ধি করা",
+        "b": "অস্পষ্ট বা মেঘাচ্ছন্ন",
+        "c": "ঠকানো",
+        "d": "একগুঁয়ে বা কঠোর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অস্পষ্ট বা মেঘাচ্ছন্ন",
+      "explanation": "Nebulous = অস্পষ্ট বা মেঘাচ্ছন্ন"
+    },
+    {
+      "id": "vocab_n_005",
+      "question": "Nefarious এর অর্থ কি?",
+      "options": {
+        "a": "দুষ্ট বা অপরাধমূলক",
+        "b": "জনহিতকর বা পরোপকারী",
+        "c": "অনুমোদন বা নিষেধাজ্ঞা",
+        "d": "মহামারী বিশেষজ্ঞ; রোগ বিস্তার গবেষক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুষ্ট বা অপরাধমূলক",
+      "explanation": "Nefarious = দুষ্ট বা অপরাধমূলক"
+    },
+    {
+      "id": "vocab_n_006",
+      "question": "Neophyte এর অর্থ কি?",
+      "options": {
+        "a": "সহজ করা বা সুবিধা করা",
+        "b": "বিশৃঙ্খলা; এলোমেলো অবস্থা",
+        "c": "সুমধুর",
+        "d": "নবীন বা অনভিজ্ঞ ব্যক্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নবীন বা অনভিজ্ঞ ব্যক্তি",
+      "explanation": "Neophyte = নবীন বা অনভিজ্ঞ ব্যক্তি"
+    },
+    {
+      "id": "vocab_n_007",
+      "question": "Nettle এর অর্থ কি?",
+      "options": {
+        "a": "অস্বীকার করা বা বাতিল করা",
+        "b": "বিরক্ত করা",
+        "c": "দ্বিধা; দোদুল্যমানতা",
+        "d": "আপাতবিরোধী উক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিরক্ত করা",
+      "explanation": "Nettle = বিরক্ত করা"
+    },
+    {
+      "id": "vocab_n_008",
+      "question": "Noisome এর অর্থ কি?",
+      "options": {
+        "a": "দুর্গন্ধযুক্ত বা ক্ষতিকর",
+        "b": "অনুমান বা ধারণা",
+        "c": "নমনীয় বা সহজে আকার দেওয়া যায় এমন",
+        "d": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্গন্ধযুক্ত বা ক্ষতিকর",
+      "explanation": "Noisome = দুর্গন্ধযুক্ত বা ক্ষতিকর"
+    },
+    {
+      "id": "vocab_n_009",
+      "question": "Nonplussed এর অর্থ কি?",
+      "options": {
+        "a": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া",
+        "b": "রূপান্তর বা পরিবর্তন",
+        "c": "বিশ্বাস; আস্থা",
+        "d": "হতবাক বা কিংকর্তব্যবিমূঢ়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "হতবাক বা কিংকর্তব্যবিমূঢ়",
+      "explanation": "Nonplussed = হতবাক বা কিংকর্তব্যবিমূঢ়"
+    },
+    {
+      "id": "vocab_n_010",
+      "question": "Noxious এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষতিকর বা বিষাক্ত",
+        "b": "ভবিষ্যৎ বক্তা; দ্রষ্টা",
+        "c": "কলঙ্ক বা দাগ",
+        "d": "উপকারী; হিতকর; স্বাস্থ্যকর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ক্ষতিকর বা বিষাক্ত",
+      "explanation": "Noxious = ক্ষতিকর বা বিষাক্ত"
+    },
+    {
+      "id": "vocab_n_011",
+      "question": "Nuance এর অর্থ কি?",
+      "options": {
+        "a": "কঠিন করা বা হওয়া",
+        "b": "সূক্ষ্ম পার্থক্য",
+        "c": "মিতব্যয়ী বা কৃপণ",
+        "d": "বিচক্ষণতা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সূক্ষ্ম পার্থক্য",
+      "explanation": "Nuance = সূক্ষ্ম পার্থক্য"
+    },
+    {
+      "id": "vocab_n_012",
+      "question": "Negate এর অর্থ কি?",
+      "options": {
+        "a": "ইঙ্গিত করা বা পরোক্ষভাবে বলা",
+        "b": "স্থিতিস্থাপকতা; দৃঢ়তা",
+        "c": "প্রশমিত হওয়া বা কমে যাওয়া",
+        "d": "অস্বীকার করা বা বাতিল করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অস্বীকার করা বা বাতিল করা",
+      "explanation": "Negate = অস্বীকার করা বা বাতিল করা"
     }
   ]
 }

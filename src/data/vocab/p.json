@@ -1040,6 +1040,968 @@
       "correct_answer": "c",
       "correct_answer_text": "বিচক্ষণ; সতর্ক ; ভবিষ্যৎ চিন্তাশীল",
       "explanation": "Prudent = বিচক্ষণ; সতর্ক ; ভবিষ্যৎ চিন্তাশীল"
+    },
+    {
+      "id": "vocab_p_081",
+      "question": "Palliate এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষণস্থায়ী",
+        "b": "ক্ষমতা বা খ্যাতি বৃদ্ধি করা",
+        "c": "উপশম করা",
+        "d": "অনুনয় বিনয় করা; কাকুতি মিনতি করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উপশম করা",
+      "explanation": "Palliate = উপশম করা"
+    },
+    {
+      "id": "vocab_p_082",
+      "question": "Panacea এর অর্থ কি?",
+      "options": {
+        "a": "শব্দবহুল বা দীর্ঘ",
+        "b": "সর্বরোগহর ঔষধ বা সমাধান",
+        "c": "বাধ্য বা অনুগত",
+        "d": "বাঁকানো; জটিল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সর্বরোগহর ঔষধ বা সমাধান",
+      "explanation": "Panacea = সর্বরোগহর ঔষধ বা সমাধান"
+    },
+    {
+      "id": "vocab_p_083",
+      "question": "Paradigm এর অর্থ কি?",
+      "options": {
+        "a": "দৃষ্টান্ত বা মডেল",
+        "b": "অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের",
+        "c": "সাহসী",
+        "d": "নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দৃষ্টান্ত বা মডেল",
+      "explanation": "Paradigm = দৃষ্টান্ত বা মডেল"
+    },
+    {
+      "id": "vocab_p_084",
+      "question": "Paradox এর অর্থ কি?",
+      "options": {
+        "a": "কঠোর নিয়ম মেনে চলা ব্যক্তি",
+        "b": "আপাতবিরোধী উক্তি",
+        "c": "লিপিবদ্ধ করা বা দিনলিপি",
+        "d": "বিশ্বাসঘাতক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আপাতবিরোধী উক্তি",
+      "explanation": "Paradox = আপাতবিরোধী উক্তি"
+    },
+    {
+      "id": "vocab_p_085",
+      "question": "Paragon এর অর্থ কি?",
+      "options": {
+        "a": "উজ্জ্বল বা আলো ছড়ায় এমন",
+        "b": "হাতা; দর্বি",
+        "c": "আদর্শ বা নিখুঁত উদাহরণ",
+        "d": "পৃথক বা আলাদা করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আদর্শ বা নিখুঁত উদাহরণ",
+      "explanation": "Paragon = আদর্শ বা নিখুঁত উদাহরণ"
+    },
+    {
+      "id": "vocab_p_086",
+      "question": "Pariah এর অর্থ কি?",
+      "options": {
+        "a": "সহজলভ্য বা অগভীর",
+        "b": "ক্ষতিকর; অশুভ",
+        "c": "সমাজচ্যুত ব্যক্তি",
+        "d": "পোড়ানোর ভাঁটা; ইটভাটি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সমাজচ্যুত ব্যক্তি",
+      "explanation": "Pariah = সমাজচ্যুত ব্যক্তি"
+    },
+    {
+      "id": "vocab_p_087",
+      "question": "Parochial এর অর্থ কি?",
+      "options": {
+        "a": "একগুঁয়ে বা কঠোর",
+        "b": "সংকীর্ণ বা সীমিত",
+        "c": "অনুমান বা ধারণা",
+        "d": "সাহসী বা দুঃসাহসী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সংকীর্ণ বা সীমিত",
+      "explanation": "Parochial = সংকীর্ণ বা সীমিত"
+    },
+    {
+      "id": "vocab_p_088",
+      "question": "Parody এর অর্থ কি?",
+      "options": {
+        "a": "অবজ্ঞা করা",
+        "b": "ব্যঙ্গাত্মক অনুকরণ",
+        "c": "তীব্র ঘৃণা বা বিদ্বেষ",
+        "d": "ধাঁধা বা কঠিন সমস্যা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ব্যঙ্গাত্মক অনুকরণ",
+      "explanation": "Parody = ব্যঙ্গাত্মক অনুকরণ"
+    },
+    {
+      "id": "vocab_p_089",
+      "question": "Parsimonious এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন করা বা ভুল প্রমাণ করা",
+        "b": "মিতব্যয়ী বা কৃপণ",
+        "c": "দুর্গন্ধযুক্ত বা ক্ষতিকর",
+        "d": "ভোটাধিকার"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মিতব্যয়ী বা কৃপণ",
+      "explanation": "Parsimonious = মিতব্যয়ী বা কৃপণ"
+    },
+    {
+      "id": "vocab_p_090",
+      "question": "Partisan এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষপাতদুষ্ট",
+        "b": "ভান করা রোগী বা কাজ এড়ানো ব্যক্তি",
+        "c": "পরিণতি; শাখা-প্রশাখা",
+        "d": "কৌশলে এড়িয়ে যাওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পক্ষপাতদুষ্ট",
+      "explanation": "Partisan = পক্ষপাতদুষ্ট"
+    },
+    {
+      "id": "vocab_p_091",
+      "question": "Paucity এর অর্থ কি?",
+      "options": {
+        "a": "অসচ্চরিত্র বা অপব্যয়ী",
+        "b": "স্বল্পতা বা অভাব",
+        "c": "সহজসাধ্য; বশ্যতাপূর্ণ",
+        "d": "জটিল বা বক্র"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বল্পতা বা অভাব",
+      "explanation": "Paucity = স্বল্পতা বা অভাব"
+    },
+    {
+      "id": "vocab_p_092",
+      "question": "Peccadillo এর অর্থ কি?",
+      "options": {
+        "a": "অজ্ঞাতসারে",
+        "b": "ছোটখাটো ভুল বা ত্রুটি",
+        "c": "জনগণের অর্থনীতি; গণঅর্থনীতি",
+        "d": "বজ্রকণ্ঠ; উচ্চস্বর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ছোটখাটো ভুল বা ত্রুটি",
+      "explanation": "Peccadillo = ছোটখাটো ভুল বা ত্রুটি"
+    },
+    {
+      "id": "vocab_p_093",
+      "question": "Pedantic এর অর্থ কি?",
+      "options": {
+        "a": "অক্লান্ত বা ক্লান্তিহীন",
+        "b": "সংকীর্ণমনা",
+        "c": "পাণ্ডিত্য জাহিরকারী",
+        "d": "বাচাল বা শব্দবহুল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পাণ্ডিত্য জাহিরকারী",
+      "explanation": "Pedantic = পাণ্ডিত্য জাহিরকারী"
+    },
+    {
+      "id": "vocab_p_094",
+      "question": "Pedestrian এর অর্থ কি?",
+      "options": {
+        "a": "বের করে আনা",
+        "b": "সাধারণ বা আকর্ষণহীন",
+        "c": "উসকানি দেওয়া",
+        "d": "দূর করা বা প্রতিরোধ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সাধারণ বা আকর্ষণহীন",
+      "explanation": "Pedestrian = সাধারণ বা আকর্ষণহীন"
+    },
+    {
+      "id": "vocab_p_095",
+      "question": "Pejorative এর অর্থ কি?",
+      "options": {
+        "a": "মোটাসোটা; হৃষ্টপুষ্ট",
+        "b": "ক্ষতিকর",
+        "c": "ঘূর্ণিস্রোত বা চরম বিশৃঙ্খলা",
+        "d": "অবমাননাকর"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অবমাননাকর",
+      "explanation": "Pejorative = অবমাননাকর"
+    },
+    {
+      "id": "vocab_p_096",
+      "question": "Pellucid এর অর্থ কি?",
+      "options": {
+        "a": "শত্রুতা",
+        "b": "স্বচ্ছ বা পরিষ্কার",
+        "c": "লোক দেখানো কিন্তু অন্তঃসারশূন্য",
+        "d": "অভি্যোগপ্রবণ বা খিটখিটে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বচ্ছ বা পরিষ্কার",
+      "explanation": "Pellucid = স্বচ্ছ বা পরিষ্কার"
+    },
+    {
+      "id": "vocab_p_097",
+      "question": "Penurious এর অর্থ কি?",
+      "options": {
+        "a": "শারীরিক; দেহসংক্রান্ত",
+        "b": "সমানুপাতিক বা সমান",
+        "c": "দরিদ্র বা কৃপণ",
+        "d": "বিচক্ষণ বা বোধসম্পন্ন"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দরিদ্র বা কৃপণ",
+      "explanation": "Penurious = দরিদ্র বা কৃপণ"
+    },
+    {
+      "id": "vocab_p_098",
+      "question": "Perfidious এর অর্থ কি?",
+      "options": {
+        "a": "দ্ব্যর্থক বা অস্পষ্ট কথা বলা",
+        "b": "ক্ষণস্থায়ী",
+        "c": "বিদ্যমান বা টিকে আছে এমন",
+        "d": "বিশ্বাসঘাতক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিশ্বাসঘাতক",
+      "explanation": "Perfidious = বিশ্বাসঘাতক"
+    },
+    {
+      "id": "vocab_p_099",
+      "question": "Perfunctory এর অর্থ কি?",
+      "options": {
+        "a": "দায়সারা বা যত্নহীন",
+        "b": "মিতব্যয়ী",
+        "c": "প্রচলিত বা ঐতিহ্যবাহী",
+        "d": "গদ্যময়; গতানুগতিক; বিরস"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দায়সারা বা যত্নহীন",
+      "explanation": "Perfunctory = দায়সারা বা যত্নহীন"
+    },
+    {
+      "id": "vocab_p_100",
+      "question": "Peripatetic এর অর্থ কি?",
+      "options": {
+        "a": "অন্যায়ভাবে দাবি করা",
+        "b": "নীতিহীন; বিবেকহীন",
+        "c": "ভ্রমণরত",
+        "d": "উপযুক্ত বা মনোরম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভ্রমণরত",
+      "explanation": "Peripatetic = ভ্রমণরত"
+    },
+    {
+      "id": "vocab_p_101",
+      "question": "Permeate এর অর্থ কি?",
+      "options": {
+        "a": "ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া",
+        "b": "ভীতিপ্রদ বা সম্মানযোগ্য",
+        "c": "নমনীয় বা সহজে আকার দেওয়া যায় এমন",
+        "d": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া",
+      "explanation": "Permeate = ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া"
+    },
+    {
+      "id": "vocab_p_102",
+      "question": "Perquisite এর অর্থ কি?",
+      "options": {
+        "a": "সুস্পষ্ট বা প্রকাশ করা",
+        "b": "সহজে রাজি বা নমনীয়",
+        "c": "অতিরিক্ত সুবিধা বা পারিশ্রমিক",
+        "d": "দ্বিধা করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অতিরিক্ত সুবিধা বা পারিশ্রমিক",
+      "explanation": "Perquisite = অতিরিক্ত সুবিধা বা পারিশ্রমিক"
+    },
+    {
+      "id": "vocab_p_103",
+      "question": "Perspicacious এর অর্থ কি?",
+      "options": {
+        "a": "দম্ভের সাথে হাঁটা; গর্বিত পদক্ষেপ",
+        "b": "তীক্ষ্ণবুদ্ধিসম্পন্ন",
+        "c": "নমনীয়তা",
+        "d": "বিপর্যয় বা চরম ব্যর্থতা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তীক্ষ্ণবুদ্ধিসম্পন্ন",
+      "explanation": "Perspicacious = তীক্ষ্ণবুদ্ধিসম্পন্ন"
+    },
+    {
+      "id": "vocab_p_104",
+      "question": "Pertinacious এর অর্থ কি?",
+      "options": {
+        "a": "ছিদ্রযুক্ত; তরল প্রবেশযোগ্য",
+        "b": "সন্ধ্যাকালীন সামাজিক অনুষ্ঠান",
+        "c": "নাছোড়বান্দা বা জেদি",
+        "d": "সর্বনিম্ন বিন্দু"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নাছোড়বান্দা বা জেদি",
+      "explanation": "Pertinacious = নাছোড়বান্দা বা জেদি"
+    },
+    {
+      "id": "vocab_p_105",
+      "question": "Pervade এর অর্থ কি?",
+      "options": {
+        "a": "সর্বত্র ছড়িয়ে পড়া",
+        "b": "ভয়ে পিছিয়ে যাওয়া",
+        "c": "অপবাদ; অস্পষ্ট উচ্চারণ",
+        "d": "তীব্র"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সর্বত্র ছড়িয়ে পড়া",
+      "explanation": "Pervade = সর্বত্র ছড়িয়ে পড়া"
+    },
+    {
+      "id": "vocab_p_106",
+      "question": "Philanthropic এর অর্থ কি?",
+      "options": {
+        "a": "নালি বা মাধ্যম",
+        "b": "জনহিতকর বা পরোপকারী",
+        "c": "ভ্রমণশীল; পরিভ্রমণকারী",
+        "d": "বাদী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "জনহিতকর বা পরোপকারী",
+      "explanation": "Philanthropic = জনহিতকর বা পরোপকারী"
+    },
+    {
+      "id": "vocab_p_107",
+      "question": "Pious এর অর্থ কি?",
+      "options": {
+        "a": "ধার্মিক",
+        "b": "আকস্মিক সৌভাগ্য",
+        "c": "ব্যঙ্গানুকরণ বা প্রহসন",
+        "d": "মেনে নেওয়া; পরাজিত হওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ধার্মিক",
+      "explanation": "Pious = ধার্মিক"
+    },
+    {
+      "id": "vocab_p_108",
+      "question": "Pithy এর অর্থ কি?",
+      "options": {
+        "a": "দ্রুত পালানো",
+        "b": "সংক্ষিপ্ত ও অর্থপূর্ণ",
+        "c": "নমনীয় বা কমনীয়",
+        "d": "অতিরঞ্জন বা অত্যুক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সংক্ষিপ্ত ও অর্থপূর্ণ",
+      "explanation": "Pithy = সংক্ষিপ্ত ও অর্থপূর্ণ"
+    },
+    {
+      "id": "vocab_p_109",
+      "question": "Placate এর অর্থ কি?",
+      "options": {
+        "a": "অর্থ আত্মসাৎ করা",
+        "b": "শান্ত করা",
+        "c": "সরল বা ছলনা জানে না এমন",
+        "d": "প্রচলিত বা ঐতিহ্যবাহী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শান্ত করা",
+      "explanation": "Placate = শান্ত করা"
+    },
+    {
+      "id": "vocab_p_110",
+      "question": "Placid এর অর্থ কি?",
+      "options": {
+        "a": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী",
+        "b": "শান্ত বা স্থির",
+        "c": "ভাই হত্যা; ভ্রাতৃহত্যা",
+        "d": "শান্ত বা অবিচল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শান্ত বা স্থির",
+      "explanation": "Placid = শান্ত বা স্থির"
+    },
+    {
+      "id": "vocab_p_111",
+      "question": "Platitude এর অর্থ কি?",
+      "options": {
+        "a": "বিদ্বেষ বা ঘৃণা",
+        "b": "মামুলি বা গতানুগতিক উক্তি",
+        "c": "দীর্ঘ তালিকা; প্রার্থনার পুনরাবৃত্তিমূলক পাঠ",
+        "d": "উন্নত করা বা ভালো করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মামুলি বা গতানুগতিক উক্তি",
+      "explanation": "Platitude = মামুলি বা গতানুগতিক উক্তি"
+    },
+    {
+      "id": "vocab_p_112",
+      "question": "Plausible এর অর্থ কি?",
+      "options": {
+        "a": "অস্থির; সহজে পরিবর্তনযোগ্য",
+        "b": "অসচ্চরিত্র বা অপব্যয়ী",
+        "c": "বিশ্বাসযোগ্য",
+        "d": "পরিণতি; শাখা-প্রশাখা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিশ্বাসযোগ্য",
+      "explanation": "Plausible = বিশ্বাসযোগ্য"
+    },
+    {
+      "id": "vocab_p_113",
+      "question": "Plebeian এর অর্থ কি?",
+      "options": {
+        "a": "সংকল্প বা সমাধান",
+        "b": "সাধারণ বা নিম্নবিত্ত শ্রেণীর",
+        "c": "বিলোপ বা বিচ্ছেদ",
+        "d": "ভ্রমণ-আকাঙ্ক্ষা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সাধারণ বা নিম্নবিত্ত শ্রেণীর",
+      "explanation": "Plebeian = সাধারণ বা নিম্নবিত্ত শ্রেণীর"
+    },
+    {
+      "id": "vocab_p_114",
+      "question": "Plethora এর অর্থ কি?",
+      "options": {
+        "a": "আধিক্য বা প্রাচুর্য",
+        "b": "মামুলি বা গতানুগতিক উক্তি",
+        "c": "ফলবাগান",
+        "d": "মৌন বা অব্যক্ত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "আধিক্য বা প্রাচুর্য",
+      "explanation": "Plethora = আধিক্য বা প্রাচুর্য"
+    },
+    {
+      "id": "vocab_p_115",
+      "question": "Politic এর অর্থ কি?",
+      "options": {
+        "a": "সাজসজ্জা করা",
+        "b": "ভীতিপ্রদ বা সম্মানযোগ্য",
+        "c": "অশ্লীল; কামোত্তেজক",
+        "d": "বিচক্ষণ বা কৌশলী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিচক্ষণ বা কৌশলী",
+      "explanation": "Politic = বিচক্ষণ বা কৌশলী"
+    },
+    {
+      "id": "vocab_p_116",
+      "question": "Ponderous এর অর্থ কি?",
+      "options": {
+        "a": "আকস্মিক সৌভাগ্য",
+        "b": "অবসাদ বা একঘেয়েমি",
+        "c": "ক্ষোভ",
+        "d": "ভারী বা ধীর"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভারী বা ধীর",
+      "explanation": "Ponderous = ভারী বা ধীর"
+    },
+    {
+      "id": "vocab_p_117",
+      "question": "Portent এর অর্থ কি?",
+      "options": {
+        "a": "সৌহার্দ্যপূর্ণ সম্পর্ক",
+        "b": "নির্লজ্জতা বা ঔদ্ধত্য",
+        "c": "দুর্বোধ্য বা রহস্যময়",
+        "d": "পূর্বাভাস"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পূর্বাভাস",
+      "explanation": "Portent = পূর্বাভাস"
+    },
+    {
+      "id": "vocab_p_118",
+      "question": "Prattle এর অর্থ কি?",
+      "options": {
+        "a": "ভদ্র; রুচিসম্মত",
+        "b": "বাজে বা অর্থহীন কথা বলা",
+        "c": "উসকানি দেওয়া",
+        "d": "আপাতবিরোধী উক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বাজে বা অর্থহীন কথা বলা",
+      "explanation": "Prattle = বাজে বা অর্থহীন কথা বলা"
+    },
+    {
+      "id": "vocab_p_119",
+      "question": "Precipitate এর অর্থ কি?",
+      "options": {
+        "a": "অপ্রচলিত; সেকেলে",
+        "b": "তুচ্ছ; নগণ্য; সামান্য",
+        "c": "তেজ; শক্তি; উদ্যম",
+        "d": "ত্বরান্বিত করা বা হঠকারী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ত্বরান্বিত করা বা হঠকারী",
+      "explanation": "Precipitate = ত্বরান্বিত করা বা হঠকারী"
+    },
+    {
+      "id": "vocab_p_120",
+      "question": "Precursor এর অর্থ কি?",
+      "options": {
+        "a": "উদাসীন",
+        "b": "খিটখিটে বা সহজে রেগে যায় এমন",
+        "c": "ভবিষ্যৎ জ্ঞান",
+        "d": "অগ্রদূত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অগ্রদূত",
+      "explanation": "Precursor = অগ্রদূত"
+    },
+    {
+      "id": "vocab_p_121",
+      "question": "Predilection এর অর্থ কি?",
+      "options": {
+        "a": "অসংলগ্ন বা বিচ্ছিন্ন",
+        "b": "সহজে রাজি বা নমনীয়",
+        "c": "পক্ষপাত বা বিশেষ পছন্দ",
+        "d": "সবার সমান অধিকারের শাসন; সম্পূর্ণ সাম্যতন্ত্র"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পক্ষপাত বা বিশেষ পছন্দ",
+      "explanation": "Predilection = পক্ষপাত বা বিশেষ পছন্দ"
+    },
+    {
+      "id": "vocab_p_122",
+      "question": "Preen এর অর্থ কি?",
+      "options": {
+        "a": "দায়মুক্তি দেওয়া",
+        "b": "সমাজচ্যুত ব্যক্তি",
+        "c": "অক্লান্ত বা ক্লান্তিহীন",
+        "d": "সাজসজ্জা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সাজসজ্জা করা",
+      "explanation": "Preen = সাজসজ্জা করা"
+    },
+    {
+      "id": "vocab_p_123",
+      "question": "Prescience এর অর্থ কি?",
+      "options": {
+        "a": "সত্যবাদী বা নির্ভুল",
+        "b": "অবগত বা সচেতন",
+        "c": "ঘোলাটে; অস্বচ্ছ",
+        "d": "ভবিষ্যৎ জ্ঞান"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভবিষ্যৎ জ্ঞান",
+      "explanation": "Prescience = ভবিষ্যৎ জ্ঞান"
+    },
+    {
+      "id": "vocab_p_124",
+      "question": "Presumptuous এর অর্থ কি?",
+      "options": {
+        "a": "গুরুত্বহীন বা তুচ্ছ",
+        "b": "কলঙ্ক",
+        "c": "অহংকারী বা দুঃসাহসী",
+        "d": "শর্ত আরোপ করা বা নির্দিষ্ট করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অহংকারী বা দুঃসাহসী",
+      "explanation": "Presumptuous = অহংকারী বা দুঃসাহসী"
+    },
+    {
+      "id": "vocab_p_125",
+      "question": "Pristine এর অর্থ কি?",
+      "options": {
+        "a": "পবিত্রতা",
+        "b": "আদিম বা বিশুদ্ধ",
+        "c": "ভ্রমণরত",
+        "d": "অসংযম; প্রশ্রয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আদিম বা বিশুদ্ধ",
+      "explanation": "Pristine = আদিম বা বিশুদ্ধ"
+    },
+    {
+      "id": "vocab_p_126",
+      "question": "Probity এর অর্থ কি?",
+      "options": {
+        "a": "দ্রুত পালানো",
+        "b": "সততা বা সাধুতা",
+        "c": "শিলালিপি; খোদাই লেখা",
+        "d": "অবমাননাকর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সততা বা সাধুতা",
+      "explanation": "Probity = সততা বা সাধুতা"
+    },
+    {
+      "id": "vocab_p_127",
+      "question": "Proclivity এর অর্থ কি?",
+      "options": {
+        "a": "উদার; দানশীল",
+        "b": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+        "c": "স্বাভাবিক প্রবণতা",
+        "d": "সস্তা ও চটকদার; ভড়ং"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "স্বাভাবিক প্রবণতা",
+      "explanation": "Proclivity = স্বাভাবিক প্রবণতা"
+    },
+    {
+      "id": "vocab_p_128",
+      "question": "Prodigious এর অর্থ কি?",
+      "options": {
+        "a": "নিন্দা বা অপমান",
+        "b": "ছদ্মনাম",
+        "c": "বিশাল বা অসাধারণ",
+        "d": "বিশ্বাসঘাতকতা; বিশ্বাসভঙ্গ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিশাল বা অসাধারণ",
+      "explanation": "Prodigious = বিশাল বা অসাধারণ"
+    },
+    {
+      "id": "vocab_p_129",
+      "question": "Profligate এর অর্থ কি?",
+      "options": {
+        "a": "বন্ধ করা",
+        "b": "উচ্ছ্বাসপ্রবণ; অতিমাত্রায় আবেগী",
+        "c": "অসচ্চরিত্র বা অপব্যয়ী",
+        "d": "অস্বীকার করা বা ত্যাগ করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অসচ্চরিত্র বা অপব্যয়ী",
+      "explanation": "Profligate = অসচ্চরিত্র বা অপব্যয়ী"
+    },
+    {
+      "id": "vocab_p_130",
+      "question": "Prolix এর অর্থ কি?",
+      "options": {
+        "a": "তপস্বী বা কঠোর সংযমী",
+        "b": "শব্দবহুল বা দীর্ঘ",
+        "c": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
+        "d": "প্রতারণা বা কপটতা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শব্দবহুল বা দীর্ঘ",
+      "explanation": "Prolix = শব্দবহুল বা দীর্ঘ"
+    },
+    {
+      "id": "vocab_p_131",
+      "question": "Promulgate এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাসঘাতক; দলত্যাগী",
+        "b": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা",
+        "c": "অভিযোগ করা; বিড়বিড় করা",
+        "d": "শান্ত বা স্থির"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা",
+      "explanation": "Promulgate = আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা"
+    },
+    {
+      "id": "vocab_p_132",
+      "question": "Propensity এর অর্থ কি?",
+      "options": {
+        "a": "অসংলগ্ন বা এলোমেলো",
+        "b": "স্বাভাবিক প্রবণতা",
+        "c": "দ্বিধা বা দ্বৈত মনোভাব",
+        "d": "বর্ণালী বা পরিসর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্বাভাবিক প্রবণতা",
+      "explanation": "Propensity = স্বাভাবিক প্রবণতা"
+    },
+    {
+      "id": "vocab_p_133",
+      "question": "Propitiate এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাস; আস্থা",
+        "b": "সন্তুষ্ট করা",
+        "c": "সৌহার্দ্য বা বন্ধুত্ব",
+        "d": "মত বা বিশ্বাস প্রত্যাহার করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সন্তুষ্ট করা",
+      "explanation": "Propitiate = সন্তুষ্ট করা"
+    },
+    {
+      "id": "vocab_p_134",
+      "question": "Propriety এর অর্থ কি?",
+      "options": {
+        "a": "ভদ্রতা বা সামাজিক শিষ্টাচার",
+        "b": "সুমধুর",
+        "c": "ক্ষণস্থায়ী বা দ্রুত মিলিয়ে যায় এমন",
+        "d": "অল্পোক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভদ্রতা বা সামাজিক শিষ্টাচার",
+      "explanation": "Propriety = ভদ্রতা বা সামাজিক শিষ্টাচার"
+    },
+    {
+      "id": "vocab_p_135",
+      "question": "Proscribe এর অর্থ কি?",
+      "options": {
+        "a": "প্রশংসা বা স্তুতি",
+        "b": "পর্ণমোচী; প্রতি বছর পাতা ঝরে যায় এমন",
+        "c": "নিষিদ্ধ করা",
+        "d": "ভীরু বা কাপুরুষ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিষিদ্ধ করা",
+      "explanation": "Proscribe = নিষিদ্ধ করা"
+    },
+    {
+      "id": "vocab_p_136",
+      "question": "Protean এর অর্থ কি?",
+      "options": {
+        "a": "সহজে পরিবর্তনশীল",
+        "b": "এক ধরনের উভচর প্রাণী; সালামান্ডার",
+        "c": "তিতিরজাতীয় পাখি",
+        "d": "অটল বা একগুঁয়ে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহজে পরিবর্তনশীল",
+      "explanation": "Protean = সহজে পরিবর্তনশীল"
+    },
+    {
+      "id": "vocab_p_137",
+      "question": "Prudence এর অর্থ কি?",
+      "options": {
+        "a": "ভ্রমণসূচি বা কর্মসূচি",
+        "b": "বিচক্ষণতা",
+        "c": "বের করে আনা",
+        "d": "শান্ত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিচক্ষণতা",
+      "explanation": "Prudence = বিচক্ষণতা"
+    },
+    {
+      "id": "vocab_p_138",
+      "question": "Puerile এর অর্থ কি?",
+      "options": {
+        "a": "উপযুক্ত বা মনোরম",
+        "b": "শিশুসুলভ বা অপরিণত",
+        "c": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন",
+        "d": "গোঁড়া বা মতান্ধ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শিশুসুলভ বা অপরিণত",
+      "explanation": "Puerile = শিশুসুলভ বা অপরিণত"
+    },
+    {
+      "id": "vocab_p_139",
+      "question": "Pugnacious এর অর্থ কি?",
+      "options": {
+        "a": "যুদ্ধংদেহী বা ঝগড়াটে",
+        "b": "সমানুপাতিক বা সমান",
+        "c": "ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া",
+        "d": "বিশ্বাসঘাতক; দলত্যাগী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "যুদ্ধংদেহী বা ঝগড়াটে",
+      "explanation": "Pugnacious = যুদ্ধংদেহী বা ঝগড়াটে"
+    },
+    {
+      "id": "vocab_p_140",
+      "question": "Pulchritude এর অর্থ কি?",
+      "options": {
+        "a": "রূপান্তর বা পরিবর্তন",
+        "b": "প্রাসঙ্গিক",
+        "c": "শারীরিক সৌন্দর্য",
+        "d": "দাম্ভিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "শারীরিক সৌন্দর্য",
+      "explanation": "Pulchritude = শারীরিক সৌন্দর্য"
+    },
+    {
+      "id": "vocab_p_141",
+      "question": "Punctilious এর অর্থ কি?",
+      "options": {
+        "a": "অল্প",
+        "b": "সহজে বিশ্বাস করে এমন",
+        "c": "খুঁতখুঁতে বা অতি সতর্ক",
+        "d": "প্রতারণা বা কপটতা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "খুঁতখুঁতে বা অতি সতর্ক",
+      "explanation": "Punctilious = খুঁতখুঁতে বা অতি সতর্ক"
+    },
+    {
+      "id": "vocab_p_142",
+      "question": "Pundit এর অর্থ কি?",
+      "options": {
+        "a": "বিশেষজ্ঞ বা পণ্ডিত",
+        "b": "নির্দয় বা যাকে শান্ত করা যায় না",
+        "c": "ক্ষমতা বা খ্যাতি বৃদ্ধি করা",
+        "d": "সব বিষয়ে দক্ষ; সর্বশক্তিমান"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিশেষজ্ঞ বা পণ্ডিত",
+      "explanation": "Pundit = বিশেষজ্ঞ বা পণ্ডিত"
+    },
+    {
+      "id": "vocab_p_143",
+      "question": "Pungent এর অর্থ কি?",
+      "options": {
+        "a": "উপযুক্ত বা যথাযথ",
+        "b": "তীব্র",
+        "c": "মোটাসোটা; হৃষ্টপুষ্ট",
+        "d": "কুটিল; কপট"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তীব্র",
+      "explanation": "Pungent = তীব্র"
+    },
+    {
+      "id": "vocab_p_144",
+      "question": "Pusillanimous এর অর্থ কি?",
+      "options": {
+        "a": "একগুঁয়ে বা আপোষহীন",
+        "b": "ভীরু বা কাপুরুষ",
+        "c": "চোখের সংক্রামক রোগ",
+        "d": "নিস্তেজ হয়ে পড়া; দুর্বল হওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভীরু বা কাপুরুষ",
+      "explanation": "Pusillanimous = ভীরু বা কাপুরুষ"
+    },
+    {
+      "id": "vocab_p_145",
+      "question": "Pathological এর অর্থ কি?",
+      "options": {
+        "a": "সুমধুর বা গম্ভীর",
+        "b": "সহজলভ্য বা অগভীর",
+        "c": "ব্যাপ্ত হওয়া বা ছড়িয়ে পড়া",
+        "d": "রোগসংক্রান্ত বা অস্বাভাবিক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "রোগসংক্রান্ত বা অস্বাভাবিক",
+      "explanation": "Pathological = রোগসংক্রান্ত বা অস্বাভাবিক"
+    },
+    {
+      "id": "vocab_p_146",
+      "question": "Perennial এর অর্থ কি?",
+      "options": {
+        "a": "বহুবর্ষজীবী বা চিরস্থায়ী",
+        "b": "অসংবেদনশীল বা অজ্ঞান",
+        "c": "তৃষ্ণা মেটানো",
+        "d": "আশীর্বাদ; দোয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বহুবর্ষজীবী বা চিরস্থায়ী",
+      "explanation": "Perennial = বহুবর্ষজীবী বা চিরস্থায়ী"
+    },
+    {
+      "id": "vocab_p_147",
+      "question": "Permeable এর অর্থ কি?",
+      "options": {
+        "a": "সুবিধাজনক কিন্তু অনৈতিক",
+        "b": "পুনরাবৃত্তি",
+        "c": "ভেদ্য বা প্রবেশযোগ্য",
+        "d": "বিশ্বাসযোগ্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভেদ্য বা প্রবেশযোগ্য",
+      "explanation": "Permeable = ভেদ্য বা প্রবেশযোগ্য"
+    },
+    {
+      "id": "vocab_p_148",
+      "question": "Pervasive এর অর্থ কি?",
+      "options": {
+        "a": "নম্র ও ধৈর্যশীল",
+        "b": "লজ্জাজনক বা অপমানজনক",
+        "c": "আড়ম্বর; স্বকীয় ভঙ্গি",
+        "d": "ব্যাপক বা সর্বব্যাপী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ব্যাপক বা সর্বব্যাপী",
+      "explanation": "Pervasive = ব্যাপক বা সর্বব্যাপী"
+    },
+    {
+      "id": "vocab_p_149",
+      "question": "Piety এর অর্থ কি?",
+      "options": {
+        "a": "কর্মভারহীন পদ",
+        "b": "দুর্বোধ্য বা গভীর",
+        "c": "ধর্মপরায়ণতা বা ভক্তি",
+        "d": "কুসুম গরম; অনুৎসাহী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ধর্মপরায়ণতা বা ভক্তি",
+      "explanation": "Piety = ধর্মপরায়ণতা বা ভক্তি"
+    },
+    {
+      "id": "vocab_p_150",
+      "question": "Plummet এর অর্থ কি?",
+      "options": {
+        "a": "অভিশাপ",
+        "b": "অসংযমী; অতিমাত্রায় আবেগী",
+        "c": "দ্রুত পতন বা নিমজ্জন",
+        "d": "আদালতের সমন বা তলব করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দ্রুত পতন বা নিমজ্জন",
+      "explanation": "Plummet = দ্রুত পতন বা নিমজ্জন"
+    },
+    {
+      "id": "vocab_p_151",
+      "question": "Preamble এর অর্থ কি?",
+      "options": {
+        "a": "নথিভুক্ত করা বা লিপিবদ্ধ করা",
+        "b": "সম্পূর্ণরূপে ধ্বংস করা",
+        "c": "মিথ্যা শপথ; মিথ্যা সাক্ষ্য",
+        "d": "ভূমিকা বা প্রারম্ভিক বক্তব্য"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভূমিকা বা প্রারম্ভিক বক্তব্য",
+      "explanation": "Preamble = ভূমিকা বা প্রারম্ভিক বক্তব্য"
+    },
+    {
+      "id": "vocab_p_152",
+      "question": "Problematic এর অর্থ কি?",
+      "options": {
+        "a": "অল্পোক্তি",
+        "b": "ধাতুমল; আবর্জনা; মূল্যহীন বস্তু",
+        "c": "প্রসঙ্গান্তর বা বিষয়চ্যুতি",
+        "d": "সমস্যাযুক্ত বা জটিল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সমস্যাযুক্ত বা জটিল",
+      "explanation": "Problematic = সমস্যাযুক্ত বা জটিল"
+    },
+    {
+      "id": "vocab_p_153",
+      "question": "Profound এর অর্থ কি?",
+      "options": {
+        "a": "কলঙ্ক বা দাগ",
+        "b": "গভীর বা তাৎপর্যপূর্ণ",
+        "c": "অসংলগ্ন; অস্পষ্ট",
+        "d": "সংকীর্ণ স্থানে আতঙ্ক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "গভীর বা তাৎপর্যপূর্ণ",
+      "explanation": "Profound = গভীর বা তাৎপর্যপূর্ণ"
+    },
+    {
+      "id": "vocab_p_154",
+      "question": "Prohibitive এর অর্থ কি?",
+      "options": {
+        "a": "নির্লজ্জতা বা ঔদ্ধত্য",
+        "b": "নিষেধাত্মক বা অত্যধিক",
+        "c": "গভীর বা তাৎপর্যপূর্ণ",
+        "d": "ব্যঙ্গাত্মক অনুকরণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নিষেধাত্মক বা অত্যধিক",
+      "explanation": "Prohibitive = নিষেধাত্মক বা অত্যধিক"
     }
   ]
 }

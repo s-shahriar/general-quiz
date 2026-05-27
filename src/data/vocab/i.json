@@ -260,6 +260,669 @@
       "correct_answer": "b",
       "correct_answer_text": "ভ্রমণশীল; পরিভ্রমণকারী",
       "explanation": "Itinerant = ভ্রমণশীল; পরিভ্রমণকারী"
+    },
+    {
+      "id": "vocab_i_021",
+      "question": "Iconoclast এর অর্থ কি?",
+      "options": {
+        "a": "অকাট্য বা অনস্বীকার্য",
+        "b": "সততা বা সাধুতা",
+        "c": "প্রথাবিরোধী ব্যক্তি",
+        "d": "দুর্গন্ধযুক্ত; বাজে গন্ধওয়ালা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রথাবিরোধী ব্যক্তি",
+      "explanation": "Iconoclast = প্রথাবিরোধী ব্যক্তি"
+    },
+    {
+      "id": "vocab_i_022",
+      "question": "Idolatry এর অর্থ কি?",
+      "options": {
+        "a": "শান্ত করা বা তুষ্ট করা",
+        "b": "অসচ্চরিত্র বা অপব্যয়ী",
+        "c": "অর্থ নির্ধারণ করা; ব্যাখ্যা করা",
+        "d": "মূর্তিপূজা বা অন্ধ ভক্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মূর্তিপূজা বা অন্ধ ভক্তি",
+      "explanation": "Idolatry = মূর্তিপূজা বা অন্ধ ভক্তি"
+    },
+    {
+      "id": "vocab_i_023",
+      "question": "Ignominious এর অর্থ কি?",
+      "options": {
+        "a": "অল্পোক্তি",
+        "b": "লজ্জাজনক বা অপমানজনক",
+        "c": "প্রতারণা করা বা মোহিত করা",
+        "d": "আদর্শ বা মূল prototypical"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "লজ্জাজনক বা অপমানজনক",
+      "explanation": "Ignominious = লজ্জাজনক বা অপমানজনক"
+    },
+    {
+      "id": "vocab_i_024",
+      "question": "Immutable এর অর্থ কি?",
+      "options": {
+        "a": "দানশীল বা উপকারী",
+        "b": "অভেদ্য বা অপ্রবেশ্য",
+        "c": "বিচিত্র; মিশ্রিত; রঙবেরঙা",
+        "d": "অপরিবর্তনীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অপরিবর্তনীয়",
+      "explanation": "Immutable = অপরিবর্তনীয়"
+    },
+    {
+      "id": "vocab_i_025",
+      "question": "Impecunious এর অর্থ কি?",
+      "options": {
+        "a": "দরিদ্র বা নিঃস্ব",
+        "b": "কঠোর ও বিষণ্ণ",
+        "c": "গুরুত্বহীন বা তুচ্ছ",
+        "d": "কুযুক্তি বা প্রতারণামূলক তর্ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দরিদ্র বা নিঃস্ব",
+      "explanation": "Impecunious = দরিদ্র বা নিঃস্ব"
+    },
+    {
+      "id": "vocab_i_026",
+      "question": "Imperious এর অর্থ কি?",
+      "options": {
+        "a": "মিথ্যা প্রমাণ করা বা বিপরীত ইঙ্গিত দেওয়া",
+        "b": "পোশাক সংক্রান্ত; দর্জি বিষয়ক",
+        "c": "নদীবাঁধ",
+        "d": "দাম্ভিক বা কর্তৃত্বপরায়ণ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দাম্ভিক বা কর্তৃত্বপরায়ণ",
+      "explanation": "Imperious = দাম্ভিক বা কর্তৃত্বপরায়ণ"
+    },
+    {
+      "id": "vocab_i_027",
+      "question": "Impertinent এর অর্থ কি?",
+      "options": {
+        "a": "ধনতন্ত্র",
+        "b": "মৃদুভাবে তিরস্কার করা",
+        "c": "অপ্রাসঙ্গিক বা অভদ্র",
+        "d": "দড়ির উপর হেঁটে খেলা দেখায় যে; দড়িনাট্যশিল্পী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অপ্রাসঙ্গিক বা অভদ্র",
+      "explanation": "Impertinent = অপ্রাসঙ্গিক বা অভদ্র"
+    },
+    {
+      "id": "vocab_i_028",
+      "question": "Imperturbable এর অর্থ কি?",
+      "options": {
+        "a": "ধনী; বিত্তবান; প্রাচুর্যময়",
+        "b": "শান্ত বা অবিচল",
+        "c": "অসংখ্য",
+        "d": "পুস্তিকা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শান্ত বা অবিচল",
+      "explanation": "Imperturbable = শান্ত বা অবিচল"
+    },
+    {
+      "id": "vocab_i_029",
+      "question": "Impervious এর অর্থ কি?",
+      "options": {
+        "a": "রূপান্তরিত করা",
+        "b": "অভেদ্য বা প্রভাবিত হয় না এমন",
+        "c": "অর্থ নির্ধারণ করা; ব্যাখ্যা করা",
+        "d": "সংযম"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভেদ্য বা প্রভাবিত হয় না এমন",
+      "explanation": "Impervious = অভেদ্য বা প্রভাবিত হয় না এমন"
+    },
+    {
+      "id": "vocab_i_030",
+      "question": "Impetuous এর অর্থ কি?",
+      "options": {
+        "a": "হঠকারী বা আবেগপ্রবণ",
+        "b": "জীবাণুনাশক",
+        "c": "বাধ্য বা অনুগত",
+        "d": "শিশুর চাকার গাড়ি; বেবি ক্যারেজ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "হঠকারী বা আবেগপ্রবণ",
+      "explanation": "Impetuous = হঠকারী বা আবেগপ্রবণ"
+    },
+    {
+      "id": "vocab_i_031",
+      "question": "Implacable এর অর্থ কি?",
+      "options": {
+        "a": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+        "b": "নির্দয় বা যাকে শান্ত করা যায় না",
+        "c": "ক্ষরণ করা বা লুকিয়ে রাখা",
+        "d": "অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নির্দয় বা যাকে শান্ত করা যায় না",
+      "explanation": "Implacable = নির্দয় বা যাকে শান্ত করা যায় না"
+    },
+    {
+      "id": "vocab_i_032",
+      "question": "Implicit এর অর্থ কি?",
+      "options": {
+        "a": "অভিযোগ থেকে মুক্তি দেওয়া",
+        "b": "উন্নত করা; ভালো করা",
+        "c": "অন্তর্নিহিত বা অব্যক্ত",
+        "d": "শক্ত বা অনমনীয় হয়ে যাওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অন্তর্নিহিত বা অব্যক্ত",
+      "explanation": "Implicit = অন্তর্নিহিত বা অব্যক্ত"
+    },
+    {
+      "id": "vocab_i_033",
+      "question": "Impunity এর অর্থ কি?",
+      "options": {
+        "a": "বৃক্ষसंबंधীয়",
+        "b": "শাস্তি থেকে অব্যাহতি",
+        "c": "আত্মসমর্পণ করা",
+        "d": "নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শাস্তি থেকে অব্যাহতি",
+      "explanation": "Impunity = শাস্তি থেকে অব্যাহতি"
+    },
+    {
+      "id": "vocab_i_034",
+      "question": "Inchoate এর অর্থ কি?",
+      "options": {
+        "a": "রূপান্তরিত করা",
+        "b": "সমস্যাযুক্ত বা জটিল",
+        "c": "অসম্পূর্ণ বা প্রাথমিক",
+        "d": "প্রতিস্থাপন করা বা বাতিল করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অসম্পূর্ণ বা প্রাথমিক",
+      "explanation": "Inchoate = অসম্পূর্ণ বা প্রাথমিক"
+    },
+    {
+      "id": "vocab_i_035",
+      "question": "Incipient এর অর্থ কি?",
+      "options": {
+        "a": "জাঁকজমক; আড়ম্বর",
+        "b": "প্রাথমিক বা সবে শুরু হচ্ছে",
+        "c": "সহজে বিশ্বাস করে এমন",
+        "d": "দরিদ্র বা নিঃস্ব"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "প্রাথমিক বা সবে শুরু হচ্ছে",
+      "explanation": "Incipient = প্রাথমিক বা সবে শুরু হচ্ছে"
+    },
+    {
+      "id": "vocab_i_036",
+      "question": "Incontrovertible এর অর্থ কি?",
+      "options": {
+        "a": "আধিক্য বা প্রাচুর্য",
+        "b": "জীবাণুনাশক",
+        "c": "দোষারোপ করা",
+        "d": "অকাট্য বা অনস্বীকার্য"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অকাট্য বা অনস্বীকার্য",
+      "explanation": "Incontrovertible = অকাট্য বা অনস্বীকার্য"
+    },
+    {
+      "id": "vocab_i_037",
+      "question": "Incorrigible এর অর্থ কি?",
+      "options": {
+        "a": "সংকোচ বা আত্মবিশ্বাসের অভাব",
+        "b": "শিষ্টাচার বা শালীনতা",
+        "c": "অসংশোধনীয়",
+        "d": "সাদৃশ্যপূর্ণ বা তুলনীয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অসংশোধনীয়",
+      "explanation": "Incorrigible = অসংশোধনীয়"
+    },
+    {
+      "id": "vocab_i_038",
+      "question": "Indefatigable এর অর্থ কি?",
+      "options": {
+        "a": "দূর করা বা প্রতিরোধ করা",
+        "b": "আনন্দে লাফানো",
+        "c": "মিতব্যয়িতা বা কৃপণতা",
+        "d": "অক্লান্ত বা ক্লান্তিহীন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অক্লান্ত বা ক্লান্তিহীন",
+      "explanation": "Indefatigable = অক্লান্ত বা ক্লান্তিহীন"
+    },
+    {
+      "id": "vocab_i_039",
+      "question": "Indigent এর অর্থ কি?",
+      "options": {
+        "a": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+        "b": "দরিদ্র বা নিঃস্ব",
+        "c": "রোগের কারণ বিদ্যা; কারণতত্ত্ব",
+        "d": "কষ্টসাধ্য বা দুর্বহ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দরিদ্র বা নিঃস্ব",
+      "explanation": "Indigent = দরিদ্র বা নিঃস্ব"
+    },
+    {
+      "id": "vocab_i_040",
+      "question": "Indolent এর অর্থ কি?",
+      "options": {
+        "a": "ঐকতানসংগীত",
+        "b": "সাজসজ্জা করা",
+        "c": "সুন্দর; প্রফুল্ল",
+        "d": "অলস বা কর্মবিমুখ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অলস বা কর্মবিমুখ",
+      "explanation": "Indolent = অলস বা কর্মবিমুখ"
+    },
+    {
+      "id": "vocab_i_041",
+      "question": "Inert এর অর্থ কি?",
+      "options": {
+        "a": "সাহস; মনোবল; উদ্যম",
+        "b": "মিথ্যাবাদী",
+        "c": "নিষ্ক্রিয় বা জড়",
+        "d": "জাঁকজমকভাবে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিষ্ক্রিয় বা জড়",
+      "explanation": "Inert = নিষ্ক্রিয় বা জড়"
+    },
+    {
+      "id": "vocab_i_042",
+      "question": "Inimical এর অর্থ কি?",
+      "options": {
+        "a": "গোপন",
+        "b": "শত্রুভাবাপন্ন বা ক্ষতিকর",
+        "c": "সর্বনিম্ন বিন্দু",
+        "d": "অপ্রত্যাশিত লাভ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শত্রুভাবাপন্ন বা ক্ষতিকর",
+      "explanation": "Inimical = শত্রুভাবাপন্ন বা ক্ষতিকর"
+    },
+    {
+      "id": "vocab_i_043",
+      "question": "Iniquity এর অর্থ কি?",
+      "options": {
+        "a": "অন্যায় বা দুষ্টুমি",
+        "b": "সম্মত হওয়া",
+        "c": "হাঁটাচলা; পদচারণ",
+        "d": "স্থিতিস্থাপকতা; দৃঢ়তা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অন্যায় বা দুষ্টুমি",
+      "explanation": "Iniquity = অন্যায় বা দুষ্টুমি"
+    },
+    {
+      "id": "vocab_i_044",
+      "question": "Inscrutable এর অর্থ কি?",
+      "options": {
+        "a": "তৃষ্ণা মেটানো",
+        "b": "অভিনেতা; নাট্যকলার সাথে সম্পর্কিত",
+        "c": "অতিরঞ্জন বা অত্যুক্তি",
+        "d": "দুর্বোধ্য বা রহস্যময়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দুর্বোধ্য বা রহস্যময়",
+      "explanation": "Inscrutable = দুর্বোধ্য বা রহস্যময়"
+    },
+    {
+      "id": "vocab_i_045",
+      "question": "Insipid এর অর্থ কি?",
+      "options": {
+        "a": "বিরস বা স্বাদহীন",
+        "b": "নিখুঁত প্রতীক বা উদাহরণ",
+        "c": "অভয়াশ্রম; আশ্রয়স্থল",
+        "d": "অনুতপ্ত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিরস বা স্বাদহীন",
+      "explanation": "Insipid = বিরস বা স্বাদহীন"
+    },
+    {
+      "id": "vocab_i_046",
+      "question": "Insolvent এর অর্থ কি?",
+      "options": {
+        "a": "অসন্তুষ্ট থাকা; মন খারাপ করা",
+        "b": "দেউলিয়া",
+        "c": "দুর্বল বা শক্তিহীন করা",
+        "d": "অপ্রাসঙ্গিক বা বাইরের"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দেউলিয়া",
+      "explanation": "Insolvent = দেউলিয়া"
+    },
+    {
+      "id": "vocab_i_047",
+      "question": "Insular এর অর্থ কি?",
+      "options": {
+        "a": "সংকল্প বা সমাধান",
+        "b": "দম্ভের সাথে হাঁটা; গর্বিত পদক্ষেপ",
+        "c": "ভদ্রতা বা সামাজিক শিষ্টাচার",
+        "d": "সংকীর্ণমনা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সংকীর্ণমনা",
+      "explanation": "Insular = সংকীর্ণমনা"
+    },
+    {
+      "id": "vocab_i_048",
+      "question": "Intractable এর অর্থ কি?",
+      "options": {
+        "a": "অবসাদ বা ক্লান্তি",
+        "b": "উত্তেজিত করা বা খোঁচা দেওয়া",
+        "c": "বাচাল বা শব্দবহুল",
+        "d": "অবাধ্য বা নিয়ন্ত্রণ করা কঠিন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অবাধ্য বা নিয়ন্ত্রণ করা কঠিন",
+      "explanation": "Intractable = অবাধ্য বা নিয়ন্ত্রণ করা কঠিন"
+    },
+    {
+      "id": "vocab_i_049",
+      "question": "Intransigent এর অর্থ কি?",
+      "options": {
+        "a": "একগুঁয়ে বা আপোষহীন",
+        "b": "ভবিষ্যৎ চিন্তাশীল; সাবধানী",
+        "c": "অতি সক্রিয়; অপ্রয়োজনীয় সাহায্য চাপিয়ে দেওয়া স্বভাবের",
+        "d": "পরিত্যাগ করা বা ফেলে দেওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "একগুঁয়ে বা আপোষহীন",
+      "explanation": "Intransigent = একগুঁয়ে বা আপোষহীন"
+    },
+    {
+      "id": "vocab_i_050",
+      "question": "Inundate এর অর্থ কি?",
+      "options": {
+        "a": "স্বচ্ছ বা পরিষ্কার",
+        "b": "মিশুক বা সঙ্গপ্রিয়",
+        "c": "বিদ্রূপাত্মক",
+        "d": "প্লাবিত করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্লাবিত করা",
+      "explanation": "Inundate = প্লাবিত করা"
+    },
+    {
+      "id": "vocab_i_051",
+      "question": "Inure এর অর্থ কি?",
+      "options": {
+        "a": "সুদখোরি",
+        "b": "অভ্যস্ত করা",
+        "c": "অহংকারী বা দুঃসাহসী",
+        "d": "সাহসী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভ্যস্ত করা",
+      "explanation": "Inure = অভ্যস্ত করা"
+    },
+    {
+      "id": "vocab_i_052",
+      "question": "Irascible এর অর্থ কি?",
+      "options": {
+        "a": "খিটখিটে বা সহজে রেগে যায় এমন",
+        "b": "খেয়ালী বা অদ্ভুত",
+        "c": "উন্নত করা; ভালো করা",
+        "d": "স্বগতোক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "খিটখিটে বা সহজে রেগে যায় এমন",
+      "explanation": "Irascible = খিটখিটে বা সহজে রেগে যায় এমন"
+    },
+    {
+      "id": "vocab_i_053",
+      "question": "Irresolute এর অর্থ কি?",
+      "options": {
+        "a": "অস্থিরচিত্ত বা দ্বিধাগ্রস্ত",
+        "b": "প্রশমিত হওয়া বা কমে যাওয়া",
+        "c": "দুর্বোধ্য",
+        "d": "সংশয় বা অস্বস্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অস্থিরচিত্ত বা দ্বিধাগ্রস্ত",
+      "explanation": "Irresolute = অস্থিরচিত্ত বা দ্বিধাগ্রস্ত"
+    },
+    {
+      "id": "vocab_i_054",
+      "question": "Impair এর অর্থ কি?",
+      "options": {
+        "a": "ভেদ্য বা প্রবেশযোগ্য",
+        "b": "ক্ষতিগ্রস্ত করা বা দুর্বল করা",
+        "c": "অনুমোদন বা প্রশংসা",
+        "d": "উসকানি দেওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ক্ষতিগ্রস্ত করা বা দুর্বল করা",
+      "explanation": "Impair = ক্ষতিগ্রস্ত করা বা দুর্বল করা"
+    },
+    {
+      "id": "vocab_i_055",
+      "question": "Impassive এর অর্থ কি?",
+      "options": {
+        "a": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
+        "b": "বিশ্বাসঘাতকতা; বিশ্বাসভঙ্গ",
+        "c": "নির্বিকার",
+        "d": "নির্বিকার বা ভাবলেশহীন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "নির্বিকার বা ভাবলেশহীন",
+      "explanation": "Impassive = নির্বিকার বা ভাবলেশহীন"
+    },
+    {
+      "id": "vocab_i_056",
+      "question": "Impede এর অর্থ কি?",
+      "options": {
+        "a": "ভারী বা ধীর",
+        "b": "ঘুমে কথা বলা",
+        "c": "খাদ্যরসিক",
+        "d": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+      "explanation": "Impede = বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা"
+    },
+    {
+      "id": "vocab_i_057",
+      "question": "Impermeable এর অর্থ কি?",
+      "options": {
+        "a": "অভেদ্য বা অপ্রবেশ্য",
+        "b": "শ্রদ্ধাশীল",
+        "c": "ভবিষ্যৎ চিন্তাশীল; সাবধানী",
+        "d": "অভিশাপমূলক; গালিগালাজপূর্ণ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অভেদ্য বা অপ্রবেশ্য",
+      "explanation": "Impermeable = অভেদ্য বা অপ্রবেশ্য"
+    },
+    {
+      "id": "vocab_i_058",
+      "question": "Implode এর অর্থ কি?",
+      "options": {
+        "a": "ভিতরের দিকে ফেটে যাওয়া বা ধসে পড়া",
+        "b": "গোপন; লুকানো",
+        "c": "আগেই প্রতিরোধ করা",
+        "d": "অভিশাপ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভিতরের দিকে ফেটে যাওয়া বা ধসে পড়া",
+      "explanation": "Implode = ভিতরের দিকে ফেটে যাওয়া বা ধসে পড়া"
+    },
+    {
+      "id": "vocab_i_059",
+      "question": "Inadvertently এর অর্থ কি?",
+      "options": {
+        "a": "খাপ খাওয়াতে অক্ষম; অপ্রতিযোজ্য",
+        "b": "অনুকূল; শুভ",
+        "c": "দানশীল বা উপকারী",
+        "d": "অসাবধানতাবশত বা অনিচ্ছাকৃতভাবে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অসাবধানতাবশত বা অনিচ্ছাকৃতভাবে",
+      "explanation": "Inadvertently = অসাবধানতাবশত বা অনিচ্ছাকৃতভাবে"
+    },
+    {
+      "id": "vocab_i_060",
+      "question": "Incongruity এর অর্থ কি?",
+      "options": {
+        "a": "সমাজচ্যুত করা",
+        "b": "কালবিরুদ্ধ বা বেমানান",
+        "c": "কলঙ্ক",
+        "d": "অসঙ্গতি বা বৈপরীত্য"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অসঙ্গতি বা বৈপরীত্য",
+      "explanation": "Incongruity = অসঙ্গতি বা বৈপরীত্য"
+    },
+    {
+      "id": "vocab_i_061",
+      "question": "Inconsequential এর অর্থ কি?",
+      "options": {
+        "a": "দেদীপ্যমান",
+        "b": "উসকানি দেওয়া",
+        "c": "গুরুত্বহীন বা তুচ্ছ",
+        "d": "অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "গুরুত্বহীন বা তুচ্ছ",
+      "explanation": "Inconsequential = গুরুত্বহীন বা তুচ্ছ"
+    },
+    {
+      "id": "vocab_i_062",
+      "question": "Incorporate এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণ; জ্ঞানী",
+        "b": "বাজে বা অর্থহীন কথা বলা",
+        "c": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+        "d": "অপবিত্র করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+      "explanation": "Incorporate = অন্তর্ভুক্ত করা বা সংযুক্ত করা"
+    },
+    {
+      "id": "vocab_i_063",
+      "question": "Indeterminate এর অর্থ কি?",
+      "options": {
+        "a": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+        "b": "সর্বজ্ঞ; সব জানে যে",
+        "c": "উপযুক্ত বা মনোরম",
+        "d": "অনিশ্চিত বা অনির্দিষ্ট"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনিশ্চিত বা অনির্দিষ্ট",
+      "explanation": "Indeterminate = অনিশ্চিত বা অনির্দিষ্ট"
+    },
+    {
+      "id": "vocab_i_064",
+      "question": "Indigence এর অর্থ কি?",
+      "options": {
+        "a": "দারিদ্র্য বা অভাব",
+        "b": "অনুলিপি করা",
+        "c": "গুরুত্বহীন বা তুচ্ছ",
+        "d": "বের করে আনা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দারিদ্র্য বা অভাব",
+      "explanation": "Indigence = দারিদ্র্য বা অভাব"
+    },
+    {
+      "id": "vocab_i_065",
+      "question": "Inherent এর অর্থ কি?",
+      "options": {
+        "a": "পুনরাবৃত্তি",
+        "b": "অন্তর্নিহিত বা স্বাভাবিক",
+        "c": "প্রশমিত করা বা তীব্রতা কমানো",
+        "d": "হস্তান্তর করা বা অর্পণ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অন্তর্নিহিত বা স্বাভাবিক",
+      "explanation": "Inherent = অন্তর্নিহিত বা স্বাভাবিক"
+    },
+    {
+      "id": "vocab_i_066",
+      "question": "Insensible এর অর্থ কি?",
+      "options": {
+        "a": "সংক্ষিপ্ত",
+        "b": "সামান্য চুরি করা; হাতসাফাই করা",
+        "c": "তপস্বী বা কঠোর সংযমী",
+        "d": "অসংবেদনশীল বা অজ্ঞান"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অসংবেদনশীল বা অজ্ঞান",
+      "explanation": "Insensible = অসংবেদনশীল বা অজ্ঞান"
+    },
+    {
+      "id": "vocab_i_067",
+      "question": "Insinuate এর অর্থ কি?",
+      "options": {
+        "a": "মিতব্যয়ী",
+        "b": "রূপান্তর বা পরিবর্তন",
+        "c": "ইঙ্গিত করা বা পরোক্ষভাবে বলা",
+        "d": "গম্ভীর বা রক্ষণশীল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ইঙ্গিত করা বা পরোক্ষভাবে বলা",
+      "explanation": "Insinuate = ইঙ্গিত করা বা পরোক্ষভাবে বলা"
+    },
+    {
+      "id": "vocab_i_068",
+      "question": "Insularity এর অর্থ কি?",
+      "options": {
+        "a": "ভাগ্যের উত্থান-পতন",
+        "b": "সর্বত্র ছড়িয়ে পড়া",
+        "c": "হিংস্রতা; আগ্রাসী মনোভাব",
+        "d": "সংকীর্ণতা বা বিচ্ছিন্নতা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সংকীর্ণতা বা বিচ্ছিন্নতা",
+      "explanation": "Insularity = সংকীর্ণতা বা বিচ্ছিন্নতা"
+    },
+    {
+      "id": "vocab_i_069",
+      "question": "Intransigence এর অর্থ কি?",
+      "options": {
+        "a": "ঐকতানসংগীত",
+        "b": "দীর্ঘ তালিকা; প্রার্থনার পুনরাবৃত্তিমূলক পাঠ",
+        "c": "জেদ বা নমনীয়তার অভাব",
+        "d": "বাতিল করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জেদ বা নমনীয়তার অভাব",
+      "explanation": "Intransigence = জেদ বা নমনীয়তার অভাব"
+    },
+    {
+      "id": "vocab_i_070",
+      "question": "Inured এর অর্থ কি?",
+      "options": {
+        "a": "মতভেদ",
+        "b": "অভ্যস্ত বা কঠোর করা",
+        "c": "অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক",
+        "d": "বড় অগ্নিকাণ্ড"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভ্যস্ত বা কঠোর করা",
+      "explanation": "Inured = অভ্যস্ত বা কঠোর করা"
+    },
+    {
+      "id": "vocab_i_071",
+      "question": "Itinerary এর অর্থ কি?",
+      "options": {
+        "a": "শান্তশিষ্ট; আবেগহীন",
+        "b": "এক ধরনের উভচর প্রাণী; সালামান্ডার",
+        "c": "ভ্রমণসূচি বা কর্মসূচি",
+        "d": "ব্যথায় সিঁটকানো; কুঁকড়ে যাওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভ্রমণসূচি বা কর্মসূচি",
+      "explanation": "Itinerary = ভ্রমণসূচি বা কর্মসূচি"
     }
   ]
 }

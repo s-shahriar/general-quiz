@@ -403,6 +403,240 @@
       "correct_answer": "b",
       "correct_answer_text": "মুদ্রণশিল্প",
       "explanation": "Typography = মুদ্রণশিল্প"
+    },
+    {
+      "id": "vocab_t_032",
+      "question": "Tacit এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষপাতদুষ্ট",
+        "b": "শর্ত আরোপ করা বা নির্দিষ্ট করা",
+        "c": "অনিশ্চিত বা অনির্দিষ্ট",
+        "d": "মৌন বা অব্যক্ত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মৌন বা অব্যক্ত",
+      "explanation": "Tacit = মৌন বা অব্যক্ত"
+    },
+    {
+      "id": "vocab_t_033",
+      "question": "Tantamount এর অর্থ কি?",
+      "options": {
+        "a": "অসংযম; প্রশ্রয়",
+        "b": "উপশম করা বা লাঘব করা",
+        "c": "সমতুল্য",
+        "d": "সংকোচ বা আত্মবিশ্বাসের অভাব"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সমতুল্য",
+      "explanation": "Tantamount = সমতুল্য"
+    },
+    {
+      "id": "vocab_t_034",
+      "question": "Tautology এর অর্থ কি?",
+      "options": {
+        "a": "পুনরুক্তি",
+        "b": "ছোটখাটো ভুল বা ত্রুটি",
+        "c": "স্পষ্ট; সহজে পাঠযোগ্য",
+        "d": "কঠোর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পুনরুক্তি",
+      "explanation": "Tautology = পুনরুক্তি"
+    },
+    {
+      "id": "vocab_t_035",
+      "question": "Temerity এর অর্থ কি?",
+      "options": {
+        "a": "হালকা-পাতলা ও দুর্বল",
+        "b": "দুঃসাহস বা ঔদ্ধত্য",
+        "c": "রূপান্তরিত করা",
+        "d": "চেতনাসম্পন্ন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দুঃসাহস বা ঔদ্ধত্য",
+      "explanation": "Temerity = দুঃসাহস বা ঔদ্ধত্য"
+    },
+    {
+      "id": "vocab_t_036",
+      "question": "Temperance এর অর্থ কি?",
+      "options": {
+        "a": "সব কিছু মনে রাখার ক্ষমতা; অসীম স্মৃতিশক্তি",
+        "b": "সংযম",
+        "c": "দুর্বোধ্য",
+        "d": "ফল খেয়ে বাঁচে যে; ফলভোজী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সংযম",
+      "explanation": "Temperance = সংযম"
+    },
+    {
+      "id": "vocab_t_037",
+      "question": "Tenable এর অর্থ কি?",
+      "options": {
+        "a": "তিতিরজাতীয় পাখি",
+        "b": "দুর্বলতা",
+        "c": "যুক্তিযুক্ত বা সমর্থনযোগ্য",
+        "d": "ভূগর্ভস্থ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "যুক্তিযুক্ত বা সমর্থনযোগ্য",
+      "explanation": "Tenable = যুক্তিযুক্ত বা সমর্থনযোগ্য"
+    },
+    {
+      "id": "vocab_t_038",
+      "question": "Tenuous এর অর্থ কি?",
+      "options": {
+        "a": "অনুমোদন বা প্রশংসা",
+        "b": "নূতন শব্দ",
+        "c": "পাতলা বা দুর্বল",
+        "d": "ধাঁধা বা কঠিন সমস্যা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পাতলা বা দুর্বল",
+      "explanation": "Tenuous = পাতলা বা দুর্বল"
+    },
+    {
+      "id": "vocab_t_039",
+      "question": "Torpid এর অর্থ কি?",
+      "options": {
+        "a": "নিষ্ক্রিয় বা অলস",
+        "b": "নিষিদ্ধ করা",
+        "c": "গভীরভাবে চিন্তা করা",
+        "d": "প্রশমিত করা বা তীব্রতা কমানো"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নিষ্ক্রিয় বা অলস",
+      "explanation": "Torpid = নিষ্ক্রিয় বা অলস"
+    },
+    {
+      "id": "vocab_t_040",
+      "question": "Transient এর অর্থ কি?",
+      "options": {
+        "a": "কর্ক শ; কোলাহলপূর্ণ",
+        "b": "গদ্যময়; গতানুগতিক; বিরস",
+        "c": "ক্ষণস্থায়ী",
+        "d": "গম্ভীর বা রক্ষণশীল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ক্ষণস্থায়ী",
+      "explanation": "Transient = ক্ষণস্থায়ী"
+    },
+    {
+      "id": "vocab_t_041",
+      "question": "Transmute এর অর্থ কি?",
+      "options": {
+        "a": "রূপান্তরিত করা",
+        "b": "দৈনন্দিন বা সাধারণ",
+        "c": "ঝিনুক",
+        "d": "বিচ্ছিন্ন করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "রূপান্তরিত করা",
+      "explanation": "Transmute = রূপান্তরিত করা"
+    },
+    {
+      "id": "vocab_t_042",
+      "question": "Travesty এর অর্থ কি?",
+      "options": {
+        "a": "দ্রুত বৃদ্ধি পাওয়া বা বিকশিত হওয়া",
+        "b": "বেড়া; খুঁটি দিয়ে তৈরি প্রতিরক্ষা কাঠামো",
+        "c": "বাচাল",
+        "d": "ব্যঙ্গানুকরণ বা প্রহসন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ব্যঙ্গানুকরণ বা প্রহসন",
+      "explanation": "Travesty = ব্যঙ্গানুকরণ বা প্রহসন"
+    },
+    {
+      "id": "vocab_t_043",
+      "question": "Trenchant এর অর্থ কি?",
+      "options": {
+        "a": "তির্যক বা পরোক্ষ",
+        "b": "বাতিল করা",
+        "c": "তীক্ষ্ণ বা জোরালো",
+        "d": "একান্তবাসী; নিঃসঙ্গ জীবনযাপনকারী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "তীক্ষ্ণ বা জোরালো",
+      "explanation": "Trenchant = তীক্ষ্ণ বা জোরালো"
+    },
+    {
+      "id": "vocab_t_044",
+      "question": "Trite এর অর্থ কি?",
+      "options": {
+        "a": "মামুলি বা বহু ব্যবহারে জীর্ণ",
+        "b": "বৃদ্ধাবস্থা বিদ্যা; বার্ধক্য গবেষণা",
+        "c": "অনুমান বা ধারণা",
+        "d": "লাম্পট্যপূর্ণ; অশ্লীল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মামুলি বা বহু ব্যবহারে জীর্ণ",
+      "explanation": "Trite = মামুলি বা বহু ব্যবহারে জীর্ণ"
+    },
+    {
+      "id": "vocab_t_045",
+      "question": "Truculent এর অর্থ কি?",
+      "options": {
+        "a": "উৎফুল্ল বা উচ্ছ্বসিত",
+        "b": "যুদ্ধংদেহী বা আক্রমণাত্মক",
+        "c": "শিলালিপি; খোদাই লেখা",
+        "d": "অকাট্য বা অনস্বীকার্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "যুদ্ধংদেহী বা আক্রমণাত্মক",
+      "explanation": "Truculent = যুদ্ধংদেহী বা আক্রমণাত্মক"
+    },
+    {
+      "id": "vocab_t_046",
+      "question": "Turgid এর অর্থ কি?",
+      "options": {
+        "a": "ভারী বা ধীর",
+        "b": "মঠ",
+        "c": "স্ফীত বা আড়ম্বরপূর্ণ",
+        "d": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "স্ফীত বা আড়ম্বরপূর্ণ",
+      "explanation": "Turgid = স্ফীত বা আড়ম্বরপূর্ণ"
+    },
+    {
+      "id": "vocab_t_047",
+      "question": "Turpitude এর অর্থ কি?",
+      "options": {
+        "a": "ফোলা; স্ফীত; অতিরঞ্জিত",
+        "b": "সব বিষয়ে কথা বলা",
+        "c": "শোকগীতি",
+        "d": "হীনতা বা নৈতিক অবক্ষয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "হীনতা বা নৈতিক অবক্ষয়",
+      "explanation": "Turpitude = হীনতা বা নৈতিক অবক্ষয়"
+    },
+    {
+      "id": "vocab_t_048",
+      "question": "Tangential এর অর্থ কি?",
+      "options": {
+        "a": "অনাকাঙ্ক্ষিত বা দুর্ভাগ্যজনক",
+        "b": "বড় অগ্নিকাণ্ড",
+        "c": "প্রাসঙ্গিক নয় এমন বা স্পর্শক",
+        "d": "স্বাভাবিক প্রবণতা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রাসঙ্গিক নয় এমন বা স্পর্শক",
+      "explanation": "Tangential = প্রাসঙ্গিক নয় এমন বা স্পর্শক"
+    },
+    {
+      "id": "vocab_t_049",
+      "question": "Transgression এর অর্থ কি?",
+      "options": {
+        "a": "লঙ্ঘন বা অপরাধ",
+        "b": "অটল বা একগুঁয়ে",
+        "c": "সাহস; মনোবল; উদ্যম",
+        "d": "প্রতিশোধ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "লঙ্ঘন বা অপরাধ",
+      "explanation": "Transgression = লঙ্ঘন বা অপরাধ"
     }
   ]
 }

@@ -104,6 +104,890 @@
       "correct_answer": "d",
       "correct_answer_text": "চাচার মতো; মামার মতো স্নেহময়",
       "explanation": "Avuncular = চাচার মতো; মামার মতো স্নেহময়"
+    },
+    {
+      "id": "vocab_a_009",
+      "question": "Abate এর অর্থ কি?",
+      "options": {
+        "a": "কমানো বা হ্রাস পাওয়া",
+        "b": "কটূক্তি; গালাগালি",
+        "c": "ছদ্মনাম",
+        "d": "অন্তর্নিহিত বা অব্যক্ত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কমানো বা হ্রাস পাওয়া",
+      "explanation": "Abate = কমানো বা হ্রাস পাওয়া"
+    },
+    {
+      "id": "vocab_a_010",
+      "question": "Abdicate এর অর্থ কি?",
+      "options": {
+        "a": "আনুষ্ঠানিকভাবে ত্যাগ করা",
+        "b": "শোকগীতি",
+        "c": "দ্রুত বৃদ্ধি পাওয়া; বিস্তার লাভ করা",
+        "d": "মত বা বিশ্বাস প্রত্যাহার করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "আনুষ্ঠানিকভাবে ত্যাগ করা",
+      "explanation": "Abdicate = আনুষ্ঠানিকভাবে ত্যাগ করা"
+    },
+    {
+      "id": "vocab_a_011",
+      "question": "Aberration এর অর্থ কি?",
+      "options": {
+        "a": "সাহসী",
+        "b": "বিচ্যুতি বা অস্বাভাবিকতা",
+        "c": "উচ্ছৃঙ্খল; লাগামহীন",
+        "d": "রোধ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিচ্যুতি বা অস্বাভাবিকতা",
+      "explanation": "Aberration = বিচ্যুতি বা অস্বাভাবিকতা"
+    },
+    {
+      "id": "vocab_a_012",
+      "question": "Abjure এর অর্থ কি?",
+      "options": {
+        "a": "পাশাপাশি স্থাপন করা",
+        "b": "তীক্ষ্ণ বা জোরালো",
+        "c": "শপথপূর্বক ত্যাগ করা",
+        "d": "প্রতারণা করা; বিভ্রান্ত করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "শপথপূর্বক ত্যাগ করা",
+      "explanation": "Abjure = শপথপূর্বক ত্যাগ করা"
+    },
+    {
+      "id": "vocab_a_013",
+      "question": "Abnegation এর অর্থ কি?",
+      "options": {
+        "a": "শাস্তি থেকে অব্যাহতি",
+        "b": "আন্ত্রিক; শারীরিক; গভীরভাবে অনুভূত",
+        "c": "আত্মত্যাগ বা অস্বীকার",
+        "d": "অনুঘটক বা প্রেরণাদাতা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আত্মত্যাগ বা অস্বীকার",
+      "explanation": "Abnegation = আত্মত্যাগ বা অস্বীকার"
+    },
+    {
+      "id": "vocab_a_014",
+      "question": "Abscond এর অর্থ কি?",
+      "options": {
+        "a": "এক ধরনের উভচর প্রাণী; সালামান্ডার",
+        "b": "অতিসতর্ক বা খুঁতখুঁতে",
+        "c": "প্রশংসা করা",
+        "d": "গোপনে পালিয়ে যাওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "গোপনে পালিয়ে যাওয়া",
+      "explanation": "Abscond = গোপনে পালিয়ে যাওয়া"
+    },
+    {
+      "id": "vocab_a_015",
+      "question": "Abstruse এর অর্থ কি?",
+      "options": {
+        "a": "দুর্বোধ্য",
+        "b": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+        "c": "ছোটখাটো বিষয়ে তর্ক করা",
+        "d": "সুপ্ত বা অপ্রকাশিত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্বোধ্য",
+      "explanation": "Abstruse = দুর্বোধ্য"
+    },
+    {
+      "id": "vocab_a_016",
+      "question": "Accede এর অর্থ কি?",
+      "options": {
+        "a": "সুস্পষ্ট বা প্রকাশ করা",
+        "b": "মহামারী বিশেষজ্ঞ; রোগ বিস্তার গবেষক",
+        "c": "সরাসরি বিপরীত",
+        "d": "সম্মত হওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সম্মত হওয়া",
+      "explanation": "Accede = সম্মত হওয়া"
+    },
+    {
+      "id": "vocab_a_017",
+      "question": "Accost এর অর্থ কি?",
+      "options": {
+        "a": "তিরস্কার",
+        "b": "ধনী; বিত্তবান; প্রাচুর্যময়",
+        "c": "শোকগাথা",
+        "d": "আগ্রাসীভাবে সম্বোধন করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আগ্রাসীভাবে সম্বোধন করা",
+      "explanation": "Accost = আগ্রাসীভাবে সম্বোধন করা"
+    },
+    {
+      "id": "vocab_a_018",
+      "question": "Accretion এর অর্থ কি?",
+      "options": {
+        "a": "কালবিরুদ্ধ বা বেমানান",
+        "b": "নিষেধাত্মক বা অত্যধিক",
+        "c": "বাদী",
+        "d": "ধীরে ধীরে বৃদ্ধি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ধীরে ধীরে বৃদ্ধি",
+      "explanation": "Accretion = ধীরে ধীরে বৃদ্ধি"
+    },
+    {
+      "id": "vocab_a_019",
+      "question": "Acumen এর অর্থ কি?",
+      "options": {
+        "a": "উদ্বেগ; উৎকণ্ঠা",
+        "b": "সূক্ষ্ম পার্থক্য",
+        "c": "সূক্ষ্ম বিচারশক্তি",
+        "d": "শপথ করে ত্যাগ করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সূক্ষ্ম বিচারশক্তি",
+      "explanation": "Acumen = সূক্ষ্ম বিচারশক্তি"
+    },
+    {
+      "id": "vocab_a_020",
+      "question": "Adamant এর অর্থ কি?",
+      "options": {
+        "a": "সমর্থন করা",
+        "b": "সতর্ক",
+        "c": "অটল বা একগুঁয়ে",
+        "d": "ফুলে যাওয়া বা প্রসারিত হওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অটল বা একগুঁয়ে",
+      "explanation": "Adamant = অটল বা একগুঁয়ে"
+    },
+    {
+      "id": "vocab_a_021",
+      "question": "Admonish এর অর্থ কি?",
+      "options": {
+        "a": "মৃদুভাবে তিরস্কার করা",
+        "b": "আঠালো বা ঘন",
+        "c": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা",
+        "d": "সংযমী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মৃদুভাবে তিরস্কার করা",
+      "explanation": "Admonish = মৃদুভাবে তিরস্কার করা"
+    },
+    {
+      "id": "vocab_a_022",
+      "question": "Adumbrate এর অর্থ কি?",
+      "options": {
+        "a": "উপসংহার বা সমাপ্তি অংশ",
+        "b": "অস্পষ্টভাবে বর্ণনা করা",
+        "c": "ভয়ে পিছিয়ে যাওয়া",
+        "d": "মামুলি বা গতানুগতিক উক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অস্পষ্টভাবে বর্ণনা করা",
+      "explanation": "Adumbrate = অস্পষ্টভাবে বর্ণনা করা"
+    },
+    {
+      "id": "vocab_a_023",
+      "question": "Adverse এর অর্থ কি?",
+      "options": {
+        "a": "মিষ্টি কথায় ভোলানো",
+        "b": "দ্বিধা করা",
+        "c": "প্রতিকূল",
+        "d": "সংকীর্ণ বা সীমিত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রতিকূল",
+      "explanation": "Adverse = প্রতিকূল"
+    },
+    {
+      "id": "vocab_a_024",
+      "question": "Advocate এর অর্থ কি?",
+      "options": {
+        "a": "দৈনিক বা দিনের বেলায় সক্রিয়",
+        "b": "ভোটাধিকার দেওয়া",
+        "c": "সমর্থন করা",
+        "d": "জমকালো কিন্তু অন্তঃসারশূন্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সমর্থন করা",
+      "explanation": "Advocate = সমর্থন করা"
+    },
+    {
+      "id": "vocab_a_025",
+      "question": "Affluent এর অর্থ কি?",
+      "options": {
+        "a": "সরল বা নিষ্কপট",
+        "b": "প্রশংসা বা স্তুতি",
+        "c": "সচ্ছল বা ধনী",
+        "d": "স্বচ্ছ; পরিষ্কার"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সচ্ছল বা ধনী",
+      "explanation": "Affluent = সচ্ছল বা ধনী"
+    },
+    {
+      "id": "vocab_a_026",
+      "question": "Aggrandize এর অর্থ কি?",
+      "options": {
+        "a": "জরুরি বা দাবিদার",
+        "b": "পরিত্যক্ত; দায়িত্বহীন",
+        "c": "ক্ষমতা বা খ্যাতি বৃদ্ধি করা",
+        "d": "মুলতবি অবস্থা বা স্থগিত অবস্থা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ক্ষমতা বা খ্যাতি বৃদ্ধি করা",
+      "explanation": "Aggrandize = ক্ষমতা বা খ্যাতি বৃদ্ধি করা"
+    },
+    {
+      "id": "vocab_a_027",
+      "question": "Alacrity এর অর্থ কি?",
+      "options": {
+        "a": "ভেদ্য বা প্রবেশযোগ্য",
+        "b": "তৎপরতা বা ব্যগ্রতা",
+        "c": "কঠোর",
+        "d": "দীর্ঘায়িত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "তৎপরতা বা ব্যগ্রতা",
+      "explanation": "Alacrity = তৎপরতা বা ব্যগ্রতা"
+    },
+    {
+      "id": "vocab_a_028",
+      "question": "Alias এর অর্থ কি?",
+      "options": {
+        "a": "পরিত্যক্ত; দায়িত্বহীন",
+        "b": "ধর্মোপদেশ",
+        "c": "ছদ্মনাম",
+        "d": "তুচ্ছ; নগণ্য; সামান্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ছদ্মনাম",
+      "explanation": "Alias = ছদ্মনাম"
+    },
+    {
+      "id": "vocab_a_029",
+      "question": "Ambivalent এর অর্থ কি?",
+      "options": {
+        "a": "পশ্চাৎভাগ",
+        "b": "দ্বিধান্বিত বা পরস্পরবিরোধী অনুভূতি",
+        "c": "বিশেষজ্ঞ বা পণ্ডিত",
+        "d": "উদার; দানশীল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দ্বিধান্বিত বা পরস্পরবিরোধী অনুভূতি",
+      "explanation": "Ambivalent = দ্বিধান্বিত বা পরস্পরবিরোধী অনুভূতি"
+    },
+    {
+      "id": "vocab_a_030",
+      "question": "Amenable এর অর্থ কি?",
+      "options": {
+        "a": "সহজে রাজি বা নমনীয়",
+        "b": "সম্মত হওয়া",
+        "c": "শুকিয়ে ফেলা বা রসশূন্য করা",
+        "d": "কুসুম গরম; অনুৎসাহী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহজে রাজি বা নমনীয়",
+      "explanation": "Amenable = সহজে রাজি বা নমনীয়"
+    },
+    {
+      "id": "vocab_a_031",
+      "question": "Amorphous এর অর্থ কি?",
+      "options": {
+        "a": "অগঠিত বা আকারবিহীন",
+        "b": "জনগণের প্রতি উন্মাদ আগ্রহ; গণ-উন্মাদনা",
+        "c": "ছলচাতুরি; ধোঁকা",
+        "d": "শাসনশূন্যতাকাল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অগঠিত বা আকারবিহীন",
+      "explanation": "Amorphous = অগঠিত বা আকারবিহীন"
+    },
+    {
+      "id": "vocab_a_032",
+      "question": "Anachronistic এর অর্থ কি?",
+      "options": {
+        "a": "মিতব্যয়ী",
+        "b": "কালবিরুদ্ধ বা বেমানান",
+        "c": "সংযুক্ত করা",
+        "d": "বঞ্চিত বা শোকে মুহ্যমান"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কালবিরুদ্ধ বা বেমানান",
+      "explanation": "Anachronistic = কালবিরুদ্ধ বা বেমানান"
+    },
+    {
+      "id": "vocab_a_033",
+      "question": "Anathema এর অর্থ কি?",
+      "options": {
+        "a": "ছলচাতুরী বা প্রতারণা",
+        "b": "অভিশাপ বা তীব্র ঘৃণার পাত্র",
+        "c": "সমষ্টি বা সংগ্রহ করা",
+        "d": "বাচাল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অভিশাপ বা তীব্র ঘৃণার পাত্র",
+      "explanation": "Anathema = অভিশাপ বা তীব্র ঘৃণার পাত্র"
+    },
+    {
+      "id": "vocab_a_034",
+      "question": "Annex এর অর্থ কি?",
+      "options": {
+        "a": "সমজাতীয় বা একরকম",
+        "b": "সংযুক্ত করা",
+        "c": "ধার্মিক",
+        "d": "পার্থিব বা সাধারণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সংযুক্ত করা",
+      "explanation": "Annex = সংযুক্ত করা"
+    },
+    {
+      "id": "vocab_a_035",
+      "question": "Antediluvian এর অর্থ কি?",
+      "options": {
+        "a": "ভবিষ্যৎ বক্তা; দ্রষ্টা",
+        "b": "অতি প্রাচীন",
+        "c": "ক্ষোভ",
+        "d": "রঙিন পেন্সিল; মোমের কাঠি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অতি প্রাচীন",
+      "explanation": "Antediluvian = অতি প্রাচীন"
+    },
+    {
+      "id": "vocab_a_036",
+      "question": "Antiseptic এর অর্থ কি?",
+      "options": {
+        "a": "শক্ত বা অনমনীয় হয়ে যাওয়া",
+        "b": "সমাজচ্যুত ব্যক্তি",
+        "c": "জীবাণুনাশক",
+        "d": "লোক দেখানো কিন্তু অন্তঃসারশূন্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জীবাণুনাশক",
+      "explanation": "Antiseptic = জীবাণুনাশক"
+    },
+    {
+      "id": "vocab_a_037",
+      "question": "Apathetic এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক; স্তম্ভিত",
+        "b": "উদাসীন",
+        "c": "মৃদুভাবে তিরস্কার করা",
+        "d": "হালকা-পাতলা ও দুর্বল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উদাসীন",
+      "explanation": "Apathetic = উদাসীন"
+    },
+    {
+      "id": "vocab_a_038",
+      "question": "Antithesis এর অর্থ কি?",
+      "options": {
+        "a": "সরাসরি বিপরীত",
+        "b": "বিশৃঙ্খলা; এলোমেলো অবস্থা",
+        "c": "দ্বিধা বা দ্বৈত মনোভাব",
+        "d": "অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সরাসরি বিপরীত",
+      "explanation": "Antithesis = সরাসরি বিপরীত"
+    },
+    {
+      "id": "vocab_a_039",
+      "question": "Apocryphal এর অর্থ কি?",
+      "options": {
+        "a": "শোকগীতি",
+        "b": "সন্দেহজনক বা বানোয়াট",
+        "c": "অসন্তুষ্ট থাকা; মন খারাপ করা",
+        "d": "ভীতিপ্রদ বা সম্মানযোগ্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সন্দেহজনক বা বানোয়াট",
+      "explanation": "Apocryphal = সন্দেহজনক বা বানোয়াট"
+    },
+    {
+      "id": "vocab_a_040",
+      "question": "Approbation এর অর্থ কি?",
+      "options": {
+        "a": "রূপান্তর বা পরিবর্তন",
+        "b": "অকাট্য বা অনস্বীকার্য",
+        "c": "স্ত্রীহত্যা",
+        "d": "অনুমোদন বা প্রশংসা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনুমোদন বা প্রশংসা",
+      "explanation": "Approbation = অনুমোদন বা প্রশংসা"
+    },
+    {
+      "id": "vocab_a_041",
+      "question": "Arbitrary এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক; স্তম্ভিত",
+        "b": "কুটিল; কপট",
+        "c": "স্বেচ্ছাচারী বা খামখেয়ালী",
+        "d": "পণ্ডিত বা জ্ঞানী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "স্বেচ্ছাচারী বা খামখেয়ালী",
+      "explanation": "Arbitrary = স্বেচ্ছাচারী বা খামখেয়ালী"
+    },
+    {
+      "id": "vocab_a_042",
+      "question": "Arboreal এর অর্থ কি?",
+      "options": {
+        "a": "উচ্চ প্রশংসা করা",
+        "b": "বৃক্ষसंबंधীয়",
+        "c": "অপরিচ্ছন্ন বা অগোছালো",
+        "d": "প্রবল আবেগ বা উৎসাহ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বৃক্ষसंबंधীয়",
+      "explanation": "Arboreal = বৃক্ষसंबंधীয়"
+    },
+    {
+      "id": "vocab_a_043",
+      "question": "Arcane এর অর্থ কি?",
+      "options": {
+        "a": "প্রশংসা করা",
+        "b": "উৎফুল্ল বা উচ্ছ্বসিত",
+        "c": "রহস্যময় বা গুপ্ত",
+        "d": "অর্থ আত্মসাৎ করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "রহস্যময় বা গুপ্ত",
+      "explanation": "Arcane = রহস্যময় বা গুপ্ত"
+    },
+    {
+      "id": "vocab_a_044",
+      "question": "Archetypal এর অর্থ কি?",
+      "options": {
+        "a": "অভেদ্য বা অপ্রবেশ্য",
+        "b": "দরিদ্র বা নিঃস্ব",
+        "c": "দুর্গন্ধযুক্ত; বাজে গন্ধওয়ালা",
+        "d": "আদর্শ বা মূল prototypical"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আদর্শ বা মূল prototypical",
+      "explanation": "Archetypal = আদর্শ বা মূল prototypical"
+    },
+    {
+      "id": "vocab_a_045",
+      "question": "Arrogate এর অর্থ কি?",
+      "options": {
+        "a": "সর্বেশ্বরবাদী",
+        "b": "স্বেচ্ছাচারী বা খামখেয়ালী",
+        "c": "পশ্চাৎভাগ",
+        "d": "অন্যায়ভাবে দাবি করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অন্যায়ভাবে দাবি করা",
+      "explanation": "Arrogate = অন্যায়ভাবে দাবি করা"
+    },
+    {
+      "id": "vocab_a_046",
+      "question": "Ascetic এর অর্থ কি?",
+      "options": {
+        "a": "তপস্বী বা কঠোর সংযমী",
+        "b": "নিন্দা করা বা অসম্মতি প্রকাশ করা",
+        "c": "দ্রুত বৃদ্ধি পাওয়া; বিস্তার লাভ করা",
+        "d": "ক্ষিপ্ত; উন্মত্ত; উত্তেজিত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "তপস্বী বা কঠোর সংযমী",
+      "explanation": "Ascetic = তপস্বী বা কঠোর সংযমী"
+    },
+    {
+      "id": "vocab_a_047",
+      "question": "Aspersion এর অর্থ কি?",
+      "options": {
+        "a": "যুক্তিতর্ক করা; বিচার-বিশ্লেষণ করা",
+        "b": "কলঙ্ক বা কুৎসা",
+        "c": "অসংশোধনীয়",
+        "d": "বিরল বা পাতলা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কলঙ্ক বা কুৎসা",
+      "explanation": "Aspersion = কলঙ্ক বা কুৎসা"
+    },
+    {
+      "id": "vocab_a_048",
+      "question": "Assiduous এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষোভ",
+        "b": "বিষণ্ণ; গোমড়ামুখো",
+        "c": "সব কিছু মনে রাখার ক্ষমতা; অসীম স্মৃতিশক্তি",
+        "d": "অধ্যবসায়ী বা পরিশ্রমী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অধ্যবসায়ী বা পরিশ্রমী",
+      "explanation": "Assiduous = অধ্যবসায়ী বা পরিশ্রমী"
+    },
+    {
+      "id": "vocab_a_049",
+      "question": "Atrophy এর অর্থ কি?",
+      "options": {
+        "a": "ক্ষয় বা শীর্ণতা",
+        "b": "ধীরে ধীরে হাঁটা; আরামে চলা",
+        "c": "নূতন শব্দ",
+        "d": "যুক্তিতর্ক করা; বিচার-বিশ্লেষণ করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ক্ষয় বা শীর্ণতা",
+      "explanation": "Atrophy = ক্ষয় বা শীর্ণতা"
+    },
+    {
+      "id": "vocab_a_050",
+      "question": "Aberrant এর অর্থ কি?",
+      "options": {
+        "a": "সভা আহ্বান করা",
+        "b": "বিপথগামী বা অস্বাভাবিক",
+        "c": "সহজে বিশ্বাস করে এমন",
+        "d": "স্বল্পতা বা অভাব"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিপথগামী বা অস্বাভাবিক",
+      "explanation": "Aberrant = বিপথগামী বা অস্বাভাবিক"
+    },
+    {
+      "id": "vocab_a_051",
+      "question": "Abeyance এর অর্থ কি?",
+      "options": {
+        "a": "দমন করা",
+        "b": "স্বাভাবিক প্রবণতা",
+        "c": "মুলতবি অবস্থা বা স্থগিত অবস্থা",
+        "d": "অন্যায়ভাবে দাবি করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মুলতবি অবস্থা বা স্থগিত অবস্থা",
+      "explanation": "Abeyance = মুলতবি অবস্থা বা স্থগিত অবস্থা"
+    },
+    {
+      "id": "vocab_a_052",
+      "question": "Abstemious এর অর্থ কি?",
+      "options": {
+        "a": "অসমর্থনযোগ্য",
+        "b": "পদাবনতি ঘটানো",
+        "c": "মিতাহারী বা সংযমী",
+        "d": "ডোরাকাটা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মিতাহারী বা সংযমী",
+      "explanation": "Abstemious = মিতাহারী বা সংযমী"
+    },
+    {
+      "id": "vocab_a_053",
+      "question": "Adulterate এর অর্থ কি?",
+      "options": {
+        "a": "ভ্রান্তি দূর করা বা সংশোধন করা",
+        "b": "কার্যকারিতা বা ক্ষমতা",
+        "c": "ঘুম ঘুম ভাব",
+        "d": "ভেজাল মেশানো বা অশুদ্ধ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভেজাল মেশানো বা অশুদ্ধ করা",
+      "explanation": "Adulterate = ভেজাল মেশানো বা অশুদ্ধ করা"
+    },
+    {
+      "id": "vocab_a_054",
+      "question": "Aesthetic এর অর্থ কি?",
+      "options": {
+        "a": "নান্দনিক বা সৌন্দর্যবোধ সম্পর্কিত",
+        "b": "পরিতৃপ্ত করা",
+        "c": "উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া",
+        "d": "একগুঁয়ে বা কঠোর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নান্দনিক বা সৌন্দর্যবোধ সম্পর্কিত",
+      "explanation": "Aesthetic = নান্দনিক বা সৌন্দর্যবোধ সম্পর্কিত"
+    },
+    {
+      "id": "vocab_a_055",
+      "question": "Aggregate এর অর্থ কি?",
+      "options": {
+        "a": "শূন্যগর্ভ বা বুদ্ধিহীন",
+        "b": "সমষ্টি বা সংগ্রহ করা",
+        "c": "ক্ষোভ",
+        "d": "বৃদ্ধাবস্থা বিদ্যা; বার্ধক্য গবেষণা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সমষ্টি বা সংগ্রহ করা",
+      "explanation": "Aggregate = সমষ্টি বা সংগ্রহ করা"
+    },
+    {
+      "id": "vocab_a_056",
+      "question": "Alleviate এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষপাতদুষ্ট",
+        "b": "উপশম করা বা লাঘব করা",
+        "c": "মিতাহারী বা সংযমী",
+        "d": "পবিত্রতা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উপশম করা বা লাঘব করা",
+      "explanation": "Alleviate = উপশম করা বা লাঘব করা"
+    },
+    {
+      "id": "vocab_a_057",
+      "question": "Amalgamate এর অর্থ কি?",
+      "options": {
+        "a": "অনুতাপ করা; দুঃখিত হওয়া",
+        "b": "একত্রিত করা বা মিশ্রিত করা",
+        "c": "কষ্টসাধ্য বা দুর্বহ",
+        "d": "ভ্রাতৃত্ব; ভাইয়ের মতো সম্পর্ক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "একত্রিত করা বা মিশ্রিত করা",
+      "explanation": "Amalgamate = একত্রিত করা বা মিশ্রিত করা"
+    },
+    {
+      "id": "vocab_a_058",
+      "question": "Ambiguous এর অর্থ কি?",
+      "options": {
+        "a": "সম্মান বা শ্রদ্ধা",
+        "b": "উদ্বেগ; উৎকণ্ঠা",
+        "c": "দ্বিধা; সংকট",
+        "d": "অস্পষ্ট বা দ্ব্যর্থক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অস্পষ্ট বা দ্ব্যর্থক",
+      "explanation": "Ambiguous = অস্পষ্ট বা দ্ব্যর্থক"
+    },
+    {
+      "id": "vocab_a_059",
+      "question": "Ambivalence এর অর্থ কি?",
+      "options": {
+        "a": "উজ্জ্বল; চকচকে",
+        "b": "দ্বিধা বা দ্বৈত মনোভাব",
+        "c": "লঘুত্ব বা চপলতা",
+        "d": "পুরুষ-বিদ্বেষী; যে পুরুষদের ঘৃণা করে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দ্বিধা বা দ্বৈত মনোভাব",
+      "explanation": "Ambivalence = দ্বিধা বা দ্বৈত মনোভাব"
+    },
+    {
+      "id": "vocab_a_060",
+      "question": "Ameliorate এর অর্থ কি?",
+      "options": {
+        "a": "ভীরু বা কাপুরুষ",
+        "b": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+        "c": "প্রাসঙ্গিক নয় এমন বা স্পর্শক",
+        "d": "উন্নত করা বা ভালো করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উন্নত করা বা ভালো করা",
+      "explanation": "Ameliorate = উন্নত করা বা ভালো করা"
+    },
+    {
+      "id": "vocab_a_061",
+      "question": "Anachronism এর অর্থ কি?",
+      "options": {
+        "a": "দায়মুক্তি দেওয়া",
+        "b": "খিটখিটে বা সহজে রেগে যায় এমন",
+        "c": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+        "d": "সমঝোতামূলক বা শান্তিপ্রিয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কালবিভ্রাট বা যুগবহির্ভূত বস্তু",
+      "explanation": "Anachronism = কালবিভ্রাট বা যুগবহির্ভূত বস্তু"
+    },
+    {
+      "id": "vocab_a_062",
+      "question": "Analogous এর অর্থ কি?",
+      "options": {
+        "a": "সম্পূর্ণরূপে ধ্বংস করা",
+        "b": "জমকালো বা আড়ম্বরপূর্ণ",
+        "c": "স্বৈরশাসক; একনায়ক",
+        "d": "সাদৃশ্যপূর্ণ বা তুলনীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সাদৃশ্যপূর্ণ বা তুলনীয়",
+      "explanation": "Analogous = সাদৃশ্যপূর্ণ বা তুলনীয়"
+    },
+    {
+      "id": "vocab_a_063",
+      "question": "Anarchy এর অর্থ কি?",
+      "options": {
+        "a": "আনন্দভ্রমণ",
+        "b": "ভবিষ্যৎ চিন্তাশীল; সাবধানী",
+        "c": "নৈরাজ্য বা বিশৃঙ্খলা",
+        "d": "ক্ষতিকর; বিষাক্ত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নৈরাজ্য বা বিশৃঙ্খলা",
+      "explanation": "Anarchy = নৈরাজ্য বা বিশৃঙ্খলা"
+    },
+    {
+      "id": "vocab_a_064",
+      "question": "Anomalous এর অর্থ কি?",
+      "options": {
+        "a": "অন্যায়ভাবে দাবি করা",
+        "b": "অস্বাভাবিক বা নিয়মবহির্ভূত",
+        "c": "দানশীল",
+        "d": "প্রতিরোধ করা; বিতাড়িত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অস্বাভাবিক বা নিয়মবহির্ভূত",
+      "explanation": "Anomalous = অস্বাভাবিক বা নিয়মবহির্ভূত"
+    },
+    {
+      "id": "vocab_a_065",
+      "question": "Antipathy এর অর্থ কি?",
+      "options": {
+        "a": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+        "b": "বিদ্বেষ বা ঘৃণা",
+        "c": "গণভোট",
+        "d": "বাকচাতুরী বা ঘুরিয়ে কথা বলা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিদ্বেষ বা ঘৃণা",
+      "explanation": "Antipathy = বিদ্বেষ বা ঘৃণা"
+    },
+    {
+      "id": "vocab_a_066",
+      "question": "Apathy এর অর্থ কি?",
+      "options": {
+        "a": "হঠকারী বা আবেগপ্রবণ",
+        "b": "ঘুরে বেড়ানো; পরিভ্রমণ করা",
+        "c": "উদাসীনতা বা নির্লিপ্ততা",
+        "d": "ভান করা রোগী বা কাজ এড়ানো ব্যক্তি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উদাসীনতা বা নির্লিপ্ততা",
+      "explanation": "Apathy = উদাসীনতা বা নির্লিপ্ততা"
+    },
+    {
+      "id": "vocab_a_067",
+      "question": "Appease এর অর্থ কি?",
+      "options": {
+        "a": "খণ্ডন করা বা ভুল প্রমাণ করা",
+        "b": "সংশয়বাদী বা অবিশ্বাসী",
+        "c": "সহজে পরিবর্তনশীল",
+        "d": "শান্ত করা বা তুষ্ট করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "শান্ত করা বা তুষ্ট করা",
+      "explanation": "Appease = শান্ত করা বা তুষ্ট করা"
+    },
+    {
+      "id": "vocab_a_068",
+      "question": "Apprise এর অর্থ কি?",
+      "options": {
+        "a": "অবহিত করা বা জানানো",
+        "b": "প্রতারিত করা বা ঠকানো",
+        "c": "গোপন; রহস্যময়; অতিপ্রাকৃত",
+        "d": "একত্রিত করা বা মিশ্রিত করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অবহিত করা বা জানানো",
+      "explanation": "Apprise = অবহিত করা বা জানানো"
+    },
+    {
+      "id": "vocab_a_069",
+      "question": "Appropriate এর অর্থ কি?",
+      "options": {
+        "a": "পাণ্ডিত্য জাহিরকারী",
+        "b": "অর্থ নির্ধারণ করা; ব্যাখ্যা করা",
+        "c": "বাদী",
+        "d": "উপযুক্ত বা যথাযথ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উপযুক্ত বা যথাযথ",
+      "explanation": "Appropriate = উপযুক্ত বা যথাযথ"
+    },
+    {
+      "id": "vocab_a_070",
+      "question": "Arduous এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘসূত্রী বা বিলম্বকারী",
+        "b": "সর্বরোগহর ঔষধ বা সমাধান",
+        "c": "নির্লজ্জতা বা ঔদ্ধত্য",
+        "d": "কষ্টসাধ্য বা কঠিন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "কষ্টসাধ্য বা কঠিন",
+      "explanation": "Arduous = কষ্টসাধ্য বা কঠিন"
+    },
+    {
+      "id": "vocab_a_071",
+      "question": "Artless এর অর্থ কি?",
+      "options": {
+        "a": "কর্কশ বা বিশৃঙ্খল শব্দযুক্ত",
+        "b": "সরল বা নিষ্কপট",
+        "c": "দাসোচিত; নতজানু",
+        "d": "বিষণ্ণ বা গম্ভীর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সরল বা নিষ্কপট",
+      "explanation": "Artless = সরল বা নিষ্কপট"
+    },
+    {
+      "id": "vocab_a_072",
+      "question": "Assuage এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘায়িত",
+        "b": "ভোগবাদ বা সুখবাদ",
+        "c": "প্রশমিত করা বা উপশম করা",
+        "d": "ছোটখাটো ভুল বা ত্রুটি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রশমিত করা বা উপশম করা",
+      "explanation": "Assuage = প্রশমিত করা বা উপশম করা"
+    },
+    {
+      "id": "vocab_a_073",
+      "question": "Attenuate এর অর্থ কি?",
+      "options": {
+        "a": "দুর্বল করা বা হ্রাস করা",
+        "b": "তপস্বী বা কঠোর সংযমী",
+        "c": "সংকল্প বা সমাধান",
+        "d": "কুযুক্তি বা প্রতারণামূলক তর্ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দুর্বল করা বা হ্রাস করা",
+      "explanation": "Attenuate = দুর্বল করা বা হ্রাস করা"
+    },
+    {
+      "id": "vocab_a_074",
+      "question": "Audacious এর অর্থ কি?",
+      "options": {
+        "a": "হাস্যকর",
+        "b": "সাহসী বা দুঃসাহসী",
+        "c": "সন্দেহজনক বা বানোয়াট",
+        "d": "দানশীল বা উপকারী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সাহসী বা দুঃসাহসী",
+      "explanation": "Audacious = সাহসী বা দুঃসাহসী"
+    },
+    {
+      "id": "vocab_a_075",
+      "question": "Austere এর অর্থ কি?",
+      "options": {
+        "a": "আকস্মিক; দৈবিক; অপ্রত্যাশিত",
+        "b": "ক্ষণস্থায়ী বা দ্রুত মিলিয়ে যায় এমন",
+        "c": "কঠোর বা সাদাসিধে",
+        "d": "মেনে নেওয়া; পরাজিত হওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কঠোর বা সাদাসিধে",
+      "explanation": "Austere = কঠোর বা সাদাসিধে"
+    },
+    {
+      "id": "vocab_a_076",
+      "question": "Aver এর অর্থ কি?",
+      "options": {
+        "a": "দৃঢ়ভাবে বলা বা জোর দেওয়া",
+        "b": "পুনরাবৃত্তি",
+        "c": "দ্রুত বৃদ্ধি পাওয়া; বিস্তার লাভ করা",
+        "d": "কৃ পণতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "দৃঢ়ভাবে বলা বা জোর দেওয়া",
+      "explanation": "Aver = দৃঢ়ভাবে বলা বা জোর দেওয়া"
     }
   ]
 }

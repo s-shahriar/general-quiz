@@ -143,6 +143,656 @@
       "correct_answer": "d",
       "correct_answer_text": "বিশ্বাস; আস্থা",
       "explanation": "Credence = বিশ্বাস; আস্থা"
+    },
+    {
+      "id": "vocab_c_012",
+      "question": "Cajole এর অর্থ কি?",
+      "options": {
+        "a": "নিষ্ক্রিয় বা অলস",
+        "b": "পাতন করা বা নির্যাস বের করা",
+        "c": "মিষ্টি কথায় ভোলানো",
+        "d": "খিটখিটে"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "মিষ্টি কথায় ভোলানো",
+      "explanation": "Cajole = মিষ্টি কথায় ভোলানো"
+    },
+    {
+      "id": "vocab_c_013",
+      "question": "Camaraderie এর অর্থ কি?",
+      "options": {
+        "a": "আধিপত্য",
+        "b": "সৌহার্দ্য বা বন্ধুত্ব",
+        "c": "সতর্ক",
+        "d": "দরিদ্র বা কৃপণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সৌহার্দ্য বা বন্ধুত্ব",
+      "explanation": "Camaraderie = সৌহার্দ্য বা বন্ধুত্ব"
+    },
+    {
+      "id": "vocab_c_014",
+      "question": "Candor এর অর্থ কি?",
+      "options": {
+        "a": "সরলতা বা অকপটতা",
+        "b": "অসামঞ্জস্য বা বেসুরো শব্দ",
+        "c": "অপ্রাসঙ্গিক বা অভদ্র",
+        "d": "বিজ্ঞ ব্যক্তি; পণ্ডিত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সরলতা বা অকপটতা",
+      "explanation": "Candor = সরলতা বা অকপটতা"
+    },
+    {
+      "id": "vocab_c_015",
+      "question": "Capitulate এর অর্থ কি?",
+      "options": {
+        "a": "অপবাদ; অস্পষ্ট উচ্চারণ",
+        "b": "চাটুকারিতা বা তোষামোদ",
+        "c": "আত্মসমর্পণ করা",
+        "d": "একান্তবাসী; নিঃসঙ্গ জীবনযাপনকারী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আত্মসমর্পণ করা",
+      "explanation": "Capitulate = আত্মসমর্পণ করা"
+    },
+    {
+      "id": "vocab_c_016",
+      "question": "Carouse এর অর্থ কি?",
+      "options": {
+        "a": "দীর্ঘসূত্রী বা বিলম্বকারী",
+        "b": "শোকগীতি",
+        "c": "কৌশলে এড়িয়ে যাওয়া",
+        "d": "মদ্যপান করে হৈ-হুল্লোড় করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মদ্যপান করে হৈ-হুল্লোড় করা",
+      "explanation": "Carouse = মদ্যপান করে হৈ-হুল্লোড় করা"
+    },
+    {
+      "id": "vocab_c_017",
+      "question": "Carp এর অর্থ কি?",
+      "options": {
+        "a": "প্রথাবিরোধী ব্যক্তি",
+        "b": "খুঁত ধরা",
+        "c": "মৃত ব্যক্তির আত্মার জন্য নিবেদিত প্রার্থনাসংগীত",
+        "d": "হিংস্রতা; আগ্রাসী মনোভাব"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "খুঁত ধরা",
+      "explanation": "Carp = খুঁত ধরা"
+    },
+    {
+      "id": "vocab_c_018",
+      "question": "Caucus এর অর্থ কি?",
+      "options": {
+        "a": "প্রচুর উৎপাদনশীল",
+        "b": "রাজনৈতিক বৈঠক",
+        "c": "অসংখ্য",
+        "d": "দাম্ভিক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "রাজনৈতিক বৈঠক",
+      "explanation": "Caucus = রাজনৈতিক বৈঠক"
+    },
+    {
+      "id": "vocab_c_019",
+      "question": "Cavort এর অর্থ কি?",
+      "options": {
+        "a": "আপাতবিরোধী উক্তি",
+        "b": "সত্যবাদী বা নির্ভুল",
+        "c": "আনন্দে লাফানো",
+        "d": "উদার; দানশীল"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আনন্দে লাফানো",
+      "explanation": "Cavort = আনন্দে লাফানো"
+    },
+    {
+      "id": "vocab_c_020",
+      "question": "Circumlocution এর অর্থ কি?",
+      "options": {
+        "a": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "b": "অবসাদ বা ক্লান্তি",
+        "c": "বাকচাতুরী বা ঘুরিয়ে কথা বলা",
+        "d": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাকচাতুরী বা ঘুরিয়ে কথা বলা",
+      "explanation": "Circumlocution = বাকচাতুরী বা ঘুরিয়ে কথা বলা"
+    },
+    {
+      "id": "vocab_c_021",
+      "question": "Circumscribe এর অর্থ কি?",
+      "options": {
+        "a": "সীমা নির্ধারণ করা",
+        "b": "পরিখা; দুর্গখাল",
+        "c": "সমাজচ্যুত ব্যক্তি",
+        "d": "ব্যথায় সিঁটকানো; কুঁকড়ে যাওয়া"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সীমা নির্ধারণ করা",
+      "explanation": "Circumscribe = সীমা নির্ধারণ করা"
+    },
+    {
+      "id": "vocab_c_022",
+      "question": "Circumvent এর অর্থ কি?",
+      "options": {
+        "a": "কৌশলে এড়িয়ে যাওয়া",
+        "b": "মনের স্থিরতা বা শান্ত ভাব",
+        "c": "সরল; নিষ্কপট",
+        "d": "শোভন বা কোমল উক্তি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কৌশলে এড়িয়ে যাওয়া",
+      "explanation": "Circumvent = কৌশলে এড়িয়ে যাওয়া"
+    },
+    {
+      "id": "vocab_c_023",
+      "question": "Cleave এর অর্থ কি?",
+      "options": {
+        "a": "স্থিতিস্থাপকতা; দৃঢ়তা",
+        "b": "আঁকড়ে থাকা বা বিভক্ত করা",
+        "c": "পণ্ডিত বা জ্ঞানী",
+        "d": "বর্ণনা করা বা চিত্রিত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আঁকড়ে থাকা বা বিভক্ত করা",
+      "explanation": "Cleave = আঁকড়ে থাকা বা বিভক্ত করা"
+    },
+    {
+      "id": "vocab_c_024",
+      "question": "Cobbler এর অর্থ কি?",
+      "options": {
+        "a": "অবগত বা সচেতন",
+        "b": "মুচি",
+        "c": "স্তবক; কবিতার অনুচ্ছেদ",
+        "d": "খাপ খাওয়াতে অক্ষম; অপ্রতিযোজ্য"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "মুচি",
+      "explanation": "Cobbler = মুচি"
+    },
+    {
+      "id": "vocab_c_025",
+      "question": "Cogent এর অর্থ কি?",
+      "options": {
+        "a": "যৌক্তিক ও বিশ্বাসযোগ্য",
+        "b": "একগুঁয়ে বা কঠোর",
+        "c": "উন্নত করা; ভালো করা",
+        "d": "বিব্রত বা অস্বস্তিতে ফেলা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "যৌক্তিক ও বিশ্বাসযোগ্য",
+      "explanation": "Cogent = যৌক্তিক ও বিশ্বাসযোগ্য"
+    },
+    {
+      "id": "vocab_c_026",
+      "question": "Cognizant এর অর্থ কি?",
+      "options": {
+        "a": "অবগত বা সচেতন",
+        "b": "জীবাণুনাশক",
+        "c": "বিভ্রান্ত",
+        "d": "কঠোর বা সাদাসিধে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অবগত বা সচেতন",
+      "explanation": "Cognizant = অবগত বা সচেতন"
+    },
+    {
+      "id": "vocab_c_027",
+      "question": "Concomitant এর অর্থ কি?",
+      "options": {
+        "a": "সহগামী বা আনুষঙ্গিক",
+        "b": "ভীরু; ভয়-ভয় স্বভাবের",
+        "c": "অভ্যস্ত বা কঠোর করা",
+        "d": "সুন্দর; প্রফুল্ল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সহগামী বা আনুষঙ্গিক",
+      "explanation": "Concomitant = সহগামী বা আনুষঙ্গিক"
+    },
+    {
+      "id": "vocab_c_028",
+      "question": "Conduit এর অর্থ কি?",
+      "options": {
+        "a": "আন্ত্রিক; শারীরিক; গভীরভাবে অনুভূত",
+        "b": "ভ্রমণসূচি বা কর্মসূচি",
+        "c": "নালি বা মাধ্যম",
+        "d": "অন্তর্ভুক্ত করা বা সংযুক্ত করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নালি বা মাধ্যম",
+      "explanation": "Conduit = নালি বা মাধ্যম"
+    },
+    {
+      "id": "vocab_c_029",
+      "question": "Conflagration এর অর্থ কি?",
+      "options": {
+        "a": "অনুলিপি করা",
+        "b": "অস্পষ্ট বা দ্ব্যর্থক",
+        "c": "রহস্য বা ধাঁধা",
+        "d": "বড় অগ্নিকাণ্ড"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বড় অগ্নিকাণ্ড",
+      "explanation": "Conflagration = বড় অগ্নিকাণ্ড"
+    },
+    {
+      "id": "vocab_c_030",
+      "question": "Congruity এর অর্থ কি?",
+      "options": {
+        "a": "গ্রামীণ; পল্লি সংক্রান্ত",
+        "b": "সামঞ্জস্য বা মিল",
+        "c": "তীক্ষ্ণবুদ্ধিসম্পন্ন",
+        "d": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সামঞ্জস্য বা মিল",
+      "explanation": "Congruity = সামঞ্জস্য বা মিল"
+    },
+    {
+      "id": "vocab_c_031",
+      "question": "Connive এর অর্থ কি?",
+      "options": {
+        "a": "গোপনে ষড়যন্ত্র করা",
+        "b": "বিতর্কমূলক আলোচনা; বাদানুবাদ",
+        "c": "প্রতারণা করা; বিভ্রান্ত করা",
+        "d": "যুক্তিতর্ক করা; বিচার-বিশ্লেষণ করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "গোপনে ষড়যন্ত্র করা",
+      "explanation": "Connive = গোপনে ষড়যন্ত্র করা"
+    },
+    {
+      "id": "vocab_c_032",
+      "question": "Consign এর অর্থ কি?",
+      "options": {
+        "a": "মুখ না নাড়িয়ে কথা বলা",
+        "b": "হস্তান্তর করা বা অর্পণ করা",
+        "c": "উচ্চ প্রশংসা করা",
+        "d": "চোখের সংক্রামক রোগ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "হস্তান্তর করা বা অর্পণ করা",
+      "explanation": "Consign = হস্তান্তর করা বা অর্পণ করা"
+    },
+    {
+      "id": "vocab_c_033",
+      "question": "Constituent এর অর্থ কি?",
+      "options": {
+        "a": "দুশ্চরিত্র ব্যক্তি",
+        "b": "উপাদান বা নির্বাচক",
+        "c": "সংকীর্ণমনা",
+        "d": "কর্কশ বা বিশৃঙ্খল শব্দযুক্ত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "উপাদান বা নির্বাচক",
+      "explanation": "Constituent = উপাদান বা নির্বাচক"
+    },
+    {
+      "id": "vocab_c_034",
+      "question": "Contrite এর অর্থ কি?",
+      "options": {
+        "a": "পরিখা; দুর্গখাল",
+        "b": "অনুতপ্ত",
+        "c": "হাতা; দর্বি",
+        "d": "সর্পবিদ্যা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অনুতপ্ত",
+      "explanation": "Contrite = অনুতপ্ত"
+    },
+    {
+      "id": "vocab_c_035",
+      "question": "Contusion এর অর্থ কি?",
+      "options": {
+        "a": "জীবাশ্ম বিজ্ঞান",
+        "b": "সম্পূর্ণ বাধ্য; অধীনতাপ্রবণ",
+        "c": "মিথ্যাবাদী",
+        "d": "আঘাত বা কালশিটে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "আঘাত বা কালশিটে",
+      "explanation": "Contusion = আঘাত বা কালশিটে"
+    },
+    {
+      "id": "vocab_c_036",
+      "question": "Conundrum এর অর্থ কি?",
+      "options": {
+        "a": "অভাব বা স্বল্পতা",
+        "b": "স্বেচ্ছাচারী বা চরিত্রহীন ব্যক্তি",
+        "c": "বাঁকানো; জটিল",
+        "d": "ধাঁধা বা কঠিন সমস্যা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ধাঁধা বা কঠিন সমস্যা",
+      "explanation": "Conundrum = ধাঁধা বা কঠিন সমস্যা"
+    },
+    {
+      "id": "vocab_c_037",
+      "question": "Convivial এর অর্থ কি?",
+      "options": {
+        "a": "বিরস বা স্বাদহীন",
+        "b": "পরিত্যক্ত; দায়িত্বহীন",
+        "c": "উৎসবমুখর ও বন্ধুত্বপূর্ণ",
+        "d": "প্রশমিত করা বা তীব্রতা কমানো"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উৎসবমুখর ও বন্ধুত্বপূর্ণ",
+      "explanation": "Convivial = উৎসবমুখর ও বন্ধুত্বপূর্ণ"
+    },
+    {
+      "id": "vocab_c_038",
+      "question": "Corpulence এর অর্থ কি?",
+      "options": {
+        "a": "অলস বা নিস্তেজ",
+        "b": "স্থূলতা",
+        "c": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা",
+        "d": "শান্ত বা অবিচল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "স্থূলতা",
+      "explanation": "Corpulence = স্থূলতা"
+    },
+    {
+      "id": "vocab_c_039",
+      "question": "Covet এর অর্থ কি?",
+      "options": {
+        "a": "তৎপরতা বা ব্যগ্রতা",
+        "b": "বিলোপ বা বিচ্ছেদ",
+        "c": "নির্বিকার বা ভাবলেশহীন",
+        "d": "লোভ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "লোভ করা",
+      "explanation": "Covet = লোভ করা"
+    },
+    {
+      "id": "vocab_c_040",
+      "question": "Culpable এর অর্থ কি?",
+      "options": {
+        "a": "বিব্রত বা অস্বস্তিতে ফেলা",
+        "b": "পুনরায় পূর্ণ করা; সরবরাহ নবায়ন করা",
+        "c": "নিন্দনীয় বা দোষী",
+        "d": "অলস বা কর্মবিমুখ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিন্দনীয় বা দোষী",
+      "explanation": "Culpable = নিন্দনীয় বা দোষী"
+    },
+    {
+      "id": "vocab_c_041",
+      "question": "Cacophonous এর অর্থ কি?",
+      "options": {
+        "a": "আনুষ্ঠানিকভাবে ত্যাগ করা",
+        "b": "কর্কশ বা বিশৃঙ্খল শব্দযুক্ত",
+        "c": "ডোরাকাটা",
+        "d": "বিশৃঙ্খলা; এলোমেলো অবস্থা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কর্কশ বা বিশৃঙ্খল শব্দযুক্ত",
+      "explanation": "Cacophonous = কর্কশ বা বিশৃঙ্খল শব্দযুক্ত"
+    },
+    {
+      "id": "vocab_c_042",
+      "question": "Capricious এর অর্থ কি?",
+      "options": {
+        "a": "ধার্মিক",
+        "b": "রক্তপড়া বন্ধের চিকিৎসা প্রক্রিয়া; পট্টি",
+        "c": "তুচ্ছ; নগণ্য; সামান্য",
+        "d": "মেজাজী বা খামখেয়ালী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মেজাজী বা খামখেয়ালী",
+      "explanation": "Capricious = মেজাজী বা খামখেয়ালী"
+    },
+    {
+      "id": "vocab_c_043",
+      "question": "Castigation এর অর্থ কি?",
+      "options": {
+        "a": "সংযমী",
+        "b": "অগ্রদূত",
+        "c": "কঠোর সমালোচনা বা তিরস্কার",
+        "d": "ভূমিকা বা প্রারম্ভিক বক্তব্য"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কঠোর সমালোচনা বা তিরস্কার",
+      "explanation": "Castigation = কঠোর সমালোচনা বা তিরস্কার"
+    },
+    {
+      "id": "vocab_c_044",
+      "question": "Catalyst এর অর্থ কি?",
+      "options": {
+        "a": "সমর্থন করা",
+        "b": "অনুঘটক বা প্রেরণাদাতা",
+        "c": "ক্ষিপ্ত; উন্মত্ত; উত্তেজিত",
+        "d": "দ্রুত বৃদ্ধি পাওয়া বা বিকশিত হওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "অনুঘটক বা প্রেরণাদাতা",
+      "explanation": "Catalyst = অনুঘটক বা প্রেরণাদাতা"
+    },
+    {
+      "id": "vocab_c_045",
+      "question": "Caustic এর অর্থ কি?",
+      "options": {
+        "a": "সমাধান করা বা দৃঢ় সংকল্প",
+        "b": "নিন্দা বা অপমান",
+        "c": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "d": "তীক্ষ্ণ বা ক্ষয়কারী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "তীক্ষ্ণ বা ক্ষয়কারী",
+      "explanation": "Caustic = তীক্ষ্ণ বা ক্ষয়কারী"
+    },
+    {
+      "id": "vocab_c_046",
+      "question": "Chicanery এর অর্থ কি?",
+      "options": {
+        "a": "চারদিকে ঘুরে হাঁটা; প্রদক্ষিণ করা",
+        "b": "মসৃণ; আপাতমধুর",
+        "c": "বৃদ্ধি করা বা উন্নত করা",
+        "d": "ছলচাতুরী বা প্রতারণা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ছলচাতুরী বা প্রতারণা",
+      "explanation": "Chicanery = ছলচাতুরী বা প্রতারণা"
+    },
+    {
+      "id": "vocab_c_047",
+      "question": "Coagulate এর অর্থ কি?",
+      "options": {
+        "a": "উৎসাহ; প্রাণশক্তি; তেজ",
+        "b": "জমাট বাঁধা বা ঘন হওয়া",
+        "c": "ভোটাধিকার",
+        "d": "খোদাই করা বা আঁচড় দেওয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "জমাট বাঁধা বা ঘন হওয়া",
+      "explanation": "Coagulate = জমাট বাঁধা বা ঘন হওয়া"
+    },
+    {
+      "id": "vocab_c_048",
+      "question": "Coda এর অর্থ কি?",
+      "options": {
+        "a": "ভোটদাতা",
+        "b": "অতিরিক্ত শব্দপ্রয়োগ; পুনরুক্তি দোষ",
+        "c": "উপসংহার বা সমাপ্তি অংশ",
+        "d": "অদ্ভুত কিন্তু আকর্ষণীয়; পুরোনো ধাঁচের"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উপসংহার বা সমাপ্তি অংশ",
+      "explanation": "Coda = উপসংহার বা সমাপ্তি অংশ"
+    },
+    {
+      "id": "vocab_c_049",
+      "question": "Commensurate এর অর্থ কি?",
+      "options": {
+        "a": "সমানুপাতিক বা সমান",
+        "b": "খামখেয়ালি; অনিশ্চিত পরিবর্তন",
+        "c": "বিষণ্ণ; গোমড়ামুখো",
+        "d": "কষ্টসাধ্য বা কঠিন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সমানুপাতিক বা সমান",
+      "explanation": "Commensurate = সমানুপাতিক বা সমান"
+    },
+    {
+      "id": "vocab_c_050",
+      "question": "Compendium এর অর্থ কি?",
+      "options": {
+        "a": "জাঁকজমক; আড়ম্বর",
+        "b": "সংযম",
+        "c": "শিলাতত্ত্ব",
+        "d": "সংক্ষিপ্ত সংগ্রহ বা সারসংকলন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সংক্ষিপ্ত সংগ্রহ বা সারসংকলন",
+      "explanation": "Compendium = সংক্ষিপ্ত সংগ্রহ বা সারসংকলন"
+    },
+    {
+      "id": "vocab_c_051",
+      "question": "Complaisant এর অর্থ কি?",
+      "options": {
+        "a": "অলস বা নিস্তেজ",
+        "b": "স্পষ্ট করা; ব্যাখ্যা করা",
+        "c": "অটল বা একগুঁয়ে",
+        "d": "বাধ্য বা অনুগত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাধ্য বা অনুগত",
+      "explanation": "Complaisant = বাধ্য বা অনুগত"
+    },
+    {
+      "id": "vocab_c_052",
+      "question": "Compliant এর অর্থ কি?",
+      "options": {
+        "a": "পৃথক বা আলাদা করা",
+        "b": "অগঠিত বা আকারবিহীন",
+        "c": "হঠকারী বা আবেগপ্রবণ",
+        "d": "বাধ্য বা আজ্ঞাকারী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাধ্য বা আজ্ঞাকারী",
+      "explanation": "Compliant = বাধ্য বা আজ্ঞাকারী"
+    },
+    {
+      "id": "vocab_c_053",
+      "question": "Conciliatory এর অর্থ কি?",
+      "options": {
+        "a": "আত্মত্যাগ বা অস্বীকার",
+        "b": "কুসুম গরম; অনুৎসাহী",
+        "c": "সমঝোতামূলক বা শান্তিপ্রিয়",
+        "d": "আত্মতুষ্ট"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সমঝোতামূলক বা শান্তিপ্রিয়",
+      "explanation": "Conciliatory = সমঝোতামূলক বা শান্তিপ্রিয়"
+    },
+    {
+      "id": "vocab_c_054",
+      "question": "Condone এর অর্থ কি?",
+      "options": {
+        "a": "উপশম করা",
+        "b": "ক্ষমা করা বা উপেক্ষা করা",
+        "c": "প্রাথমিক বা সবে শুরু হচ্ছে",
+        "d": "ভবিষ্যৎ বক্তা; দ্রষ্টা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ক্ষমা করা বা উপেক্ষা করা",
+      "explanation": "Condone = ক্ষমা করা বা উপেক্ষা করা"
+    },
+    {
+      "id": "vocab_c_055",
+      "question": "Confound এর অর্থ কি?",
+      "options": {
+        "a": "স্বতঃসিদ্ধ সত্য",
+        "b": "দোলায়মান হওয়া বা পরিবর্তিত হওয়া",
+        "c": "সর্বরোগহর ঔষধ বা সমাধান",
+        "d": "বিভ্রান্ত করা বা হতবুদ্ধি করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
+      "explanation": "Confound = বিভ্রান্ত করা বা হতবুদ্ধি করা"
+    },
+    {
+      "id": "vocab_c_056",
+      "question": "Connoisseur এর অর্থ কি?",
+      "options": {
+        "a": "বিদ্যমান বা টিকে আছে এমন",
+        "b": "সমতুল্য",
+        "c": "ক্ষণস্থায়ী",
+        "d": "বিশেষজ্ঞ বা রসজ্ঞ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিশেষজ্ঞ বা রসজ্ঞ",
+      "explanation": "Connoisseur = বিশেষজ্ঞ বা রসজ্ঞ"
+    },
+    {
+      "id": "vocab_c_057",
+      "question": "Contention এর অর্থ কি?",
+      "options": {
+        "a": "বিতর্ক বা মতভেদ",
+        "b": "অতিরিক্ত স্নেহশীল; অন্ধ ভালোবাসায় মগ্ন",
+        "c": "ক্ষরণ করা বা লুকিয়ে রাখা",
+        "d": "দোষারোপ করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিতর্ক বা মতভেদ",
+      "explanation": "Contention = বিতর্ক বা মতভেদ"
+    },
+    {
+      "id": "vocab_c_058",
+      "question": "Contentious এর অর্থ কি?",
+      "options": {
+        "a": "জলাভূমি বা জটিল পরিস্থিতি",
+        "b": "নির্দয়",
+        "c": "বিতর্কিত বা বিবাদমূলক",
+        "d": "দাম্ভিক বা কর্তৃত্বপরায়ণ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বিতর্কিত বা বিবাদমূলক",
+      "explanation": "Contentious = বিতর্কিত বা বিবাদমূলক"
+    },
+    {
+      "id": "vocab_c_059",
+      "question": "Converge এর অর্থ কি?",
+      "options": {
+        "a": "অসামঞ্জস্য বা বেসুরো শব্দ",
+        "b": "একত্রিত হওয়া বা মিলিত হওয়া",
+        "c": "সম্মত হওয়া",
+        "d": "কথোপকথন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "একত্রিত হওয়া বা মিলিত হওয়া",
+      "explanation": "Converge = একত্রিত হওয়া বা মিলিত হওয়া"
+    },
+    {
+      "id": "vocab_c_060",
+      "question": "Convoluted এর অর্থ কি?",
+      "options": {
+        "a": "দৃষ্টান্ত বা মডেল",
+        "b": "অপবাদ; মিথ্যা দোষারোপ",
+        "c": "জাহাজের ক্যাপ্টেন; দলনায়ক",
+        "d": "জটিল বা বক্র"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জটিল বা বক্র",
+      "explanation": "Convoluted = জটিল বা বক্র"
+    },
+    {
+      "id": "vocab_c_061",
+      "question": "Craven এর অর্থ কি?",
+      "options": {
+        "a": "ফলাফল; পরিণাম",
+        "b": "ভীরু বা কাপুরুষ",
+        "c": "তিতিরজাতীয় পাখি",
+        "d": "উদ্ভাবনী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ভীরু বা কাপুরুষ",
+      "explanation": "Craven = ভীরু বা কাপুরুষ"
     }
   ]
 }

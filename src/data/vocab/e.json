@@ -195,6 +195,630 @@
       "correct_answer": "b",
       "correct_answer_text": "উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া",
       "explanation": "Exuberate = উৎফুল্ল থাকা; উদ্দীপ্ত হওয়া"
+    },
+    {
+      "id": "vocab_e_016",
+      "question": "Ebullient এর অর্থ কি?",
+      "options": {
+        "a": "করুণার অনুভূতি; বেদনাবোধ",
+        "b": "পরিত্যক্ত; দায়িত্বহীন",
+        "c": "উৎফুল্ল বা উচ্ছ্বসিত",
+        "d": "স্তুতিবচন; উচ্চ প্রশংসামূলক বক্তৃ তা বা রচনা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "উৎফুল্ল বা উচ্ছ্বসিত",
+      "explanation": "Ebullient = উৎফুল্ল বা উচ্ছ্বসিত"
+    },
+    {
+      "id": "vocab_e_017",
+      "question": "Eclectic এর অর্থ কি?",
+      "options": {
+        "a": "প্রতারণা করা বা মোহিত করা",
+        "b": "ধর্মোপদেশ",
+        "c": "অনুমান বা ধারণা",
+        "d": "বিভিন্ন উৎস থেকে নির্বাচিত"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বিভিন্ন উৎস থেকে নির্বাচিত",
+      "explanation": "Eclectic = বিভিন্ন উৎস থেকে নির্বাচিত"
+    },
+    {
+      "id": "vocab_e_018",
+      "question": "Effrontery এর অর্থ কি?",
+      "options": {
+        "a": "উদীয়মান",
+        "b": "প্রাণচঞ্চল; চটপটে",
+        "c": "নির্লজ্জতা বা ঔদ্ধত্য",
+        "d": "সম্পৃক্ত করা বা ভিজিয়ে দেওয়া"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নির্লজ্জতা বা ঔদ্ধত্য",
+      "explanation": "Effrontery = নির্লজ্জতা বা ঔদ্ধত্য"
+    },
+    {
+      "id": "vocab_e_019",
+      "question": "Elegy এর অর্থ কি?",
+      "options": {
+        "a": "শোকগাথা",
+        "b": "সর্বত্র ছড়িয়ে পড়া",
+        "c": "ইঙ্গিত করা বা পরোক্ষভাবে বলা",
+        "d": "বিবর্ণ; ফ্যাকাশে; অনুজ্জ্বল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "শোকগাথা",
+      "explanation": "Elegy = শোকগাথা"
+    },
+    {
+      "id": "vocab_e_020",
+      "question": "Elicit এর অর্থ কি?",
+      "options": {
+        "a": "বের করে আনা",
+        "b": "শিলালিপি; খোদাই লেখা",
+        "c": "বর্ণনা করা বা চিত্রিত করা",
+        "d": "মিথ্যা শপথ; মিথ্যা সাক্ষ্য"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বের করে আনা",
+      "explanation": "Elicit = বের করে আনা"
+    },
+    {
+      "id": "vocab_e_021",
+      "question": "Eloquent এর অর্থ কি?",
+      "options": {
+        "a": "অধ্যবসায়ী বা পরিশ্রমী",
+        "b": "লোক দেখানো কিন্তু অন্তঃসারশূন্য",
+        "c": "দুর্বল হওয়া",
+        "d": "বাগ্মী বা সুন্দরভাবে কথা বলতে পটু"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বাগ্মী বা সুন্দরভাবে কথা বলতে পটু",
+      "explanation": "Eloquent = বাগ্মী বা সুন্দরভাবে কথা বলতে পটু"
+    },
+    {
+      "id": "vocab_e_022",
+      "question": "Embezzle এর অর্থ কি?",
+      "options": {
+        "a": "সহজে পরিবর্তনশীল",
+        "b": "সমাজচ্যুত ব্যক্তি",
+        "c": "সুন্দর; প্রফুল্ল",
+        "d": "অর্থ আত্মসাৎ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অর্থ আত্মসাৎ করা",
+      "explanation": "Embezzle = অর্থ আত্মসাৎ করা"
+    },
+    {
+      "id": "vocab_e_023",
+      "question": "Empathy এর অর্থ কি?",
+      "options": {
+        "a": "ঘুম ঘুম ভাব",
+        "b": "বর্ণালী বা পরিসর",
+        "c": "আংশিকভাবে পোড়ানো; ঝলসানো",
+        "d": "সহানুভূতি বা অন্যের অনুভূতি বোঝা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সহানুভূতি বা অন্যের অনুভূতি বোঝা",
+      "explanation": "Empathy = সহানুভূতি বা অন্যের অনুভূতি বোঝা"
+    },
+    {
+      "id": "vocab_e_024",
+      "question": "Empirical এর অর্থ কি?",
+      "options": {
+        "a": "নকল; জাল",
+        "b": "নান্দনিক বা সৌন্দর্যবোধ সম্পর্কিত",
+        "c": "বাস্তব অভিজ্ঞতানির্ভর",
+        "d": "দুষ্ট বা অপরাধমূলক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাস্তব অভিজ্ঞতানির্ভর",
+      "explanation": "Empirical = বাস্তব অভিজ্ঞতানির্ভর"
+    },
+    {
+      "id": "vocab_e_025",
+      "question": "Enervate এর অর্থ কি?",
+      "options": {
+        "a": "বিশ্বাসযোগ্য",
+        "b": "সরকার কর্তৃক নিজ জনগণকে হত্যা; গণহত্যা",
+        "c": "লোক দেখানো বা জাঁকজমকপূর্ণ",
+        "d": "দুর্বল বা শক্তিহীন করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দুর্বল বা শক্তিহীন করা",
+      "explanation": "Enervate = দুর্বল বা শক্তিহীন করা"
+    },
+    {
+      "id": "vocab_e_026",
+      "question": "Enfranchise এর অর্থ কি?",
+      "options": {
+        "a": "জীবাণুনাশক",
+        "b": "ছড়িয়ে দেওয়া বা প্রচার করা",
+        "c": "নমনীয় বা কমনীয়",
+        "d": "ভোটাধিকার দেওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভোটাধিকার দেওয়া",
+      "explanation": "Enfranchise = ভোটাধিকার দেওয়া"
+    },
+    {
+      "id": "vocab_e_027",
+      "question": "Engender এর অর্থ কি?",
+      "options": {
+        "a": "শান্ত করা",
+        "b": "জন্ম দেওয়া বা কারণ হওয়া",
+        "c": "কঠিন করা বা হওয়া",
+        "d": "একগুঁয়ে বা কঠোর"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "জন্ম দেওয়া বা কারণ হওয়া",
+      "explanation": "Engender = জন্ম দেওয়া বা কারণ হওয়া"
+    },
+    {
+      "id": "vocab_e_028",
+      "question": "Enigma এর অর্থ কি?",
+      "options": {
+        "a": "উৎসাহ; প্রাণশক্তি; তেজ",
+        "b": "উজ্জ্বল; দীপ্তিমান",
+        "c": "তুচ্ছ; নগণ্য; সামান্য",
+        "d": "রহস্য বা ধাঁধা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "রহস্য বা ধাঁধা",
+      "explanation": "Enigma = রহস্য বা ধাঁধা"
+    },
+    {
+      "id": "vocab_e_029",
+      "question": "Enmity এর অর্থ কি?",
+      "options": {
+        "a": "পুনরায় পূর্ণ করা; সরবরাহ নবায়ন করা",
+        "b": "শত্রুতা",
+        "c": "স্বাভাবিক প্রবণতা",
+        "d": "গালিগালাজপূর্ণ কটূক্তি করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "শত্রুতা",
+      "explanation": "Enmity = শত্রুতা"
+    },
+    {
+      "id": "vocab_e_030",
+      "question": "Ennui এর অর্থ কি?",
+      "options": {
+        "a": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি",
+        "b": "হাবভাব দেখিয়ে অভিনয়",
+        "c": "মুখ না নাড়িয়ে কথা বলা",
+        "d": "অবসাদ বা একঘেয়েমি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অবসাদ বা একঘেয়েমি",
+      "explanation": "Ennui = অবসাদ বা একঘেয়েমি"
+    },
+    {
+      "id": "vocab_e_031",
+      "question": "Ephemeral এর অর্থ কি?",
+      "options": {
+        "a": "শোকগাথা",
+        "b": "ক্ষণস্থায়ী",
+        "c": "সব বিষয়ে কথা বলা",
+        "d": "হালকা-পাতলা ও দুর্বল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ক্ষণস্থায়ী",
+      "explanation": "Ephemeral = ক্ষণস্থায়ী"
+    },
+    {
+      "id": "vocab_e_032",
+      "question": "Epicure এর অর্থ কি?",
+      "options": {
+        "a": "আংশিকভাবে পোড়ানো; ঝলসানো",
+        "b": "বের করে আনা",
+        "c": "অসংযমী; অতিমাত্রায় আবেগী",
+        "d": "খাদ্যরসিক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "খাদ্যরসিক",
+      "explanation": "Epicure = খাদ্যরসিক"
+    },
+    {
+      "id": "vocab_e_033",
+      "question": "Epitome এর অর্থ কি?",
+      "options": {
+        "a": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+        "b": "নিখুঁত প্রতীক বা উদাহরণ",
+        "c": "শোকগাথা",
+        "d": "ঘুরে বেড়ানো; পরিভ্রমণ করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নিখুঁত প্রতীক বা উদাহরণ",
+      "explanation": "Epitome = নিখুঁত প্রতীক বা উদাহরণ"
+    },
+    {
+      "id": "vocab_e_034",
+      "question": "Equanimity এর অর্থ কি?",
+      "options": {
+        "a": "মনের স্থিরতা বা শান্ত ভাব",
+        "b": "মিষ্টি কথায় ভোলানো",
+        "c": "সর্বশক্তিমান",
+        "d": "নকল; জাল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মনের স্থিরতা বা শান্ত ভাব",
+      "explanation": "Equanimity = মনের স্থিরতা বা শান্ত ভাব"
+    },
+    {
+      "id": "vocab_e_035",
+      "question": "Equivocate এর অর্থ কি?",
+      "options": {
+        "a": "বিরতি",
+        "b": "দ্ব্যর্থক বা অস্পষ্ট কথা বলা",
+        "c": "অপ্রাসঙ্গিক বা বাইরের",
+        "d": "একঘেয়েমি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দ্ব্যর্থক বা অস্পষ্ট কথা বলা",
+      "explanation": "Equivocate = দ্ব্যর্থক বা অস্পষ্ট কথা বলা"
+    },
+    {
+      "id": "vocab_e_036",
+      "question": "Erudite এর অর্থ কি?",
+      "options": {
+        "a": "অবসাদ বা একঘেয়েমি",
+        "b": "ভারীভাবে ও ধীরে চলা",
+        "c": "পণ্ডিত বা জ্ঞানী",
+        "d": "সরল; নিষ্কপট"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পণ্ডিত বা জ্ঞানী",
+      "explanation": "Erudite = পণ্ডিত বা জ্ঞানী"
+    },
+    {
+      "id": "vocab_e_037",
+      "question": "Eschew এর অর্থ কি?",
+      "options": {
+        "a": "বিপদ",
+        "b": "এড়িয়ে চলা বা বর্জন করা",
+        "c": "উপকারী; হিতকর; স্বাস্থ্যকর",
+        "d": "ঘষে চকচকে করা বা উন্নত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "এড়িয়ে চলা বা বর্জন করা",
+      "explanation": "Eschew = এড়িয়ে চলা বা বর্জন করা"
+    },
+    {
+      "id": "vocab_e_038",
+      "question": "Esoteric এর অর্থ কি?",
+      "options": {
+        "a": "তীব্র বক্তৃতা; উত্তেজিত ভাষণ দেওয়া",
+        "b": "ছড়িয়ে দেওয়া বা প্রচার করা",
+        "c": "স্বচ্ছ বা পাতলা",
+        "d": "রহস্যময় বা অল্প লোক জানে এমন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "রহস্যময় বা অল্প লোক জানে এমন",
+      "explanation": "Esoteric = রহস্যময় বা অল্প লোক জানে এমন"
+    },
+    {
+      "id": "vocab_e_039",
+      "question": "Espouse এর অর্থ কি?",
+      "options": {
+        "a": "প্রতিকূল",
+        "b": "সমর্থন করা",
+        "c": "চাটুকার",
+        "d": "নিখুঁত প্রতীক বা উদাহরণ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সমর্থন করা",
+      "explanation": "Espouse = সমর্থন করা"
+    },
+    {
+      "id": "vocab_e_040",
+      "question": "Ethereal এর অর্থ কি?",
+      "options": {
+        "a": "অস্বীকার করা বা বাতিল করা",
+        "b": "মহামারী বিশেষজ্ঞ; রোগ বিস্তার গবেষক",
+        "c": "প্রতিরোধক বা নিবারক",
+        "d": "সূক্ষ্ম বা স্বর্গীয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সূক্ষ্ম বা স্বর্গীয়",
+      "explanation": "Ethereal = সূক্ষ্ম বা স্বর্গীয়"
+    },
+    {
+      "id": "vocab_e_041",
+      "question": "Euphemism এর অর্থ কি?",
+      "options": {
+        "a": "শোভন বা কোমল উক্তি",
+        "b": "খণ্ডন করা বা ভুল প্রমাণ করা",
+        "c": "অন্তর্নিহিত বা স্বাভাবিক",
+        "d": "কথোপকথন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "শোভন বা কোমল উক্তি",
+      "explanation": "Euphemism = শোভন বা কোমল উক্তি"
+    },
+    {
+      "id": "vocab_e_042",
+      "question": "Evanescent এর অর্থ কি?",
+      "options": {
+        "a": "সাহসী বা দুঃসাহসী",
+        "b": "বশীভূত করা",
+        "c": "ক্ষরণ করা বা লুকিয়ে রাখা",
+        "d": "ক্ষণস্থায়ী বা দ্রুত মিলিয়ে যায় এমন"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ক্ষণস্থায়ী বা দ্রুত মিলিয়ে যায় এমন",
+      "explanation": "Evanescent = ক্ষণস্থায়ী বা দ্রুত মিলিয়ে যায় এমন"
+    },
+    {
+      "id": "vocab_e_043",
+      "question": "Evince এর অর্থ কি?",
+      "options": {
+        "a": "বিভ্রান্ত",
+        "b": "উন্মত্ত; অতিশয় উদ্বিগ্ন",
+        "c": "অভিনেতা; নাট্যকলার সাথে সম্পর্কিত",
+        "d": "প্রকাশ করা বা প্রদর্শন করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রকাশ করা বা প্রদর্শন করা",
+      "explanation": "Evince = প্রকাশ করা বা প্রদর্শন করা"
+    },
+    {
+      "id": "vocab_e_044",
+      "question": "Exacerbate এর অর্থ কি?",
+      "options": {
+        "a": "আরও খারাপ করা",
+        "b": "আকরিক; কাঁচা খনিজ পদার্থ",
+        "c": "নিষ্ক্রিয় বা অলস",
+        "d": "হীনতা বা নৈতিক অবক্ষয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "আরও খারাপ করা",
+      "explanation": "Exacerbate = আরও খারাপ করা"
+    },
+    {
+      "id": "vocab_e_045",
+      "question": "Exculpate এর অর্থ কি?",
+      "options": {
+        "a": "বোন হত্যা; ভগিনীহত্যা",
+        "b": "স্বতঃসিদ্ধ সত্য",
+        "c": "অভিযোগ থেকে মুক্তি দেওয়া",
+        "d": "বিষণ্ণ বা গম্ভীর"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অভিযোগ থেকে মুক্তি দেওয়া",
+      "explanation": "Exculpate = অভিযোগ থেকে মুক্তি দেওয়া"
+    },
+    {
+      "id": "vocab_e_046",
+      "question": "Execrable এর অর্থ কি?",
+      "options": {
+        "a": "জঘন্য বা অত্যন্ত ঘৃণ্য",
+        "b": "ঢকঢক করে পান করা",
+        "c": "ফোলা; স্ফীত; অতিরঞ্জিত",
+        "d": "বিবর্ণ; ফ্যাকাশে; অনুজ্জ্বল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "জঘন্য বা অত্যন্ত ঘৃণ্য",
+      "explanation": "Execrable = জঘন্য বা অত্যন্ত ঘৃণ্য"
+    },
+    {
+      "id": "vocab_e_047",
+      "question": "Exigent এর অর্থ কি?",
+      "options": {
+        "a": "জরুরি বা দাবিদার",
+        "b": "ভোগবাদ বা সুখবাদ",
+        "c": "বিরক্ত করা",
+        "d": "বজ্রকণ্ঠ; উচ্চস্বর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "জরুরি বা দাবিদার",
+      "explanation": "Exigent = জরুরি বা দাবিদার"
+    },
+    {
+      "id": "vocab_e_048",
+      "question": "Exonerate এর অর্থ কি?",
+      "options": {
+        "a": "গাছপালা বিদ্যা; বৃক্ষ গবেষণা",
+        "b": "দায়মুক্তি দেওয়া",
+        "c": "বিষণ্ণ বা গম্ভীর",
+        "d": "অভদ্র বা রুক্ষ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "দায়মুক্তি দেওয়া",
+      "explanation": "Exonerate = দায়মুক্তি দেওয়া"
+    },
+    {
+      "id": "vocab_e_049",
+      "question": "Exorbitant এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত বা অত্যধিক",
+        "b": "সত্যতা; সততা",
+        "c": "অনুকরণমূলক বা গৌণ",
+        "d": "লুকিয়ে বেড়ানো"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অতিরিক্ত বা অত্যধিক",
+      "explanation": "Exorbitant = অতিরিক্ত বা অত্যধিক"
+    },
+    {
+      "id": "vocab_e_050",
+      "question": "Expatiate এর অর্থ কি?",
+      "options": {
+        "a": "বিস্তারিতভাবে আলোচনা করা",
+        "b": "অস্পষ্ট বা দ্ব্যর্থক",
+        "c": "সহজে রাজি বা নমনীয়",
+        "d": "গোঁড়া উৎসাহী"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিস্তারিতভাবে আলোচনা করা",
+      "explanation": "Expatiate = বিস্তারিতভাবে আলোচনা করা"
+    },
+    {
+      "id": "vocab_e_051",
+      "question": "Expatriate এর অর্থ কি?",
+      "options": {
+        "a": "কার্যকারিতা বা ক্ষমতা",
+        "b": "একগুঁয়ে বা জেদি",
+        "c": "অসংবেদনশীল বা অজ্ঞান",
+        "d": "প্রবাসী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রবাসী",
+      "explanation": "Expatriate = প্রবাসী"
+    },
+    {
+      "id": "vocab_e_052",
+      "question": "Expedient এর অর্থ কি?",
+      "options": {
+        "a": "সুন্দর; প্রফুল্ল",
+        "b": "খেলাপি হওয়া বা ব্যর্থ হওয়া",
+        "c": "অসঙ্গতি বা বৈপরীত্য",
+        "d": "সুবিধাজনক কিন্তু অনৈতিক"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সুবিধাজনক কিন্তু অনৈতিক",
+      "explanation": "Expedient = সুবিধাজনক কিন্তু অনৈতিক"
+    },
+    {
+      "id": "vocab_e_053",
+      "question": "Extant এর অর্থ কি?",
+      "options": {
+        "a": "দাম্ভিক",
+        "b": "বিদ্যমান বা টিকে আছে এমন",
+        "c": "অপরিবর্তনীয়",
+        "d": "হতবাক; স্তম্ভিত"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিদ্যমান বা টিকে আছে এমন",
+      "explanation": "Extant = বিদ্যমান বা টিকে আছে এমন"
+    },
+    {
+      "id": "vocab_e_054",
+      "question": "Extol এর অর্থ কি?",
+      "options": {
+        "a": "উচ্চ প্রশংসা করা",
+        "b": "বাস্তববাদী",
+        "c": "উদার; দানশীল",
+        "d": "হালকা-পাতলা ও দুর্বল"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "উচ্চ প্রশংসা করা",
+      "explanation": "Extol = উচ্চ প্রশংসা করা"
+    },
+    {
+      "id": "vocab_e_055",
+      "question": "Extraneous এর অর্থ কি?",
+      "options": {
+        "a": "বিদ্রূপাত্মক",
+        "b": "ধীরে ধীরে হাঁটা; আরামে চলা",
+        "c": "অপ্রাসঙ্গিক বা বাইরের",
+        "d": "জেদ বা নমনীয়তার অভাব"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অপ্রাসঙ্গিক বা বাইরের",
+      "explanation": "Extraneous = অপ্রাসঙ্গিক বা বাইরের"
+    },
+    {
+      "id": "vocab_e_056",
+      "question": "Extrapolate এর অর্থ কি?",
+      "options": {
+        "a": "মৃত্যু সংবাদ; শোকসংবাদ",
+        "b": "নিষ্ক্রিয়; শান্ত",
+        "c": "অনুমোদন বা প্রশংসা",
+        "d": "পূর্বানুমান করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "পূর্বানুমান করা",
+      "explanation": "Extrapolate = পূর্বানুমান করা"
+    },
+    {
+      "id": "vocab_e_057",
+      "question": "Efficacy এর অর্থ কি?",
+      "options": {
+        "a": "ছড়িয়ে দেওয়া বা বিস্তৃত করা",
+        "b": "নিষ্ক্রিয় বা জড়",
+        "c": "কার্যকারিতা বা ক্ষমতা",
+        "d": "পণ্ডিত বা জ্ঞানী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "কার্যকারিতা বা ক্ষমতা",
+      "explanation": "Efficacy = কার্যকারিতা বা ক্ষমতা"
+    },
+    {
+      "id": "vocab_e_058",
+      "question": "Embellish এর অর্থ কি?",
+      "options": {
+        "a": "পক্ষীবিদ্যা",
+        "b": "প্রবাসী",
+        "c": "রহস্য বা ধাঁধা",
+        "d": "সাজানো বা অলংকৃত করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সাজানো বা অলংকৃত করা",
+      "explanation": "Embellish = সাজানো বা অলংকৃত করা"
+    },
+    {
+      "id": "vocab_e_059",
+      "question": "Emulate এর অর্থ কি?",
+      "options": {
+        "a": "অতিরিক্ত বা অত্যধিক",
+        "b": "কঠিন করা বা হওয়া",
+        "c": "ধার্মিক",
+        "d": "অনুকরণ করা বা অনুসরণ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনুকরণ করা বা অনুসরণ করা",
+      "explanation": "Emulate = অনুকরণ করা বা অনুসরণ করা"
+    },
+    {
+      "id": "vocab_e_060",
+      "question": "Enhance এর অর্থ কি?",
+      "options": {
+        "a": "বৃদ্ধি করা বা উন্নত করা",
+        "b": "অস্থায়ী বসবাস",
+        "c": "বিরক্ত করা",
+        "d": "মসৃণ; আপাতমধুর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বৃদ্ধি করা বা উন্নত করা",
+      "explanation": "Enhance = বৃদ্ধি করা বা উন্নত করা"
+    },
+    {
+      "id": "vocab_e_061",
+      "question": "Eulogy এর অর্থ কি?",
+      "options": {
+        "a": "মনের স্থিরতা বা শান্ত ভাব",
+        "b": "অমিল বা পার্থক্য",
+        "c": "প্রশংসা বা স্তুতি",
+        "d": "ভূগর্ভস্থ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "প্রশংসা বা স্তুতি",
+      "explanation": "Eulogy = প্রশংসা বা স্তুতি"
+    },
+    {
+      "id": "vocab_e_062",
+      "question": "Exigency এর অর্থ কি?",
+      "options": {
+        "a": "তুচ্ছ; হালকা",
+        "b": "বাগ্মী বা সুন্দরভাবে কথা বলতে পটু",
+        "c": "জরুরি অবস্থা বা জরুরি প্রয়োজন",
+        "d": "অতিরিক্ত বা অত্যধিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "জরুরি অবস্থা বা জরুরি প্রয়োজন",
+      "explanation": "Exigency = জরুরি অবস্থা বা জরুরি প্রয়োজন"
+    },
+    {
+      "id": "vocab_e_063",
+      "question": "Extrapolation এর অর্থ কি?",
+      "options": {
+        "a": "নীতিগল্প",
+        "b": "রূঢ়ভাবে প্রত্যাখ্যান করা",
+        "c": "সংযম",
+        "d": "অনুমান বা ধারণা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অনুমান বা ধারণা",
+      "explanation": "Extrapolation = অনুমান বা ধারণা"
     }
   ]
 }

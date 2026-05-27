@@ -104,6 +104,32 @@
       "correct_answer": "b",
       "correct_answer_text": "অপ্রত্যাশিত লাভ",
       "explanation": "Windfall = অপ্রত্যাশিত লাভ"
+    },
+    {
+      "id": "vocab_w_009",
+      "question": "Wary এর অর্থ কি?",
+      "options": {
+        "a": "প্রহসন; হালকা ধরনের কমেডি",
+        "b": "সর্বরোগহর ঔষধ বা সমাধান",
+        "c": "সতর্ক বা সন্দেহপ্রবণ",
+        "d": "গাছপালা বিদ্যা; বৃক্ষ গবেষণা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "সতর্ক বা সন্দেহপ্রবণ",
+      "explanation": "Wary = সতর্ক বা সন্দেহপ্রবণ"
+    },
+    {
+      "id": "vocab_w_010",
+      "question": "Whimsical এর অর্থ কি?",
+      "options": {
+        "a": "আপাতদৃষ্টিতে সত্য কিন্তু মিথ্যা",
+        "b": "খেয়ালী বা অদ্ভুত",
+        "c": "বাকচাতুরী বা ঘুরিয়ে কথা বলা",
+        "d": "দুর্বল করা বা হ্রাস করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "খেয়ালী বা অদ্ভুত",
+      "explanation": "Whimsical = খেয়ালী বা অদ্ভুত"
     }
   ]
 }

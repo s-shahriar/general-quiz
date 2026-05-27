@@ -117,6 +117,175 @@
       "correct_answer": "b",
       "correct_answer_text": "সমোচ্চারিত শব্দ",
       "explanation": "Homonym = সমোচ্চারিত শব্দ"
+    },
+    {
+      "id": "vocab_gh_010",
+      "question": "Gainsay এর অর্থ কি?",
+      "options": {
+        "a": "ভয়; উদ্বেগ",
+        "b": "নিন্দা করা বা অসম্মতি প্রকাশ করা",
+        "c": "অসংযমী; অতিমাত্রায় আবেগী",
+        "d": "অস্বীকার করা বা বিরোধিতা করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অস্বীকার করা বা বিরোধিতা করা",
+      "explanation": "Gainsay = অস্বীকার করা বা বিরোধিতা করা"
+    },
+    {
+      "id": "vocab_gh_011",
+      "question": "Garrulous এর অর্থ কি?",
+      "options": {
+        "a": "বর্ণালী বা পরিসর",
+        "b": "তলোয়ারের খাপ",
+        "c": "বাচাল বা অতিরিক্ত কথা বলে এমন",
+        "d": "আনুষ্ঠানিকভাবে প্রচার বা ঘোষণা করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "বাচাল বা অতিরিক্ত কথা বলে এমন",
+      "explanation": "Garrulous = বাচাল বা অতিরিক্ত কথা বলে এমন"
+    },
+    {
+      "id": "vocab_gh_012",
+      "question": "Goad এর অর্থ কি?",
+      "options": {
+        "a": "স্তবক; কবিতার অনুচ্ছেদ",
+        "b": "ভ্রমণ-আকাঙ্ক্ষা",
+        "c": "অবগত বা সচেতন",
+        "d": "উত্তেজিত করা বা খোঁচা দেওয়া"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "উত্তেজিত করা বা খোঁচা দেওয়া",
+      "explanation": "Goad = উত্তেজিত করা বা খোঁচা দেওয়া"
+    },
+    {
+      "id": "vocab_gh_013",
+      "question": "Grandiloquent এর অর্থ কি?",
+      "options": {
+        "a": "মহানুভব বা উদার",
+        "b": "দ্রুত পালানো",
+        "c": "সান্ত্বনা",
+        "d": "জমকালো বা আড়ম্বরপূর্ণ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "জমকালো বা আড়ম্বরপূর্ণ",
+      "explanation": "Grandiloquent = জমকালো বা আড়ম্বরপূর্ণ"
+    },
+    {
+      "id": "vocab_gh_014",
+      "question": "Gregarious এর অর্থ কি?",
+      "options": {
+        "a": "হতবাক বা কিংকর্তব্যবিমূঢ়",
+        "b": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "c": "উন্নত করা বা ভালো করা",
+        "d": "মিশুক বা সঙ্গপ্রিয়"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মিশুক বা সঙ্গপ্রিয়",
+      "explanation": "Gregarious = মিশুক বা সঙ্গপ্রিয়"
+    },
+    {
+      "id": "vocab_gh_015",
+      "question": "Guileless এর অর্থ কি?",
+      "options": {
+        "a": "হাঁটাচলা; পদচারণ",
+        "b": "সরল বা ছলনা জানে না এমন",
+        "c": "দ্ব্যর্থক বা অস্পষ্ট কথা বলা",
+        "d": "অনুমান বা ধারণা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সরল বা ছলনা জানে না এমন",
+      "explanation": "Guileless = সরল বা ছলনা জানে না এমন"
+    },
+    {
+      "id": "vocab_gh_016",
+      "question": "Gullible এর অর্থ কি?",
+      "options": {
+        "a": "মসৃণ; আপাতমধুর",
+        "b": "সহজে বিশ্বাস করে এমন",
+        "c": "ভীত করা বা নিরুৎসাহিত করা",
+        "d": "বাধ্য বা আজ্ঞাকারী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সহজে বিশ্বাস করে এমন",
+      "explanation": "Gullible = সহজে বিশ্বাস করে এমন"
+    },
+    {
+      "id": "vocab_gh_017",
+      "question": "Hedonism এর অর্থ কি?",
+      "options": {
+        "a": "নূতন শব্দ",
+        "b": "বিভ্রান্ত করা বা হতবুদ্ধি করা",
+        "c": "বর্ণালী বা পরিসর",
+        "d": "ভোগবাদ বা সুখবাদ"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ভোগবাদ বা সুখবাদ",
+      "explanation": "Hedonism = ভোগবাদ বা সুখবাদ"
+    },
+    {
+      "id": "vocab_gh_018",
+      "question": "Hegemony এর অর্থ কি?",
+      "options": {
+        "a": "অবহেলাকারী বা দায়িত্বহীন",
+        "b": "উদ্ধত; ধৃষ্ট; অসম্মানজনক",
+        "c": "আধিপত্য",
+        "d": "ভদ্রতা বা সামাজিক শিষ্টাচার"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আধিপত্য",
+      "explanation": "Hegemony = আধিপত্য"
+    },
+    {
+      "id": "vocab_gh_019",
+      "question": "Hiatus এর অর্থ কি?",
+      "options": {
+        "a": "বিরতি",
+        "b": "গদ্যময়; গতানুগতিক; বিরস",
+        "c": "হাতা; দর্বি",
+        "d": "বাজে বা অর্থহীন কথা বলা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিরতি",
+      "explanation": "Hiatus = বিরতি"
+    },
+    {
+      "id": "vocab_gh_020",
+      "question": "Gouge এর অর্থ কি?",
+      "options": {
+        "a": "অদক্ষ; আনাড়ি",
+        "b": "খোদাই করা বা আঁচড় দেওয়া",
+        "c": "তির্যক বা পরোক্ষ",
+        "d": "বৃক্ষसंबंधীয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "খোদাই করা বা আঁচড় দেওয়া",
+      "explanation": "Gouge = খোদাই করা বা আঁচড় দেওয়া"
+    },
+    {
+      "id": "vocab_gh_021",
+      "question": "Homogenous এর অর্থ কি?",
+      "options": {
+        "a": "সমজাতীয় বা একরকম",
+        "b": "রসিক; কৌতুকপ্রিয়",
+        "c": "নির্দিষ্ট এলাকায় সীমাবদ্ধ রোগ; স্থানীয়",
+        "d": "বিরক্ত করা; উত্যক্ত করা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "সমজাতীয় বা একরকম",
+      "explanation": "Homogenous = সমজাতীয় বা একরকম"
+    },
+    {
+      "id": "vocab_gh_022",
+      "question": "Hyperbole এর অর্থ কি?",
+      "options": {
+        "a": "বাতিল করা",
+        "b": "গালিগালাজপূর্ণ কটূক্তি করা",
+        "c": "অতিরঞ্জন বা অত্যুক্তি",
+        "d": "এড়িয়ে চলা বা বর্জন করা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অতিরঞ্জন বা অত্যুক্তি",
+      "explanation": "Hyperbole = অতিরঞ্জন বা অত্যুক্তি"
     }
   ]
 }

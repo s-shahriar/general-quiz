@@ -221,6 +221,331 @@
       "correct_answer": "b",
       "correct_answer_text": "বিচিত্র; মিশ্রিত; রঙবেরঙা",
       "explanation": "Motley = বিচিত্র; মিশ্রিত; রঙবেরঙা"
+    },
+    {
+      "id": "vocab_m_018",
+      "question": "Macabre এর অর্থ কি?",
+      "options": {
+        "a": "প্রতারিত করা বা ঠকানো",
+        "b": "রহস্যময় বা গুপ্ত",
+        "c": "ভয়ানক",
+        "d": "সর্বাত্মকবাদী সরকারের মতো হস্তক্ষেপকারী"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ভয়ানক",
+      "explanation": "Macabre = ভয়ানক"
+    },
+    {
+      "id": "vocab_m_019",
+      "question": "Machination এর অর্থ কি?",
+      "options": {
+        "a": "নোংরা অবস্থা; দুর্দশা",
+        "b": "ষড়যন্ত্র",
+        "c": "উৎসাহ; প্রাণশক্তি; তেজ",
+        "d": "সর্বনিম্ন বিন্দু"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ষড়যন্ত্র",
+      "explanation": "Machination = ষড়যন্ত্র"
+    },
+    {
+      "id": "vocab_m_020",
+      "question": "Maelstrom এর অর্থ কি?",
+      "options": {
+        "a": "সর্বত্র ছড়িয়ে পড়া",
+        "b": "ভীরু",
+        "c": "ঘূর্ণিস্রোত বা চরম বিশৃঙ্খলা",
+        "d": "অতিরিক্ত সুবিধা বা পারিশ্রমিক"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ঘূর্ণিস্রোত বা চরম বিশৃঙ্খলা",
+      "explanation": "Maelstrom = ঘূর্ণিস্রোত বা চরম বিশৃঙ্খলা"
+    },
+    {
+      "id": "vocab_m_021",
+      "question": "Magnanimous এর অর্থ কি?",
+      "options": {
+        "a": "মহানুভব বা উদার",
+        "b": "অভিশাপ",
+        "c": "সরল বা নিষ্কপট",
+        "d": "সতর্ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মহানুভব বা উদার",
+      "explanation": "Magnanimous = মহানুভব বা উদার"
+    },
+    {
+      "id": "vocab_m_022",
+      "question": "Malediction এর অর্থ কি?",
+      "options": {
+        "a": "ব্যাপকভাবে ধ্বংস করা; দশ ভাগের একভাগ নষ্ট করা",
+        "b": "একগুঁয়ে বা আপোষহীন",
+        "c": "অভিশাপ",
+        "d": "হতবাক বা কিংকর্তব্যবিমূঢ়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "অভিশাপ",
+      "explanation": "Malediction = অভিশাপ"
+    },
+    {
+      "id": "vocab_m_023",
+      "question": "Malevolent এর অর্থ কি?",
+      "options": {
+        "a": "হিংস্র বা অমঙ্গলকামী",
+        "b": "ভবিষ্যৎ চিন্তাশীল; সাবধানী",
+        "c": "মত বা বিশ্বাস প্রত্যাহার করা",
+        "d": "অর্থসংক্রান্ত; আর্থিক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "হিংস্র বা অমঙ্গলকামী",
+      "explanation": "Malevolent = হিংস্র বা অমঙ্গলকামী"
+    },
+    {
+      "id": "vocab_m_024",
+      "question": "Malinger এর অর্থ কি?",
+      "options": {
+        "a": "অন্তর্ভুক্ত করা বা সংযুক্ত করা",
+        "b": "কাজ এড়ানোর জন্য অসুস্থতার ভান করা",
+        "c": "দাম্ভিক বা কর্তৃত্বপরায়ণ",
+        "d": "জনহিতকর বা পরোপকারী"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কাজ এড়ানোর জন্য অসুস্থতার ভান করা",
+      "explanation": "Malinger = কাজ এড়ানোর জন্য অসুস্থতার ভান করা"
+    },
+    {
+      "id": "vocab_m_025",
+      "question": "Malleable এর অর্থ কি?",
+      "options": {
+        "a": "জমকালো কিন্তু অন্তঃসারশূন্য",
+        "b": "নমনীয় বা সহজে আকার দেওয়া যায় এমন",
+        "c": "বাধা দেওয়া বা প্রতিবন্ধকতা সৃষ্টি করা",
+        "d": "মহানুভবতা বা উদারতা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "নমনীয় বা সহজে আকার দেওয়া যায় এমন",
+      "explanation": "Malleable = নমনীয় বা সহজে আকার দেওয়া যায় এমন"
+    },
+    {
+      "id": "vocab_m_026",
+      "question": "Manifest এর অর্থ কি?",
+      "options": {
+        "a": "মত বা বিশ্বাস প্রত্যাহার করা",
+        "b": "সুস্পষ্ট বা প্রকাশ করা",
+        "c": "দায়মুক্তি দেওয়া",
+        "d": "দীপ্তিমান"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সুস্পষ্ট বা প্রকাশ করা",
+      "explanation": "Manifest = সুস্পষ্ট বা প্রকাশ করা"
+    },
+    {
+      "id": "vocab_m_027",
+      "question": "Martinet এর অর্থ কি?",
+      "options": {
+        "a": "স্বেচ্ছাচারী বা খামখেয়ালী",
+        "b": "প্রথাবিরোধী ব্যক্তি",
+        "c": "অসমর্থনযোগ্য",
+        "d": "কঠোর নিয়মনিষ্ঠ ব্যক্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "কঠোর নিয়মনিষ্ঠ ব্যক্তি",
+      "explanation": "Martinet = কঠোর নিয়মনিষ্ঠ ব্যক্তি"
+    },
+    {
+      "id": "vocab_m_028",
+      "question": "Maverick এর অর্থ কি?",
+      "options": {
+        "a": "অনুকরণমূলক বা গৌণ",
+        "b": "গুরুত্বহীনভাবে প্রেম করে এমন ব্যক্তি",
+        "c": "সংক্ষিপ্ত ও অর্থপূর্ণ",
+        "d": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি",
+      "explanation": "Maverick = প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি"
+    },
+    {
+      "id": "vocab_m_029",
+      "question": "Mellifluous এর অর্থ কি?",
+      "options": {
+        "a": "ভারী বা ধীর",
+        "b": "সুমধুর",
+        "c": "বহুভাষী",
+        "d": "সূক্ষ্ম বিচারশক্তি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সুমধুর",
+      "explanation": "Mellifluous = সুমধুর"
+    },
+    {
+      "id": "vocab_m_030",
+      "question": "Mendacious এর অর্থ কি?",
+      "options": {
+        "a": "সর্বত্র ছড়িয়ে পড়া",
+        "b": "গাছ ছেঁ টে নকশা তৈরি",
+        "c": "প্রবল আগ্রহ; ঝোঁক",
+        "d": "মিথ্যাবাদী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মিথ্যাবাদী",
+      "explanation": "Mendacious = মিথ্যাবাদী"
+    },
+    {
+      "id": "vocab_m_031",
+      "question": "Mercurial এর অর্থ কি?",
+      "options": {
+        "a": "বিরক্তি বা অপমান বোধ",
+        "b": "নকল; জাল",
+        "c": "পরিবর্তনশীল",
+        "d": "অভিনেতা; নাট্যকলার সাথে সম্পর্কিত"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পরিবর্তনশীল",
+      "explanation": "Mercurial = পরিবর্তনশীল"
+    },
+    {
+      "id": "vocab_m_032",
+      "question": "Meretricious এর অর্থ কি?",
+      "options": {
+        "a": "বিচক্ষণ বা বোধসম্পন্ন",
+        "b": "সহানুভূতি বা অন্যের অনুভূতি বোঝা",
+        "c": "লোক দেখানো কিন্তু অন্তঃসারশূন্য",
+        "d": "দুর্বোধ্য বা গভীর"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "লোক দেখানো কিন্তু অন্তঃসারশূন্য",
+      "explanation": "Meretricious = লোক দেখানো কিন্তু অন্তঃসারশূন্য"
+    },
+    {
+      "id": "vocab_m_033",
+      "question": "Meticulous এর অর্থ কি?",
+      "options": {
+        "a": "মিশুক বা সঙ্গপ্রিয়",
+        "b": "ক্ষতিগ্রস্ত করা বা দুর্বল করা",
+        "c": "পক্ষপাত বা বিশেষ পছন্দ",
+        "d": "অতিসতর্ক বা খুঁতখুঁতে"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "অতিসতর্ক বা খুঁতখুঁতে",
+      "explanation": "Meticulous = অতিসতর্ক বা খুঁতখুঁতে"
+    },
+    {
+      "id": "vocab_m_034",
+      "question": "Misanthrope এর অর্থ কি?",
+      "options": {
+        "a": "মিষ্টি কথায় ভোলানো",
+        "b": "উদাসীনতা বা নির্লিপ্ততা",
+        "c": "উন্নত করা বা ভালো করা",
+        "d": "মানববিদ্বেষী"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "মানববিদ্বেষী",
+      "explanation": "Misanthrope = মানববিদ্বেষী"
+    },
+    {
+      "id": "vocab_m_035",
+      "question": "Mitigate এর অর্থ কি?",
+      "options": {
+        "a": "প্রশমিত করা বা তীব্রতা কমানো",
+        "b": "পরিশ্রমী বা অধ্যবসায়ী",
+        "c": "প্রবল আগ্রহ; ঝোঁক",
+        "d": "সমানুপাতিক বা সমান"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "প্রশমিত করা বা তীব্রতা কমানো",
+      "explanation": "Mitigate = প্রশমিত করা বা তীব্রতা কমানো"
+    },
+    {
+      "id": "vocab_m_036",
+      "question": "Monotony এর অর্থ কি?",
+      "options": {
+        "a": "একঘেয়েমি",
+        "b": "সম্পূর্ণরূপে ধ্বংস করা",
+        "c": "নিন্দাপূর্ণ বা কটুক্তিযুক্ত",
+        "d": "ভ্রাতৃত্ব; ভাইয়ের মতো সম্পর্ক"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "একঘেয়েমি",
+      "explanation": "Monotony = একঘেয়েমি"
+    },
+    {
+      "id": "vocab_m_037",
+      "question": "Mundane এর অর্থ কি?",
+      "options": {
+        "a": "অসামঞ্জস্য বা বেসুরো শব্দ",
+        "b": "প্রথাবিরোধী বা স্বাধীনচেতা ব্যক্তি",
+        "c": "পার্থিব বা সাধারণ",
+        "d": "অতিরিক্ত আলোচনা করা; বারবার একই কথা বলা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "পার্থিব বা সাধারণ",
+      "explanation": "Mundane = পার্থিব বা সাধারণ"
+    },
+    {
+      "id": "vocab_m_038",
+      "question": "Munificent এর অর্থ কি?",
+      "options": {
+        "a": "হৈ-চৈ; কোলাহল",
+        "b": "পদাবনতি ঘটানো",
+        "c": "স্থিতিস্থাপকতা; দৃঢ়তা",
+        "d": "দানশীল"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "দানশীল",
+      "explanation": "Munificent = দানশীল"
+    },
+    {
+      "id": "vocab_m_039",
+      "question": "Myriad এর অর্থ কি?",
+      "options": {
+        "a": "অসংখ্য",
+        "b": "কুযুক্তি বা প্রতারণামূলক তর্ক",
+        "c": "সর্বনাশের কারণ",
+        "d": "শিশুসুলভ বা অপরিণত"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "অসংখ্য",
+      "explanation": "Myriad = অসংখ্য"
+    },
+    {
+      "id": "vocab_m_040",
+      "question": "Magnanimity এর অর্থ কি?",
+      "options": {
+        "a": "মহানুভবতা বা উদারতা",
+        "b": "নিজের সন্তান হত্যা; পুত্রকন্যাহত্যা",
+        "c": "ঘোলাটে; অস্বচ্ছ",
+        "d": "স্বাভাবিক প্রবণতা"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মহানুভবতা বা উদারতা",
+      "explanation": "Magnanimity = মহানুভবতা বা উদারতা"
+    },
+    {
+      "id": "vocab_m_041",
+      "question": "Malingerer এর অর্থ কি?",
+      "options": {
+        "a": "ভান করা রোগী বা কাজ এড়ানো ব্যক্তি",
+        "b": "ভ্রমণসূচি বা কর্মসূচি",
+        "c": "প্রকাশ করা বা প্রদর্শন করা",
+        "d": "সর্বোৎকৃষ্ট বা আদর্শ উদাহরণ"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ভান করা রোগী বা কাজ এড়ানো ব্যক্তি",
+      "explanation": "Malingerer = ভান করা রোগী বা কাজ এড়ানো ব্যক্তি"
+    },
+    {
+      "id": "vocab_m_042",
+      "question": "Metamorphosis এর অর্থ কি?",
+      "options": {
+        "a": "বাদী",
+        "b": "রূপান্তর বা পরিবর্তন",
+        "c": "চালনি; ছাঁকনি",
+        "d": "কুযুক্তি বা প্রতারণামূলক তর্ক"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "রূপান্তর বা পরিবর্তন",
+      "explanation": "Metamorphosis = রূপান্তর বা পরিবর্তন"
     }
   ]
 }

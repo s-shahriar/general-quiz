@@ -52,6 +52,32 @@
       "correct_answer": "b",
       "correct_answer_text": "পোড়ানোর ভাঁটা; ইটভাটি",
       "explanation": "Kiln = পোড়ানোর ভাঁটা; ইটভাটি"
+    },
+    {
+      "id": "vocab_jk_005",
+      "question": "Jettison এর অর্থ কি?",
+      "options": {
+        "a": "পরিত্যাগ করা বা ফেলে দেওয়া",
+        "b": "সম্মতি; অনুমোদন",
+        "c": "অনুকূল; শুভ",
+        "d": "খামখেয়ালি; অনিশ্চিত পরিবর্তন"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "পরিত্যাগ করা বা ফেলে দেওয়া",
+      "explanation": "Jettison = পরিত্যাগ করা বা ফেলে দেওয়া"
+    },
+    {
+      "id": "vocab_jk_006",
+      "question": "Juxtapose এর অর্থ কি?",
+      "options": {
+        "a": "সমর্থন করা",
+        "b": "পাশাপাশি স্থাপন করা",
+        "c": "বন্ধ করা",
+        "d": "প্রাণচঞ্চল; চটপটে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "পাশাপাশি স্থাপন করা",
+      "explanation": "Juxtapose = পাশাপাশি স্থাপন করা"
     }
   ]
 }
