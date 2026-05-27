@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { Sun, Moon } from 'lucide-react'
-import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS, VOCAB_TOPICS } from './data/index.js'
+import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS } from './data/index.js'
 
-// General Quiz
+// General Quiz — eagerly loaded (always needed on first paint)
 import HomeScreen      from './components/HomeScreen.jsx'
 import ModeSelect      from './components/ModeSelect.jsx'
 import QuizMode        from './components/QuizMode.jsx'
@@ -13,14 +13,13 @@ import NailedScreen    from './components/NailedScreen.jsx'
 import ImportantScreen from './components/ImportantScreen.jsx'
 import BackupModal     from './components/BackupModal.jsx'
 
-// Vocabulary
-import VocabHomeScreen  from './components/vocab/HomeScreen.jsx'
-import VocabExamConfig  from './components/vocab/ExamConfig.jsx'
-
-// Utility Kit
+// Utility Kit — FinancialTerms eager, MathFormulas lazy (pulls in KaTeX)
 import UtilityHome         from './components/utility/HomeScreen.jsx'
-import UtilityMathFormulas from './components/utility/MathFormulas.jsx'
 import UtilityFinancialTerms from './components/utility/FinancialTerms.jsx'
+const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas.jsx'))
+
+// Vocabulary — lazy: entire module + all 22 JSON files load on demand
+const VocabApp = lazy(() => import('./components/vocab/VocabApp.jsx'))
 
 // ── Persistence ───────────────────────────────────────
 function loadSet(key) {
@@ -29,6 +28,10 @@ function loadSet(key) {
 }
 function saveSet(key, set) {
   localStorage.setItem(key, JSON.stringify([...set]))
+}
+
+function ModuleLoader() {
+  return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>
 }
 
 export default function App() {
@@ -50,42 +53,55 @@ export default function App() {
     localStorage.setItem('gq-active-module', activeModule)
   }, [activeModule])
 
+  // ── Shared quiz state ────────────────────────────────
+  const [mastered, setMastered] = useState(() => loadSet('gq-nailed'))
+  const [important, setImportant] = useState(() => loadSet('gq-important'))
+
+  const nail            = (qid) => setMastered(prev  => { const n = new Set(prev);  n.add(qid);    saveSet('gq-nailed',    n); return n })
+  const unnail          = (qid) => setMastered(prev  => { const n = new Set(prev);  n.delete(qid); saveSet('gq-nailed',    n); return n })
+  const markImportant   = (qid) => setImportant(prev => { const n = new Set(prev);  n.add(qid);    saveSet('gq-important', n); return n })
+  const unmarkImportant = (qid) => setImportant(prev => { const n = new Set(prev);  n.delete(qid); saveSet('gq-important', n); return n })
+
+  const handleRestore = (nailedArr, importantArr) => {
+    setMastered(prev  => { const n = new Set([...prev,  ...nailedArr]);    saveSet('gq-nailed',    n); return n })
+    setImportant(prev => { const n = new Set([...prev,  ...importantArr]); saveSet('gq-important', n); return n })
+  }
+
+  // ── Backup — vocab topics loaded async so they stay out of main bundle ──
+  const [showBackup, setShowBackup]           = useState(false)
+  const [vocabTopicsCache, setVocabTopicsCache] = useState([])
+
+  const openBackup = async () => {
+    if (vocabTopicsCache.length === 0) {
+      const { VOCAB_TOPICS } = await import('./data/vocabTopics.js')
+      setVocabTopicsCache(VOCAB_TOPICS)
+    }
+    setShowBackup(true)
+  }
+
   // ── General Quiz state ───────────────────────────────
   const [screen, setScreen]               = useState('home')
   const [activeGroup, setActiveGroup]     = useState('bangla')
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [examData, setExamData]           = useState(null)
-  const [mastered, setMastered]           = useState(() => loadSet('gq-nailed'))
-  const [important, setImportant]         = useState(() => loadSet('gq-important'))
-  const [showBackup, setShowBackup]       = useState(false)
+  const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null) }
 
   function getTopicGroup(topic) {
     if (!topic) return []
-    if (BANGLA_TOPICS.some(t => t.id === topic.id)) return BANGLA_TOPICS
-    if (ENGLISH_TOPICS.some(t => t.id === topic.id)) return ENGLISH_TOPICS
+    if (BANGLA_TOPICS.some(t => t.id === topic.id))       return BANGLA_TOPICS
+    if (ENGLISH_TOPICS.some(t => t.id === topic.id))      return ENGLISH_TOPICS
     if (BANGLA_SAHITYA_TOPICS.some(t => t.id === topic.id)) return BANGLA_SAHITYA_TOPICS
     return GK_TOPICS
   }
 
-  const nail            = (qid) => setMastered(prev => { const n = new Set(prev); n.add(qid);    saveSet('gq-nailed',    n); return n })
-  const unnail          = (qid) => setMastered(prev => { const n = new Set(prev); n.delete(qid); saveSet('gq-nailed',    n); return n })
-  const markImportant   = (qid) => setImportant(prev => { const n = new Set(prev); n.add(qid);    saveSet('gq-important', n); return n })
-  const unmarkImportant = (qid) => setImportant(prev => { const n = new Set(prev); n.delete(qid); saveSet('gq-important', n); return n })
-  const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null) }
-
-  const handleRestore = (nailedArr, importantArr) => {
-    setMastered(prev => { const n = new Set([...prev, ...nailedArr]); saveSet('gq-nailed', n); return n })
-    setImportant(prev => { const n = new Set([...prev, ...importantArr]); saveSet('gq-important', n); return n })
-  }
-
   // ── Vocabulary module state ──────────────────────────
-  const [vocabScreen, setVocabScreen]           = useState('home')
-  const [vocabTopic, setVocabTopic]             = useState(null)
-  const [vocabExamData, setVocabExamData]       = useState(null)
+  const [vocabScreen, setVocabScreen]     = useState('home')
+  const [vocabTopic, setVocabTopic]       = useState(null)
+  const [vocabExamData, setVocabExamData] = useState(null)
   const goVocabHome = () => { setVocabScreen('home'); setVocabTopic(null); setVocabExamData(null) }
 
   // ── Utility Kit state ────────────────────────────────
-  const [utilityScreen, setUtilityScreen]       = useState('home')
+  const [utilityScreen, setUtilityScreen]           = useState('home')
   const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
   const openUtilityTool = (id) => { setUtilityActiveToolId(id); setUtilityScreen('tool') }
   const goUtilityHome   = () => { setUtilityActiveToolId(null); setUtilityScreen('home') }
@@ -95,6 +111,8 @@ export default function App() {
     (activeModule === 'general' && screen === 'home') ||
     (activeModule === 'vocab'   && vocabScreen === 'home') ||
     (activeModule === 'utility' && utilityScreen === 'home')
+
+  const backupTopics = [...ALL_TOPICS, ...vocabTopicsCache]
 
   return (
     <div className="app-root">
@@ -145,7 +163,7 @@ export default function App() {
               onExam={() => setScreen('exam_config')}
               onNailed={() => setScreen('nailed')}
               onImportant={() => setScreen('important')}
-              onBackup={() => setShowBackup(true)}
+              onBackup={openBackup}
               onUnnail={unnail}
             />
           )}
@@ -214,107 +232,31 @@ export default function App() {
               onHome={goHome}
             />
           )}
-          {showBackup && (
-            <BackupModal
-              mastered={mastered}
-              important={important}
-              topics={[...ALL_TOPICS, ...VOCAB_TOPICS]}
-              onRestore={handleRestore}
-              onClose={() => setShowBackup(false)}
-            />
-          )}
         </>
       )}
 
       {/* ================================================================= */}
-      {/* 2. VOCABULARY MODULE                                               */}
+      {/* 2. VOCABULARY MODULE — lazy loaded                                 */}
       {/* ================================================================= */}
       {activeModule === 'vocab' && (
-        <>
-          {vocabScreen === 'home' && (
-            <VocabHomeScreen
-              topics={VOCAB_TOPICS}
-              mastered={mastered}
-              important={important}
-              onSelectTopic={(t) => { setVocabTopic(t); setVocabScreen('mode') }}
-              onExam={() => setVocabScreen('exam_config')}
-              onNailed={() => setVocabScreen('nailed')}
-              onImportant={() => setVocabScreen('important')}
-              onBackup={() => setShowBackup(true)}
-            />
-          )}
-          {vocabScreen === 'exam_config' && (
-            <VocabExamConfig
-              topics={VOCAB_TOPICS}
-              important={important}
-              onStart={(data) => { setVocabExamData(data); setVocabScreen('exam') }}
-              onBack={goVocabHome}
-            />
-          )}
-          {vocabScreen === 'exam' && vocabExamData && (
-            <ExamMode
-              key={vocabExamData.label + vocabExamData.questions.length}
-              questions={vocabExamData.questions}
-              label={vocabExamData.label}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onUnnail={unnail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onHome={goVocabHome}
-            />
-          )}
-          {vocabScreen === 'important' && (
-            <ImportantScreen topics={VOCAB_TOPICS} important={important} onUnmark={unmarkImportant} onHome={goVocabHome} />
-          )}
-          {vocabScreen === 'nailed' && (
-            <NailedScreen topics={VOCAB_TOPICS} mastered={mastered} onUnnail={unnail} onHome={goVocabHome} />
-          )}
-          {vocabScreen === 'mode' && vocabTopic && (
-            <ModeSelect topic={vocabTopic} onQuiz={() => setVocabScreen('quiz')} onStudy={() => setVocabScreen('study')} onBack={goVocabHome} />
-          )}
-          {vocabScreen === 'quiz' && vocabTopic && (
-            <QuizMode
-              key={vocabTopic.id + '-quiz'}
-              topic={vocabTopic}
-              topics={VOCAB_TOPICS}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onUnnail={unnail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onBack={() => setVocabScreen('mode')}
-              onHome={goVocabHome}
-              onChangeTopic={(t) => setVocabTopic(t)}
-            />
-          )}
-          {vocabScreen === 'study' && vocabTopic && (
-            <StudyMode
-              key={vocabTopic.id + '-study'}
-              topic={vocabTopic}
-              topics={VOCAB_TOPICS}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onBack={() => setVocabScreen('mode')}
-              onHome={goVocabHome}
-              onChangeTopic={(t) => setVocabTopic(t)}
-            />
-          )}
-          {showBackup && (
-            <BackupModal
-              mastered={mastered}
-              important={important}
-              topics={[...ALL_TOPICS, ...VOCAB_TOPICS]}
-              onRestore={handleRestore}
-              onClose={() => setShowBackup(false)}
-            />
-          )}
-        </>
+        <Suspense fallback={<ModuleLoader />}>
+          <VocabApp
+            vocabScreen={vocabScreen}
+            vocabTopic={vocabTopic}
+            vocabExamData={vocabExamData}
+            setVocabScreen={setVocabScreen}
+            setVocabTopic={setVocabTopic}
+            setVocabExamData={setVocabExamData}
+            goVocabHome={goVocabHome}
+            mastered={mastered}
+            important={important}
+            nail={nail}
+            unnail={unnail}
+            markImportant={markImportant}
+            unmarkImportant={unmarkImportant}
+            onOpenBackup={openBackup}
+          />
+        </Suspense>
       )}
 
       {/* ================================================================= */}
@@ -324,12 +266,25 @@ export default function App() {
         <>
           {utilityScreen === 'home' && <UtilityHome onOpen={openUtilityTool} />}
           {utilityScreen === 'tool' && utilityActiveToolId === 'math_formulas' && (
-            <UtilityMathFormulas onBack={goUtilityHome} />
+            <Suspense fallback={<ModuleLoader />}>
+              <UtilityMathFormulas onBack={goUtilityHome} />
+            </Suspense>
           )}
           {utilityScreen === 'tool' && utilityActiveToolId === 'financial_terms' && (
             <UtilityFinancialTerms onBack={goUtilityHome} />
           )}
         </>
+      )}
+
+      {/* ── Shared Backup Modal ───────────────────────── */}
+      {showBackup && (
+        <BackupModal
+          mastered={mastered}
+          important={important}
+          topics={backupTopics}
+          onRestore={handleRestore}
+          onClose={() => setShowBackup(false)}
+        />
       )}
     </div>
   )
