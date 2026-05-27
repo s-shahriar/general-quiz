@@ -1,6 +1,6 @@
 import {
   Volume2, Repeat, Shield, Link2, Tag, Layers, GitMerge, Target,
-  BookOpen, Hash, Globe, CheckSquare, FileText,
+  BookOpen, Hash, Globe, CheckSquare,
   Type, Clock, PenTool, Users, Mic, MessageSquare, ArrowLeftRight,
   HelpCircle, MapPin, Layout, AlertCircle, Crosshair, Trophy,
   Award, Star, TrendingUp, DollarSign, Landmark, Cpu, Newspaper,
@@ -20,7 +20,6 @@ import pod             from './bangla/pod.json'
 import shobdo          from './bangla/shobdo.json'
 import poribhasha      from './bangla/poribhasha.json'
 import bananBakko      from './bangla/banan_bakko.json'
-import practiceExam    from './bangla/practice_exam.json'
 import somarthokShobdo from './bangla/somarthok_shobdo.json'
 
 // ── General Knowledge topics ───────────────────────────────────
@@ -62,7 +61,6 @@ export const BANGLA_TOPICS = [
   { id: 'shobdo',            name: 'শব্দ',                    shortName: 'শব্দ',              icon: Hash,          color: '#c084fc', questions: shobdo.questions        || [] },
   { id: 'poribhasha',        name: 'পরিভাষা',                 shortName: 'পরিভাষা',           icon: Globe,         color: '#4ade80', questions: poribhasha.questions    || [] },
   { id: 'banan_bakko',       name: 'বানান ও বাক্য শুদ্ধি',    shortName: 'বানান শুদ্ধি',     icon: CheckSquare,   color: '#fb7185', questions: bananBakko.questions    || [] },
-  { id: 'practice_exam',     name: 'প্র্যাকটিস পরীক্ষা',      shortName: 'প্র্যাকটিস',       icon: FileText,      color: '#f59e0b', questions: practiceExam.questions    || [] },
   { id: 'somarthok_shobdo', name: 'সমার্থক শব্দ',             shortName: 'সমার্থক শব্দ',     icon: Shuffle,       color: '#e879f9', questions: somarthokShobdo.questions || [] },
 ]
 

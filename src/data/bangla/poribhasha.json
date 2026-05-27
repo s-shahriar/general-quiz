@@ -416,6 +416,84 @@
       "correct_answer": "c",
       "correct_answer_text": "অন্ত্যস্বর লোপ",
       "explanation": "Apocope=অন্ত্যস্বর লোপ। Umlaut=অভিশ্রুতি। Syncope=মধ্যস্বর লোপ। Assimilation=সমীভবন।"
+    },
+    {
+      "question": "'Confiscate' শব্দটির বাংলা পরিভাষা কি?",
+      "options": {
+        "a": "আদালতের স্থায়ী আদেশ",
+        "b": "বাজেয়াপ্ত করা",
+        "c": "বহুব্রীহি",
+        "d": "অব্যয়ীভাব\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বাজেয়াপ্ত করা",
+      "explanation": "Confiscate = বাজেয়াপ্ত করা।",
+      "id": 33
+    },
+    {
+      "question": "Pleadings এর অর্থ কি?",
+      "options": {
+        "a": "আর্জি",
+        "b": "জবাব",
+        "c": "আর্জি ও জবাব",
+        "d": "উকিলের বক্তব্য\n**"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আর্জি ও জবাব",
+      "explanation": "Pleadings = আর্জি ও জবাব।",
+      "id": 34
+    },
+    {
+      "question": "Accede শব্দের পরিভাষা কী?",
+      "options": {
+        "a": "প্রতিরক্ষা",
+        "b": "যোগ দেয়া",
+        "c": "দাতা",
+        "d": "ধোকা\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "যোগ দেয়া",
+      "explanation": "Accede = যোগ দেয়া। Defense = প্রতিরক্ষা, Donor = দাতা।",
+      "id": 35
+    },
+    {
+      "question": "Rule of pleading — শব্দটির বাংলা পরিভাষা কি?",
+      "options": {
+        "a": "আদালতের স্থায়ী আদেশ",
+        "b": "সওয়ালের নিয়ম",
+        "c": "শপথ বাক্য",
+        "d": "বিচার কক্ষ\n**"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সওয়ালের নিয়ম",
+      "explanation": "Rule of pleading = সওয়ালের নিয়ম।",
+      "id": 36
+    },
+    {
+      "question": "Aesthetics এর পরিভাষা—",
+      "options": {
+        "a": "নন্দনতত্ত্ব",
+        "b": "বিমান বিদ্যা",
+        "c": "আপত্তিক",
+        "d": "প্রসারণ\n**"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "নন্দনতত্ত্ব",
+      "explanation": "Aesthetics = নন্দনতত্ত্ব।",
+      "id": 37
+    },
+    {
+      "question": "\"Cordon\" শব্দটির বাংলা পারিভাষিক রূপ হলো-",
+      "options": {
+        "a": "চক্র",
+        "b": "প্রতিলিপি",
+        "c": "প্রতীকী লেখা",
+        "d": "বেষ্টনী\n**"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "বেষ্টনী",
+      "explanation": "Cordon = বেষ্টনী।",
+      "id": 38
     }
   ]
 }
