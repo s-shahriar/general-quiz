@@ -63,7 +63,7 @@ function RefSection() {
       </div>
       <div className="ft-grid">
         {filtered.length === 0
-          ? <div className="ft-no-results">কোনো ফলাফল পাওয়া যায়নি 🔍</div>
+          ? <div className="ft-no-results"><Search size={16} style={{ opacity: 0.4, marginRight: 6 }} />কোনো ফলাফল পাওয়া যায়নি</div>
           : filtered.map((card) => <TermCard key={card.id} card={card} />)}
       </div>
     </>
@@ -75,7 +75,7 @@ function TermCard({ card }) {
   return (
     <div className="ft-card" style={{ '--card-color': color }}>
       <div className="ft-card-header">
-        <div className="ft-card-icon">{card.icon}</div>
+        <div className="ft-card-icon"><card.icon size={18} /></div>
         <div>
           <div className="ft-card-title">{card.title}</div>
           <div className="ft-card-subtitle">{card.subtitle}</div>

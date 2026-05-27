@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { X, Copy, Check, Upload, Download, ShieldCheck } from 'lucide-react'
+import { X, Copy, Check, Upload, Download, ShieldCheck, Star, Bookmark } from 'lucide-react'
 import { generateCypher, parseCypher } from '../lib/backup.js'
 
 export default function BackupModal({ mastered, important, topics, onRestore, onClose }) {
@@ -105,9 +105,9 @@ export default function BackupModal({ mastered, important, topics, onRestore, on
               <div className="backup-summary">
                 <div className="backup-summary-title">Restored successfully!</div>
                 <div className="backup-summary-row">
-                  <span className="bsr-nailed">⭐ {restoreSummary.newNailed} nailed</span>
+                  <span className="bsr-nailed"><Star size={12} fill="currentColor" /> {restoreSummary.newNailed} nailed</span>
                   <span className="bsr-dot">·</span>
-                  <span className="bsr-important">🔖 {restoreSummary.newImportant} important</span>
+                  <span className="bsr-important"><Bookmark size={12} fill="currentColor" /> {restoreSummary.newImportant} important</span>
                 </div>
                 {restoreSummary.newNailed === 0 && restoreSummary.newImportant === 0 && (
                   <div className="backup-summary-already">All items were already saved — nothing changed.</div>

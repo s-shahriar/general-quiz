@@ -83,20 +83,20 @@ export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, sahit
         <div className="exam-field">
           <label className="exam-label">Subject Group</label>
           <select className="exam-select" value={groupId} onChange={e => handleGroupChange(e.target.value)}>
-            <option value="all">🌐 All Topics</option>
-            <option value="bangla">🇧🇩 বাংলা ব্যাকরণ</option>
-            <option value="english">🇬🇧 English Grammar</option>
-            <option value="gk">📚 সাধারণ জ্ঞান</option>
-            <option value="sahitya">📖 বাংলা সাহিত্য</option>
+            <option value="all">All Topics</option>
+            <option value="bangla">বাংলা ব্যাকরণ</option>
+            <option value="english">English Grammar</option>
+            <option value="gk">সাধারণ জ্ঞান</option>
+            <option value="sahitya">বাংলা সাহিত্য</option>
           </select>
         </div>
 
         <div className="exam-field">
           <label className="exam-label">Topic</label>
           <select className="exam-select" value={topicId} onChange={e => handleTopicChange(e.target.value)}>
-            <option value="all">🎲 All in Group (Random Mix)</option>
+            <option value="all">All in Group (Random Mix)</option>
             <option value="important" disabled={importantCount === 0}>
-              🔖 Important Questions ({importantCount} Q)
+              Important Questions ({importantCount} Q)
             </option>
             <optgroup label="────────────────">
               {filteredTopics.map(t => (

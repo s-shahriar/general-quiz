@@ -73,9 +73,9 @@ export default function VocabExamConfig({ topics, important, onStart, onBack }) 
         <div className="exam-field">
           <label className="exam-label">Letter Group</label>
           <select className="exam-select" value={topicId} onChange={e => handleTopicChange(e.target.value)}>
-            <option value="all">🔤 All Letters (Random Mix)</option>
+            <option value="all">All Letters (Random Mix)</option>
             <option value="important" disabled={importantCount === 0}>
-              🔖 Important Words ({importantCount} Q)
+              Important Words ({importantCount} Q)
             </option>
             <optgroup label="────────────────">
               {topics.map(t => (

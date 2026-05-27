@@ -1,16 +1,16 @@
-import { Wrench } from 'lucide-react'
+import { Wrench, Calculator, Building2 } from 'lucide-react'
 
 const TOOLS = [
   {
     id: 'math_formulas',
-    icon: '📐',
+    icon: Calculator,
     name: 'গণিত সূত্র',
     description: '১২টি বিষয় — সম্পূর্ণ সূত্র সংকলন',
     color: '#f0a500',
   },
   {
     id: 'financial_terms',
-    icon: '🏦',
+    icon: Building2,
     name: 'ফিনান্সিয়াল টার্ম',
     description: '৫১টি টপিক + ৩৯টি কুইজ প্রশ্ন',
     color: '#22c55e',
@@ -37,9 +37,10 @@ export default function HomeScreen({ onOpen }) {
 }
 
 function ToolCard({ tool, onClick }) {
+  const Icon = tool.icon
   return (
     <button className="topic-card" onClick={onClick} style={{ '--c': tool.color }}>
-      <div className="tc-icon">{tool.icon}</div>
+      <div className="tc-icon"><Icon size={20} /></div>
       <div className="tc-body">
         <span className="tc-name">{tool.name}</span>
         <span className="tc-count">{tool.description}</span>

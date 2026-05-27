@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, Lightbulb, AlertTriangle } from 'lucide-react'
 import katex from 'katex'
 import 'katex/dist/katex.min.css'
 import './MathFormulas.css'
@@ -1145,18 +1145,20 @@ function FBox({ label, val, tex, highlight }) {
 }
 
 function Mem({ title, children, style }) {
+  const label = title?.replace(/💡\s*/g, '')
   return (
     <div className="mf-mem" style={style}>
-      <div className="mf-mem-title">{title}</div>
+      <div className="mf-mem-title"><Lightbulb size={13} style={{ flexShrink: 0 }} />{label}</div>
       {children}
     </div>
   )
 }
 
 function Warn({ title, children, style }) {
+  const label = title?.replace(/⚠️\s*/g, '')
   return (
     <div className="mf-warn" style={style}>
-      <div className="mf-warn-title">{title}</div>
+      <div className="mf-warn-title"><AlertTriangle size={13} style={{ flexShrink: 0 }} />{label}</div>
       {children}
     </div>
   )
