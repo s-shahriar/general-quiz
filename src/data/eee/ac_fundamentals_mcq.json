@@ -1,0 +1,828 @@
+[
+  {
+    "id": "ac_q1",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The Form Factor of a pure sinusoidal alternating waveform is:",
+    "options": [
+      "1.414",
+      "1.11",
+      "0.707",
+      "0.636"
+    ],
+    "correct_answer": "1.11",
+    "explanation_bn": "ফর্ম ফ্যাক্টর = RMS মান / গড় মান = 0.707Vm / 0.636Vm ≈ 1.11। এটি ওয়েভফর্মের আকৃতির বৈশিষ্ট্য বর্ণনা করে। সাইন ওয়েভের জন্য সবসময় 1.11।"
+  },
+  {
+    "id": "ac_q2",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Peak Factor (or Crest Factor) of a pure sine wave is:",
+    "options": [
+      "1.414",
+      "1.11",
+      "0.707",
+      "0.636"
+    ],
+    "correct_answer": "1.414",
+    "explanation_bn": "পিক ফ্যাক্টর = পিক মান / RMS মান = Vm / 0.707Vm = √2 ≈ 1.414। এটি সিগন্যালের সর্বোচ্চ মান এবং কার্যকর মানের অনুপাত।"
+  },
+  {
+    "id": "ac_q3",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The RMS value of a sine wave is equal to:",
+    "options": [
+      "0.636 × Peak Value",
+      "1.11 × Peak Value",
+      "0.707 × Peak Value",
+      "1.414 × Peak Value"
+    ],
+    "correct_answer": "0.707 × Peak Value",
+    "explanation_bn": "RMS মান = Vm / √2 = 0.707 × Vm। RMS মান হলো সেই DC ভোল্টেজ যা একই রেজিস্ট্যান্সে একই পরিমাণ তাপ উৎপন্ন করে। বাংলাদেশে ২৩০V হলো RMS মান, পিক ভোল্টেজ = 230/0.707 ≈ 325V।"
+  },
+  {
+    "id": "ac_q4",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Which value of an AC waveform is used to measure its heating effect compared to DC?",
+    "options": [
+      "Peak value",
+      "Average value",
+      "RMS (Root Mean Square) value",
+      "Instantaneous value"
+    ],
+    "correct_answer": "RMS (Root Mean Square) value",
+    "explanation_bn": "RMS মান AC সিগন্যালের তাপীয় প্রভাব পরিমাপের জন্য ব্যবহৃত হয়। একটি AC সিগন্যালের RMS মান সমতুল্য DC-এর সমান তাপ উৎপন্ন করে। তাই বিদ্যুৎ বিল হিসাবেও RMS মান ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ac_q5",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The average value of a complete (full) cycle of a pure sine wave is:",
+    "options": [
+      "Zero",
+      "1",
+      "0.636 × Peak Value",
+      "0.707 × Peak Value"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": "পূর্ণ চক্রে সাইন ওয়েভের গড় মান শূন্য (Zero)। কারণ পজিটিভ হাফ সাইকেলের ক্ষেত্রফল এবং নেগেটিভ হাফ সাইকেলের ক্ষেত্রফল পরস্পর বাতিল করে। (অর্ধ চক্রের গড় = 0.636 × Vm)"
+  },
+  {
+    "id": "ac_q6",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The frequency of a pure DC voltage source is:",
+    "options": [
+      "Infinite",
+      "50 Hz",
+      "60 Hz",
+      "Zero"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": "DC ভোল্টেজ স্থির — এটি পরিবর্তিত হয় না। তাই এর ফ্রিকোয়েন্সি শূন্য (0 Hz)। পিরিয়ড = অসীম, ফ্রিকোয়েন্সি = 1/∞ = 0।"
+  },
+  {
+    "id": "ac_q7",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In an AC circuit, the ratio of Active Power (W) to Apparent Power (VA) is known as:",
+    "options": [
+      "Form factor",
+      "Load factor",
+      "Power factor",
+      "Peak factor"
+    ],
+    "correct_answer": "Power factor",
+    "explanation_bn": "পাওয়ার ফ্যাক্টর = সক্রিয় পাওয়ার (W) / আপাত পাওয়ার (VA) = cosθ। এটি 0 থেকে 1 এর মধ্যে থাকে। Unity (1) মানে সম্পূর্ণ দক্ষ — সব শক্তি কার্যকরভাবে ব্যবহৃত হচ্ছে।"
+  },
+  {
+    "id": "ac_q8",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Form factor is mathematically defined as the ratio of:",
+    "options": [
+      "RMS value to Average value",
+      "Peak value to RMS value",
+      "Average value to RMS value",
+      "Peak value to Average value"
+    ],
+    "correct_answer": "RMS value to Average value",
+    "explanation_bn": "ফর্ম ফ্যাক্টর = RMS মান / গড় মান। সাইন ওয়েভের জন্য: = 0.707Vm / 0.636Vm = 1.11। এটি ওয়েভফর্মের শেপ বৈশিষ্ট্য।"
+  },
+  {
+    "id": "ac_q9",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "What is the standard unit of Reactive Power in an AC system?",
+    "options": [
+      "Watt (W)",
+      "Volt-Ampere (VA)",
+      "Volt-Ampere Reactive (VAR)",
+      "Joules (J)"
+    ],
+    "correct_answer": "Volt-Ampere Reactive (VAR)",
+    "explanation_bn": "রিঅ্যাক্টিভ পাওয়ারের একক VAR (Volt-Ampere Reactive)। এটি ইন্ডাক্টর ও ক্যাপাসিটরে সঞ্চিত ও ছাড়া পাওয়ার। এটি কোনো কাজ করে না কিন্তু লাইনে কারেন্ট প্রবাহ বাড়ায়।"
+  },
+  {
+    "id": "ac_q10",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "What is the standard unit of Apparent Power?",
+    "options": [
+      "Watt (W)",
+      "Volt-Ampere (VA)",
+      "Volt-Ampere Reactive (VAR)",
+      "Farad (F)"
+    ],
+    "correct_answer": "Volt-Ampere (VA)",
+    "explanation_bn": "আপাত পাওয়ারের একক VA (Volt-Ampere) বা kVA। আপাত পাওয়ার = সক্রিয় পাওয়ার² + রিঅ্যাক্টিভ পাওয়ার²। ট্রান্সফরমারের রেটিং kVA-তে প্রকাশ করা হয়। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ R, L, C and Phase Relationships ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "ac_q11",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a purely resistive AC circuit, the voltage and current are:",
+    "options": [
+      "In phase (0° phase difference)",
+      "Out of phase by 90°",
+      "Out of phase by 180°",
+      "Out of phase by 45°"
+    ],
+    "correct_answer": "In phase (0° phase difference)",
+    "explanation_bn": "বিশুদ্ধ রেজিস্টিভ সার্কিটে ভোল্টেজ এবং কারেন্ট একই ফেজে থাকে (0°)। পাওয়ার ফ্যাক্টর = cosθ = cos0° = 1 (Unity)। রেজিস্টর কোনো ফেজ পার্থক্য তৈরি করে না।"
+  },
+  {
+    "id": "ac_q12",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a purely inductive AC circuit, the current:",
+    "options": [
+      "Leads the voltage by 90°",
+      "Lags the voltage by 90°",
+      "Is in phase with the voltage",
+      "Lags the voltage by 45°"
+    ],
+    "correct_answer": "Lags the voltage by 90°",
+    "explanation_bn": "বিশুদ্ধ ইন্ডাক্টিভ সার্কিটে কারেন্ট ভোল্টেজের পিছিয়ে (Lag) থাকে ৯০°। স্মরণ সূত্র: \"ELI\" — E(ভোল্টেজ) আগে, L (ইন্ডাক্টর) এ, I (কারেন্ট) পরে।"
+  },
+  {
+    "id": "ac_q13",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a purely capacitive AC circuit, the current:",
+    "options": [
+      "Leads the voltage by 90°",
+      "Lags the voltage by 90°",
+      "Is in phase with the voltage",
+      "Leads the voltage by 45°"
+    ],
+    "correct_answer": "Leads the voltage by 90°",
+    "explanation_bn": "বিশুদ্ধ ক্যাপাসিটিভ সার্কিটে কারেন্ট ভোল্টেজের আগে (Lead) থাকে ৯০°। স্মরণ সূত্র: \"ICE\" — I (কারেন্ট) আগে, C (ক্যাপাসিটর) এ, E (ভোল্টেজ) পরে।"
+  },
+  {
+    "id": "ac_q14",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The actual active power consumed by a pure inductor in an AC circuit is:",
+    "options": [
+      "Maximum",
+      "Infinite",
+      "Zero",
+      "Depends on voltage"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": "বিশুদ্ধ ইন্ডাক্টর কোনো সক্রিয় পাওয়ার (Active Power) খরচ করে না। পাওয়ার = V × I × cosθ = V × I × cos90° = 0। এটি শুধু শক্তি সঞ্চয় করে এবং ফেরত দেয়।"
+  },
+  {
+    "id": "ac_q15",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "What happens to the inductive reactance (XL) when the frequency of the AC supply is doubled?",
+    "options": [
+      "Becomes half",
+      "Doubles",
+      "Remains unchanged",
+      "Becomes zero"
+    ],
+    "correct_answer": "Doubles",
+    "explanation_bn": "XL = 2πfL। ফ্রিকোয়েন্সি (f) দ্বিগুণ হলে XL দ্বিগুণ হয়। ইন্ডাক্টিভ রিঅ্যাক্ট্যান্স ফ্রিকোয়েন্সির সাথে সরাসরি সমানুপাতিক।"
+  },
+  {
+    "id": "ac_q16",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "What happens to the capacitive reactance (XC) when the frequency of the AC supply is doubled?",
+    "options": [
+      "Becomes half",
+      "Doubles",
+      "Remains unchanged",
+      "Becomes four times"
+    ],
+    "correct_answer": "Becomes half",
+    "explanation_bn": "XC = 1/(2πfC)। ফ্রিকোয়েন্সি (f) দ্বিগুণ হলে XC অর্ধেক হয়। ক্যাপাসিটিভ রিঅ্যাক্ট্যান্স ফ্রিকোয়েন্সির সাথে বিপরীতভাবে সমানুপাতিক।"
+  },
+  {
+    "id": "ac_q17",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The opposition offered to the flow of alternating current by a capacitor is called:",
+    "options": [
+      "Impedance",
+      "Inductive reactance",
+      "Capacitive reactance",
+      "Admittance"
+    ],
+    "correct_answer": "Capacitive reactance",
+    "explanation_bn": "ক্যাপাসিটর AC কারেন্ট প্রবাহে যে বাধা দেয় তাকে ক্যাপাসিটিভ রিঅ্যাক্ট্যান্স (XC) বলে। XC = 1/(2πfC)। ফ্রিকোয়েন্সি বাড়লে XC কমে, কমলে বাড়ে।"
+  },
+  {
+    "id": "ac_q18",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The reciprocal of Impedance in an AC circuit is called:",
+    "options": [
+      "Conductance",
+      "Susceptance",
+      "Reactance",
+      "Admittance"
+    ],
+    "correct_answer": "Admittance",
+    "explanation_bn": "অ্যাডমিট্যান্স (Y) = 1/Z (ইম্পিডেন্সের বিপরীত)। এটি AC সার্কিটে কারেন্ট প্রবাহের সহজতা পরিমাপ করে। Y = G + jB (G = কন্ডাক্ট্যান্স, B = সাসেপ্ট্যান্স)।"
+  },
+  {
+    "id": "ac_q19",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The real part of Admittance is called:",
+    "options": [
+      "Conductance",
+      "Susceptance",
+      "Resistance",
+      "Reactance"
+    ],
+    "correct_answer": "Conductance",
+    "explanation_bn": "অ্যাডমিট্যান্সের বাস্তব অংশ হলো কন্ডাক্ট্যান্স (G)। কাল্পনিক অংশ হলো সাসেপ্ট্যান্স (B)। Y = G + jB, যেখানে G = R/(R²+X²)।"
+  },
+  {
+    "id": "ac_q20",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The phase angle of a practical series RL (Resistor-Inductor) circuit lies between:",
+    "options": [
+      "0° and 90° leading",
+      "0° and 90° lagging",
+      "Exactly 90° lagging",
+      "Exactly 0°"
+    ],
+    "correct_answer": "0° and 90° lagging",
+    "explanation_bn": "সিরিজ RL সার্কিটে ফেজ কোণ = arctan(XL/R)। R থাকলে কোণ কখনো ৯০° হয় না। কোণটি 0° থেকে 90° ল্যাগিং-এর মধ্যে থাকে — R ও L এর অনুপাতের উপর নির্ভর করে। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Resonance and AC Circuit Analysis ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "ac_q21",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a series RLC circuit at resonance, the net reactive component (XL − XC) is:",
+    "options": [
+      "Maximum",
+      "Infinite",
+      "Zero",
+      "Equal to Resistance (R)"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": "রেজোন্যান্সে XL = XC, তাই XL − XC = 0। নেট রিঅ্যাক্টিভ উপাদান শূন্য হয়ে যায়। সার্কিট বিশুদ্ধ রেজিস্টিভ আচরণ করে।"
+  },
+  {
+    "id": "ac_q22",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "At series resonance, the overall impedance of the circuit is:",
+    "options": [
+      "Maximum and equal to L",
+      "Minimum and equal to R",
+      "Zero",
+      "Infinite"
+    ],
+    "correct_answer": "Minimum and equal to R",
+    "explanation_bn": "সিরিজ রেজোন্যান্সে Z = √(R² + (XL−XC)²) = √(R² + 0) = R। অর্থাৎ ইম্পিডেন্স সর্বনিম্ন এবং শুধু R এর সমান। তাই কারেন্ট সর্বোচ্চ হয়।"
+  },
+  {
+    "id": "ac_q23",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "At series resonance, the current drawn by the circuit from the supply is:",
+    "options": [
+      "Zero",
+      "Minimum",
+      "Maximum",
+      "Reactive only"
+    ],
+    "correct_answer": "Maximum",
+    "explanation_bn": "সিরিজ রেজোন্যান্সে ইম্পিডেন্স সর্বনিম্ন (= R)। তাই I = V/R — কারেন্ট সর্বোচ্চ হয়। এই সার্কিটকে একটি কারেন্ট অ্যামপ্লিফায়ার বলা যায়।"
+  },
+  {
+    "id": "ac_q24",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "At parallel resonance, the overall impedance of the circuit is:",
+    "options": [
+      "Zero",
+      "Minimum",
+      "Maximum",
+      "Equal to reactive components"
+    ],
+    "correct_answer": "Maximum",
+    "explanation_bn": "প্যারালাল রেজোন্যান্সে (অ্যান্টি-রেজোন্যান্স) ইম্পিডেন্স সর্বোচ্চ হয়। ফলে উৎস থেকে কারেন্ট সর্বনিম্ন হয়। L এবং C-এর মধ্যে শক্তি আদান-প্রদান চলতে থাকে।"
+  },
+  {
+    "id": "ac_q25",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The power factor of a series RLC circuit at resonant frequency is:",
+    "options": [
+      "Zero",
+      "0.5 lagging",
+      "0.8 leading",
+      "1 (Unity)"
+    ],
+    "correct_answer": "1 (Unity)",
+    "explanation_bn": "রেজোন্যান্সে সার্কিট বিশুদ্ধ রেজিস্টিভ — কোনো রিঅ্যাক্টিভ উপাদান নেই। তাই পাওয়ার ফ্যাক্টর = cos0° = 1 (Unity)। ভোল্টেজ এবং কারেন্ট একই ফেজে থাকে।"
+  },
+  {
+    "id": "ac_q26",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The Q-factor (Quality factor) of a series resonant circuit is a measure of its:",
+    "options": [
+      "Bandwidth and Selectivity (Sharpness of resonance)",
+      "Total power consumption",
+      "Total current capacity",
+      "Voltage rating"
+    ],
+    "correct_answer": "Bandwidth and Selectivity (Sharpness of resonance)",
+    "explanation_bn": "Q-ফ্যাক্টর = রেজোন্যান্ট ফ্রিকোয়েন্সি / ব্যান্ডউইথ। Q বেশি হলে সার্কিট বেশি সিলেক্টিভ (সরু ব্যান্ডউইথ)। রেডিও রিসিভারে নির্দিষ্ট স্টেশন বাছাইয়ে উচ্চ Q-ফ্যাক্টর দরকার।"
+  },
+  {
+    "id": "ac_q27",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Below the resonant frequency, a series RLC circuit behaves as a:",
+    "options": [
+      "Purely resistive circuit",
+      "Inductive circuit (lagging PF)",
+      "Capacitive circuit (leading PF)",
+      "DC circuit"
+    ],
+    "correct_answer": "Capacitive circuit (leading PF)",
+    "explanation_bn": "রেজোন্যান্টের নিচে XC > XL, তাই সার্কিট ক্যাপাসিটিভ আচরণ করে। কারেন্ট ভোল্টেজের আগে থাকে (লিডিং PF)।"
+  },
+  {
+    "id": "ac_q28",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Above the resonant frequency, a series RLC circuit behaves as a:",
+    "options": [
+      "Purely resistive circuit",
+      "Inductive circuit (lagging PF)",
+      "Capacitive circuit (leading PF)",
+      "Purely capacitive circuit"
+    ],
+    "correct_answer": "Inductive circuit (lagging PF)",
+    "explanation_bn": "রেজোন্যান্টের উপরে XL > XC, তাই সার্কিট ইন্ডাক্টিভ আচরণ করে। কারেন্ট ভোল্টেজের পিছিয়ে থাকে (ল্যাগিং PF)।"
+  },
+  {
+    "id": "ac_q29",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In an AC circuit, the apparent power is drawn from the source, but the actual useful work is done only by the:",
+    "options": [
+      "Reactive power",
+      "Active power",
+      "Apparent power",
+      "Reactive and Apparent power both"
+    ],
+    "correct_answer": "Active power",
+    "explanation_bn": "শুধুমাত্র সক্রিয় পাওয়ার (Active Power, Watt) প্রকৃত কাজ করে — যেমন তাপ, আলো, যান্ত্রিক কাজ। রিঅ্যাক্টিভ পাওয়ার শুধু সার্কিটে আদান-প্রদান হয়, কোনো কাজ করে না।"
+  },
+  {
+    "id": "ac_q30",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In the power triangle of an AC circuit, the hypotenuse represents:",
+    "options": [
+      "Active power",
+      "Reactive power",
+      "Apparent power",
+      "Power factor"
+    ],
+    "correct_answer": "Apparent power",
+    "explanation_bn": "পাওয়ার ট্রায়াঙ্গেলে: ভিত্তি = সক্রিয় পাওয়ার (W), উচ্চতা = রিঅ্যাক্টিভ পাওয়ার (VAR), কর্ণ (Hypotenuse) = আপাত পাওয়ার (VA)। VA² = W² + VAR²। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Polyphase / Three-Phase Systems ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "ac_q31",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a balanced 3-phase Star (Y) connection, the relation between line voltage (VL) and phase voltage (Vph) is:",
+    "options": [
+      "VL = Vph",
+      "VL = √3 × Vph",
+      "VL = Vph / √3",
+      "VL = 3Vph"
+    ],
+    "correct_answer": "VL = √3 × Vph",
+    "explanation_bn": "স্টার সংযোগে লাইন ভোল্টেজ = √3 × ফেজ ভোল্টেজ। বাংলাদেশে: ফেজ ভোল্টেজ ≈ 230V, লাইন ভোল্টেজ = √3 × 230 ≈ 400V। স্টারে লাইন কারেন্ট = ফেজ কারেন্ট।"
+  },
+  {
+    "id": "ac_q32",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a balanced 3-phase Delta (Δ) connection, the relation between line current (IL) and phase current (Iph) is:",
+    "options": [
+      "IL = Iph",
+      "IL = Iph / √3",
+      "IL = √3 × Iph",
+      "IL = 3Iph"
+    ],
+    "correct_answer": "IL = √3 × Iph",
+    "explanation_bn": "ডেল্টা সংযোগে লাইন কারেন্ট = √3 × ফেজ কারেন্ট। ডেল্টায় লাইন ভোল্টেজ = ফেজ ভোল্টেজ (সরাসরি)।"
+  },
+  {
+    "id": "ac_q33",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a balanced 3-phase Delta connection, the line voltage and phase voltage are:",
+    "options": [
+      "VL = √3 × Vph",
+      "VL = Vph / √3",
+      "VL = Vph (Equal)",
+      "VL = 3Vph"
+    ],
+    "correct_answer": "VL = Vph (Equal)",
+    "explanation_bn": "ডেল্টা সংযোগে লাইন ভোল্টেজ = ফেজ ভোল্টেজ। কারণ ডেল্টায় প্রতিটি উপাদান সরাসরি দুটি লাইনের মধ্যে সংযুক্ত।"
+  },
+  {
+    "id": "ac_q34",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In a perfectly balanced 3-phase Star connection, the neutral current is:",
+    "options": [
+      "Maximum",
+      "Equal to line current",
+      "Zero",
+      "Infinite"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": "সুষম (Balanced) থ্রি-ফেজ স্টার সংযোগে তিনটি ফেজ কারেন্ট ১২০° ফেজ পার্থক্যে থাকে। এদের ভেক্টর যোগফল শূন্য হয়, তাই নিউট্রাল কারেন্ট = শূন্য।"
+  },
+  {
+    "id": "ac_q35",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Which 3-phase connection is required for secondary distribution to supply both 3-phase (motor) and 1-phase (lighting) loads?",
+    "options": [
+      "Delta / 3-wire system",
+      "Star / 4-wire system",
+      "Star / 3-wire system",
+      "Delta / 4-wire system"
+    ],
+    "correct_answer": "Star / 4-wire system",
+    "explanation_bn": "স্টার/৪-তার সিস্টেমে তিনটি লাইন তার এবং একটি নিউট্রাল তার থাকে। নিউট্রালের কারণে থ্রি-ফেজ (400V) এবং সিঙ্গেল-ফেজ (230V) উভয় লোড সরবরাহ করা যায়।"
+  },
+  {
+    "id": "ac_q36",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The total active power in a balanced 3-phase system is expressed as:",
+    "options": [
+      "3 × VL × IL × sinθ",
+      "3 × VL × IL × cosθ",
+      "√3 × VL × IL × cosθ",
+      "VL × IL × cosθ"
+    ],
+    "correct_answer": "√3 × VL × IL × cosθ",
+    "explanation_bn": "তিন-ফেজের মোট সক্রিয় পাওয়ার P = √3 × VL × IL × cosθ। এটি স্টার ও ডেল্টা উভয় সংযোগে প্রযোজ্য। কারণ তিনটি ফেজের যোগফলে √3 ফ্যাক্টর আসে।"
+  },
+  {
+    "id": "ac_q37",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In the two-wattmeter method of 3-phase power measurement, if the load power factor is exactly 1 (unity), the readings of the two wattmeters are:",
+    "options": [
+      "Equal and opposite",
+      "Equal and positive",
+      "One is zero, the other reads total power",
+      "Both are zero"
+    ],
+    "correct_answer": "Equal and positive",
+    "explanation_bn": "PF = 1 (Unity) হলে দুটি ওয়াটমিটার সমান ও ধনাত্মক রিডিং দেয়। মোট পাওয়ার = W1 + W2। Unity PF-এ W1 = W2।"
+  },
+  {
+    "id": "ac_q38",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In the two-wattmeter method, if one wattmeter reads ZERO, the power factor of the load is:",
+    "options": [
+      "1.0",
+      "0.8",
+      "0.5",
+      "0.0"
+    ],
+    "correct_answer": "0.5",
+    "explanation_bn": "দুই-ওয়াটমিটার পদ্ধতিতে একটি যন্ত্র শূন্য দেখালে PF = 0.5। কারণ tanφ = √3 × (W1-W2)/(W1+W2)। W2 = 0 হলে tanφ = √3, φ = 60°, PF = cos60° = 0.5।"
+  },
+  {
+    "id": "ac_q39",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "In the two-wattmeter method, if the power factor is ZERO (purely reactive load), the readings are:",
+    "options": [
+      "Equal and positive",
+      "Equal and opposite (One positive, one negative)",
+      "Both zero",
+      "One is zero"
+    ],
+    "correct_answer": "Equal and opposite (One positive, one negative)",
+    "explanation_bn": "PF = 0 (বিশুদ্ধ রিঅ্যাক্টিভ) হলে দুটি ওয়াটমিটার সমান কিন্তু বিপরীত রিডিং দেয় (+W এবং -W)। মোট পাওয়ার = W1 + W2 = 0।"
+  },
+  {
+    "id": "ac_q40",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The standard phase sequence of a 3-phase AC supply system is generally denoted by:",
+    "options": [
+      "RBY",
+      "RYB (Red, Yellow, Blue)",
+      "BRY",
+      "YBR"
+    ],
+    "correct_answer": "RYB (Red, Yellow, Blue)",
+    "explanation_bn": "থ্রি-ফেজের স্ট্যান্ডার্ড ফেজ সিকোয়েন্স হলো RYB (Red, Yellow, Blue) বা ABC। এটি পজিটিভ সিকোয়েন্স। ফেজ সিকোয়েন্স বিপরীত হলে মোটর বিপরীত দিকে ঘুরবে। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Practical & Power Sector AC Concepts (BTCL, Grid) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "ac_q41",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার সিস্টেমে পাওয়ার ফ্যাক্টর উন্নত করার জন্য সাবস্টেশন বা ইন্ডাস্ট্রিতে সাধারণত কোনটি ব্যবহার করা হয়?",
+    "options": [
+      "Inductor Bank",
+      "Resistor Bank",
+      "Capacitor Bank",
+      "Battery Bank"
+    ],
+    "correct_answer": "Capacitor Bank",
+    "explanation_bn": "ইন্ডাস্ট্রিয়াল লোড সাধারণত ল্যাগিং PF (ইন্ডাক্টিভ)। ক্যাপাসিটর ব্যাংক লিডিং রিঅ্যাক্টিভ পাওয়ার সরবরাহ করে ইন্ডাক্টিভ রিঅ্যাক্টিভ পাওয়ার বাতিল করে PF উন্নত করে।"
+  },
+  {
+    "id": "ac_q42",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার ফ্যাক্টর ইমপ্রুভ করার জন্য ক্যাপাসিটর ব্যাংক লোডের সাথে কীভাবে যুক্ত করা হয়?",
+    "options": [
+      "সিরিজে (Series)",
+      "প্যারালালে (Parallel)",
+      "স্টার কানেকশনে সিরিজে",
+      "কোনোটিই নয়"
+    ],
+    "correct_answer": "প্যারালালে (Parallel)",
+    "explanation_bn": "ক্যাপাসিটর ব্যাংক লোডের সাথে সমান্তরালে (Parallel) সংযুক্ত করা হয়। প্যারালাল সংযোগে ক্যাপাসিটর স্থানীয়ভাবে রিঅ্যাক্টিভ পাওয়ার সরবরাহ করে, ফলে সাপ্লাই লাইনে রিঅ্যাক্টিভ পাওয়ার কম টানতে হয়।"
+  },
+  {
+    "id": "ac_q43",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার সিস্টেমে (বিশেষ করে ইন্ডাস্ট্রিতে) পাওয়ার ফ্যাক্টর কমে যাওয়ার প্রধান কারণ কী?",
+    "options": [
+      "অতিরিক্ত লাইটিং লোড",
+      "ক্যাপাসিটিভ লোড",
+      "ইন্ডাক্টিভ লোড (যেমন- ইন্ডাকশন মোটর, ট্রান্সফরমার)",
+      "রেজিস্টিভ লোড (যেমন- হিটার)"
+    ],
+    "correct_answer": "ইন্ডাক্টিভ লোড (যেমন- ইন্ডাকশন মোটর, ট্রান্সফরমার)",
+    "explanation_bn": "ইন্ডাকশন মোটর, ট্রান্সফরমার ইত্যাদি ইন্ডাক্টিভ লোড ল্যাগিং কারেন্ট টানে। এতে রিঅ্যাক্টিভ পাওয়ার বাড়ে এবং পাওয়ার ফ্যাক্টর কমে যায়। রেজিস্টিভ লোড (হিটার, ইনক্যান্ডিসেন্ট বাল্ব) PF এ প্রভাব ফেলে না।"
+  },
+  {
+    "id": "ac_q44",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "বাংলাদেশের বাসাবাড়িতে সরবরাহকৃত সিঙ্গেল ফেজ এসি ভোল্টেজের স্ট্যান্ডার্ড মান কত?",
+    "options": [
+      "110 V",
+      "220 V বা 230 V",
+      "400 V",
+      "11 kV"
+    ],
+    "correct_answer": "220 V বা 230 V",
+    "explanation_bn": "বাংলাদেশে বাসাবাড়িতে সিঙ্গেল ফেজ সাপ্লাই ২২০V থেকে ২৩০V (RMS)। ফ্রিকোয়েন্সি ৫০Hz। পিক ভোল্টেজ ≈ ৩২৫V। 110V ব্যবহার করে আমেরিকা ও কানাডা।"
+  },
+  {
+    "id": "ac_q45",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "বাংলাদেশের ডিস্ট্রিবিউশন সিস্টেমে গ্রাহক পর্যায়ে থ্রি-ফেজ লাইন ভোল্টেজ সাধারণত কত থাকে?",
+    "options": [
+      "230 V",
+      "400 V (বা 415 V)",
+      "11 kV",
+      "33 kV"
+    ],
+    "correct_answer": "400 V (বা 415 V)",
+    "explanation_bn": "গ্রাহক পর্যায়ে থ্রি-ফেজ লাইন ভোল্টেজ = √3 × 230 ≈ 400V। 11 kV এবং 33 kV হলো সাবস্টেশনের ডিস্ট্রিবিউশন ভোল্টেজ — গ্রাহকের মিটারে আসে না।"
+  },
+  {
+    "id": "ac_q46",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "এসি ট্রান্সমিশন লাইনে 'স্কিন ইফেক্ট' (Skin Effect) এর কারণে কারেন্ট পরিবাহীর কোন অংশ দিয়ে বেশি প্রবাহিত হতে চায়?",
+    "options": [
+      "পরিবাহীর ঠিক কেন্দ্র (Center) দিয়ে",
+      "পরিবাহীর বাইরের পৃষ্ঠ বা সারফেস (Surface) দিয়ে",
+      "পুরো পরিবাহী জুড়ে সমানভাবে",
+      "শুধু নিচের অংশ দিয়ে"
+    ],
+    "correct_answer": "পরিবাহীর বাইরের পৃষ্ঠ বা সারফেস (Surface) দিয়ে",
+    "explanation_bn": "স্কিন ইফেক্টে AC কারেন্ট পরিবাহীর বাইরের পৃষ্ঠ দিয়ে প্রবাহিত হতে চায়। ভেতরের অংশ কম ব্যবহৃত হয়। ফ্রিকোয়েন্সি বেশি হলে স্কিন ইফেক্ট বেশি হয় এবং কার্যকর রেজিস্ট্যান্স বাড়ে।"
+  },
+  {
+    "id": "ac_q47",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার সিস্টেমে পাওয়ার ফ্যাক্টর কারেকশনের জন্য 'সিঙ্ক্রোনাস কন্ডেন্সার' ব্যবহার করা হয়। এটি মূলত কী?",
+    "options": [
+      "একটি বিশাল সাইজের ক্যাপাসিটর",
+      "আন্ডার-এক্সাইটেড ইন্ডাকশন মোটর",
+      "ওভার-এক্সাইটেড সিঙ্ক্রোনাস মোটর (যা বিনা লোডে ঘোরে)",
+      "ডিসি জেনারেটর"
+    ],
+    "correct_answer": "ওভার-এক্সাইটেড সিঙ্ক্রোনাস মোটর (যা বিনা লোডে ঘোরে)",
+    "explanation_bn": "সিঙ্ক্রোনাস কন্ডেন্সার হলো একটি ওভার-এক্সাইটেড সিঙ্ক্রোনাস মোটর যা বিনা লোডে চলে। ওভার-এক্সাইটেশনে এটি লিডিং কারেন্ট টানে — ক্যাপাসিটর ব্যাংকের মতো রিঅ্যাক্টিভ পাওয়ার সরবরাহ করে।"
+  },
+  {
+    "id": "ac_q48",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার গ্রিডে ফ্রিকোয়েন্সি কমে যাওয়ার প্রধান কারণ কী?",
+    "options": [
+      "যখন জেনারেশন লোড ডিমান্ডের চেয়ে বেশি হয়",
+      "যখন জেনারেশন লোড ডিমান্ডের চেয়ে কম হয়",
+      "রিয়েক্টিভ পাওয়ার কমে গেলে",
+      "ভোল্টেজ বেড়ে গেলে"
+    ],
+    "correct_answer": "যখন জেনারেশন লোড ডিমান্ডের চেয়ে কম হয়",
+    "explanation_bn": "লোড ডিমান্ড বাড়লে জেনারেটরের রোটরে অতিরিক্ত চাপ পড়ে। এতে রোটর ধীর হয়ে যায় এবং উৎপাদিত ফ্রিকোয়েন্সি কমে যায়। বিদ্যুৎ উৎপাদন ডিমান্ডের সাথে সমান রাখতে না পারলে ফ্রিকোয়েন্সি পড়ে।"
+  },
+  {
+    "id": "ac_q49",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "পাওয়ার গ্রিডে রিয়েক্টিভ পাওয়ারের ঘাটতি দেখা দিলে সিস্টেমে তাৎক্ষণিক কী প্রভাব পড়ে?",
+    "options": [
+      "সিস্টেম ফ্রিকোয়েন্সি বেড়ে যায়",
+      "সিস্টেম ফ্রিকোয়েন্সি কমে যায়",
+      "সিস্টেম ভোল্টেজ (System Voltage) ড্রপ করে বা কমে যায়",
+      "সিস্টেম ভোল্টেজ বেড়ে যায়"
+    ],
+    "correct_answer": "সিস্টেম ভোল্টেজ (System Voltage) ড্রপ করে বা কমে যায়",
+    "explanation_bn": "রিঅ্যাক্টিভ পাওয়ার ভোল্টেজ প্রোফাইল নিয়ন্ত্রণ করে। রিঅ্যাক্টিভ পাওয়ার কমলে লাইনে ভোল্টেজ ড্রপ বাড়ে এবং সিস্টেম ভোল্টেজ কমে যায়। ভোল্টেজ কোলাপস ঠেকাতে ক্যাপাসিটর ব্যাংক যোগ করতে হয়।"
+  },
+  {
+    "id": "ac_q50",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "PDB বা REB সাধারণত ইন্ডাস্ট্রিয়াল গ্রাহকদের জরিমানা করে থাকে যদি তাদের—",
+    "options": [
+      "পাওয়ার ফ্যাক্টর ১ (Unity) হয়",
+      "পাওয়ার ফ্যাক্টর খুব বেশি ল্যাগিং (যেমন 0.8 এর নিচে) হয়",
+      "পাওয়ার ফ্যাক্টর লিডিং হয়",
+      "ম্যাক্সিমাম ডিমান্ড কম হয়"
+    ],
+    "correct_answer": "পাওয়ার ফ্যাক্টর খুব বেশি ল্যাগিং (যেমন 0.8 এর নিচে) হয়",
+    "explanation_bn": "PDB/REB নিয়ম অনুযায়ী পাওয়ার ফ্যাক্টর সাধারণত ০.৯ এর উপরে রাখতে হয়। ০.৮ এর নিচে গেলে জরিমানা (Penalty) করা হয়। কারণ লো PF-এ অতিরিক্ত রিঅ্যাক্টিভ কারেন্ট সিস্টেমের সম্পদ অপচয় করে।"
+  },
+  {
+    "id": "ac_q51",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "A capacitor is generally a:",
+    "options": [
+      "Linear and bilateral component",
+      "Non-linear and active component",
+      "Bilateral and active component",
+      "Active, passive, linear and non-linear component"
+    ],
+    "correct_answer": "Linear and bilateral component",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q53",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The time delay for a phase angle of 45 degrees at the frequency of 500 Hz will be:",
+    "options": [
+      "0.25 ms",
+      "2.5 ms",
+      "25 ms",
+      "250 ms"
+    ],
+    "correct_answer": "0.25 ms",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q55",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "How much will be the inductance of a coil that induces 40 V when its current changes at the rate of 4 A per second?",
+    "options": [
+      "0.1 mH",
+      "1 mH",
+      "0.1 H",
+      "10 H"
+    ],
+    "correct_answer": "10 H",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q57",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "A constant current of 5 mA charges a 10 uF capacitor for one second. The voltage across the capacitor will be:",
+    "options": [
+      "5 V",
+      "50 V",
+      "500 V",
+      "5000 V"
+    ],
+    "correct_answer": "500 V",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q59",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "A low pass filter is composed of n sections having series arms of 63.6 mH inductance and shunt arms of 0.088 uF each. The cut-off frequency will be nearly:",
+    "options": [
+      "1500 Hz",
+      "3000 Hz",
+      "6000 Hz",
+      "7500 Hz"
+    ],
+    "correct_answer": "3000 Hz",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q61",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The power consumed in a pure capacitive circuit is:",
+    "options": [
+      "CV",
+      "CV^2/2",
+      "C^2V/2",
+      "Zero"
+    ],
+    "correct_answer": "Zero",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q63",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The power factor of an R-C circuit is:",
+    "options": [
+      "Often zero",
+      "Between zero and 1",
+      "Always unity",
+      "Between zero and -1.0"
+    ],
+    "correct_answer": "Between zero and 1",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q65",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "The voltage applied across an R-L circuit is equal to __ of V_R and V_L:",
+    "options": [
+      "Arithmetic sum",
+      "Algebraic sum",
+      "Phasor sum",
+      "Sum of the squares"
+    ],
+    "correct_answer": "Phasor sum",
+    "explanation_bn": ""
+  },
+  {
+    "id": "ac_q67",
+    "chapter": 2,
+    "chapter_title": "AC Fundamentals & 3-Phase System",
+    "question": "Which of the following is incorrect about alternating current?",
+    "options": [
+      "Frequency is zero",
+      "Magnitude changes with time",
+      "Can be transported to larger distances with less loss in power",
+      "Flows in both directions"
+    ],
+    "correct_answer": "Frequency is zero",
+    "explanation_bn": ""
+  }
+]

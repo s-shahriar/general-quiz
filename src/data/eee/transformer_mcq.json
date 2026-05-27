@@ -1,0 +1,702 @@
+[
+  {
+    "id": "tr_q1",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "A transformer is a device that works on the principle of:",
+    "options": [
+      "Self-induction",
+      "Mutual induction",
+      "Ampere's law",
+      "Coulomb's law"
+    ],
+    "correct_answer": "Mutual induction",
+    "explanation_bn": "ট্রান্সফরমার পারস্পরিক আবেশ (Mutual Induction) নীতিতে কাজ করে। প্রাইমারিতে পরিবর্তনশীল কারেন্ট প্রবাহিত হলে পরিবর্তনশীল চৌম্বক প্রবাহ (Flux) তৈরি হয় যা সেকেন্ডারিতে EMF আবিষ্ট করে।"
+  },
+  {
+    "id": "tr_q2",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Which of the following quantities remains unchanged in a transformer?",
+    "options": [
+      "Voltage",
+      "Current",
+      "Frequency",
+      "Impedance"
+    ],
+    "correct_answer": "Frequency",
+    "explanation_bn": "ট্রান্সফরমারে ভোল্টেজ, কারেন্ট এবং ইম্পিডেন্স পরিবর্তিত হয়, কিন্তু ফ্রিকোয়েন্সি অপরিবর্তিত থাকে। কারণ চৌম্বক প্রবাহের পরিবর্তনের হার একই থাকে।"
+  },
+  {
+    "id": "tr_q3",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The primary and secondary windings of a two-winding transformer are connected:",
+    "options": [
+      "Electrically",
+      "Magnetically",
+      "Both electrically and magnetically",
+      "Mechanically"
+    ],
+    "correct_answer": "Magnetically",
+    "explanation_bn": "দুই-ওয়াইন্ডিং ট্রান্সফরমারে প্রাইমারি এবং সেকেন্ডারি শুধুমাত্র চৌম্বকীয়ভাবে (Magnetically) সংযুক্ত — সরাসরি বৈদ্যুতিক সংযোগ নেই। এটি বৈদ্যুতিক বিচ্ছিন্নতা (Isolation) নিশ্চিত করে।"
+  },
+  {
+    "id": "tr_q4",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "A step-up transformer increases the voltage and simultaneously decreases the:",
+    "options": [
+      "Power",
+      "Frequency",
+      "Resistance",
+      "Current"
+    ],
+    "correct_answer": "Current",
+    "explanation_bn": "স্টেপ-আপ ট্রান্সফরমারে ভোল্টেজ বাড়লে কারেন্ট কমে, কারণ পাওয়ার সংরক্ষিত থাকে (P = V × I)। ভোল্টেজ n গুণ বাড়লে কারেন্ট n গুণ কমে।"
+  },
+  {
+    "id": "tr_q5",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The core of a transformer is laminated to reduce:",
+    "options": [
+      "Hysteresis loss",
+      "Copper loss",
+      "Eddy current loss",
+      "Friction loss"
+    ],
+    "correct_answer": "Eddy current loss",
+    "explanation_bn": "ট্রান্সফরমার কোর ল্যামিনেটেড (পাতলা পাতে বিভক্ত) করা হয় এডি কারেন্ট লস (Eddy Current Loss) কমাতে। পাতলা পাতের মধ্যে ইনসুলেশন থাকায় এডি কারেন্টের পথ ছোট হয় এবং ক্ষতি কমে।"
+  },
+  {
+    "id": "tr_q6",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Transformer cores are usually made of:",
+    "options": [
+      "Cast iron",
+      "High carbon steel",
+      "Silicon steel",
+      "Aluminum"
+    ],
+    "correct_answer": "Silicon steel",
+    "explanation_bn": "ট্রান্সফরমার কোর সিলিকন স্টিল (Silicon Steel বা Grain-Oriented Steel) দিয়ে তৈরি হয়। সিলিকন মিশ্রণ হিস্টেরেসিস লস কমায় এবং উচ্চ চুম্বকীয় পরিবাহিতা (Permeability) নিশ্চিত করে।"
+  },
+  {
+    "id": "tr_q7",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The path of magnetic flux in a transformer should have:",
+    "options": [
+      "High reluctance",
+      "Low reluctance",
+      "High resistance",
+      "Low resistance"
+    ],
+    "correct_answer": "Low reluctance",
+    "explanation_bn": "চৌম্বক প্রবাহের পথে রিলাক্ট্যান্স (Reluctance) কম হওয়া উচিত, যাতে কম চৌম্বকীয় শক্তিতে বেশি ফ্লাক্স তৈরি হয়। সিলিকন স্টিল কোর কম রিলাক্ট্যান্স নিশ্চিত করে।"
+  },
+  {
+    "id": "tr_q8",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "A transformer operates only on:",
+    "options": [
+      "AC supply",
+      "DC supply",
+      "Both AC and DC",
+      "High frequency signals only"
+    ],
+    "correct_answer": "AC supply",
+    "explanation_bn": "ট্রান্সফরমার শুধুমাত্র AC সাপ্লাইতে কাজ করে। DC দিলে ফ্লাক্সের কোনো পরিবর্তন হয় না, তাই EMF আবিষ্ট হয় না। DC দিলে ট্রান্সফরমারের প্রাইমারি পুড়ে যেতে পারে।"
+  },
+  {
+    "id": "tr_q9",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The EMF induced per turn in the primary winding compared to the EMF per turn in the secondary winding is:",
+    "options": [
+      "Greater",
+      "Smaller",
+      "Equal",
+      "Depends on the turns ratio"
+    ],
+    "correct_answer": "Equal",
+    "explanation_bn": "ট্রান্সফরমারে প্রতি টার্নে আবিষ্ট EMF প্রাইমারি ও সেকেন্ডারিতে সমান থাকে (E/N = ধ্রুবক)। তাই টার্ন সংখ্যা বেশি হলে মোট ভোল্টেজ বেশি হয়, কম হলে কম হয়।"
+  },
+  {
+    "id": "tr_q10",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "In an ideal transformer, the primary power is:",
+    "options": [
+      "Greater than secondary power",
+      "Less than secondary power",
+      "Equal to secondary power",
+      "Zero"
+    ],
+    "correct_answer": "Equal to secondary power",
+    "explanation_bn": "আদর্শ ট্রান্সফরমারে কোনো লস নেই, তাই প্রাইমারি পাওয়ার = সেকেন্ডারি পাওয়ার (V1×I1 = V2×I2)। বাস্তব ট্রান্সফরমারে সামান্য লস থাকায় সেকেন্ডারি পাওয়ার কিছুটা কম হয়। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Transformer Losses & Efficiency ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "tr_q11",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The no-load current of a practical transformer is usually about:",
+    "options": [
+      "2% to 5% of full-load current",
+      "15% to 20% of full-load current",
+      "30% to 40% of full-load current",
+      "50% of full-load current"
+    ],
+    "correct_answer": "2% to 5% of full-load current",
+    "explanation_bn": "নো-লোড কারেন্ট সাধারণত ফুল-লোড কারেন্টের ২% থেকে ৫%। এই কারেন্ট দুটি কাজ করে: কোর ম্যাগনেটাইজ করা এবং কোর লস পূরণ করা।"
+  },
+  {
+    "id": "tr_q12",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The power factor of a transformer at no-load condition is:",
+    "options": [
+      "Unity (1)",
+      "Zero",
+      "Around 0.2 lagging",
+      "Around 0.8 leading"
+    ],
+    "correct_answer": "Around 0.2 lagging",
+    "explanation_bn": "নো-লোড অবস্থায় ট্রান্সফরমারের পাওয়ার ফ্যাক্টর প্রায় ০.২ ল্যাগিং। এই অবস্থায় বেশিরভাগ কারেন্টই ম্যাগনেটাইজিং কারেন্ট (রিঅ্যাক্টিভ) এবং সামান্য অংশ কোর লস (অ্যাক্টিভ) মেটায়।"
+  },
+  {
+    "id": "tr_q13",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Which of the following losses is constant in a transformer irrespective of the load?",
+    "options": [
+      "Copper loss",
+      "Iron loss (Core loss)",
+      "Stray loss",
+      "Windage loss"
+    ],
+    "correct_answer": "Iron loss (Core loss)",
+    "explanation_bn": "আয়রন লস বা কোর লস (হিস্টেরেসিস + এডি কারেন্ট লস) সর্বদা স্থির থাকে কারণ এটি সাপ্লাই ভোল্টেজ এবং ফ্রিকোয়েন্সির উপর নির্ভরশীল, লোড কারেন্টের উপর নয়।"
+  },
+  {
+    "id": "tr_q14",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Copper loss in a transformer varies with the:",
+    "options": [
+      "Load voltage",
+      "Square of the load current",
+      "Frequency",
+      "Volume of oil"
+    ],
+    "correct_answer": "Square of the load current",
+    "explanation_bn": "কপার লস = I²R। তাই লোড কারেন্টের বর্গের সাথে পরিবর্তিত হয়। লোড দ্বিগুণ হলে কপার লস চারগুণ হয়। একে ভেরিয়েবল লসও বলা হয়।"
+  },
+  {
+    "id": "tr_q15",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Maximum efficiency of a transformer occurs when:",
+    "options": [
+      "Iron loss is zero",
+      "Copper loss is zero",
+      "Iron loss is equal to copper loss",
+      "Iron loss is half of copper loss"
+    ],
+    "correct_answer": "Iron loss is equal to copper loss",
+    "explanation_bn": "ট্রান্সফরমারের সর্বোচ্চ দক্ষতা তখন হয় যখন স্থির লস (Iron Loss) = পরিবর্তনশীল লস (Copper Loss)। এটি দক্ষতার একটি মৌলিক শর্ত।"
+  },
+  {
+    "id": "tr_q16",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Open circuit (OC) test of a transformer is conducted to determine:",
+    "options": [
+      "Full-load copper loss",
+      "Equivalent resistance",
+      "Iron (Core) loss",
+      "Voltage regulation"
+    ],
+    "correct_answer": "Iron (Core) loss",
+    "explanation_bn": "ওপেন সার্কিট (OC) টেস্টে LV সাইডে রেটেড ভোল্টেজ দিয়ে HV সাইড খোলা রাখা হয়। এতে নো-লোড পাওয়ার পরিমাপ করা যায় যা মূলত আয়রন লস (Core Loss)।"
+  },
+  {
+    "id": "tr_q17",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Short circuit (SC) test of a transformer is conducted to determine:",
+    "options": [
+      "Full-load copper loss",
+      "Iron loss",
+      "Insulation resistance",
+      "Hysteresis loss"
+    ],
+    "correct_answer": "Full-load copper loss",
+    "explanation_bn": "শর্ট সার্কিট (SC) টেস্টে LV সাইড শর্ট করে HV সাইডে রেটেড কারেন্ট পর্যন্ত ভোল্টেজ বাড়ানো হয়। এতে ফুল-লোড কপার লস এবং সমতুল্য ইম্পিডেন্স পরিমাপ করা যায়।"
+  },
+  {
+    "id": "tr_q18",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "During the short circuit test, which winding is usually short-circuited?",
+    "options": [
+      "High Voltage (HV) winding",
+      "Low Voltage (LV) winding",
+      "Both windings",
+      "Neither winding"
+    ],
+    "correct_answer": "Low Voltage (LV) winding",
+    "explanation_bn": "SC টেস্টে LV (Low Voltage) ওয়াইন্ডিং শর্ট করা হয় এবং HV সাইডে সাপ্লাই দেওয়া হয়। LV তে কম ভোল্টেজ তাই শর্ট করা নিরাপদ এবং যন্ত্রপাতির জন্য সহজ।"
+  },
+  {
+    "id": "tr_q19",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "During the open circuit test, the measuring instruments are typically connected to the:",
+    "options": [
+      "High Voltage (HV) side",
+      "Low Voltage (LV) side",
+      "Center tap",
+      "Neutral"
+    ],
+    "correct_answer": "Low Voltage (LV) side",
+    "explanation_bn": "OC টেস্টে LV সাইডে সাপ্লাই দেওয়া হয় এবং যন্ত্রপাতি LV তে সংযুক্ত থাকে। কারণ LV তে কম ভোল্টেজ — নিরাপদ এবং পরিমাপ সহজ। HV সাইড ওপেন রাখা হয়।"
+  },
+  {
+    "id": "tr_q20",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Power transformers are designed to have maximum efficiency at:",
+    "options": [
+      "25% load",
+      "50% load",
+      "Near full load (100%)",
+      "10% load"
+    ],
+    "correct_answer": "Near full load (100%)",
+    "explanation_bn": "পাওয়ার ট্রান্সফরমার সাধারণত পূর্ণ লোড বা তার কাছাকাছিতে কাজ করে। তাই এগুলো ডিজাইন করা হয় ফুল লোডে সর্বোচ্চ দক্ষতা পাওয়ার জন্য।"
+  },
+  {
+    "id": "tr_q21",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Distribution transformers are designed to have maximum efficiency at:",
+    "options": [
+      "Near full load",
+      "50% to 70% of full load",
+      "10% load",
+      "No load"
+    ],
+    "correct_answer": "50% to 70% of full load",
+    "explanation_bn": "ডিস্ট্রিবিউশন ট্রান্সফরমার সারাদিন কম লোডে (৫০%-৭০%) চলে। তাই এগুলো ওই লোড রেঞ্জে সর্বোচ্চ দক্ষতার জন্য ডিজাইন করা হয়। কোর লস কম রেখে এটি অর্জন করা হয়। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Voltage Regulation & Special Transformers ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "tr_q22",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The change in secondary voltage from no-load to full-load, expressed as a percentage of no-load voltage, is called:",
+    "options": [
+      "Efficiency",
+      "Voltage regulation",
+      "Transformation ratio",
+      "Voltage drop"
+    ],
+    "correct_answer": "Voltage regulation",
+    "explanation_bn": "ভোল্টেজ রেগুলেশন = (নো-লোড ভোল্টেজ − ফুল-লোড ভোল্টেজ) / নো-লোড ভোল্টেজ × ১০০%। এটি ট্রান্সফরমারের আউটপুট ভোল্টেজ স্থিতিশীলতার পরিমাপ।"
+  },
+  {
+    "id": "tr_q23",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The ideal voltage regulation of a transformer should be:",
+    "options": [
+      "Infinity",
+      "100%",
+      "50%",
+      "0% (Zero)"
+    ],
+    "correct_answer": "0% (Zero)",
+    "explanation_bn": "আদর্শ ট্রান্সফরমারে ভোল্টেজ রেগুলেশন শূন্য (0%) হওয়া উচিত, অর্থাৎ লোড পরিবর্তনেও আউটপুট ভোল্টেজ স্থির থাকা উচিত।"
+  },
+  {
+    "id": "tr_q24",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Negative voltage regulation in a transformer can only occur at:",
+    "options": [
+      "Unity power factor",
+      "Lagging power factor",
+      "Leading power factor",
+      "Zero power factor lagging"
+    ],
+    "correct_answer": "Leading power factor",
+    "explanation_bn": "লিডিং পাওয়ার ফ্যাক্টর লোডে (ক্যাপাসিটিভ লোড) ফুল-লোড ভোল্টেজ নো-লোড ভোল্টেজের চেয়ে বেশি হতে পারে, তাই ভোল্টেজ রেগুলেশন ঋণাত্মক হয়।"
+  },
+  {
+    "id": "tr_q25",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "An auto-transformer has how many continuous electrical windings?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "correct_answer": "One",
+    "explanation_bn": "অটো-ট্রান্সফরমারে একটিই ওয়াইন্ডিং থাকে যার একটি অংশ প্রাইমারি এবং বাকি অংশ সেকেন্ডারি হিসেবে কাজ করে। দুটি পৃথক ওয়াইন্ডিং নেই।"
+  },
+  {
+    "id": "tr_q26",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Power is transferred in an auto-transformer by:",
+    "options": [
+      "Conduction only",
+      "Induction only",
+      "Both conduction and induction",
+      "Electromagnetic radiation"
+    ],
+    "correct_answer": "Both conduction and induction",
+    "explanation_bn": "অটো-ট্রান্সফরমারে পাওয়ার দুইভাবে স্থানান্তরিত হয়: সরাসরি বৈদ্যুতিক পরিবাহ (Conduction) দ্বারা এবং চৌম্বকীয় আবেশ (Induction) দ্বারা। এটি সাধারণ ট্রান্সফরমার থেকে আলাদা।"
+  },
+  {
+    "id": "tr_q27",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The secondary of a Current Transformer (CT) should never be left:",
+    "options": [
+      "Short-circuited",
+      "Open-circuited",
+      "Grounded",
+      "Loaded"
+    ],
+    "correct_answer": "Open-circuited",
+    "explanation_bn": "CT-এর সেকেন্ডারি কখনো ওপেন রাখা উচিত নয়। ওপেন থাকলে অত্যন্ত উচ্চ ভোল্টেজ তৈরি হয় যা ইনসুলেশন নষ্ট করতে এবং বিস্ফোরণ ঘটাতে পারে। CT সেকেন্ডারি সবসময় শর্ট বা লোড সংযুক্ত রাখতে হয়।"
+  },
+  {
+    "id": "tr_q28",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "A Potential Transformer (PT) is basically a:",
+    "options": [
+      "Step-up transformer",
+      "Step-down transformer",
+      "Isolation transformer",
+      "Auto-transformer"
+    ],
+    "correct_answer": "Step-down transformer",
+    "explanation_bn": "PT (Potential Transformer) বা VT (Voltage Transformer) মূলত একটি স্টেপ-ডাউন ট্রান্সফরমার। এটি উচ্চ ভোল্টেজকে মিটার বা রিলের জন্য নিরাপদ ভোল্টেজে (সাধারণত 110V বা 220V) রূপান্তর করে।"
+  },
+  {
+    "id": "tr_q29",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "A Current Transformer (CT) is connected in the circuit in:",
+    "options": [
+      "Parallel with the load",
+      "Series with the line",
+      "Across the supply voltage",
+      "Series with a capacitor"
+    ],
+    "correct_answer": "Series with the line",
+    "explanation_bn": "CT লাইনের সাথে শ্রেণিতে (Series) সংযুক্ত থাকে, যাতে লাইনের সম্পূর্ণ কারেন্ট CT প্রাইমারির মধ্য দিয়ে যায়। CT সেকেন্ডারিতে সেই কারেন্টের অনুপাতিক একটি নিরাপদ কারেন্ট (সাধারণত 5A বা 1A) পাওয়া যায়।"
+  },
+  {
+    "id": "tr_q30",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "In 3-phase transformers, the capacity of an open-delta (V-V) connection compared to a closed-delta connection is:",
+    "options": [
+      "33.3%",
+      "50%",
+      "57.7%",
+      "86.6%"
+    ],
+    "correct_answer": "57.7%",
+    "explanation_bn": "ওপেন-ডেল্টা (V-V) সংযোগে ডেল্টার একটি ট্রান্সফরমার অনুপস্থিত থাকে। এর ক্যাপাসিটি বন্ধ-ডেল্টার ৫৭.৭% হয় (= 1/√3 × 100%)। জরুরি অবস্থায় একটি ট্রান্সফরমার নষ্ট হলে এই সংযোগে কাজ চালানো যায়। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Parallel Operation & 3-Phase Transformers ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "tr_q31",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The most essential condition for the parallel operation of two single-phase transformers is that they must have the same:",
+    "options": [
+      "Polarity",
+      "kVA rating",
+      "Turn ratio exactly",
+      "Percentage impedance"
+    ],
+    "correct_answer": "Polarity",
+    "explanation_bn": "প্যারালাল অপারেশনের জন্য সবচেয়ে অপরিহার্য শর্ত হলো পোলারিটি একই থাকা। পোলারিটি ভিন্ন হলে দুই ট্রান্সফরমারের ভোল্টেজ বিপরীতমুখী হয় এবং ডেড শর্ট-সার্কিট হয়।"
+  },
+  {
+    "id": "tr_q32",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "If two transformers operating in parallel have different percentage impedances, they will:",
+    "options": [
+      "Not share the load proportionally to their kVA ratings",
+      "Short circuit the system",
+      "Burn out immediately",
+      "Have zero efficiency"
+    ],
+    "correct_answer": "Not share the load proportionally to their kVA ratings",
+    "explanation_bn": "ভিন্ন পার্সেন্টেজ ইম্পিডেন্সের দুটি ট্রান্সফরমার কেভিএ রেটিং অনুপাতে লোড শেয়ার করে না। একটি ওভারলোড হয়ে যেতে পারে।"
+  },
+  {
+    "id": "tr_q33",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Which 3-phase transformer connection is mostly used for step-up purposes at generating stations?",
+    "options": [
+      "Star-Star",
+      "Delta-Delta",
+      "Delta-Star",
+      "Star-Delta"
+    ],
+    "correct_answer": "Star-Delta",
+    "explanation_bn": "জেনারেটিং স্টেশনে স্টেপ-আপের জন্য সাধারণত Star-Delta বা Delta-Star ব্যবহার হয়। জেনারেটর সাইডে স্টার (নিউট্রাল পাওয়ার) এবং ট্রান্সমিশন সাইডে ডেল্টা (উচ্চ ভোল্টেজ) ব্যবহার হয়।"
+  },
+  {
+    "id": "tr_q34",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Which 3-phase connection is universally used for distribution transformers (to supply residential loads)?",
+    "options": [
+      "Star-Star",
+      "Delta-Delta",
+      "Delta-Star",
+      "Star-Delta"
+    ],
+    "correct_answer": "Delta-Star",
+    "explanation_bn": "ডিস্ট্রিবিউশন ট্রান্সফরমারে Delta-Star সংযোগ ব্যবহার হয়। সেকেন্ডারিতে স্টার থাকার ফলে নিউট্রাল পয়েন্ট পাওয়া যায়, যা বাসাবাড়ির সিঙ্গেল ফেজ সাপ্লাই (230V) এবং থ্রি-ফেজ (400V) উভয় সরবরাহের জন্য জরুরি।"
+  },
+  {
+    "id": "tr_q35",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "The rating of a transformer is typically expressed in:",
+    "options": [
+      "kW (Kilowatts)",
+      "kVA (Kilovolt-Amperes)",
+      "kVAR (Kilovolt-Amperes Reactive)",
+      "kWh (Kilowatt-hours)"
+    ],
+    "correct_answer": "kVA (Kilovolt-Amperes)",
+    "explanation_bn": "ট্রান্সফরমারের রেটিং kVA-তে প্রকাশ করা হয় কারণ এর লস (কপার লস) কারেন্টের উপর নির্ভরশীল, পাওয়ার ফ্যাক্টরের উপর নয়। kW ব্যবহার করলে পাওয়ার ফ্যাক্টর উল্লেখ করতে হতো। ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Practical & Power Sector Concepts (BTCL, PGCB, PDB) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  },
+  {
+    "id": "tr_q36",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "সাবস্টেশনে পাওয়ার ট্রান্সফরমারের সুরক্ষার জন্য ব্যবহৃত 'Buchholz Relay' মূলত কী ধরনের রিলে?",
+    "options": [
+      "Thermal relay",
+      "Gas-actuated relay",
+      "Electromagnetic relay",
+      "Static relay"
+    ],
+    "correct_answer": "Gas-actuated relay",
+    "explanation_bn": "বুকহোলজ রিলে একটি গ্যাস-চালিত (Gas-actuated) রিলে। ট্রান্সফরমারের অভ্যন্তরীণ ফল্টে তেল বিচ্ছিন্ন হয়ে গ্যাস তৈরি হলে এই রিলে সক্রিয় হয় এবং অ্যালার্ম বা ট্রিপ সিগন্যাল দেয়।"
+  },
+  {
+    "id": "tr_q37",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "Buchholz Relay কোথায় স্থাপন করা হয়?",
+    "options": [
+      "মেইন ট্যাংক এবং কনজারভেটরের মাঝের পাইপে",
+      "হাই ভোল্টেজ বুশিং-এর উপর",
+      "ট্রান্সফরমারের একদম নিচে",
+      "এলটি (LT) সাইডের লাইনের সাথে"
+    ],
+    "correct_answer": "মেইন ট্যাংক এবং কনজারভেটরের মাঝের পাইপে",
+    "explanation_bn": "বুকহোলজ রিলে মেইন ট্যাংক এবং কনজারভেটর ট্যাংকের মধ্যবর্তী পাইপে স্থাপন করা হয়। ফল্টে তৈরি গ্যাস এই পাইপ দিয়ে যাওয়ার সময় রিলেটি সক্রিয় হয়।"
+  },
+  {
+    "id": "tr_q38",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ট্রান্সফরমার অয়েল (Transformer Oil) মূলত কী কাজ করে?",
+    "options": [
+      "শুধু ইনসুলেশন (Insulation) প্রদান করে",
+      "শুধু কুলিং (Cooling) প্রদান করে",
+      "ইনসুলেশন এবং কুলিং উভয়ের কাজ করে",
+      "ট্রান্সফরমারের ওজন বাড়ায়"
+    ],
+    "correct_answer": "ইনসুলেশন এবং কুলিং উভয়ের কাজ করে",
+    "explanation_bn": "ট্রান্সফরমার তেল দুটি কাজ করে: (১) ওয়াইন্ডিং ও কোরের মধ্যে ইনসুলেশন প্রদান এবং (২) তাপ পরিবাহ করে কুলিং নিশ্চিত করা। তেলের পরিষ্কার ও ভাল ডাইইলেকট্রিক শক্তি বজায় রাখা জরুরি।"
+  },
+  {
+    "id": "tr_q39",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ট্রান্সফরমারের 'Breather' (ব্রিদার) এর প্রধান কাজ কী?",
+    "options": [
+      "তেলকে ঠাণ্ডা করা",
+      "বাইরের বাতাস থেকে আর্দ্রতা (Moisture) শুষে নেওয়া",
+      "তেলের পরিমাণ মাপা",
+      "ভোল্টেজ রেগুলেশন করা"
+    ],
+    "correct_answer": "বাইরের বাতাস থেকে আর্দ্রতা (Moisture) শুষে নেওয়া",
+    "explanation_bn": "ব্রিদার ট্রান্সফরমারে বাইরে থেকে আসা বাতাসের আর্দ্রতা শুষে নেয়। তাপমাত্রা পরিবর্তনে তেলের আয়তন বাড়লে বা কমলে কনজারভেটর থেকে বায়ু আসা-যাওয়া করে এবং ব্রিদার সেই বায়ু শুকিয়ে দেয়।"
+  },
+  {
+    "id": "tr_q40",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ট্রান্সফরমারের ব্রিদারে আর্দ্রতা শোষণের জন্য কোন রাসায়নিক পদার্থ ব্যবহার করা হয়?",
+    "options": [
+      "সোডিয়াম ক্লোরাইড",
+      "ক্যালসিয়াম কার্বনেট",
+      "সিলিকা জেল (Silica gel)",
+      "কপার সালফেট"
+    ],
+    "correct_answer": "সিলিকা জেল (Silica gel)",
+    "explanation_bn": "সিলিকা জেল (Silica Gel) একটি শুষ্ককারক পদার্থ যা বাতাসের আর্দ্রতা শুষে নেয়। এটি ট্রান্সফরমার তেলে আর্দ্রতা প্রবেশ রোধ করে, কারণ আর্দ্রতা তেলের ডাইইলেকট্রিক শক্তি নষ্ট করে।"
+  },
+  {
+    "id": "tr_q41",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ফ্রেশ বা নতুন অবস্থায় সিলিকা জেলের রং কেমন থাকে?",
+    "options": [
+      "গোলাপি (Pink)",
+      "নীল (Blue)",
+      "সাদা (White)",
+      "কালো (Black)"
+    ],
+    "correct_answer": "নীল (Blue)",
+    "explanation_bn": "নতুন/শুকনো সিলিকা জেলের রং নীল (Blue) হয়। নীল রং নির্দেশ করে যে এটি এখনও আর্দ্রতা শোষণে সক্ষম এবং কার্যকর অবস্থায় আছে।"
+  },
+  {
+    "id": "tr_q42",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "আর্দ্রতা (Moisture) শুষে নেওয়ার পর সিলিকা জেলের রং পরিবর্তন হয়ে কেমন হয়?",
+    "options": [
+      "নীল (Blue)",
+      "লাল (Red)",
+      "হালকা গোলাপি (Pale Pink / White)",
+      "সবুজ (Green)"
+    ],
+    "correct_answer": "হালকা গোলাপি (Pale Pink / White)",
+    "explanation_bn": "আর্দ্রতা শুষে নেওয়ার পর সিলিকা জেল হালকা গোলাপি বা সাদাটে হয়ে যায়। এই রং পরিবর্তন দেখলে বোঝা যায় সিলিকা জেল পরিপূর্ণ হয়েছে এবং পুনরায় গরম করে পুনর্ব্যবহারযোগ্য করতে হবে।"
+  },
+  {
+    "id": "tr_q43",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "কনজারভেটর (Conservator) ট্যাংকের প্রধান কাজ কী?",
+    "options": [
+      "শর্ট সার্কিট থেকে রক্ষা করা",
+      "তাপমাত্রার পরিবর্তনে তেলের আয়তন বাড়লে বা কমলে তাকে জায়গা দেওয়া",
+      "ভোল্টেজ কমানো",
+      "ট্রান্সফরমারকে গ্রাউন্ডিং করা"
+    ],
+    "correct_answer": "তাপমাত্রার পরিবর্তনে তেলের আয়তন বাড়লে বা কমলে তাকে জায়গা দেওয়া",
+    "explanation_bn": "কনজারভেটর একটি সিলিন্ডারিক্যাল ট্যাংক যা মেইন ট্যাংকের উপরে থাকে। তাপমাত্রা বাড়লে তেলের আয়তন বাড়ে, কনজারভেটর সেই অতিরিক্ত তেল ধারণ করে। কমলে আবার মেইন ট্যাংকে ফেরত যায়।"
+  },
+  {
+    "id": "tr_q44",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ট্রান্সফরমারের 'Tap Changer' সাধারণত কোন ওয়াইন্ডিং-এর সাথে যুক্ত থাকে?",
+    "options": [
+      "লো-ভোল্টেজ (LV) ওয়াইন্ডিং",
+      "হাই-ভোল্টেজ (HV) ওয়াইন্ডিং",
+      "প্রাইমারি এবং সেকেন্ডারি উভয়ের মাঝে",
+      "কোরের সাথে"
+    ],
+    "correct_answer": "হাই-ভোল্টেজ (HV) ওয়াইন্ডিং",
+    "explanation_bn": "ট্যাপ চেঞ্জার HV (High Voltage) ওয়াইন্ডিং-এ যুক্ত থাকে। HV সাইডে কারেন্ট কম থাকায় ট্যাপ পরিবর্তনের সময় স্পার্কিং কম হয় এবং বেশি সংখ্যক ট্যাপ রাখা যায়।"
+  },
+  {
+    "id": "tr_q45",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "হাই-ভোল্টেজ (HV) ওয়াইন্ডিং-এ ট্যাপ চেঞ্জার যুক্ত করার প্রধান কারণ কী?",
+    "options": [
+      "ভোল্টেজ বেশি থাকে বলে",
+      "ইনসুলেশন কম লাগে বলে",
+      "কারেন্ট কম থাকে, তাই স্পার্কিং কম হয় এবং ট্যাপ বেশি পাওয়া যায়",
+      "এটি দেখতে সুন্দর লাগে"
+    ],
+    "correct_answer": "কারেন্ট কম থাকে, তাই স্পার্কিং কম হয় এবং ট্যাপ বেশি পাওয়া যায়",
+    "explanation_bn": "HV সাইডে কারেন্ট কম (I = P/V) থাকায় ট্যাপ স্যুইচিংয়ের সময় চাপ ও স্পার্কিং কম হয়। এছাড়া HV ওয়াইন্ডিংয়ে টার্ন সংখ্যা বেশি থাকায় বেশি ট্যাপ পজিশন রাখা যায়।"
+  },
+  {
+    "id": "tr_q46",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "পাওয়ার সিস্টেমে OLTC বলতে কী বোঝায়?",
+    "options": [
+      "Over Load Trip Circuit",
+      "On-Load Tap Changer",
+      "Off-Line Testing Cable",
+      "Open Loop Transformer Control"
+    ],
+    "correct_answer": "On-Load Tap Changer",
+    "explanation_bn": "OLTC = On-Load Tap Changer। এটি ট্রান্সফরমার চালু থাকা অবস্থায় (লোড সংযুক্ত রেখে) ভোল্টেজ রেগুলেশনের জন্য ট্যাপ পরিবর্তন করতে পারে। সাবস্টেশনে ভোল্টেজ স্বয়ংক্রিয়ভাবে নিয়ন্ত্রণে এটি ব্যবহৃত হয়।"
+  },
+  {
+    "id": "tr_q47",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ট্রান্সফরমারের বডিতে থাকা 'Explosion Vent' বা প্রেসার রিলিজ ভালভের কাজ কী?",
+    "options": [
+      "তেল ফিল্টার করা",
+      "অতিরিক্ত গ্যাসে সৃষ্ট চাপে ট্রান্সফরমারকে বিস্ফোরণের হাত থেকে রক্ষা করা",
+      "শর্ট সার্কিট কারেন্ট কমানো",
+      "তেলের তাপমাত্রা মাপা"
+    ],
+    "correct_answer": "অতিরিক্ত গ্যাসে সৃষ্ট চাপে ট্রান্সফরমারকে বিস্ফোরণের হাত থেকে রক্ষা করা",
+    "explanation_bn": "বড় ফল্টে ট্রান্সফরমারের অভ্যন্তরে অতিরিক্ত গ্যাস ও চাপ তৈরি হলে এক্সপ্লোশন ভেন্ট (Pressure Relief Valve) সেই চাপ নিরাপদে বাইরে ছেড়ে দেয় — ট্রান্সফরমার ট্যাংক বিস্ফোরণ থেকে রক্ষা পায়।"
+  },
+  {
+    "id": "tr_q48",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "ডিস্ট্রিবিউশন সাবস্টেশনে শর্ট সার্কিট ফল্ট হলে ট্রান্সফরমারের কোন অংশ সবচেয়ে বেশি যান্ত্রিক চাপ সহ্য করে?",
+    "options": [
+      "ট্রান্সফরমার কোর (Core)",
+      "ট্রান্সফরমার ওয়াইন্ডিং (Winding)",
+      "কুলিং ফ্যান",
+      "ব্রিদার"
+    ],
+    "correct_answer": "ট্রান্সফরমার ওয়াইন্ডিং (Winding)",
+    "explanation_bn": "শর্ট সার্কিটে অত্যন্ত বেশি কারেন্ট প্রবাহিত হয়। এই উচ্চ কারেন্ট ও চৌম্বক ক্ষেত্রের মিথস্ক্রিয়ায় ওয়াইন্ডিংয়ে প্রচণ্ড যান্ত্রিক চাপ (Electromagnetic Force) তৈরি হয় যা ওয়াইন্ডিং বিকৃত করতে পারে।"
+  },
+  {
+    "id": "tr_q49",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "কুলিং মেথড হিসেবে 'ONAN' বলতে কী বোঝায়?",
+    "options": [
+      "Oil Natural Air Natural",
+      "Oil Nitrogen Air Natural",
+      "Oil Natural Air None",
+      "Open Natural Air Neutral"
+    ],
+    "correct_answer": "Oil Natural Air Natural",
+    "explanation_bn": "ONAN = Oil Natural Air Natural। তেলের স্বাভাবিক পরিচলন (Natural Convection) এবং বাতাসের স্বাভাবিক পরিচলনে কুলিং হয় — কোনো পাম্প বা ফ্যান নেই। এটি ছোট ট্রান্সফরমারে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "tr_q50",
+    "chapter": 14,
+    "chapter_title": "Transformer",
+    "question": "কোন ধরনের ট্রান্সফরমারে প্রাইমারি ও সেকেন্ডারি ওয়াইন্ডিং এর মধ্যে কোনো ইলেকট্রিক্যাল আইসোলেশন (Electrical Isolation) থাকে না?",
+    "options": [
+      "টু-ওয়াইন্ডিং ট্রান্সফরমার",
+      "আইসোলেশন ট্রান্সফরমার",
+      "কারেন্ট ট্রান্সফরমার",
+      "অটো-ট্রান্সফরমার (Auto-transformer)"
+    ],
+    "correct_answer": "অটো-ট্রান্সফরমার (Auto-transformer)",
+    "explanation_bn": "অটো-ট্রান্সফরমারে একটিই ওয়াইন্ডিং থাকে এবং প্রাইমারি ও সেকেন্ডারি সরাসরি বৈদ্যুতিকভাবে সংযুক্ত। তাই কোনো আইসোলেশন নেই। এটি সস্তা ও হালকা কিন্তু নিরাপত্তার দিক থেকে সীমাবদ্ধতা আছে।"
+  }
+]

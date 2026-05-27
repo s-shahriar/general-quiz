@@ -1,0 +1,3132 @@
+[
+  {
+    "id": "ch28_q1",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The square law modulator consists ___",
+    "options": ["Adder", "Non-linear device", "Bandpass filter", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "স্কোয়ার ল মডুলেটরে তিনটি উপাদান থাকে: অ্যাডার (সংকেত যোগ করে), নন-লিনিয়ার ডিভাইস (স্কোয়ার ল বৈশিষ্ট্য প্রদান করে) এবং ব্যান্ডপাস ফিল্টার (কাঙ্ক্ষিত সাইডব্যান্ড নির্বাচন করে)। তাই সবগুলোই সঠিক।"
+  },
+  {
+    "id": "ch28_q2",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The amplitude modulation is the process in which amplitude of the carrier signal changes with respect to ___ signal",
+    "options": ["Modulating signal", "Carrier signal", "Suppressed carrier modulating signal", "None of the above"],
+    "correct_answer": "Modulating signal",
+    "explanation_bn": "অ্যামপ্লিচুড মডুলেশনে (AM) ক্যারিয়ার সিগনালের অ্যামপ্লিচুড মডুলেটিং সিগনাল (বার্তা সংকেত) অনুযায়ী পরিবর্তিত হয়। ক্যারিয়ারের ফ্রিকোয়েন্সি অপরিবর্তিত থাকে।"
+  },
+  {
+    "id": "ch28_q3",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The full-duplex is a ___ system",
+    "options": ["Unidirectional communication", "Bidirectional communication", "Multidirectional communication", "None of the above"],
+    "correct_answer": "Bidirectional communication",
+    "explanation_bn": "ফুল-ডুপ্লেক্স সিস্টেমে একই সময়ে উভয় দিক থেকে ডেটা আদান-প্রদান করা যায়, তাই এটি দ্বিমুখী (Bidirectional) যোগাযোগ। উদাহরণ: মোবাইল ফোন কল।"
+  },
+  {
+    "id": "ch28_q4",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Why the carrier signal doesn't carry any signal?",
+    "options": ["Frequency is constant", "Phase and amplitude constant", "Amplitude is Constant", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "মডুলেশনের আগে ক্যারিয়ার সিগনালের ফ্রিকোয়েন্সি, ফেজ এবং অ্যামপ্লিচুড সবই স্থির থাকে। এর কোনো পরিবর্তন না হওয়ায় এটি কোনো তথ্য বহন করে না।"
+  },
+  {
+    "id": "ch28_q5",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The standard form of PAM is ___",
+    "options": ["Pulse Amplitude Modulation", "Phase Amplitude Modulation", "Positive Amplitude Modulation", "None of the above"],
+    "correct_answer": "Pulse Amplitude Modulation",
+    "explanation_bn": "PAM এর পূর্ণরূপ হলো Pulse Amplitude Modulation। এটি এমন একটি মডুলেশন পদ্ধতি যেখানে পালসের অ্যামপ্লিচুড মডুলেটিং সিগনাল অনুযায়ী পরিবর্তিত হয়।"
+  },
+  {
+    "id": "ch28_q6",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The half-duplex is a ___ system",
+    "options": ["Unidirectional communication", "Bidirectional communication", "Multidirectional communication", "None of the above"],
+    "correct_answer": "Bidirectional communication",
+    "explanation_bn": "হাফ-ডুপ্লেক্স সিস্টেমে উভয় দিক থেকে যোগাযোগ সম্ভব, তবে একই সময়ে নয়। একবারে শুধুমাত্র একদিকে ডেটা প্রবাহিত হয়। উদাহরণ: ওয়াকি-টকি।"
+  },
+  {
+    "id": "ch28_q7",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The antenna height is equal to ___",
+    "options": ["h=λ/2", "h=λ/8", "h=λ/4", "None of the above"],
+    "correct_answer": "h=λ/4",
+    "explanation_bn": "অ্যান্টেনার উচ্চতা সাধারণত তরঙ্গদৈর্ঘ্যের এক-চতুর্থাংশ (λ/4) হয়। এটি কোয়ার্টার-ওয়েভ মনোপোল অ্যান্টেনা নামে পরিচিত এবং সর্বোচ্চ দক্ষতা প্রদান করে।"
+  },
+  {
+    "id": "ch28_q8",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The advantages of the modulation are ___",
+    "options": ["High energy of carrier", "Noise can be reduced", "Multiplexing is possible", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "মডুলেশনের সুবিধাগুলো হলো: ক্যারিয়ারের উচ্চ শক্তি ব্যবহার, নয়েজ কমানো সম্ভব এবং মাল্টিপ্লেক্সিং করা যায়। তাই সবগুলো সুবিধাই সঠিক।"
+  },
+  {
+    "id": "ch28_q9",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The simplex system is a ___ system",
+    "options": ["Unidirectional communication", "Bidirectional communication", "Multidirectional communication", "None of the above"],
+    "correct_answer": "Unidirectional communication",
+    "explanation_bn": "সিম্পলেক্স সিস্টেমে শুধুমাত্র একদিকে ডেটা প্রবাহিত হয়। প্রেরক থেকে গ্রাহকের দিকে। উদাহরণ: রেডিও ব্রডকাস্ট, টেলিভিশন।"
+  },
+  {
+    "id": "ch28_q10",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How many types of electric communication systems are there?",
+    "options": ["One", "Two", "Three", "Four"],
+    "correct_answer": "Three",
+    "explanation_bn": "বৈদ্যুতিক যোগাযোগ ব্যবস্থা তিন ধরনের: সিম্পলেক্স (একমুখী), হাফ-ডুপ্লেক্স (পর্যায়ক্রমে দ্বিমুখী) এবং ফুল-ডুপ্লেক্স (একযোগে দ্বিমুখী)।"
+  },
+  {
+    "id": "ch28_q11",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Who invented first wireless radio wave over 1700 miles?",
+    "options": ["Armstrong", "Oliver Lodge", "Goglielmo Marconi", "Samuel Morse"],
+    "correct_answer": "Goglielmo Marconi",
+    "explanation_bn": "গুগলিয়েলমো মার্কোনি ১৯০১ সালে প্রথম ১৭০০ মাইলেরও বেশি দূরত্বে (ইংল্যান্ড থেকে কানাডা) বেতার সংকেত পাঠাতে সফল হন। তিনি বেতার যোগাযোগের পথিকৃৎ।"
+  },
+  {
+    "id": "ch28_q12",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "___ is the process in which amplitude of the carrier signal changes with respect to message or modulating signal",
+    "options": ["Pulse modulation", "Angle modulation", "Amplitude modulation", "Frequency modulation"],
+    "correct_answer": "Amplitude modulation",
+    "explanation_bn": "অ্যামপ্লিচুড মডুলেশন (AM) হলো সেই প্রক্রিয়া যেখানে ক্যারিয়ার সিগনালের অ্যামপ্লিচুড বার্তা সংকেতের তীব্রতা অনুযায়ী পরিবর্তিত হয়। AM রেডিও ব্রডকাস্টিংয়ে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q13",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The first wireless communication over short distance discovered by ___",
+    "options": ["Armstrong", "Oliver Lodge", "Goglielmo Marconi", "Samuel Morse"],
+    "correct_answer": "Oliver Lodge",
+    "explanation_bn": "অলিভার লজ ১৮৯৪ সালে প্রথম স্বল্প দূরত্বে বেতার সংকেত পাঠাতে সফল হন। তিনি মার্কোনির আগে বেতার যোগাযোগ প্রদর্শন করেন।"
+  },
+  {
+    "id": "ch28_q14",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The envelope detector is ___",
+    "options": ["Effective for detection of narrow band AM signal", "Simple", "Both a and b", "None of the above"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "এনভেলোপ ডিটেক্টর সংকীর্ণ ব্যান্ড AM সিগনাল সনাক্তে কার্যকর এবং গঠনে সহজ। এটি একটি ডায়োড ও RC সার্কিট দিয়ে তৈরি। তাই উভয় বৈশিষ্ট্যই সঠিক।"
+  },
+  {
+    "id": "ch28_q15",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The number of bits conveyed or processed for unit time is called ___",
+    "options": ["Baud rate", "Bit rate", "ISI", "None of the above"],
+    "correct_answer": "Bit rate",
+    "explanation_bn": "বিট রেট হলো প্রতি সেকেন্ডে কতগুলো বিট পাঠানো বা প্রক্রিয়া করা হয় তার পরিমাপ। এটি bps (bits per second) এ পরিমাপ করা হয়। Baud rate সিম্বল প্রতি সেকেন্ড পরিমাপ করে।"
+  },
+  {
+    "id": "ch28_q16",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Who invented super heterodyne receiver?",
+    "options": ["Armstrong", "Oliver Lodge", "Goglielmo Marconi", "Samuel Morse"],
+    "correct_answer": "Armstrong",
+    "explanation_bn": "এডউইন হাওয়ার্ড আর্মস্ট্রং ১৯১৮ সালে সুপার হেটেরোডাইন রিসিভার আবিষ্কার করেন। এই রিসিভার আধুনিক রেডিও সিস্টেমে ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q17",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In ___ modulation the phase of the carrier signal is modulated by the message signal",
+    "options": ["Pulse modulation", "Phase modulation", "Amplitude modulation", "Frequency modulation"],
+    "correct_answer": "Phase modulation",
+    "explanation_bn": "ফেজ মডুলেশনে (PM) ক্যারিয়ার সিগনালের ফেজ বার্তা সংকেত অনুযায়ী পরিবর্তিত হয়। অ্যামপ্লিচুড এবং ফ্রিকোয়েন্সি অপরিবর্তিত থাকে।"
+  },
+  {
+    "id": "ch28_q18",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Who invented first frequency modulation demodulation?",
+    "options": ["Armstrong", "Oliver Lodge", "Goglielmo Marconi", "Samuel Morse"],
+    "correct_answer": "Armstrong",
+    "explanation_bn": "এডউইন আর্মস্ট্রং ১৯৩৩ সালে FM (ফ্রিকোয়েন্সি মডুলেশন) আবিষ্কার করেন। FM রেডিও AM রেডিওর তুলনায় অনেক বেশি নয়েজ-মুক্ত শব্দ প্রদান করে।"
+  },
+  {
+    "id": "ch28_q19",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In ___ modulation the frequency of the carrier signal is modulated by the message signal",
+    "options": ["Pulse modulation", "Phase modulation", "Amplitude modulation", "Frequency modulation"],
+    "correct_answer": "Frequency modulation",
+    "explanation_bn": "ফ্রিকোয়েন্সি মডুলেশনে (FM) ক্যারিয়ার সিগনালের ফ্রিকোয়েন্সি বার্তা সংকেত অনুযায়ী পরিবর্তিত হয়। অ্যামপ্লিচুড অপরিবর্তিত থাকে। FM রেডিওতে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q20",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Who did PCM encoding of speech signal for digital transmission?",
+    "options": ["Alec Reeves", "Oliver Lodge", "Goglielmo Marconi", "Samuel Morse"],
+    "correct_answer": "Alec Reeves",
+    "explanation_bn": "অ্যালেক রিভস ১৯৩৭ সালে PCM (Pulse Code Modulation) আবিষ্কার করেন যা ডিজিটাল যোগাযোগের ভিত্তি। এটি অ্যানালগ সংকেতকে ডিজিটাল ফর্মে রূপান্তরিত করে।"
+  }
+,
+  {
+    "id": "ch28_q21",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "___ noise is a static kind of noise which is generated due to electric disturbances",
+    "options": ["Atmospheric noise", "Extraterrestrial noise", "Industrial noise", "Shot noise"],
+    "correct_answer": "Industrial noise",
+    "explanation_bn": "ইন্ডাস্ট্রিয়াল নয়েজ বৈদ্যুতিক যন্ত্রপাতি যেমন মোটর, জেনারেটর ইত্যাদির কারণে তৈরি হয়। এটি একটি স্ট্যাটিক ধরনের নয়েজ যা বৈদ্যুতিক ঝামেলার কারণে উৎপন্ন হয়।"
+  },
+  {
+    "id": "ch28_q22",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The industrial noise occurs in the range around ___",
+    "options": ["300MHz-600MHz", "1MHz-600MHz", "200MHz-600MHz", "None of the above"],
+    "correct_answer": "1MHz-600MHz",
+    "explanation_bn": "ইন্ডাস্ট্রিয়াল নয়েজ সাধারণত ১ MHz থেকে ৬০০ MHz ফ্রিকোয়েন্সি পরিসরে দেখা যায়। বৈদ্যুতিক যন্ত্রপাতির কারণে এই পরিসরে নয়েজ তৈরি হয়।"
+  },
+  {
+    "id": "ch28_q23",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The area over which cosmic noise effects most is around ___",
+    "options": ["10MHz-100MHz", "20MHz-120MHz", "20MHz-150MHz", "30MHz-120MHz"],
+    "correct_answer": "20MHz-120MHz",
+    "explanation_bn": "কসমিক নয়েজ (মহাজাগতিক নয়েজ) সবচেয়ে বেশি প্রভাব ফেলে ২০ MHz থেকে ১২০ MHz ফ্রিকোয়েন্সি পরিসরে। এটি মহাকাশ থেকে আসা বিকিরণের কারণে হয়।"
+  },
+  {
+    "id": "ch28_q24",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the external noise?",
+    "options": ["Atmospheric noise", "Extraterrestrial noise", "Industrial noise", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "বাহ্যিক নয়েজ তিন ধরনের: অ্যাটমোস্ফেরিক নয়েজ (বজ্রপাত ইত্যাদি), এক্সট্রাটেরেস্ট্রিয়াল নয়েজ (মহাকাশ থেকে) এবং ইন্ডাস্ট্রিয়াল নয়েজ (যন্ত্রপাতি থেকে)। সবগুলোই বাহ্যিক নয়েজ।"
+  },
+  {
+    "id": "ch28_q25",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The double side band suppressed carrier comes under ___ modulation",
+    "options": ["Frequency modulation", "Analog pulse modulation", "Amplitude modulation", "Digital pulse modulation"],
+    "correct_answer": "Amplitude modulation",
+    "explanation_bn": "DSBSC (Double Sideband Suppressed Carrier) অ্যামপ্লিচুড মডুলেশনের একটি বিশেষ রূপ যেখানে ক্যারিয়ারকে দমন করা হয় এবং শুধু দুটি সাইডব্যান্ড প্রেরণ করা হয়।"
+  },
+  {
+    "id": "ch28_q26",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In baseband signal the audio frequency signal range is around ___",
+    "options": ["0-20 KHz", "10-20 KHz", "5-10 KHz", "0-20 MHz"],
+    "correct_answer": "0-20 KHz",
+    "explanation_bn": "বেসব্যান্ড সিগনালে অডিও ফ্রিকোয়েন্সির পরিসর ০ থেকে ২০ KHz। মানুষের শ্রবণযোগ্য শব্দের পরিসরও ২০ Hz থেকে ২০ KHz, তাই অডিও সিগনাল এই পরিসরে থাকে।"
+  },
+  {
+    "id": "ch28_q27",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the noises comes under internal noise ___",
+    "options": ["Atmospheric noise, extraterrestrial noise", "Resistor, shot, and transient noise", "Industrial, miscellaneous noise", "None of the above"],
+    "correct_answer": "Resistor, shot, and transient noise",
+    "explanation_bn": "অভ্যন্তরীণ নয়েজের মধ্যে আছে রেজিস্টর নয়েজ (তাপীয় নয়েজ), শট নয়েজ (ইলেকট্রন প্রবাহের কারণে) এবং ট্রানজিয়েন্ট নয়েজ। এগুলো ডিভাইসের ভেতর থেকেই উৎপন্ন হয়।"
+  },
+  {
+    "id": "ch28_q28",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In synchronous detector ___ errors are generated",
+    "options": ["Phase type error", "Frequency type error", "Both a and b", "None of the above"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "সিনক্রোনাস ডিটেক্টরে ফেজ টাইপ এরর এবং ফ্রিকোয়েন্সি টাইপ এরর উভয়ই তৈরি হতে পারে। এটি এনভেলোপ ডিটেক্টরের তুলনায় বেশি জটিল।"
+  },
+  {
+    "id": "ch28_q29",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "___ type of errors are generated in envelope detector",
+    "options": ["Phase type error", "Negative clipping", "Diagonal envelope", "Both b and c"],
+    "correct_answer": "Both b and c",
+    "explanation_bn": "এনভেলোপ ডিটেক্টরে নেগেটিভ ক্লিপিং এবং ডায়াগোনাল এনভেলোপ উভয় ধরনের ত্রুটি হতে পারে। এগুলো অতিরিক্ত মডুলেশন বা RC সময় ধ্রুবকের ভুল মানের কারণে ঘটে।"
+  },
+  {
+    "id": "ch28_q30",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The complexity is ___ in synchronous detection",
+    "options": ["High", "Low", "Medium", "Simple"],
+    "correct_answer": "High",
+    "explanation_bn": "সিনক্রোনাস ডিটেকশন পদ্ধতিতে রিসিভারে একটি স্থানীয় ক্যারিয়ার জেনারেটর এবং ফেজ লকড লুপ দরকার হয়, তাই এর জটিলতা বেশি। তবে এটি ভালো পারফরম্যান্স দেয়।"
+  },
+  {
+    "id": "ch28_q31",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In base band signal the frequency range of amplitude modulation is around ___",
+    "options": ["550KHz-1650KHz", "500KHz-1600KHz", "520 KHz-1620KHz", "400 KHz-1650KHz"],
+    "correct_answer": "550KHz-1650KHz",
+    "explanation_bn": "AM রেডিও সম্প্রচারের জন্য বেসব্যান্ড সিগনালে AM এর ফ্রিকোয়েন্সি পরিসর ৫৫০ KHz থেকে ১৬৫০ KHz। এটি মিডিয়াম ওয়েভ (MW) ব্যান্ড নামে পরিচিত।"
+  },
+  {
+    "id": "ch28_q32",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In envelope detection the complexity is ___",
+    "options": ["High", "Low", "Medium", "Simple"],
+    "correct_answer": "Simple",
+    "explanation_bn": "এনভেলোপ ডিটেকশন পদ্ধতি অত্যন্ত সহজ। এটি শুধুমাত্র একটি ডায়োড এবং RC ফিল্টার দিয়ে তৈরি করা যায়। সিনক্রোনাস ডিটেকশনের তুলনায় এটি অনেক সরল।"
+  },
+  {
+    "id": "ch28_q33",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The side band cancellation in filter method is done by using ___",
+    "options": ["Filter", "Phase shifter of 90 deg", "Phase shifter of 180 deg", "None of the above"],
+    "correct_answer": "Filter",
+    "explanation_bn": "ফিল্টার মেথডে SSB (Single Sideband) তৈরিতে একটি সাইডব্যান্ড বাতিল করতে ব্যান্ডপাস ফিল্টার ব্যবহার করা হয়। ফিল্টারটি কাঙ্ক্ষিত সাইডব্যান্ড রেখে অন্যটি বাতিল করে।"
+  },
+  {
+    "id": "ch28_q34",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The frequency range of modulating signal in narrow band frequency modulation is between ___",
+    "options": ["30 Hz - 15 KHz", "15 Hz - 30 KHz", "30 Hz - 3 KHz", "3 Hz - 15 KHz"],
+    "correct_answer": "30 Hz - 3 KHz",
+    "explanation_bn": "ন্যারো ব্যান্ড FM (NBFM)-এ মডুলেটিং সিগনালের ফ্রিকোয়েন্সি পরিসর ৩০ Hz থেকে ৩ KHz। এটি সাধারণত ভয়েস যোগাযোগে ব্যবহৃত হয় যেখানে বেশি ব্যান্ডউইথ দরকার নেই।"
+  },
+  {
+    "id": "ch28_q35",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When negative changes is happening to AF voltage the junction capacitance will actually ___ in varactor diode modulator",
+    "options": ["Reduces", "Increases", "Remains same", "None of the above"],
+    "correct_answer": "Increases",
+    "explanation_bn": "ভ্যারেক্টর ডায়োড মডুলেটরে AF ভোল্টেজ নেগেটিভ হলে রিভার্স বায়াস বাড়ে, যার ফলে জংশন ক্যাপাসিট্যান্স বৃদ্ধি পায়। এই পরিবর্তনই FM সিগনাল তৈরি করে।"
+  },
+  {
+    "id": "ch28_q36",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How much is the frequency band in GSM?",
+    "options": ["500 MHz", "600 MHz", "700 MHz", "900 MHz"],
+    "correct_answer": "900 MHz",
+    "explanation_bn": "GSM (Global System for Mobile Communications) মূলত ৯০০ MHz ফ্রিকোয়েন্সি ব্যান্ডে কাজ করে। পরবর্তীতে ১৮০০ MHz এবং ১৯০০ MHz ব্যান্ডও যোগ করা হয়।"
+  },
+  {
+    "id": "ch28_q37",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In base band signal the video frequency signal range is around ___",
+    "options": ["0-50MHz", "0-55MHz", "0-60MHz", "10-55MHz"],
+    "correct_answer": "0-55MHz",
+    "explanation_bn": "বেসব্যান্ড সিগনালে ভিডিও ফ্রিকোয়েন্সির পরিসর ০ থেকে ৫৫ MHz। টেলিভিশন সম্প্রচারে ভিডিও সিগনাল এই ব্যান্ডউইথে থাকে।"
+  },
+  {
+    "id": "ch28_q38",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In pass band signal, the frequency range of frequency modulation is around ___",
+    "options": ["88 MHz-100MHz", "88 MHz-110MHz", "88 MHz-200MHz", "88 MHz-101MHz"],
+    "correct_answer": "88 MHz-100MHz",
+    "explanation_bn": "পাসব্যান্ড সিগনালে FM রেডিও ব্রডকাস্টিংয়ের ফ্রিকোয়েন্সি পরিসর ৮৮ MHz থেকে ১০৮ MHz (আন্তর্জাতিক মান)। বইয়ে ৮৮-১০০ MHz উল্লেখ আছে।"
+  },
+  {
+    "id": "ch28_q39",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The frequency band range of Code Division Multiplexing Access in pass band signal is around ___",
+    "options": ["1500MHz", "1600MHz", "1700MHz", "1800MHz"],
+    "correct_answer": "1800MHz",
+    "explanation_bn": "CDMA পাসব্যান্ড সিগনালের ফ্রিকোয়েন্সি পরিসর প্রায় ১৮০০ MHz। এই ব্যান্ডে CDMA প্রযুক্তি মোবাইল যোগাযোগে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q40",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In medium modulating index the modulation index is ___",
+    "options": ["Less than one", "One to ten", "Between 1 to 10", "Greater than ten"],
+    "correct_answer": "Between 1 to 10",
+    "explanation_bn": "মিডিয়াম মডুলেটিং ইনডেক্সে মডুলেশন ইনডেক্সের মান ১ থেকে ১০ এর মধ্যে থাকে। লোয়ার ইনডেক্সে ১ এর নিচে এবং হায়ার ইনডেক্সে ১০ এর উপরে থাকে।"
+  }
+,
+  {
+    "id": "ch28_q41",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The side band cancellation in phase shift method is done by using ___",
+    "options": ["Selectivity", "Fidelity", "Sensitivity", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "ফেজ শিফট মেথডে সাইডব্যান্ড বাতিল করতে সিলেক্টিভিটি, ফিডেলিটি এবং সেনসিটিভিটি সবই গুরুত্বপূর্ণ। এই পদ্ধতিতে ৯০ ডিগ্রি ফেজ শিফট ব্যবহার করে অবাঞ্ছিত সাইডব্যান্ড বাতিল করা হয়।"
+  },
+  {
+    "id": "ch28_q43",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In super heterodyne receiver, at high frequency the ___",
+    "options": ["Bandwidth is low", "Signal processing should be done", "Signal transmission should be done", "Both b and c"],
+    "correct_answer": "Both b and c",
+    "explanation_bn": "সুপার হেটেরোডাইন রিসিভারে উচ্চ ফ্রিকোয়েন্সিতে সিগনাল প্রসেসিং এবং সিগনাল ট্রান্সমিশন উভয়ই করতে হয়। এই রিসিভার IF (Intermediate Frequency)-এ ডাউন-কনভার্ট করে প্রসেস করে।"
+  },
+  {
+    "id": "ch28_q44",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The maximum deviation in narrow band frequency modulation is around ___",
+    "options": ["5 MHz", "5 KHz", "7 MHz", "9 MHz"],
+    "correct_answer": "5 KHz",
+    "explanation_bn": "ন্যারো ব্যান্ড FM (NBFM)-এ সর্বোচ্চ ফ্রিকোয়েন্সি ডেভিয়েশন ৫ KHz। এর ফলে ব্যান্ডউইথ কম থাকে এবং ভয়েস কমিউনিকেশনে ব্যবহার উপযোগী।"
+  },
+  {
+    "id": "ch28_q45",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When several signals are multiplexed in a frequency domain then the modulation is called ___",
+    "options": ["Frequency Division Multiplexing", "Time Division Multiplexing", "Code Division Multiplexing", "Space Division Multiplexing"],
+    "correct_answer": "Frequency Division Multiplexing",
+    "explanation_bn": "FDM (Frequency Division Multiplexing)-এ একাধিক সিগনাল আলাদা ফ্রিকোয়েন্সি ব্যান্ডে একই সময়ে পাঠানো হয়। প্রতিটি সিগনাল আলাদা ফ্রিকোয়েন্সি চ্যানেলে থাকে।"
+  },
+  {
+    "id": "ch28_q46",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When figure of merit is less than one, the output of signal to noise ratio is ___ the input of signal to noise ratio",
+    "options": ["Less than input SNR", "Greater than input SNR", "Greater than or equal to input SNR", "Less than or equal to SNR input"],
+    "correct_answer": "Less than input SNR",
+    "explanation_bn": "যখন Figure of Merit (FOM) ১ এর কম হয়, তখন আউটপুট SNR ইনপুট SNR এর চেয়ে কম হয়। FOM = (আউটপুট SNR) / (ইনপুট SNR), তাই FOM < 1 মানে আউটপুট SNR কম।"
+  },
+  {
+    "id": "ch28_q47",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The levels in differential pulse code modulation are ___",
+    "options": ["More", "Depends on number of bits", "Less", "None of the above"],
+    "correct_answer": "Less",
+    "explanation_bn": "DPCM (Differential PCM)-এ কোয়ান্টাইজেশন লেভেল PCM এর চেয়ে কম। কারণ DPCM পূর্ববর্তী এবং বর্তমান নমুনার পার্থক্য এনকোড করে, যা ছোট মান হওয়ায় কম লেভেল প্রয়োজন।"
+  },
+  {
+    "id": "ch28_q48",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "___ quantizer minimizes the quantization error",
+    "options": ["Uniform quantizer", "Non-Uniform quantizer", "LLOYD-Max quantizer", "None of the above"],
+    "correct_answer": "LLOYD-Max quantizer",
+    "explanation_bn": "LLOYD-Max কোয়ান্টাইজার অপ্টিমাল কোয়ান্টাইজেশন লেভেল এবং থ্রেশহোল্ড ব্যবহার করে কোয়ান্টাইজেশন এরর সর্বনিম্ন করে। এটি সংকেতের পরিসংখ্যানগত বৈশিষ্ট্য অনুযায়ী কাজ করে।"
+  },
+  {
+    "id": "ch28_q49",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The quantization error can be defined as ___",
+    "options": ["q=Q(m)+m", "q=Q(m)-m", "q=Q(m)/m", "None of the above"],
+    "correct_answer": "q=Q(m)-m",
+    "explanation_bn": "কোয়ান্টাইজেশন এরর হলো কোয়ান্টাইজড মান Q(m) এবং মূল নমুনা m এর পার্থক্য: q = Q(m) - m। এই এরর কমানোই কোয়ান্টাইজেশন ডিজাইনের মূল লক্ষ্য।"
+  },
+  {
+    "id": "ch28_q50",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the advantages of the angle modulation over amplitude modulation?",
+    "options": ["Noise reduction", "Improved system fidelity", "Efficient use of power", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "অ্যাঙ্গেল মডুলেশন (FM/PM) এর সুবিধা: নয়েজ কমানো, সিস্টেম ফিডেলিটি উন্নত এবং পাওয়ার দক্ষ ব্যবহার। AM এর তুলনায় FM অনেক বেশি নয়েজ-প্রতিরোধী।"
+  },
+  {
+    "id": "ch28_q51",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the applications of Angle modulation?",
+    "options": ["Radio broadcasting", "TV sound transmission", "Cellular radio", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "অ্যাঙ্গেল মডুলেশন (FM/PM) রেডিও ব্রডকাস্টিং, টিভি সাউন্ড ট্রান্সমিশন এবং সেলুলার রেডিওতে ব্যবহৃত হয়। FM এর উন্নত নয়েজ পারফরম্যান্সের কারণে এসব অ্যাপ্লিকেশনে এটি পছন্দনীয়।"
+  },
+  {
+    "id": "ch28_q52",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How many categories does the modulation index have?",
+    "options": ["One", "Two", "Three", "Four"],
+    "correct_answer": "Three",
+    "explanation_bn": "মডুলেশন ইনডেক্স তিনটি বিভাগে ভাগ: লোয়ার (১ এর নিচে), মিডিয়াম (১ থেকে ১০) এবং হায়ার (১০ এর উপরে)। প্রতিটি বিভাগে FM সিগনালের বৈশিষ্ট্য আলাদা।"
+  },
+  {
+    "id": "ch28_q53",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In lower modulating index the modulation index is ___",
+    "options": ["Less than one", "One to ten", "Greater than ten", "None of the above"],
+    "correct_answer": "Less than one",
+    "explanation_bn": "লোয়ার মডুলেটিং ইনডেক্সে মডুলেশন ইনডেক্সের মান ১ এর কম। এটি ন্যারো ব্যান্ড FM এর বৈশিষ্ট্য এবং কম ব্যান্ডউইথ ব্যবহার করে।"
+  },
+  {
+    "id": "ch28_q54",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In a higher modulating index the modulation index is ___",
+    "options": ["Less than one", "One to ten", "Greater than ten", "None of the above"],
+    "correct_answer": "Greater than ten",
+    "explanation_bn": "হায়ার মডুলেটিং ইনডেক্সে মডুলেশন ইনডেক্সের মান ১০ এর বেশি। এটি ওয়াইডব্যান্ড FM (WBFM) এর বৈশিষ্ট্য এবং বেশি ব্যান্ডউইথ ব্যবহার করে কিন্তু ভালো নয়েজ পারফরম্যান্স দেয়।"
+  },
+  {
+    "id": "ch28_q55",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When several signals are multiplexed in a time domain then the modulation is called ___",
+    "options": ["Frequency Division Multiplexing", "Time Division Multiplexing", "Code Division Multiplexing", "Space Division Multiplexing"],
+    "correct_answer": "Time Division Multiplexing",
+    "explanation_bn": "TDM (Time Division Multiplexing)-এ একাধিক সিগনাল একই চ্যানেলে আলাদা সময়স্লটে পাঠানো হয়। ডিজিটাল যোগাযোগে TDM ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q56",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which noise comes under internal noise?",
+    "options": ["Resistor noise", "Transient noise", "Shot noise", "All of the above"],
+    "correct_answer": "All of the above",
+    "explanation_bn": "অভ্যন্তরীণ নয়েজে রেজিস্টর নয়েজ (তাপীয়), ট্রানজিয়েন্ট নয়েজ এবং শট নয়েজ সবই অন্তর্ভুক্ত। এগুলো ইলেকট্রনিক উপাদানের মধ্যেই তৈরি হয়।"
+  },
+  {
+    "id": "ch28_q57",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The SNR in delta modulation is ___",
+    "options": ["Fair", "Poor", "Good", "None of the above"],
+    "correct_answer": "Poor",
+    "explanation_bn": "ডেল্টা মডুলেশনে SNR (Signal to Noise Ratio) দুর্বল (Poor)। কারণ এটি শুধুমাত্র ১ বিট এনকোড করে এবং স্লোপ ওভারলোড ও গ্র্যানুলার নয়েজের সমস্যা আছে।"
+  },
+  {
+    "id": "ch28_q58",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The quantization is a many to one mapping, in which all sample values in a particular interval are mapped to a ___",
+    "options": ["Quantization level", "Uniform quantization", "Non-uniform quantization", "None of the above"],
+    "correct_answer": "Quantization level",
+    "explanation_bn": "কোয়ান্টাইজেশনে একটি নির্দিষ্ট ব্যবধানের মধ্যে সকল নমুনা মানকে একটি একক কোয়ান্টাইজেশন লেভেলে ম্যাপ করা হয়। এটিই many-to-one ম্যাপিং এর অর্থ।"
+  },
+  {
+    "id": "ch28_q59",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In ___ modulation, frequency or phase of carrier signal changes with respect to modulating signal",
+    "options": ["Frequency Modulation", "Amplitude Modulation", "Delta Modulation", "Angle modulation"],
+    "correct_answer": "Angle modulation",
+    "explanation_bn": "অ্যাঙ্গেল মডুলেশন হলো সেই প্রক্রিয়া যেখানে ক্যারিয়ার সিগনালের ফ্রিকোয়েন্সি বা ফেজ মডুলেটিং সিগনাল অনুযায়ী পরিবর্তিত হয়। FM এবং PM উভয়ই অ্যাঙ্গেল মডুলেশনের অন্তর্গত।"
+  },
+  {
+    "id": "ch28_q60",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The maximum deviation in wideband frequency modulation is around ___",
+    "options": ["75 MHz", "75 kHz", "70 MHz", "90 MHz"],
+    "correct_answer": "75 kHz",
+    "explanation_bn": "ওয়াইডব্যান্ড FM (WBFM)-এ সর্বোচ্চ ফ্রিকোয়েন্সি ডেভিয়েশন ৭৫ KHz। FM রেডিও ব্রডকাস্টিং স্ট্যান্ডার্ড অনুযায়ী এই মান নির্ধারিত।"
+  }
+,
+  {
+    "id": "ch28_q61",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The frequency range of modulating signal in wideband frequency modulation is between ___",
+    "options": ["30 Hz - 15 kHz", "15 Hz - 30 kHz", "30 Hz - 10 kHz", "3 Hz - 15 kHz"],
+    "correct_answer": "30 Hz - 15 kHz",
+    "explanation_bn": "ওয়াইডব্যান্ড FM (WBFM)-এ মডুলেটিং সিগনালের ফ্রিকোয়েন্সি পরিসর ৩০ Hz থেকে ১৫ KHz। FM রেডিও স্টেরিও সম্প্রচারে এই পুরো অডিও ব্যান্ড ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q62",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The SSB frequency range is ___ in filter method",
+    "options": ["Frequency is high", "Frequency is low", "Applicable for any frequency", "None of the above"],
+    "correct_answer": "Frequency is high",
+    "explanation_bn": "ফিল্টার মেথডে SSB তৈরিতে উচ্চ ফ্রিকোয়েন্সি ব্যবহার করা হয়। কারণ উচ্চ ফ্রিকোয়েন্সিতে দুটি সাইডব্যান্ডের মধ্যে আলাদা করার জন্য ভালো ফিল্টার ডিজাইন করা সহজ।"
+  },
+  {
+    "id": "ch28_q63",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The bandwidth for transmission in pulse code modulation is ___",
+    "options": ["Higher than the DPCM", "Lower than the DPCM", "Equal to DPCM", "None of the above"],
+    "correct_answer": "Higher than the DPCM",
+    "explanation_bn": "PCM এ DPCM এর তুলনায় বেশি ব্যান্ডউইথ দরকার। DPCM শুধু পার্থক্য এনকোড করে কম বিট ব্যবহার করে, তাই DPCM এর ব্যান্ডউইথ কম।"
+  },
+  {
+    "id": "ch28_q64",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The formula of amplifier is given by ___",
+    "options": ["F+1/F", "2F-1/F", "F-1/F", "None of the above"],
+    "correct_answer": "F-1/F",
+    "explanation_bn": "অ্যামপ্লিফায়ারের নয়েজ ফিগার ফর্মুলা F-1/F দিয়ে প্রকাশ করা হয়, যেখানে F হলো নয়েজ ফিগার। এই ফর্মুলা ক্যাসকেড অ্যামপ্লিফায়ার ডিজাইনে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q65",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When the figure of merit is greater than one, the output of a signal to noise ratio is ___ the input of a signal to noise ratio",
+    "options": ["Less than input SNR", "Greater than input SNR", "Greater than or equal to input SNR", "Less than or equal to SNR input"],
+    "correct_answer": "Greater than or equal to input SNR",
+    "explanation_bn": "যখন Figure of Merit ১ এর বেশি বা সমান হয়, তখন আউটপুট SNR ইনপুট SNR এর চেয়ে বেশি বা সমান। এটি সিস্টেমের ভালো পারফরম্যান্সের ইঙ্গিত দেয়।"
+  },
+  {
+    "id": "ch28_q66",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "___ is a differential modulation",
+    "options": ["Frequency Modulation", "Amplitude Modulation", "Delta Modulation", "None of the above"],
+    "correct_answer": "Delta Modulation",
+    "explanation_bn": "ডেল্টা মডুলেশন একটি ডিফারেনশিয়াল মডুলেশন পদ্ধতি যেখানে ক্রমাগত নমুনার পার্থক্য এনকোড করা হয়। প্রতিটি নমুনা মাত্র ১ বিট দিয়ে প্রকাশ করা হয়।"
+  },
+  {
+    "id": "ch28_q67",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The additive white Gaussian noise ___",
+    "options": ["Requires infinite power", "Requires finite power", "Doesn't require power", "None of the above"],
+    "correct_answer": "Requires infinite power",
+    "explanation_bn": "AWGN (Additive White Gaussian Noise) তাত্ত্বিকভাবে অসীম শক্তি প্রয়োজন কারণ এটি সকল ফ্রিকোয়েন্সিতে সমান শক্তি ঘনত্ব রাখে। বাস্তবে এটি একটি গাণিতিক মডেল।"
+  },
+  {
+    "id": "ch28_q68",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The thermal noise ___",
+    "options": ["Requires infinite power", "Requires finite power", "Doesn't require power", "None of the above"],
+    "correct_answer": "Requires finite power",
+    "explanation_bn": "তাপীয় নয়েজ (Thermal Noise) সীমিত শক্তি প্রয়োজন এবং তাপমাত্রার উপর নির্ভরশীল। এটি রেজিস্টরে ইলেকট্রনের তাপীয় আলোড়নের কারণে তৈরি হয়।"
+  },
+  {
+    "id": "ch28_q69",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The number of bits in DPCM is ___",
+    "options": ["Greater than PCM", "Less than PCM", "Equal to PCM", "None of the above"],
+    "correct_answer": "Less than PCM",
+    "explanation_bn": "DPCM এ PCM এর চেয়ে কম বিট ব্যবহার হয়। DPCM পার্থক্য এনকোড করে, এবং পার্থক্যের মান সাধারণত মূল মানের চেয়ে ছোট হওয়ায় কম বিট লাগে।"
+  },
+  {
+    "id": "ch28_q70",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The levels in PCM are ___",
+    "options": ["More", "Depends on the number of bits", "Less", "None of the above"],
+    "correct_answer": "Depends on the number of bits",
+    "explanation_bn": "PCM এ কোয়ান্টাইজেশন লেভেলের সংখ্যা বিটের উপর নির্ভর করে: L = 2^n, যেখানে n হলো বিট সংখ্যা। যত বেশি বিট, তত বেশি লেভেল এবং তত ভালো মান।"
+  },
+  {
+    "id": "ch28_q71",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In which case the step size is not fixed?",
+    "options": ["Pulse Code Modulation", "Delta Modulation", "Differential Pulse Code Modulation", "Adaptive Delta Modulation"],
+    "correct_answer": "Adaptive Delta Modulation",
+    "explanation_bn": "অ্যাডাপ্টিভ ডেল্টা মডুলেশন (ADM)-এ স্টেপ সাইজ স্থির নয়। সিগনালের বৈশিষ্ট্য অনুযায়ী স্টেপ সাইজ পরিবর্তিত হয়, যা স্লোপ ওভারলোড এবং গ্র্যানুলার নয়েজ কমায়।"
+  },
+  {
+    "id": "ch28_q72",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The bandwidth for transmission in differential pulse code modulation is ___",
+    "options": ["Higher than the PCM", "Lower than the PCM", "Equal to PCM", "None of the above"],
+    "correct_answer": "Lower than the PCM",
+    "explanation_bn": "DPCM এর ব্যান্ডউইথ PCM এর চেয়ে কম। DPCM নমুনার পার্থক্য এনকোড করায় কম বিট দরকার, ফলে ব্যান্ডউইথও কম লাগে।"
+  },
+  {
+    "id": "ch28_q73",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "When positive changes are happening to AF voltage the junction capacitance will actually ___ in varactor diode modulator",
+    "options": ["Reduces", "Increases", "Remains the same", "None of the above"],
+    "correct_answer": "Reduces",
+    "explanation_bn": "ভ্যারেক্টর ডায়োড মডুলেটরে AF ভোল্টেজ পজিটিভ হলে রিভার্স বায়াস কমে, যার ফলে জংশন ক্যাপাসিট্যান্স হ্রাস পায়। এই পরিবর্তনই FM সিগনাল তৈরি করে।"
+  },
+  {
+    "id": "ch28_q74",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The quantization error in PCM is ___",
+    "options": ["Depends upon the levels", "Doesn't depend upon the levels", "Depends upon the step size", "None of the above"],
+    "correct_answer": "Depends upon the levels",
+    "explanation_bn": "PCM এর কোয়ান্টাইজেশন এরর কোয়ান্টাইজেশন লেভেলের উপর নির্ভর করে। বেশি লেভেল মানে ছোট স্টেপ সাইজ, ফলে কোয়ান্টাইজেশন এরর কম হয়।"
+  },
+  {
+    "id": "ch28_q75",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The SNR in PCM is ___",
+    "options": ["Fair", "Poor", "Good", "None of the above"],
+    "correct_answer": "Good",
+    "explanation_bn": "PCM এর SNR ভালো (Good)। বেশি বিট ব্যবহার করে কোয়ান্টাইজেশন লেভেল বাড়ালে SNR আরও উন্নত হয়। PCM ডিজিটাল টেলিফোনিতে ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q76",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In a uniform quantizer with an even number of quantization levels, the quantizer characteristics arise from ___",
+    "options": ["-Λ to +Λ", "-Λ/2 to +Λ/2", "-Λ/4 to +Λ/4", "None of the above"],
+    "correct_answer": "-Λ/2 to +Λ/2",
+    "explanation_bn": "সম সংখ্যক কোয়ান্টাইজেশন লেভেলযুক্ত ইউনিফর্ম কোয়ান্টাইজারে ইনপুট পরিসর -Λ/2 থেকে +Λ/2 পর্যন্ত। এই পরিসরের বাইরের মান স্যাচুরেট হয়।"
+  },
+  {
+    "id": "ch28_q77",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The SNR in adaptive delta modulation is ___",
+    "options": ["Fair", "Poor", "Good", "Better than DM"],
+    "correct_answer": "Better than DM",
+    "explanation_bn": "অ্যাডাপ্টিভ ডেল্টা মডুলেশনের SNR সাধারণ ডেল্টা মডুলেশনের চেয়ে ভালো। স্টেপ সাইজ অ্যাডাপ্ট করার ক্ষমতা স্লোপ ওভারলোড এবং গ্র্যানুলার নয়েজ উভয়ই কমায়।"
+  },
+  {
+    "id": "ch28_q78",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The quantization error in DPCM is ___",
+    "options": ["Quantization is present", "Quantization is not present", "Quantization is present but less than PCM", "None of the above"],
+    "correct_answer": "Quantization is present but less than PCM",
+    "explanation_bn": "DPCM এ কোয়ান্টাইজেশন এরর থাকে কিন্তু PCM এর তুলনায় কম। কারণ DPCM ছোট পার্থক্য এনকোড করে, যার ফলে কোয়ান্টাইজেশন ত্রুটি কম হয়।"
+  },
+  {
+    "id": "ch28_q79",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Analog communication uses ___ types of signals.",
+    "options": ["Continuous", "Discontinuous", "Both a and b", "None of the above"],
+    "correct_answer": "Continuous",
+    "explanation_bn": "অ্যানালগ যোগাযোগ ক্রমাগত (Continuous) সিগনাল ব্যবহার করে যা সময় এবং মানের দিক থেকে অবিচ্ছিন্ন। ডিজিটাল যোগাযোগের বিপরীতে এটি বিচ্ছিন্ন মান ব্যবহার করে না।"
+  },
+  {
+    "id": "ch28_q80",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In which technique data is transmitted using continuous signals?",
+    "options": ["Analog communication", "Digital communication", "Both a and b", "None of the above"],
+    "correct_answer": "Analog communication",
+    "explanation_bn": "অ্যানালগ যোগাযোগে ডেটা ক্রমাগত (Continuous) সিগনাল ব্যবহার করে পাঠানো হয়। ডিজিটাল যোগাযোগ বিচ্ছিন্ন (Discrete) সিগনাল ব্যবহার করে।"
+  }
+,
+  {
+    "id": "ch28_q81",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "An analog signal is ___ signal continuous in both time and amplitude.",
+    "options": ["Variable signal", "Invariable signal", "Both a and b", "None of the above"],
+    "correct_answer": "Variable signal",
+    "explanation_bn": "অ্যানালগ সিগনাল একটি ভেরিয়েবল সিগনাল যা সময় এবং মান উভয় দিক থেকেই ক্রমাগত পরিবর্তনশীল। এটি যেকোনো মান নিতে পারে, যা ডিজিটাল সিগনালের মতো নির্দিষ্ট মানে সীমাবদ্ধ নয়।"
+  },
+  {
+    "id": "ch28_q82",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In which technique physical transfer of data over a point to point or point to multi-point transmission medium is done?",
+    "options": ["Analog communication", "Digital communication", "Both a and b", "None of the above"],
+    "correct_answer": "Digital communication",
+    "explanation_bn": "ডিজিটাল যোগাযোগে পয়েন্ট-টু-পয়েন্ট বা পয়েন্ট-টু-মাল্টিপয়েন্ট মাধ্যমে ডেটার ভৌত স্থানান্তর হয়। ডিজিটাল ডেটা নেটওয়ার্কিং এই নীতিতে কাজ করে।"
+  },
+  {
+    "id": "ch28_q83",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following are the examples of analog communication technology?",
+    "options": ["Photocopiers", "Audio tapes", "Emails", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "ফটোকপিয়ার এবং অডিও টেপ অ্যানালগ যোগাযোগ প্রযুক্তির উদাহরণ। ইমেইল ডিজিটাল প্রযুক্তি। অ্যানালগ প্রযুক্তি ক্রমাগত সিগনাল ব্যবহার করে তথ্য সংরক্ষণ ও প্রেরণ করে।"
+  },
+  {
+    "id": "ch28_q84",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following are the examples of digital communication technology?",
+    "options": ["Photocopiers", "Audio tapes", "Emails", "Both a and b"],
+    "correct_answer": "Emails",
+    "explanation_bn": "ইমেইল ডিজিটাল যোগাযোগ প্রযুক্তির উদাহরণ। ফটোকপিয়ার এবং অডিও টেপ অ্যানালগ প্রযুক্তি। ডিজিটাল যোগাযোগ বাইনারি (0 এবং 1) সংকেত ব্যবহার করে।"
+  },
+  {
+    "id": "ch28_q85",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Digital communication is represented in ___ form.",
+    "options": ["0's", "1's", "Both a and b", "Option an alone"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "ডিজিটাল যোগাযোগ ০ এবং ১ উভয় বাইনারি সংখ্যা দিয়ে প্রকাশ করা হয়। এই দুটি মান মিলে ডিজিটাল সিগনাল গঠন করে যা তড়িৎ সংকেতে Low এবং High ভোল্টেজ প্রতিনিধিত্ব করে।"
+  },
+  {
+    "id": "ch28_q86",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "An analog signal is represented in ___ form.",
+    "options": ["Time domain", "Frequency domain", "Both a and b", "None of the above"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অ্যানালগ সিগনাল টাইম ডোমেইন (সময়ের সাথে মান) এবং ফ্রিকোয়েন্সি ডোমেইন (ফ্রিকোয়েন্সির সাথে মান) উভয়ভাবে প্রকাশ করা যায়। ফুরিয়ার ট্রান্সফর্ম দিয়ে এই রূপান্তর হয়।"
+  },
+  {
+    "id": "ch28_q87",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the serious issue in analog communication compared to digital communication?",
+    "options": ["Has noise", "Free from noise", "Has maximum amplitude", "Has the maximum frequency"],
+    "correct_answer": "Has noise",
+    "explanation_bn": "অ্যানালগ যোগাযোগের সবচেয়ে বড় সমস্যা হলো নয়েজ। ডিজিটাল যোগাযোগের বিপরীতে অ্যানালগ সিগনাল নয়েজ দ্বারা সহজে প্রভাবিত হয় এবং পুনরায় তৈরি করা কঠিন।"
+  },
+  {
+    "id": "ch28_q88",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In analog communication electronic noise and disturbance is introduced into transmission channel results in ___.",
+    "options": ["Reduces signal to noise ratio", "Increases signal to noise ratio", "Improves signals amplitude", "None of the above"],
+    "correct_answer": "Reduces signal to noise ratio",
+    "explanation_bn": "ট্রান্সমিশন চ্যানেলে নয়েজ এবং ডিস্টার্বেন্স প্রবেশ করলে সিগনাল-টু-নয়েজ রেশিও (SNR) কমে যায়। SNR কমলে সিগনালের মান খারাপ হয় এবং তথ্যের বিকৃতি ঘটে।"
+  },
+  {
+    "id": "ch28_q89",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Analog communication contains ___ number of components.",
+    "options": ["4", "5", "6", "3"],
+    "correct_answer": "6",
+    "explanation_bn": "অ্যানালগ যোগাযোগ সিস্টেমে ৬টি উপাদান থাকে: তথ্য উৎস, ট্রান্সডুসার, ট্রান্সমিটার, চ্যানেল, রিসিভার এবং গন্তব্য। প্রতিটি উপাদান যোগাযোগ প্রক্রিয়ায় গুরুত্বপূর্ণ ভূমিকা রাখে।"
+  },
+  {
+    "id": "ch28_q90",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the function of an information source?",
+    "options": ["Information is generated", "Information is sent", "Information is received", "Information is read"],
+    "correct_answer": "Information is generated",
+    "explanation_bn": "তথ্য উৎস (Information Source) তথ্য তৈরি করে। এটি যোগাযোগ সিস্টেমের প্রথম উপাদান। এখান থেকেই বার্তা বা তথ্য উৎপন্ন হয় এবং পাঠানোর প্রক্রিয়া শুরু হয়।"
+  },
+  {
+    "id": "ch28_q91",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Messages generated in an input source block of analog communication can be in which form?",
+    "options": ["Words, group of words", "Symbols", "Signals", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "অ্যানালগ যোগাযোগের ইনপুট সোর্স থেকে বার্তা শব্দ, প্রতীক বা সংকেত যেকোনো রূপে হতে পারে। ভয়েস, টেক্সট, ইমেজ সবই বিভিন্ন রূপের তথ্য।"
+  },
+  {
+    "id": "ch28_q92",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the function of a transducer?",
+    "options": ["Converts energy from one form to another", "Converts signals", "Converts domains", "None of the above"],
+    "correct_answer": "Converts energy from one form to another",
+    "explanation_bn": "ট্রান্সডুসার এক ধরনের শক্তিকে অন্য ধরনে রূপান্তরিত করে। উদাহরণ: মাইক্রোফোন শব্দ শক্তিকে বৈদ্যুতিক শক্তিতে রূপান্তরিত করে।"
+  },
+  {
+    "id": "ch28_q93",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Radio broadcasting converts ___ into ___ using transducer.",
+    "options": ["Nonelectrical, electrical", "Electrical, nonelectrical", "Electrical, electrical", "Nonelectrical, nonelectrical"],
+    "correct_answer": "Nonelectrical, electrical",
+    "explanation_bn": "রেডিও সম্প্রচারে ট্রান্সডুসার (মাইক্রোফোন) শব্দ তরঙ্গ (অ-বৈদ্যুতিক) কে বৈদ্যুতিক সিগনালে রূপান্তরিত করে। এরপর এই বৈদ্যুতিক সিগনাল মডুলেট করে পাঠানো হয়।"
+  },
+  {
+    "id": "ch28_q94",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the function of the transmitter?",
+    "options": ["Transmits signal to the receiver", "Accepts signal from the transducer", "Accepts input from information source", "Transmits signal over a channel."],
+    "correct_answer": "Transmits signal over a channel.",
+    "explanation_bn": "ট্রান্সমিটারের কাজ হলো সিগনাল মডুলেট করে চ্যানেলের মাধ্যমে পাঠানো। এটি ট্রান্সডুসার থেকে সিগনাল নিয়ে প্রসেস করে এবং চ্যানেলে প্রেরণ করে।"
+  },
+  {
+    "id": "ch28_q95",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which technique is used in the transmitter?",
+    "options": ["Modulation", "Demodulation", "Both a and b", "None of the above"],
+    "correct_answer": "Modulation",
+    "explanation_bn": "ট্রান্সমিটারে মডুলেশন প্রযুক্তি ব্যবহার করা হয়। মডুলেশন প্রক্রিয়ায় বার্তা সিগনালকে ক্যারিয়ার সিগনালের সাথে মিলিয়ে প্রেরণের উপযোগী করা হয়।"
+  },
+  {
+    "id": "ch28_q96",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the functionality of a channel?",
+    "options": ["It transmits a message from the transmitter to the receiver", "It listens to message", "It holds a message", "All the above"],
+    "correct_answer": "It transmits a message from the transmitter to the receiver",
+    "explanation_bn": "চ্যানেলের কাজ হলো ট্রান্সমিটার থেকে রিসিভারে বার্তা পৌঁছানো। চ্যানেল হতে পারে তামার তার, অপটিক্যাল ফাইবার বা বায়ুমণ্ডল।"
+  },
+  {
+    "id": "ch28_q97",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How many types of channels are used in analog communication components?",
+    "options": ["Two", "One", "Three", "Four"],
+    "correct_answer": "Two",
+    "explanation_bn": "অ্যানালগ যোগাযোগে দুই ধরনের চ্যানেল ব্যবহার হয়: পয়েন্ট-টু-পয়েন্ট চ্যানেল (তারযুক্ত) এবং ব্রডকাস্ট চ্যানেল (বেতার)। প্রতিটি আলাদা উদ্দেশ্যে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q98",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following channels are used in analog communication?",
+    "options": ["Point to point", "Broadcast channel", "Narrowband channel", "Wideband channel", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অ্যানালগ যোগাযোগে পয়েন্ট-টু-পয়েন্ট চ্যানেল (টেলিফোন লাইন) এবং ব্রডকাস্ট চ্যানেল (রেডিও/টিভি) উভয়ই ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q99",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following are examples of point to point channel?",
+    "options": ["Wire lines", "Microwave links", "Optical fibers", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "পয়েন্ট-টু-পয়েন্ট চ্যানেলের উদাহরণ: তামার তার, মাইক্রোওয়েভ লিংক এবং অপটিক্যাল ফাইবার। এগুলো নির্দিষ্ট দুটি বিন্দুর মধ্যে যোগাযোগ করে।"
+  },
+  {
+    "id": "ch28_q100",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the functionality of the broadcast channel?",
+    "options": ["It handles several incoming messages from a transmitter", "It holds single information", "It listens to channel", "None of the above"],
+    "correct_answer": "It handles several incoming messages from a transmitter",
+    "explanation_bn": "ব্রডকাস্ট চ্যানেল একটি ট্রান্সমিটার থেকে একাধিক রিসিভারে একসাথে বার্তা পাঠাতে পারে। রেডিও এবং টেলিভিশন সম্প্রচার এই নীতিতে কাজ করে।"
+  }
+,
+  {
+    "id": "ch28_q101",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the functionality of the receiver?",
+    "options": ["It produces an electric message from the received signal in a distorted form", "It receives the input from the channel", "Both a and b", "None of the above"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "রিসিভার চ্যানেল থেকে সিগনাল গ্রহণ করে এবং বিকৃত সিগনাল থেকে বৈদ্যুতিক বার্তা পুনরুদ্ধার করে। ডিমডুলেশন প্রক্রিয়ায় মূল বার্তা উদ্ধার করা হয়।"
+  },
+  {
+    "id": "ch28_q102",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which technique is performed in the receiver?",
+    "options": ["Modulation", "Demodulation", "Both a and b", "None of the above"],
+    "correct_answer": "Demodulation",
+    "explanation_bn": "রিসিভারে ডিমডুলেশন প্রক্রিয়া সম্পন্ন হয়। ডিমডুলেশনে মডুলেটেড সিগনাল থেকে মূল বার্তা সিগনাল পুনরুদ্ধার করা হয়।"
+  },
+  {
+    "id": "ch28_q103",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the functionality of the destination?",
+    "options": ["Converts electrical signal into the original input", "Converts original input to electrical form", "Receives input from the receiver", "Option a, b, d are considered"],
+    "correct_answer": "Option a, b, d are considered",
+    "explanation_bn": "গন্তব্য (Destination) হলো অ্যানালগ যোগাযোগের চূড়ান্ত পর্যায়। এটি বৈদ্যুতিক সিগনালকে মূল রূপে ফেরায়, রিসিভার থেকে ইনপুট নেয় এবং অ্যানালগ যোগাযোগের শেষ ধাপ।"
+  },
+  {
+    "id": "ch28_q104",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "A periodic signal is of ___ pattern with respect to time.",
+    "options": ["Repetitive", "Nonrepetitive", "Alternative", "None of the above"],
+    "correct_answer": "Repetitive",
+    "explanation_bn": "পর্যায়ক্রমিক (Periodic) সিগনাল সময়ের সাথে পুনরাবৃত্তিমূলক প্যাটার্ন অনুসরণ করে। একটি নির্দিষ্ট সময়কাল (Period) পরপর একই প্যাটার্ন পুনরায় দেখা যায়।"
+  },
+  {
+    "id": "ch28_q105",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "An aperiodic signal is of ___ pattern with to time.",
+    "options": ["Repetitive", "Nonrepetitive", "Alternative", "None of the above"],
+    "correct_answer": "Nonrepetitive",
+    "explanation_bn": "অপর্যায়ক্রমিক (Aperiodic) সিগনাল সময়ের সাথে পুনরাবৃত্তিহীন প্যাটার্ন অনুসরণ করে। এটি কোনো নির্দিষ্ট সময়কালে পুনরাবৃত্তি হয় না।"
+  },
+  {
+    "id": "ch28_q106",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What happens to the message if the message signal characteristic is changed?",
+    "options": ["Message gets altered", "Message remains same", "Message is not transmitted", "None of the above"],
+    "correct_answer": "Message gets altered",
+    "explanation_bn": "বার্তা সিগনালের বৈশিষ্ট্য পরিবর্তিত হলে বার্তাও পরিবর্তিত হয়। যোগাযোগ সিস্টেমে নয়েজ বা ডিস্টোর্শনের কারণে সিগনালের বৈশিষ্ট্য বদলে যায় এবং তথ্যের বিকৃতি ঘটে।"
+  },
+  {
+    "id": "ch28_q107",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "A ___ frequency signal can carry a message over a long distance.",
+    "options": ["Short frequency", "High frequency", "Low frequency", "Big frequency"],
+    "correct_answer": "High frequency",
+    "explanation_bn": "উচ্চ ফ্রিকোয়েন্সি সিগনাল দীর্ঘ দূরত্বে বার্তা বহন করতে পারে। উচ্চ ফ্রিকোয়েন্সি তরঙ্গ কম শক্তি হারিয়ে দূরে যেতে পারে এবং অ্যান্টেনা থেকে সহজে বিকিরণ হয়।"
+  },
+  {
+    "id": "ch28_q108",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "A high frequency signal is also called as ___ signal.",
+    "options": ["Carrier signal", "UV signal", "Radio signal", "None of the above"],
+    "correct_answer": "Carrier signal",
+    "explanation_bn": "উচ্চ ফ্রিকোয়েন্সি সিগনালকে ক্যারিয়ার সিগনাল বলে। এই সিগনাল বার্তা সিগনাল বহন করে দূরে পৌঁছে দেয়। মডুলেশনের মাধ্যমে বার্তা ক্যারিয়ারের সাথে মিশ্রিত হয়।"
+  },
+  {
+    "id": "ch28_q109",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "In digital communication does antenna size reduces in modulation technique?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "ডিজিটাল যোগাযোগে মডুলেশন পদ্ধতি ব্যবহার করলে অ্যান্টেনার আকার কমে। মডুলেশনের মাধ্যমে উচ্চ ফ্রিকোয়েন্সি ব্যবহার করা হয় যা ছোট অ্যান্টেনায় কার্যকরভাবে বিকিরণ করা যায়।"
+  },
+  {
+    "id": "ch28_q110",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the types of signals used in the modulation?",
+    "options": ["Carrier signal", "Modulated signal", "Modulating or message signal", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মডুলেশনে তিন ধরনের সিগনাল ব্যবহার হয়: ক্যারিয়ার সিগনাল (উচ্চ ফ্রিকোয়েন্সি), মডুলেটিং সিগনাল (বার্তা) এবং মডুলেটেড সিগনাল (আউটপুট)। তাই সবগুলো সঠিক।"
+  },
+  {
+    "id": "ch28_q111",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following modulation technique is used for analog modulation?",
+    "options": ["Continuous wave modulation", "Pulse modulation", "Both a and b", "None of the above"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অ্যানালগ মডুলেশনে কন্টিনিউয়াস ওয়েভ মডুলেশন (AM, FM, PM) এবং পালস মডুলেশন (PAM, PWM, PPM) উভয়ই ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch28_q112",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following comes under continuous wave modulation?",
+    "options": ["Amplitude modulation", "Angle modulation", "Analog modulation", "Digital modulation", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "কন্টিনিউয়াস ওয়েভ মডুলেশনের মধ্যে আছে অ্যামপ্লিচুড মডুলেশন (AM) এবং অ্যাঙ্গেল মডুলেশন (FM ও PM)। এগুলো ক্রমাগত সাইনুসয়েডাল ক্যারিয়ার ব্যবহার করে।"
+  },
+  {
+    "id": "ch28_q113",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following is angle modulation?",
+    "options": ["Pulse amplitude modulation", "Pulse width modulation", "Phase modulation", "Frequency modulation", "Both c and d"],
+    "correct_answer": "Both c and d",
+    "explanation_bn": "অ্যাঙ্গেল মডুলেশনের দুটি রূপ: ফেজ মডুলেশন (PM) এবং ফ্রিকোয়েন্সি মডুলেশন (FM)। উভয়ক্ষেত্রেই ক্যারিয়ারের কোণ (ফেজ বা ফ্রিকোয়েন্সি) পরিবর্তিত হয়।"
+  },
+  {
+    "id": "ch28_q114",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following is pulse modulation?",
+    "options": ["Analog modulation", "Frequency modulation", "Digital modulation", "Both a and c"],
+    "correct_answer": "Both a and c",
+    "explanation_bn": "পালস মডুলেশনে অ্যানালগ (PAM, PWM, PPM) এবং ডিজিটাল (PCM, DM) উভয় ধরনের পদ্ধতি অন্তর্ভুক্ত। এটি পালস সিকোয়েন্স ব্যবহার করে তথ্য প্রেরণ করে।"
+  },
+  {
+    "id": "ch28_q115",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following is an analog modulation?",
+    "options": ["Pulse type amplitude modulation PAM", "Pulse type width modulation PWM", "Pulse type position modulation PPM", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "PAM (পালস অ্যামপ্লিচুড মডুলেশন), PWM (পালস উইডথ মডুলেশন) এবং PPM (পালস পজিশন মডুলেশন) সবই অ্যানালগ পালস মডুলেশন পদ্ধতি।"
+  },
+  {
+    "id": "ch28_q116",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following is a digital modulation?",
+    "options": ["Pulse code modulation", "Delta modulation", "Frequency modulation", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "PCM (Pulse Code Modulation) এবং ডেল্টা মডুলেশন উভয়ই ডিজিটাল মডুলেশন পদ্ধতি। এগুলো অ্যানালগ সিগনালকে ডিজিটাল বিট স্ট্রিমে রূপান্তরিত করে।"
+  },
+  {
+    "id": "ch28_q117",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How many types of modulators are present in double side band suppressed carrier?",
+    "options": ["One", "Two", "Three", "Four"],
+    "correct_answer": "Two",
+    "explanation_bn": "DSBSC তৈরিতে দুই ধরনের মডুলেটর ব্যবহার হয়: ব্যালান্সড মডুলেটর এবং রিং মডুলেটর। উভয়ই ক্যারিয়ারকে দমন করে শুধু দুটি সাইডব্যান্ড তৈরি করে।"
+  },
+  {
+    "id": "ch28_q118",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What are the components in a balanced modulator?",
+    "options": ["AM type modulator two in number", "A Local oscillator", "Summer", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "ব্যালান্সড মডুলেটরে থাকে: দুটি AM মডুলেটর, একটি লোকাল অসিলেটর এবং একটি সামার (যোগকারী)। এই উপাদানগুলো একসাথে DSBSC সিগনাল তৈরি করে।"
+  },
+  {
+    "id": "ch28_q119",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "A ring modulator contains how many diodes?",
+    "options": ["2", "3", "4", "5"],
+    "correct_answer": "4",
+    "explanation_bn": "রিং মডুলেটরে ৪টি ডায়োড থাকে যেগুলো রিং আকারে সংযুক্ত থাকে। এই ৪টি ডায়োডের সুইচিং ক্রিয়া DSBSC সিগনাল তৈরি করে এবং ক্যারিয়ার দমন করে।"
+  },
+  {
+    "id": "ch28_q120",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "DSBSC modulators are also called as ___",
+    "options": ["Product type modulators", "Adder modulator", "Summer modulator", "None of the above"],
+    "correct_answer": "Product type modulators",
+    "explanation_bn": "DSBSC মডুলেটরকে প্রোডাক্ট মডুলেটর বলা হয় কারণ আউটপুট সিগনাল হলো ক্যারিয়ার এবং মডুলেটিং সিগনালের গুণফল। s(t) = m(t) × c(t) এই সম্পর্ক দিয়ে প্রকাশ করা হয়।"
+  }
+,
+  {
+    "id": "ch28_q121",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Pulse modulation is ___ sequence of rectangular pulse.",
+    "options": ["Periodic sequence", "Aperiodic sequence", "Nonrepetitive sequence", "Both b and c"],
+    "correct_answer": "Periodic sequence",
+    "explanation_bn": "পালস মডুলেশন আয়তক্ষেত্রাকার পালসের পর্যায়ক্রমিক (Periodic) সিকোয়েন্স ব্যবহার করে। একটি নির্দিষ্ট সময়ের ব্যবধানে পালসগুলো পুনরাবৃত্তি হয়।"
+  },
+  {
+    "id": "ch28_q122",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following statement is true for pulse amplitude modulation PAM?",
+    "options": ["The pulse amplitude is varied with respect to instantaneous values of baseband modulating signal", "The pulse width is varied with respect to instantaneous values of baseband modulating signal", "The pulse position is varied with respect to instantaneous values of baseband modulating signal", "The pulse duration is varied with respect to instantaneous values of baseband modulating signal"],
+    "correct_answer": "The pulse amplitude is varied with respect to instantaneous values of baseband modulating signal",
+    "explanation_bn": "PAM (Pulse Amplitude Modulation)-এ পালসের অ্যামপ্লিচুড বেসব্যান্ড মডুলেটিং সিগনালের তাৎক্ষণিক মান অনুযায়ী পরিবর্তিত হয়। পালসের প্রস্থ এবং অবস্থান অপরিবর্তিত থাকে।"
+  },
+  {
+    "id": "ch28_q123",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following statement is true for pulse width modulation?",
+    "options": ["The pulse amplitude is varied with respect to instantaneous values of baseband modulating signal", "The pulse width is varied with respect to instantaneous values of baseband modulating signal", "The pulse position is varied with respect to instantaneous values of baseband modulating signal", "The pulse duration is varied with respect to instantaneous values of baseband modulating signal"],
+    "correct_answer": "The pulse duration is varied with respect to instantaneous values of baseband modulating signal",
+    "explanation_bn": "PWM (Pulse Width Modulation)-এ পালসের সময়কাল বা প্রস্থ বেসব্যান্ড মডুলেটিং সিগনালের তাৎক্ষণিক মান অনুযায়ী পরিবর্তিত হয়। পালসের অ্যামপ্লিচুড এবং অবস্থান অপরিবর্তিত থাকে।"
+  },
+  {
+    "id": "ch28_q124",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following statement is true for pulse position modulation?",
+    "options": ["The pulse amplitude is varied with respect to instantaneous values of baseband modulating signal", "The pulse width is varied with respect to instantaneous values of baseband modulating signal", "The pulse position is varied with respect to instantaneous values of baseband modulating signal", "The pulse duration is varied with respect to instantaneous values of baseband modulating signal"],
+    "correct_answer": "The pulse position is varied with respect to instantaneous values of baseband modulating signal",
+    "explanation_bn": "PPM (Pulse Position Modulation)-এ পালসের অবস্থান বেসব্যান্ড মডুলেটিং সিগনালের তাৎক্ষণিক মান অনুযায়ী পরিবর্তিত হয়। পালসের অ্যামপ্লিচুড এবং প্রস্থ অপরিবর্তিত থাকে।"
+  },
+  {
+    "id": "ch28_q125",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Message signal in the time domain is represented as ___.",
+    "options": ["m(t)= Amcos(2πfmt)", "M(t) = A cos (2π fm t)", "M(t) = A cos (2π f t)", "m(t) = Am cos (2π f t)"],
+    "correct_answer": "m(t)= Amcos(2πfmt)",
+    "explanation_bn": "বার্তা সিগনাল টাইম ডোমেইনে m(t) = Am·cos(2πfmt) দিয়ে প্রকাশ করা হয়, যেখানে Am হলো অ্যামপ্লিচুড এবং fm হলো মডুলেটিং ফ্রিকোয়েন্সি।"
+  },
+  {
+    "id": "ch28_q126",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Carrier signal in time domain is represented as ___.",
+    "options": ["c(t) = Ac cos (2π fc t)", "c(t) = Ac cos (2π t)", "c(t) = Ac cos (π fc t)", "C(t) = Ac cos (2π fc t)"],
+    "correct_answer": "c(t) = Ac cos (2π fc t)",
+    "explanation_bn": "ক্যারিয়ার সিগনাল টাইম ডোমেইনে c(t) = Ac·cos(2πfct) দিয়ে প্রকাশ করা হয়, যেখানে Ac হলো ক্যারিয়ার অ্যামপ্লিচুড এবং fc হলো ক্যারিয়ার ফ্রিকোয়েন্সি।"
+  },
+  {
+    "id": "ch28_q127",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the formula for modulation index \"μ\" when amplitudes of modulating signal \"Am\" and carrier signal \"Ac\" is known?",
+    "options": ["μ = Am / Ac", "μ = Ac / Am", "μ = Am", "μ = Ac"],
+    "correct_answer": "μ = Am / Ac",
+    "explanation_bn": "মডুলেশন ইনডেক্স μ = Am/Ac, যেখানে Am হলো মডুলেটিং সিগনালের অ্যামপ্লিচুড এবং Ac হলো ক্যারিয়ার অ্যামপ্লিচুড। μ ≤ 1 হলে সঠিক মডুলেশন।"
+  },
+  {
+    "id": "ch28_q128",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the condition for perfect modulation?",
+    "options": ["μ = 1", "μ = 0", "μ < 1", "μ > 1"],
+    "correct_answer": "μ = 1",
+    "explanation_bn": "পারফেক্ট মডুলেশনের শর্ত হলো μ = 1 (100% মডুলেশন)। এই অবস্থায় ক্যারিয়ার সম্পূর্ণরূপে মডুলেটিং সিগনাল দ্বারা পরিবর্তিত হয় এবং কোনো ডিস্টোর্শন ছাড়াই সংকেত পাঠানো যায়।"
+  },
+  {
+    "id": "ch28_q129",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "How many types of demodulators are present in a DSBSC wave?",
+    "options": ["One", "Two", "Three", "Four"],
+    "correct_answer": "Two",
+    "explanation_bn": "DSBSC ডিমডুলেশনে দুই ধরনের ডিমডুলেটর ব্যবহার হয়: সিনক্রোনাস ডিটেক্টর এবং কোহেরেন্ট ডিটেক্টর। উভয়ই ক্যারিয়ার পুনরুদ্ধারের উপর নির্ভর করে।"
+  },
+  {
+    "id": "ch28_q130",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "If the maximum frequency is subtracted from lower frequency it is called ___.",
+    "options": ["Amplitude", "Bandwidth", "Frequency", "Time period"],
+    "correct_answer": "Bandwidth",
+    "explanation_bn": "ব্যান্ডউইথ হলো সর্বোচ্চ এবং সর্বনিম্ন ফ্রিকোয়েন্সির পার্থক্য: BW = fmax - fmin। এটি একটি যোগাযোগ চ্যানেলের তথ্য বহন ক্ষমতা প্রকাশ করে।"
+  },
+  {
+    "id": "ch28_q131",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the bandwidth of AM wave?",
+    "options": ["BW = 2fm", "BW = fm", "BW = 2", "BW = 3"],
+    "correct_answer": "BW = 2fm",
+    "explanation_bn": "AM তরঙ্গের ব্যান্ডউইথ BW = 2fm, যেখানে fm হলো মডুলেটিং সিগনালের সর্বোচ্চ ফ্রিকোয়েন্সি। AM এ দুটি সাইডব্যান্ড থাকে (USB এবং LSB) তাই ব্যান্ডউইথ 2fm।"
+  },
+  {
+    "id": "ch28_q132",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which type of modulators are used in AM wave generation?",
+    "options": ["Square law modulator", "Switching modulator", "Triangular modulator", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "AM তরঙ্গ তৈরিতে স্কোয়ার ল মডুলেটর এবং সুইচিং মডুলেটর উভয়ই ব্যবহৃত হয়। স্কোয়ার ল ডিভাইসের অ-রৈখিক বৈশিষ্ট্য AM সিগনাল তৈরি করে।"
+  },
+  {
+    "id": "ch28_q133",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following are the components of square law modulator?",
+    "options": ["Summer", "Square law device", "Bandpass filter", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "স্কোয়ার ল মডুলেটরের উপাদান: সামার (সংকেত যোগ), স্কোয়ার ল ডিভাইস (অ-রৈখিক বৈশিষ্ট্য) এবং ব্যান্ডপাস ফিল্টার (কাঙ্ক্ষিত ব্যান্ড নির্বাচন)।"
+  },
+  {
+    "id": "ch28_q134",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Which of the following are the components of the switching modulator?",
+    "options": ["Summer", "Switching diode", "Bandpass filter", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "সুইচিং মডুলেটরের উপাদান: সামার, সুইচিং ডায়োড (অন/অফ সুইচ হিসেবে কাজ করে) এবং ব্যান্ডপাস ফিল্টার। ডায়োডের সুইচিং ক্রিয়া AM সিগনাল তৈরি করে।"
+  },
+  {
+    "id": "ch28_q135",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "The process of extracting the original message from the signal is called ___.",
+    "options": ["Modulation", "Demodulation", "Encryption", "Decryption"],
+    "correct_answer": "Demodulation",
+    "explanation_bn": "ডিমডুলেশন হলো মডুলেটেড সিগনাল থেকে মূল বার্তা সংকেত পুনরুদ্ধার করার প্রক্রিয়া। রিসিভারে এই প্রক্রিয়া সম্পন্ন হয়।"
+  },
+  {
+    "id": "ch28_q136",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "Demodulation is done at ___ side.",
+    "options": ["Transmitter", "Receiver", "Channel", "Both a and b"],
+    "correct_answer": "Receiver",
+    "explanation_bn": "ডিমডুলেশন রিসিভার প্রান্তে করা হয়। ট্রান্সমিটারে মডুলেশন এবং রিসিভারে ডিমডুলেশন হয়। এই দুটি বিপরীত প্রক্রিয়া যোগাযোগ সম্পন্ন করে।"
+  },
+  {
+    "id": "ch28_q137",
+    "chapter": 28,
+    "chapter_title": "Analog Communication",
+    "question": "What is the functionality of the envelope detector?",
+    "options": ["It detects AM wave with high frequency", "It detects FM wave high frequency", "It detects PM wave high frequency", "None of the above"],
+    "correct_answer": "It detects AM wave with high frequency",
+    "explanation_bn": "এনভেলোপ ডিটেক্টর উচ্চ ফ্রিকোয়েন্সি AM তরঙ্গ সনাক্ত করে। এটি AM সিগনালের এনভেলোপ (বাইরের আকৃতি) অনুসরণ করে মূল বার্তা সংকেত উদ্ধার করে।"
+  }
+,
+  {
+    "id": "ch29_q1",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile communication network is also called as ___ network.",
+    "options": ["Cellular network", "Mobile network", "2G network", "Both a and b"],
+    "correct_answer": "Cellular network",
+    "explanation_bn": "মোবাইল যোগাযোগ নেটওয়ার্ককে সেলুলার নেটওয়ার্ক বলা হয় কারণ কভারেজ এলাকা ছোট ছোট সেলে বিভক্ত থাকে। প্রতিটি সেলে একটি বেস স্টেশন থাকে।"
+  },
+  {
+    "id": "ch29_q2",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ technology is used for communicating over large distances wirelessly.",
+    "options": ["Mobile communication", "Land communication", "Communication", "All the above"],
+    "correct_answer": "Mobile communication",
+    "explanation_bn": "মোবাইল যোগাযোগ প্রযুক্তি দীর্ঘ দূরত্বে তার ছাড়া যোগাযোগের জন্য ব্যবহৃত হয়। রেডিও তরঙ্গ ব্যবহার করে এটি বিনা তারে বিশাল দূরত্ব অতিক্রম করতে পারে।"
+  },
+  {
+    "id": "ch29_q3",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are not used in mobile communication?",
+    "options": ["Wires", "Cables", "Wired antenna", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগে তার, কেবল বা তারযুক্ত অ্যান্টেনা ব্যবহার হয় না। এটি সম্পূর্ণ বেতার (wireless) প্রযুক্তিতে চলে এবং রেডিও তরঙ্গ ব্যবহার করে।"
+  },
+  {
+    "id": "ch29_q4",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ technology has grouped different mobile telephony and data type technologies to over 3G.",
+    "options": ["3.2G", "3.5G", "3.6G", "4G"],
+    "correct_answer": "3.5G",
+    "explanation_bn": "3.5G প্রযুক্তি বিভিন্ন মোবাইল টেলিফোনি ও ডেটা প্রযুক্তিকে একত্রিত করে 3G এর বাইরে নিয়ে গেছে। HSPA (High Speed Packet Access) হলো 3.5G এর উদাহরণ।"
+  },
+  {
+    "id": "ch29_q5",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A mobile phone uses ___ type of duplex communication.",
+    "options": ["Half", "Full", "Zero", "Both a and b"],
+    "correct_answer": "Full",
+    "explanation_bn": "মোবাইল ফোন ফুল-ডুপ্লেক্স যোগাযোগ ব্যবহার করে। একই সময়ে কথা বলা এবং শোনা যায় কারণ প্রেরণ ও গ্রহণ আলাদা ফ্রিকোয়েন্সিতে হয়।"
+  },
+  {
+    "id": "ch29_q6",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A full-duplex communication is ___ way communication.",
+    "options": ["Single", "Two", "Multiple", "All the above"],
+    "correct_answer": "Two",
+    "explanation_bn": "ফুল-ডুপ্লেক্স যোগাযোগ দ্বিমুখী (Two-way)। একই সময়ে উভয় দিক থেকে তথ্য আদান-প্রদান সম্ভব। টেলিফোন কল এর সেরা উদাহরণ।"
+  },
+  {
+    "id": "ch29_q7",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the features of mobile communication?",
+    "options": ["High load balancing capacity", "Highly scalable", "Good network management system", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগের বৈশিষ্ট্য: উচ্চ লোড ব্যালান্সিং ক্ষমতা, উচ্চ স্কেলেবিলিটি এবং ভালো নেটওয়ার্ক ব্যবস্থাপনা। এই বৈশিষ্ট্যগুলো মোবাইল নেটওয়ার্ককে নির্ভরযোগ্য করে।"
+  },
+  {
+    "id": "ch29_q8",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the examples of mobile communication systems?",
+    "options": ["Cellular phones", "Cordless phones", "Wired phones", "Both a and b"],
+    "correct_answer": "Cordless phones",
+    "explanation_bn": "কর্ডলেস ফোন মোবাইল যোগাযোগ সিস্টেমের উদাহরণ। এটি বেস স্টেশনের সাথে রেডিও তরঙ্গ দিয়ে যোগাযোগ করে এবং সীমিত পরিসরে চলতে পারে।"
+  },
+  {
+    "id": "ch29_q9",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the facilities of mobile communications?",
+    "options": ["Mobile 2way radio", "Mobile telephone", "Public land radio", "Amateur radio", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগের সুবিধাগুলো: মোবাইল 2-ওয়ে রেডিও, মোবাইল টেলিফোন, পাবলিক ল্যান্ড রেডিও এবং অ্যামেচার রেডিও। এগুলো সবই মোবাইল যোগাযোগের অন্তর্গত।"
+  },
+  {
+    "id": "ch29_q10",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile 2-way radio is ___ communication systems.",
+    "options": ["One to many", "Two-way", "Full duplex", "Simplex"],
+    "correct_answer": "One to many",
+    "explanation_bn": "মোবাইল 2-ওয়ে রেডিও ওয়ান-টু-মেনি যোগাযোগ সিস্টেম। একটি বেস স্টেশন একসাথে অনেক মোবাইল ইউনিটের সাথে যোগাযোগ করতে পারে।"
+  },
+  {
+    "id": "ch29_q11",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile 2-way radio operates in ___ mode.",
+    "options": ["Half-duplex", "Full duplex", "Multi duplex", "None of the above"],
+    "correct_answer": "Full duplex",
+    "explanation_bn": "মোবাইল 2-ওয়ে রেডিও ফুল-ডুপ্লেক্স মোডে কাজ করে। এটি একই সময়ে প্রেরণ ও গ্রহণ উভয়ই করতে পারে।"
+  },
+  {
+    "id": "ch29_q12",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Citizen band radio operates at ___ frequency.",
+    "options": ["26 to 27.1 MHz", "1.8 MHZ", "2MHHz", "3.5 MHz"],
+    "correct_answer": "26 to 27.1 MHz",
+    "explanation_bn": "সিটিজেন ব্যান্ড (CB) রেডিও ২৬ থেকে ২৭.১ MHz ফ্রিকোয়েন্সিতে কাজ করে। এটি স্বল্প দূরত্বের ব্যক্তিগত যোগাযোগের জন্য ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q13",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Citizen band radio communication use ___ type of modulation.",
+    "options": ["AM", "FM", "PM", "All the above"],
+    "correct_answer": "AM",
+    "explanation_bn": "সিটিজেন ব্যান্ড রেডিও AM (Amplitude Modulation) ব্যবহার করে। AM এর সরলতা এবং কম খরচের কারণে CB রেডিওতে এটি পছন্দনীয়।"
+  },
+  {
+    "id": "ch29_q14",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Citizen band radio at 10KHz has ___ number of channels.",
+    "options": ["20", "30", "40", "50"],
+    "correct_answer": "40",
+    "explanation_bn": "১০ KHz চ্যানেল স্পেসিংয়ে CB রেডিওতে ৪০টি চ্যানেল থাকে। প্রতিটি চ্যানেল আলাদা কথোপকথনের জন্য ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q15",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile 2-way radio uses ___ types of service.",
+    "options": ["Commercial", "Non-commercial", "Paid", "All the above"],
+    "correct_answer": "Non-commercial",
+    "explanation_bn": "মোবাইল 2-ওয়ে রেডিও অ-বাণিজ্যিক (Non-commercial) সেবা ব্যবহার করে। এটি ব্যক্তিগত বা জরুরি যোগাযোগের জন্য ব্যবহৃত হয়, বাণিজ্যিক উদ্দেশ্যে নয়।"
+  },
+  {
+    "id": "ch29_q16",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is a mobile 2-way radio non-commercial type of service?",
+    "options": ["Press to talk", "Switch to talk", "Hold to talk", "None of the above"],
+    "correct_answer": "Switch to talk",
+    "explanation_bn": "মোবাইল 2-ওয়ে রেডিওর অ-বাণিজ্যিক সেবায় Switch to Talk পদ্ধতি ব্যবহার হয়। কথা বলার সময় সুইচ চাপতে হয় এবং ছেড়ে দিলে শোনা যায়।"
+  },
+  {
+    "id": "ch29_q17",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A mobile 2-way radio non-commercial types of service uses ___ modulation.",
+    "options": ["Double sideband suppressed carrier", "Single sideband suppressed carrier", "Sideband carrier", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল 2-ওয়ে রেডিওর অ-বাণিজ্যিক সেবায় DSBSC, SSBSC এবং সাইডব্যান্ড ক্যারিয়ার সব ধরনের মডুলেশন ব্যবহার হতে পারে।"
+  },
+  {
+    "id": "ch29_q18",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Public land radio is a ___ system.",
+    "options": ["One to many", "Two way FM radio", "Full duplex FM radio", "Simplex"],
+    "correct_answer": "Two way FM radio",
+    "explanation_bn": "পাবলিক ল্যান্ড রেডিও একটি টু-ওয়ে FM রেডিও সিস্টেম। পুলিশ, অগ্নিনির্বাপক দল এবং জরুরি সেবায় এটি ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q19",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the application of Public land radio?",
+    "options": ["Fire", "Police", "Municipal agencies", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "পাবলিক ল্যান্ড রেডিও অগ্নিনির্বাপক, পুলিশ এবং পৌর সংস্থা সবখানে ব্যবহৃত হয়। এটি জরুরি সেবা প্রদানকারীদের নির্ভরযোগ্য যোগাযোগের মাধ্যম।"
+  },
+  {
+    "id": "ch29_q20",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Is Public land radio limited to a certain area?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "পাবলিক ল্যান্ড রেডিওর কভারেজ একটি নির্দিষ্ট এলাকার মধ্যে সীমিত। বেস স্টেশনের পরিসরের বাইরে যোগাযোগ সম্ভব নয়।"
+  }
+,
+  {
+    "id": "ch29_q21",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile telephones offer ___ transmission.",
+    "options": ["Half", "Full", "Zero", "Infinite"],
+    "correct_answer": "Half",
+    "explanation_bn": "মোবাইল টেলিফোন হাফ-ডুপ্লেক্স ট্রান্সমিশন অফার করে। একই সময়ে শুধু একদিকে ডেটা যায়, যদিও আধুনিক মোবাইল সিস্টেমে ফুল-ডুপ্লেক্স অনুভূতি দেওয়া হয়।"
+  },
+  {
+    "id": "ch29_q22",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile telephones are ___ systems.",
+    "options": ["One to one", "One to many", "Many to many", "None of the"],
+    "correct_answer": "One to one",
+    "explanation_bn": "মোবাইল টেলিফোন ওয়ান-টু-ওয়ান সিস্টেম। একটি মোবাইল থেকে একটি নির্দিষ্ট মোবাইলে কল যায়। এটি পয়েন্ট-টু-পয়েন্ট যোগাযোগ।"
+  },
+  {
+    "id": "ch29_q23",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Do mobile telephones permit communication at a time?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "মোবাইল টেলিফোন একই সময়ে যোগাযোগের অনুমতি দেয়। ফুল-ডুপ্লেক্স প্রযুক্তির মাধ্যমে একই সময়ে কথা বলা এবং শোনা সম্ভব।"
+  },
+  {
+    "id": "ch29_q24",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile telephones are safeguarded with ___ for privacy reason.",
+    "options": ["Unique mobile number", "Id card", "SIM", "IMEI"],
+    "correct_answer": "Unique mobile number",
+    "explanation_bn": "গোপনীয়তার জন্য মোবাইল টেলিফোনকে একটি অনন্য মোবাইল নম্বর দিয়ে সুরক্ষিত করা হয়। এই অনন্য নম্বর প্রতিটি ফোনকে আলাদাভাবে চিহ্নিত করে।"
+  },
+  {
+    "id": "ch29_q25",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Amateur radio covers ___ frequency band.",
+    "options": ["Broad", "Narrow", "Wide", "None of the above"],
+    "correct_answer": "Broad",
+    "explanation_bn": "অ্যামেচার রেডিও (হ্যাম রেডিও) বিস্তৃত (Broad) ফ্রিকোয়েন্সি ব্যান্ড কভার করে। এটি HF থেকে UHF পর্যন্ত বিভিন্ন ব্যান্ডে কাজ করে।"
+  },
+  {
+    "id": "ch29_q26",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Amateur radio with a broadband frequency ranges from ___ to ___.",
+    "options": ["1.8MHz to 30MHz", "2MHZ", "3MHZ", "10Mhz to 20MHz"],
+    "correct_answer": "1.8MHz to 30MHz",
+    "explanation_bn": "ব্রডব্যান্ড অ্যামেচার রেডিও ১.৮ MHz থেকে ৩০ MHz পর্যন্ত HF ব্যান্ডে কাজ করে। এই ব্যান্ডে দীর্ঘ দূরত্বের যোগাযোগ সম্ভব।"
+  },
+  {
+    "id": "ch29_q27",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are amateur radio frequencies?",
+    "options": ["FSK", "ASK", "Continuous wave", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "অ্যামেচার রেডিওতে FSK, ASK এবং কন্টিনিউয়াস ওয়েভ (CW/মোর্স কোড) সবই ব্যবহৃত হয়। হ্যাম রেডিও অপারেটররা বিভিন্ন মোডে যোগাযোগ করেন।"
+  },
+  {
+    "id": "ch29_q28",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "FSK is abbreviated as ___.",
+    "options": ["Frequency shift keying", "Frequency side keying", "Forward shift keying", "All the above"],
+    "correct_answer": "Frequency shift keying",
+    "explanation_bn": "FSK এর পূর্ণরূপ Frequency Shift Keying। এটি ডিজিটাল মডুলেশন পদ্ধতি যেখানে বিটের মান অনুযায়ী ফ্রিকোয়েন্সি পরিবর্তিত হয়। 0 এবং 1 দুটি আলাদা ফ্রিকোয়েন্সি দিয়ে প্রকাশ পায়।"
+  },
+  {
+    "id": "ch29_q29",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "ASK is abbreviated as ___.",
+    "options": ["Amplitude shift keying", "Ample shift keying", "Altitude shift keying", "None of the above"],
+    "correct_answer": "Amplitude shift keying",
+    "explanation_bn": "ASK এর পূর্ণরূপ Amplitude Shift Keying। এটি ডিজিটাল মডুলেশন পদ্ধতি যেখানে বিটের মান অনুযায়ী অ্যামপ্লিচুড পরিবর্তিত হয়।"
+  },
+  {
+    "id": "ch29_q30",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "When was mobile communication introduced?",
+    "options": ["1983", "1999", "1998"],
+    "correct_answer": "1983",
+    "explanation_bn": "মোবাইল যোগাযোগ ১৯৮৩ সালে প্রবর্তিত হয় যখন Motorola প্রথম বাণিজ্যিক সেলুলার নেটওয়ার্ক চালু করে। DynaTAC 8000X ছিল প্রথম বাণিজ্যিক মোবাইল ফোন।"
+  },
+  {
+    "id": "ch29_q31",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Who firstly introduced mobile communication?",
+    "options": ["Motorola", "1G", "Samsung", "None of the above"],
+    "correct_answer": "Motorola",
+    "explanation_bn": "Motorola প্রথম মোবাইল যোগাযোগ প্রবর্তন করে। ১৯৭৩ সালে Martin Cooper (Motorola) প্রথম মোবাইল ফোন কল করেন এবং ১৯৮৩ সালে বাণিজ্যিকভাবে চালু হয়।"
+  },
+  {
+    "id": "ch29_q32",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile communication technology is built with ___.",
+    "options": ["Protocols", "Speed", "Services", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগ প্রযুক্তি প্রোটোকল, গতি এবং সেবা সব নিয়ে তৈরি। প্রোটোকল নিয়ম নির্ধারণ করে, গতি ডেটা ট্রান্সফার নিয়ন্ত্রণ করে এবং সেবা ব্যবহারকারীর চাহিদা পূরণ করে।"
+  },
+  {
+    "id": "ch29_q33",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ is responsible for the evolution of mobile communication generation.",
+    "options": ["Modification", "Replacements", "Fixing", "None of the above"],
+    "correct_answer": "Modification",
+    "explanation_bn": "মোবাইল যোগাযোগ প্রজন্মের বিবর্তনে পরিবর্তন (Modification) দায়ী। প্রতিটি প্রজন্মে (1G থেকে 5G) প্রযুক্তিগত পরিবর্তন ও উন্নতি ঘটেছে।"
+  },
+  {
+    "id": "ch29_q34",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the technologies used in mobile communications?",
+    "options": ["1G", "2G", "3G", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগে 1G, 2G এবং 3G সব প্রযুক্তি ব্যবহৃত হয়েছে। 1G (অ্যানালগ), 2G (ডিজিটাল ভয়েস), 3G (মোবাইল ইন্টারনেট) একে অপরকে উন্নত করেছে।"
+  },
+  {
+    "id": "ch29_q35",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile communication technology used in 2021 is ___.",
+    "options": ["4G", "3G", "5G", "Both a and c"],
+    "correct_answer": "Both a and c",
+    "explanation_bn": "২০২১ সালে মোবাইল যোগাযোগে 4G এবং 5G উভয় প্রযুক্তিই ব্যবহৃত হচ্ছিল। 4G ব্যাপকভাবে বিস্তৃত ছিল এবং 5G রোলআউট শুরু হচ্ছিল।"
+  },
+  {
+    "id": "ch29_q36",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is 1st generation of wireless mobile communication technology?",
+    "options": ["1G", "2G", "3G", "5G"],
+    "correct_answer": "1G",
+    "explanation_bn": "1G হলো প্রথম প্রজন্মের বেতার মোবাইল যোগাযোগ প্রযুক্তি। এটি অ্যানালগ সিগনাল ব্যবহার করত এবং শুধু ভয়েস কল সমর্থন করত।"
+  },
+  {
+    "id": "ch29_q37",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G uses ___ type of signals to communicate data.",
+    "options": ["Digital", "Analog", "Discrete", "None of the above"],
+    "correct_answer": "Analog",
+    "explanation_bn": "1G অ্যানালগ সিগনাল ব্যবহার করত। এটি AMPS, TACS এর মতো সিস্টেমে ছিল যা অ্যানালগ FM মডুলেশন ব্যবহার করত।"
+  },
+  {
+    "id": "ch29_q38",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G was introduced in ___ year.",
+    "options": ["1980", "1988", "1990", "1967"],
+    "correct_answer": "1980",
+    "explanation_bn": "1G প্রযুক্তি ১৯৮০ সালে প্রবর্তিত হয়। Nordic Mobile Telephone (NMT) সিস্টেম ১৯৮১ সালে এবং AMPS ১৯৮২ সালে চালু হয়, তবে 1G এর সূচনা ১৯৮০ দশকে।"
+  },
+  {
+    "id": "ch29_q39",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G supports ___ type of mobile communication.",
+    "options": ["Voice", "Audio", "Video", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "1G ভয়েস এবং অডিও উভয় ধরনের মোবাইল যোগাযোগ সমর্থন করত। এটি মূলত ভয়েস কলের জন্য ডিজাইন করা হয়েছিল।"
+  },
+  {
+    "id": "ch29_q40",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G was introduced by ___ country.",
+    "options": ["India", "US", "Germany", "China"],
+    "correct_answer": "US",
+    "explanation_bn": "1G প্রযুক্তি যুক্তরাষ্ট্রে (US) প্রথম চালু হয়। ১৯৮৩ সালে AT&T/Illinois Bell শিকাগোতে AMPS (Advanced Mobile Phone System) চালু করে।"
+  }
+,
+  {
+    "id": "ch29_q41",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G has the speed of ___.",
+    "options": ["2.4 kbps", "3 kbps", "4 kbps", "5 kbps"],
+    "correct_answer": "2.4 kbps",
+    "explanation_bn": "1G নেটওয়ার্কের গতি ছিল মাত্র ২.৪ kbps। এটি কেবল ভয়েস কলের জন্য যথেষ্ট ছিল কিন্তু ডেটা ট্রান্সমিশনের জন্য অপর্যাপ্ত।"
+  },
+  {
+    "id": "ch29_q42",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the feature of 1G?",
+    "options": ["Poor quality of voice", "Less secure", "Power consumption is more", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "1G এর বৈশিষ্ট্য: দুর্বল ভয়েস মান, কম নিরাপত্তা এবং বেশি পাওয়ার খরচ। অ্যানালগ প্রযুক্তির কারণে এনক্রিপশন ছিল না এবং সিগনালে নয়েজ থাকত।"
+  },
+  {
+    "id": "ch29_q43",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ is a second-generation technology.",
+    "options": ["2G", "3G", "4G", "5G"],
+    "correct_answer": "2G",
+    "explanation_bn": "2G হলো দ্বিতীয় প্রজন্মের মোবাইল প্রযুক্তি। এটি ডিজিটাল সিগনাল ব্যবহার করে এবং 1G এর অ্যানালগ প্রযুক্তি প্রতিস্থাপন করেছে।"
+  },
+  {
+    "id": "ch29_q44",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G technology uses ___ signals.",
+    "options": ["Analogue", "Digital", "Continuous", "None of the above"],
+    "correct_answer": "Digital",
+    "explanation_bn": "2G ডিজিটাল সিগনাল ব্যবহার করে। ডিজিটাল প্রযুক্তি ব্যবহারের ফলে 2G তে ভালো ভয়েস মান, SMS সুবিধা এবং উন্নত নিরাপত্তা পাওয়া গেল।"
+  },
+  {
+    "id": "ch29_q45",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G technology was released by ___ country.",
+    "options": ["Germany", "Finland", "French", "China"],
+    "correct_answer": "Finland",
+    "explanation_bn": "2G প্রযুক্তি ফিনল্যান্ড থেকে প্রথম চালু হয়। ১৯৯১ সালে ফিনল্যান্ডে Radiolinja প্রথম বাণিজ্যিক GSM (2G) নেটওয়ার্ক চালু করে।"
+  },
+  {
+    "id": "ch29_q46",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G technology was released by Finland in ___ year.",
+    "options": ["1991", "1990", "1992", "1994"],
+    "correct_answer": "1991",
+    "explanation_bn": "ফিনল্যান্ড ১৯৯১ সালে 2G (GSM) প্রযুক্তি চালু করে। এটি ছিল বিশ্বের প্রথম বাণিজ্যিক GSM নেটওয়ার্ক।"
+  },
+  {
+    "id": "ch29_q47",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G mobile communication uses ___ technology.",
+    "options": ["GSM", "Wifi", "GPRS", "Both a and c"],
+    "correct_answer": "Both a and c",
+    "explanation_bn": "2G মোবাইল যোগাযোগে GSM (Global System for Mobile) এবং GPRS (General Packet Radio Service) উভয়ই ব্যবহৃত হয়। GPRS যোগ করলে তা 2.5G হয়।"
+  },
+  {
+    "id": "ch29_q48",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G mobile communication operates up to ___ speed.",
+    "options": ["64 kbps", "50 kbps", "60 kbps", "40 kbps"],
+    "correct_answer": "64 kbps",
+    "explanation_bn": "2G মোবাইল যোগাযোগ সর্বোচ্চ ৬৪ kbps গতিতে চলে। এই গতিতে SMS, মৌলিক ইন্টারনেট এবং ভয়েস সেবা দেওয়া সম্ভব ছিল।"
+  },
+  {
+    "id": "ch29_q49",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the features of 2G mobile communication technology?",
+    "options": ["Better quality compared to 1G", "Supports multimedia", "Supports text", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "2G এর বৈশিষ্ট্য: 1G এর চেয়ে ভালো মান, মাল্টিমিডিয়া সমর্থন এবং টেক্সট (SMS) সমর্থন। ডিজিটাল প্রযুক্তির ফলে এসব সুবিধা পাওয়া গেল।"
+  },
+  {
+    "id": "ch29_q50",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Is GPRS technology introduced along with 2G mobile communication technology?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "GPRS 2G প্রযুক্তির সাথে পরিচয় হয়েছিল। GPRS 2G নেটওয়ার্কে প্যাকেট-সুইচড ডেটা পরিষেবা যোগ করেছে যা 2.5G নামে পরিচিত।"
+  },
+  {
+    "id": "ch29_q51",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the features supported by GPRS in 2G technology?",
+    "options": ["Emails", "Web browsing", "Downloads", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "GPRS 2G তে ইমেইল, ওয়েব ব্রাউজিং এবং ডাউনলোড সুবিধা যোগ করেছে। এটি প্রথমবারের মতো মোবাইলে ইন্টারনেট ব্যবহারের সুযোগ দিয়েছিল।"
+  },
+  {
+    "id": "ch29_q52",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "2G technology with GPRS is also called as ___.",
+    "options": ["2.5 G", "3G", "4G", "5G"],
+    "correct_answer": "2.5 G",
+    "explanation_bn": "GPRS সহ 2G প্রযুক্তিকে 2.5G বলা হয়। এটি মূল 2G এবং 3G এর মধ্যবর্তী পর্যায় হিসেবে কাজ করে এবং উন্নত ডেটা সেবা প্রদান করে।"
+  },
+  {
+    "id": "ch29_q53",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Third-generation mobile communication technology is represented as ___.",
+    "options": ["3G", "3.4 G", "4G", "2G"],
+    "correct_answer": "3G",
+    "explanation_bn": "তৃতীয় প্রজন্মের মোবাইল যোগাযোগ প্রযুক্তিকে 3G বলা হয়। এটি উচ্চ গতির ইন্টারনেট, ভিডিও কল এবং মোবাইল ব্রডব্যান্ড সমর্থন করে।"
+  },
+  {
+    "id": "ch29_q54",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the 3G mobile communication features?",
+    "options": ["High internet speed", "High data speed", "3D gaming", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "3G এর বৈশিষ্ট্য: উচ্চ ইন্টারনেট গতি, উচ্চ ডেটা গতি এবং 3D গেমিং সমর্থন। 3G মোবাইল ইন্টারনেটকে ব্যাপক করে তুলেছে।"
+  },
+  {
+    "id": "ch29_q55",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "What is the data speed range of 3G mobile communication?",
+    "options": ["144kbps to 2Mbps", "100kbps to 2Mbps", "200kbps to 2Mbps", "300 kbps to 345 Kbps"],
+    "correct_answer": "144kbps to 2Mbps",
+    "explanation_bn": "3G মোবাইল যোগাযোগের ডেটা গতি ১৪৪ kbps থেকে ২ Mbps পর্যন্ত। স্থির অবস্থানে সর্বোচ্চ গতি পাওয়া যায় এবং গতিশীল অবস্থানে ন্যূনতম গতি নিশ্চিত।"
+  },
+  {
+    "id": "ch29_q56",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are web-based applications used by 3G?",
+    "options": ["Video conference", "Emails", "Multimedia", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "3G ভিডিও কনফারেন্স, ইমেইল এবং মাল্টিমিডিয়া সব ওয়েব-ভিত্তিক অ্যাপ্লিকেশন সমর্থন করে। উচ্চ ব্যান্ডউইথের কারণে এসব সেবা মোবাইলে সম্ভব হয়েছে।"
+  },
+  {
+    "id": "ch29_q57",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the disadvantages of 3G technology?",
+    "options": ["Costly mobile devices", "Requires high infrastructure", "High maintenance cost", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "3G এর অসুবিধা: ব্যয়বহুল ডিভাইস, উচ্চ অবকাঠামো প্রয়োজন এবং উচ্চ রক্ষণাবেক্ষণ খরচ। বিশেষত উন্নয়নশীল দেশে 3G বাস্তবায়ন ব্যয়বহুল ছিল।"
+  },
+  {
+    "id": "ch29_q58",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The next generation of 3G is ___.",
+    "options": ["3.2G", "3.5G", "3.6G", "4G"],
+    "correct_answer": "3.5G",
+    "explanation_bn": "3G এর পরবর্তী প্রজন্ম হলো 3.5G (HSPA - High Speed Packet Access)। এটি 3G এবং 4G এর মধ্যবর্তী পর্যায় এবং উচ্চতর ডেটা গতি প্রদান করে।"
+  },
+  {
+    "id": "ch29_q59",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile is also called as ___.",
+    "options": ["Cell phone", "Handphone", "Mobile cellular network", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইলকে সেল ফোন, হ্যান্ডফোন এবং মোবাইল সেলুলার নেটওয়ার্ক সব নামে ডাকা হয়। বিভিন্ন দেশে বিভিন্ন নাম প্রচলিত।"
+  },
+  {
+    "id": "ch29_q60",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GPS stands for ___.",
+    "options": ["Global positioning systems", "Global partial system", "Geo-positioning system", "All the above"],
+    "correct_answer": "Global positioning systems",
+    "explanation_bn": "GPS এর পূর্ণরূপ Global Positioning System। এটি স্যাটেলাইট-ভিত্তিক নেভিগেশন সিস্টেম যা পৃথিবীর যেকোনো স্থানে সঠিক অবস্থান নির্ণয় করতে পারে।"
+  }
+,
+  {
+    "id": "ch29_q61",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The function of GPS is ___.",
+    "options": ["Navigates to correct address on earth", "Locates address on earth", "Points address", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "GPS এর কাজ: সঠিক ঠিকানায় নেভিগেট করা, পৃথিবীতে অবস্থান নির্ণয় করা এবং ঠিকানা পয়েন্ট করা। GPS স্যাটেলাইট সিগনাল ব্যবহার করে নির্ভুল অবস্থান তথ্য দেয়।"
+  },
+  {
+    "id": "ch29_q62",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the components of GPS?",
+    "options": ["Satellites", "Ground stations", "Transmitter and receiver", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "GPS এর উপাদান: স্যাটেলাইট (সিগনাল প্রেরণ), গ্রাউন্ড স্টেশন (নিয়ন্ত্রণ) এবং ট্রান্সমিটার ও রিসিভার। এই তিনটি সেগমেন্ট একসাথে GPS সিস্টেম গঠন করে।"
+  },
+  {
+    "id": "ch29_q63",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GPRS stands for ___.",
+    "options": ["General packet radio receiver", "Geo packet radio receiver", "Gradient packet radio receiver", "None of the above"],
+    "correct_answer": "General packet radio receiver",
+    "explanation_bn": "বইয়ে GPRS এর পূর্ণরূপ General Packet Radio Receiver উল্লেখ আছে। (সঠিক পূর্ণরূপ হলো General Packet Radio Service যা প্যাকেট-সুইচড ডেটা সেবা প্রদান করে।)"
+  },
+  {
+    "id": "ch29_q64",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GPRS is used in ___ mobile technology.",
+    "options": ["2G", "3G", "4G", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "GPRS 2G এবং 3G উভয় মোবাইল প্রযুক্তিতে ব্যবহৃত হয়। 2G তে GPRS ডেটা সেবা যোগ করে এবং 3G তেও এটি ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q65",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ has led to the growth of mobile communication services.",
+    "options": ["Increase in battery consumption", "Increase in IC technology", "Increase in DSP", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "ব্যাটারি প্রযুক্তি, IC (ইন্টিগ্রেটেড সার্কিট) এবং DSP (ডিজিটাল সিগনাল প্রসেসিং) প্রযুক্তির উন্নতি মোবাইল যোগাযোগ সেবার বিকাশে সহায়তা করেছে।"
+  },
+  {
+    "id": "ch29_q66",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In cellular network frequency spectrum are divided into ___.",
+    "options": ["Discrete channels", "Non-discrete channel", "Class of frequency", "None of the above"],
+    "correct_answer": "Discrete channels",
+    "explanation_bn": "সেলুলার নেটওয়ার্কে ফ্রিকোয়েন্সি স্পেকট্রাম বিচ্ছিন্ন (Discrete) চ্যানেলে বিভক্ত। প্রতিটি চ্যানেল একটি নির্দিষ্ট ফ্রিকোয়েন্সি ব্যান্ড ব্যবহার করে।"
+  },
+  {
+    "id": "ch29_q67",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ are added to geographic cells of a specific area.",
+    "options": ["Discrete channels", "Non-discrete channel", "Class of frequency", "None of the above"],
+    "correct_answer": "Discrete channels",
+    "explanation_bn": "একটি নির্দিষ্ট এলাকার ভৌগোলিক সেলগুলোতে বিচ্ছিন্ন চ্যানেল বরাদ্দ করা হয়। প্রতিটি সেল আলাদা চ্যানেল ব্যবহার করে সহ-চ্যানেল ইন্টারফারেন্স কমায়।"
+  },
+  {
+    "id": "ch29_q68",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Analog cellular phone is ___ generation technology.",
+    "options": ["1G", "2G", "3G", "4G"],
+    "correct_answer": "1G",
+    "explanation_bn": "অ্যানালগ সেলুলার ফোন 1G (প্রথম প্রজন্ম) প্রযুক্তি। 1G অ্যানালগ FM মডুলেশন ব্যবহার করত এবং শুধুমাত্র ভয়েস কল সমর্থন করত।"
+  },
+  {
+    "id": "ch29_q69",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Digital cellular phone is ___ generation technology.",
+    "options": ["1G", "2G", "3G", "4G"],
+    "correct_answer": "2G",
+    "explanation_bn": "ডিজিটাল সেলুলার ফোন 2G (দ্বিতীয় প্রজন্ম) প্রযুক্তি। 2G ডিজিটাল সংকেত ব্যবহার করে ভালো মান, SMS এবং উন্নত নিরাপত্তা প্রদান করে।"
+  },
+  {
+    "id": "ch29_q70",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "AMPS stands for ___.",
+    "options": ["Advanced mobile telephony system", "Advanced medium telephony system", "Automobile telephony system", "None of the above"],
+    "correct_answer": "Advanced mobile telephony system",
+    "explanation_bn": "AMPS এর পূর্ণরূপ Advanced Mobile Phone System। এটি ছিল উত্তর আমেরিকায় ব্যবহৃত প্রথম 1G অ্যানালগ সেলুলার সিস্টেম।"
+  },
+  {
+    "id": "ch29_q71",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "1G technology was developed based on ___.",
+    "options": ["Advanced mobile telephony system", "Advanced medium telephony system", "Automobile telephony system", "None of the above"],
+    "correct_answer": "Advanced mobile telephony system",
+    "explanation_bn": "1G প্রযুক্তি AMPS (Advanced Mobile Phone System) এর উপর ভিত্তি করে তৈরি। AMPS ছিল 1G এর প্রধান মান যা যুক্তরাষ্ট্রে ব্যাপকভাবে ব্যবহৃত হয়েছিল।"
+  },
+  {
+    "id": "ch29_q72",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "AMPS is a ___ service.",
+    "options": ["Standard cellular telephone service", "Cellular telephone service", "Standard cellular service", "None of the above"],
+    "correct_answer": "Standard cellular telephone service",
+    "explanation_bn": "AMPS একটি স্ট্যান্ডার্ড সেলুলার টেলিফোন সেবা। এটি 800 MHz ব্যান্ডে কাজ করত এবং উত্তর আমেরিকায় 1G সেলুলার যোগাযোগের মান নির্ধারণ করেছিল।"
+  },
+  {
+    "id": "ch29_q73",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "AMPS in 1G was introduced by ___.",
+    "options": ["Illinois Bell", "Richard", "Charles", "Dennis"],
+    "correct_answer": "Illinois Bell",
+    "explanation_bn": "AMPS 1G প্রযুক্তি Illinois Bell (AT&T এর অংশ) দ্বারা প্রবর্তিত হয়। ১৯৮৩ সালে শিকাগোতে প্রথম বাণিজ্যিক AMPS সেবা চালু হয়।"
+  },
+  {
+    "id": "ch29_q74",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Analogue cellular phone has a maximum deviation of the frequency of ___ for 100% modulation.",
+    "options": ["+/- 12 KHz", "+/- 11 KHz", "+/- 10 KHz", "+/- 9 KHz"],
+    "correct_answer": "+/- 12 KHz",
+    "explanation_bn": "অ্যানালগ সেলুলার ফোনে ১০০% মডুলেশনে সর্বোচ্চ ফ্রিকোয়েন্সি ডেভিয়েশন +/- ১২ KHz। এই ডেভিয়েশন 30 KHz চ্যানেল স্পেসিংয়ের সাথে সামঞ্জস্যপূর্ণ।"
+  },
+  {
+    "id": "ch29_q75",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "AMPS uses ___ modulation technique.",
+    "options": ["Frequency division multiple access", "Phase modulation", "Amplitude modulation", "All the above"],
+    "correct_answer": "Frequency division multiple access",
+    "explanation_bn": "AMPS FDMA (Frequency Division Multiple Access) মডুলেশন পদ্ধতি ব্যবহার করে। প্রতিটি কল আলাদা ফ্রিকোয়েন্সি চ্যানেলে পরিচালিত হয়।"
+  },
+  {
+    "id": "ch29_q76",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Does AMPS separate transmissions in frequency domain?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "AMPS ফ্রিকোয়েন্সি ডোমেইনে ট্রান্সমিশন আলাদা করে। FDMA প্রযুক্তি ব্যবহার করে প্রতিটি সংযোগ আলাদা ফ্রিকোয়েন্সি চ্যানেলে পরিচালিত হয়।"
+  },
+  {
+    "id": "ch29_q77",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Subscribers in an analog cellular phone are assigned ___ for mobile call purpose.",
+    "options": ["Voice channels", "Audio channels", "Video channels", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অ্যানালগ সেলুলার ফোনে সাবস্ক্রাইবারদের মোবাইল কলের জন্য ভয়েস চ্যানেল এবং অডিও চ্যানেল উভয়ই বরাদ্দ করা হয়।"
+  },
+  {
+    "id": "ch29_q78",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the process performed at receiver end in mobile communication?",
+    "options": ["Modulation", "Decoding", "Demodulation", "Both b and c"],
+    "correct_answer": "Both b and c",
+    "explanation_bn": "মোবাইল যোগাযোগে রিসিভার প্রান্তে ডিকোডিং এবং ডিমডুলেশন উভয়ই সম্পন্ন হয়। ডিমডুলেশনে সিগনাল পুনরুদ্ধার হয় এবং ডিকোডিংয়ে ডিজিটাল ডেটা ডিকোড হয়।"
+  },
+  {
+    "id": "ch29_q79",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Audio channels are also called as ___.",
+    "options": ["Voice channels", "Image channels", "Video channels", "Both a and b"],
+    "correct_answer": "Voice channels",
+    "explanation_bn": "অডিও চ্যানেলকে ভয়েস চ্যানেলও বলা হয়। এই চ্যানেলগুলো ভয়েস (শব্দ) তথ্য বহন করে এবং মোবাইল কলে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q80",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Subscribers in an analog cellular phone are assigned with ___ number of audio channels for mobile call purpose.",
+    "options": ["2", "3", "4", "5"],
+    "correct_answer": "2",
+    "explanation_bn": "অ্যানালগ সেলুলার ফোনে সাবস্ক্রাইবারদের মোবাইল কলের জন্য ২টি অডিও চ্যানেল বরাদ্দ করা হয়: একটি ফরওয়ার্ড (ডাউনলিংক) এবং একটি রিভার্স (আপলিংক)।"
+  }
+,
+  {
+    "id": "ch29_q81",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are analog cellular phones, audio channels for mobile call purpose?",
+    "options": ["Forward", "Reverse", "One way", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অ্যানালগ সেলুলার ফোনের অডিও চ্যানেল দুটি: ফরওয়ার্ড চ্যানেল (বেস স্টেশন থেকে মোবাইলে) এবং রিভার্স চ্যানেল (মোবাইল থেকে বেস স্টেশনে)।"
+  },
+  {
+    "id": "ch29_q82",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ techniques are used by a user to share the spectrum in an efficient way.",
+    "options": ["Multiple access technique", "Frequently access techniques", "Rarely access techniques", "None of the above"],
+    "correct_answer": "Multiple access technique",
+    "explanation_bn": "মাল্টিপল অ্যাক্সেস টেকনিক ব্যবহারকারীদের দক্ষতার সাথে স্পেকট্রাম ভাগ করতে সাহায্য করে। TDMA, FDMA এবং CDMA হলো মাল্টিপল অ্যাক্সেস পদ্ধতি।"
+  },
+  {
+    "id": "ch29_q83",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Wireless communication uses ___ method.",
+    "options": ["Multiplexing", "Quantizing", "Equalizing", "None of the above"],
+    "correct_answer": "Multiplexing",
+    "explanation_bn": "বেতার যোগাযোগ মাল্টিপ্লেক্সিং পদ্ধতি ব্যবহার করে। মাল্টিপ্লেক্সিং একাধিক সিগনাল একই মাধ্যমে একসাথে পাঠাতে দেয়।"
+  },
+  {
+    "id": "ch29_q84",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Wireless communication uses ___ number of Multiplexing methods.",
+    "options": ["2", "3", "4", "5"],
+    "correct_answer": "3",
+    "explanation_bn": "বেতার যোগাযোগে তিনটি মাল্টিপ্লেক্সিং পদ্ধতি ব্যবহৃত হয়: TDMA (সময়), FDMA (ফ্রিকোয়েন্সি) এবং CDMA (কোড)। প্রতিটি পদ্ধতিতে আলাদাভাবে স্পেকট্রাম ভাগ করা হয়।"
+  },
+  {
+    "id": "ch29_q85",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are multiplexing methods used in mobile communication?",
+    "options": ["TDMA", "FDMA", "CDMA", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগে TDMA (Time Division Multiple Access), FDMA (Frequency Division Multiple Access) এবং CDMA (Code Division Multiple Access) তিনটিই ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q86",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In which spectrum available spectrum is divided and further these narrow bands are divided equally into time slots?",
+    "options": ["TDMA", "FDMA", "CDMA", "All the above"],
+    "correct_answer": "TDMA",
+    "explanation_bn": "TDMA (Time Division Multiple Access)-এ স্পেকট্রাম প্রথমে ন্যারো ব্যান্ডে বিভক্ত হয়, তারপর প্রতিটি ব্যান্ড সমান টাইম স্লটে ভাগ হয়। GSM এ TDMA ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q87",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In North America, the digital cellular standard at IS 136 for each frequency channel is assigned with ___ frequency.",
+    "options": ["30 KHz", "50 KHz", "59 Hz", "70 Hz"],
+    "correct_answer": "30 KHz",
+    "explanation_bn": "উত্তর আমেরিকায় IS-136 ডিজিটাল সেলুলার স্ট্যান্ডার্ডে প্রতিটি ফ্রিকোয়েন্সি চ্যানেলের ব্যান্ডউইথ ৩০ KHz। এই স্ট্যান্ডার্ড D-AMPS নামেও পরিচিত।"
+  },
+  {
+    "id": "ch29_q88",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ multiplexing technique allows user to share traffic channels.",
+    "options": ["TDMA", "FDMA", "CDMA", "All the above"],
+    "correct_answer": "FDMA",
+    "explanation_bn": "FDMA (Frequency Division Multiple Access) ব্যবহারকারীদের ট্রাফিক চ্যানেল ভাগ করার সুযোগ দেয়। প্রতিটি ব্যবহারকারী আলাদা ফ্রিকোয়েন্সি চ্যানেল পায়।"
+  },
+  {
+    "id": "ch29_q89",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The process where users share available spectrum in the frequency band is called ___.",
+    "options": ["Traffic channel", "Congestion channel", "Noise", "Disturbance"],
+    "correct_answer": "Traffic channel",
+    "explanation_bn": "ট্রাফিক চ্যানেল সেই প্রক্রিয়া যেখানে ব্যবহারকারীরা ফ্রিকোয়েন্সি ব্যান্ডে উপলব্ধ স্পেকট্রাম ভাগ করে নেয়। এটি সেলুলার নেটওয়ার্কের মূল কার্যনীতি।"
+  },
+  {
+    "id": "ch29_q90",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In which multiplexing technique, different users are assigned with the different channels.",
+    "options": ["TDMA", "FDMA", "CDMA", "All the above"],
+    "correct_answer": "FDMA",
+    "explanation_bn": "FDMA তে বিভিন্ন ব্যবহারকারীকে আলাদা আলাদা চ্যানেল (ফ্রিকোয়েন্সি ব্যান্ড) বরাদ্দ করা হয়। প্রতিটি ব্যবহারকারীর একটি নির্দিষ্ট ফ্রিকোয়েন্সি চ্যানেল থাকে।"
+  },
+  {
+    "id": "ch29_q91",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ cellular systems use FDMA type system.",
+    "options": ["Digital", "Analog", "Both a and b", "Discrete"],
+    "correct_answer": "Analog",
+    "explanation_bn": "অ্যানালগ সেলুলার সিস্টেম FDMA ব্যবহার করে। 1G AMPS সিস্টেমে FDMA ব্যবহার হয়েছিল যেখানে প্রতিটি কল আলাদা ফ্রিকোয়েন্সি চ্যানেলে পরিচালিত হত।"
+  },
+  {
+    "id": "ch29_q92",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is a multicellular transmission type technique?",
+    "options": ["FDMA", "OFDM", "CDMA", "TDMA"],
+    "correct_answer": "OFDM",
+    "explanation_bn": "OFDM (Orthogonal Frequency Division Multiplexing) একটি মাল্টিসেলুলার ট্রান্সমিশন পদ্ধতি। এটি একাধিক অর্থোগোনাল সাবক্যারিয়ার ব্যবহার করে ডেটা পাঠায়।"
+  },
+  {
+    "id": "ch29_q93",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDMA stands for ___.",
+    "options": ["Orthogonal frequency division multiplexing", "Original frequency division multiplexing", "Orthogonal frequency derived multiplexing", "Orthogonal frequency-division mutant"],
+    "correct_answer": "Orthogonal frequency division multiplexing",
+    "explanation_bn": "OFDMA এর পূর্ণরূপ Orthogonal Frequency Division Multiple Access। এটি OFDM এর মাল্টিপল অ্যাক্সেস সংস্করণ যা 4G LTE তে ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q94",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDMA was introduced by ___.",
+    "options": ["Robert W", "Williams", "Richard", "Charles"],
+    "correct_answer": "Robert W",
+    "explanation_bn": "OFDMA Robert W (Robert W. Chang) দ্বারা প্রবর্তিত হয়েছিল। তিনি ১৯৬৬ সালে Bell Labs এ মাল্টিটোন ট্রান্সমিশনের ধারণা উপস্থাপন করেন।"
+  },
+  {
+    "id": "ch29_q95",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDMA was introduced by Robert W in ___ year.",
+    "options": ["1966", "1967", "1965", "1999"],
+    "correct_answer": "1966",
+    "explanation_bn": "Robert W. Chang ১৯৬৬ সালে OFDM এর মূল ধারণা প্রবর্তন করেন। তাঁর গবেষণাপত্র Bell System Technical Journal-এ প্রকাশিত হয়েছিল।"
+  },
+  {
+    "id": "ch29_q96",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Is OFDM a FDMA technique?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "OFDM একটি FDMA কৌশল। এটি স্পেকট্রামকে অনেক ছোট অর্থোগোনাল সাবক্যারিয়ারে ভাগ করে এবং প্রতিটি সাবক্যারিয়ারে আলাদা ডেটা পাঠায়।"
+  },
+  {
+    "id": "ch29_q97",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDMA was incorporated into ___ standard.",
+    "options": ["Wireless network", "Wired network", "Cable network", "All the above"],
+    "correct_answer": "Wireless network",
+    "explanation_bn": "OFDMA বেতার নেটওয়ার্ক স্ট্যান্ডার্ডে অন্তর্ভুক্ত হয়েছে। IEEE 802.16 (WiMAX) এবং 4G LTE বেতার স্ট্যান্ডার্ডে OFDMA ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q98",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In OFDMA, data stream are carried by multiple ___ rate subcarrier type tones.",
+    "options": ["High", "Low", "Zero", "Infinite"],
+    "correct_answer": "Low",
+    "explanation_bn": "OFDMA তে ডেটা স্ট্রিম একাধিক কম গতির (Low rate) সাবক্যারিয়ার টোনে বহন করা হয়। এই কম গতির অনেক সাবক্যারিয়ার একসাথে উচ্চ মোট ডেটা রেট প্রদান করে।"
+  },
+  {
+    "id": "ch29_q99",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Does OFDMA overcomes hostile frequency selective type fading?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "OFDMA ফ্রিকোয়েন্সি সিলেক্টিভ ফেডিং কাটিয়ে উঠতে পারে। ছোট সাবক্যারিয়ার ব্যান্ডউইথ ব্যবহার করায় প্রতিটি সাবক্যারিয়ার ফ্ল্যাট ফেডিং অনুভব করে।"
+  },
+  {
+    "id": "ch29_q100",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDMA combines benefits of ___ techniques.",
+    "options": ["Coherent detection", "OFDM modulation", "OFDM demodulation", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "OFDMA, OFDM মডুলেশন এবং OFDM ডিমডুলেশন উভয় প্রযুক্তির সুবিধা একত্রিত করে। এটি স্পেকট্রাল দক্ষতা এবং মাল্টিপথ প্রতিরোধ উভয়ই উন্নত করে।"
+  }
+,
+  {
+    "id": "ch29_q101",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDM technique reduces electrical BW using ___.",
+    "options": ["Up-down conversion", "Frequency conversion", "Increasing frequency bandwidth", "None of the above"],
+    "correct_answer": "Up-down conversion",
+    "explanation_bn": "OFDM আপ-ডাউন কনভার্সন ব্যবহার করে বৈদ্যুতিক ব্যান্ডউইথ কমায়। বেসব্যান্ড সিগনালকে আপকনভার্ট করে পাঠানো হয় এবং রিসিভারে ডাউনকনভার্ট করা হয়।"
+  },
+  {
+    "id": "ch29_q102",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDM is suitable for ___ speed circuit design.",
+    "options": ["High", "Low", "Medium", "Zero"],
+    "correct_answer": "High",
+    "explanation_bn": "OFDM উচ্চ গতির সার্কিট ডিজাইনের জন্য উপযুক্ত। এটি বিস্তৃত ব্যান্ডউইথে উচ্চ ডেটা রেট অর্জন করতে পারে এবং মাল্টিপথ ইন্টারফারেন্স সহ্য করতে পারে।"
+  },
+  {
+    "id": "ch29_q103",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "OFDM uses ___ mathematical techniques for processing signal.",
+    "options": ["FFT", "IFFT", "DFT", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "OFDM সিগনাল প্রসেসিংয়ে FFT (Fast Fourier Transform) এবং IFFT (Inverse FFT) উভয়ই ব্যবহার করে। ট্রান্সমিটারে IFFT এবং রিসিভারে FFT প্রয়োগ হয়।"
+  },
+  {
+    "id": "ch29_q104",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "FFT stands for ___.",
+    "options": ["Fast Fourier Transform", "Fast Forward Transform", "Fast Fourier Turn", "None of the above"],
+    "correct_answer": "Fast Fourier Transform",
+    "explanation_bn": "FFT এর পূর্ণরূপ Fast Fourier Transform। এটি DFT (Discrete Fourier Transform) এর দ্রুত অ্যালগরিদম যা OFDM সিগনাল প্রসেসিংয়ে ব্যাপকভাবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q105",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are 1G mobile systems?",
+    "options": ["NMT 450", "AMPS", "TACS", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "1G মোবাইল সিস্টেমের মধ্যে আছে NMT 450 (স্ক্যান্ডিনেভিয়া), AMPS (উত্তর আমেরিকা) এবং TACS (যুক্তরাজ্য)। এগুলো সবই প্রথম প্রজন্মের অ্যানালগ সিস্টেম।"
+  },
+  {
+    "id": "ch29_q106",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "NMT 450 was released in ___ year.",
+    "options": ["1981", "1982", "1985", "1986"],
+    "correct_answer": "1981",
+    "explanation_bn": "NMT 450 (Nordic Mobile Telephone) ১৯৮১ সালে স্ক্যান্ডিনেভিয়ায় চালু হয়। এটি ছিল ৪৫০ MHz ব্যান্ডে কাজ করা প্রথম 1G সিস্টেম।"
+  },
+  {
+    "id": "ch29_q107",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "AMPS was released in ___ year.",
+    "options": ["1981", "1982", "1985", "1986"],
+    "correct_answer": "1982",
+    "explanation_bn": "AMPS ১৯৮২ সালে যুক্তরাষ্ট্রে চালু হয়। প্রথমে শিকাগোতে পরীক্ষামূলকভাবে ১৯৭৮ সালে এবং বাণিজ্যিকভাবে ১৯৮২ সালে চালু হয়।"
+  },
+  {
+    "id": "ch29_q108",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "TACS was released in ___ year.",
+    "options": ["1981", "1982", "1985", "1986"],
+    "correct_answer": "1985",
+    "explanation_bn": "TACS (Total Access Communication System) ১৯৮৫ সালে যুক্তরাজ্যে চালু হয়। এটি AMPS এর উপর ভিত্তি করে তৈরি এবং ৯০০ MHz ব্যান্ডে কাজ করত।"
+  },
+  {
+    "id": "ch29_q109",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "NMT 900 was released in ___ year.",
+    "options": ["1981", "1982", "1985", "1986"],
+    "correct_answer": "1986",
+    "explanation_bn": "NMT 900 ১৯৮৬ সালে চালু হয়। NMT 450 এর পরবর্তী সংস্করণ হিসেবে এটি ৯০০ MHz ব্যান্ডে কাজ করে এবং বেশি ব্যবহারকারী সমর্থন করতে পারে।"
+  },
+  {
+    "id": "ch29_q110",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "In NMT 400 or 900, NMT stands for ___.",
+    "options": ["Nordic Mobile", "Northern Mobile", "Nordic Mic", "None of the above"],
+    "correct_answer": "Nordic Mobile",
+    "explanation_bn": "NMT এর পূর্ণরূপ Nordic Mobile Telephone। এটি স্ক্যান্ডিনেভিয়ান দেশগুলোতে (ডেনমার্ক, ফিনল্যান্ড, নরওয়ে, সুইডেন) প্রথম চালু হওয়া 1G সিস্টেম।"
+  },
+  {
+    "id": "ch29_q111",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "TACS stands for ___.",
+    "options": ["Total Access Communication System", "Total Allocate Communication System", "Total Access Conduct System", "None of the above"],
+    "correct_answer": "Total Access Communication System",
+    "explanation_bn": "TACS এর পূর্ণরূপ Total Access Communication System। এটি ১৯৮৫ সালে যুক্তরাজ্যে চালু হওয়া 1G অ্যানালগ সেলুলার সিস্টেম।"
+  },
+  {
+    "id": "ch29_q112",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the disadvantages of 1G?",
+    "options": ["Analog", "Not robust", "Incompatible standards", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "1G এর অসুবিধা: অ্যানালগ প্রযুক্তি (নয়েজ প্রবণ), দুর্বল (Not robust) এবং অসামঞ্জস্যপূর্ণ মান। বিভিন্ন দেশে ভিন্ন স্ট্যান্ডার্ড থাকায় আন্তর্জাতিক রোমিং কঠিন ছিল।"
+  },
+  {
+    "id": "ch29_q113",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the advantages of 2G?",
+    "options": ["Advanced modulation techniques", "Reduce in overhead", "Includes services such as SMS", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "2G এর সুবিধা: উন্নত মডুলেশন কৌশল, ওভারহেড হ্রাস এবং SMS সেবা। ডিজিটাল প্রযুক্তির ফলে এসব সুবিধা পাওয়া গেছে।"
+  },
+  {
+    "id": "ch29_q114",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are 2G technologies?",
+    "options": ["DAMPS", "GSM", "JDC", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "2G প্রযুক্তির মধ্যে আছে DAMPS (উত্তর আমেরিকা), GSM (ইউরোপ) এবং JDC (জাপান)। এগুলো সবই ডিজিটাল দ্বিতীয় প্রজন্মের সেলুলার স্ট্যান্ডার্ড।"
+  },
+  {
+    "id": "ch29_q115",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "DAMPS 2G technology stands for ___.",
+    "options": ["Digital Advanced Mobile Phone Systems", "Digital Auto Mobile Phone Systems", "Digital Advanced Mode Phone Systems", "None of the above"],
+    "correct_answer": "Digital Advanced Mobile Phone Systems",
+    "explanation_bn": "DAMPS এর পূর্ণরূপ Digital Advanced Mobile Phone Systems। এটি উত্তর আমেরিকার 2G ডিজিটাল সেলুলার স্ট্যান্ডার্ড যা AMPS এর ডিজিটাল সংস্করণ।"
+  },
+  {
+    "id": "ch29_q116",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "DAMPS 2G technology was used in ___ country.",
+    "options": ["North America", "European", "Japan", "UK"],
+    "correct_answer": "North America",
+    "explanation_bn": "DAMPS প্রযুক্তি উত্তর আমেরিকায় ব্যবহৃত হয়েছিল। এটি IS-136 স্ট্যান্ডার্ড হিসেবেও পরিচিত এবং AMPS এর ডিজিটাল উত্তরসূরি ছিল।"
+  },
+  {
+    "id": "ch29_q117",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM 2G technology was used by ___.",
+    "options": ["North America", "European", "Japan", "UK"],
+    "correct_answer": "European",
+    "explanation_bn": "GSM প্রযুক্তি ইউরোপে উদ্ভাবিত এবং প্রথম ব্যবহৃত হয়। GSM (Global System for Mobile) বর্তমানে বিশ্বের সবচেয়ে বেশি ব্যবহৃত 2G স্ট্যান্ডার্ড।"
+  },
+  {
+    "id": "ch29_q118",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "JDC 2G technology stands for ___.",
+    "options": ["Japanese Digital Cellular", "Japanese Data Cellular", "Japanese Digital Cite", "None of the above"],
+    "correct_answer": "Japanese Digital Cellular",
+    "explanation_bn": "JDC এর পূর্ণরূপ Japanese Digital Cellular। এটি জাপানের 2G ডিজিটাল সেলুলার স্ট্যান্ডার্ড যা PDC (Personal Digital Cellular) নামেও পরিচিত।"
+  },
+  {
+    "id": "ch29_q119",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "JDC 2G technology is used by ___ country.",
+    "options": ["North America", "European", "Japan", "UK"],
+    "correct_answer": "Japan",
+    "explanation_bn": "JDC (Japanese Digital Cellular) প্রযুক্তি জাপানে ব্যবহৃত হয়। এটি জাপানের নিজস্ব 2G ডিজিটাল সেলুলার স্ট্যান্ডার্ড ছিল।"
+  },
+  {
+    "id": "ch29_q120",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "CT-2 of 2G technology stands for ___.",
+    "options": ["Cordless Telephones-2", "Cordless Telegraph-2", "Cord Telephones-2", "None of the above"],
+    "correct_answer": "Cordless Telephones-2",
+    "explanation_bn": "CT-2 এর পূর্ণরূপ Cordless Telephones-2। এটি দ্বিতীয় প্রজন্মের কর্ডলেস টেলিফোন স্ট্যান্ডার্ড যা 2G প্রযুক্তির অন্তর্গত।"
+  }
+,
+  {
+    "id": "ch29_q121",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "CT-2 of 2G technology is used in ___ country.",
+    "options": ["North America", "European", "Japan", "UK"],
+    "correct_answer": "UK",
+    "explanation_bn": "CT-2 প্রযুক্তি যুক্তরাজ্যে (UK) ব্যবহৃত হয়। এটি যুক্তরাজ্যে উদ্ভাবিত এবং সেখানে ব্যাপকভাবে ব্যবহৃত কর্ডলেস টেলিফোন স্ট্যান্ডার্ড।"
+  },
+  {
+    "id": "ch29_q122",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM uses ___ number of frequency range.",
+    "options": ["3", "4", "5", "6"],
+    "correct_answer": "4",
+    "explanation_bn": "GSM ৪টি ফ্রিকোয়েন্সি পরিসর ব্যবহার করে: GSM 850, GSM 900, GSM 1800 এবং GSM 1900 MHz। বিভিন্ন দেশে বিভিন্ন ব্যান্ড ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q123",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM is implemented using 4 frequency ranges and ___ number of multiplexing techniques.",
+    "options": ["3", "4", "5", "6"],
+    "correct_answer": "3",
+    "explanation_bn": "GSM ৪টি ফ্রিকোয়েন্সি পরিসর এবং ৩টি মাল্টিপ্লেক্সিং কৌশল ব্যবহার করে: FDMA, TDMA এবং FDD। এই সমন্বয় GSM কে দক্ষ করে তোলে।"
+  },
+  {
+    "id": "ch29_q124",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the multiplexing techniques used in GSM?",
+    "options": ["FDMA", "TDMA", "FDD", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "GSM এ FDMA (ফ্রিকোয়েন্সি বিভাজন), TDMA (সময় বিভাজন) এবং FDD (Frequency Division Duplex) সবই ব্যবহৃত হয়। এই তিনটি মিলে GSM এর মাল্টিপল অ্যাক্সেস স্কিম গঠিত।"
+  },
+  {
+    "id": "ch29_q125",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Primary GSM uses uplink frequency in the range between ___.",
+    "options": ["890 to 915 MHz", "935 to 960 MHz", "880 to 915 MHz", "925 to 960 MHz"],
+    "correct_answer": "890 to 915 MHz",
+    "explanation_bn": "প্রাথমিক GSM 900 এর আপলিংক ফ্রিকোয়েন্সি ৮৯০ থেকে ৯১৫ MHz। আপলিংক হলো মোবাইল থেকে বেস স্টেশনে সিগনাল পাঠানো।"
+  },
+  {
+    "id": "ch29_q126",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Primary GSM uses downlink frequency in the range between ___.",
+    "options": ["890 to 915 MHz", "935 to 960 MHz", "880 to 915 MHz", "925 to 960 MHz"],
+    "correct_answer": "935 to 960 MHz",
+    "explanation_bn": "প্রাথমিক GSM 900 এর ডাউনলিংক ফ্রিকোয়েন্সি ৯৩৫ থেকে ৯৬০ MHz। ডাউনলিংক হলো বেস স্টেশন থেকে মোবাইলে সিগনাল আসা।"
+  },
+  {
+    "id": "ch29_q127",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Extended GSM uses uplink frequency in the range between ___.",
+    "options": ["890 to 915 MHz", "935 to 960 MHz", "880 to 915 MHz", "925 to 960 MHz"],
+    "correct_answer": "880 to 915 MHz",
+    "explanation_bn": "এক্সটেন্ডেড GSM (E-GSM) এর আপলিংক ফ্রিকোয়েন্সি ৮৮০ থেকে ৯১৫ MHz। এটি মূল GSM 900 ব্যান্ডকে নিচের দিকে প্রসারিত করেছে।"
+  },
+  {
+    "id": "ch29_q128",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Extended GSM uses downlink frequency in the range between ___.",
+    "options": ["890 to 915 MHz", "935 to 960 MHz", "880 to 915 MHz", "925 to 960 MHz"],
+    "correct_answer": "925 to 960 MHz",
+    "explanation_bn": "এক্সটেন্ডেড GSM (E-GSM) এর ডাউনলিংক ফ্রিকোয়েন্সি ৯২৫ থেকে ৯৬০ MHz। এটি মূল ডাউনলিংক ব্যান্ডকে নিচের দিকে প্রসারিত করেছে।"
+  },
+  {
+    "id": "ch29_q129",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM 1800 uses uplink frequency in the range between ___.",
+    "options": ["1710 to 1785 MHz", "1805 to 1880 MHz", "1850 to 1910 MHZ", "1930 to 1990 MHZ"],
+    "correct_answer": "1710 to 1785 MHz",
+    "explanation_bn": "GSM 1800 (DCS 1800) এর আপলিংক ফ্রিকোয়েন্সি ১৭১০ থেকে ১৭৮৫ MHz। এই ব্যান্ড উচ্চ জনঘনত্বের এলাকায় অতিরিক্ত ক্যাপাসিটির জন্য ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q130",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM 1800 uses downlink frequency in the range between ___.",
+    "options": ["1710 to 1785 MHz", "1805 to 1880 MHz", "1850 to 1910 MHZ", "1930 to 1990 MHZ"],
+    "correct_answer": "1805 to 1880 MHz",
+    "explanation_bn": "GSM 1800 এর ডাউনলিংক ফ্রিকোয়েন্সি ১৮০৫ থেকে ১৮৮০ MHz। আপলিংক এবং ডাউনলিংকের মধ্যে ৯৫ MHz ব্যবধান রয়েছে।"
+  },
+  {
+    "id": "ch29_q131",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM 1900 uses uplink frequency in the range between ___.",
+    "options": ["1710 to 1785 MHz", "1805 to 1880 MHz", "1850 to 1910 MHZ", "1930 to 1990 MHZ"],
+    "correct_answer": "1850 to 1910 MHZ",
+    "explanation_bn": "GSM 1900 (PCS 1900) এর আপলিংক ফ্রিকোয়েন্সি ১৮৫০ থেকে ১৯১০ MHz। এই ব্যান্ড মূলত উত্তর আমেরিকায় ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q132",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM 1900 uses downlink frequency in the range between ___.",
+    "options": ["1710 to 1785 MHz", "1805 to 1880 MHz", "1850 to 1910 MHZ", "1930 to 1990 MHZ"],
+    "correct_answer": "1930 to 1990 MHZ",
+    "explanation_bn": "GSM 1900 এর ডাউনলিংক ফ্রিকোয়েন্সি ১৯৩০ থেকে ১৯৯০ MHz। আপলিংক এবং ডাউনলিংকের মধ্যে ৮০ MHz ব্যবধান রয়েছে।"
+  },
+  {
+    "id": "ch29_q133",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The cellular approach in mobile radio is used when frequency resource is ___.",
+    "options": ["Limited", "Zero", "Maximum", "Minimum"],
+    "correct_answer": "Limited",
+    "explanation_bn": "সেলুলার পদ্ধতি তখন ব্যবহার হয় যখন ফ্রিকোয়েন্সি সম্পদ সীমিত। সেলুলার পুনর্ব্যবহারের মাধ্যমে একই ফ্রিকোয়েন্সি বিভিন্ন দূরবর্তী সেলে পুনরায় ব্যবহার করা যায়।"
+  },
+  {
+    "id": "ch29_q134",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A cellular network in which the sum of the area is divided into a smaller portion of are is called ___.",
+    "options": ["Cells", "Zone", "Perimeter", "Fence"],
+    "correct_answer": "Cells",
+    "explanation_bn": "সেলুলার নেটওয়ার্কে মোট কভারেজ এলাকাকে ছোট ছোট অংশে ভাগ করা হয় যাকে সেল বলে। প্রতিটি সেলে একটি বেস স্টেশন থাকে যা সেই সেলের ব্যবহারকারীদের সেবা দেয়।"
+  },
+  {
+    "id": "ch29_q135",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A cell can cover ___ number of mobile subscribers.",
+    "options": ["Multiple", "Limited", "Numerous", "Zero"],
+    "correct_answer": "Limited",
+    "explanation_bn": "একটি সেল সীমিত সংখ্যক মোবাইল সাবস্ক্রাইবার কভার করতে পারে। চ্যানেলের সংখ্যা এবং ট্রাফিক ক্যাপাসিটি একটি সেলের সর্বোচ্চ সাবস্ক্রাইবার সংখ্যা নির্ধারণ করে।"
+  },
+  {
+    "id": "ch29_q136",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the components of a cell?",
+    "options": ["Base station", "RF channels", "Transmitter and receiver", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "একটি সেলের উপাদান: বেস স্টেশন (যোগাযোগ কেন্দ্র) এবং RF চ্যানেল (রেডিও ফ্রিকোয়েন্সি চ্যানেল)। এই দুটি মিলে একটি সেল গঠিত হয়।"
+  },
+  {
+    "id": "ch29_q137",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Is the frequency within a cell is simultaneously utilized by other cells at a geographical distance?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "হ্যাঁ, একটি সেলের ফ্রিকোয়েন্সি ভৌগোলিক দূরত্বে অন্য সেলেও ব্যবহার করা হয়। এটি ফ্রিকোয়েন্সি রিইউজ নামে পরিচিত এবং সেলুলার সিস্টেমের মূল ধারণা।"
+  },
+  {
+    "id": "ch29_q138",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A 7 cell type pattern divides frequency resources into ___ number of parts.",
+    "options": ["5", "6", "7", "3"],
+    "correct_answer": "7",
+    "explanation_bn": "7-সেল টাইপ প্যাটার্নে ফ্রিকোয়েন্সি সম্পদ ৭ ভাগে বিভক্ত। প্রতিটি ক্লাস্টারে ৭টি সেল থাকে এবং প্রতিটি সেল আলাদা ফ্রিকোয়েন্সি গ্রুপ ব্যবহার করে।"
+  },
+  {
+    "id": "ch29_q139",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A cluster of cells where the available frequency spectrum is completely consumed is called ___.",
+    "options": ["Cluster of cells", "Group cells", "Cell site", "None of the above"],
+    "correct_answer": "Cluster of cells",
+    "explanation_bn": "যে সেলের ক্লাস্টারে উপলব্ধ ফ্রিকোয়েন্সি স্পেকট্রাম সম্পূর্ণ ব্যবহৃত হয় তাকে ক্লাস্টার অফ সেলস বলে। পরবর্তী ক্লাস্টার থেকে একই ফ্রিকোয়েন্সি পুনরায় ব্যবহার শুরু হয়।"
+  },
+  {
+    "id": "ch29_q140",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "If 2 cells have a similar number of adjacent clusters and use the same RF channel set then the channel is called ___.",
+    "options": ["Co-channel cell", "Adjacent cell", "Side-channel", "Neighboring cell"],
+    "correct_answer": "Co-channel cell",
+    "explanation_bn": "যে দুটি সেল একই RF চ্যানেল সেট ব্যবহার করে তাদের কো-চ্যানেল সেল বলে। এই সেলগুলো একে অপরের থেকে পর্যাপ্ত দূরত্বে থাকে যাতে ইন্টারফারেন্স কম হয়।"
+  }
+,
+  {
+    "id": "ch29_q141",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the properties of the cellular site?",
+    "options": ["Uses available RF efficiently", "Mobile user can get an efficient signal within cell site", "Zero disturbance", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "সেলুলার সাইটের বৈশিষ্ট্য: RF দক্ষতার সাথে ব্যবহার করে এবং সেল সাইটের মধ্যে মোবাইল ব্যবহারকারীরা ভালো সিগনাল পায়। এই দুটি বৈশিষ্ট্য সেলুলার সিস্টেমের সুবিধা।"
+  },
+  {
+    "id": "ch29_q142",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A cell is available in which of the following shapes?",
+    "options": ["Hexagon", "Square", "Triangle", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "সেল হেক্সাগন, বর্গক্ষেত্র এবং ত্রিভুজ আকারে হতে পারে। তবে হেক্সাগন আকার সবচেয়ে বেশি ব্যবহৃত হয় কারণ এটি কম ওভারল্যাপে সর্বোচ্চ এলাকা কভার করে।"
+  },
+  {
+    "id": "ch29_q143",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A hexagon shape covers a specific area using ___ cells.",
+    "options": ["Few", "Many", "Single", "Two"],
+    "correct_answer": "Few",
+    "explanation_bn": "হেক্সাগন আকার কম সংখ্যক সেল ব্যবহার করে একটি নির্দিষ্ট এলাকা কভার করতে পারে। হেক্সাগনাল সেল সবচেয়ে দক্ষভাবে এলাকা কভার করে।"
+  },
+  {
+    "id": "ch29_q144",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "A hexagonal cell has a minimum number of ___.",
+    "options": ["Base stations", "Capital investments", "Both a and b", "Transmitter"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "হেক্সাগনাল সেলে ন্যূনতম বেস স্টেশন এবং মূলধন বিনিয়োগ প্রয়োজন। এটি অন্যান্য আকারের তুলনায় সবচেয়ে সাশ্রয়ী কভারেজ প্রদান করে।"
+  },
+  {
+    "id": "ch29_q145",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Can other shapes such as triangle, circle, or square type cell provide efficient coverage compared to hexagon cell shape?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "No",
+    "explanation_bn": "না, ত্রিভুজ, বৃত্ত বা বর্গক্ষেত্র আকার হেক্সাগনের মতো দক্ষ কভারেজ দিতে পারে না। হেক্সাগন সর্বোচ্চ এলাকা কভার করে এবং ওভারল্যাপ ও গ্যাপ সবচেয়ে কম।"
+  },
+  {
+    "id": "ch29_q146",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Do radio signals depend on environmental conditions?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "রেডিও সিগনাল পরিবেশগত অবস্থার উপর নির্ভর করে। আবহাওয়া, ভবন, গাছপালা এবং ভূখণ্ড রেডিও সিগনালের প্রসারণকে প্রভাবিত করে।"
+  },
+  {
+    "id": "ch29_q147",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the reason behind radio signal dependency on the environment?",
+    "options": ["Separation between receiver and transmitter", "Objects like trees, terrain, and buildings", "Climatic changes", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "রেডিও সিগনাল পরিবেশের উপর নির্ভরশীল: রিসিভার-ট্রান্সমিটারের দূরত্ব, গাছ-পাহাড়-ভবন এবং আবহাওয়ার পরিবর্তন সবই সিগনালকে প্রভাবিত করে।"
+  },
+  {
+    "id": "ch29_q148",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The variation of signal attenuation with respect to different parameters is called ___.",
+    "options": ["Fading", "Distortion", "Disturbance", "Noise"],
+    "correct_answer": "Fading",
+    "explanation_bn": "বিভিন্ন প্যারামিটারের সাথে সিগনাল অ্যাটেনুয়েশনের পরিবর্তনকে ফেডিং বলে। মোবাইল যোগাযোগে ফেডিং একটি গুরুত্বপূর্ণ সমস্যা।"
+  },
+  {
+    "id": "ch29_q149",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Fading is a ___ process.",
+    "options": ["Random", "Continuous", "Discontinuous", "None of the above"],
+    "correct_answer": "Random",
+    "explanation_bn": "ফেডিং একটি র্যান্ডম প্রক্রিয়া। সিগনালের শক্তি অনিয়মিতভাবে ওঠানামা করে কারণ মাল্টিপথ প্রসারণ, মোবাইলের গতি এবং পরিবেশগত পরিবর্তন র্যান্ডম।"
+  },
+  {
+    "id": "ch29_q150",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Fading is of ___ types.",
+    "options": ["3", "4", "5", "6"],
+    "correct_answer": "4",
+    "explanation_bn": "ফেডিং ৪ ধরনের: Rayleigh fading, Shadow fading (large-scale), Small-scale fading এবং Selective fading। মোবাইল যোগাযোগে এই চারটি ধরনই দেখা যায়।"
+  },
+  {
+    "id": "ch29_q151",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the advantages of mobile communication?",
+    "options": ["Location-independent", "Wireless communication", "Operates at higher speed", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগের সুবিধা: অবস্থান-স্বাধীন (যেকোনো জায়গা থেকে), বেতার যোগাযোগ এবং উচ্চ গতিতে পরিচালনা। এই সব সুবিধা মোবাইলকে অপরিহার্য করেছে।"
+  },
+  {
+    "id": "ch29_q152",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the disadvantages of mobile communication?",
+    "options": ["Workflow disruption", "Requires effective monitoring", "Security breach", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগের অসুবিধা: কর্মপ্রবাহ বাধাগ্রস্ত, কার্যকর পর্যবেক্ষণ প্রয়োজন এবং নিরাপত্তা লঙ্ঘনের ঝুঁকি। এই সব সমস্যা মোবাইল যোগাযোগে বিদ্যমান।"
+  },
+  {
+    "id": "ch29_q153",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "What is the value of RF signal propagation in free space?",
+    "options": ["2", "3", "4", "5"],
+    "correct_answer": "2",
+    "explanation_bn": "মুক্ত স্থানে RF সিগনাল প্রসারণ ধ্রুবকের মান ২। মুক্ত স্থানে সিগনাল শক্তি দূরত্বের বর্গের ব্যস্তানুপাতে কমে (inverse square law)।"
+  },
+  {
+    "id": "ch29_q154",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "RF signal propagation constant with value 2 is applied for ___ systems.",
+    "options": ["Static radio", "Dynamic radio", "Both a and b", "None of the above"],
+    "correct_answer": "Static radio",
+    "explanation_bn": "প্রসারণ ধ্রুবক ২ স্থির রেডিও সিস্টেমে প্রযোজ্য যেখানে মুক্ত স্থানের মতো পরিস্থিতি থাকে। গতিশীল পরিবেশে এই মান বেশি হয়।"
+  },
+  {
+    "id": "ch29_q155",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "What is the range value of RF signal propagation constant in a mobile environment?",
+    "options": ["2 to 3", "3 to 4", "4 to 6", "Both b and c"],
+    "correct_answer": "3 to 4",
+    "explanation_bn": "মোবাইল পরিবেশে RF সিগনাল প্রসারণ ধ্রুবকের মান ৩ থেকে ৪। ভবন, গাছ এবং অন্যান্য বাধার কারণে সিগনাল মুক্ত স্থানের চেয়ে দ্রুত ক্ষয় পায়।"
+  },
+  {
+    "id": "ch29_q156",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "LOS in mobile communication is abbreviated as ___.",
+    "options": ["Line Of Sight", "Light of Sight", "Linear Of Sight", "Loss of Sight"],
+    "correct_answer": "Line Of Sight",
+    "explanation_bn": "LOS এর পূর্ণরূপ Line Of Sight। মোবাইল যোগাযোগে LOS প্রসারণ হলো যেখানে ট্রান্সমিটার এবং রিসিভারের মধ্যে সরাসরি দৃষ্টিরেখা থাকে।"
+  },
+  {
+    "id": "ch29_q157",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ propagation of RF waves occurs due to reflection of RF energy from obstacles.",
+    "options": ["Multipath", "Unidirectional", "Bi-directional", "All the above"],
+    "correct_answer": "Multipath",
+    "explanation_bn": "মাল্টিপথ প্রসারণ ঘটে যখন RF তরঙ্গ বাধা থেকে প্রতিফলিত হয়ে একাধিক পথে রিসিভারে পৌঁছায়। ভবন, পাহাড় ইত্যাদি বাধা হিসেবে কাজ করে।"
+  },
+  {
+    "id": "ch29_q158",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Reflection of waves generally occurs from ___.",
+    "options": ["Walls", "Hill", "Objects", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "তরঙ্গ প্রতিফলন দেওয়াল, পাহাড় এবং অন্যান্য বস্তু থেকে ঘটে। যেকোনো মসৃণ বা শক্ত পৃষ্ঠ রেডিও তরঙ্গকে প্রতিফলিত করতে পারে।"
+  },
+  {
+    "id": "ch29_q159",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Do reflected waves undergo phase change?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "প্রতিফলিত তরঙ্গে ফেজ পরিবর্তন ঘটে। প্রতিফলনের সময় তরঙ্গের ফেজ ১৮০ ডিগ্রি পরিবর্তিত হতে পারে, যা মাল্টিপথ ইন্টারফারেন্স সৃষ্টি করে।"
+  },
+  {
+    "id": "ch29_q160",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "At what degrees of phase do reflect waves cancel out each other?",
+    "options": ["90", "120", "180", "260"],
+    "correct_answer": "180",
+    "explanation_bn": "১৮০ ডিগ্রি ফেজ পার্থক্যে প্রতিফলিত তরঙ্গ একে অপরকে বাতিল করে দেয়। এটি ডেস্ট্রাক্টিভ ইন্টারফারেন্স যা সিগনাল শক্তি শূন্যে নামিয়ে আনতে পারে।"
+  }
+,
+  {
+    "id": "ch29_q161",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "When a signal cancels out, does its signal strength reduce?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "হ্যাঁ, সিগনাল বাতিল হলে সিগনাল শক্তি হ্রাস পায়। ডেস্ট্রাক্টিভ ইন্টারফারেন্সে তরঙ্গ একে অপরকে দুর্বল করে এবং সিগনাল গুণমান খারাপ হয়।"
+  },
+  {
+    "id": "ch29_q162",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Multipath propagation property in mobile communication leads to ___.",
+    "options": ["Inter symbol interface", "Pulse widening", "Both a and b", "Signal discarding"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "মাল্টিপথ প্রসারণ ইন্টার-সিম্বল ইন্টারফারেন্স (ISI) এবং পালস প্রশস্তকরণ উভয়ই ঘটায়। বিভিন্ন পথে আসা সিগনাল বিলম্বের কারণে ISI হয় এবং পালস ছড়িয়ে পড়ে।"
+  },
+  {
+    "id": "ch29_q163",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ type of fading in mobile communication is caused due to multipath reception.",
+    "options": ["Rayleigh fading", "Shadow fading", "Block fading", "Selective fading"],
+    "correct_answer": "Rayleigh fading",
+    "explanation_bn": "মাল্টিপথ রিসেপশনের কারণে র‍্যালে ফেডিং হয়। এটি তখন ঘটে যখন LOS (Line of Sight) পথ নেই এবং একাধিক প্রতিফলিত তরঙ্গ একসাথে রিসিভারে পৌঁছায়।"
+  },
+  {
+    "id": "ch29_q164",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ cause changes in the frequency of the received RF type signal.",
+    "options": ["Mobility of subscriber", "Mobile phone usage", "Turning of signal", "All the above"],
+    "correct_answer": "Mobility of subscriber",
+    "explanation_bn": "সাবস্ক্রাইবারের গতিশীলতা রিসিভড RF সিগনালের ফ্রিকোয়েন্সিতে পরিবর্তন ঘটায়। এটি ডপলার ইফেক্ট: গতিশীল সাবস্ক্রাইবার থেকে সিগনালের ফ্রিকোয়েন্সি পরিবর্তিত হয়।"
+  },
+  {
+    "id": "ch29_q165",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the counter techniques for solving frequency distortion of an RF signal?",
+    "options": ["Channel coding", "Interleaving", "Equalization", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "RF সিগনালের ফ্রিকোয়েন্সি বিকৃতি সমাধানের কৌশল: চ্যানেল কোডিং (এরর সংশোধন), ইন্টারলিভিং (বার্স্ট এরর ছড়িয়ে দেয়) এবং ইকুয়ালাইজেশন (চ্যানেল বিকৃতি সংশোধন)।"
+  },
+  {
+    "id": "ch29_q166",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the advantages of sectoring?",
+    "options": ["Decreases co-channel interference", "Increases systems capacity", "Increases noise", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "সেক্টরিংয়ের সুবিধা: কো-চ্যানেল ইন্টারফারেন্স কমায় এবং সিস্টেম ক্যাপাসিটি বাড়ায়। দিকনির্দেশক অ্যান্টেনা ব্যবহার করে একটি সেলকে কয়েকটি সেক্টরে ভাগ করা হয়।"
+  },
+  {
+    "id": "ch29_q167",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the disadvantages of sectoring?",
+    "options": ["Requires more antennas", "Reduces efficiency of trunking", "Increases use of Hands offs", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "সেক্টরিংয়ের অসুবিধা: বেশি অ্যান্টেনা প্রয়োজন, ট্রাংকিং দক্ষতা কমে এবং হ্যান্ডঅফ বেশি হয়। এই কারণে নেটওয়ার্ক পরিচালনা জটিল হয়।"
+  },
+  {
+    "id": "ch29_q168",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Do mobile units when travels through a path cross different cells?",
+    "options": ["Yes", "No", "Maybe"],
+    "correct_answer": "Yes",
+    "explanation_bn": "হ্যাঁ, মোবাইল ইউনিট চলাফেরার সময় বিভিন্ন সেল অতিক্রম করে। এই সময় হ্যান্ডঅফ প্রক্রিয়ায় একটি সেল থেকে অন্য সেলে যোগাযোগ হস্তান্তর হয়।"
+  },
+  {
+    "id": "ch29_q169",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile unit traveling through different cells enters different frequency allows the control taken by ___.",
+    "options": ["Base stations", "Antenna", "Servers", "All the above"],
+    "correct_answer": "Base stations",
+    "explanation_bn": "মোবাইল ইউনিট বিভিন্ন সেলে যাওয়ার সময় বেস স্টেশন নিয়ন্ত্রণ নেয়। বেস স্টেশন সিগনাল শক্তি পর্যবেক্ষণ করে এবং প্রয়োজনে হ্যান্ডঅফ শুরু করে।"
+  },
+  {
+    "id": "ch29_q170",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile unit traveling through different cells enters different frequencies allows a base station to take control is defined as ___.",
+    "options": ["Hands off", "Trucking", "Interpolation", "All the above"],
+    "correct_answer": "Hands off",
+    "explanation_bn": "হ্যান্ডঅফ হলো সেই প্রক্রিয়া যেখানে মোবাইল ইউনিট একটি সেল থেকে অন্য সেলে যাওয়ার সময় বেস স্টেশন নিয়ন্ত্রণ হস্তান্তর হয়। কলের ধারাবাহিকতা বজায় রাখতে এটি প্রয়োজনীয়।"
+  },
+  {
+    "id": "ch29_q171",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the conditions for hand-off?",
+    "options": ["Signal received should be below threshold value", "Interface ratio of a carrier should be below that 18dB", "High power consumption", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "হ্যান্ডঅফের শর্ত: রিসিভড সিগনাল থ্রেশহোল্ডের নিচে নামলে এবং ক্যারিয়ার ইন্টারফেস রেশিও ১৮ dB এর নিচে গেলে হ্যান্ডঅফ শুরু হয়।"
+  },
+  {
+    "id": "ch29_q172",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the function of an imperfect filter?",
+    "options": ["Leaks frequencies into pass band", "Adjacent channel interference", "High power consumptions", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "অসম্পূর্ণ ফিল্টার পাসব্যান্ডে ফ্রিকোয়েন্সি লিক করে এবং সংলগ্ন চ্যানেল ইন্টারফারেন্স সৃষ্টি করে। এই দুটি সমস্যাই অসম্পূর্ণ ফিল্টারের ফলাফল।"
+  },
+  {
+    "id": "ch29_q173",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the countermeasures for an imperfect filter?",
+    "options": ["Isolating RF channel", "Reducing distance", "Improving SNR ration", "All the above"],
+    "correct_answer": "Isolating RF channel",
+    "explanation_bn": "অসম্পূর্ণ ফিল্টারের প্রতিকার হলো RF চ্যানেল আইসোলেট করা। এর মাধ্যমে সংলগ্ন চ্যানেল থেকে ইন্টারফারেন্স কমানো যায়।"
+  },
+  {
+    "id": "ch29_q174",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "It is not possible to separate RF frequencies when the value of the reuse factor is ___.",
+    "options": ["Small", "Large", "Infinite", "Zero"],
+    "correct_answer": "Small",
+    "explanation_bn": "রিইউজ ফ্যাক্টর ছোট হলে RF ফ্রিকোয়েন্সি আলাদা করা কঠিন হয়। ছোট রিইউজ ফ্যাক্টর মানে কো-চ্যানেল সেলগুলো কাছাকাছি, ফলে ইন্টারফারেন্স বেশি।"
+  },
+  {
+    "id": "ch29_q175",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ is used for accommodating multiple users within a limited radio spectrum.",
+    "options": ["Trunking", "Fading", "Multiplexing", "Both a and b"],
+    "correct_answer": "Trunking",
+    "explanation_bn": "ট্রাংকিং সীমিত রেডিও স্পেকট্রামে একাধিক ব্যবহারকারী সমন্বয়ের জন্য ব্যবহৃত হয়। এটি চ্যানেল দক্ষতা বাড়িয়ে বেশি ব্যবহারকারীকে সেবা দিতে পারে।"
+  },
+  {
+    "id": "ch29_q176",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GOS in mobile communication stands for ___.",
+    "options": ["Grade of Service", "Grade of Site", "General out Sourcing", "None of the above"],
+    "correct_answer": "Grade of Service",
+    "explanation_bn": "GOS এর পূর্ণরূপ Grade of Service। এটি সেলুলার নেটওয়ার্কে ব্লকড কলের অনুপাত পরিমাপ করে এবং সেবার মানের সূচক হিসেবে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q177",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The condition where all the channels are engaged is called ___.",
+    "options": ["Grade of Service", "Trunking", "Fading", "None of the above"],
+    "correct_answer": "Grade of Service",
+    "explanation_bn": "সমস্ত চ্যানেল ব্যস্ত থাকার অবস্থাকে Grade of Service (GOS) দিয়ে পরিমাপ করা হয়। এই অবস্থায় নতুন কল ব্লক হয় এবং GOS এই ব্লকিং সম্ভাবনা প্রকাশ করে।"
+  },
+  {
+    "id": "ch29_q178",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Cellular-based designers estimate ___ to allocate RF number of channels to meet GOS.",
+    "options": ["Cost", "Capacity", "SNR", "All the above"],
+    "correct_answer": "Capacity",
+    "explanation_bn": "সেলুলার ডিজাইনাররা GOS পূরণের জন্য RF চ্যানেল বরাদ্দে ক্যাপাসিটি অনুমান করেন। ট্রাফিক ক্যাপাসিটি বিশ্লেষণ করে প্রয়োজনীয় চ্যানেল সংখ্যা নির্ধারণ করা হয়।"
+  },
+  {
+    "id": "ch29_q179",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "___ is required to calculate GOS value.",
+    "options": ["ERLANG B table", "LOG table", "Anti Log Table", "All the above"],
+    "correct_answer": "ERLANG B table",
+    "explanation_bn": "GOS মান গণনায় ERLANG B টেবিল ব্যবহার করা হয়। এই টেবিল ট্রাফিক লোড এবং চ্যানেল সংখ্যা থেকে ব্লকিং সম্ভাবনা (GOS) নির্ধারণ করে।"
+  },
+  {
+    "id": "ch29_q180",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The advantage of cell splitting is ___.",
+    "options": ["Improves capacity", "Reduces transmission power", "Adds noise", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "সেল স্প্লিটিংয়ের সুবিধা: ক্যাপাসিটি উন্নত করে এবং ট্রান্সমিশন পাওয়ার কমায়। ছোট সেলে কম পাওয়ার ব্যবহার করে বেশি ব্যবহারকারী সমর্থন করা যায়।"
+  }
+,
+  {
+    "id": "ch29_q181",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "GSM network in mobile communication has ___ number of systems.",
+    "options": ["2", "3", "4", "5"],
+    "correct_answer": "4",
+    "explanation_bn": "GSM নেটওয়ার্কে ৪টি সিস্টেম আছে: মোবাইল স্টেশন (MS), বেস স্টেশন সিস্টেম (BSS), নেটওয়ার্ক ও সুইচিং সিস্টেম (NSS) এবং অপারেশন ও মেইনটেন্যান্স সেন্টার (OMC)।"
+  },
+  {
+    "id": "ch29_q182",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the GSM network systems?",
+    "options": ["Switching system", "Mobile station", "Base station system", "Operation and maintenance center (OMC)", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "GSM নেটওয়ার্কের সিস্টেমগুলো: সুইচিং সিস্টেম, মোবাইল স্টেশন, বেস স্টেশন সিস্টেম এবং অপারেশন ও মেইনটেন্যান্স সেন্টার (OMC)। এগুলো সবই GSM এর অংশ।"
+  },
+  {
+    "id": "ch29_q183",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Switching system is also named ___.",
+    "options": ["Network and Switching Systems", "Networking systems", "Service systems", "All the above"],
+    "correct_answer": "Network and Switching Systems",
+    "explanation_bn": "সুইচিং সিস্টেমকে Network and Switching Systems (NSS) বলা হয়। NSS কল রাউটিং, সাবস্ক্রাইবার ব্যবস্থাপনা এবং রোমিং সমর্থন করে।"
+  },
+  {
+    "id": "ch29_q184",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "NSS in mobile networking systems is abbreviated as ___.",
+    "options": ["Network and Switching Systems", "Networking Systems Switch", "Network Software System", "All the above"],
+    "correct_answer": "Network and Switching Systems",
+    "explanation_bn": "NSS এর পূর্ণরূপ Network and Switching Systems। এটি GSM নেটওয়ার্কের মূল উপাদান যা কল প্রক্রিয়াকরণ এবং সাবস্ক্রাইবার সম্পর্কিত কার্যাবলী পরিচালনা করে।"
+  },
+  {
+    "id": "ch29_q185",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the function of NSS?",
+    "options": ["Processes calls", "Processes subscriber related functions", "Deactivates network", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "NSS এর কাজ: কল প্রক্রিয়াকরণ এবং সাবস্ক্রাইবার সম্পর্কিত কার্যাবলী পরিচালনা। এর মধ্যে লোকেশন রেজিস্ট্রেশন, রোমিং এবং হ্যান্ডঅফ অন্তর্ভুক্ত।"
+  },
+  {
+    "id": "ch29_q186",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the functional units of NSS?",
+    "options": ["Mobile switching center", "Visitor location register", "Home location register", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "NSS এর কার্যকরী ইউনিট: MSC (Mobile Switching Center), VLR (Visitor Location Register) এবং HLR (Home Location Register)। এগুলো একসাথে কাজ করে সেবা প্রদান করে।"
+  },
+  {
+    "id": "ch29_q187",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Mobile switching center interfaces with ___ to operate.",
+    "options": ["PSTN", "MSC", "Other mobile switching centers", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল সুইচিং সেন্টার PSTN, অন্য MSC এবং অন্যান্য মোবাইল সুইচিং সেন্টারের সাথে ইন্টারফেস করে। এটি ভয়েস কল রাউটিং এবং হ্যান্ডঅফ পরিচালনা করে।"
+  },
+  {
+    "id": "ch29_q188",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the functions of MSC?",
+    "options": ["Handles location registration", "Handles MSC-BSS signal protocol", "Manages radio link during calls", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "MSC এর কাজ: লোকেশন রেজিস্ট্রেশন, MSC-BSS সিগনালিং প্রোটোকল পরিচালনা এবং কলের সময় রেডিও লিংক ব্যবস্থাপনা। MSC হলো GSM নেটওয়ার্কের কেন্দ্রীয় সুইচ।"
+  },
+  {
+    "id": "ch29_q189",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "MSC is abbreviated as ___.",
+    "options": ["Mobile Switching Centers", "Mobile Setup Centers", "Movement Switching Centers", "All the above"],
+    "correct_answer": "Mobile Switching Centers",
+    "explanation_bn": "MSC এর পূর্ণরূপ Mobile Switching Center। এটি GSM নেটওয়ার্কের কেন্দ্রীয় সুইচিং উপাদান যা কল রাউটিং এবং নেটওয়ার্ক সংযোগ পরিচালনা করে।"
+  },
+  {
+    "id": "ch29_q190",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the components of the home location register?",
+    "options": ["Contains IMSI", "Services subscription information", "Information on service restriction", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "HLR (Home Location Register) এর উপাদান: IMSI, সার্ভিস সাবস্ক্রিপশন তথ্য এবং সার্ভিস সীমাবদ্ধতার তথ্য। HLR একটি ডেটাবেস যা সাবস্ক্রাইবারের স্থায়ী তথ্য সংরক্ষণ করে।"
+  },
+  {
+    "id": "ch29_q191",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "IMSI is abbreviated as ___.",
+    "options": ["International Mobile Sub Identity", "Internet Mobile Sub Identity", "International Mobile Side Identity", "None of the above"],
+    "correct_answer": "International Mobile Sub Identity",
+    "explanation_bn": "IMSI এর পূর্ণরূপ International Mobile Subscriber Identity। এটি প্রতিটি মোবাইল সাবস্ক্রাইবারের অনন্য পরিচয় নম্বর যা SIM কার্ডে সংরক্ষিত থাকে।"
+  },
+  {
+    "id": "ch29_q192",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "HLR is abbreviated as ___.",
+    "options": ["Home Location Register", "Hide Location Register", "Home Location Relay", "None of the above"],
+    "correct_answer": "Home Location Register",
+    "explanation_bn": "HLR এর পূর্ণরূপ Home Location Register। এটি সাবস্ক্রাইবারের স্থায়ী তথ্য সংরক্ষণকারী ডেটাবেস যা প্রতিটি সাবস্ক্রাইবারের সার্ভিস প্রোফাইল ধারণ করে।"
+  },
+  {
+    "id": "ch29_q193",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Visitor location register is integrated with ___.",
+    "options": ["MSC", "HLR", "ISDN", "All the above"],
+    "correct_answer": "MSC",
+    "explanation_bn": "VLR (Visitor Location Register) MSC এর সাথে সংযুক্ত। VLR সাময়িক সাবস্ক্রাইবার তথ্য সংরক্ষণ করে যারা MSC এর কভারেজ এলাকায় ঘুরে বেড়াচ্ছে।"
+  },
+  {
+    "id": "ch29_q194",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following components does VLR comprise of?",
+    "options": ["Mobile sub identity", "Temporary identity of mobile sub", "ISDN mobile directory number", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "VLR এ থাকে: মোবাইল সাবস্ক্রাইবার পরিচয়, সাময়িক পরিচয় (TMSI) এবং ISDN মোবাইল ডিরেক্টরি নম্বর। এই তথ্যগুলো রোমিং সাবস্ক্রাইবারের সেবায় ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q195",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "IMEI stands for ___.",
+    "options": ["International Mobile Equipment Identity", "Inter Mobile Equipment Identity", "International Movable Equipment Identity", "None of the above"],
+    "correct_answer": "International Mobile Equipment Identity",
+    "explanation_bn": "IMEI এর পূর্ণরূপ International Mobile Equipment Identity। এটি প্রতিটি মোবাইল ডিভাইসের অনন্য ১৫ সংখ্যার পরিচয় নম্বর যা ডিভাইস চুরি ট্র্যাক করতে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q196",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Authentication center is related to ___.",
+    "options": ["HLR", "VLR", "MSC", "None of the above"],
+    "correct_answer": "HLR",
+    "explanation_bn": "অথেনটিকেশন সেন্টার (AuC) HLR এর সাথে সম্পর্কিত। AuC সাবস্ক্রাইবার অথেনটিকেশন চাবি সংরক্ষণ করে এবং নিরাপত্তা প্রক্রিয়া পরিচালনা করে।"
+  },
+  {
+    "id": "ch29_q197",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Authentication center provides ___ for each mobile subscriber.",
+    "options": ["Authentication keys (Ki)", "Information", "Messages", "All the above"],
+    "correct_answer": "Authentication keys (Ki)",
+    "explanation_bn": "অথেনটিকেশন সেন্টার প্রতিটি মোবাইল সাবস্ক্রাইবারের জন্য অথেনটিকেশন চাবি (Ki) প্রদান করে। এই চাবি নেটওয়ার্কে সাবস্ক্রাইবারের পরিচয় যাচাই করতে ব্যবহৃত হয়।"
+  },
+  {
+    "id": "ch29_q198",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "The authentication key provided by the authentication center generates ___.",
+    "options": ["RAND", "SRES", "Cipher key", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "অথেনটিকেশন সেন্টারের চাবি RAND (র্যান্ডম নম্বর), SRES (সাইন্ড রেসপন্স) এবং সাইফার চাবি তৈরি করে। এগুলো একসাথে GSM নিরাপত্তা প্রক্রিয়া গঠন করে।"
+  },
+  {
+    "id": "ch29_q199",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the function of SRES in the authentication key?",
+    "options": ["Authenticates mobile", "Authenticates IMSI", "Secures messages", "All the above"],
+    "correct_answer": "Authenticates IMSI",
+    "explanation_bn": "SRES (Signed Response) IMSI অথেনটিকেট করে। নেটওয়ার্ক RAND পাঠায়, মোবাইল Ki দিয়ে SRES গণনা করে এবং নেটওয়ার্ক এটি যাচাই করে পরিচয় নিশ্চিত করে।"
+  },
+  {
+    "id": "ch29_q200",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the functions of the cipher key?",
+    "options": ["Encrypts communication", "Transmits communication", "Authenticates IMSI", "All the above"],
+    "correct_answer": "Encrypts communication",
+    "explanation_bn": "সাইফার চাবি যোগাযোগ এনক্রিপ্ট করে। GSM এ সাইফার চাবি (Kc) ভয়েস এবং ডেটা ট্রান্সমিশন এনক্রিপ্ট করতে ব্যবহৃত হয়, যা盗청ড়াই প্রতিরোধ করে।"
+  },
+  {
+    "id": "ch29_q201",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the functions of the operation and maintenance center?",
+    "options": ["Installs software", "Manages traffic", "Traces subscriber", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "অপারেশন ও মেইনটেন্যান্স সেন্টার (OMC) এর কাজ: সফটওয়্যার ইনস্টল, ট্রাফিক ব্যবস্থাপনা এবং সাবস্ক্রাইবার ট্রেস করা। এটি পুরো নেটওয়ার্ক পরিচালনা ও পর্যবেক্ষণ করে।"
+  },
+  {
+    "id": "ch29_q202",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the components of a base station?",
+    "options": ["Base trans receiver station", "Base station controller", "Antenna", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "বেস স্টেশনের উপাদান: BTS (Base Transceiver Station) এবং BSC (Base Station Controller)। BTS রেডিও যোগাযোগ পরিচালনা করে এবং BSC একাধিক BTS নিয়ন্ত্রণ করে।"
+  },
+  {
+    "id": "ch29_q203",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the components of mobile stations?",
+    "options": ["SIM", "Mobile equipment's", "Base station", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "মোবাইল স্টেশনের উপাদান: SIM (Subscriber Identity Module) এবং মোবাইল ইকুইপমেন্ট। SIM সাবস্ক্রাইবার তথ্য ধারণ করে এবং মোবাইল ইকুইপমেন্ট হলো ফিজিক্যাল হ্যান্ডসেট।"
+  },
+  {
+    "id": "ch29_q204",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "SIM is abbreviated as ___.",
+    "options": ["Subscriber Identity Module", "Subscriber Idea Module", "Subscriber Identity Mode", "None of the above"],
+    "correct_answer": "Subscriber Identity Module",
+    "explanation_bn": "SIM এর পূর্ণরূপ Subscriber Identity Module। এটি একটি স্মার্ট কার্ড যা IMSI, Ki এবং অন্যান্য সাবস্ক্রাইবার তথ্য সংরক্ষণ করে।"
+  },
+  {
+    "id": "ch29_q205",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the functions of a base station?",
+    "options": ["Transmits and receives radio waves", "Controls data flow", "Manages mobility", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "বেস স্টেশনের কাজ: রেডিও তরঙ্গ প্রেরণ ও গ্রহণ, ডেটা প্রবাহ নিয়ন্ত্রণ এবং গতিশীলতা ব্যবস্থাপনা। এটি মোবাইল নেটওয়ার্কের রেডিও অ্যাক্সেস পয়েন্ট।"
+  },
+  {
+    "id": "ch29_q206",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "European GSM system categorizes mobile telephones into ___ number of units.",
+    "options": ["3", "4", "5", "6"],
+    "correct_answer": "5",
+    "explanation_bn": "ইউরোপিয়ান GSM সিস্টেম মোবাইল টেলিফোনকে ৫টি ক্লাসে ভাগ করে। প্রতিটি ক্লাস সর্বোচ্চ ট্রান্সমিট পাওয়ারের উপর ভিত্তি করে নির্ধারিত।"
+  },
+  {
+    "id": "ch29_q207",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are other network elements of mobile communication?",
+    "options": ["SMS service centers", "Voice mailbox", "SMS flow", "All the above"],
+    "correct_answer": "All the above",
+    "explanation_bn": "মোবাইল যোগাযোগের অন্যান্য নেটওয়ার্ক উপাদান: SMS সার্ভিস সেন্টার, ভয়েস মেইলবক্স এবং SMS ফ্লো। এগুলো মূল নেটওয়ার্কের পাশাপাশি অতিরিক্ত সেবা প্রদান করে।"
+  },
+  {
+    "id": "ch29_q208",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Rayleigh fading is also called as ___.",
+    "options": ["Macroscopic variation", "Microscopic variation", "Signal variation", "None of the above"],
+    "correct_answer": "Macroscopic variation",
+    "explanation_bn": "র‍্যালে ফেডিংকে Macroscopic variation বলা হয়। এটি বড় মাপের সিগনাল পরিবর্তন যা মোবাইল ইউনিটের গতির কারণে দীর্ঘ দূরত্বে পরিলক্ষিত হয়।"
+  },
+  {
+    "id": "ch29_q209",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following are the processes used while communicating information over radio link?",
+    "options": ["Coding", "Modulation", "Interference", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "রেডিও লিংকে তথ্য যোগাযোগে কোডিং (এরর সুরক্ষা) এবং মডুলেশন (সিগনাল তৈরি) উভয়ই ব্যবহৃত হয়। এই দুটি প্রক্রিয়া নির্ভরযোগ্য বেতার যোগাযোগ নিশ্চিত করে।"
+  },
+  {
+    "id": "ch29_q210",
+    "chapter": 29,
+    "chapter_title": "Tele Communication",
+    "question": "Which of the following is the process performed transmitter end in mobile communication?",
+    "options": ["Modulation", "Coding", "Demodulation", "Both a and b"],
+    "correct_answer": "Both a and b",
+    "explanation_bn": "মোবাইল যোগাযোগে ট্রান্সমিটার প্রান্তে মডুলেশন এবং কোডিং উভয়ই সম্পন্ন হয়। কোডিং ডেটাকে এরর-সুরক্ষিত করে এবং মডুলেশন এটিকে প্রেরণযোগ্য সিগনালে রূপান্তরিত করে।"
+  }
+]
