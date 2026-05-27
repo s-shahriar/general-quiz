@@ -217,139 +217,54 @@ export default function MathFormulas({ onBack }) {
 
         {/* ══ S-TRIG: TRIGONOMETRY ══════════════════════════════ */}
         <div className="mf-section" id="trig">
-          <SectionHeader icon="✋" title="ত্রিকোণমিতি — আঙুলের কৌশল" sub="sin · cos · tan — বাম হাতের আঙুল দিয়ে মান বের করো" />
+          <SectionHeader icon="√" title="ত্রিকোণমিতি — √ কৌশল" sub="sin · cos · tan — শুধু √0, 1, 2, 3, 4 মনে রাখো, ভাগ করো 2 দিয়ে" />
 
-          {/* Step-by-step how the trick works */}
+          {/* Trick overview */}
           <Card color="teal" style={{marginBottom:16}}>
-            <CardTitle color="var(--mf-teal)">✋ কৌশলটি কীভাবে কাজ করে?</CardTitle>
-            <div style={{display:'flex', flexWrap:'wrap', gap:16, alignItems:'flex-start', margin:'10px 0'}}>
-              {/* Hand diagram — pinky left, thumb right */}
-              <div style={{flexShrink:0}}>
-                <svg width="165" height="135" viewBox="0 0 165 135">
-                  {/* Palm */}
-                  <rect x="10" y="92" width="145" height="28" rx="10" fill="rgba(15,219,168,.08)" stroke="#0fdba8" strokeWidth="1.5"/>
-                  {/* Fingers: pinky→thumb, left→right, varying heights */}
-                  {[
-                    {x:26,  w:20, h:48, deg:'90°', color:'#f06d7e', name:'কনিষ্ঠা'},
-                    {x:54,  w:22, h:60, deg:'60°', color:'#a78bfa', name:'অনামিকা'},
-                    {x:82,  w:22, h:68, deg:'45°', color:'#5ba4f5', name:'মধ্যমা'},
-                    {x:110, w:22, h:62, deg:'30°', color:'#0fdba8', name:'তর্জনী'},
-                    {x:138, w:24, h:46, deg:'0°',  color:'#f0a500', name:'বুড়ো'},
-                  ].map((f,i) => (
-                    <g key={i}>
-                      <rect x={f.x-f.w/2} y={92-f.h} width={f.w} height={f.h} rx={8}
-                        fill={`${f.color}18`} stroke={f.color} strokeWidth="1.8"/>
-                      <text x={f.x} y={92-f.h-4} textAnchor="middle" fill={f.color} fontSize="9" fontWeight="700">{f.deg}</text>
-                      <text x={f.x} y={131} textAnchor="middle" fill={f.color} fontSize="8">{f.name}</text>
-                    </g>
+            <CardTitle color="var(--mf-teal)">কৌশল: মাত্র একটি সিকোয়েন্স মনে রাখো</CardTitle>
+            <div style={{display:'flex', flexWrap:'wrap', gap:12, margin:'12px 0'}}>
+              <div style={{flex:1, minWidth:140, background:'rgba(15,219,168,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-teal)'}}>
+                <div style={{fontWeight:700, color:'var(--mf-teal)', marginBottom:10, fontSize:13}}>sin — বাড়তি ক্রম ↑</div>
+                <div style={{display:'flex', alignItems:'flex-end', gap:10, marginBottom:8}}>
+                  {['√0','√1','√2','√3','√4'].map((v,i) => (
+                    <div key={i} style={{display:'flex', flexDirection:'column', alignItems:'center', gap:2}}>
+                      <span style={{fontWeight:800, color:'var(--mf-teal)', fontSize:16, fontFamily:"'Space Grotesk',sans-serif"}}>{v}</span>
+                      <span style={{width:'100%', height:1, background:'var(--text-dim)'}} />
+                      <span style={{fontSize:12, color:'var(--text-3)', fontWeight:600}}>2</span>
+                    </div>
                   ))}
-                </svg>
-              </div>
-              {/* Rules */}
-              <div style={{flex:1, minWidth:180}}>
-                <div style={{fontSize:13, color:'var(--text-2)', lineHeight:1.8}}>
-                  <p style={{marginBottom:8}}>বাম হাত মেলে ধরো। প্রতিটি আঙুল একটি কোণ:</p>
-                  <div style={{background:'var(--elevated)', borderRadius:10, padding:'10px 14px', marginBottom:10, borderLeft:'3px solid var(--mf-teal)'}}>
-                    <strong style={{color:'var(--mf-teal)'}}>ধাপ ১:</strong> যে কোণের মান চাও সেই আঙুল <strong>ভাঁজ</strong> করো।
-                  </div>
-                  <div style={{background:'var(--elevated)', borderRadius:10, padding:'10px 14px', marginBottom:10, borderLeft:'3px solid var(--mf-gold)'}}>
-                    <strong style={{color:'var(--mf-gold)'}}>ধাপ ২ — sin:</strong> ভাঁজ করা আঙুলের <strong>ডান দিকে</strong> কতটি আঙুল আছে গণো → সেই সংখ্যা = n<br/>
-                    <strong>sin θ = √n / 2</strong>
-                  </div>
-                  <div style={{background:'var(--elevated)', borderRadius:10, padding:'10px 14px', borderLeft:'3px solid var(--mf-blue)'}}>
-                    <strong style={{color:'var(--mf-blue)'}}>ধাপ ৩ — cos:</strong> ভাঁজ করা আঙুলের <strong>বাম দিকে</strong> কতটি আঙুল আছে গণো → সেই সংখ্যা = n<br/>
-                    <strong>cos θ = √n / 2</strong>
-                  </div>
                 </div>
+                <div style={{fontSize:12, color:'var(--text-3)'}}>n = 0 → 4 &nbsp;→&nbsp; <strong style={{color:'var(--mf-teal)'}}>sin = √n / 2</strong></div>
+              </div>
+              <div style={{flex:1, minWidth:140, background:'rgba(91,164,245,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-blue)'}}>
+                <div style={{fontWeight:700, color:'var(--mf-blue)', marginBottom:10, fontSize:13}}>cos — কমতি ক্রম ↓</div>
+                <div style={{display:'flex', alignItems:'flex-end', gap:10, marginBottom:8}}>
+                  {['√4','√3','√2','√1','√0'].map((v,i) => (
+                    <div key={i} style={{display:'flex', flexDirection:'column', alignItems:'center', gap:2}}>
+                      <span style={{fontWeight:800, color:'var(--mf-blue)', fontSize:16, fontFamily:"'Space Grotesk',sans-serif"}}>{v}</span>
+                      <span style={{width:'100%', height:1, background:'var(--text-dim)'}} />
+                      <span style={{fontSize:12, color:'var(--text-3)', fontWeight:600}}>2</span>
+                    </div>
+                  ))}
+                </div>
+                <div style={{fontSize:12, color:'var(--text-3)'}}>n = 4 → 0 &nbsp;→&nbsp; <strong style={{color:'var(--mf-blue)'}}>cos = √n / 2</strong></div>
+              </div>
+              <div style={{flex:1, minWidth:140, background:'rgba(240,108,126,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-rose)'}}>
+                <div style={{fontWeight:700, color:'var(--mf-rose)', marginBottom:10, fontSize:13}}>tan = sin ÷ cos</div>
+                <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', marginBottom:8}}>
+                  {['0','1/√3','1','√3','∞'].map((v,i) => (
+                    <span key={i} style={{fontWeight:700, color:'var(--mf-rose)', fontSize:14, fontFamily:"'Space Grotesk',sans-serif"}}>{v}{i < 4 ? <span style={{color:'var(--text-dim)', fontWeight:400}}>, </span> : ''}</span>
+                  ))}
+                </div>
+                <div style={{fontSize:12, color:'var(--text-3)'}}>tan = <strong style={{color:'var(--mf-rose)'}}>sin θ ÷ cos θ</strong></div>
               </div>
             </div>
+            <Mem title="💡 মনে রাখার সহজ উপায়">
+              <p><strong>sin:</strong> কোণ বাড়লে n বাড়ে (0→4) → sin = √n ÷ 2</p>
+              <p style={{marginTop:4}}><strong>cos:</strong> sin-এর ঠিক উল্টো ক্রম (4→0) → cos = √n ÷ 2</p>
+              <p style={{marginTop:4}}><strong>tan:</strong> sin ÷ cos — আলাদা মুখস্থ করতে হবে না</p>
+            </Mem>
           </Card>
-
-          {/* Per-angle finger trick cards */}
-          <CardTitle style={{marginBottom:10}}>প্রতিটি কোণে আঙুলের অবস্থান</CardTitle>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(min(100%, 280px), 1fr))', gap:14, marginBottom:16}}>
-            {[
-              {angle:'0°',  fi:0, left:0, right:4, sin:'√0/2 = 0',    cos:'√4/2 = 1',    tan:'0',     sinV:'0',    cosV:'1'},
-              {angle:'30°', fi:1, left:1, right:3, sin:'√1/2 = ½',    cos:'√3/2',         tan:'1/√3',  sinV:'½',    cosV:'√3/2'},
-              {angle:'45°', fi:2, left:2, right:2, sin:'√2/2 = 1/√2', cos:'√2/2 = 1/√2', tan:'1',     sinV:'1/√2', cosV:'1/√2'},
-              {angle:'60°', fi:3, left:3, right:1, sin:'√3/2',         cos:'√1/2 = ½',    tan:'√3',    sinV:'√3/2', cosV:'½'},
-              {angle:'90°', fi:4, left:4, right:0, sin:'√4/2 = 1',    cos:'√0/2 = 0',    tan:'∞',     sinV:'1',    cosV:'0'},
-            ].map(r => (
-              <div key={r.angle} style={{
-                background:'var(--surface-glass)', border:'1px solid var(--border)',
-                borderRadius:14, padding:14, boxShadow:'var(--shadow-sm)',
-                backdropFilter:'blur(6px)',
-              }}>
-                {/* Angle label */}
-                <div style={{fontFamily:"'Space Grotesk',sans-serif", fontWeight:800, fontSize:18, color:'var(--mf-gold)', marginBottom:8}}>
-                  {r.angle}
-                </div>
-                {/* Finger visual — display order: pinky(90°) left → thumb(0°) right */}
-                {(() => {
-                  // finger index: 0=thumb, 4=pinky
-                  // display left→right: [4,3,2,1,0] = pinky→thumb
-                  const fHeights = [30, 40, 46, 40, 28]
-                  const fWidths  = [22, 20, 20, 20, 18]
-                  const baseY = 52, gap = 30, startX = 6
-                  const displayOrder = [4,3,2,1,0]
-                  const foldDisp = 4 - r.fi   // display position of the folded finger
-                  return (
-                  <svg width="100%" height="70" viewBox="0 0 160 70" style={{display:'block', marginBottom:6}}>
-                    {displayOrder.map((fi, dispPos) => {
-                      const isFold   = fi === r.fi
-                      const isSinSide = fi < r.fi   // to the RIGHT in display → sin side (teal)
-                      const x = startX + dispPos * gap
-                      const w = fWidths[fi], h = fHeights[fi]
-                      const color = isFold ? '#f0a500' : isSinSide ? '#0fdba8' : '#5ba4f5'
-                      return isFold ? (
-                        <g key={fi}>
-                          <rect x={x} y={baseY-10} width={w} height={10} rx={4}
-                            fill="rgba(240,165,0,.22)" stroke="#f0a500" strokeWidth="2"/>
-                          <text x={x+w/2} y={baseY-14} textAnchor="middle"
-                            fill="#f0a500" fontSize="9" fontWeight="800">✕</text>
-                        </g>
-                      ) : (
-                        <g key={fi}>
-                          <rect x={x} y={baseY-h} width={w} height={h} rx={7}
-                            fill={`${color}18`} stroke={color} strokeWidth="1.8"/>
-                        </g>
-                      )
-                    })}
-                    {/* LEFT of fold = cos side (blue) = r.right fingers */}
-                    {r.right > 0 && (
-                      <text x={startX + (foldDisp-1)*gap/2 + 10} y={66}
-                        textAnchor="middle" fill="#5ba4f5" fontSize="9" fontWeight="700">
-                        ← {r.right}
-                      </text>
-                    )}
-                    {/* RIGHT of fold = sin side (teal) = r.left fingers */}
-                    {r.left > 0 && (
-                      <text x={startX + (foldDisp+1)*gap + (r.left-1)*gap/2 + 10} y={66}
-                        textAnchor="middle" fill="#0fdba8" fontSize="9" fontWeight="700">
-                        {r.left} →
-                      </text>
-                    )}
-                  </svg>
-                  )
-                })()}
-                {/* Derived values */}
-                <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:6, fontSize:12}}>
-                  <div style={{background:'rgba(15,219,168,.08)', borderRadius:8, padding:'6px 8px'}}>
-                    <div style={{color:'var(--mf-teal)', fontWeight:700, fontSize:11}}>sin {r.angle}</div>
-                    <div style={{color:'var(--text-2)'}}>{r.sin}</div>
-                  </div>
-                  <div style={{background:'rgba(91,164,245,.08)', borderRadius:8, padding:'6px 8px'}}>
-                    <div style={{color:'var(--mf-blue)', fontWeight:700, fontSize:11}}>cos {r.angle}</div>
-                    <div style={{color:'var(--text-2)'}}>{r.cos}</div>
-                  </div>
-                </div>
-                <div style={{marginTop:6, background:'rgba(240,108,126,.08)', borderRadius:8, padding:'5px 8px', fontSize:12}}>
-                  <span style={{color:'var(--mf-rose)', fontWeight:700}}>tan {r.angle}</span>
-                  <span style={{color:'var(--text-2)', marginLeft:6}}>{r.tan}</span>
-                </div>
-              </div>
-            ))}
-          </div>
 
           {/* Quick reference table */}
           <Card color="violet">
@@ -1040,15 +955,15 @@ export default function MathFormulas({ onBack }) {
             {/* Quick reference */}
             <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(150px,1fr))', gap:8, marginTop:8}}>
               {[
-                {label:'A∪B (যেকোনো একটি)', val:'= 1 + 2 + 3', color:'#5ba4f5'},
-                {label:'A∩B (উভয়ই)', val:'= 2', color:'#a78bfa'},
-                {label:'শুধু A', val:'= 1', color:'#5ba4f5'},
-                {label:'শুধু B', val:'= 3', color:'#0fdba8'},
-                {label:"(A∪B)' (বাইরে)", val:'= 4', color:'#f0a500'},
+                {label:'A∪B (যেকোনো একটি)', val:'= 1 + 2 + 3', color:'var(--mf-blue)'},
+                {label:'A∩B (উভয়ই)', val:'= 2', color:'var(--mf-violet)'},
+                {label:'শুধু A', val:'= 1', color:'var(--mf-blue)'},
+                {label:'শুধু B', val:'= 3', color:'var(--mf-teal)'},
+                {label:"(A∪B)' (বাইরে)", val:'= 4', color:'var(--mf-gold)'},
               ].map(r => (
-                <div key={r.label} style={{background:'var(--elevated)', borderRadius:8, padding:'7px 10px', borderLeft:`3px solid ${r.color}`}}>
-                  <div style={{fontSize:11, color:'var(--text-3)'}}>{r.label}</div>
-                  <div style={{fontSize:14, fontWeight:700, color:r.color}}>{r.val}</div>
+                <div key={r.label} className="mf-set-box" style={{borderLeft:`3px solid ${r.color}`}}>
+                  <div className="mf-set-box-label">{r.label}</div>
+                  <div className="mf-set-box-val" style={{color:r.color}}>{r.val}</div>
                 </div>
               ))}
             </div>
