@@ -1,21 +1,59 @@
-import { useState } from 'react'
-import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark, LayoutGrid } from 'lucide-react'
+import { useState, useMemo, useEffect } from 'react'
+import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark, LayoutGrid, Search, X, ChevronRight } from 'lucide-react'
 import CategorySidebar from './CategorySidebar.jsx'
+
+const PAGE_SIZE = 20
+
+function normalize(str) {
+  return (str ?? '').toLowerCase().trim()
+}
 
 export default function StudyMode({ topic, topics, mastered, important, onNail, onMarkImportant, onUnmarkImportant, onBack, onHome, onChangeTopic }) {
   const [filterImportant, setFilterImportant] = useState(false)
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen]         = useState(false)
+  const [query, setQuery]                     = useState('')
+  const [page, setPage]                       = useState(1)
 
   const allQ = topic.questions
     .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
     .filter(({ q }) => q.options && q.correct_answer)
 
-  const nonNailed = allQ.filter(({ qid }) => !mastered.has(qid))
-  const nailedCt  = allQ.length - nonNailed.length
+  const nonNailed      = allQ.filter(({ qid }) => !mastered.has(qid))
+  const nailedCt       = allQ.length - nonNailed.length
   const importantCount = nonNailed.filter(({ qid }) => important?.has(qid)).length
-  const visible = filterImportant
+
+  const afterFilter = filterImportant
     ? nonNailed.filter(({ qid }) => important?.has(qid))
     : nonNailed
+
+  const visible = useMemo(() => {
+    if (!query.trim()) return afterFilter
+    const q = normalize(query)
+    return afterFilter.filter(({ q: question }) =>
+      normalize(question.question).includes(q) ||
+      Object.values(question.options ?? {}).some(v => normalize(v).includes(q))
+    )
+  }, [query, afterFilter])
+
+  useEffect(() => { setPage(1) }, [query, filterImportant, topic.id])
+
+  const totalPages = Math.ceil(visible.length / PAGE_SIZE)
+  const pageItems  = visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
+  function goTo(p) {
+    setPage(p)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  function getPageNums() {
+    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1)
+    const pages = [1]
+    if (page > 3) pages.push('...')
+    for (let i = Math.max(2, page - 1); i <= Math.min(totalPages - 1, page + 1); i++) pages.push(i)
+    if (page < totalPages - 2) pages.push('...')
+    pages.push(totalPages)
+    return pages
+  }
 
   return (
     <div className="study-page anim-fade">
@@ -60,7 +98,29 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
         </button>
       </div>
 
-      {nailedCt > 0 && !filterImportant && (
+      {/* Search bar */}
+      <div className="study-search-bar">
+        <Search size={14} className="search-icon" />
+        <input
+          type="text"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          placeholder="Search questions..."
+          className="study-search-input"
+        />
+        {query && (
+          <button className="study-search-clear" onClick={() => setQuery('')}>
+            <X size={13} />
+          </button>
+        )}
+      </div>
+      {query && (
+        <p className="study-search-meta">
+          {visible.length} / {afterFilter.length} matches for "{query}"
+        </p>
+      )}
+
+      {nailedCt > 0 && !filterImportant && !query && (
         <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
           <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={onHome} className="nailed-notice-link">Nailed It</button></span>
@@ -69,29 +129,64 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
 
       {visible.length === 0 ? (
         <div className="study-all-nailed">
-          {filterImportant
-            ? <Bookmark size={38} style={{ color: '#ef4444', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
-            : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
+          {query
+            ? <Search size={38} style={{ color: topic.color, opacity: 0.4, marginBottom: 12 }} />
+            : filterImportant
+              ? <Bookmark size={38} style={{ color: '#ef4444', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
+              : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
           }
-          <p>{filterImportant ? 'No Important questions yet.' : 'All questions nailed! 🎉'}</p>
-          <button className="back-btn" style={{ marginTop: 16 }} onClick={onHome}>Go Home</button>
+          <p>{query ? 'No questions match your search.' : filterImportant ? 'No Important questions yet.' : 'All questions nailed! 🎉'}</p>
+          {query && <button className="back-btn" style={{ marginTop: 16 }} onClick={() => setQuery('')}>Clear search</button>}
+          {!query && <button className="back-btn" style={{ marginTop: 16 }} onClick={onHome}>Go Home</button>}
         </div>
       ) : (
-        <div className="study-list">
-          {visible.map(({ q, qid }, i) => (
-            <StudyCard
-              key={qid}
-              question={q}
-              index={i}
-              color={topic.color}
-              nailed={mastered.has(qid)}
-              isImportant={important?.has(qid) ?? false}
-              onNail={() => onNail(qid)}
-              onMarkImportant={() => onMarkImportant?.(qid)}
-              onUnmarkImportant={() => onUnmarkImportant?.(qid)}
-            />
-          ))}
-        </div>
+        <>
+          <div className="study-list">
+            {pageItems.map(({ q, qid }, i) => (
+              <StudyCard
+                key={qid}
+                question={q}
+                index={(page - 1) * PAGE_SIZE + i}
+                color={topic.color}
+                nailed={mastered.has(qid)}
+                isImportant={important?.has(qid) ?? false}
+                onNail={() => onNail(qid)}
+                onMarkImportant={() => onMarkImportant?.(qid)}
+                onUnmarkImportant={() => onUnmarkImportant?.(qid)}
+              />
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <div className="study-pagination">
+              <button
+                className="study-pag-btn"
+                onClick={() => goTo(page - 1)}
+                disabled={page === 1}
+              >
+                <ChevronLeft size={14} />
+              </button>
+              {getPageNums().map((p, i) =>
+                p === '...'
+                  ? <span key={`e${i}`} style={{ width: 24, textAlign: 'center', color: 'var(--text-dim)', fontSize: 12 }}>…</span>
+                  : <button
+                      key={p}
+                      className={`study-pag-btn${p === page ? ' active' : ''}`}
+                      onClick={() => goTo(p)}
+                    >
+                      {p}
+                    </button>
+              )}
+              <button
+                className="study-pag-btn"
+                onClick={() => goTo(page + 1)}
+                disabled={page === totalPages}
+              >
+                <ChevronRight size={14} />
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   )
@@ -131,11 +226,7 @@ function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onM
             {isImportant ? 'Important ✓' : 'Important'}
           </button>
           {shown && (
-            <button
-              className="study-toggle"
-              onClick={() => { setShown(false); setSelected(null) }}
-              style={{ color }}
-            >
+            <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
               Hide
             </button>
           )}
@@ -150,9 +241,9 @@ function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onM
           const isWrong   = shown && key === selected && !isCorrect
           let cls = 'study-opt study-opt-clickable'
           if (shown) {
-            if (isCorrect)     cls += ' correct'
-            else if (isWrong)  cls += ' wrong'
-            else               cls += ' dim'
+            if (isCorrect)    cls += ' correct'
+            else if (isWrong) cls += ' wrong'
+            else              cls += ' dim'
           }
           return (
             <button key={key} className={cls} style={isCorrect && shown ? { '--c': color } : {}} onClick={() => pick(key)}>

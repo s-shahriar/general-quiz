@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Sun, Moon } from 'lucide-react'
 import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, ALL_TOPICS } from './data/index.js'
+
+// General Quiz
 import HomeScreen      from './components/HomeScreen.jsx'
 import ModeSelect      from './components/ModeSelect.jsx'
 import QuizMode        from './components/QuizMode.jsx'
@@ -11,126 +13,76 @@ import NailedScreen    from './components/NailedScreen.jsx'
 import ImportantScreen from './components/ImportantScreen.jsx'
 import BackupModal     from './components/BackupModal.jsx'
 
-// EEE Quiz imports
-import EEEHome from './components/eee/Home.jsx'
-import EEEQuizMode from './components/eee/QuizMode.jsx'
-import EEEReviseMode from './components/eee/ReviseMode.jsx'
-import EEEResults from './components/eee/Results.jsx'
-import { useBookmarks as useEEEBookmarks } from './hooks/eee/useBookmarks.js'
-import { TOPICS as EEETOPICS } from './data/eee/topics.js'
-
-// Utility Kit imports
-import UtilityHome from './components/utility/HomeScreen.jsx'
+// Utility Kit
+import UtilityHome         from './components/utility/HomeScreen.jsx'
 import UtilityMathFormulas from './components/utility/MathFormulas.jsx'
 import UtilityFinancialTerms from './components/utility/FinancialTerms.jsx'
 
-function loadMastered() {
-  try { return new Set(JSON.parse(localStorage.getItem('gq-nailed') ?? '[]')) }
+// ── Persistence ───────────────────────────────────────
+function loadSet(key) {
+  try { return new Set(JSON.parse(localStorage.getItem(key) ?? '[]')) }
   catch { return new Set() }
 }
-function saveMastered(set) {
-  localStorage.setItem('gq-nailed', JSON.stringify([...set]))
-}
-
-function loadImportant() {
-  try { return new Set(JSON.parse(localStorage.getItem('gq-important') ?? '[]')) }
-  catch { return new Set() }
-}
-function saveImportant(set) {
-  localStorage.setItem('gq-important', JSON.stringify([...set]))
+function saveSet(key, set) {
+  localStorage.setItem(key, JSON.stringify([...set]))
 }
 
 export default function App() {
-  // Module Switching state
-  const [activeModule, setActiveModule] = useState(() => localStorage.getItem('gq-active-module') || 'general')
+  // ── Module ──────────────────────────────────────────
+  const [activeModule, setActiveModule] = useState(() => {
+    const m = localStorage.getItem('gq-active-module')
+    return m === 'eee' ? 'general' : (m || 'general')
+  })
 
-  // General Quiz state
-  const [screen, setScreen]               = useState('home')
-  const [activeGroup, setActiveGroup]     = useState('bangla')
-  const [selectedTopic, setSelectedTopic] = useState(null)
-  const [examData, setExamData]           = useState(null)
-  const [theme, setTheme]                 = useState(() => localStorage.getItem('gq-theme') || 'light')
-  const [mastered, setMastered]           = useState(loadMastered)
-  const [important, setImportant]         = useState(loadImportant)
-  const [showBackup, setShowBackup]       = useState(false)
-
-  // EEE Quiz state
-  const [eeeScreen, setEeeScreen] = useState('home')
-  const [eeeActiveTopic, setEeeActiveTopic] = useState(null)
-  const [eeeQuizResult, setEeeQuizResult] = useState(null)
-  const { bookmarks: eeeBookmarks, toggle: toggleEeeBookmark, isBookmarked: isEeeBookmarked } = useEEEBookmarks()
-  const eeeBookmarkCount = Object.keys(eeeBookmarks).length
-
-  // Utility Kit state
-  const [utilityScreen, setUtilityScreen] = useState('home')
-  const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
-
+  // ── Theme ───────────────────────────────────────────
+  const [theme, setTheme] = useState(() => localStorage.getItem('gq-theme') || 'light')
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('gq-theme', theme)
   }, [theme])
+  const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
 
   useEffect(() => {
     localStorage.setItem('gq-active-module', activeModule)
   }, [activeModule])
 
-  const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
-  
-  // General Quiz Handlers
+  // ── General Quiz state ───────────────────────────────
+  const [screen, setScreen]               = useState('home')
+  const [activeGroup, setActiveGroup]     = useState('bangla')
+  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [examData, setExamData]           = useState(null)
+  const [mastered, setMastered]           = useState(() => loadSet('gq-nailed'))
+  const [important, setImportant]         = useState(() => loadSet('gq-important'))
+  const [showBackup, setShowBackup]       = useState(false)
+
+  function getTopicGroup(topic) {
+    if (!topic) return []
+    if (BANGLA_TOPICS.some(t => t.id === topic.id)) return BANGLA_TOPICS
+    if (ENGLISH_TOPICS.some(t => t.id === topic.id)) return ENGLISH_TOPICS
+    return GK_TOPICS
+  }
+
+  const nail            = (qid) => setMastered(prev => { const n = new Set(prev); n.add(qid);    saveSet('gq-nailed',    n); return n })
+  const unnail          = (qid) => setMastered(prev => { const n = new Set(prev); n.delete(qid); saveSet('gq-nailed',    n); return n })
+  const markImportant   = (qid) => setImportant(prev => { const n = new Set(prev); n.add(qid);    saveSet('gq-important', n); return n })
+  const unmarkImportant = (qid) => setImportant(prev => { const n = new Set(prev); n.delete(qid); saveSet('gq-important', n); return n })
   const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null) }
 
-  const nail = (qid) => setMastered(prev => {
-    const next = new Set(prev); next.add(qid); saveMastered(next)
-    return next
-  })
-  const unnail = (qid) => setMastered(prev => {
-    const next = new Set(prev); next.delete(qid); saveMastered(next)
-    return next
-  })
-
-  const markImportant = (qid) => setImportant(prev => {
-    const next = new Set(prev); next.add(qid); saveImportant(next)
-    return next
-  })
-  const unmarkImportant = (qid) => setImportant(prev => {
-    const next = new Set(prev); next.delete(qid); saveImportant(next)
-    return next
-  })
-
   const handleRestore = (nailedArr, importantArr) => {
-    setMastered(prev => {
-      const next = new Set([...prev, ...nailedArr]); saveMastered(next); return next
-    })
-    setImportant(prev => {
-      const next = new Set([...prev, ...importantArr]); saveImportant(next); return next
-    })
+    setMastered(prev => { const n = new Set([...prev, ...nailedArr]); saveSet('gq-nailed', n); return n })
+    setImportant(prev => { const n = new Set([...prev, ...importantArr]); saveSet('gq-important', n); return n })
   }
 
-  // EEE Quiz Handlers
-  function selectEeeTopic(topic, mode) {
-    setEeeActiveTopic(topic)
-    setEeeScreen(mode)
-  }
-
-  function handleEeeQuizFinish(result) {
-    setEeeQuizResult(result)
-    setEeeScreen('results')
-  }
-
-  function goEeeHome() {
-    setEeeScreen('home')
-    setEeeActiveTopic(null)
-    setEeeQuizResult(null)
-  }
-
-  // Utility Kit Handlers
+  // ── Utility Kit state ────────────────────────────────
+  const [utilityScreen, setUtilityScreen]       = useState('home')
+  const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
   const openUtilityTool = (id) => { setUtilityActiveToolId(id); setUtilityScreen('tool') }
-  const goUtilityHome = () => { setUtilityActiveToolId(null); setUtilityScreen('home') }
+  const goUtilityHome   = () => { setUtilityActiveToolId(null); setUtilityScreen('home') }
 
-  const isHomeActive = 
+  // ── Module nav visibility ────────────────────────────
+  const isHomeActive =
     (activeModule === 'general' && screen === 'home') ||
-    (activeModule === 'eee' && eeeScreen === 'home') ||
-    (activeModule === 'utility' && utilityScreen === 'home');
+    (activeModule === 'utility' && utilityScreen === 'home')
 
   return (
     <div className="app-root">
@@ -142,24 +94,18 @@ export default function App() {
       {isHomeActive && (
         <div className="module-nav-bar anim-fade">
           <div className="module-nav-links">
-            <button
-              className={`module-nav-item ${activeModule === 'general' ? 'active' : ''}`}
-              onClick={() => setActiveModule('general')}
-            >
-              General Quiz
-            </button>
-            <button
-              className={`module-nav-item ${activeModule === 'eee' ? 'active' : ''}`}
-              onClick={() => setActiveModule('eee')}
-            >
-              EEE Quiz
-            </button>
-            <button
-              className={`module-nav-item ${activeModule === 'utility' ? 'active' : ''}`}
-              onClick={() => setActiveModule('utility')}
-            >
-              Utility Kit
-            </button>
+            {[
+              { id: 'general', label: 'General' },
+              { id: 'utility', label: 'Utility' },
+            ].map(({ id, label }) => (
+              <button
+                key={id}
+                className={`module-nav-item ${activeModule === id ? 'active' : ''}`}
+                onClick={() => setActiveModule(id)}
+              >
+                {label}
+              </button>
+            ))}
           </div>
           <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
             {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
@@ -167,9 +113,9 @@ export default function App() {
         </div>
       )}
 
-      {/* ========================================================================= */}
-      {/* 1. GENERAL QUIZ MODULE                                                    */}
-      {/* ========================================================================= */}
+      {/* ================================================================= */}
+      {/* 1. GENERAL QUIZ MODULE                                             */}
+      {/* ================================================================= */}
       {activeModule === 'general' && (
         <>
           {screen === 'home' && (
@@ -190,33 +136,19 @@ export default function App() {
             />
           )}
           {screen === 'important' && (
-            <ImportantScreen
-              topics={ALL_TOPICS}
-              important={important}
-              onUnmark={unmarkImportant}
-              onHome={goHome}
-            />
+            <ImportantScreen topics={ALL_TOPICS} important={important} onUnmark={unmarkImportant} onHome={goHome} />
           )}
           {screen === 'nailed' && (
-            <NailedScreen
-              topics={ALL_TOPICS}
-              mastered={mastered}
-              onUnnail={unnail}
-              onHome={goHome}
-            />
+            <NailedScreen topics={ALL_TOPICS} mastered={mastered} onUnnail={unnail} onHome={goHome} />
           )}
           {screen === 'mode' && (
-            <ModeSelect
-              topic={selectedTopic}
-              onQuiz={() => setScreen('quiz')}
-              onStudy={() => setScreen('study')}
-              onBack={goHome}
-            />
+            <ModeSelect topic={selectedTopic} onQuiz={() => setScreen('quiz')} onStudy={() => setScreen('study')} onBack={goHome} />
           )}
           {screen === 'quiz' && (
             <QuizMode
               key={selectedTopic.id + '-quiz'}
               topic={selectedTopic}
+              topics={getTopicGroup(selectedTopic)}
               mastered={mastered}
               important={important}
               onNail={nail}
@@ -225,13 +157,14 @@ export default function App() {
               onUnmarkImportant={unmarkImportant}
               onBack={() => setScreen('mode')}
               onHome={goHome}
+              onChangeTopic={(t) => setSelectedTopic(t)}
             />
           )}
           {screen === 'study' && (
             <StudyMode
               key={selectedTopic.id + '-study'}
               topic={selectedTopic}
-              topics={ALL_TOPICS}
+              topics={getTopicGroup(selectedTopic)}
               mastered={mastered}
               important={important}
               onNail={nail}
@@ -278,60 +211,12 @@ export default function App() {
         </>
       )}
 
-      {/* ========================================================================= */}
-      {/* 2. EEE QUIZ MODULE                                                        */}
-      {/* ========================================================================= */}
-      {activeModule === 'eee' && (
-        <>
-          {eeeScreen === 'home' && (
-            <EEEHome
-              onSelectTopic={selectEeeTopic}
-              bookmarkCount={eeeBookmarkCount}
-            />
-          )}
-          {eeeScreen === 'quiz' && eeeActiveTopic && (
-            <EEEQuizMode
-              key={eeeActiveTopic.id + '_quiz'}
-              topic={eeeActiveTopic}
-              onBack={goEeeHome}
-              onFinish={handleEeeQuizFinish}
-              isBookmarked={isEeeBookmarked}
-              onToggleBookmark={toggleEeeBookmark}
-            />
-          )}
-          {eeeScreen === 'revise' && eeeActiveTopic && (
-            <EEEReviseMode
-              key={eeeActiveTopic.id + '_revise'}
-              topic={eeeActiveTopic}
-              topics={EEETOPICS}
-              onBack={goEeeHome}
-              onChangeTopic={(t) => setEeeActiveTopic(t)}
-              isBookmarked={isEeeBookmarked}
-              onToggleBookmark={toggleEeeBookmark}
-            />
-          )}
-          {eeeScreen === 'results' && eeeActiveTopic && eeeQuizResult && (
-            <EEEResults
-              topic={eeeActiveTopic}
-              correct={eeeQuizResult.correct}
-              wrong={eeeQuizResult.wrong}
-              total={eeeQuizResult.total}
-              onRetry={() => selectEeeTopic(eeeActiveTopic, 'quiz')}
-              onRevise={() => selectEeeTopic(eeeActiveTopic, 'revise')}
-              onHome={goEeeHome}
-            />
-          )}
-        </>
-      )}
-
-      {/* ========================================================================= */}
-      {/* 3. UTILITY KIT MODULE                                                     */}
-      {/* ========================================================================= */}
+      {/* ================================================================= */}
+      {/* 2. UTILITY KIT MODULE                                              */}
+      {/* ================================================================= */}
       {activeModule === 'utility' && (
         <>
-          {utilityScreen === 'home' && (
-            <UtilityHome onOpen={openUtilityTool} />
-          )}
+          {utilityScreen === 'home' && <UtilityHome onOpen={openUtilityTool} />}
           {utilityScreen === 'tool' && utilityActiveToolId === 'math_formulas' && (
             <UtilityMathFormulas onBack={goUtilityHome} />
           )}

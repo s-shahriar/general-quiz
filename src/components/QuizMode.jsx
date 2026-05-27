@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
-import { ChevronLeft, CheckCircle, XCircle, ArrowRight, Home, Trophy, Lightbulb, Star, Bookmark } from 'lucide-react'
+import { ChevronLeft, CheckCircle, XCircle, ArrowRight, Home, Trophy, Lightbulb, Star, Bookmark, LayoutGrid } from 'lucide-react'
+import CategorySidebar from './CategorySidebar.jsx'
 
 function shuffle(arr) {
   const a = [...arr]
@@ -10,7 +11,7 @@ function shuffle(arr) {
   return a
 }
 
-export default function QuizMode({ topic, mastered, important, onNail, onUnnail, onMarkImportant, onUnmarkImportant, onBack, onHome }) {
+export default function QuizMode({ topic, topics, mastered, important, onNail, onUnnail, onMarkImportant, onUnmarkImportant, onBack, onHome, onChangeTopic }) {
   const questions = useMemo(
     () => shuffle(
       topic.questions
@@ -19,11 +20,12 @@ export default function QuizMode({ topic, mastered, important, onNail, onUnnail,
     ),
     [topic]
   )
-  const [idx, setIdx]         = useState(0)
-  const [selected, setSelected] = useState(null)
-  const [revealed, setRevealed] = useState(false)
-  const [score, setScore]     = useState(0)
-  const [done, setDone]       = useState(false)
+  const [idx, setIdx]           = useState(0)
+  const [selected, setSelected]   = useState(null)
+  const [revealed, setRevealed]   = useState(false)
+  const [score, setScore]         = useState(0)
+  const [done, setDone]           = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const q    = questions[idx]
   const opts = q ? ['a','b','c','d'].filter(k => q.options?.[k]) : []
@@ -54,10 +56,27 @@ export default function QuizMode({ topic, mastered, important, onNail, onUnnail,
 
   return (
     <div className="quiz-page anim-fade">
+      {topics && onChangeTopic && (
+        <CategorySidebar
+          topics={topics}
+          currentTopicId={topic.id}
+          open={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+          onSelect={onChangeTopic}
+        />
+      )}
+
       <div className="quiz-topbar">
         <button className="back-btn" onClick={onBack}><ChevronLeft size={15} /> Back</button>
         <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName}</span>
-        <span className="quiz-score-pill">{score} pts</span>
+        <div className="topbar-right-actions">
+          {topics && onChangeTopic && (
+            <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
+              <LayoutGrid size={16} />
+            </button>
+          )}
+          <span className="quiz-score-pill">{score} pts</span>
+        </div>
       </div>
 
       <div className="quiz-progress-wrap">
