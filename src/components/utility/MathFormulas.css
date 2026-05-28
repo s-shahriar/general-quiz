@@ -133,10 +133,6 @@
   color: var(--mf-gold2);
   font-family: "Space Grotesk", "Hind Siliguri", sans-serif;
   line-height: 1;
-  background: linear-gradient(135deg, var(--mf-gold) 0%, var(--mf-teal) 50%, var(--mf-violet) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .mf-sec-tile-label {
@@ -218,11 +214,8 @@
   justify-content: center;
   font-size: 20px;
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--mf-gold) 0%, var(--mf-gold2) 100%);
-  border: 1px solid var(--mf-gold);
-  color: white;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.25);
+  background: var(--elevated);
+  border: 1px solid var(--border);
 }
 .mf-sec-title {
   font-size: 22px;
@@ -270,23 +263,23 @@
 /* Use border-top instead of ::before so it doesn't scroll inside overflow-x:auto */
 .mf-card.gold {
   border-top: 3px solid var(--mf-gold);
-  background: linear-gradient(180deg, rgba(180, 83, 9, 0.03) 0%, transparent 30%);
+  background: color-mix(in srgb, var(--mf-gold) 8%, var(--surface-glass));
 }
 .mf-card.teal {
   border-top: 3px solid var(--mf-teal);
-  background: linear-gradient(180deg, rgba(13, 148, 136, 0.03) 0%, transparent 30%);
+  background: color-mix(in srgb, var(--mf-teal) 8%, var(--surface-glass));
 }
 .mf-card.rose {
   border-top: 3px solid var(--mf-rose);
-  background: linear-gradient(180deg, rgba(190, 18, 60, 0.03) 0%, transparent 30%);
+  background: color-mix(in srgb, var(--mf-rose) 8%, var(--surface-glass));
 }
 .mf-card.blue {
   border-top: 3px solid var(--mf-blue);
-  background: linear-gradient(180deg, rgba(29, 78, 216, 0.03) 0%, transparent 30%);
+  background: color-mix(in srgb, var(--mf-blue) 8%, var(--surface-glass));
 }
 .mf-card.violet {
   border-top: 3px solid var(--mf-violet);
-  background: linear-gradient(180deg, rgba(109, 40, 217, 0.03) 0%, transparent 30%);
+  background: color-mix(in srgb, var(--mf-violet) 8%, var(--surface-glass));
 }
 
 .mf-card-title {
@@ -302,16 +295,29 @@
 
 .mf-badge {
   font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(240, 165, 0, 0.18) 0%, rgba(255, 209, 102, 0.15) 100%);
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(240, 165, 0, 0.15);
   color: var(--mf-gold);
-  border: 1px solid rgba(240, 165, 0, 0.35);
-  font-weight: 600;
-  box-shadow: 0 1px 4px rgba(240, 165, 0, 0.15);
+  border: 1px solid rgba(240, 165, 0, 0.3);
 }
 
 /* ── Formula box ─────────────────────────────── */
+.mf-eq-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+[data-theme="dark"] .mf-eq-box {
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .mf-f-box {
   background: var(--elevated);
   border: 1px solid var(--border);
@@ -333,16 +339,9 @@
   word-break: break-word;
   text-align: center;
   width: 100%;
-  background: linear-gradient(135deg, var(--mf-gold) 0%, var(--mf-gold2) 50%, var(--mf-teal) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 .mf-f-box.highlight .val {
-  background: linear-gradient(135deg, var(--mf-teal) 0%, var(--mf-violet) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--mf-teal);
 }
 
 /* Light mode: better contrast — white box, dark label, deep indigo value */
@@ -354,16 +353,10 @@
   color: #4b5563;
 }
 [data-theme="light"] .mf-f-box .val {
-  background: linear-gradient(135deg, #3730a3 0%, #4f46e5 50%, #0891b2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #3730a3;
 }
 [data-theme="light"] .mf-f-box.highlight .val {
-  background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #7c3aed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #0f766e;
 }
 /* KaTeX colour inherits from .val */
 .mf-tex .katex,
@@ -383,18 +376,12 @@
 
 /* ── Inline formula ──────────────────────────── */
 .mf-fi {
-  font-weight: 700;
-  background: linear-gradient(135deg, rgba(180, 83, 9, 0.12) 0%, rgba(192, 120, 0, 0.15) 100%);
-  border: 1px solid rgba(180, 83, 9, 0.2);
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-size: 15px;
   color: var(--mf-gold);
-  box-shadow: 0 1px 3px rgba(180, 83, 9, 0.1);
-}
-[data-theme="light"] .mf-fi {
-  background: linear-gradient(135deg, rgba(180, 83, 9, 0.08) 0%, rgba(192, 120, 0, 0.12) 100%);
-  border-color: rgba(180, 83, 9, 0.15);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--mf-gold) 12%, transparent);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 15px;
 }
 
 /* ── Prop list ───────────────────────────────── */
@@ -560,8 +547,8 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(240, 165, 0, 0.2) 0%, rgba(255, 209, 102, 0.15) 100%);
-  border: 1px solid rgba(240, 165, 0, 0.4);
+  background: rgba(240, 165, 0, 0.15);
+  border: 1px solid rgba(240, 165, 0, 0.3);
   color: var(--mf-gold);
   font-size: 12px;
   font-weight: 700;
@@ -570,7 +557,6 @@
   justify-content: center;
   flex-shrink: 0;
   margin-top: 1px;
-  box-shadow: 0 2px 6px rgba(240, 165, 0, 0.2);
 }
 .mf-id-num.star {
   background: rgba(240, 165, 0, 0.22);
