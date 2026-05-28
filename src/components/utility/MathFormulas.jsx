@@ -591,7 +591,7 @@ export default function MathFormulas({ onBack }) {
 
         {/* ══ S6: 3D SOLID ══════════════════════════════════════ */}
         <div className="mf-section" id="solid">
-          <SectionHeader icon="◧" title="ঘনক ও ঘনবস্তু" sub="Cube · Cuboid · 3D Properties" />
+          <SectionHeader icon="◧" title="ঘনক ও ঘনবস্তু" sub="Cube · Cuboid (আয়তাকার ঘনবস্তু) · 3D Properties" />
           <Card color="gold" style={{marginBottom:16}}>
             <CardTitle>ঘনকের (Cube) মূল তথ্য</CardTitle>
             <div className="mf-grid3" style={{marginBottom:10}}>
@@ -604,17 +604,17 @@ export default function MathFormulas({ onBack }) {
             </p>
           </Card>
           <Card color="gold">
-            <CardTitle>ঘনক vs ঘনবস্তু সূত্র তুলনা</CardTitle>
+            <CardTitle>ঘনক vs ঘনবস্তু (আয়তাকার ঘনবস্তু) সূত্র তুলনা</CardTitle>
             <div className="mf-table-scroll"><table className="mf-cmp-table">
               <thead>
-                <tr><th>বৈশিষ্ট্য</th><th>ঘনক (Cube) — বাহু a</th><th>ঘনবস্তু (Cuboid) — a, b, c</th></tr>
+                <tr><th>বৈশিষ্ট্য</th><th>ঘনক (Cube) — বাহু a</th><th>ঘনবস্তু / আয়তাকার ঘনবস্তু — a, b, c</th></tr>
               </thead>
               <tbody>
                 <tr><td>আয়তন</td><td className="hl">a³</td><td className="hl">a × b × c</td></tr>
                 <tr><td>একটি তলের ক্ষেত্রফল</td><td className="hl">a²</td><td className="hl">ab বা bc বা ca</td></tr>
                 <tr><td>সমগ্র পৃষ্ঠতল</td><td className="hl">6a²</td><td className="hl">2(ab + bc + ca)</td></tr>
                 <tr><td>একটি তলের কর্ণ</td><td className="hl">√2 · a</td><td className="hl">√(a²+b²) ইত্যাদি</td></tr>
-                <tr><td>মহাকর্ণ (Space diagonal)</td><td className="hl">√3 · a</td><td className="hl">√(a² + b² + c²)</td></tr>
+                <tr><td>মহাকর্ণ / হেলান তলের উন্নতি</td><td className="hl">√3 · a</td><td className="hl">√(a² + b² + c²)</td></tr>
               </tbody>
             </table></div>
             <Mem title="💡 মনে রাখুন — ঘনক vs ঘনবস্তু" style={{marginTop:12}}>
@@ -622,7 +622,7 @@ export default function MathFormulas({ onBack }) {
                 <li><strong>ঘনক:</strong> শুধু "a" → a³, 6a², √3·a</li>
                 <li><strong>ঘনবস্তু:</strong> a, b, c → জোড়ায় গুণ (ab+bc+ca)</li>
                 <li><strong>তলের কর্ণ:</strong> দুটি দিক → √(a²+b²)</li>
-                <li><strong>মহাকর্ণ:</strong> তিনটি দিক → √(a²+b²+c²)</li>
+                <li><strong>মহাকর্ণ / হেলান তলের উন্নতি:</strong> তিনটি দিক → √(a²+b²+c²)</li>
               </ul>
             </Mem>
           </Card>

@@ -480,6 +480,8 @@
 .mf-cmp-table { font-size: 12px; }
 .mf-section { scroll-margin-top: 106px; }
 
+.mf-sec-picker { display: none; }
+
 @media (min-width: 681px) {
   .mf-hero { padding: 48px 20px 32px; }
   .mf-cmp-table { font-size: 14px; }
