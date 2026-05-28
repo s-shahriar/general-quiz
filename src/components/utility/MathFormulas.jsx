@@ -828,13 +828,13 @@ export default function MathFormulas({ onBack }) {
 
           <Card color="teal" style={{marginBottom:16}}>
             <CardTitle color="var(--mf-teal)">③ দ্বিঘাত সূত্র (Quadratic Formula)</CardTitle>
-            <div style={{textAlign:'center',margin:'14px 0'}}>
-              <FBox label="x" tex={"= \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"} highlight/>
+            <div className={`mf-f-box highlight`} style={{margin:'14px 0',justifyContent:'center',gap:8}}>
+              <span className="val" style={{display:'flex',alignItems:'center',gap:8}}>
+                <Tex>{"x ="}</Tex>
+                <Tex>{"\\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"}</Tex>
+              </span>
             </div>
             <FBox label="বিকাশক (Discriminant)" tex={"D = b^2 - 4ac"}/>
-            <Mem title="💡 মনে রাখুন">
-              <p>"<strong>মাইনাস b প্লাস-মাইনাস রুট b বর্গ মাইনাস 4ac, ভাগ 2a</strong>" — এভাবে পড়লে ভোলা যায় না।</p>
-            </Mem>
           </Card>
 
           <Card color="gold" style={{marginBottom:16}}>
