@@ -12,8 +12,10 @@ const SECTIONS = [
   { id: 'circle',   label: 'বৃত্ত ও বহুভুজ' },
   { id: 'solid',    label: 'ঘনবস্তু' },
   { id: 'curved',   label: 'সিলিন্ডার/Cone/গোলক' },
-  { id: 'algebra',  label: 'বীজগণিত' },
-  { id: 'series',   label: 'ধারা' },
+  { id: 'algebra',   label: 'বীজগণিত' },
+  { id: 'quadratic', label: 'দ্বিঘাত সমী.' },
+  { id: 'logarithm', label: 'লগারিদম' },
+  { id: 'series',    label: 'ধারা' },
   { id: 'pnc',      label: 'বিন্যাস-সমাবেশ' },
   { id: 'set',      label: 'সেট ও সম্ভাবনা' },
   { id: 'lcm',      label: 'ল.সা.গু-গ.সা.গু' },
@@ -804,6 +806,117 @@ export default function MathFormulas({ onBack }) {
           <Warn title="⚠️ সবচেয়ে বেশি ভুল হয় এই সূত্রগুলোতে" style={{marginTop:10}}>
             <p>(a+b)² ≠ a² + b² (2ab ভুলে যাবেন না!) &nbsp;|&nbsp; a³+b³ ≠ (a+b)³ &nbsp;|&nbsp; a²+b² ≠ (a+b)(a−b)</p>
           </Warn>
+        </div>
+
+        {/* ══ QUADRATIC EQUATIONS ═══════════════════════════════ */}
+        <div className="mf-section" id="quadratic">
+          <SectionHeader icon="x²" title="দ্বিঘাত সমীকরণ" sub="Quadratic Equation · Roots · Discriminant" />
+
+          <Card color="blue" style={{marginBottom:16}}>
+            <CardTitle color="var(--mf-blue)">মানক রূপ: ax² + bx + c = 0</CardTitle>
+            <p style={{fontSize:13,color:'var(--text-3)',marginBottom:12}}>
+              α ও β হলো সমীকরণের দুটি মূল (roots)
+            </p>
+            <div className="mf-grid2">
+              <FBox label="① মূলদ্বয়ের সমষ্টি (α + β)" tex={"= -\\dfrac{b}{a}"} highlight/>
+              <FBox label="② মূলদ্বয়ের গুণফল (αβ)" tex={"= \\dfrac{c}{a}"} highlight/>
+            </div>
+            <Mem title="💡 মনে রাখুন — সরল সূত্র">
+              <p>সমষ্টি = <strong>−b/a</strong> (ঋণাত্মক b, ধনাত্মক a) &nbsp;|&nbsp; গুণফল = <strong>c/a</strong> (উভয় ধনাত্মক)</p>
+            </Mem>
+          </Card>
+
+          <Card color="teal" style={{marginBottom:16}}>
+            <CardTitle color="var(--mf-teal)">③ দ্বিঘাত সূত্র (Quadratic Formula)</CardTitle>
+            <div style={{textAlign:'center',margin:'14px 0'}}>
+              <FBox label="x" tex={"= \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"} highlight/>
+            </div>
+            <FBox label="বিকাশক (Discriminant)" tex={"D = b^2 - 4ac"}/>
+            <Mem title="💡 মনে রাখুন">
+              <p>"<strong>মাইনাস b প্লাস-মাইনাস রুট b বর্গ মাইনাস 4ac, ভাগ 2a</strong>" — এভাবে পড়লে ভোলা যায় না।</p>
+            </Mem>
+          </Card>
+
+          <Card color="gold" style={{marginBottom:16}}>
+            <CardTitle>④ বিকাশক ও মূলের প্রকৃতি</CardTitle>
+            <div className="mf-table-scroll">
+              <table className="mf-cmp-table">
+                <thead>
+                  <tr><th>বিকাশক D = b²−4ac</th><th>মূলের প্রকৃতি</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style={{color:'var(--mf-teal)'}}>D &gt; 0</strong></td>
+                    <td className="hl">দুটি বাস্তব ও অসমান মূল</td>
+                  </tr>
+                  <tr>
+                    <td><strong style={{color:'var(--mf-gold)'}}>D = 0</strong></td>
+                    <td className="hl">দুটি বাস্তব ও সমান মূল</td>
+                  </tr>
+                  <tr>
+                    <td><strong style={{color:'var(--mf-rose)'}}>D &lt; 0</strong></td>
+                    <td className="hl">দুটি জটিল (কাল্পনিক) মূল</td>
+                  </tr>
+                  <tr>
+                    <td><strong style={{color:'var(--mf-violet)'}}>D &gt; 0 এবং পূর্ণবর্গ</strong></td>
+                    <td className="hl">দুটি মূলদ (Rational) মূল</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Card>
+
+          <Card color="violet">
+            <CardTitle color="var(--mf-violet)">⑤ মূল থেকে সমীকরণ নির্মাণ</CardTitle>
+            <p style={{fontSize:13,color:'var(--text-3)',marginBottom:10}}>
+              যদি α ও β মূল হয়, তবে সমীকরণটি হবে:
+            </p>
+            <FBox label="সমীকরণ" tex={"x^2 - (\\alpha+\\beta)\\,x + \\alpha\\beta = 0"} highlight/>
+            <Mem title="💡 মনে রাখুন">
+              <p><strong>x² − (সমষ্টি)x + (গুণফল) = 0</strong></p>
+              <p style={{marginTop:4}}>মূল ৩ ও ৪ হলে: x² − 7x + 12 = 0</p>
+            </Mem>
+          </Card>
+        </div>
+
+        {/* ══ LOGARITHM ══════════════════════════════════════════ */}
+        <div className="mf-section" id="logarithm">
+          <SectionHeader icon="㏒" title="লগারিদম" sub="Logarithm — Properties & Rules" />
+
+          <Card color="teal" style={{marginBottom:16}}>
+            <CardTitle color="var(--mf-teal)">মূল সংজ্ঞা ও প্রাথমিক সূত্র</CardTitle>
+            <div className="mf-id-list">
+              <IdItem n="①"><span style={{marginRight:8,fontWeight:700}}>log<sub>a</sub> 1 = 0</span><span style={{color:'var(--text-3)',fontSize:12}}>(যেকোনো সংখ্যার log of 1 = 0)</span></IdItem>
+              <IdItem n="②"><span style={{marginRight:8,fontWeight:700}}>log<sub>a</sub> a = 1</span><span style={{color:'var(--text-3)',fontSize:12}}>(নিজের ভিত্তিতে log = 1)</span></IdItem>
+              <IdItem n="③">
+                <span>log<sub>a</sub> M = n &nbsp;মানে&nbsp; <strong>a<sup>n</sup> = M</strong></span>
+              </IdItem>
+              <IdItem n="⑤"><Tex>{"a^{\\log_a b} = b"}</Tex></IdItem>
+            </div>
+            <Mem title="💡 মূল সংজ্ঞা">
+              <p><strong>log<sub>a</sub> M = n</strong> মানে a কে n-তম ঘাতে তুললে M হয়।</p>
+              <p style={{marginTop:4}}>log₂ 8 = 3 কারণ 2³ = 8</p>
+            </Mem>
+          </Card>
+
+          <Card color="violet">
+            <CardTitle color="var(--mf-violet)">④ Chain Rule — কোনাকুনি বাতিল হয়</CardTitle>
+            <div style={{marginBottom:12}}>
+              <FBox label="log_a b × log_b c" tex={"= \\log_a c"} highlight/>
+            </div>
+            <div style={{background:'var(--elevated)',borderRadius:10,padding:14,marginBottom:12}}>
+              <div style={{fontSize:13,color:'var(--text-3)',marginBottom:8}}>সাধারণ রূপ:</div>
+              <FBox label="log_p q × log_m p" tex={"= \\log_m q"}/>
+              <div style={{marginTop:10,fontSize:13,color:'var(--text-3)',lineHeight:1.7}}>
+                মাঝের ভিত্তি (<strong>b</strong> বা <strong>p</strong>) কোনাকুনিভাবে বাতিল হয়ে যায়।<br/>
+                <span style={{color:'var(--mf-violet)',fontWeight:700}}>log<sub>a</sub> <u>b</u></span> × <span style={{color:'var(--mf-violet)',fontWeight:700}}>log<sub><u>b</u></sub> c</span> → b বাতিল → log<sub>a</sub> c
+              </div>
+            </div>
+            <Mem title="💡 মনে রাখুন">
+              <p>Chain rule মানে মাঝের ভিত্তি বাতিল। তিনটি বা বেশি গুণও একইভাবে কমানো যায়।</p>
+              <p style={{marginTop:4}}>log₂ 3 × log₃ 5 × log₅ 8 = log₂ 8 = 3</p>
+            </Mem>
+          </Card>
         </div>
 
         {/* ══ S9: SERIES ════════════════════════════════════════ */}
