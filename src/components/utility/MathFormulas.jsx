@@ -1118,6 +1118,62 @@ export default function MathFormulas({ onBack }) {
               </Mem>
             </Card>
           </div>
+
+          <Card color="rose" style={{marginTop:16}}>
+            <CardTitle color="var(--mf-rose)">ব্যবহারিক সমস্যা — ভেন চিত্র দিয়ে মোট নির্ণয়</CardTitle>
+            <p style={{fontSize:13,color:'var(--text-3)',marginBottom:12}}>
+              x = A∩B (ছেদ), c = A∪B এর বাইরের সংখ্যা
+            </p>
+
+            <div style={{display:'flex',flexWrap:'wrap',gap:16,alignItems:'center',marginBottom:14}}>
+              {/* Venn diagram with regions labelled */}
+              <svg width="190" height="130" viewBox="0 0 190 130" style={{flexShrink:0}}>
+                <rect x="4" y="4" width="182" height="122" rx="8" fill="none" stroke="#f06d7e" strokeWidth="1.5"/>
+                <text x="178" y="18" textAnchor="end" fill="#f06d7e" fontSize="11" fontWeight="700">U</text>
+                <ellipse cx="72" cy="65" rx="48" ry="42" fill="rgba(91,164,245,.12)" stroke="#5ba4f5" strokeWidth="2"/>
+                <ellipse cx="118" cy="65" rx="48" ry="42" fill="rgba(15,219,168,.12)" stroke="#0fdba8" strokeWidth="2"/>
+                <text x="48" y="22" fill="#5ba4f5" fontSize="12" fontWeight="700">A</text>
+                <text x="138" y="22" fill="#0fdba8" fontSize="12" fontWeight="700">B</text>
+                {/* Region labels */}
+                <text x="55" y="70" textAnchor="middle" fill="#5ba4f5" fontSize="13" fontWeight="800">A−x</text>
+                <text x="95" y="70" textAnchor="middle" fill="#a78bfa" fontSize="13" fontWeight="800">x</text>
+                <text x="135" y="70" textAnchor="middle" fill="#0fdba8" fontSize="13" fontWeight="800">B−x</text>
+                <text x="168" y="115" textAnchor="middle" fill="#f06d7e" fontSize="13" fontWeight="800">c</text>
+              </svg>
+
+              {/* Region breakdown */}
+              <div style={{flex:1,minWidth:140}}>
+                {[
+                  {label:'শুধু A', val:'= A − x', color:'var(--mf-blue)'},
+                  {label:'শুধু B', val:'= B − x', color:'var(--mf-teal)'},
+                  {label:'A∩B (ছেদ)', val:'= x', color:'var(--mf-violet)'},
+                  {label:'বাইরে (Neither)', val:'= c', color:'var(--mf-rose)'},
+                ].map(r => (
+                  <div key={r.label} style={{display:'flex',justifyContent:'space-between',padding:'5px 8px',borderRadius:6,marginBottom:4,background:'var(--elevated)',borderLeft:`3px solid ${r.color}`}}>
+                    <span style={{fontSize:13,color:'var(--text-2)'}}>{r.label}</span>
+                    <span style={{fontSize:13,fontWeight:700,color:r.color}}>{r.val}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{background:'rgba(240,108,126,.08)',borderRadius:10,padding:14,borderLeft:'3px solid var(--mf-rose)'}}>
+              <div style={{fontSize:13,fontWeight:700,color:'var(--mf-rose)',marginBottom:8}}>মোট সমীকরণ</div>
+              <FBox label="মোট (N)" val="= (A − x) + (B − x) + x + c" highlight/>
+              <div style={{fontSize:12,color:'var(--text-3)',marginTop:8}}>
+                সরলীকরণ: N = A + B − x + c
+              </div>
+            </div>
+
+            <Mem title="💡 সমস্যা সমাধানের ধাপ" style={{marginTop:10}}>
+              <ol style={{paddingLeft:18,lineHeight:2}}>
+                <li>x = A∩B খুঁজে নাও (বা অজানা হলে চল রাশি ধরো)</li>
+                <li>শুধু A = A − x, শুধু B = B − x লেখো</li>
+                <li>সব অঞ্চল যোগ করো = মোট N</li>
+                <li>সমীকরণ: N = (A−x) + x + (B−x) + c</li>
+              </ol>
+            </Mem>
+          </Card>
         </div>
 
         {/* ══ S12: LCM & GCD ════════════════════════════════════ */}
