@@ -2,7 +2,7 @@
 
 .ft-root {
   overflow-x: clip;
-  font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
   width: 100%;
   min-height: 100dvh;
   display: flex;
@@ -10,23 +10,32 @@
 }
 
 /* ── Top bar ─────────────────────────────────── */
+.ft-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px 80px;
+  box-sizing: border-box;
+}
+
 .ft-topbar {
   position: sticky;
-  top: 0;
-  z-index: 20;
+  top: -16px;
+  z-index: 100;
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  margin: -16px -20px 16px -20px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--border-md);
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 72px 12px 18px; /* right pad for fixed theme toggle */
   box-shadow: var(--shadow-sm);
 }
 
 .ft-topbar-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: -0.02em;
@@ -35,11 +44,11 @@
 
 .ft-topbar-count {
   margin-left: auto;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
   color: var(--accent);
   background: var(--accent-light);
-  border: 1px solid rgba(99,102,241,0.22);
+  border: 1px solid rgba(99, 102, 241, 0.22);
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
@@ -47,9 +56,8 @@
 
 /* ── Filter bar ──────────────────────────────── */
 .ft-filter-wrap {
-  max-width: 1100px;
-  margin: 16px auto 0;
-  padding: 0 20px;
+  margin: 16px 0 0;
+  padding: 0;
   display: flex;
   gap: 7px;
   flex-wrap: wrap;
@@ -61,13 +69,17 @@
   border: 1px solid var(--border);
   background: var(--surface-glass);
   color: var(--text-3);
-  font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
   font-size: 12px;
   cursor: pointer;
   transition: all 0.18s ease;
   backdrop-filter: blur(4px);
 }
-.ft-filter-btn:hover { color: var(--text-2); border-color: var(--border-md); background: var(--hover-bg); }
+.ft-filter-btn:hover {
+  color: var(--text-2);
+  border-color: var(--border-md);
+  background: var(--hover-bg);
+}
 .ft-filter-btn.active {
   font-weight: 600;
   color: #fff;
@@ -76,14 +88,13 @@
 
 /* ── Search ──────────────────────────────────── */
 .ft-search-wrap {
-  max-width: 1100px;
-  margin: 12px auto 0;
-  padding: 0 20px;
+  margin: 12px 0 0;
+  padding: 0;
   position: relative;
 }
 .ft-search-icon {
   position: absolute;
-  left: 32px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-3);
@@ -96,17 +107,21 @@
   border-radius: 12px;
   padding: 10px 14px 10px 38px;
   color: var(--text);
-  font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
   font-size: max(16px, 1rem); /* prevent iOS Safari auto-zoom on focus */
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   backdrop-filter: blur(6px);
 }
 .ft-search-input:focus {
   border-color: var(--border-bright);
   box-shadow: 0 0 0 3px var(--accent-light);
 }
-.ft-search-input::placeholder { color: var(--text-3); }
+.ft-search-input::placeholder {
+  color: var(--text-3);
+}
 
 /* ── Card Grid ───────────────────────────────── */
 .ft-grid {
@@ -137,52 +152,99 @@
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
   cursor: default;
 }
 .ft-card::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 3px; height: 100%;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
   background: var(--card-color, var(--accent));
   border-radius: 3px 0 0 3px;
 }
 .ft-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md), 0 0 0 1px color-mix(in srgb, var(--card-color, var(--accent)) 30%, transparent);
-  border-color: color-mix(in srgb, var(--card-color, var(--accent)) 40%, var(--border));
-  background: color-mix(in srgb, var(--card-color, var(--accent)) 3%, var(--surface-glass));
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 1px
+      color-mix(in srgb, var(--card-color, var(--accent)) 30%, transparent);
+  border-color: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 40%,
+    var(--border)
+  );
+  background: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 3%,
+    var(--surface-glass)
+  );
 }
 
 .ft-card-header {
-  display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 .ft-card-icon {
-  width: 32px; height: 32px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; flex-shrink: 0;
-  background: color-mix(in srgb, var(--card-color, var(--accent)) 12%, var(--elevated));
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  background: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 12%,
+    var(--elevated)
+  );
   border: 1px solid var(--border);
 }
 .ft-card-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px; font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--card-color, var(--accent));
   letter-spacing: 0.3px;
 }
-.ft-card-subtitle { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+.ft-card-subtitle {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
 .ft-card-body {
-  font-size: 13px; color: var(--text-2); line-height: 1.75;
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.75;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
 /* body HTML content styles */
-.ft-card-body strong { color: var(--card-color, var(--accent)); font-weight: 600; }
-.ft-card-body em { color: #f59e0b; font-style: normal; }
-.ft-card-body .highlight { color: #0ea5e9; }
-.ft-card-body .warning { color: #ef4444; font-weight: 600; }
+.ft-card-body strong {
+  color: var(--card-color, var(--accent));
+  font-weight: 600;
+}
+.ft-card-body em {
+  color: #f59e0b;
+  font-style: normal;
+}
+.ft-card-body .highlight {
+  color: #0ea5e9;
+}
+.ft-card-body .warning {
+  color: #ef4444;
+  font-weight: 600;
+}
 
 /* Abbreviation grid */
 .ft-card-body .abbr-grid {
@@ -192,12 +254,15 @@
   margin-top: 4px;
 }
 .ft-card-body .abbr-key {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   color: var(--accent);
-  font-size: 12px; font-weight: 600;
+  font-size: 12px;
+  font-weight: 600;
 }
-.ft-card-body .abbr-val { color: var(--text-2); font-size: 12px; }
-
+.ft-card-body .abbr-val {
+  color: var(--text-2);
+  font-size: 12px;
+}
 
 @media (max-width: 640px) {
   .ft-grid {
@@ -217,5 +282,7 @@
 /* ft-grid already uses auto-fill minmax(300px,1fr) — 1-col on narrow screens intrinsically.
    The card subtitle is kept at 12px intentionally (label-level text, not body copy). */
 @media (min-width: 641px) {
-  .ft-card-subtitle { font-size: 12px; }
+  .ft-card-subtitle {
+    font-size: 12px;
+  }
 }

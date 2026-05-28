@@ -8,14 +8,16 @@ const ALL_CATS = ['সব', ...Object.keys(FIN_CATEGORIES)]
 export default function FinancialTerms({ onBack }) {
   return (
     <div className="ft-root">
-      <div className="ft-topbar">
-        <button className="back-btn" onClick={onBack}>
-          <ChevronLeft size={15} /> হোম
-        </button>
-        <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>
-      </div>
+      <div className="ft-wrap">
+        <div className="ft-topbar">
+          <button className="back-btn" onClick={onBack}>
+            <ChevronLeft size={15} /> হোম
+          </button>
+          <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>
+        </div>
 
-      <RefSection />
+        <RefSection />
+      </div>
     </div>
   )
 }

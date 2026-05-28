@@ -1,50 +1,42 @@
-import { useEffect, useRef } from 'react'
-import { ChevronLeft, Lightbulb, AlertTriangle } from 'lucide-react'
 import katex from 'katex'
 import 'katex/dist/katex.min.css'
+import { AlertTriangle, ChevronLeft, LayoutGrid, Lightbulb } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import CategorySidebar from '../CategorySidebar'
 import './MathFormulas.css'
 
 const SECTIONS = [
-  { id: 'triangle',  label: 'ত্রিভুজ',           icon: '△'   },
-  { id: 'trig',      label: 'ত্রিকোণমিতি',        icon: '√'   },
-  { id: 'tri-center',label: 'ত্রিভুজ কেন্দ্র',   icon: '⊙'   },
-  { id: 'quad',      label: 'চতুর্ভুজ',            icon: '▭'   },
-  { id: 'circle',    label: 'বৃত্ত ও বহুভুজ',     icon: '○'   },
-  { id: 'solid',     label: 'ঘনবস্তু',             icon: '◧'   },
-  { id: 'curved',    label: 'সিলিন্ডার·Cone',      icon: '⬡'   },
-  { id: 'algebra',   label: 'বীজগণিত',             icon: '≡'   },
-  { id: 'line',      label: 'সরল রেখা',            icon: '∕'   },
-  { id: 'quadratic', label: 'দ্বিঘাত সমী.',        icon: 'x²'  },
-  { id: 'logarithm', label: 'লগারিদম',             icon: '㏒'  },
-  { id: 'series',    label: 'ধারা',                icon: '∑'   },
-  { id: 'pnc',       label: 'বিন্যাস-সমাবেশ',      icon: 'nPr' },
-  { id: 'set',       label: 'সেট ও সম্ভাবনা',      icon: '∩'   },
-  { id: 'lcm',       label: 'ল.সা.গু-গ.সা.গু',    icon: '÷'   },
-  { id: 'profit',    label: 'মুনাফা',              icon: '৳'   },
-  { id: 'percentage',label: 'শতকরা',               icon: '%'   },
-  { id: 'speed',     label: 'গড় বেগ',              icon: '⇢'   },
+  { id: 'triangle',  label: 'ত্রিভুজ',           icon: '△', color: '#0d9488' },
+  { id: 'trig',      label: 'ত্রিকোণমিতি',        icon: '√', color: '#1d4ed8' },
+  { id: 'tri-center',label: 'ত্রিভুজ কেন্দ্র',   icon: '⊙', color: '#6d28d9' },
+  { id: 'quad',      label: 'চতুর্ভুজ',            icon: '▭', color: '#be123c' },
+  { id: 'circle',    label: 'বৃত্ত ও বহুভুজ',     icon: '○', color: '#b45309' },
+  { id: 'solid',     label: 'ঘনবস্তু',             icon: '◧', color: '#0d9488' },
+  { id: 'curved',    label: 'সিলিন্ডার·Cone',      icon: '⬡', color: '#1d4ed8' },
+  { id: 'algebra',   label: 'বীজগণিত',             icon: '≡', color: '#6d28d9' },
+  { id: 'line',      label: 'সরল রেখা',            icon: '∕', color: '#b45309' },
+  { id: 'quadratic', label: 'দ্বিঘাত সমী.',        icon: 'x²', color: '#be123c' },
+  { id: 'logarithm', label: 'লগারিদম',             icon: '㏒', color: '#0d9488' },
+  { id: 'series',    label: 'ধারা',                icon: '∑', color: '#1d4ed8' },
+  { id: 'pnc',       label: 'বিন্যাস-সমাবেশ',      icon: 'nPr', color: '#6d28d9' },
+  { id: 'set',       label: 'সেট ও সম্ভাবনা',      icon: '∩', color: '#be123c' },
+  { id: 'lcm',       label: 'ল.সা.গু-গ.সা.গু',    icon: '÷', color: '#b45309' },
+  { id: 'profit',    label: 'মুনাফা',              icon: '৳', color: '#0d9488' },
+  { id: 'percentage',label: 'শতকরা',               icon: '%', color: '#1d4ed8' },
+  { id: 'speed',     label: 'গড় বেগ',              icon: '⇢', color: '#6d28d9' },
 ]
 
 export default function MathFormulas({ onBack }) {
-  const activeRef = useRef(null)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
 
   useEffect(() => {
     const sectionEls = SECTIONS.map(s => document.getElementById(s.id)).filter(Boolean)
-    const navBtns    = document.querySelectorAll('.mf-nav-btn')
-
-    const navInner = document.querySelector('.mf-nav-inner')
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (!e.isIntersecting) return
-        navBtns.forEach(b => b.classList.remove('active'))
-        const btn = document.querySelector(`.mf-nav-btn[data-id="${e.target.id}"]`)
-        if (btn && navInner) {
-          btn.classList.add('active')
-          // Scroll only horizontally within the nav bar — never use scrollIntoView
-          // which can cause block-axis page jumps on sticky elements
-          navInner.scrollLeft = btn.offsetLeft - navInner.offsetWidth / 2 + btn.offsetWidth / 2
-        }
+        setActiveSectionId(e.target.id)
       })
     }, { rootMargin: '-20% 0px -65% 0px' })
 
@@ -56,28 +48,37 @@ export default function MathFormulas({ onBack }) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const topics = SECTIONS.map(s => ({
+    id: s.id,
+    name: s.label,
+    icon: () => <span style={{ fontSize: 14, fontWeight: 'bold' }}>{s.icon}</span>,
+    color: s.color
+  }))
+
   return (
     <div className="mf-root">
-      {/* Top bar */}
-      <div className="mf-topbar">
-        <button className="back-btn" onClick={onBack}>
-          <ChevronLeft size={15} /> হোম
-        </button>
-        <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>
-      </div>
-
-      {/* Section nav */}
-      <nav className="mf-nav">
-        <div className="mf-nav-inner">
-          {SECTIONS.map(s => (
-            <button key={s.id} className="mf-nav-btn" data-id={s.id} onClick={() => scrollTo(s.id)}>
-              {s.label}
-            </button>
-          ))}
-        </div>
-      </nav>
+      <CategorySidebar
+        topics={topics}
+        currentTopicId={activeSectionId}
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        onSelect={(t) => scrollTo(t.id)}
+      />
 
       <div className="mf-wrap">
+        {/* Top bar */}
+        <div className="mf-topbar">
+          <button className="back-btn" onClick={onBack}>
+            <ChevronLeft size={15} /> হোম
+          </button>
+          <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>
+          <div className="topbar-right-actions" style={{ marginLeft: 'auto' }}>
+            <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
+              <LayoutGrid size={16} />
+            </button>
+          </div>
+        </div>
+
         {/* Section picker grid */}
         <div className="mf-sec-picker">
           {SECTIONS.map(s => (
