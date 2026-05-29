@@ -962,9 +962,35 @@ export default function MathFormulas({ onBack }) {
             <Card color="violet">
               <CardTitle color="var(--mf-violet)">বিন্যাস — Permutation (সাজানো)</CardTitle>
               <FBox label="nPr" tex={"= \\dfrac{n!}{(n-r)!}"}/>
+              <FBox label="n বস্তু সারিতে" val="= n!"/>
               <FBox label="n বস্তু বৃত্তাকারে" val="= (n−1)!" highlight/>
               <FBox label="n ভিন্ন বস্তু গলায় (Necklace)" tex={"= \\dfrac{(n-1)!}{2}"}/>
-              
+
+              <div style={{display:'flex',flexDirection:'column',gap:8,marginTop:12}}>
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0'}}>
+                  <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>m বিশেষ + n সাধারণ, সারিতে (বিশেষ পাশাপাশি নয়)</div>
+                  <div style={{textAlign:'center',margin:'6px 0'}}><Tex>{"n! \\times {}^{n+1}P_m"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)',textAlign:'center'}}>শর্ত: m ≤ n+1</div>
+                </div>
+
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0'}}>
+                  <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>চক্রাকারে, ১ জনের আসন ফিক্সড</div>
+                  <div style={{textAlign:'center',margin:'6px 0'}}><Tex>{"n!"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)',textAlign:'center'}}>বাকি n জনকে সাজানোর উপায়</div>
+                </div>
+
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0'}}>
+                  <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>দুটি সমান গ্রুপ (m সদস্য), চক্রাকারে (একই গ্রুপ পাশাপাশি নয়)</div>
+                  <div style={{textAlign:'center',margin:'6px 0'}}><Tex>{"(m-1)! \\times m!"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)',textAlign:'center'}}>উদা: ৫ বাংলাদেশী + ৫ ভারতীয় → 4! × 5! = 2880</div>
+                </div>
+
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0'}}>
+                  <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>দুটি অসমান গ্রুপ, চক্রাকারে (বড় গ্রুপ N, ছোট M)</div>
+                  <div style={{textAlign:'center',margin:'6px 0'}}><Tex>{"(N-1)! \\times {}^{N}P_M"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)',textAlign:'center'}}>উদা: ১৫ কলা + ১২ বিজ্ঞান → 14! × ¹⁵P₁₂</div>
+                </div>
+              </div>
             </Card>
 
             <Card color="teal">
