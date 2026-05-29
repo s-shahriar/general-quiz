@@ -124,10 +124,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="পরিসীমা" val="= 3a"/>
               <FBox label="বাহু (মধ্যমা h → a)" tex={"a = \\dfrac{2}{\\sqrt{3}}\\,h"}/>
               <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{\\sqrt{3}}{4}\\,a^2"} highlight/>
-              <Mem title="💡 মনে রাখুন">
-                <p>সব বাহু সমান = শুধু "a" — সূত্রে অন্য কোনো অক্ষর নেই।</p>
-                <p style={{marginTop:6}}><strong>h = মধ্যমা</strong> — সমবাহু ত্রিভুজে উচ্চতা, মধ্যমা ও কোণের সমদ্বিখণ্ডক একই রেখা।</p>
-              </Mem>
+              
             </Card>
 
             <Card color="blue">
@@ -145,7 +142,7 @@ export default function MathFormulas({ onBack }) {
               </div>
               <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{b}{4}\\sqrt{4a^2-b^2}"} highlight/>
               <FBox label="উচ্চতা h" tex={"= \\sqrt{a^2 - \\dfrac{b^2}{4}}"}/>
-              <Mem title="💡 মনে রাখুন"><p><strong>b = ভূমি</strong> (বেজ), <strong>a = সমান দুটি বাহু</strong> — "b" আলাদা কারণ ভূমি আলাদা।</p></Mem>
+              
             </Card>
 
             <Card color="rose">
@@ -160,11 +157,9 @@ export default function MathFormulas({ onBack }) {
               </div>
               <FBox label="ক্ষেত্রফল" tex={"= \\sqrt{s(s-a)(s-b)(s-c)}"} highlight/>
               <FBox label="s (অর্ধপরি)" tex={"= \\dfrac{a+b+c}{2}"}/>
-              <Mem title="💡 হেরনের সূত্র"><p>"<strong>s</strong> থেকে তিনটি বাদ দাও, গুণ করো, বর্গমূল নাও"</p></Mem>
+              
             </Card>
-          </div>
 
-          <div className="mf-grid2">
             <Card color="violet">
               <CardTitle color="var(--mf-violet)">দুই বাহু ও অন্তর্ভুক্ত কোণ দিয়ে ক্ষেত্রফল</CardTitle>
               <div style={{textAlign:'center',margin:'10px 0'}}>
@@ -178,50 +173,23 @@ export default function MathFormulas({ onBack }) {
               </div>
               <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{1}{2}\\,ab\\sin\\theta"} highlight/>
               <p style={{fontSize:13,color:'var(--text-3)',marginTop:8}}>যেখানে a ও b দুটি বাহু এবং θ তাদের অন্তর্ভুক্ত কোণ</p>
-            </Card>
-
-            <Card color="gold">
-              <CardTitle>সর্বসমতার শর্ত (Congruence)</CardTitle>
-              <div className="mf-legend">
-                <span><strong>SAS</strong> Side-Angle-Side</span>
-                <span><strong>SSS</strong> Side-Side-Side</span>
-                <span><strong>ASA</strong> Angle-Side-Angle</span>
-                <span><strong>AAS</strong> Angle-Angle-Side</span>
-                <span><strong>RHS</strong> Right-Hypotenuse-Side</span>
+              <div style={{marginTop:12,paddingTop:10,borderTop:'1px solid var(--border-dim)'}}>
+                <div style={{fontWeight:700,marginBottom:6,fontSize:13,color:'var(--mf-violet)'}}>সর্বসমতার শর্ত (Congruence)</div>
+                <div className="mf-legend" style={{marginBottom:6}}>
+                  <span style={{fontSize:11}}><strong>SAS</strong></span>
+                  <span style={{fontSize:11}}><strong>SSS</strong></span>
+                  <span style={{fontSize:11}}><strong>ASA</strong></span>
+                  <span style={{fontSize:11}}><strong>AAS</strong></span>
+                  <span style={{fontSize:11}}><strong>RHS</strong></span>
+                </div>
+                <ul className="mf-prop-list" style={{fontSize:12}}>
+                  <li><span className="mf-tag g" style={{fontSize:10}}>SAS</span> দুই বাহু ও অন্তর্ভুক্ত কোণ</li>
+                  <li><span className="mf-tag g" style={{fontSize:10}}>SSS</span> তিন বাহু সমান</li>
+                  <li><span className="mf-tag g" style={{fontSize:10}}>RHS</span> সমকোণী: অতিভুজ ও বাহু</li>
+                </ul>
               </div>
-              <ul className="mf-prop-list">
-                <li><span className="mf-tag g">SAS</span> দুই বাহু ও অন্তর্ভুক্ত কোণ সমান</li>
-                <li><span className="mf-tag g">SSS</span> তিন বাহু সমান</li>
-                <li><span className="mf-tag g">ASA</span> দুই কোণ ও মধ্যবর্তী বাহু সমান</li>
-                <li><span className="mf-tag g">AAS</span> দুই কোণ ও যেকোনো বাহু সমান</li>
-                <li><span className="mf-tag g">RHS</span> সমকোণী: অতিভুজ ও একটি বাহু সমান</li>
-              </ul>
-              <Warn title="⚠️ মিলিয়ে ফেলবেন না">
-                <p>সর্বসম (Congruent) ≠ সদৃশ (Similar)। সর্বসম = একই আকার ও মাপ। সদৃশ = শুধু একই আকার।</p>
-              </Warn>
             </Card>
           </div>
-
-          <Card color="gold" style={{marginTop:16}}>
-            <CardTitle>পিথাগোরাস সংক্রান্ত গুরুত্বপূর্ণ তথ্য</CardTitle>
-            <div className="mf-grid2">
-              <div>
-                <FBox label="সমকোণী হলে" val="AB² + BC² = AC² (অতিভুজ²)"/>
-                <FBox label="সূক্ষ্মকোণী হলে" val="বৃহত্তম বাহুর² < অন্য দুই বাহুর² যোগফল"/>
-                <FBox label="স্থূলকোণী হলে" val="বৃহত্তম বাহুর² > অন্য দুই বাহুর² যোগফল"/>
-              </div>
-              <div style={{textAlign:'center',padding:10}}>
-                <svg width="160" height="132" viewBox="0 0 160 132">
-                  <polygon points="14,112 134,112 14,16" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
-                  <rect x="14" y="100" width="12" height="12" fill="none" stroke="#ffd166" strokeWidth="1.5"/>
-                  <text x="28" y="110" fill="#ffd166" fontSize="10">90°</text>
-                  <text x="74" y="126" fill="#0fdba8" fontSize="12" textAnchor="middle">a (ভূমি)</text>
-                  <text x="8" y="64" fill="#0fdba8" fontSize="12" textAnchor="middle" transform="rotate(-90,8,64)">b (লম্ব)</text>
-                  <text x="82" y="55" fill="#f0a500" fontSize="11" fontWeight="700" textAnchor="middle" transform="rotate(40,82,55)">c = √(a²+b²)</text>
-                </svg>
-              </div>
-            </div>
-          </Card>
         </div>
 
         {/* ══ S-TRIG: TRIGONOMETRY ══════════════════════════════ */}
@@ -232,7 +200,7 @@ export default function MathFormulas({ onBack }) {
           <Card color="teal" style={{marginBottom:16}}>
             <CardTitle color="var(--mf-teal)">কৌশল: মাত্র একটি সিকোয়েন্স মনে রাখো</CardTitle>
             <div style={{display:'flex', flexWrap:'wrap', gap:12, margin:'12px 0'}}>
-              <div style={{flex:1, minWidth:140, background:'rgba(15,219,168,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-teal)'}}>
+              <div style={{flex:1, minWidth:140, background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-teal)'}}>
                 <div style={{fontWeight:700, color:'var(--mf-teal)', marginBottom:10, fontSize:13}}>sin — বাড়তি ক্রম ↑</div>
                 <div style={{display:'flex', alignItems:'flex-end', gap:10, marginBottom:8}}>
                   {['√0','√1','√2','√3','√4'].map((v,i) => (
@@ -245,7 +213,7 @@ export default function MathFormulas({ onBack }) {
                 </div>
                 <div style={{fontSize:12, color:'var(--text-3)'}}>n = 0 → 4 &nbsp;→&nbsp; <strong style={{color:'var(--mf-teal)'}}>sin = √n / 2</strong></div>
               </div>
-              <div style={{flex:1, minWidth:140, background:'rgba(91,164,245,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-blue)'}}>
+              <div style={{flex:1, minWidth:140, background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-blue)'}}>
                 <div style={{fontWeight:700, color:'var(--mf-blue)', marginBottom:10, fontSize:13}}>cos — কমতি ক্রম ↓</div>
                 <div style={{display:'flex', alignItems:'flex-end', gap:10, marginBottom:8}}>
                   {['√4','√3','√2','√1','√0'].map((v,i) => (
@@ -258,7 +226,7 @@ export default function MathFormulas({ onBack }) {
                 </div>
                 <div style={{fontSize:12, color:'var(--text-3)'}}>n = 4 → 0 &nbsp;→&nbsp; <strong style={{color:'var(--mf-blue)'}}>cos = √n / 2</strong></div>
               </div>
-              <div style={{flex:1, minWidth:140, background:'rgba(240,108,126,.08)', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-rose)'}}>
+              <div style={{flex:1, minWidth:140, background:'#ffffff', border:'1px solid #e2e8f0', borderRadius:12, padding:'12px 14px', borderLeft:'3px solid var(--mf-rose)'}}>
                 <div style={{fontWeight:700, color:'var(--mf-rose)', marginBottom:10, fontSize:13}}>tan = sin ÷ cos</div>
                 <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap', marginBottom:8}}>
                   {['0','1/√3','1','√3','∞'].map((v,i) => (
@@ -268,11 +236,7 @@ export default function MathFormulas({ onBack }) {
                 <div style={{fontSize:12, color:'var(--text-3)'}}>tan = <strong style={{color:'var(--mf-rose)'}}>sin θ ÷ cos θ</strong></div>
               </div>
             </div>
-            <Mem title="💡 মনে রাখার সহজ উপায়">
-              <p><strong>sin:</strong> কোণ বাড়লে n বাড়ে (0→4) → sin = √n ÷ 2</p>
-              <p style={{marginTop:4}}><strong>cos:</strong> sin-এর ঠিক উল্টো ক্রম (4→0) → cos = √n ÷ 2</p>
-              <p style={{marginTop:4}}><strong>tan:</strong> sin ÷ cos — আলাদা মুখস্থ করতে হবে না</p>
-            </Mem>
+            
           </Card>
 
           {/* Quick reference table */}
@@ -301,14 +265,7 @@ export default function MathFormulas({ onBack }) {
                 </tbody>
               </table>
             </div>
-            <Mem title="💡 গুরুত্বপূর্ণ সম্পর্ক">
-              <ul>
-                <li>sin ↑ বাড়ে (0→1), cos ↓ কমে (1→0) — সবসময় উল্টো দিকে</li>
-                <li>sin² θ + cos² θ = <strong>1</strong> সবসময়</li>
-                <li>tan θ = sin θ ÷ cos θ</li>
-                <li>tan 90° অসংজ্ঞায়িত — cos 90° = 0, শূন্য দিয়ে ভাগ হয় না</li>
-              </ul>
-            </Mem>
+            
           </Card>
         </div>
 
@@ -334,7 +291,7 @@ export default function MathFormulas({ onBack }) {
                 <li>অন্তর্বৃত্তের কেন্দ্র</li>
                 <li>সর্বদা ত্রিভুজের <strong>ভেতরে</strong> থাকে</li>
               </ul>
-              <Mem title="💡 মনে রাখুন"><p><strong>অন্তঃ</strong>কেন্দ্র → <strong>কোণের</strong> সমদ্বিখণ্ডক</p></Mem>
+              
             </Card>
 
             <Card color="teal">
@@ -355,7 +312,7 @@ export default function MathFormulas({ onBack }) {
                 <li>পরিবৃত্তের কেন্দ্র</li>
                 <li>সূক্ষ্মকোণীতে ভেতরে, স্থূলকোণীতে বাইরে</li>
               </ul>
-              <Mem title="💡 মনে রাখুন"><p><strong>পরি</strong>কেন্দ্র → <strong>বাহুর</strong> লম্বদ্বিখণ্ডক</p></Mem>
+              
             </Card>
 
             <Card color="rose">
@@ -378,20 +335,10 @@ export default function MathFormulas({ onBack }) {
                 <li>মধ্যমাকে <span className="mf-fi">2:1</span> অনুপাতে ভাগ করে</li>
                 <li>সর্বদা ত্রিভুজের <strong>ভেতরে</strong> থাকে</li>
               </ul>
-              <Mem title="💡 মনে রাখুন">
-                <p><strong>ভর</strong>কেন্দ্র → <strong>মধ্যমা</strong> (2:1)</p>
-                <p style={{marginTop:4}}>শীর্ষ থেকে ভরকেন্দ্র = মধ্যমার ⅔, ভূমি মধ্যবিন্দু থেকে = ⅓।</p>
-              </Mem>
+              
             </Card>
           </div>
-          <Mem title="💡 তিন কেন্দ্র একসাথে মনে রাখুন" style={{marginTop:8}}>
-            <p>
-              <strong style={{color:'var(--mf-violet)'}}>অন্তঃ (I)</strong> = কোণ দ্বিখণ্ডক → সবসময় ভেতরে &nbsp;|&nbsp;
-              <strong style={{color:'var(--mf-teal)'}}>পরি (O)</strong> = বাহু লম্বদ্বিখণ্ডক → ধরন অনুসারে &nbsp;|&nbsp;
-              <strong style={{color:'var(--mf-rose)'}}>ভর (G)</strong> = মধ্যমা → সবসময় ভেতরে, 2:1
-            </p>
-            <p style={{marginTop:4}}>স্মৃতিসূত্র: <strong>"কোণ-বাহু-মধ্যমা"</strong> → <strong>"অন্তঃ-পরি-ভর"</strong></p>
-          </Mem>
+          
         </div>
 
         {/* ══ S4: QUADRILATERALS ════════════════════════════════ */}
@@ -453,7 +400,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="ক্ষেত্রফল" val="= a × b"/>
               <FBox label="পরিসীমা" val="= 2(a + b)"/>
               <FBox label="কর্ণ" tex={"= \\sqrt{a^2+b^2}"} highlight/>
-              <Mem title="💡"><p>কর্ণদ্বয় সমান এবং পরস্পরকে <strong>সমদ্বিখণ্ডিত</strong> করে।</p></Mem>
+              
             </Card>
 
             <Card color="teal">
@@ -476,7 +423,6 @@ export default function MathFormulas({ onBack }) {
                 <li>কর্ণদ্বয় পরস্পরকে <strong>সমকোণে সমদ্বিখণ্ডিত</strong> করে</li>
                 <li>চার বাহু সমান, কিন্তু কোণ ≠ 90°</li>
               </ul>
-              <Warn title="⚠️ মিলিয়ে ফেলবেন না"><p>রম্বস ≠ বর্গ। রম্বুসে কোণ ৯০° নয়।</p></Warn>
             </Card>
 
             <Card color="violet">
@@ -520,15 +466,7 @@ export default function MathFormulas({ onBack }) {
             </Card>
           </div>
 
-          <Mem title="💡 সব ক্ষেত্রফল মনে রাখার সহজ ট্রিক" style={{marginTop:8}}>
-            <ul>
-              <li><strong>বর্গ:</strong> এক বাহু একবার নিজেকে গুণ → a²</li>
-              <li><strong>আয়ত:</strong> দৈর্ঘ্য × প্রস্থ → ab</li>
-              <li><strong>রম্বস:</strong> দুই কর্ণের গুণফলের অর্ধেক → ½d₁d₂</li>
-              <li><strong>সামান্তরিক:</strong> ভূমি × উচ্চতা (আয়তের মতো)</li>
-              <li><strong>ট্রাপিজিয়াম:</strong> দুই সমান্তরাল বাহুর গড় × উচ্চতা → ½(a+b)h</li>
-            </ul>
-          </Mem>
+          
         </div>
 
         {/* ══ S5: CIRCLE & POLYGON ══════════════════════════════ */}
@@ -565,7 +503,7 @@ export default function MathFormulas({ onBack }) {
                 <li>অর্ধবৃত্তস্থ কোণ = এক সমকোণ (90°)</li>
                 <li>১ মাইল = ১.৬ কিলোমিটার</li>
               </ul>
-              <Mem title="💡 কেন্দ্রীয় ও বৃত্তস্থ কোণ"><p>কেন্দ্রীয় কোণ = বৃত্তস্থ কোণের <strong>দ্বিগুণ</strong>। চাপের সূত্রে θ অবশ্যই <strong>radian</strong>-এ।</p></Mem>
+              
             </Card>
 
             <Card color="gold">
@@ -582,10 +520,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="অভ্যন্তরীণ কোণের সমষ্টি" tex={"= (n-2)\\times 180^\\circ"}/>
               <FBox label="প্রতিটি বহিঃকোণ (সুষম)" tex={"= \\dfrac{360^\\circ}{n}"} highlight/>
               <FBox label="n বাহুর কর্ণ সংখ্যা" tex={"= \\dfrac{n(n-3)}{2}"}/>
-              <Mem title="💡 দ্রুত মনে রাখুন">
-                <p>ত্রিভুজ (n=3): 180° ✓ | চতুর্ভুজ (n=4): 360° ✓<br/>
-                পঞ্চভুজ (n=5): 540° | ষড়ভুজ (n=6): 720°</p>
-              </Mem>
+              
             </Card>
           </div>
         </div>
@@ -618,14 +553,7 @@ export default function MathFormulas({ onBack }) {
                 <tr><td>মহাকর্ণ / হেলান তলের উন্নতি</td><td className="hl">√3 · a</td><td className="hl">√(a² + b² + c²)</td></tr>
               </tbody>
             </table></div>
-            <Mem title="💡 মনে রাখুন — ঘনক vs ঘনবস্তু" style={{marginTop:12}}>
-              <ul>
-                <li><strong>ঘনক:</strong> শুধু "a" → a³, 6a², √3·a</li>
-                <li><strong>ঘনবস্তু:</strong> a, b, c → জোড়ায় গুণ (ab+bc+ca)</li>
-                <li><strong>তলের কর্ণ:</strong> দুটি দিক → √(a²+b²)</li>
-                <li><strong>মহাকর্ণ / হেলান তলের উন্নতি:</strong> তিনটি দিক → √(a²+b²+c²)</li>
-              </ul>
-            </Mem>
+            
           </Card>
         </div>
 
@@ -651,7 +579,7 @@ export default function MathFormulas({ onBack }) {
             </table></div>
           </Card>
 
-          <div className="mf-grid3">
+          <div className="mf-grid2">
             <Card color="blue">
               <CardTitle color="var(--mf-blue)">সিলিন্ডার (Cylinder)</CardTitle>
               <div style={{textAlign:'center',margin:'8px 0'}}>
@@ -689,7 +617,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="তির্যক উচ্চতা l" tex={"= \\sqrt{h^2+r^2}"}/>
               <FBox label="বক্রপৃষ্ঠ (CSA)" tex={"= \\pi rl"}/>
               <FBox label="সমগ্র পৃষ্ঠ (TSA)" tex={"= \\pi r(r+l)"} highlight/>
-              <Mem title="💡"><p>Cone = সিলিন্ডারের <strong>⅓</strong> আয়তন (একই r, h হলে)</p></Mem>
+              
             </Card>
 
             <Card color="gold">
@@ -710,25 +638,19 @@ export default function MathFormulas({ onBack }) {
                 </svg>
               </div>
               <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,fontSize:13,marginTop:5}}>
-                <div style={{background:'var(--elevated)',borderRadius:8,padding:10,borderLeft:'3px solid #f0a500'}}>
+                <div style={{background:'#ffffff',border:'1px solid #e2e8f0',borderRadius:8,padding:10,borderLeft:'3px solid #f0a500'}}>
                   <div style={{color:'var(--mf-gold)',fontWeight:700,marginBottom:6}}>গোলক</div>
-                  <div style={{color:'var(--text-2)',marginBottom:3}}>আয়তন = <span className="mf-fi">⁴⁄₃πr³</span></div>
-                  <div style={{color:'var(--text-2)'}}>পৃষ্ঠতল = <span className="mf-fi">4πr²</span></div>
+                  <div style={{color:'var(--text-2)',marginBottom:3}}>আয়তন = <span style={{color:'#000000'}}>⁴⁄₃πr³</span></div>
+                  <div style={{color:'var(--text-2)'}}>পৃষ্ঠতল = <span style={{color:'#000000'}}>4πr²</span></div>
                 </div>
-                <div style={{background:'var(--elevated)',borderRadius:8,padding:10,borderLeft:'3px solid #a78bfa'}}>
+                <div style={{background:'#ffffff',border:'1px solid #e2e8f0',borderRadius:8,padding:10,borderLeft:'3px solid #a78bfa'}}>
                   <div style={{color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>অর্ধগোলক</div>
-                  <div style={{color:'var(--text-2)',marginBottom:3}}>আয়তন = <span className="mf-fi">⅔πr³</span></div>
-                  <div style={{color:'var(--text-2)',marginBottom:3}}>বক্রপৃষ্ঠ = <span className="mf-fi">2πr²</span></div>
-                  <div style={{color:'var(--text-2)'}}>সমগ্র = <span className="mf-fi">3πr²</span></div>
+                  <div style={{color:'var(--text-2)',marginBottom:3}}>আয়তন = <span style={{color:'#000000'}}>⅔πr³</span></div>
+                  <div style={{color:'var(--text-2)',marginBottom:3}}>বক্রপৃষ্ঠ = <span style={{color:'#000000'}}>2πr²</span></div>
+                  <div style={{color:'var(--text-2)'}}>সমগ্র = <span style={{color:'#000000'}}>3πr²</span></div>
                 </div>
               </div>
-              <Mem title="💡 সহজ সম্পর্ক" style={{marginTop:10}}>
-                <ul>
-                  <li>অর্ধগোলকের আয়তন = গোলকের <strong>অর্ধেক</strong></li>
-                  <li>অর্ধগোলকের বক্রপৃষ্ঠ = গোলকের পৃষ্ঠতলের <strong>অর্ধেক</strong></li>
-                  <li>সমগ্র পৃষ্ঠ = 2πr² + πr² = <strong>3πr²</strong></li>
-                </ul>
-              </Mem>
+              
             </Card>
           </div>
 
@@ -740,31 +662,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="1 হেক্টর" val="= 10,000 m²"/>
             </div>
           </Card>
-          <Mem title="💡 আয়তন মনে রাখার ট্রিক" style={{marginTop:12}}>
-            <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, margin:'10px 0'}}>
-              <div style={{background:'linear-gradient(135deg,#f0a500 0%,#ffd166 100%)', borderRadius:10, padding:'10px 8px', textAlign:'center', boxShadow:'0 2px 8px rgba(240,165,0,.35)'}}>
-                <div style={{fontSize:10, fontWeight:600, color:'#7a4800', marginBottom:4, letterSpacing:.5}}>সিলিন্ডার</div>
-                <div style={{fontSize:17, fontWeight:800, color:'#fff', textShadow:'0 1px 3px rgba(0,0,0,.2)'}}>πr²h</div>
-                <div style={{fontSize:10, color:'rgba(255,255,255,.85)', marginTop:4, fontWeight:600}}>× 1 (পূর্ণ)</div>
-              </div>
-              <div style={{background:'linear-gradient(135deg,#f06d7e 0%,#ff9eb5 100%)', borderRadius:10, padding:'10px 8px', textAlign:'center', boxShadow:'0 2px 8px rgba(240,108,126,.35)'}}>
-                <div style={{fontSize:10, fontWeight:600, color:'#7a1a2a', marginBottom:4, letterSpacing:.5}}>Cone</div>
-                <div style={{fontSize:17, fontWeight:800, color:'#fff', textShadow:'0 1px 3px rgba(0,0,0,.2)'}}>⅓πr²h</div>
-                <div style={{fontSize:10, color:'rgba(255,255,255,.85)', marginTop:4, fontWeight:600}}>× ⅓</div>
-              </div>
-              <div style={{background:'linear-gradient(135deg,#0fdba8 0%,#6ef7d8 100%)', borderRadius:10, padding:'10px 8px', textAlign:'center', boxShadow:'0 2px 8px rgba(15,219,168,.35)'}}>
-                <div style={{fontSize:10, fontWeight:600, color:'#005c47', marginBottom:4, letterSpacing:.5}}>গোলক</div>
-                <div style={{fontSize:17, fontWeight:800, color:'#fff', textShadow:'0 1px 3px rgba(0,0,0,.2)'}}>⁴⁄₃πr³</div>
-                <div style={{fontSize:10, color:'rgba(255,255,255,.85)', marginTop:4, fontWeight:600}}>r³ ভিত্তিক</div>
-              </div>
-              <div style={{background:'linear-gradient(135deg,#a78bfa 0%,#c4b5fd 100%)', borderRadius:10, padding:'10px 8px', textAlign:'center', boxShadow:'0 2px 8px rgba(167,139,250,.35)'}}>
-                <div style={{fontSize:10, fontWeight:600, color:'#3b1a8a', marginBottom:4, letterSpacing:.5}}>অর্ধগোলক</div>
-                <div style={{fontSize:17, fontWeight:800, color:'#fff', textShadow:'0 1px 3px rgba(0,0,0,.2)'}}>⅔πr³</div>
-                <div style={{fontSize:10, color:'rgba(255,255,255,.85)', marginTop:4, fontWeight:600}}>গোলকের ½</div>
-              </div>
-            </div>
-            <p style={{fontSize:11, color:'var(--text-3)', marginTop:6, fontStyle:'italic', textAlign:'center'}}>"সিলিন্ডার পূর্ণ → Cone তার ⅓ → গোলকে ৪/৩ → অর্ধে ২/৩"</p>
-          </Mem>
+          
         </div>
 
         {/* ══ S8: ALGEBRA ════════════════════════════════════════ */}
@@ -774,55 +672,35 @@ export default function MathFormulas({ onBack }) {
             <Card color="rose">
               <CardTitle>বর্গ সংক্রান্ত সূত্র (Square Identities)</CardTitle>
               <div className="mf-id-list">
-                <IdItem n="1"><Tex>{"(a+b)^2 = a^2 + 2ab + b^2"}</Tex></IdItem>
-                <IdItem n="2"><Tex>{"(a-b)^2 = a^2 - 2ab + b^2"}</Tex></IdItem>
-                <IdItem n="3"><Tex>{"(a+b)^2 = (a-b)^2 + 4ab"}</Tex></IdItem>
-                <IdItem n="4"><Tex>{"(a-b)^2 = (a+b)^2 - 4ab"}</Tex></IdItem>
-                <IdItem n="5"><Tex>{"a^2 + b^2 = (a+b)^2 - 2ab = (a-b)^2 + 2ab"}</Tex></IdItem>
-                <IdItem n="6"><Tex>{"2(a^2+b^2) = (a+b)^2 + (a-b)^2"}</Tex></IdItem>
-                <IdItem n="7"><Tex>{"a^2 - b^2 = (a+b)(a-b)"}</Tex></IdItem>
-                <IdItem n="8"><Tex>{"4ab = (a+b)^2 - (a-b)^2"}</Tex></IdItem>
-                <IdItem n="9"><Tex>{"ab = \\left[\\dfrac{a+b}{2}\\right]^2 - \\left[\\dfrac{a-b}{2}\\right]^2"}</Tex></IdItem>
+                <IdItem n="1"><Tex>{"(a+b)^2 = (a-b)^2 + 4ab"}</Tex></IdItem>
+                <IdItem n="2"><Tex>{"(a-b)^2 = (a+b)^2 - 4ab"}</Tex></IdItem>
+                <IdItem n="3"><Tex>{"a^2 + b^2 = (a+b)^2 - 2ab"}</Tex></IdItem>
+                <IdItem n="4"><Tex>{"a^2 + b^2 = (a-b)^2 + 2ab"}</Tex></IdItem>
+                <IdItem n="5"><Tex>{"2(a^2+b^2) = (a+b)^2 + (a-b)^2"}</Tex></IdItem>
+                <IdItem n="6"><Tex>{"4ab = (a+b)^2 - (a-b)^2"}</Tex></IdItem>
+                <IdItem n="7"><Tex>{"ab = \\left[\\dfrac{a+b}{2}\\right]^2 - \\left[\\dfrac{a-b}{2}\\right]^2"}</Tex></IdItem>
               </div>
-              <Mem title="💡 মনে রাখুন — সূত্র ১ ও ২">
-                <ul>
-                  <li>যোগ: (a+b)² → মাঝে <strong>+2ab</strong></li>
-                  <li>বিয়োগ: (a−b)² → মাঝে <strong>−2ab</strong></li>
-                  <li>৭ নম্বর: বর্গের পার্থক্য = গুণনীয়কে পরিণত</li>
-                </ul>
-              </Mem>
             </Card>
 
             <Card color="violet">
               <CardTitle color="var(--mf-violet)">তিন পদ ও ঘন সংক্রান্ত সূত্র</CardTitle>
               <div className="mf-id-list">
-                <IdItem n="10"><Tex>{"(a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)"}</Tex></IdItem>
-                <IdItem n="11"><Tex>{"(x+a)(x+b) = x^2+(a+b)x+ab"}</Tex></IdItem>
-                <IdItem n="12" star><Tex>{"(a+b)^3 = a^3+3a^2b+3ab^2+b^3"}</Tex></IdItem>
-                <IdItem n="13"><Tex>{"(a-b)^3 = a^3-3a^2b+3ab^2-b^3"}</Tex></IdItem>
-                <IdItem n="14"><Tex>{"a^3+b^3 = (a+b)(a^2-ab+b^2)"}</Tex></IdItem>
-                <IdItem n="15"><Tex>{"a^3-b^3 = (a-b)(a^2+ab+b^2)"}</Tex></IdItem>
+                <IdItem n="8"><Tex>{"(a+b+c)^2 = a^2+b^2+c^2+2(ab+bc+ca)"}</Tex></IdItem>
+                <IdItem n="9"><Tex>{"(x+a)(x+b) = x^2+(a+b)x+ab"}</Tex></IdItem>
+                <IdItem n="10"><Tex>{"(a+b)^3 = a^3+3a^2b+3ab^2+b^3"}</Tex></IdItem>
+                <IdItem n="11"><Tex>{"(a-b)^3 = a^3-3a^2b+3ab^2-b^3"}</Tex></IdItem>
+                <IdItem n="12"><Tex>{"a^3+b^3 = (a+b)(a^2-ab+b^2)"}</Tex></IdItem>
+                <IdItem n="13"><Tex>{"a^3-b^3 = (a-b)(a^2+ab+b^2)"}</Tex></IdItem>
               </div>
-              <Mem title="💡 ঘন সূত্র মনে রাখুন">
-                <ul>
-                  <li>(a+b)³: a³, <strong>+</strong>3a²b, <strong>+</strong>3ab², <strong>+</strong>b³</li>
-                  <li>(a−b)³: a³, <strong>−</strong>3a²b, <strong>+</strong>3ab², <strong>−</strong>b³ (চিহ্ন পাল্টায়)</li>
-                  <li>a³+b³ → মাঝে <strong>−ab</strong> → (a²−ab+b²)</li>
-                  <li>a³−b³ → মাঝে <strong>+ab</strong> → (a²+ab+b²)</li>
-                </ul>
-              </Mem>
             </Card>
           </div>
-          <Warn title="⚠️ সবচেয়ে বেশি ভুল হয় এই সূত্রগুলোতে" style={{marginTop:10}}>
-            <p>(a+b)² ≠ a² + b² (2ab ভুলে যাবেন না!) &nbsp;|&nbsp; a³+b³ ≠ (a+b)³ &nbsp;|&nbsp; a²+b² ≠ (a+b)(a−b)</p>
-          </Warn>
         </div>
 
         {/* ══ STRAIGHT LINE ════════════════════════════════════════ */}
         <div className="mf-section" id="line">
           <SectionHeader icon="∕" title="সরল রেখা" sub="Straight Line · Slope · Forms · Parallel & Perpendicular" />
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:12}}>
             <Card color="blue">
               <CardTitle color="var(--mf-blue)">মূল সূত্রসমূহ</CardTitle>
               {[
@@ -857,7 +735,7 @@ export default function MathFormulas({ onBack }) {
               <p style={{fontSize:12,color:'var(--text-3)',marginBottom:10}}>
                 দুই রেখা <strong>a₁x + b₁y + c₁ = 0</strong> ও <strong>a₂x + b₂y + c₂ = 0</strong> সমান্তরাল হলে:
               </p>
-              <div style={{padding:'12px 14px',borderRadius:10,background:'rgba(167,139,250,.1)',border:'1px solid rgba(167,139,250,.3)'}}>
+              <div style={{padding:'12px 14px',borderRadius:10,background:'#ffffff',border:'1px solid #e2e8f0'}}>
                 <div style={{fontSize:15,marginBottom:8}}><Tex>{"\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}"}</Tex></div>
                 <div style={{display:'flex',flexWrap:'wrap',gap:6,alignItems:'center',fontSize:12,color:'var(--text-3)'}}>
                   <span>উদা: 3x+2ky−7=0 ∥ 2x+5y+1=0 হলে</span>
@@ -873,7 +751,7 @@ export default function MathFormulas({ onBack }) {
         <div className="mf-section" id="quadratic">
           <SectionHeader icon="x²" title="দ্বিঘাত সমীকরণ" sub="Quadratic Equation · Roots · Discriminant" />
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:12}}>
             <Card color="blue">
               <CardTitle color="var(--mf-blue)">মানক রূপ: ax² + bx + c = 0 <span style={{fontWeight:400,fontSize:12,color:'var(--text-3)'}}>(α, β = দুটি মূল)</span></CardTitle>
               <div style={{display:'flex',flexWrap:'wrap',gap:8,marginBottom:10}}>
@@ -896,12 +774,12 @@ export default function MathFormulas({ onBack }) {
               <CardTitle>④ D ও মূলের প্রকৃতি</CardTitle>
               <div style={{display:'flex',flexDirection:'column',gap:7}}>
                 {[
-                  {cond:'D > 0',          desc:'বাস্তব ও অসমান',   bg:'rgba(15,219,168,.12)',  border:'var(--mf-teal)',   tc:'var(--mf-teal)'  },
-                  {cond:'D = 0',          desc:'বাস্তব ও সমান',    bg:'rgba(240,165,0,.12)',   border:'var(--mf-gold)',   tc:'var(--mf-gold2)' },
-                  {cond:'D < 0',          desc:'জটিল (কাল্পনিক)', bg:'rgba(240,108,126,.12)', border:'var(--mf-rose)',   tc:'var(--mf-rose)'  },
-                  {cond:'D > 0, পূর্ণবর্গ',desc:'মূলদ (Rational)', bg:'rgba(167,139,250,.12)', border:'var(--mf-violet)', tc:'var(--mf-violet)'},
+                  {cond:'D > 0',          desc:'বাস্তব ও অসমান',   border:'#e2e8f0',  tc:'var(--mf-teal)'  },
+                  {cond:'D = 0',          desc:'বাস্তব ও সমান',    border:'#e2e8f0',   tc:'var(--mf-gold2)' },
+                  {cond:'D < 0',          desc:'জটিল (কাল্পনিক)', border:'#e2e8f0',   tc:'var(--mf-rose)'  },
+                  {cond:'D > 0, পূর্ণবর্গ',desc:'মূলদ (Rational)', border:'#e2e8f0', tc:'var(--mf-violet)'},
                 ].map(r => (
-                  <div key={r.cond} style={{display:'flex',alignItems:'center',gap:10,padding:'8px 12px',borderRadius:9,background:r.bg,border:`1px solid ${r.border}`}}>
+                  <div key={r.cond} style={{display:'flex',alignItems:'center',gap:10,padding:'8px 12px',borderRadius:9,background:'#ffffff',border:`1px solid ${r.border}`}}>
                     <code style={{fontWeight:800,fontSize:13,color:r.tc,minWidth:100,whiteSpace:'nowrap'}}>{r.cond}</code>
                     <span style={{color:'var(--text-1)',fontSize:13,fontWeight:600}}>→ {r.desc}</span>
                   </div>
@@ -936,9 +814,7 @@ export default function MathFormulas({ onBack }) {
                   {note && <span className="mf-log-note">{note}</span>}
                 </div>
               ))}
-              <Mem title="💡 সংজ্ঞা" style={{marginTop:8}}>
-                <p>log₂ 8 = 3 &nbsp;কারণ&nbsp; 2³ = 8</p>
-              </Mem>
+              
             </Card>
 
             <Card color="violet">
@@ -983,12 +859,7 @@ export default function MathFormulas({ onBack }) {
                 <FBox label="1³+2³+...+n³" tex={"= \\left[\\dfrac{n(n+1)}{2}\\right]^2"} highlight/>
                 <FBox label="2+4+6+...+2L" tex={"= L(L+1)"} highlight/>
               </div>
-              <Mem title="💡 মনে রাখুন">
-                <ul>
-                  <li>n পদের সমষ্টি = <strong>n × গড়</strong></li>
-                  <li>n³ এর সমষ্টি = (1+2+...+n) এর <strong>বর্গ</strong></li>
-                </ul>
-              </Mem>
+              
             </Card>
 
             <Card color="gold">
@@ -1011,7 +882,7 @@ export default function MathFormulas({ onBack }) {
                   যেমন: <strong>1 + 0.1 + 0.01 + ... + 0.00001</strong> → r = 0.1, শেষ আছে (সশীম)
                 </div>
               </div>
-              <div className="mf-series-card" style={{borderLeft:'3px solid #f06d7e', background:'rgba(240,108,126,.06)'}}>
+              <div className="mf-series-card" style={{borderLeft:'3px solid #f06d7e', background:'#ffffff', border:'1px solid #e2e8f0'}}>
                 <div className="step">অশীম পদের সমষ্টি (S∞) — শর্ত: <strong style={{color:'var(--mf-rose)'}}>−1 &lt; r &lt; 1</strong></div>
                 <div className="formula"><Tex>{"S_\\infty = \\dfrac{a}{1-r}"}</Tex></div>
                 <div style={{fontSize:12, color:'var(--text-3)', marginTop:8, lineHeight:1.6}}>
@@ -1020,13 +891,7 @@ export default function MathFormulas({ onBack }) {
                   এই সূত্র শুধু তখনই কাজ করে যখন <strong>|r| &lt; 1</strong> (r এর মান −1 থেকে 1 এর মধ্যে)
                 </div>
               </div>
-              <Mem title="💡 AP vs GP পার্থক্য">
-                <ul>
-                  <li><strong>AP:</strong> যোগ/বিয়োগ → পরের পদ (d = ধ্রুবক পার্থক্য)</li>
-                  <li><strong>GP:</strong> গুণ/ভাগ → পরের পদ (r = ধ্রুবক অনুপাত)</li>
-                  <li>AP তে <strong>(n−1)d</strong>, GP তে <strong>r^(n−1)</strong></li>
-                </ul>
-              </Mem>
+              
             </Card>
           </div>
         </div>
@@ -1034,6 +899,61 @@ export default function MathFormulas({ onBack }) {
         {/* ══ S10: PERMUTATION & COMBINATION ════════════════════ */}
         <div className="mf-section" id="pnc">
           <SectionHeader icon="nPr" title="বিন্যাস ও সমাবেশ" sub="Permutation · Combination · Graph Theory" />
+
+          {/* Quick Decision Guide */}
+          <Card color="blue" style={{marginBottom:16}}>
+            <CardTitle color="var(--mf-blue)">🎯 কখন কোনটি ব্যবহার করবেন?</CardTitle>
+
+            {/* All 4 in one row on desktop, stacks on mobile */}
+            <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))',gap:16}}>
+              {/* nPr */}
+              <div style={{background:'white',border:'2px solid #6d28d9',borderRadius:10,padding:16}}>
+                <div style={{fontSize:18,fontWeight:700,color:'#6d28d9',marginBottom:10}}>nPr বিন্যাস</div>
+                <div style={{fontSize:13,color:'#4b5563',lineHeight:1.7,marginBottom:10}}>
+                  জায়গা বদলালে নতুন কিছু তৈরি হয়
+                </div>
+                <div style={{fontSize:11,color:'#6b7280',lineHeight:1.6}}>
+                  পদের ক্রম • পাসওয়ার্ড • বসার ব্যবস্থা • দৌড়
+                </div>
+              </div>
+
+              {/* nCr */}
+              <div style={{background:'white',border:'2px solid #0fdba8',borderRadius:10,padding:16}}>
+                <div style={{fontSize:18,fontWeight:700,color:'#0fdba8',marginBottom:10}}>nCr সমাবেশ</div>
+                <div style={{fontSize:13,color:'#4b5563',lineHeight:1.7,marginBottom:10}}>
+                  জায়গা বদলালে কিছু হয় না
+                </div>
+                <div style={{fontSize:11,color:'#6b7280',lineHeight:1.6}}>
+                  দল গঠন • কমিটি • মেনু থেকে বাছাই • হ্যান্ডশেক
+                </div>
+              </div>
+
+              {/* AND / × */}
+              <div style={{background:'white',border:'2px solid #f0a500',borderRadius:10,padding:16}}>
+                <div style={{fontSize:18,fontWeight:700,color:'#f0a500',marginBottom:10}}>× গুণ</div>
+                <div style={{fontSize:13,color:'#4b5563',lineHeight:1.7,marginBottom:10}}>
+                  এবং (AND) — দুটি কাজ একসাথে হবে
+                </div>
+                <div style={{fontSize:11,color:'#6b7280',lineHeight:1.6}}>
+                  পুরুষ <strong>ও</strong> মহিলা দুজনকেই<br/>
+                  প্রথমে এটা, তারপর ওটা
+                </div>
+              </div>
+
+              {/* OR / + */}
+              <div style={{background:'white',border:'2px solid #0fdba8',borderRadius:10,padding:16}}>
+                <div style={{fontSize:18,fontWeight:700,color:'#0fdba8',marginBottom:10}}>+ যোগ</div>
+                <div style={{fontSize:13,color:'#4b5563',lineHeight:1.7,marginBottom:10}}>
+                  অথবা (OR) — যেকোনো একটি হবে
+                </div>
+                <div style={{fontSize:11,color:'#6b7280',lineHeight:1.6}}>
+                  পুরুষ <strong>অথবা</strong> মহিলা যেকেউ<br/>
+                  হয় এই উপায়, নয় ওই উপায়
+                </div>
+              </div>
+            </div>
+          </Card>
+
           <div className="mf-legend">
             <span><strong>nPr</strong> n জিনিস থেকে r নিয়ে সাজানো (Order matters)</span>
             <span><strong>nCr</strong> n জিনিস থেকে r নিয়ে বাছাই (Order doesn't matter)</span>
@@ -1044,9 +964,7 @@ export default function MathFormulas({ onBack }) {
               <FBox label="nPr" tex={"= \\dfrac{n!}{(n-r)!}"}/>
               <FBox label="n বস্তু বৃত্তাকারে" val="= (n−1)!" highlight/>
               <FBox label="n ভিন্ন বস্তু গলায় (Necklace)" tex={"= \\dfrac{(n-1)!}{2}"}/>
-              <Mem title="💡 বৃত্তাকার বিন্যাস">
-                <p>বৃত্তে একটি ধরে রাখা যায় → বাকি (n-1)টি সাজানো হয় → (n-1)!</p>
-              </Mem>
+              
             </Card>
 
             <Card color="teal">
@@ -1060,12 +978,10 @@ export default function MathFormulas({ onBack }) {
                 <FBox label="n জনের চিঠি (দু-দিকে)" val="= n(n−1)"/>
                 <FBox label="n বাহুর বহুভুজের কর্ণ" tex={"= \\dfrac{n(n-3)}{2}"}/>
               </div>
-              <Mem title="💡 Handshake vs চিঠি">
-                <p>Handshake = <strong>÷2</strong> (A-B ও B-A একই)<br/>
-                চিঠি = <strong>÷2 নয়</strong> (A→B ও B→A আলাদা)</p>
-              </Mem>
+              
             </Card>
           </div>
+
         </div>
 
         {/* ══ S11: SET & PROBABILITY ════════════════════════════ */}
@@ -1107,7 +1023,7 @@ export default function MathFormulas({ onBack }) {
             </div>
 
             {/* Quick reference */}
-            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(150px,1fr))', gap:8, marginTop:8}}>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(140px, 1fr))', gap:8, marginTop:8}}>
               {[
                 {label:'A∪B (যেকোনো একটি)', val:'= 1 + 2 + 3', color:'var(--mf-blue)'},
                 {label:'A∩B (উভয়ই)', val:'= 2', color:'var(--mf-violet)'},
@@ -1123,7 +1039,7 @@ export default function MathFormulas({ onBack }) {
             </div>
           </Card>
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',gap:12}}>
             <Card color="gold">
               <CardTitle>সেট তত্ত্ব (Set Theory)</CardTitle>
               <FBox label="n(A∪B)" val="= n(A) + n(B) − n(A∩B)"/>
@@ -1135,10 +1051,7 @@ export default function MathFormulas({ onBack }) {
                 <FBox label="(A∪B)' =" val="A' ∩ B'"/>
                 <FBox label="(A∩B)' =" val="A' ∪ B'" highlight/>
               </div>
-              <Mem title="💡 উপসেট ও শক্তি সেট">
-                <p>n সদস্যের সেটের উপসেট = <strong>2ⁿ</strong>, প্রকৃত উপসেট = <strong>2ⁿ − 1</strong></p>
-                <p>{'A={a,b} → n=2 → উপসেট: {},{a},{b},{a,b} = ৪টি'}</p>
-              </Mem>
+              
             </Card>
 
             <Card color="violet">
@@ -1146,17 +1059,14 @@ export default function MathFormulas({ onBack }) {
               <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন (Independent)</div><div className="form">P(A∩B) = P(A) · P(B)</div></div>
               <div className="mf-prob-item"><div className="cond">A ও B বর্জনশীল (Mutually Exclusive)</div><div className="form">P(A∪B) = P(A) + P(B)</div></div>
               <div className="mf-prob-item"><div className="cond">A ও B সাধারণ ঘটনা</div><div className="form">P(A∪B) = P(A) + P(B) − P(A∩B)</div></div>
+              <div className="mf-prob-item"><div className="cond">স্বাধীন ঘটনার Union</div><div className="form">P(A∪B) = P(A) + P(B) − P(A)·P(B)</div></div>
+              <div className="mf-prob-item"><div className="cond">n বার টস ফেলার ফলাফল</div><div className="form">2<sup>n</sup> (প্রতিবারে 2টি ফলাফল)</div></div>
+              <div className="mf-prob-item"><div className="cond">m বার ছক্কা মারার ফলাফল</div><div className="form">6<sup>m</sup> (প্রতিবারে 6টি ফলাফল)</div></div>
+              <div className="mf-prob-item"><div className="cond">টস ও ছক্কা একসাথে</div><div className="form">2<sup>n</sup> × 6<sup>m</sup></div></div>
               <div className="mf-prob-item"><div className="cond">শর্তাধীন — A ঘটলে B এর সম্ভাবনা</div><div className="form">P(B|A) = P(A∩B) / P(A)</div></div>
               <div className="mf-prob-item"><div className="cond">A না ঘটার সম্ভাবনা</div><div className="form">P(A') = 1 − P(A)</div></div>
               <div className="mf-prob-item"><div className="cond">P(A'∩B')</div><div className="form">= P((A∪B)') = 1 − P(A∪B)</div></div>
               <div className="mf-prob-item"><div className="cond">P(A'∪B')</div><div className="form">= P((A∩B)') = 1 − P(A∩B)</div></div>
-              <Mem title="💡 মনে রাখুন">
-                <ul>
-                  <li><strong>স্বাধীন:</strong> গুণ (P·P) &nbsp;|&nbsp; <strong>বর্জনশীল:</strong> যোগ</li>
-                  <li>P(A) + P(A') = <strong>1</strong> সবসময়</li>
-                  <li>0 ≤ P(A) ≤ 1 সবসময়</li>
-                </ul>
-              </Mem>
             </Card>
 
             <Card color="rose">
@@ -1219,10 +1129,7 @@ export default function MathFormulas({ onBack }) {
               <CardTitle color="var(--mf-blue)">ভগ্নাংশের ল.সা.গু ও গ.সা.গু</CardTitle>
               <FBox label="ভগ্নাংশের ল.সা.গু" val="= লবগুলোর ল.সা.গু / হরগুলোর গ.সা.গু" highlight/>
               <FBox label="ভগ্নাংশের গ.সা.গু" val="= লবগুলোর গ.সা.গু / হরগুলোর ল.সা.গু"/>
-              <Mem title="💡 মনে রাখার সহজ উপায়">
-                <p><strong>ল.সা.গু:</strong> লব-এ ল, হর-এ গ<br/>
-                <strong>গ.সা.গু:</strong> উল্টো — লব-এ গ, হর-এ ল</p>
-              </Mem>
+              
             </Card>
           </div>
         </div>
@@ -1250,64 +1157,59 @@ export default function MathFormulas({ onBack }) {
             </Card>
           </div>
 
-          <Card color="violet" style={{marginTop:14}}>
-            <CardTitle color="var(--mf-violet)">বিশেষ সূত্র</CardTitle>
-            <div style={{display:'flex',flexDirection:'column',gap:8}}>
-              <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(167,139,250,.08)',border:'1px solid rgba(167,139,250,.25)'}}>
-                <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>সুদে-আসলে n গুণ হলে সুদের হার</div>
-                <div style={{textAlign:'center',marginBottom:6}}><Tex>{"r = \\dfrac{n-1}{\\text{time}} \\times 100\\%"}</Tex></div>
-                <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 5 বছরে 3 গুণ হলে → r = (3−1)/5 × 100 = <strong>40%</strong></div>
+          <div className="mf-grid2" style={{marginTop:14}}>
+            <Card color="violet">
+              <CardTitle color="var(--mf-violet)">বিশেষ সূত্র</CardTitle>
+              <div style={{display:'flex',flexDirection:'column',gap:8}}>
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0',textAlign:'center'}}>
+                  <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>সুদে-আসলে n গুণ হলে সুদের হার</div>
+                  <div style={{textAlign:'center',marginBottom:6}}><Tex>{"r = \\dfrac{n-1}{\\text{time}} \\times 100\\%"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 5 বছরে 3 গুণ হলে → r = (3−1)/5 × 100 = <strong>40%</strong></div>
+                </div>
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0',textAlign:'center'}}>
+                  <div style={{fontSize:12,color:'var(--mf-teal)',fontWeight:700,marginBottom:4}}>n বছরে দ্বিগুণ হলে, তিন গুণ হতে লাগবে</div>
+                  <div style={{fontSize:15,fontWeight:700,color:'#000000',marginBottom:4,textAlign:'center'}}>2n বছর</div>
+                  <div style={{fontSize:11,color:'var(--text-3)',textAlign:'center'}}>উদা: 4 বছরে দ্বিগুণ → তিন গুণ হতে 8 বছর</div>
+                </div>
+                <div style={{padding:'10px 12px',borderRadius:9,background:'#ffffff',border:'1px solid #e2e8f0',textAlign:'center'}}>
+                  <div style={{fontSize:12,color:'var(--mf-gold2)',fontWeight:700,marginBottom:6}}>চক্রবৃদ্ধি — ধাপে ধাপে গুণ</div>
+                  <div style={{textAlign:'center',marginBottom:6}}><Tex>{"C = P\\left(1+\\dfrac{r}{100}\\right)^t"}</Tex></div>
+                  <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: P=100, r=5%, t=2 → 100 × <strong>105/100 × 105/100</strong> = 110.25</div>
+                </div>
               </div>
-              <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(15,219,168,.08)',border:'1px solid rgba(15,219,168,.25)'}}>
-                <div style={{fontSize:12,color:'var(--mf-teal)',fontWeight:700,marginBottom:4}}>n বছরে দ্বিগুণ হলে, তিন গুণ হতে লাগবে</div>
-                <div style={{fontSize:15,fontWeight:700,color:'var(--mf-teal)',marginBottom:4}}>2n বছর</div>
-                <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 4 বছরে দ্বিগুণ → তিন গুণ হতে 8 বছর</div>
-              </div>
-              <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(240,165,0,.08)',border:'1px solid rgba(240,165,0,.25)'}}>
-                <div style={{fontSize:12,color:'var(--mf-gold2)',fontWeight:700,marginBottom:6}}>চক্রবৃদ্ধি — ধাপে ধাপে গুণ</div>
-                <div style={{textAlign:'center',marginBottom:6}}><Tex>{"C = P\\left(1+\\dfrac{r}{100}\\right)^t"}</Tex></div>
-                <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: P=100, r=5%, t=2 → 100 × <strong>105/100 × 105/100</strong> = 110.25</div>
-              </div>
-            </div>
-          </Card>
+            </Card>
 
-          <Card color="rose" style={{marginTop:14}}>
-            <CardTitle color="var(--mf-rose)">সরল ও চক্রবৃদ্ধি মুনাফার পার্থক্য</CardTitle>
-            <div className="mf-legend" style={{marginBottom:12}}>
-              <span><strong>P</strong> = মূলধন</span>
-              <span><strong>r</strong> = হার ÷ 100 (দশমিকে)</span>
-              <span><strong>n</strong> = বছর</span>
-            </div>
-            <div className="mf-grid2">
-              <div>
-                <FBox label="2 বছরের পার্থক্য" tex={"= Pr^2"} highlight/>
-                <p style={{fontSize:12, color:'var(--text-3)', marginTop:4, textAlign:'center'}}>
-                  যেমন: P=3000, r=10%=0.1 → 3000×0.01 = 30
-                </p>
+            <Card color="rose">
+              <CardTitle color="var(--mf-rose)">সরল ও চক্রবৃদ্ধি মুনাফার পার্থক্য</CardTitle>
+              <div className="mf-legend" style={{marginBottom:12}}>
+                <span><strong>P</strong> = মূলধন</span>
+                <span><strong>r</strong> = হার ÷ 100 (দশমিকে)</span>
+                <span><strong>n</strong> = বছর</span>
               </div>
-              <div>
-                <FBox label="3 বছরের পার্থক্য" tex={"= 3Pr^2 + Pr^3"} highlight/>
-                <p style={{fontSize:12, color:'var(--text-3)', marginTop:4, textAlign:'center'}}>
-                  যেমন: P=100, r=5%=0.05 → 3×100×0.0025 + 100×0.000125
-                </p>
+              <div className="mf-grid2">
+                <div>
+                  <FBox label="2 বছরের পার্থক্য" tex={"= Pr^2"} highlight/>
+                  <p style={{fontSize:12, color:'var(--text-3)', marginTop:4, textAlign:'center'}}>
+                    যেমন: P=3000, r=10%=0.1 → 3000×0.01 = 30
+                  </p>
+                </div>
+                <div>
+                  <FBox label="3 বছরের পার্থক্য" tex={"= 3Pr^2 + Pr^3"} highlight/>
+                  <p style={{fontSize:12, color:'var(--text-3)', marginTop:4, textAlign:'center'}}>
+                    যেমন: P=100, r=5%=0.05 → 3×100×0.0025 + 100×0.000125
+                  </p>
+                </div>
               </div>
-            </div>
-            <Mem title="💡 মনে রাখুন">
-              <ul>
-                <li>r সবসময় <strong>দশমিকে</strong> দাও — হার ÷ 100 (যেমন 5% → 0.05)</li>
-                <li>2 বছর → শুধু <strong>Pr²</strong> (একটি পদ)</li>
-                <li>3 বছর → <strong>3Pr² + Pr³</strong> (দুটি পদ)</li>
-                <li>পার্থক্য = চক্রবৃদ্ধি − সরল মুনাফা</li>
-              </ul>
-            </Mem>
-          </Card>
+              
+            </Card>
+          </div>
         </div>
 
         {/* ══ PERCENTAGE ═══════════════════════════════════════ */}
         <div className="mf-section" id="percentage">
           <SectionHeader icon="%" title="শতকরা" sub="Percentage · Successive Change · Comparative" />
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:12}}>
+          <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))',gap:12}}>
 
             {/* Card 1: Successive % */}
             <Card color="blue">
@@ -1380,9 +1282,7 @@ export default function MathFormulas({ onBack }) {
                   <li><strong style={{color:'var(--mf-rose)'}}>W</strong> = কাজ (Work)</li>
                 </ul>
               </div>
-              <Mem title="💡 মনে রাখুন" style={{marginTop:12}}>
-                <p>মানুষ, দিন ও সময় বেশি হলে কাজ বেশি হয় — সব গুণফল কাজের সমানুপাতিক।</p>
-              </Mem>
+              
             </Card>
 
             <Card color="teal">

@@ -1,7 +1,12 @@
 /* Math Formulas module — uses ICT quiz CSS variable system */
 
 .mf-root {
-  /* light mode — dark enough to read on white/lavender backgrounds */
+  /* Consistent color scheme for all themes */
+  --mf-green: #16a34a;
+  --mf-red: #dc2626;
+  --mf-blue: #2563eb;
+
+  /* Legacy colors for borders and accents */
   --mf-gold: #b45309;
   --mf-gold2: #c07800;
   --mf-teal: #0d9488;
@@ -63,23 +68,23 @@
   gap: 10px;
   padding: 8px 10px;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  background: transparent;
+  border: 1px solid #e2e8f0;
+  background: #ffffff !important;
   margin-bottom: 6px;
 }
 [data-theme="light"] .mf-log-row {
   border-color: #e2e8f0;
 }
 .mf-log-row.highlight {
-  border-color: rgba(167, 139, 250, 0.4);
-  background: rgba(167, 139, 250, 0.07);
+  border-color: rgba(37, 99, 235, 0.3);
+  background: #ffffff !important;
 }
 .mf-log-tex {
-  color: var(--mf-teal);
+  color: #000000;
   font-weight: 600;
 }
 .mf-log-row.highlight .mf-log-tex {
-  color: var(--mf-violet);
+  color: #000000;
 }
 .mf-log-note {
   font-size: 11px;
@@ -91,9 +96,9 @@
   font-weight: 700;
   padding: 2px 8px;
   border-radius: 20px;
-  background: rgba(167, 139, 250, 0.15);
-  color: var(--mf-violet);
-  border: 1px solid rgba(167, 139, 250, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--mf-blue);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   white-space: nowrap;
 }
 
@@ -231,12 +236,12 @@
 /* ── Grids ───────────────────────────────────── */
 .mf-grid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
 }
 .mf-grid3 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
 }
 /* prevent grid children from stretching the column wider than 100% */
@@ -247,39 +252,32 @@
 
 /* ── Card ────────────────────────────────────── */
 .mf-card {
-  background: var(--surface-glass);
-  border: 1px solid var(--border);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   padding: 20px;
   position: relative;
   /* overflow-x: auto so tables/diagrams scroll inside card, not clip */
   overflow-x: auto;
   overflow-y: visible;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   min-width: 0;
 }
 /* Use border-top instead of ::before so it doesn't scroll inside overflow-x:auto */
 .mf-card.gold {
   border-top: 3px solid var(--mf-gold);
-  background: color-mix(in srgb, var(--mf-gold) 8%, var(--surface-glass));
 }
 .mf-card.teal {
   border-top: 3px solid var(--mf-teal);
-  background: color-mix(in srgb, var(--mf-teal) 8%, var(--surface-glass));
 }
 .mf-card.rose {
   border-top: 3px solid var(--mf-rose);
-  background: color-mix(in srgb, var(--mf-rose) 8%, var(--surface-glass));
 }
 .mf-card.blue {
   border-top: 3px solid var(--mf-blue);
-  background: color-mix(in srgb, var(--mf-blue) 8%, var(--surface-glass));
 }
 .mf-card.violet {
   border-top: 3px solid var(--mf-violet);
-  background: color-mix(in srgb, var(--mf-violet) 8%, var(--surface-glass));
 }
 
 .mf-card-title {
@@ -304,81 +302,121 @@
 
 /* ── Formula box ─────────────────────────────── */
 .mf-eq-box {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 10px;
-  margin: 10px 0;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin: 12px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
-}
-[data-theme="dark"] .mf-eq-box {
-  background: rgba(255, 255, 255, 0.03);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 1);
 }
 
 .mf-f-box {
-  background: var(--elevated);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 14px 10px;
-  margin: 6px 0;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 8px 0;
   font-size: 15px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
+
+/* Ensure KaTeX font color can be overridden by parents */
+.mf-tex .katex {
+  color: #000000 !important;
+  font-size: 1.15em;
+}
+
+/* Ensure ALL KaTeX elements are black */
+.mf-tex .katex *,
+.mf-f-box .val .katex,
+.mf-f-box .val .katex *,
+.mf-eq-box .katex,
+.mf-eq-box .katex *,
+.mf-series-card .formula .katex,
+.mf-series-card .formula .katex * {
+  color: #000000 !important;
+}
+
 .mf-f-box .label {
-  color: var(--text-3);
+  color: var(--mf-red);
   font-size: 12px;
+  font-weight: 500;
 }
+
 .mf-f-box .val {
-  color: var(--mf-gold2);
-  font-weight: 600;
+  color: #000000;
+  font-weight: 700;
   word-break: break-word;
   text-align: center;
   width: 100%;
 }
-.mf-f-box.highlight .val {
-  color: var(--mf-teal);
+
+.mf-f-box.highlight {
+  border-color: color-mix(
+    in srgb,
+    var(--mf-green) 30%,
+    transparent
+  );
 }
 
-/* Light mode: better contrast — white box, dark label, deep indigo value */
-[data-theme="light"] .mf-f-box {
-  background: #ffffff;
-  border-color: #c7d2fe;
+.mf-f-box.highlight .val {
+  color: #000000;
 }
-[data-theme="light"] .mf-f-box .label {
-  color: #4b5563;
-}
-[data-theme="light"] .mf-f-box .val {
-  color: #3730a3;
-}
-[data-theme="light"] .mf-f-box.highlight .val {
-  color: #0f766e;
-}
-/* KaTeX colour inherits from .val */
+
+/* KaTeX colour inherits from parent's --mf-eq-color */
 .mf-tex .katex,
 .mf-tex .katex * {
-  color: inherit;
+  color: #000000 !important;
 }
-.mf-tex .katex {
-  font-size: 1.15em;
+
+.mf-series-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
+
 .mf-series-card .formula .katex {
   font-size: 1.05em;
-  color: var(--mf-gold2);
+  color: var(--mf-green);
 }
-.mf-id-text .katex {
-  font-size: 1em;
+
+/* Dark mode adjustments for white background boxes — keep them white but maybe slightly dimmed for "soothing" effect if needed, but user asked for white background */
+[data-theme="dark"] .mf-eq-box,
+[data-theme="dark"] .mf-f-box,
+[data-theme="dark"] .mf-series-card,
+[data-theme="dark"] .mf-id-num,
+[data-theme="dark"] .mf-log-row,
+[data-theme="dark"] .mf-mem,
+[data-theme="dark"] .mf-warn,
+[data-theme="dark"] .mf-prob-item,
+[data-theme="dark"] .mf-diagram-box,
+[data-theme="dark"] .mf-angle-item,
+[data-theme="dark"] .mf-set-box,
+[data-theme="dark"] .mf-legend {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .mf-f-box .label,
+[data-theme="dark"] .mf-series-card .step {
+  color: #64748b; /* Slate 500 for labels on white in dark mode */
 }
 
 /* ── Inline formula ──────────────────────────── */
 .mf-fi {
-  color: var(--mf-gold);
+  color: var(--mf-blue);
   font-weight: 700;
-  background: color-mix(in srgb, var(--mf-gold) 12%, transparent);
+  background: rgba(37, 99, 235, 0.1);
   padding: 1px 5px;
   border-radius: 4px;
   font-size: 15px;
@@ -409,9 +447,9 @@
 
 /* ── Memory tip ──────────────────────────────── */
 .mf-mem {
-  background: rgba(15, 219, 168, 0.06);
-  border: 1px solid rgba(15, 219, 168, 0.22);
-  border-left: 3px solid var(--mf-teal);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 3px solid var(--mf-green);
   border-radius: 12px;
   padding: 14px 16px;
   margin-top: 14px;
@@ -419,7 +457,7 @@
 .mf-mem-title {
   font-size: 13px;
   font-weight: 700;
-  color: var(--mf-teal);
+  color: var(--mf-green);
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -441,9 +479,9 @@
 
 /* ── Warning ─────────────────────────────────── */
 .mf-warn {
-  background: rgba(240, 108, 126, 0.06);
-  border: 1px solid rgba(240, 108, 126, 0.22);
-  border-left: 3px solid var(--mf-rose);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 3px solid var(--mf-red);
   border-radius: 12px;
   padding: 12px 16px;
   margin-top: 10px;
@@ -455,7 +493,7 @@
 .mf-warn-title {
   font-size: 13px;
   font-weight: 700;
-  color: var(--mf-rose);
+  color: var(--mf-red);
   margin-bottom: 5px;
   display: flex;
   align-items: center;
@@ -474,8 +512,8 @@
   scrollbar-color: var(--border) transparent;
 }
 .mf-diagram-box {
-  background: var(--elevated);
-  border: 1px solid var(--border);
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 12px;
   text-align: center;
@@ -495,7 +533,7 @@
 }
 .mf-diagram-box .dval {
   font-size: 13px;
-  color: var(--mf-gold2);
+  color: #000000;
   font-weight: 600;
   margin-top: 3px;
 }
@@ -508,8 +546,8 @@
   margin: 12px 0;
 }
 .mf-angle-item {
-  background: var(--elevated);
-  border: 1px solid var(--border);
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -521,7 +559,7 @@
 }
 .mf-angle-item .aname {
   font-size: 12px;
-  color: var(--mf-gold2);
+  color: #000000;
   font-weight: 600;
 }
 .mf-angle-item .aval {
@@ -547,9 +585,9 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: rgba(240, 165, 0, 0.15);
-  border: 1px solid rgba(240, 165, 0, 0.3);
-  color: var(--mf-gold);
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: var(--mf-red);
   font-size: 12px;
   font-weight: 700;
   display: flex;
@@ -559,7 +597,9 @@
   margin-top: 1px;
 }
 .mf-id-num.star {
-  background: rgba(240, 165, 0, 0.22);
+  background: rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.3);
+  color: var(--mf-blue);
   font-size: 13px;
 }
 .mf-id-text {
@@ -579,12 +619,12 @@
   min-width: 400px;
 }
 .mf-cmp-table th {
-  background: rgba(240, 165, 0, 0.08);
-  color: var(--mf-gold);
+  background: #f8fafc !important;
+  color: var(--mf-red);
   padding: 8px 10px;
   text-align: left;
   font-weight: 600;
-  border-bottom: 2px solid rgba(240, 165, 0, 0.2);
+  border-bottom: 2px solid rgba(220, 38, 38, 0.2);
 }
 .mf-cmp-table td {
   padding: 7px 10px;
@@ -595,7 +635,7 @@
   background: var(--hover-bg);
 }
 .mf-cmp-table .hl {
-  color: var(--mf-teal);
+  color: #000000;
   font-weight: 600;
 }
 
@@ -608,7 +648,8 @@
   color: var(--text-3);
   margin-bottom: 10px;
   padding: 6px 10px;
-  background: var(--elevated);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
 }
 .mf-legend strong {
@@ -626,28 +667,29 @@
   margin-bottom: 4px;
 }
 .mf-tag.g {
-  background: rgba(240, 165, 0, 0.12);
-  color: var(--mf-gold);
-  border: 1px solid rgba(240, 165, 0, 0.25);
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--mf-red);
+  border: 1px solid rgba(220, 38, 38, 0.25);
 }
 .mf-tag.t {
-  background: rgba(15, 219, 168, 0.1);
-  color: var(--mf-teal);
-  border: 1px solid rgba(15, 219, 168, 0.2);
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--mf-blue);
+  border: 1px solid rgba(37, 99, 235, 0.2);
 }
 .mf-tag.r {
-  background: rgba(240, 108, 126, 0.1);
-  color: var(--mf-rose);
-  border: 1px solid rgba(240, 108, 126, 0.2);
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.2);
 }
 
 /* ── Probability item ────────────────────────── */
 .mf-prob-item {
   padding: 8px 12px;
-  background: var(--elevated);
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   margin: 5px 0;
-  border-left: 3px solid var(--mf-violet);
+  border-left: 3px solid var(--mf-blue);
 }
 .mf-prob-item .cond {
   font-size: 13px;
@@ -656,24 +698,25 @@
 }
 .mf-prob-item .form {
   font-size: 14px;
-  color: var(--mf-violet);
+  color: #000000;
   font-weight: 600;
 }
 [data-theme="light"] .mf-prob-item {
-  background: #ffffff;
-  border-color: #c7d2fe;
+  background: #ffffff !important;
+  border-color: #e2e8f0;
+  border-left: 3px solid #2563eb;
 }
 [data-theme="light"] .mf-prob-item .cond {
-  color: #4b5563;
+  color: #64748b;
 }
 [data-theme="light"] .mf-prob-item .form {
-  color: #5b21b6;
+  color: #000000;
 }
 
 /* ── Series card ─────────────────────────────── */
 .mf-series-card {
-  background: var(--elevated);
-  border: 1px solid var(--border);
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 16px;
   margin: 8px 0;
@@ -685,26 +728,27 @@
 }
 .mf-series-card .formula {
   font-size: 15px;
-  color: var(--mf-gold2);
+  color: #000000;
   font-weight: 600;
 }
 [data-theme="light"] .mf-series-card {
-  background: #ffffff;
-  border-color: #c7d2fe;
+  background: #ffffff !important;
+  border-color: #e2e8f0;
 }
 [data-theme="light"] .mf-series-card .step {
-  color: #4b5563;
+  color: #64748b;
 }
 [data-theme="light"] .mf-series-card .formula {
-  color: #3730a3;
+  color: #000000;
 }
 [data-theme="light"] .mf-series-card .formula .katex {
-  color: #3730a3;
+  color: #000000;
 }
 
 /* ── Venn result boxes ───────────────────────── */
 .mf-set-box {
-  background: var(--elevated);
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 7px 10px;
 }
@@ -717,11 +761,11 @@
   font-weight: 700;
 }
 [data-theme="light"] .mf-set-box {
-  background: #ffffff;
-  border: 1px solid #c7d2fe;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
 }
 [data-theme="light"] .mf-set-box-label {
-  color: #4b5563;
+  color: #64748b;
 }
 
 /* ── Footer ──────────────────────────────────── */
@@ -758,6 +802,28 @@
 
 .mf-sec-picker {
   display: none;
+}
+
+/* Mobile: Center all SVG figures and diagrams */
+@media (max-width: 680px) {
+  .mf-card svg,
+  .mf-diagram-box svg,
+  svg {
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Center diagram row items */
+  .mf-diagram-row {
+    justify-content: center;
+  }
+
+  /* Center series cards with formulas */
+  .mf-series-card .formula,
+  .mf-eq-box {
+    text-align: center;
+  }
 }
 
 @media (min-width: 681px) {
