@@ -52,7 +52,6 @@
 
 .theme-toggle-btn:hover {
   transform: scale(1.05);
-}
   border: 1px solid rgba(99, 102, 241, 0.22);
   padding: 3px 10px;
   border-radius: 20px;
