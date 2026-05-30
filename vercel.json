@@ -1,0 +1,32 @@
+{
+  "rewrites": [
+    {
+      "source": "/math",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/financial",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/vocabulary",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/english-grammer",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/bangla-grammer",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/sahitto",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
