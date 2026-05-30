@@ -310,6 +310,8 @@ function AppContent() {
             markImportant={markImportant}
             unmarkImportant={unmarkImportant}
             onOpenBackup={openBackup}
+            theme={theme}
+            toggleTheme={toggleTheme}
           />
         </Suspense>
       )}
@@ -326,7 +328,7 @@ function AppContent() {
             </Suspense>
           )}
           {utilityScreen === 'tool' && utilityActiveToolId === 'financial_terms' && (
-            <UtilityFinancialTerms onBack={goUtilityHome} />
+            <UtilityFinancialTerms onBack={goUtilityHome} theme={theme} toggleTheme={toggleTheme} />
           )}
         </>
       )}

@@ -1,11 +1,11 @@
 import { useState, useMemo } from 'react'
-import { ChevronLeft, Search } from 'lucide-react'
+import { ChevronLeft, Search, Sun, Moon } from 'lucide-react'
 import { FIN_CATEGORIES, FIN_CARDS } from '../../data/utility/finTermsData'
 import './FinancialTerms.css'
 
 const ALL_CATS = ['সব', ...Object.keys(FIN_CATEGORIES)]
 
-export default function FinancialTerms({ onBack }) {
+export default function FinancialTerms({ onBack, theme, toggleTheme }) {
   return (
     <div className="ft-root">
       <div className="ft-wrap">
@@ -14,6 +14,29 @@ export default function FinancialTerms({ onBack }) {
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>
+          <div style={{ marginLeft: 'auto' }}>
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              style={{
+                background: 'var(--elevated)',
+                border: '1px solid var(--border)',
+                borderRadius: '8px',
+                padding: '6px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--text-2)',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'var(--hover-bg)'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'var(--elevated)'}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          </div>
         </div>
 
         <RefSection />

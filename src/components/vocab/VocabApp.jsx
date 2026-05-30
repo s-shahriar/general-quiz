@@ -16,6 +16,7 @@ export default function VocabApp({
   mastered, important,
   nail, unnail, markImportant, unmarkImportant,
   onOpenBackup,
+  theme, toggleTheme,
 }) {
   return (
     <>
