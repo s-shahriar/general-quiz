@@ -46,7 +46,12 @@ function AppContent() {
   })
 
   // ── Theme ───────────────────────────────────────────
-  const [theme, setTheme] = useState(() => localStorage.getItem('gq-theme') || 'light')
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('gq-theme') || 'light'
+    // Apply immediately during initialization to prevent flash
+    document.documentElement.dataset.theme = savedTheme
+    return savedTheme
+  })
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('gq-theme', theme)
