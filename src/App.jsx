@@ -1,5 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from 'react'
 import { Sun, Moon } from 'lucide-react'
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS } from './data/index.js'
 
 // General Quiz — eagerly loaded (always needed on first paint)
@@ -34,7 +35,10 @@ function ModuleLoader() {
   return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>
 }
 
-export default function App() {
+function AppContent() {
+  const navigate = useNavigate()
+  const location = useLocation()
+
   // ── Module ──────────────────────────────────────────
   const [activeModule, setActiveModule] = useState(() => {
     const m = localStorage.getItem('gq-active-module')
@@ -84,7 +88,7 @@ export default function App() {
   const [activeGroup, setActiveGroup]     = useState('bangla')
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [examData, setExamData]           = useState(null)
-  const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null) }
+  const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null); navigate('/') }
 
   function getTopicGroup(topic) {
     if (!topic) return []
@@ -98,13 +102,59 @@ export default function App() {
   const [vocabScreen, setVocabScreen]     = useState('home')
   const [vocabTopic, setVocabTopic]       = useState(null)
   const [vocabExamData, setVocabExamData] = useState(null)
-  const goVocabHome = () => { setVocabScreen('home'); setVocabTopic(null); setVocabExamData(null) }
+  const goVocabHome = () => { setVocabScreen('home'); setVocabTopic(null); setVocabExamData(null); navigate('/') }
 
   // ── Utility Kit state ────────────────────────────────
   const [utilityScreen, setUtilityScreen]           = useState('home')
   const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
   const openUtilityTool = (id) => { setUtilityActiveToolId(id); setUtilityScreen('tool') }
-  const goUtilityHome   = () => { setUtilityActiveToolId(null); setUtilityScreen('home') }
+  const goUtilityHome   = () => { setUtilityActiveToolId(null); setUtilityScreen('home'); navigate('/') }
+
+  // ── URL routing sync ────────────────────────────────
+  useEffect(() => {
+    const path = location.pathname
+
+    if (path === '/math') {
+      setActiveModule('utility')
+      setTimeout(() => {
+        setUtilityScreen('tool')
+        setUtilityActiveToolId('math_formulas')
+      }, 0)
+    } else if (path === '/financial') {
+      setActiveModule('utility')
+      setTimeout(() => {
+        setUtilityScreen('tool')
+        setUtilityActiveToolId('financial_terms')
+      }, 0)
+    } else if (path === '/vocabulary') {
+      setActiveModule('vocab')
+    } else if (path === '/english-grammer') {
+      setActiveModule('general')
+      setTimeout(() => {
+        setScreen('home')
+        setActiveGroup('english')
+      }, 0)
+    } else if (path === '/bangla-grammer') {
+      setActiveModule('general')
+      setTimeout(() => {
+        setScreen('home')
+        setActiveGroup('bangla')
+      }, 0)
+    } else if (path === '/sahitto') {
+      setActiveModule('general')
+      setTimeout(() => {
+        setScreen('home')
+        setActiveGroup('bangla_sahitya')
+      }, 0)
+    } else if (path === '/') {
+      // Reset to default when on home
+      if (activeModule === 'utility' && utilityScreen !== 'home') {
+        goUtilityHome()
+      } else if (activeModule === 'vocab' && vocabScreen !== 'home') {
+        goVocabHome()
+      }
+    }
+  }, [location.pathname])
 
   // ── Module nav visibility ────────────────────────────
   const isHomeActive =
@@ -132,7 +182,7 @@ export default function App() {
               <button
                 key={id}
                 className={`module-nav-item ${activeModule === id ? 'active' : ''}`}
-                onClick={() => setActiveModule(id)}
+                onClick={() => { setActiveModule(id); navigate('/') }}
               >
                 {label}
               </button>
@@ -287,5 +337,20 @@ export default function App() {
         />
       )}
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<AppContent />} />
+      <Route path="/math" element={<AppContent />} />
+      <Route path="/financial" element={<AppContent />} />
+      <Route path="/vocabulary" element={<AppContent />} />
+      <Route path="/english-grammer" element={<AppContent />} />
+      <Route path="/bangla-grammer" element={<AppContent />} />
+      <Route path="/sahitto" element={<AppContent />} />
+      <Route path="*" element={<AppContent />} />
+    </Routes>
   )
 }
