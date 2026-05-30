@@ -332,6 +332,13 @@
   box-shadow: var(--shadow-sm);
   min-width: 0;
 }
+/* Center all diagram SVGs inside cards */
+.mf-card svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 /* Use border-top instead of ::before so it doesn't scroll inside overflow-x:auto */
 .mf-card.gold {
   border-top: 3px solid var(--mf-gold);
