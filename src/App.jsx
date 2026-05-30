@@ -322,7 +322,7 @@ function AppContent() {
           {utilityScreen === 'home' && <UtilityHome onOpen={openUtilityTool} />}
           {utilityScreen === 'tool' && utilityActiveToolId === 'math_formulas' && (
             <Suspense fallback={<ModuleLoader />}>
-              <UtilityMathFormulas onBack={goUtilityHome} />
+              <UtilityMathFormulas onBack={goUtilityHome} theme={theme} toggleTheme={toggleTheme} />
             </Suspense>
           )}
           {utilityScreen === 'tool' && utilityActiveToolId === 'financial_terms' && (

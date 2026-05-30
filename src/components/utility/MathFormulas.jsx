@@ -26,22 +26,16 @@ const SECTIONS = [
   { id: 'unitary',   label: 'ঐকিক নিয়ম',           icon: '⚖', color: '#be123c' },
 ]
 
-export default function MathFormulas({ onBack }) {
+export default function MathFormulas({ onBack, theme, toggleTheme }) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
 
-  // Theme state and toggle
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('gq-theme') || 'light'
-    return savedTheme
-  })
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light'
-    setTheme(newTheme)
-    document.documentElement.dataset.theme = newTheme
-    localStorage.setItem('gq-theme', newTheme)
-  }
+  // Ensure theme is in sync on mount
+  useEffect(() => {
+    if (theme && document.documentElement.dataset.theme !== theme) {
+      document.documentElement.dataset.theme = theme
+    }
+  }, [theme])
 
   useEffect(() => {
     const sectionEls = SECTIONS.map(s => document.getElementById(s.id)).filter(Boolean)
