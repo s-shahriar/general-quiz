@@ -132,7 +132,7 @@ export default function MathFormulas({ onBack, theme, toggleTheme }) {
             </ul>
           </Card>
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:16}}>
+          <div className="mf-grid4" style={{marginBottom:16}}>
             <Card color="gold">
               <CardTitle badge="Equilateral">সমবাহু ত্রিভুজ</CardTitle>
               <div style={{textAlign:'center',margin:'8px 0'}}>
@@ -1335,7 +1335,7 @@ export default function MathFormulas({ onBack, theme, toggleTheme }) {
         <div className="mf-section" id="percentage">
           <SectionHeader icon="%" title="শতকরা" sub="Percentage · Successive Change · Comparative" />
 
-          <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:12}}>
+          <div className="mf-grid2">
 
             {/* Card 1: Successive % */}
             <Card color="blue">
