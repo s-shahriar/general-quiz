@@ -1,16 +1,6 @@
 import { useState, useMemo } from 'react'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
-
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-const validQ = (q) => q.options && q.correct_answer
+import { shuffle, validQ } from '../../lib/utils'
 
 export default function VocabExamConfig({ topics, important, onStart, onBack }) {
   const [topicId, setTopicId] = useState('all')

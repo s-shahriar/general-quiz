@@ -1,21 +1,11 @@
 import { useState, useMemo } from 'react'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
-
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
+import { shuffle, validQ } from '../lib/utils'
 
 export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, sahityaTopics, important, onStart, onBack }) {
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
-
-  const validQ = (q) => q.options && q.correct_answer
 
   const allTopics = [...banglaTopic, ...englishTopics, ...gkTopics, ...sahityaTopics]
   const filteredTopics = groupId === 'all' ? allTopics

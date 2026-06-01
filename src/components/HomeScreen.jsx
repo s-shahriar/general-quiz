@@ -1,4 +1,5 @@
-import { Zap, Star, BookOpenText, Languages, Bookmark, Globe, ShieldCheck, BookOpen } from 'lucide-react'
+import { BookOpenText, Languages, Globe, ShieldCheck, BookOpen } from 'lucide-react'
+import ActionCardsRow from './shared/ActionCardsRow'
 
 export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahityaTopics, onSelectTopic, onExam, onNailed, onImportant, onBackup, mastered, important, activeGroup, onGroupChange }) {
   const allTopics = activeGroup === 'bangla' ? banglaTopic : activeGroup === 'english' ? englishTopics : activeGroup === 'sahitya' ? sahityaTopics : gkTopics
@@ -35,50 +36,13 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahit
         </div>
       </header>
 
-      {/* Action row */}
-      <div className="home-action-row home-action-row--3">
-        <button className="action-card exam-card" onClick={onExam}>
-          <div className="ac-shine" aria-hidden="true" />
-          <div className="ac-body">
-            <div className="ac-icon-wrap ac-icon-wrap--exam">
-              <Zap size={22} className="ac-icon" />
-            </div>
-            <div className="ac-label">Exam Mode</div>
-            <div className="ac-sub">Test yourself</div>
-          </div>
-          <div className="ac-footer ac-footer--exam">
-            Start <span className="ac-arrow">→</span>
-          </div>
-        </button>
-
-        <button className="action-card nailed-card" onClick={onNailed}>
-          <div className="ac-shine" aria-hidden="true" />
-          <div className="ac-body">
-            <div className="ac-icon-wrap ac-icon-wrap--nailed">
-              <Star size={20} fill="currentColor" className="ac-icon" />
-            </div>
-            <div className="ac-label">Nailed It</div>
-            <div className="ac-sub">{totalNailed} saved</div>
-          </div>
-          <div className="ac-footer ac-footer--nailed">
-            View <span className="ac-arrow">→</span>
-          </div>
-        </button>
-
-        <button className="action-card important-card" onClick={onImportant}>
-          <div className="ac-shine" aria-hidden="true" />
-          <div className="ac-body">
-            <div className="ac-icon-wrap ac-icon-wrap--important">
-              <Bookmark size={20} fill="currentColor" className="ac-icon" />
-            </div>
-            <div className="ac-label">Important</div>
-            <div className="ac-sub">{totalImportant} saved</div>
-          </div>
-          <div className="ac-footer ac-footer--important">
-            View <span className="ac-arrow">→</span>
-          </div>
-        </button>
-      </div>
+      <ActionCardsRow
+        totalNailed={totalNailed}
+        totalImportant={totalImportant}
+        onExam={onExam}
+        onNailed={onNailed}
+        onImportant={onImportant}
+      />
 
       <div className="backup-trigger-row">
         <button className="backup-trigger-btn" onClick={onBackup}>

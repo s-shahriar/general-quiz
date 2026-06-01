@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react'
-import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark, LayoutGrid, Search, X, ChevronRight } from 'lucide-react'
+import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark, LayoutGrid, Search, X } from 'lucide-react'
 import CategorySidebar from './CategorySidebar.jsx'
+import Pagination from './shared/Pagination'
 
 const PAGE_SIZE = 20
 
@@ -45,15 +46,6 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  function getPageNums() {
-    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1)
-    const pages = [1]
-    if (page > 3) pages.push('...')
-    for (let i = Math.max(2, page - 1); i <= Math.min(totalPages - 1, page + 1); i++) pages.push(i)
-    if (page < totalPages - 2) pages.push('...')
-    pages.push(totalPages)
-    return pages
-  }
 
   return (
     <div className="study-page anim-fade">
@@ -141,35 +133,7 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
         </div>
       ) : (
         <>
-          {totalPages > 1 && (
-            <div className="study-pagination">
-              <button
-                className="study-pag-btn"
-                onClick={() => goTo(page - 1)}
-                disabled={page === 1}
-              >
-                <ChevronLeft size={14} />
-              </button>
-              {getPageNums().map((p, i) =>
-                p === '...'
-                  ? <span key={`e${i}`} style={{ width: 24, textAlign: 'center', color: 'var(--text-dim)', fontSize: 12 }}>…</span>
-                  : <button
-                      key={p}
-                      className={`study-pag-btn${p === page ? ' active' : ''}`}
-                      onClick={() => goTo(p)}
-                    >
-                      {p}
-                    </button>
-              )}
-              <button
-                className="study-pag-btn"
-                onClick={() => goTo(page + 1)}
-                disabled={page === totalPages}
-              >
-                <ChevronRight size={14} />
-              </button>
-            </div>
-          )}
+          {totalPages > 1 && <Pagination page={page} totalPages={totalPages} onPageChange={goTo} />}
 
           <div className="study-list">
             {pageItems.map(({ q, qid }, i) => (
@@ -187,35 +151,7 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
             ))}
           </div>
 
-          {totalPages > 1 && (
-            <div className="study-pagination">
-              <button
-                className="study-pag-btn"
-                onClick={() => goTo(page - 1)}
-                disabled={page === 1}
-              >
-                <ChevronLeft size={14} />
-              </button>
-              {getPageNums().map((p, i) =>
-                p === '...'
-                  ? <span key={`e${i}`} style={{ width: 24, textAlign: 'center', color: 'var(--text-dim)', fontSize: 12 }}>…</span>
-                  : <button
-                      key={p}
-                      className={`study-pag-btn${p === page ? ' active' : ''}`}
-                      onClick={() => goTo(p)}
-                    >
-                      {p}
-                    </button>
-              )}
-              <button
-                className="study-pag-btn"
-                onClick={() => goTo(page + 1)}
-                disabled={page === totalPages}
-              >
-                <ChevronRight size={14} />
-              </button>
-            </div>
-          )}
+          {totalPages > 1 && <Pagination page={page} totalPages={totalPages} onPageChange={goTo} />}
         </>
       )}
     </div>

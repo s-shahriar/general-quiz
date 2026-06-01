@@ -16,23 +16,9 @@ export default function FinancialTerms({ onBack, theme, toggleTheme }) {
           <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>
           <div style={{ marginLeft: 'auto' }}>
             <button
-              className="theme-toggle-btn"
+              className="ft-theme-toggle"
               onClick={toggleTheme}
               title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-              style={{
-                background: 'var(--elevated)',
-                border: '1px solid var(--border)',
-                borderRadius: '8px',
-                padding: '6px',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-2)',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.background = 'var(--hover-bg)'}
-              onMouseLeave={(e) => e.currentTarget.style.background = 'var(--elevated)'}
             >
               {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
             </button>

@@ -1,15 +1,9 @@
 import { useState, useMemo } from 'react'
-import { ChevronLeft, CheckCircle, XCircle, ArrowRight, Home, Trophy, Lightbulb, Star, Bookmark, LayoutGrid } from 'lucide-react'
+import { ChevronLeft, ArrowRight, Lightbulb, Star, Bookmark, LayoutGrid } from 'lucide-react'
 import CategorySidebar from './CategorySidebar.jsx'
-
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
+import ScoreRingScreen from './shared/ScoreRingScreen'
+import QuizOptions from './shared/QuizOptions'
+import { shuffle } from '../lib/utils'
 
 export default function QuizMode({ topic, topics, mastered, important, onNail, onUnnail, onMarkImportant, onUnmarkImportant, onBack, onHome, onChangeTopic }) {
   const questions = useMemo(
@@ -28,7 +22,7 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const q    = questions[idx]
-  const opts = q ? ['a','b','c','d'].filter(k => q.options?.[k]) : []
+  const options = q ? ['a','b','c','d'].filter(k => q.options?.[k]) : []
   const qid  = q ? `${topic.id}__${q._origIndex}` : null
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
@@ -48,7 +42,7 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
   const retry = () => { setIdx(0); setSelected(null); setRevealed(false); setScore(0); setDone(false) }
 
   if (!q || done) {
-    return <ScoreScreen score={score} total={questions.length} topic={topic} onRetry={retry} onHome={onHome} />
+    return <ScoreRingScreen score={score} total={questions.length} title="Quiz Complete!" accentColor={topic.color} onRetry={retry} onHome={onHome} />
   }
 
   const progress  = ((idx + (revealed ? 1 : 0)) / questions.length) * 100
@@ -92,24 +86,7 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
       <div className="quiz-card anim-slide">
         <p className="quiz-question">{q.question}</p>
 
-        <div className="quiz-options">
-          {opts.map(key => {
-            let cls = 'opt-btn'
-            if (revealed) {
-              if (key === q.correct_answer) cls += ' correct revealed'
-              else if (key === selected)    cls += ' wrong revealed'
-              else                          cls += ' dim revealed'
-            }
-            return (
-              <button key={key} className={cls} style={{ '--c': topic.color }} onClick={() => pick(key)}>
-                <span className="opt-key">{key.toUpperCase()}</span>
-                <span className="opt-text">{q.options[key]}</span>
-                {revealed && key === q.correct_answer && <CheckCircle size={15} className="opt-icon" style={{ color: '#10b981' }} />}
-                {revealed && key === selected && key !== q.correct_answer && <XCircle size={15} className="opt-icon" style={{ color: '#ef4444' }} />}
-              </button>
-            )
-          })}
-        </div>
+        <QuizOptions options={q.options} correctAnswer={q.correct_answer} selected={selected} revealed={revealed} accentColor={topic.color} onPick={pick} />
 
         {revealed && q.explanation && (
           <div className="explanation-box anim-slide" style={{ '--c': topic.color }}>
@@ -150,48 +127,6 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
             </button>
           </div>
         )}
-      </div>
-    </div>
-  )
-}
-
-function ScoreScreen({ score, total, topic, onRetry, onHome }) {
-  const pct = total > 0 ? Math.round((score / total) * 100) : 0
-  const msg =
-    pct >= 80 ? 'Excellent! Great work!' :
-    pct >= 60 ? 'Good job! Keep it up.' :
-    pct >= 40 ? 'Keep practicing.' :
-                'Don\'t give up, try again!'
-
-  const r = 54, circumference = 2 * Math.PI * r
-  const strokeOffset = circumference - (pct / 100) * circumference
-
-  return (
-    <div className="score-page anim-fade">
-      <div className="score-card">
-        <Trophy size={44} className="score-trophy" style={{ color: topic.color }} />
-        <div className="score-title">Quiz Complete!</div>
-        <div className="score-ring-wrap">
-          <svg className="score-ring-svg" width="138" height="138" viewBox="0 0 138 138">
-            <circle className="score-ring-bg" cx="69" cy="69" r={r} />
-            <circle className="score-ring-fill" cx="69" cy="69" r={r}
-              stroke={topic.color} strokeDasharray={circumference} strokeDashoffset={strokeOffset}
-              style={{ filter: `drop-shadow(0 0 8px ${topic.color})` }} />
-          </svg>
-          <div className="score-ring-text">
-            <div className="score-fraction" style={{ color: topic.color }}>
-              {score}<span className="score-total">/{total}</span>
-            </div>
-            <div className="score-pct">{pct}%</div>
-          </div>
-        </div>
-        <div className="score-msg">{msg}</div>
-        <div className="score-actions">
-          <button className="score-retry" onClick={onRetry}>Try Again</button>
-          <button className="score-home" style={{ background: topic.color }} onClick={onHome}>
-            <Home size={15} /> Home
-          </button>
-        </div>
       </div>
     </div>
   )

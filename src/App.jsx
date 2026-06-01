@@ -1,35 +1,27 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
-import { Sun, Moon } from 'lucide-react'
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
-import { BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, BANGLA_SAHITYA_TOPICS, ALL_TOPICS } from './data/index.js'
+import { Moon, Sun } from 'lucide-react'
+import { lazy, Suspense, useEffect, useState } from 'react'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from './data/index.js'
+import { loadSet, saveSet } from './lib/storage'
 
 // General Quiz — eagerly loaded (always needed on first paint)
-import HomeScreen      from './components/HomeScreen.jsx'
-import ModeSelect      from './components/ModeSelect.jsx'
-import QuizMode        from './components/QuizMode.jsx'
-import StudyMode       from './components/StudyMode.jsx'
-import ExamConfig      from './components/ExamConfig.jsx'
-import ExamMode        from './components/ExamMode.jsx'
-import NailedScreen    from './components/NailedScreen.jsx'
+import BackupModal from './components/BackupModal.jsx'
+import ExamConfig from './components/ExamConfig.jsx'
+import ExamMode from './components/ExamMode.jsx'
+import HomeScreen from './components/HomeScreen.jsx'
 import ImportantScreen from './components/ImportantScreen.jsx'
-import BackupModal     from './components/BackupModal.jsx'
+import ModeSelect from './components/ModeSelect.jsx'
+import NailedScreen from './components/NailedScreen.jsx'
+import QuizMode from './components/QuizMode.jsx'
+import StudyMode from './components/StudyMode.jsx'
 
 // Utility Kit — FinancialTerms eager, MathFormulas lazy (pulls in KaTeX)
-import UtilityHome         from './components/utility/HomeScreen.jsx'
 import UtilityFinancialTerms from './components/utility/FinancialTerms.jsx'
+import UtilityHome from './components/utility/HomeScreen.jsx'
 const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas.jsx'))
 
 // Vocabulary — lazy: entire module + all 22 JSON files load on demand
 const VocabApp = lazy(() => import('./components/vocab/VocabApp.jsx'))
-
-// ── Persistence ───────────────────────────────────────
-function loadSet(key) {
-  try { return new Set(JSON.parse(localStorage.getItem(key) ?? '[]')) }
-  catch { return new Set() }
-}
-function saveSet(key, set) {
-  localStorage.setItem(key, JSON.stringify([...set]))
-}
 
 function ModuleLoader() {
   return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>
@@ -118,45 +110,25 @@ function AppContent() {
   // ── URL routing sync ────────────────────────────────
   useEffect(() => {
     const path = location.pathname
+    const apply = (fn) => { queueMicrotask(fn) }
 
     if (path === '/math') {
-      setActiveModule('utility')
-      setTimeout(() => {
-        setUtilityScreen('tool')
-        setUtilityActiveToolId('math_formulas')
-      }, 0)
+      apply(() => { setActiveModule('utility'); setUtilityScreen('tool'); setUtilityActiveToolId('math_formulas') })
     } else if (path === '/financial') {
-      setActiveModule('utility')
-      setTimeout(() => {
-        setUtilityScreen('tool')
-        setUtilityActiveToolId('financial_terms')
-      }, 0)
+      apply(() => { setActiveModule('utility'); setUtilityScreen('tool'); setUtilityActiveToolId('financial_terms') })
     } else if (path === '/vocabulary') {
-      setActiveModule('vocab')
+      apply(() => setActiveModule('vocab'))
     } else if (path === '/english-grammer') {
-      setActiveModule('general')
-      setTimeout(() => {
-        setScreen('home')
-        setActiveGroup('english')
-      }, 0)
+      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('english') })
     } else if (path === '/bangla-grammer') {
-      setActiveModule('general')
-      setTimeout(() => {
-        setScreen('home')
-        setActiveGroup('bangla')
-      }, 0)
+      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('bangla') })
     } else if (path === '/sahitto') {
-      setActiveModule('general')
-      setTimeout(() => {
-        setScreen('home')
-        setActiveGroup('bangla_sahitya')
-      }, 0)
+      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('bangla_sahitya') })
     } else if (path === '/') {
-      // Reset to default when on home
       if (activeModule === 'utility' && utilityScreen !== 'home') {
-        goUtilityHome()
+        apply(() => goUtilityHome())
       } else if (activeModule === 'vocab' && vocabScreen !== 'home') {
-        goVocabHome()
+        apply(() => goVocabHome())
       }
     }
   }, [location.pathname])
@@ -219,7 +191,6 @@ function AppContent() {
               onNailed={() => setScreen('nailed')}
               onImportant={() => setScreen('important')}
               onBackup={openBackup}
-              onUnnail={unnail}
             />
           )}
           {screen === 'important' && (
