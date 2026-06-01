@@ -17,6 +17,11 @@
   color: var(--text-2); /* Ensure proper text color inheritance */
 }
 
+/* light mode — white elevated surfaces instead of navy grey */
+[data-theme="light"] .mf-root {
+  --elevated: #ffffff;
+}
+
 /* dark mode — bright for visibility on dark surfaces */
 [data-theme="dark"] .mf-root {
   --mf-gold: #f0a500;
@@ -332,11 +337,19 @@
   box-shadow: var(--shadow-sm);
   min-width: 0;
 }
-/* Center all diagram SVGs inside cards */
-.mf-card svg {
+/* Center diagram SVGs inside cards — but don't break flex icons or KaTeX */
+.mf-card svg:not(.lucide) {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+/* Ensure icons in titles don't get centered by mistake */
+.mf-mem-title svg,
+.mf-warn-title svg,
+.mf-card-title svg {
+  display: inline-block !important;
+  margin: 0 !important;
 }
 
 /* Use border-top instead of ::before so it doesn't scroll inside overflow-x:auto */
@@ -396,7 +409,7 @@
   color: var(--mf-gold2);
   font-weight: 600;
   word-break: break-word;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 .mf-f-box.highlight .val {
@@ -474,6 +487,7 @@
   border-radius: 12px;
   padding: 14px 16px;
   margin-top: 14px;
+  text-align: left;
 }
 .mf-mem-title {
   font-size: 13px;
@@ -506,6 +520,7 @@
   border-radius: 12px;
   padding: 12px 16px;
   margin-top: 10px;
+  text-align: left;
 }
 .mf-warn p {
   font-size: 13px;

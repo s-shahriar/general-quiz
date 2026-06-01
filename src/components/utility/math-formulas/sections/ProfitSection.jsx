@@ -1,4 +1,4 @@
-import { SectionHeader, Card, CardTitle, Tex, FBox, Mem } from '../MathFormulaHelpers'
+import { Card, CardTitle, FBox, Mem, SectionHeader, Tex } from '../MathFormulaHelpers'
 
 export default function ProfitSection() {
   return (
@@ -34,7 +34,7 @@ export default function ProfitSection() {
           </div>
           <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(15,219,168,.08)',border:'1px solid rgba(15,219,168,.25)'}}>
             <div style={{fontSize:12,color:'var(--mf-teal)',fontWeight:700,marginBottom:4}}>n বছরে দ্বিগুণ হলে, তিন গুণ হতে লাগবে</div>
-            <div style={{fontSize:15,fontWeight:700,color:'var(--mf-teal)',marginBottom:4}}>2n বছর</div>
+            <div style={{fontSize:15,fontWeight:700,color:'var(--mf-teal)',marginBottom:4,textAlign:'center'}}>2n বছর</div>
             <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 4 বছরে দ্বিগুণ → তিন গুণ হতে 8 বছর</div>
           </div>
           <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(240,165,0,.08)',border:'1px solid rgba(240,165,0,.25)'}}>
