@@ -1,6 +1,6 @@
 import { CheckCircle, ChevronLeft, Home, LayoutGrid, Lightbulb, Bookmark, Search, Star, X, XCircle } from 'lucide-react'
-import { useMemo, useState } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
@@ -77,8 +77,31 @@ export default function StudyMode({
     setPage(1)
   }
 
+  // Deep-link: ?q=<index> focuses a specific question — jump to its page,
+  // then scroll it into view and pulse it.
+  const [searchParams] = useSearchParams()
+  const focusIdx = searchParams.get('q')
+  const focusQid = focusIdx != null && topic ? `${topic.id}__${focusIdx}` : null
+
+  const [focusApplied, setFocusApplied] = useState(false)
+  if (focusQid && !focusApplied && visible.length) {
+    setFocusApplied(true)
+    const pos = visible.findIndex(it => it.qid === focusQid)
+    if (pos >= 0) setPage(Math.floor(pos / PAGE_SIZE) + 1)
+  }
+
   const totalPages = Math.ceil(visible.length / PAGE_SIZE)
   const pageItems  = visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
+  useEffect(() => {
+    if (!focusQid) return
+    const el = document.getElementById('study-q-' + focusQid)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    el.classList.add('gs-focus-pulse')
+    const t = setTimeout(() => el.classList.remove('gs-focus-pulse'), 2200)
+    return () => clearTimeout(t)
+  }, [page, focusQid])
 
   function goTo(p) {
     setPage(p)
@@ -183,6 +206,7 @@ export default function StudyMode({
             {pageItems.map(({ q, qid }, i) => (
               <StudyCard
                 key={qid}
+                domId={'study-q-' + qid}
                 question={q}
                 index={(page - 1) * PAGE_SIZE + i}
                 color={topic.color}
@@ -202,7 +226,7 @@ export default function StudyMode({
   )
 }
 
-function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
+function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
   const opts = ['a','b','c','d'].filter(k => q.options?.[k])
@@ -214,7 +238,7 @@ function StudyCard({ question: q, index, color, nailed, isImportant, onNail, onM
   }
 
   return (
-    <div className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
+    <div id={domId} className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
       <div className="study-card-top">
         <span className="study-qnum" style={{ color }}>Q{index + 1}</span>
         <div className="study-card-actions">

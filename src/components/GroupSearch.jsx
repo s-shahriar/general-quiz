@@ -96,12 +96,12 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange }) {
           ) : (
             <>
               <div className="gs-list">
-                {pageItems.map(({ q, topic }) => (
+                {pageItems.map(({ q, topic, qid }) => (
                   <ResultCard
                     key={`${topic.id}-${q.question}`}
                     q={q}
                     topic={topic}
-                    onOpen={() => navigate('/topic/' + topic.id + '/study')}
+                    onOpen={() => navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop())}
                   />
                 ))}
               </div>
