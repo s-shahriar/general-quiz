@@ -1,8 +1,15 @@
 import { useState, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
+import { VOCAB_TOPICS } from '../../data/vocabTopics.js'
+import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import { shuffle, validQ } from '../../lib/utils'
 
-export default function VocabExamConfig({ topics, important, onStart, onBack }) {
+export default function VocabExamConfig() {
+  const navigate = useNavigate()
+  const { value: important } = useImportantContext()
+  const topics = VOCAB_TOPICS
+
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
 
@@ -46,12 +53,12 @@ export default function VocabExamConfig({ topics, important, onStart, onBack }) 
     const label = topicId === 'important' ? 'Important Words'
       : topicId === 'all' ? 'All Vocabulary'
       : topics.find(t => t.id === topicId)?.name
-    onStart({ questions, label })
+    navigate('/vocabulary/exam/run', { state: { questions, label } })
   }
 
   return (
     <div className="exam-config-page anim-fade">
-      <button className="back-btn" onClick={onBack}><ChevronLeft size={15} /> Back</button>
+      <button className="back-btn" onClick={() => navigate('/vocabulary')}><ChevronLeft size={15} /> Back</button>
 
       <div className="exam-config-hero">
         <div className="exam-config-icon"><Zap size={30} /></div>

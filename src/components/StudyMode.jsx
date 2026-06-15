@@ -1,5 +1,9 @@
-import { useState, useMemo, useEffect } from 'react'
-import { ChevronLeft, Home, CheckCircle, XCircle, Lightbulb, Star, Bookmark, LayoutGrid, Search, X } from 'lucide-react'
+import { CheckCircle, ChevronLeft, Home, LayoutGrid, Lightbulb, Bookmark, Search, Star, X, XCircle } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
 
@@ -9,18 +13,45 @@ function normalize(str) {
   return (str ?? '').toLowerCase().trim()
 }
 
-export default function StudyMode({ topic, topics, mastered, important, onNail, onMarkImportant, onUnmarkImportant, onBack, onHome, onChangeTopic }) {
+function getTopicGroup(t, groupProp) {
+  if (groupProp) return groupProp
+  if (!t) return []
+  if (BANGLA_TOPICS.some(x => x.id === t.id))         return BANGLA_TOPICS
+  if (ENGLISH_TOPICS.some(x => x.id === t.id))        return ENGLISH_TOPICS
+  if (BANGLA_SAHITYA_TOPICS.some(x => x.id === t.id)) return BANGLA_SAHITYA_TOPICS
+  return GK_TOPICS
+}
+
+export default function StudyMode({
+  topic: topicProp,
+  topics: topicGroupProp,
+  onBack: onBackProp,
+  onHome: onHomeProp,
+  onChangeTopic: onChangeTopicProp,
+}) {
+  const params = useParams()
+  const navigate = useNavigate()
+  const topicId = topicProp?.id || params.topicId
+  const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
+  const { value: mastered, add: onNail } = useMasteredContext()
+  const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
+
   const [filterImportant, setFilterImportant] = useState(false)
   const [sidebarOpen, setSidebarOpen]         = useState(false)
   const [query, setQuery]                     = useState('')
   const [page, setPage]                       = useState(1)
 
-  const allQ = topic.questions
-    .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
-    .filter(({ q }) => q.options && q.correct_answer)
+  const topics = topic ? getTopicGroup(topic, topicGroupProp) : []
 
-  const nonNailed      = allQ.filter(({ qid }) => !mastered.has(qid))
-  const nailedCt       = allQ.length - nonNailed.length
+  const validQ = useMemo(() => {
+    if (!topic) return []
+    return topic.questions
+      .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
+      .filter(({ q }) => q.options && q.correct_answer)
+  }, [topic])
+
+  const nonNailed      = validQ.filter(({ qid }) => !mastered.has(qid))
+  const nailedCt       = validQ.length - nonNailed.length
   const importantCount = nonNailed.filter(({ qid }) => important?.has(qid)).length
 
   const afterFilter = filterImportant
@@ -36,7 +67,14 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
     )
   }, [query, afterFilter])
 
-  useEffect(() => { setPage(1) }, [query, filterImportant, topic.id])
+  // Reset to page 1 when the filter/search/topic changes (adjust state during
+  // render — avoids setState-in-effect cascading renders).
+  const filterKey = `${query}|${filterImportant}|${topic?.id}`
+  const [prevKey, setPrevKey] = useState(filterKey)
+  if (prevKey !== filterKey) {
+    setPrevKey(filterKey)
+    setPage(1)
+  }
 
   const totalPages = Math.ceil(visible.length / PAGE_SIZE)
   const pageItems  = visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
@@ -46,29 +84,34 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const goBack  = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
+  const goHome  = () => onHomeProp ? onHomeProp() : navigate('/')
+  const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
+
+  if (!topic) return <Navigate to="/" replace />
 
   return (
     <div className="study-page anim-fade">
       <div className="study-topbar">
-        <button className="back-btn" onClick={onBack}><ChevronLeft size={15} /> Back</button>
+        <button className="back-btn" onClick={goBack}><ChevronLeft size={15} /> Back</button>
         <span className="study-title" style={{ color: topic.color }}>{topic.name}</span>
         <div className="topbar-right-actions">
-          {topics && onChangeTopic && (
+          {topics.length > 1 && (
             <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
               <LayoutGrid size={16} />
             </button>
           )}
-          <button className="study-home-btn" onClick={onHome} title="Home"><Home size={16} /></button>
+          <button className="study-home-btn" onClick={goHome} title="Home"><Home size={16} /></button>
         </div>
       </div>
 
-      {topics && onChangeTopic && (
+      {topics.length > 1 && (
         <CategorySidebar
           topics={topics}
           currentTopicId={topic.id}
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-          onSelect={onChangeTopic}
+          onSelect={goTopic}
         />
       )}
 
@@ -115,7 +158,7 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
       {nailedCt > 0 && !filterImportant && !query && (
         <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
-          <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={onHome} className="nailed-notice-link">Nailed It</button></span>
+          <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={goHome} className="nailed-notice-link">Nailed It</button></span>
         </div>
       )}
 
@@ -129,7 +172,7 @@ export default function StudyMode({ topic, topics, mastered, important, onNail, 
           }
           <p>{query ? 'No questions match your search.' : filterImportant ? 'No Important questions yet.' : 'All questions nailed! 🎉'}</p>
           {query && <button className="back-btn" style={{ marginTop: 16 }} onClick={() => setQuery('')}>Clear search</button>}
-          {!query && <button className="back-btn" style={{ marginTop: 16 }} onClick={onHome}>Go Home</button>}
+          {!query && <button className="back-btn" style={{ marginTop: 16 }} onClick={goHome}>Go Home</button>}
         </div>
       ) : (
         <>

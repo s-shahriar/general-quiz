@@ -1,7 +1,17 @@
-import { Bookmark, X, Lightbulb } from 'lucide-react'
+import { Bookmark, Lightbulb, X } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { ALL_TOPICS } from '../data/index.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 
-export default function ImportantScreen({ topics, important, onUnmark, onHome }) {
+export default function ImportantScreen({ topics: topicsProp, important: importantProp, onUnmark: onUnmarkProp, onHome: onHomeProp }) {
+  const navigate = useNavigate()
+  const importantCtx = useImportantContext()
+  const important = importantProp ?? importantCtx.value
+  const onUnmark = onUnmarkProp ?? importantCtx.remove
+  const onHome = onHomeProp ?? (() => navigate('/'))
+  const topics = topicsProp ?? ALL_TOPICS
+
   return (
     <SavedQuestionsScreen
       topics={topics}

@@ -3736,3 +3736,13 @@ button {
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: -0.02em;
 }
+
+/* ===================================================================== */
+/* Exam mode — refactored stop row                                       */
+/* ===================================================================== */
+
+.exam-stop-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 14px;
+}

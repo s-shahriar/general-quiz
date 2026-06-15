@@ -1,16 +1,21 @@
 import { useState, useMemo } from 'react'
 import { ChevronLeft, Search, Sun, Moon } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import { FIN_CATEGORIES, FIN_CARDS } from '../../data/utility/finTermsData'
 import './FinancialTerms.css'
 
 const ALL_CATS = ['সব', ...Object.keys(FIN_CATEGORIES)]
 
-export default function FinancialTerms({ onBack, theme, toggleTheme }) {
+export default function FinancialTerms() {
+  const navigate = useNavigate()
+  const { theme, toggleTheme } = useThemeContext()
+
   return (
     <div className="ft-root">
       <div className="ft-wrap">
         <div className="ft-topbar">
-          <button className="back-btn" onClick={onBack}>
+          <button className="back-btn" onClick={() => navigate('/utility')}>
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>

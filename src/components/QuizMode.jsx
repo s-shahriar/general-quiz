@@ -1,28 +1,54 @@
-import { useState, useMemo } from 'react'
-import { ChevronLeft, ArrowRight, Lightbulb, Star, Bookmark, LayoutGrid } from 'lucide-react'
-import CategorySidebar from './CategorySidebar.jsx'
-import ScoreRingScreen from './shared/ScoreRingScreen'
-import QuizOptions from './shared/QuizOptions'
+import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Star } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import { shuffle } from '../lib/utils'
+import CategorySidebar from './CategorySidebar.jsx'
+import QuizOptions from './shared/QuizOptions'
+import ScoreRingScreen from './shared/ScoreRingScreen'
 
-export default function QuizMode({ topic, topics, mastered, important, onNail, onUnnail, onMarkImportant, onUnmarkImportant, onBack, onHome, onChangeTopic }) {
-  const questions = useMemo(
-    () => shuffle(
-      topic.questions
-        .map((q, i) => ({ ...q, _origIndex: i }))
-        .filter(q => q.options && q.correct_answer)
-    ),
-    [topic]
-  )
-  const [idx, setIdx]           = useState(0)
-  const [selected, setSelected]   = useState(null)
-  const [revealed, setRevealed]   = useState(false)
-  const [score, setScore]         = useState(0)
-  const [done, setDone]           = useState(false)
+export default function QuizMode({
+  topic: topicProp,
+  topics: topicGroupProp,
+  onBack: onBackProp,
+  onHome: onHomeProp,
+  onChangeTopic: onChangeTopicProp,
+}) {
+  const params = useParams()
+  const navigate = useNavigate()
+  const topicId = topicProp?.id || params.topicId
+  const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
+  const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
+  const { value: important, add: markImportant, remove: unmarkImportant } = useImportantContext()
+
+  const [selected, setSelected] = useState(null)
+  const [revealed, setRevealed] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
+  const questions = useMemo(
+    () => topic
+      ? shuffle(
+          topic.questions
+            .map((q, i) => ({ ...q, _origIndex: i }))
+            .filter(q => q.options && q.correct_answer)
+        )
+      : [],
+    [topic]
+  )
+
+  const [idx, setIdx]           = useState(0)
+  const [score, setScore]       = useState(0)
+  const [done, setDone]         = useState(false)
+
+  if (!topic) return <Navigate to="/" replace />
+
+  const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
+  const goHome   = () => onHomeProp ? onHomeProp() : navigate('/')
+  const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz')
+
   const q    = questions[idx]
-  const options = q ? ['a','b','c','d'].filter(k => q.options?.[k]) : []
   const qid  = q ? `${topic.id}__${q._origIndex}` : null
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
@@ -42,36 +68,48 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
   const retry = () => { setIdx(0); setSelected(null); setRevealed(false); setScore(0); setDone(false) }
 
   if (!q || done) {
-    return <ScoreRingScreen score={score} total={questions.length} title="Quiz Complete!" accentColor={topic.color} onRetry={retry} onHome={onHome} />
+    return <ScoreRingScreen score={score} total={questions.length} title="Quiz Complete!" accentColor={topic.color} onRetry={retry} onHome={goHome} />
   }
 
   const progress  = ((idx + (revealed ? 1 : 0)) / questions.length) * 100
   const isCorrect = selected === q.correct_answer
 
+  function getTopicGroup(t) {
+    if (topicGroupProp) return topicGroupProp
+    if (!t) return []
+    if (BANGLA_TOPICS.some(x => x.id === t.id))       return BANGLA_TOPICS
+    if (ENGLISH_TOPICS.some(x => x.id === t.id))      return ENGLISH_TOPICS
+    if (BANGLA_SAHITYA_TOPICS.some(x => x.id === t.id)) return BANGLA_SAHITYA_TOPICS
+    return GK_TOPICS
+  }
+
   return (
     <div className="quiz-page anim-fade">
-      {topics && onChangeTopic && (
-        <CategorySidebar
-          topics={topics}
-          currentTopicId={topic.id}
-          open={sidebarOpen}
-          onClose={() => setSidebarOpen(false)}
-          onSelect={onChangeTopic}
-        />
-      )}
-
       <div className="quiz-topbar">
-        <button className="back-btn" onClick={onBack}><ChevronLeft size={15} /> Back</button>
-        <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName}</span>
+        <button className="back-btn" onClick={goBack}>
+          <ChevronLeft size={15} /> Back
+        </button>
+        <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName || topic.name}</span>
         <div className="topbar-right-actions">
-          {topics && onChangeTopic && (
-            <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
+          {getTopicGroup(topic).length > 1 && (
+            <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse topics">
               <LayoutGrid size={16} />
             </button>
           )}
-          <span className="quiz-score-pill">{score} pts</span>
         </div>
       </div>
+
+      <CategorySidebar
+        topics={getTopicGroup(topic).map(t => ({
+          id: t.id, name: t.name,
+          icon: () => <span style={{ fontSize: 14 }}>{t.icon ? <t.icon size={14} /> : '●'}</span>,
+          color: t.color
+        }))}
+        currentTopicId={topic.id}
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+        onSelect={(t) => goTopic(t)}
+      />
 
       <div className="quiz-progress-wrap">
         <div className="quiz-progress-header">
@@ -92,9 +130,9 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
           <div className="explanation-box anim-slide" style={{ '--c': topic.color }}>
             <div className="explanation-header">
               <Lightbulb size={14} style={{ color: topic.color, flexShrink: 0 }} />
-              <span className="explanation-label" style={{ color: topic.color }}>Explanation</span>
+              <span className="explanation-label" style={{ color: topic.color }}>ব্যাখ্যা</span>
               <span className={`answer-badge ${isCorrect ? 'correct' : 'wrong'}`}>
-                {isCorrect ? '✓ Correct' : '✗ Wrong'}
+                {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
               </span>
             </div>
             <p className="explanation-text">{q.explanation}</p>
@@ -102,11 +140,11 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
         )}
 
         {revealed && (
-          <div className="quiz-revealed-actions" style={{ flexDirection: 'column' }}>
+          <div className="quiz-revealed-actions">
             <div className="quiz-mark-btns">
               <button
                 className={`quiz-nail-btn${isNailed ? ' nailed' : ''}`}
-                onClick={() => isNailed ? onUnnail?.(qid) : onNail?.(qid)}
+                onClick={() => isNailed ? unnail(qid) : nail(qid)}
                 title={isNailed ? 'Nailed — click to un-nail' : 'Mark as Nailed It'}
               >
                 <Star size={16} fill={isNailed ? 'currentColor' : 'none'} strokeWidth={1.8} />
@@ -114,15 +152,15 @@ export default function QuizMode({ topic, topics, mastered, important, onNail, o
               </button>
               <button
                 className={`quiz-important-btn${isImportant ? ' marked' : ''}`}
-                onClick={() => isImportant ? onUnmarkImportant?.(qid) : onMarkImportant?.(qid)}
+                onClick={() => isImportant ? unmarkImportant(qid) : markImportant(qid)}
                 title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
               >
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />
                 {isImportant ? 'Saved!' : 'Important'}
               </button>
             </div>
-            <button className="quiz-next-btn" onClick={next} style={{ marginTop: 0 }}>
-              {idx + 1 >= questions.length ? 'See Results' : 'Next Question'}
+            <button className="quiz-next-btn" onClick={next}>
+              {idx + 1 >= questions.length ? 'ফলাফল দেখুন' : 'পরবর্তী প্রশ্ন'}
               <ArrowRight size={16} />
             </button>
           </div>

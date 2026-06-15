@@ -1,169 +1,89 @@
 import { Moon, Sun } from 'lucide-react'
-import { lazy, Suspense, useEffect, useState } from 'react'
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
-import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from './data/index.js'
-import { loadSet, saveSet } from './lib/storage'
-
-// General Quiz — eagerly loaded (always needed on first paint)
+import { lazy, Suspense, useState } from 'react'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import BackupModal from './components/BackupModal.jsx'
-import ExamConfig from './components/ExamConfig.jsx'
-import ExamMode from './components/ExamMode.jsx'
-import HomeScreen from './components/HomeScreen.jsx'
-import ImportantScreen from './components/ImportantScreen.jsx'
-import ModeSelect from './components/ModeSelect.jsx'
-import NailedScreen from './components/NailedScreen.jsx'
-import QuizMode from './components/QuizMode.jsx'
-import StudyMode from './components/StudyMode.jsx'
+import { ImportantProvider, useImportantContext } from './contexts/ImportantContext.jsx'
+import { MasteredProvider, useMasteredContext } from './contexts/MasteredContext.jsx'
+import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
+import { ALL_TOPICS } from './data/index.js'
 
-// Utility Kit — FinancialTerms eager, MathFormulas lazy (pulls in KaTeX)
-import UtilityFinancialTerms from './components/utility/FinancialTerms.jsx'
-import UtilityHome from './components/utility/HomeScreen.jsx'
+const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
+const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
+const QuizMode         = lazy(() => import('./components/QuizMode.jsx'))
+const StudyMode        = lazy(() => import('./components/StudyMode.jsx'))
+const ExamConfig       = lazy(() => import('./components/ExamConfig.jsx'))
+const ExamMode         = lazy(() => import('./components/ExamMode.jsx'))
+const NailedScreen     = lazy(() => import('./components/NailedScreen.jsx'))
+const ImportantScreen  = lazy(() => import('./components/ImportantScreen.jsx'))
+const UtilityHome      = lazy(() => import('./components/utility/HomeScreen.jsx'))
 const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas.jsx'))
+const UtilityFinancialTerms = lazy(() => import('./components/utility/FinancialTerms.jsx'))
+const VocabApp         = lazy(() => import('./components/vocab/VocabApp.jsx'))
 
-// Vocabulary — lazy: entire module + all 22 JSON files load on demand
-const VocabApp = lazy(() => import('./components/vocab/VocabApp.jsx'))
-
-function ModuleLoader() {
-  return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>
+export default function App() {
+  return (
+    <ThemeProvider>
+      <MasteredProvider>
+        <ImportantProvider>
+          <AppRoutes />
+        </ImportantProvider>
+      </MasteredProvider>
+    </ThemeProvider>
+  )
 }
 
-function AppContent() {
-  const navigate = useNavigate()
+function AppRoutes() {
+  const { theme, toggleTheme } = useThemeContext()
+  const { value: mastered, restore: restoreMastered } = useMasteredContext()
+  const { value: important, restore: restoreImportant } = useImportantContext()
   const location = useLocation()
+  const [showBackup, setShowBackup] = useState(false)
 
-  // ── Module ──────────────────────────────────────────
-  const [activeModule, setActiveModule] = useState(() => {
-    const m = localStorage.getItem('gq-active-module')
-    return m === 'eee' ? 'general' : (m || 'general')
-  })
+  const isGeneralHome = location.pathname === '/' ||
+    location.pathname === '/bangla-grammer' ||
+    location.pathname === '/english-grammer' ||
+    location.pathname === '/sahitto' ||
+    location.pathname === '/gk'
 
-  // ── Theme ───────────────────────────────────────────
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('gq-theme') || 'light'
-    // Apply immediately during initialization to prevent flash
-    document.documentElement.dataset.theme = savedTheme
-    return savedTheme
-  })
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme
-    localStorage.setItem('gq-theme', theme)
-  }, [theme])
-  const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light')
-
-  useEffect(() => {
-    localStorage.setItem('gq-active-module', activeModule)
-  }, [activeModule])
-
-  // ── Shared quiz state ────────────────────────────────
-  const [mastered, setMastered] = useState(() => loadSet('gq-nailed'))
-  const [important, setImportant] = useState(() => loadSet('gq-important'))
-
-  const nail            = (qid) => setMastered(prev  => { const n = new Set(prev);  n.add(qid);    saveSet('gq-nailed',    n); return n })
-  const unnail          = (qid) => setMastered(prev  => { const n = new Set(prev);  n.delete(qid); saveSet('gq-nailed',    n); return n })
-  const markImportant   = (qid) => setImportant(prev => { const n = new Set(prev);  n.add(qid);    saveSet('gq-important', n); return n })
-  const unmarkImportant = (qid) => setImportant(prev => { const n = new Set(prev);  n.delete(qid); saveSet('gq-important', n); return n })
+  const showNav = isGeneralHome ||
+    location.pathname === '/vocabulary' ||
+    location.pathname === '/utility'
 
   const handleRestore = (nailedArr, importantArr) => {
-    setMastered(prev  => { const n = new Set([...prev,  ...nailedArr]);    saveSet('gq-nailed',    n); return n })
-    setImportant(prev => { const n = new Set([...prev,  ...importantArr]); saveSet('gq-important', n); return n })
+    restoreMastered(nailedArr)
+    restoreImportant(importantArr)
   }
-
-  // ── Backup — vocab topics loaded async so they stay out of main bundle ──
-  const [showBackup, setShowBackup]           = useState(false)
-  const [vocabTopicsCache, setVocabTopicsCache] = useState([])
-
-  const openBackup = async () => {
-    if (vocabTopicsCache.length === 0) {
-      const { VOCAB_TOPICS } = await import('./data/vocabTopics.js')
-      setVocabTopicsCache(VOCAB_TOPICS)
-    }
-    setShowBackup(true)
-  }
-
-  // ── General Quiz state ───────────────────────────────
-  const [screen, setScreen]               = useState('home')
-  const [activeGroup, setActiveGroup]     = useState('bangla')
-  const [selectedTopic, setSelectedTopic] = useState(null)
-  const [examData, setExamData]           = useState(null)
-  const goHome = () => { setScreen('home'); setSelectedTopic(null); setExamData(null); navigate('/') }
-
-  function getTopicGroup(topic) {
-    if (!topic) return []
-    if (BANGLA_TOPICS.some(t => t.id === topic.id))       return BANGLA_TOPICS
-    if (ENGLISH_TOPICS.some(t => t.id === topic.id))      return ENGLISH_TOPICS
-    if (BANGLA_SAHITYA_TOPICS.some(t => t.id === topic.id)) return BANGLA_SAHITYA_TOPICS
-    return GK_TOPICS
-  }
-
-  // ── Vocabulary module state ──────────────────────────
-  const [vocabScreen, setVocabScreen]     = useState('home')
-  const [vocabTopic, setVocabTopic]       = useState(null)
-  const [vocabExamData, setVocabExamData] = useState(null)
-  const goVocabHome = () => { setVocabScreen('home'); setVocabTopic(null); setVocabExamData(null); navigate('/') }
-
-  // ── Utility Kit state ────────────────────────────────
-  const [utilityScreen, setUtilityScreen]           = useState('home')
-  const [utilityActiveToolId, setUtilityActiveToolId] = useState(null)
-  const openUtilityTool = (id) => { setUtilityActiveToolId(id); setUtilityScreen('tool') }
-  const goUtilityHome   = () => { setUtilityActiveToolId(null); setUtilityScreen('home'); navigate('/') }
-
-  // ── URL routing sync ────────────────────────────────
-  useEffect(() => {
-    const path = location.pathname
-    const apply = (fn) => { queueMicrotask(fn) }
-
-    if (path === '/math') {
-      apply(() => { setActiveModule('utility'); setUtilityScreen('tool'); setUtilityActiveToolId('math_formulas') })
-    } else if (path === '/financial') {
-      apply(() => { setActiveModule('utility'); setUtilityScreen('tool'); setUtilityActiveToolId('financial_terms') })
-    } else if (path === '/vocabulary') {
-      apply(() => setActiveModule('vocab'))
-    } else if (path === '/english-grammer') {
-      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('english') })
-    } else if (path === '/bangla-grammer') {
-      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('bangla') })
-    } else if (path === '/sahitto') {
-      apply(() => { setActiveModule('general'); setScreen('home'); setActiveGroup('bangla_sahitya') })
-    } else if (path === '/') {
-      if (activeModule === 'utility' && utilityScreen !== 'home') {
-        apply(() => goUtilityHome())
-      } else if (activeModule === 'vocab' && vocabScreen !== 'home') {
-        apply(() => goVocabHome())
-      }
-    }
-  }, [location.pathname])
-
-  // ── Module nav visibility ────────────────────────────
-  const isHomeActive =
-    (activeModule === 'general' && screen === 'home') ||
-    (activeModule === 'vocab'   && vocabScreen === 'home') ||
-    (activeModule === 'utility' && utilityScreen === 'home')
-
-  const backupTopics = [...ALL_TOPICS, ...vocabTopicsCache]
 
   return (
     <div className="app-root">
       <div className="bg-canvas" aria-hidden="true">
-        {isHomeActive && <div className="bg-aurora" />}
+        {isGeneralHome && <div className="bg-aurora" />}
         <div className="bg-grid" />
       </div>
 
-      {isHomeActive && (
+      {showNav && (
         <div className="module-nav-bar anim-fade">
           <div className="module-nav-links">
             {[
-              { id: 'general',  label: 'General' },
-              { id: 'vocab',    label: 'Vocabulary' },
-              { id: 'utility',  label: 'Utility' },
-            ].map(({ id, label }) => (
-              <button
-                key={id}
-                className={`module-nav-item ${activeModule === id ? 'active' : ''}`}
-                onClick={() => { setActiveModule(id); navigate('/') }}
-              >
-                {label}
-              </button>
-            ))}
+              { path: '/',              label: 'General' },
+              { path: '/vocabulary',    label: 'Vocabulary' },
+              { path: '/utility',       label: 'Utility' },
+            ].map(({ path, label }) => {
+              const isActive = location.pathname === path ||
+                (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important')) ||
+                (path === '/vocabulary' && location.pathname.startsWith('/vocabulary')) ||
+                (path === '/utility' && (location.pathname === '/math' || location.pathname === '/financial'))
+              return (
+                <a
+                  key={path}
+                  className={`module-nav-item ${isActive ? 'active' : ''}`}
+                  href={path}
+                  onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')) }}
+                >
+                  {label}
+                </a>
+              )
+            })}
           </div>
           <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
             {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
@@ -171,164 +91,38 @@ function AppContent() {
         </div>
       )}
 
-      {/* ================================================================= */}
-      {/* 1. GENERAL QUIZ MODULE                                             */}
-      {/* ================================================================= */}
-      {activeModule === 'general' && (
-        <>
-          {screen === 'home' && (
-            <HomeScreen
-              banglaTopic={BANGLA_TOPICS}
-              englishTopics={ENGLISH_TOPICS}
-              gkTopics={GK_TOPICS}
-              sahityaTopics={BANGLA_SAHITYA_TOPICS}
-              mastered={mastered}
-              important={important}
-              activeGroup={activeGroup}
-              onGroupChange={setActiveGroup}
-              onSelectTopic={(t) => { setSelectedTopic(t); setScreen('mode') }}
-              onExam={() => setScreen('exam_config')}
-              onNailed={() => setScreen('nailed')}
-              onImportant={() => setScreen('important')}
-              onBackup={openBackup}
-            />
-          )}
-          {screen === 'important' && (
-            <ImportantScreen topics={ALL_TOPICS} important={important} onUnmark={unmarkImportant} onHome={goHome} />
-          )}
-          {screen === 'nailed' && (
-            <NailedScreen topics={ALL_TOPICS} mastered={mastered} onUnnail={unnail} onHome={goHome} />
-          )}
-          {screen === 'mode' && (
-            <ModeSelect topic={selectedTopic} onQuiz={() => setScreen('quiz')} onStudy={() => setScreen('study')} onBack={goHome} />
-          )}
-          {screen === 'quiz' && (
-            <QuizMode
-              key={selectedTopic.id + '-quiz'}
-              topic={selectedTopic}
-              topics={getTopicGroup(selectedTopic)}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onUnnail={unnail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onBack={() => setScreen('mode')}
-              onHome={goHome}
-              onChangeTopic={(t) => setSelectedTopic(t)}
-            />
-          )}
-          {screen === 'study' && (
-            <StudyMode
-              key={selectedTopic.id + '-study'}
-              topic={selectedTopic}
-              topics={getTopicGroup(selectedTopic)}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onBack={() => setScreen('mode')}
-              onHome={goHome}
-              onChangeTopic={(t) => setSelectedTopic(t)}
-            />
-          )}
-          {screen === 'exam_config' && (
-            <ExamConfig
-              banglaTopic={BANGLA_TOPICS}
-              englishTopics={ENGLISH_TOPICS}
-              gkTopics={GK_TOPICS}
-              sahityaTopics={BANGLA_SAHITYA_TOPICS}
-              important={important}
-              onStart={(data) => { setExamData(data); setScreen('exam') }}
-              onBack={goHome}
-            />
-          )}
-          {screen === 'exam' && examData && (
-            <ExamMode
-              key={examData.label + examData.questions.length}
-              questions={examData.questions}
-              label={examData.label}
-              mastered={mastered}
-              important={important}
-              onNail={nail}
-              onUnnail={unnail}
-              onMarkImportant={markImportant}
-              onUnmarkImportant={unmarkImportant}
-              onHome={goHome}
-            />
-          )}
-        </>
-      )}
+      <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>}>
+        <Routes>
+          <Route path="/" element={<HomeScreen activeGroup="bangla" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/bangla-grammer" element={<HomeScreen activeGroup="bangla" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/english-grammer" element={<HomeScreen activeGroup="english" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/sahitto" element={<HomeScreen activeGroup="sahitya" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/gk" element={<HomeScreen activeGroup="gk" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/topic/:topicId" element={<ModeSelect />} />
+          <Route path="/topic/:topicId/quiz" element={<QuizMode />} />
+          <Route path="/topic/:topicId/study" element={<StudyMode />} />
+          <Route path="/exam" element={<ExamConfig />} />
+          <Route path="/exam/run" element={<ExamMode />} />
+          <Route path="/nailed" element={<NailedScreen />} />
+          <Route path="/important" element={<ImportantScreen />} />
+          <Route path="/utility" element={<UtilityHome />} />
+          <Route path="/math" element={<UtilityMathFormulas />} />
+          <Route path="/financial" element={<UtilityFinancialTerms />} />
+          <Route path="/vocabulary" element={<VocabApp />} />
+          <Route path="/vocabulary/*" element={<VocabApp />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
 
-      {/* ================================================================= */}
-      {/* 2. VOCABULARY MODULE — lazy loaded                                 */}
-      {/* ================================================================= */}
-      {activeModule === 'vocab' && (
-        <Suspense fallback={<ModuleLoader />}>
-          <VocabApp
-            vocabScreen={vocabScreen}
-            vocabTopic={vocabTopic}
-            vocabExamData={vocabExamData}
-            setVocabScreen={setVocabScreen}
-            setVocabTopic={setVocabTopic}
-            setVocabExamData={setVocabExamData}
-            goVocabHome={goVocabHome}
-            mastered={mastered}
-            important={important}
-            nail={nail}
-            unnail={unnail}
-            markImportant={markImportant}
-            unmarkImportant={unmarkImportant}
-            onOpenBackup={openBackup}
-            theme={theme}
-            toggleTheme={toggleTheme}
-          />
-        </Suspense>
-      )}
-
-      {/* ================================================================= */}
-      {/* 3. UTILITY KIT MODULE                                              */}
-      {/* ================================================================= */}
-      {activeModule === 'utility' && (
-        <>
-          {utilityScreen === 'home' && <UtilityHome onOpen={openUtilityTool} />}
-          {utilityScreen === 'tool' && utilityActiveToolId === 'math_formulas' && (
-            <Suspense fallback={<ModuleLoader />}>
-              <UtilityMathFormulas onBack={goUtilityHome} theme={theme} toggleTheme={toggleTheme} />
-            </Suspense>
-          )}
-          {utilityScreen === 'tool' && utilityActiveToolId === 'financial_terms' && (
-            <UtilityFinancialTerms onBack={goUtilityHome} theme={theme} toggleTheme={toggleTheme} />
-          )}
-        </>
-      )}
-
-      {/* ── Shared Backup Modal ───────────────────────── */}
       {showBackup && (
         <BackupModal
           mastered={mastered}
           important={important}
-          topics={backupTopics}
+          topics={ALL_TOPICS}
           onRestore={handleRestore}
           onClose={() => setShowBackup(false)}
         />
       )}
     </div>
-  )
-}
-
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<AppContent />} />
-      <Route path="/math" element={<AppContent />} />
-      <Route path="/financial" element={<AppContent />} />
-      <Route path="/vocabulary" element={<AppContent />} />
-      <Route path="/english-grammer" element={<AppContent />} />
-      <Route path="/bangla-grammer" element={<AppContent />} />
-      <Route path="/sahitto" element={<AppContent />} />
-      <Route path="*" element={<AppContent />} />
-    </Routes>
   )
 }

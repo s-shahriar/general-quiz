@@ -1,29 +1,33 @@
 import 'katex/dist/katex.min.css'
-import { ChevronLeft, LayoutGrid, Sun, Moon } from 'lucide-react'
+import { ChevronLeft, LayoutGrid, Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import { SECTIONS } from '../../data/utility/mathFormulasData'
 import CategorySidebar from '../CategorySidebar'
-import TriangleSection from './math-formulas/sections/TriangleSection'
-import TrigSection from './math-formulas/sections/TrigSection'
-import TriCenterSection from './math-formulas/sections/TriCenterSection'
-import QuadSection from './math-formulas/sections/QuadSection'
-import CircleSection from './math-formulas/sections/CircleSection'
-import SolidSection from './math-formulas/sections/SolidSection'
-import CurvedSection from './math-formulas/sections/CurvedSection'
 import AlgebraSection from './math-formulas/sections/AlgebraSection'
-import LineSection from './math-formulas/sections/LineSection'
-import QuadraticSection from './math-formulas/sections/QuadraticSection'
-import LogarithmSection from './math-formulas/sections/LogarithmSection'
-import SeriesSection from './math-formulas/sections/SeriesSection'
-import PncSection from './math-formulas/sections/PncSection'
-import SetSection from './math-formulas/sections/SetSection'
+import CircleSection from './math-formulas/sections/CircleSection'
+import CurvedSection from './math-formulas/sections/CurvedSection'
 import LcmSection from './math-formulas/sections/LcmSection'
-import ProfitSection from './math-formulas/sections/ProfitSection'
+import LineSection from './math-formulas/sections/LineSection'
+import LogarithmSection from './math-formulas/sections/LogarithmSection'
 import PercentageSection from './math-formulas/sections/PercentageSection'
+import PncSection from './math-formulas/sections/PncSection'
+import ProfitSection from './math-formulas/sections/ProfitSection'
+import QuadraticSection from './math-formulas/sections/QuadraticSection'
+import QuadSection from './math-formulas/sections/QuadSection'
+import SeriesSection from './math-formulas/sections/SeriesSection'
+import SetSection from './math-formulas/sections/SetSection'
+import SolidSection from './math-formulas/sections/SolidSection'
+import TriangleSection from './math-formulas/sections/TriangleSection'
+import TriCenterSection from './math-formulas/sections/TriCenterSection'
+import TrigSection from './math-formulas/sections/TrigSection'
 import UnitarySection from './math-formulas/sections/UnitarySection'
 import './MathFormulas.css'
 
-export default function MathFormulas({ onBack, theme, toggleTheme }) {
+export default function MathFormulas() {
+  const navigate = useNavigate()
+  const { theme, toggleTheme } = useThemeContext()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
 
@@ -70,7 +74,7 @@ export default function MathFormulas({ onBack, theme, toggleTheme }) {
 
       <div className="mf-wrap">
         <div className="mf-topbar">
-          <button className="back-btn" onClick={onBack}>
+          <button className="back-btn" onClick={() => navigate('/utility')}>
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>

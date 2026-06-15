@@ -1,9 +1,18 @@
-import { BookOpenText, Languages, Globe, ShieldCheck, BookOpen } from 'lucide-react'
+import { BookOpen, BookOpenText, Globe, Languages, ShieldCheck } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import ActionCardsRow from './shared/ActionCardsRow'
 
-export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahityaTopics, onSelectTopic, onExam, onNailed, onImportant, onBackup, mastered, important, activeGroup, onGroupChange }) {
-  const allTopics = activeGroup === 'bangla' ? banglaTopic : activeGroup === 'english' ? englishTopics : activeGroup === 'sahitya' ? sahityaTopics : gkTopics
-  const allTopicsFlat = [...banglaTopic, ...englishTopics, ...gkTopics, ...sahityaTopics]
+export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
+  const navigate = useNavigate()
+  const { value: mastered } = useMasteredContext()
+  const { value: important } = useImportantContext()
+
+  const allTopicsFlat = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
+  const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : GK_TOPICS
+
   const totalNailed = allTopicsFlat.reduce((s, t) =>
     s + t.questions.filter((_, i) => mastered.has(`${t.id}__${i}`)).length
   , 0)
@@ -21,16 +30,16 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahit
         <p className="home-sub">বাংলা, English ও সাধারণ জ্ঞান Practice</p>
 
         <div className="module-toggle">
-          <button className={`module-btn${activeGroup === 'bangla' ? ' active' : ''}`} onClick={() => onGroupChange('bangla')}>
+          <button className={`module-btn${activeGroup === 'bangla' ? ' active' : ''}`} onClick={() => navigate('/bangla-grammer')}>
             <Languages size={15} /> বাংলা ব্যাকরণ
           </button>
-          <button className={`module-btn${activeGroup === 'english' ? ' active' : ''}`} onClick={() => onGroupChange('english')}>
+          <button className={`module-btn${activeGroup === 'english' ? ' active' : ''}`} onClick={() => navigate('/english-grammer')}>
             <Languages size={15} /> English Grammar
           </button>
-          <button className={`module-btn${activeGroup === 'gk' ? ' active' : ''}`} onClick={() => onGroupChange('gk')}>
+          <button className={`module-btn${activeGroup === 'gk' ? ' active' : ''}`} onClick={() => navigate('/gk')}>
             <Globe size={15} /> সাধারণ জ্ঞান
           </button>
-          <button className={`module-btn${activeGroup === 'sahitya' ? ' active' : ''}`} onClick={() => onGroupChange('sahitya')}>
+          <button className={`module-btn${activeGroup === 'sahitya' ? ' active' : ''}`} onClick={() => navigate('/sahitto')}>
             <BookOpen size={15} /> বাংলা সাহিত্য
           </button>
         </div>
@@ -39,9 +48,9 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahit
       <ActionCardsRow
         totalNailed={totalNailed}
         totalImportant={totalImportant}
-        onExam={onExam}
-        onNailed={onNailed}
-        onImportant={onImportant}
+        onExam={() => navigate('/exam')}
+        onNailed={() => navigate('/nailed')}
+        onImportant={() => navigate('/important')}
       />
 
       <div className="backup-trigger-row">
@@ -54,7 +63,7 @@ export default function HomeScreen({ banglaTopic, englishTopics, gkTopics, sahit
         {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
       </p>
       <main className="topics-grid">
-        {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => onSelectTopic(t)} />)}
+        {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => navigate('/topic/' + t.id)} />)}
       </main>
     </div>
   )

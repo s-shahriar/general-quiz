@@ -1,18 +1,24 @@
-import { useState, useMemo } from 'react'
-import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
+import { ChevronLeft, Minus, Plus, Zap } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import { shuffle, validQ } from '../lib/utils'
 
-export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, sahityaTopics, important, onStart, onBack }) {
+export default function ExamConfig() {
+  const navigate = useNavigate()
+  const { value: important } = useImportantContext()
+
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
 
-  const allTopics = [...banglaTopic, ...englishTopics, ...gkTopics, ...sahityaTopics]
+  const allTopics = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
   const filteredTopics = groupId === 'all' ? allTopics
-    : groupId === 'bangla' ? banglaTopic
-    : groupId === 'english' ? englishTopics
-    : groupId === 'sahitya' ? sahityaTopics
-    : gkTopics
+    : groupId === 'bangla' ? BANGLA_TOPICS
+    : groupId === 'english' ? ENGLISH_TOPICS
+    : groupId === 'sahitya' ? BANGLA_SAHITYA_TOPICS
+    : GK_TOPICS
 
   const importantCount = useMemo(() =>
     allTopics.reduce((s, t) =>
@@ -56,12 +62,12 @@ export default function ExamConfig({ banglaTopic, englishTopics, gkTopics, sahit
       : topicId === 'all'
         ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : groupId === 'sahitya' ? 'বাংলা সাহিত্য' : 'সাধারণ জ্ঞান')
         : allTopics.find(t => t.id === topicId)?.name
-    onStart({ questions, label })
+    navigate('/exam/run', { state: { questions, label } })
   }
 
   return (
     <div className="exam-config-page anim-fade">
-      <button className="back-btn" onClick={onBack}><ChevronLeft size={15} /> Back</button>
+      <button className="back-btn" onClick={() => navigate('/')}><ChevronLeft size={15} /> Back</button>
 
       <div className="exam-config-hero">
         <div className="exam-config-icon"><Zap size={30} /></div>

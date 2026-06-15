@@ -1,8 +1,10 @@
 import { Wrench, Calculator, Building2 } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const TOOLS = [
   {
     id: 'math_formulas',
+    path: '/math',
     icon: Calculator,
     name: 'গণিত সূত্র',
     description: '১২টি বিষয় — সম্পূর্ণ সূত্র সংকলন',
@@ -10,6 +12,7 @@ const TOOLS = [
   },
   {
     id: 'financial_terms',
+    path: '/financial',
     icon: Building2,
     name: 'ফিনান্সিয়াল টার্ম',
     description: '৫১টি টপিক + ৩৯টি কুইজ প্রশ্ন',
@@ -17,7 +20,9 @@ const TOOLS = [
   },
 ]
 
-export default function HomeScreen({ onOpen }) {
+export default function HomeScreen() {
+  const navigate = useNavigate()
+
   return (
     <div className="home anim-fade">
       <header className="home-header">
@@ -30,7 +35,7 @@ export default function HomeScreen({ onOpen }) {
 
       <p className="section-label">Choose a Tool</p>
       <main className="topics-grid">
-        {TOOLS.map(t => <ToolCard key={t.id} tool={t} onClick={() => onOpen(t.id)} />)}
+        {TOOLS.map(t => <ToolCard key={t.id} tool={t} onClick={() => navigate(t.path)} />)}
       </main>
     </div>
   )

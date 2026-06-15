@@ -1,7 +1,17 @@
 import { Star, X } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { ALL_TOPICS } from '../data/index.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 
-export default function NailedScreen({ topics, mastered, onUnnail, onHome }) {
+export default function NailedScreen({ topics: topicsProp, mastered: masteredProp, onUnnail: onUnnailProp, onHome: onHomeProp }) {
+  const navigate = useNavigate()
+  const masteredCtx = useMasteredContext()
+  const mastered = masteredProp ?? masteredCtx.value
+  const onUnnail = onUnnailProp ?? masteredCtx.remove
+  const onHome = onHomeProp ?? (() => navigate('/'))
+  const topics = topicsProp ?? ALL_TOPICS
+
   return (
     <SavedQuestionsScreen
       topics={topics}
