@@ -16,9 +16,9 @@ const normalize = (s) =>
   (s ?? '').toString().normalize('NFC').replace(ZERO_WIDTH, '').toLowerCase()
     .replace(PUNCT, ' ').replace(/\s+/g, ' ').trim()
 
-export default function GroupSearch({ topics, groupLabel, onActiveChange }) {
+export default function GroupSearch({ topics, groupLabel, onActiveChange, initialQuery = '', homePath = '/' }) {
   const navigate = useNavigate()
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState(initialQuery)
   const [page, setPage]   = useState(1)
   const debounced = useDebounce(query, 250)
   const term = normalize(debounced)
@@ -101,7 +101,9 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange }) {
                     key={`${topic.id}-${q.question}`}
                     q={q}
                     topic={topic}
-                    onOpen={() => navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop())}
+                    onOpen={() => navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop(), {
+                      state: { backTo: homePath + '?search=' + encodeURIComponent(query) }
+                    })}
                   />
                 ))}
               </div>

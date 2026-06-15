@@ -1,6 +1,6 @@
 import { BookOpen, BookOpenText, Globe, Languages, ShieldCheck } from 'lucide-react'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
@@ -8,12 +8,15 @@ import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
 
 const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান' }
+const GROUP_PATHS  = { bangla: '/bangla-grammer', english: '/english-grammer', sahitya: '/sahitto', gk: '/gk' }
 
 export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { value: mastered } = useMasteredContext()
   const { value: important } = useImportantContext()
   const [searching, setSearching] = useState(false)
+  const urlSearch = searchParams.get('search') || ''
 
   const allTopicsFlat = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
   const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : GK_TOPICS
@@ -50,7 +53,14 @@ export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
         </div>
       </header>
 
-      <GroupSearch key={activeGroup} topics={allTopics} groupLabel={GROUP_LABELS[activeGroup] ?? ''} onActiveChange={setSearching} />
+      <GroupSearch
+        key={activeGroup}
+        topics={allTopics}
+        groupLabel={GROUP_LABELS[activeGroup] ?? ''}
+        homePath={GROUP_PATHS[activeGroup] ?? '/'}
+        initialQuery={urlSearch}
+        onActiveChange={setSearching}
+      />
 
       {!searching && (
         <>

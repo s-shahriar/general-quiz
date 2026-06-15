@@ -1,6 +1,6 @@
 import { CheckCircle, ChevronLeft, Home, LayoutGrid, Lightbulb, Bookmark, Search, Star, X, XCircle } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
-import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
@@ -33,6 +33,8 @@ export default function StudyMode({
 }) {
   const params = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
+  const backTo = location.state?.backTo  // set when arriving from search — return there
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
   const { value: mastered, add: onNail } = useMasteredContext()
@@ -105,7 +107,7 @@ export default function StudyMode({
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const goBack  = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
+  const goBack  = () => onBackProp ? onBackProp() : navigate(backTo || '/topic/' + topic.id)
   const goHome  = () => onHomeProp ? onHomeProp() : navigate('/')
   const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
 
