@@ -101,9 +101,13 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange, initia
                     key={`${topic.id}-${q.question}`}
                     q={q}
                     topic={topic}
-                    onOpen={() => navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop(), {
-                      state: { backTo: homePath + '?search=' + encodeURIComponent(query) }
-                    })}
+                    onOpen={() => {
+                      // Make the home entry carry the search so BOTH the in-app
+                      // Back (via state) and the browser Back land on it.
+                      const home = homePath + '?search=' + encodeURIComponent(query)
+                      navigate(home, { replace: true })
+                      navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop(), { state: { backTo: home } })
+                    }}
                   />
                 ))}
               </div>
