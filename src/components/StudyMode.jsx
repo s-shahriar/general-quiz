@@ -5,6 +5,7 @@ import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import { duplicateQidsOf } from '../lib/questionIndex.js'
+import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
 
@@ -93,15 +94,11 @@ export default function StudyMode({
   const totalPages = Math.ceil(visible.length / PAGE_SIZE)
   const pageItems  = visible.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
+  // The focus page is already applied during render, so run once per target.
   useEffect(() => {
     if (!focusQid) return
-    const el = document.getElementById('study-q-' + focusQid)
-    if (!el) return
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    el.classList.add('gs-focus-pulse')
-    const t = setTimeout(() => el.classList.remove('gs-focus-pulse'), 2200)
-    return () => clearTimeout(t)
-  }, [page, focusQid])
+    return focusScroll(() => document.getElementById('study-q-' + focusQid))
+  }, [focusQid])
 
   function goTo(p) {
     setPage(p)
