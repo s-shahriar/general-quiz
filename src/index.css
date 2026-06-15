@@ -1631,8 +1631,6 @@ button {
     box-shadow 0.22s ease,
     transform 0.22s ease,
     border-color 0.22s;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 160px;
 }
 .study-card:hover {
   box-shadow:
