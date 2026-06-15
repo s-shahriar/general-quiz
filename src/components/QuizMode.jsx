@@ -4,6 +4,7 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { duplicateQidsOf } from '../lib/questionIndex.js'
 import { shuffle } from '../lib/utils'
 import CategorySidebar from './CategorySidebar.jsx'
 import QuizOptions from './shared/QuizOptions'
@@ -21,7 +22,7 @@ export default function QuizMode({
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
-  const { value: important, add: markImportant, remove: unmarkImportant } = useImportantContext()
+  const { value: important, add: markImportant, removeMany: unmarkImportant } = useImportantContext()
 
   const [selected, setSelected] = useState(null)
   const [revealed, setRevealed] = useState(false)
@@ -50,8 +51,9 @@ export default function QuizMode({
 
   const q    = questions[idx]
   const qid  = q ? `${topic.id}__${q._origIndex}` : null
+  const dupeQids = qid ? duplicateQidsOf(qid) : []
   const isNailed = qid ? mastered?.has(qid) : false
-  const isImportant = qid ? important?.has(qid) : false
+  const isImportant = qid ? dupeQids.some(id => important?.has(id)) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -152,7 +154,7 @@ export default function QuizMode({
               </button>
               <button
                 className={`quiz-important-btn${isImportant ? ' marked' : ''}`}
-                onClick={() => isImportant ? unmarkImportant(qid) : markImportant(qid)}
+                onClick={() => isImportant ? unmarkImportant(dupeQids) : markImportant(qid)}
                 title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
               >
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />

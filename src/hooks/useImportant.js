@@ -28,11 +28,18 @@ export default function useImportant() {
     return next
   })
 
+  const removeMany = (ids) => setValue(prev => {
+    const next = new Set(prev)
+    ids.forEach(id => next.delete(id))
+    save(next)
+    return next
+  })
+
   const restore = (ids) => setValue(prev => {
     const next = new Set([...prev, ...ids])
     save(next)
     return next
   })
 
-  return { value, add, remove, restore }
+  return { value, add, remove, removeMany, restore }
 }

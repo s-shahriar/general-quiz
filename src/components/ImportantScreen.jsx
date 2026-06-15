@@ -2,13 +2,15 @@ import { Bookmark, Lightbulb, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { ALL_TOPICS } from '../data/index.js'
+import { duplicateQidsOf } from '../lib/questionIndex.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 
 export default function ImportantScreen({ topics: topicsProp, important: importantProp, onUnmark: onUnmarkProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
   const importantCtx = useImportantContext()
   const important = importantProp ?? importantCtx.value
-  const onUnmark = onUnmarkProp ?? importantCtx.remove
+  // Remove every duplicate copy of the question so it fully clears.
+  const onUnmark = onUnmarkProp ?? ((qid) => importantCtx.removeMany(duplicateQidsOf(qid)))
   const onHome = onHomeProp ?? (() => navigate('/'))
   const topics = topicsProp ?? ALL_TOPICS
 

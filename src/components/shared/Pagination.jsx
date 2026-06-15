@@ -2,12 +2,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Pagination({ page, totalPages, onPageChange }) {
   function getPageNums() {
-    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, i) => i + 1)
-    const pages = [1]
-    if (page > 3) pages.push('...')
-    for (let i = Math.max(2, page - 1); i <= Math.min(totalPages - 1, page + 1); i++) pages.push(i)
-    if (page < totalPages - 2) pages.push('...')
-    pages.push(totalPages)
+    if (totalPages <= 7) return Array.from({ length: totalPages }, (_, i) => i + 1)
+    // Show a sliding window of 5 consecutive pages around the current one,
+    // plus the first/last pages with ellipses where there's a gap.
+    let start = Math.max(1, page - 2)
+    let end = Math.min(totalPages, start + 4)
+    start = Math.max(1, end - 4)
+    const pages = []
+    if (start > 1) {
+      pages.push(1)
+      if (start > 2) pages.push('...')
+    }
+    for (let i = start; i <= end; i++) pages.push(i)
+    if (end < totalPages) {
+      if (end < totalPages - 1) pages.push('...')
+      pages.push(totalPages)
+    }
     return pages
   }
 

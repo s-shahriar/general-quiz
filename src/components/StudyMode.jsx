@@ -4,6 +4,7 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { duplicateQidsOf } from '../lib/questionIndex.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
 
@@ -34,7 +35,7 @@ export default function StudyMode({
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
   const { value: mastered, add: onNail } = useMasteredContext()
-  const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
+  const { value: important, add: onMarkImportant, removeMany: onUnmarkImportant } = useImportantContext()
 
   const [filterImportant, setFilterImportant] = useState(false)
   const [sidebarOpen, setSidebarOpen]         = useState(false)
@@ -186,10 +187,10 @@ export default function StudyMode({
                 index={(page - 1) * PAGE_SIZE + i}
                 color={topic.color}
                 nailed={mastered.has(qid)}
-                isImportant={important?.has(qid) ?? false}
+                isImportant={duplicateQidsOf(qid).some(id => important?.has(id))}
                 onNail={() => onNail(qid)}
                 onMarkImportant={() => onMarkImportant?.(qid)}
-                onUnmarkImportant={() => onUnmarkImportant?.(qid)}
+                onUnmarkImportant={() => onUnmarkImportant?.(duplicateQidsOf(qid))}
               />
             ))}
           </div>
