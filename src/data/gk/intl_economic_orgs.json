@@ -729,11 +729,11 @@
             "type": "table",
             "title": "৫টি অঙ্গসংস্থার পূর্ণরূপ ও কাজ",
             "rows": [
-              ["**IBRD**", "International Bank for Reconstruction and Development — **কঠোর শর্তে** (hard terms) সরকারকে ঋণ।"],
-              ["**IDA**", "International Development Association — একে **Soft Loan Window** বলা হয়; সহজ শর্তে/কম সুদে ঋণ।"],
-              ["**IFC**", "International Finance Corporation — উন্নয়নশীল দেশে **বেসরকারি খাতের বিনিয়োগ, উন্নয়ন ও কর্মসংস্থান** সৃষ্টিতে সহায়তা।"],
-              ["**MIGA**", "Multilateral Investment Guarantee Agency — বিনিয়োগকারীদের **বিভিন্ন ঝুঁকির বিরুদ্ধে সুরক্ষা** প্রদান।"],
-              ["**ICSID**", "International Centre for Settlement of Investment Disputes — সালিসি ও মধ্যস্থতার মাধ্যমে **পুঁজি বিনিয়োগ বিরোধ মীমাংসা**।"]
+              ["**IBRD**", "**কঠোর শর্তে (hard terms) সরকারকে ঋণ।** — International Bank for Reconstruction and Development"],
+              ["**IDA**", "**সহজ শর্তে/কম সুদে ঋণ** — একে **Soft Loan Window** বলা হয়। (International Development Association)"],
+              ["**IFC**", "**বেসরকারি খাতের বিনিয়োগ, উন্নয়ন ও কর্মসংস্থানে** সহায়তা। — International Finance Corporation"],
+              ["**MIGA**", "বিনিয়োগকারীদের **ঝুঁকির বিরুদ্ধে সুরক্ষা।** — Multilateral Investment Guarantee Agency"],
+              ["**ICSID**", "**পুঁজি বিনিয়োগ বিরোধ মীমাংসা** (সালিসি ও মধ্যস্থতা)। — International Centre for Settlement of Investment Disputes"]
             ]
           },
           {
