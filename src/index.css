@@ -3914,3 +3914,215 @@ button {
   border-radius: 10px;
   padding: 9px 11px;
 }
+
+/* ── GK Study Notes (revision-friendly) ───────────────────────── */
+.gk-study-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 16px 80px;
+  overflow-x: clip;
+}
+
+/* sticky group navigation chips */
+.gk-group-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.gk-group-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-md);
+  background: var(--card);
+  color: var(--text-2);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.gk-group-chip:hover { border-color: var(--c); color: var(--text); }
+.gk-group-chip.active {
+  border-color: var(--c);
+  color: var(--text);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--c) 18%, transparent);
+}
+
+.gk-groups { display: flex; flex-direction: column; gap: 22px; }
+
+.gk-group-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  scroll-margin-top: 80px;
+}
+.gk-group-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--c) 8%, transparent);
+  border-left: 4px solid var(--c);
+}
+.gk-group-title {
+  margin: 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.gk-group-sub {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+.gk-group-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* highlighted (marked) keyword — soft accent wash, tuned per theme.
+   Light mode can take a stronger tint (white tolerates it); dark mode needs
+   a much lighter wash so it doesn't glow. Text stays --text in both. */
+.gk-key {
+  /* warm amber highlighter — stronger wash on white, dark text for contrast */
+  color: var(--text);
+  background: color-mix(in srgb, #fbbf24 38%, transparent);
+  font-weight: 700;
+  padding: 0 3px;
+  border-radius: 4px;
+}
+[data-theme="dark"] .gk-key {
+  /* softer amber wash + light amber text on the blue/cyan dark theme */
+  background: color-mix(in srgb, #fbbf24 18%, transparent);
+  color: #fde68a;
+}
+
+.gk-block { display: flex; flex-direction: column; gap: 7px; }
+.gk-block-title {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.gk-block-title::before {
+  content: "";
+  width: 12px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--c);
+}
+
+.gk-heading {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text);
+  padding-bottom: 6px;
+  border-bottom: 2px dashed color-mix(in srgb, var(--c) 40%, transparent);
+}
+
+.gk-fact {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.gk-list { margin: 0; padding-left: 4px; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.gk-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+.gk-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--c);
+}
+
+/* key-value & comparison tables */
+.gk-table-scroll { overflow-x: auto; }
+.gk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gk-table th, .gk-table td {
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+  border-bottom: 1px solid var(--border);
+}
+.gk-table tr:last-child th, .gk-table tr:last-child td { border-bottom: none; }
+.gk-table th {
+  color: var(--text);
+  font-weight: 700;
+  background: var(--card2);
+  white-space: nowrap;
+}
+.gk-table td { color: var(--text); }
+
+.gk-compare th, .gk-compare td { border-right: 1px solid var(--border); }
+.gk-compare th:last-child, .gk-compare td:last-child { border-right: none; }
+.gk-compare-head {
+  text-align: center !important;
+  color: var(--text) !important;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--c) 20%, var(--card2)) !important;
+  box-shadow: inset 0 -2px 0 var(--c);
+}
+.gk-compare-row-label { white-space: nowrap; }
+
+/* callouts */
+.gk-callout {
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--c);
+  background: color-mix(in srgb, var(--c) 7%, transparent);
+}
+.gk-callout p { margin: 0; font-size: 0.94rem; line-height: 1.7; color: var(--text); }
+.gk-callout-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 5px;
+  color: var(--c);
+}
+.gk-callout-important { --c: #ef4444; }
+.gk-callout-tip { --c: #22c55e; }
+.gk-callout-note { --c: #3b82f6; }
+
+.gk-empty {
+  text-align: center;
+  color: var(--text-3);
+  padding: 60px 20px;
+  font-size: 0.9rem;
+}
+
+/* disabled mode card (e.g. MCQ not yet added) */
+.mode-card-disabled { opacity: 0.55; cursor: not-allowed; }
+.mode-card-disabled:hover { transform: none; }

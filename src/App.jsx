@@ -11,6 +11,7 @@ const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
 const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
 const QuizMode         = lazy(() => import('./components/QuizMode.jsx'))
 const StudyMode        = lazy(() => import('./components/StudyMode.jsx'))
+const GkStudyMode      = lazy(() => import('./components/GkStudyMode.jsx'))
 const ExamConfig       = lazy(() => import('./components/ExamConfig.jsx'))
 const ExamMode         = lazy(() => import('./components/ExamMode.jsx'))
 const NailedScreen     = lazy(() => import('./components/NailedScreen.jsx'))
@@ -101,6 +102,7 @@ function AppRoutes() {
           <Route path="/topic/:topicId" element={<ModeSelect />} />
           <Route path="/topic/:topicId/quiz" element={<QuizMode />} />
           <Route path="/topic/:topicId/study" element={<StudyMode />} />
+          <Route path="/topic/:topicId/notes" element={<GkStudyMode />} />
           <Route path="/exam" element={<ExamConfig />} />
           <Route path="/exam/run" element={<ExamMode />} />
           <Route path="/nailed" element={<NailedScreen />} />

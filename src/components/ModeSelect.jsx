@@ -10,6 +10,11 @@ export default function ModeSelect() {
   if (!topic) return <Navigate to="/" replace />
 
   const Icon = topic.icon
+  const isStudyNotes = !!topic.study           // GK categories carry study notes
+  const groupCount = topic.study?.groups?.length || 0
+  const meta = isStudyNotes
+    ? `${groupCount} টপিক${topic.questions.length ? ` · ${topic.questions.length} MCQ` : ''}`
+    : `${topic.questions.length} questions available`
   return (
     <div className="mode-page anim-fade">
       <button className="back-btn" onClick={() => navigate('/')}>
@@ -24,26 +29,38 @@ export default function ModeSelect() {
           <Icon size={38} />
         </div>
         <div className="mode-topic-name" style={{ color: topic.color }}>{topic.name}</div>
-        <div className="mode-topic-meta">{topic.questions.length} questions available</div>
+        <div className="mode-topic-meta">{meta}</div>
       </div>
 
       <div className="mode-cards">
-        <button className="mode-card" onClick={() => navigate('quiz')}>
+        <button
+          className={`mode-card${isStudyNotes && !topic.questions.length ? ' mode-card-disabled' : ''}`}
+          onClick={() => topic.questions.length || !isStudyNotes ? navigate('quiz') : null}
+          disabled={isStudyNotes && !topic.questions.length}
+        >
           <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
             <Brain size={26} />
           </div>
-          <h3>Quiz Mode</h3>
-          <p>Answer questions one by one. Get instant right/wrong feedback and track your score.</p>
-          <span className="mode-card-cta" style={{ color: topic.color }}>Start Quiz →</span>
+          <h3>MCQ Mode</h3>
+          <p>{isStudyNotes && !topic.questions.length
+            ? 'এই ক্যাটাগরিতে এখনো কোনো MCQ যোগ করা হয়নি।'
+            : 'প্রশ্ন একটি একটি করে উত্তর দাও। তাৎক্ষণিক ঠিক/ভুল ফিডব্যাক ও স্কোর।'}</p>
+          <span className="mode-card-cta" style={{ color: topic.color }}>
+            {isStudyNotes && !topic.questions.length ? 'শীঘ্রই আসছে' : 'Start Quiz →'}
+          </span>
         </button>
 
-        <button className="mode-card" onClick={() => navigate('study')}>
+        <button className="mode-card" onClick={() => navigate(isStudyNotes ? 'notes' : 'study')}>
           <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
             <BookOpen size={26} />
           </div>
           <h3>Study Mode</h3>
-          <p>Browse all Q&amp;As at your own pace. Reveal answers when ready. Great for revision.</p>
-          <span className="mode-card-cta" style={{ color: topic.color }}>Start Reading →</span>
+          <p>{isStudyNotes
+            ? 'গুরুত্বপূর্ণ তথ্য নোট আকারে — বোল্ড, টেবিল ও তুলনা দিয়ে রিভিশন-বান্ধব।'
+            : 'Browse all Q&As at your own pace. Reveal answers when ready. Great for revision.'}</p>
+          <span className="mode-card-cta" style={{ color: topic.color }}>
+            {isStudyNotes ? 'নোট পড়ো →' : 'Start Reading →'}
+          </span>
         </button>
       </div>
     </div>

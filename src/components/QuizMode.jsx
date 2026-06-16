@@ -1,8 +1,9 @@
-import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Star } from 'lucide-react'
+import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Moon, Star, Sun } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useThemeContext } from '../contexts/ThemeContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
 import { duplicateQidsOf } from '../lib/questionIndex.js'
 import { shuffle } from '../lib/utils'
@@ -23,6 +24,7 @@ export default function QuizMode({
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
   const { value: important, add: markImportant, removeMany: unmarkImportant } = useImportantContext()
+  const { theme, toggleTheme } = useThemeContext()
 
   const [selected, setSelected] = useState(null)
   const [revealed, setRevealed] = useState(false)
@@ -93,6 +95,9 @@ export default function QuizMode({
         </button>
         <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName || topic.name}</span>
         <div className="topbar-right-actions">
+          <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
           {getTopicGroup(topic).length > 1 && (
             <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse topics">
               <LayoutGrid size={16} />

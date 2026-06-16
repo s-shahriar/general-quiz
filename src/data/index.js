@@ -3,7 +3,6 @@ import {
   BookOpen, Hash, Globe, CheckSquare,
   Type, Clock, PenTool, Users, Mic, MessageSquare, ArrowLeftRight,
   HelpCircle, MapPin, Layout, AlertCircle, Crosshair, Trophy,
-  Award, Star, TrendingUp, DollarSign, Landmark, Cpu, Newspaper,
   Shuffle
 } from 'lucide-react'
 
@@ -23,15 +22,9 @@ import bananBakko      from './bangla/banan_bakko.json'
 import somarthokShobdo from './bangla/somarthok_shobdo.json'
 
 // ── General Knowledge topics ───────────────────────────────────
-import intlSummits      from './gk/international_summits.json'
-import nobel2025        from './gk/nobel_2025.json'
-import awardsHonors     from './gk/awards_honors.json'
-import globalIndices    from './gk/global_indices.json'
-import bdEconomy        from './gk/bangladesh_economy.json'
-import bdBudget         from './gk/bangladesh_budget.json'
-import sports           from './gk/sports.json'
-import scienceTech      from './gk/science_tech.json'
-import bdCurrent        from './gk/bangladesh_current.json'
+// Fresh GK approach (MCQ + Study notes, grouped by category, Bangla-first).
+// See GK_PATTERN.md for the data model. Categories added one at a time.
+import intlEconomicOrgs from './gk/intl_economic_orgs.json'
 
 // ── English Grammar topics ─────────────────────────────────────
 import partsOfSpeech   from './english/parts_of_speech.json'
@@ -80,16 +73,19 @@ export const ENGLISH_TOPICS = [
   { id: 'final_exam',        name: 'Final Exam',               shortName: 'Final Exam',      icon: Trophy,         color: '#f59e0b', questions: finalExam.questions       || [] },
 ]
 
+// Fresh start — GK categories added one at a time. Each GK category carries
+// MCQ questions (mcqs → questions, for QuizMode/exam) AND study notes
+// (study.groups → rendered by GkStudyMode). See GK_PATTERN.md.
 export const GK_TOPICS = [
-  { id: 'international_summits', name: 'আন্তর্জাতিক সম্মেলন',       shortName: 'আন্তর্জাতিক',  icon: Globe,       color: '#38bdf8', questions: intlSummits.questions   || [] },
-  { id: 'nobel_2025',            name: 'নোবেল পুরস্কার ২০২৫',        shortName: 'নোবেল',         icon: Award,       color: '#fbbf24', questions: nobel2025.questions     || [] },
-  { id: 'awards_honors',         name: 'পুরস্কার ও সম্মাননা',        shortName: 'পুরস্কার',      icon: Star,        color: '#f472b6', questions: awardsHonors.questions  || [] },
-  { id: 'global_indices',        name: 'বৈশ্বিক সূচক ও র‍্যাংকিং',   shortName: 'বৈশ্বিক সূচক', icon: TrendingUp,  color: '#34d399', questions: globalIndices.questions  || [] },
-  { id: 'bangladesh_economy',    name: 'বাংলাদেশ অর্থনীতি',          shortName: 'অর্থনীতি',      icon: DollarSign,  color: '#60a5fa', questions: bdEconomy.questions     || [] },
-  { id: 'bangladesh_budget',     name: 'বাজেট ২০২৫–২৬',             shortName: 'বাজেট',         icon: Landmark,    color: '#fb923c', questions: bdBudget.questions      || [] },
-  { id: 'sports',                name: 'ক্রীড়া জগত',                 shortName: 'ক্রীড়া',        icon: Trophy,      color: '#f59e0b', questions: sports.questions        || [] },
-  { id: 'science_tech',          name: 'বিজ্ঞান ও প্রযুক্তি',        shortName: 'বিজ্ঞান',       icon: Cpu,         color: '#a78bfa', questions: scienceTech.questions   || [] },
-  { id: 'bangladesh_current',    name: 'বাংলাদেশ সাম্প্রতিক',        shortName: 'সাম্প্রতিক',    icon: Newspaper,   color: '#4ade80', questions: bdCurrent.questions     || [] },
+  {
+    id: intlEconomicOrgs.id,
+    name: intlEconomicOrgs.name,
+    shortName: intlEconomicOrgs.shortName,
+    icon: Globe,
+    color: '#38bdf8',
+    questions: intlEconomicOrgs.mcqs || [],
+    study: intlEconomicOrgs.study || { groups: [] },
+  },
 ]
 
 // ── Bangla Sahitya topics ──────────────────────────────────────

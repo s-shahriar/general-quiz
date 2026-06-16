@@ -97,7 +97,11 @@ function TopicCard({ topic, onClick }) {
       <div className="tc-icon"><Icon size={20} /></div>
       <div className="tc-body">
         <span className="tc-name">{topic.name}</span>
-        <span className="tc-count">{topic.questions.length} questions</span>
+        <span className="tc-count">
+          {topic.study
+            ? `${topic.study.groups.length} টপিক${topic.questions.length ? ` · ${topic.questions.length} MCQ` : ''}`
+            : `${topic.questions.length} questions`}
+        </span>
       </div>
       <span className="tc-arrow">›</span>
     </button>
