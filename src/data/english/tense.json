@@ -8,7 +8,7 @@
         "a": "belong",
         "b": "run",
         "c": "jump",
-        "d": "break\n**"
+        "d": "break"
       },
       "correct_answer": "a",
       "correct_answer_text": "belong",
@@ -21,7 +21,7 @@
         "a": "he will come",
         "b": "he came",
         "c": "he comes",
-        "d": "he will have come\n**"
+        "d": "he will have come"
       },
       "correct_answer": "c",
       "correct_answer_text": "he comes",
@@ -34,7 +34,7 @@
         "a": "may get",
         "b": "may be get",
         "c": "will get",
-        "d": "get\n**"
+        "d": "get"
       },
       "correct_answer": "d",
       "correct_answer_text": "get",
@@ -47,7 +47,7 @@
         "a": "must buy",
         "b": "must have bought",
         "c": "must had bought",
-        "d": "must buying\n**"
+        "d": "must buying"
       },
       "correct_answer": "b",
       "correct_answer_text": "must have bought",
@@ -60,7 +60,7 @@
         "a": "have moved",
         "b": "had moved",
         "c": "moved",
-        "d": "would moved\n**"
+        "d": "would moved"
       },
       "correct_answer": "c",
       "correct_answer_text": "moved",
@@ -73,7 +73,7 @@
         "a": "felt",
         "b": "fallen",
         "c": "felled",
-        "d": "fled\n**"
+        "d": "fled"
       },
       "correct_answer": "c",
       "correct_answer_text": "felled",
@@ -86,7 +86,7 @@
         "a": "Run",
         "b": "Walk",
         "c": "Make",
-        "d": "Jog\n**"
+        "d": "Jog"
       },
       "correct_answer": "a",
       "correct_answer_text": "Run",
@@ -99,7 +99,7 @@
         "a": "have come",
         "b": "came",
         "c": "had come",
-        "d": "has come\n**"
+        "d": "has come"
       },
       "correct_answer": "b",
       "correct_answer_text": "came",
@@ -112,7 +112,7 @@
         "a": "knows",
         "b": "had known",
         "c": "knew",
-        "d": "known\n**"
+        "d": "known"
       },
       "correct_answer": "b",
       "correct_answer_text": "had known",
@@ -125,7 +125,7 @@
         "a": "did",
         "b": "had done",
         "c": "has done",
-        "d": "have done\n**"
+        "d": "have done"
       },
       "correct_answer": "b",
       "correct_answer_text": "had done",
@@ -138,7 +138,7 @@
         "a": "have heard",
         "b": "was hearing",
         "c": "heard",
-        "d": "listen\n**"
+        "d": "listen"
       },
       "correct_answer": "c",
       "correct_answer_text": "heard",
@@ -151,7 +151,7 @@
         "a": "Walking is a good exercise",
         "b": "He was reading a novel",
         "c": "You have had your meal",
-        "d": "They are gossiping\n**"
+        "d": "They are gossiping"
       },
       "correct_answer": "d",
       "correct_answer_text": "They are gossiping",
@@ -164,7 +164,7 @@
         "a": "pay",
         "b": "paid",
         "c": "pay for",
-        "d": "pay on\n**"
+        "d": "pay on"
       },
       "correct_answer": "c",
       "correct_answer_text": "pay for",
@@ -177,7 +177,7 @@
         "a": "became",
         "b": "becoming",
         "c": "has become",
-        "d": "will have become\n**"
+        "d": "will have become"
       },
       "correct_answer": "d",
       "correct_answer_text": "will have become",
@@ -190,7 +190,7 @@
         "a": "is",
         "b": "are",
         "c": "had been",
-        "d": "have been\n**"
+        "d": "have been"
       },
       "correct_answer": "c",
       "correct_answer_text": "had been",
@@ -203,7 +203,7 @@
         "a": "Go",
         "b": "Went",
         "c": "Had gone",
-        "d": "Have gone\n**"
+        "d": "Have gone"
       },
       "correct_answer": "b",
       "correct_answer_text": "Went",
@@ -216,7 +216,7 @@
         "a": "were waiting",
         "b": "waited",
         "c": "had been waiting",
-        "d": "None\n**"
+        "d": "None"
       },
       "correct_answer": "c",
       "correct_answer_text": "had been waiting",
@@ -229,7 +229,7 @@
         "a": "had finished",
         "b": "have finished",
         "c": "shall have finished",
-        "d": "will finish\n**"
+        "d": "will finish"
       },
       "correct_answer": "c",
       "correct_answer_text": "shall have finished",

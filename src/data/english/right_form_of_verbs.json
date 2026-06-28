@@ -8,11 +8,11 @@
         "a": "when the bell rang",
         "b": "then the bell rang",
         "c": "the bell rang",
-        "d": "after the bell rang\n**"
+        "d": "after the bell rang"
       },
       "correct_answer": "a",
       "correct_answer_text": "when the bell rang",
-      "explanation": "Scarcely/Hardly + had + V3 + **when** + Past Indefinite. → \"Hardly had we reached the school when the bell rang.\""
+      "explanation": "Scarcely/Hardly + had + V3 + when + Past Indefinite. → \"Hardly had we reached the school when the bell rang.\""
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
         "a": "was leaving",
         "b": "had left",
         "c": "left",
-        "d": "had been leaving\n**"
+        "d": "had been leaving"
       },
       "correct_answer": "c",
       "correct_answer_text": "left",
@@ -34,7 +34,7 @@
         "a": "will",
         "b": "will have",
         "c": "will have been",
-        "d": "have\n**"
+        "d": "have"
       },
       "correct_answer": "c",
       "correct_answer_text": "will have been",
@@ -47,7 +47,7 @@
         "a": "is having",
         "b": "has had",
         "c": "was having",
-        "d": "had\n**"
+        "d": "had"
       },
       "correct_answer": "b",
       "correct_answer_text": "has had",
@@ -60,7 +60,7 @@
         "a": "listened",
         "b": "listen",
         "c": "to listen",
-        "d": "listening\n**"
+        "d": "listening"
       },
       "correct_answer": "b",
       "correct_answer_text": "listen",
@@ -73,7 +73,7 @@
         "a": "is",
         "b": "Are",
         "c": "Been",
-        "d": "Is being\n**"
+        "d": "Is being"
       },
       "correct_answer": "a",
       "correct_answer_text": "is",
@@ -86,7 +86,7 @@
         "a": "cry",
         "b": "cry on",
         "c": "crying",
-        "d": "cried\n**"
+        "d": "cried"
       },
       "correct_answer": "a",
       "correct_answer_text": "cry",
@@ -99,7 +99,7 @@
         "a": "trial",
         "b": "emulation",
         "c": "exploration",
-        "d": "following\n**"
+        "d": "following"
       },
       "correct_answer": "d",
       "correct_answer_text": "following",
@@ -112,7 +112,7 @@
         "a": "being",
         "b": "was",
         "c": "had been",
-        "d": "has been\n**"
+        "d": "has been"
       },
       "correct_answer": "c",
       "correct_answer_text": "had been",
@@ -125,7 +125,7 @@
         "a": "knew",
         "b": "had known",
         "c": "know",
-        "d": "have known\n**"
+        "d": "have known"
       },
       "correct_answer": "b",
       "correct_answer_text": "had known",
@@ -138,7 +138,7 @@
         "a": "expelled",
         "b": "to expel",
         "c": "to be expelled",
-        "d": "expel\n**"
+        "d": "expel"
       },
       "correct_answer": "d",
       "correct_answer_text": "expel",
@@ -151,7 +151,7 @@
         "a": "repair",
         "b": "for repairing",
         "c": "to mend",
-        "d": "mend\n**"
+        "d": "mend"
       },
       "correct_answer": "c",
       "correct_answer_text": "to mend",
@@ -164,7 +164,7 @@
         "a": "Majority are present in this meeting.",
         "b": "Majority of them are poor.",
         "c": "Only a small minority of students is opposed to the scheme.",
-        "d": "Majority is present in this meeting.\n**"
+        "d": "Majority is present in this meeting."
       },
       "correct_answer": "a",
       "correct_answer_text": "Majority are present in this meeting.",
@@ -177,7 +177,7 @@
         "a": "had it mended",
         "b": "had it mend",
         "c": "did it mend",
-        "d": "had mended\n**"
+        "d": "had mended"
       },
       "correct_answer": "a",
       "correct_answer_text": "had it mended",
@@ -190,7 +190,7 @@
         "a": "work",
         "b": "working",
         "c": "worked",
-        "d": "had worked\n**"
+        "d": "had worked"
       },
       "correct_answer": "b",
       "correct_answer_text": "working",
@@ -203,7 +203,7 @@
         "a": "the ground got wet",
         "b": "the ground gets wet",
         "c": "the ground will become wet",
-        "d": "the ground will have been wet\n**"
+        "d": "the ground will have been wet"
       },
       "correct_answer": "b",
       "correct_answer_text": "the ground gets wet",
@@ -216,7 +216,7 @@
         "a": "Dipa comes",
         "b": "Dipa will come",
         "c": "Dipa is coming",
-        "d": "Dipa will be coming\n**"
+        "d": "Dipa will be coming"
       },
       "correct_answer": "a",
       "correct_answer_text": "Dipa comes",
@@ -229,7 +229,7 @@
         "a": "is",
         "b": "are",
         "c": "has",
-        "d": "is being\n**"
+        "d": "is being"
       },
       "correct_answer": "b",
       "correct_answer_text": "are",
@@ -242,7 +242,7 @@
         "a": "I wish I were a bird!",
         "b": "I wish I have been a bird.",
         "c": "I wish I was a bird.",
-        "d": "I wish I were a bird.\n**"
+        "d": "I wish I were a bird."
       },
       "correct_answer": "d",
       "correct_answer_text": "I wish I were a bird.",
@@ -255,7 +255,7 @@
         "a": "have had",
         "b": "had had",
         "c": "had",
-        "d": "had been\n**"
+        "d": "had been"
       },
       "correct_answer": "b",
       "correct_answer_text": "had had",
@@ -268,7 +268,7 @@
         "a": "had forgiven",
         "b": "were forgiven",
         "c": "had been forgiven",
-        "d": "forgave\n**"
+        "d": "forgave"
       },
       "correct_answer": "c",
       "correct_answer_text": "had been forgiven",
@@ -281,7 +281,7 @@
         "a": "was not known",
         "b": "were not known",
         "c": "had not known",
-        "d": "had not been known\n**"
+        "d": "had not been known"
       },
       "correct_answer": "d",
       "correct_answer_text": "had not been known",
@@ -294,7 +294,7 @@
         "a": "Conceal",
         "b": "Rectify",
         "c": "Promote",
-        "d": "Encourage\n**"
+        "d": "Encourage"
       },
       "correct_answer": "b",
       "correct_answer_text": "Rectify",

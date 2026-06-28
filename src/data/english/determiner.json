@@ -8,7 +8,7 @@
         "a": "the",
         "b": "a",
         "c": "an",
-        "d": "no article\n**"
+        "d": "no article"
       },
       "correct_answer": "a",
       "correct_answer_text": "the",
@@ -21,7 +21,7 @@
         "a": "the",
         "b": "no article",
         "c": "an",
-        "d": "a\n**"
+        "d": "a"
       },
       "correct_answer": "d",
       "correct_answer_text": "a",
@@ -34,7 +34,7 @@
         "a": "the",
         "b": "no article",
         "c": "a",
-        "d": "an\n**"
+        "d": "an"
       },
       "correct_answer": "d",
       "correct_answer_text": "an",
@@ -47,7 +47,7 @@
         "a": "a",
         "b": "the",
         "c": "an",
-        "d": "none\n**"
+        "d": "none"
       },
       "correct_answer": "a",
       "correct_answer_text": "a",
@@ -60,7 +60,7 @@
         "a": "an",
         "b": "the",
         "c": "a",
-        "d": "none\n**"
+        "d": "none"
       },
       "correct_answer": "c",
       "correct_answer_text": "a",
@@ -73,7 +73,7 @@
         "a": "media",
         "b": "datum",
         "c": "locus",
-        "d": "radius\n**"
+        "d": "radius"
       },
       "correct_answer": "a",
       "correct_answer_text": "media",
@@ -86,7 +86,7 @@
         "a": "Mrs.",
         "b": "Misters",
         "c": "Ms.",
-        "d": "Messrs\n**"
+        "d": "Messrs"
       },
       "correct_answer": "d",
       "correct_answer_text": "Messrs",
@@ -99,7 +99,7 @@
         "a": "fungi",
         "b": "agenda",
         "c": "formula",
-        "d": "data\n**"
+        "d": "data"
       },
       "correct_answer": "c",
       "correct_answer_text": "formula",
@@ -112,7 +112,7 @@
         "a": "lady",
         "b": "queen",
         "c": "countess",
-        "d": "heroine\n**"
+        "d": "heroine"
       },
       "correct_answer": "c",
       "correct_answer_text": "countess",
@@ -125,7 +125,7 @@
         "a": "calf",
         "b": "ewe",
         "c": "cow",
-        "d": "mare\n**"
+        "d": "mare"
       },
       "correct_answer": "c",
       "correct_answer_text": "cow",
@@ -138,7 +138,7 @@
         "a": "swainess",
         "b": "witch",
         "c": "nymph",
-        "d": "bitch\n**"
+        "d": "bitch"
       },
       "correct_answer": "c",
       "correct_answer_text": "nymph",
@@ -151,7 +151,7 @@
         "a": "stag",
         "b": "doe",
         "c": "roe",
-        "d": "vixen\n**"
+        "d": "vixen"
       },
       "correct_answer": "a",
       "correct_answer_text": "stag",
@@ -164,7 +164,7 @@
         "a": "lady doctor",
         "b": "doctress",
         "c": "nurse",
-        "d": "doctorex\n**"
+        "d": "doctorex"
       },
       "correct_answer": "a",
       "correct_answer_text": "lady doctor",
@@ -177,7 +177,7 @@
         "a": "professor",
         "b": "doctor",
         "c": "steward",
-        "d": "cook\n**"
+        "d": "cook"
       },
       "correct_answer": "c",
       "correct_answer_text": "steward",
@@ -190,7 +190,7 @@
         "a": "a",
         "b": "the",
         "c": "an",
-        "d": "Zero article\n**"
+        "d": "Zero article"
       },
       "correct_answer": "d",
       "correct_answer_text": "Zero article",

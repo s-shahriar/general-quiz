@@ -8,7 +8,7 @@
         "a": "are",
         "b": "is",
         "c": "was",
-        "d": "am\n**"
+        "d": "am"
       },
       "correct_answer": "a",
       "correct_answer_text": "are",
@@ -21,7 +21,7 @@
         "a": "effect, shock",
         "b": "effect, confusion",
         "c": "affects, surprise",
-        "d": "effects, assault\n**"
+        "d": "effects, assault"
       },
       "correct_answer": "d",
       "correct_answer_text": "effects, assault",
@@ -34,7 +34,7 @@
         "a": "has",
         "b": "are",
         "c": "is",
-        "d": "were\n**"
+        "d": "were"
       },
       "correct_answer": "c",
       "correct_answer_text": "is",
@@ -47,7 +47,7 @@
         "a": "are using",
         "b": "use",
         "c": "uses",
-        "d": "have used\n**"
+        "d": "have used"
       },
       "correct_answer": "b",
       "correct_answer_text": "use",
@@ -60,7 +60,7 @@
         "a": "Five thousands taka was spent in the function.",
         "b": "Five thousand taka were spent in the function.",
         "c": "Five thousands taka were spent in the function.",
-        "d": "Five thousand taka was spent in the function.\n**"
+        "d": "Five thousand taka was spent in the function."
       },
       "correct_answer": "d",
       "correct_answer_text": "Five thousand taka was spent in the function.",
@@ -73,7 +73,7 @@
         "a": "has",
         "b": "have",
         "c": "was",
-        "d": "has had\n**"
+        "d": "has had"
       },
       "correct_answer": "b",
       "correct_answer_text": "have",

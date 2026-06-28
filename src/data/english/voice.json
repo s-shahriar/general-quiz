@@ -8,7 +8,7 @@
         "a": "What I mean is that understood by you?",
         "b": "Was what I mean understood by you?",
         "c": "Is what I mean understood by you?",
-        "d": "What I mean is understood by you?\n**"
+        "d": "What I mean is understood by you?"
       },
       "correct_answer": "c",
       "correct_answer_text": "Is what I mean understood by you?",
@@ -21,7 +21,7 @@
         "a": "I will oblige the circumstances and go.",
         "b": "I shall be obliged to go by the circumstances.",
         "c": "Under the circumstances, I should go.",
-        "d": "I shall be obliged by the circumstances to go.\n**"
+        "d": "I shall be obliged by the circumstances to go."
       },
       "correct_answer": "c",
       "correct_answer_text": "Under the circumstances, I should go.",
@@ -34,7 +34,7 @@
         "a": "Your shoes are needed to clean properly.",
         "b": "You are needed to clean your shoes properly.",
         "c": "Your shoes need to be cleaned properly.",
-        "d": "Your shoes are needed by you to clean properly.\n**"
+        "d": "Your shoes are needed by you to clean properly."
       },
       "correct_answer": "c",
       "correct_answer_text": "Your shoes need to be cleaned properly.",
@@ -47,7 +47,7 @@
         "a": "These kittens can played with quite safely.",
         "b": "These kittens can play with you quite safely.",
         "c": "These kittens can be played with you quite safely.",
-        "d": "These kittens can be played with quite safely.\n**"
+        "d": "These kittens can be played with quite safely."
       },
       "correct_answer": "d",
       "correct_answer_text": "These kittens can be played with quite safely.",
@@ -60,7 +60,7 @@
         "a": "Wine should be opened about three hours before use.",
         "b": "Wine should be opened by you three hours before use.",
         "c": "Wine should be opened about three hours before you use it.",
-        "d": "Wine should be opened about three hours before it is used.\n**"
+        "d": "Wine should be opened about three hours before it is used."
       },
       "correct_answer": "d",
       "correct_answer_text": "Wine should be opened about three hours before it is used.",
@@ -73,7 +73,7 @@
         "a": "A letter was written to her father by Mona.",
         "b": "A letter has been written to her father by Mona.",
         "c": "A letter was being written by Mona to her father.",
-        "d": "A letter was written by Mona to her father.\n**"
+        "d": "A letter was written by Mona to her father."
       },
       "correct_answer": "c",
       "correct_answer_text": "A letter was being written by Mona to her father.",
@@ -86,7 +86,7 @@
         "a": "She was given a bull dog.",
         "b": "A bull dog was given to her.",
         "c": "She has been given a bull dog.",
-        "d": "She is being given a bull dog by someone.\n**"
+        "d": "She is being given a bull dog by someone."
       },
       "correct_answer": "b",
       "correct_answer_text": "A bull dog was given to her.",
@@ -99,7 +99,7 @@
         "a": "I was struck by a stone on the head.",
         "b": "My head was struck by a stone.",
         "c": "I had been struck by a stone on the head.",
-        "d": "I was struck on the head by a stone.\n**"
+        "d": "I was struck on the head by a stone."
       },
       "correct_answer": "d",
       "correct_answer_text": "I was struck on the head by a stone.",
@@ -112,7 +112,7 @@
         "a": "He was arrested on a charge of theft, but was released for lack of evidence.",
         "b": "The police arrested him on a charge of theft, but for lack of evidence he was released.",
         "c": "The police arrested him on a charge of theft, but for lack of evidence released him.",
-        "d": "None of these.\n**"
+        "d": "None of these."
       },
       "correct_answer": "c",
       "correct_answer_text": "The police arrested him on a charge of theft, but for lack of evidence released him.",
@@ -125,7 +125,7 @@
         "a": "He was seen conducting the rehearsal.",
         "b": "I saw the rehearsal to be conducted by him.",
         "c": "He was seen by me to conduct the rehearsal.",
-        "d": "I saw the rehearsal being conducted by him.\n**"
+        "d": "I saw the rehearsal being conducted by him."
       },
       "correct_answer": "d",
       "correct_answer_text": "I saw the rehearsal being conducted by him.",
@@ -138,7 +138,7 @@
         "a": "Have the broken box.",
         "b": "Break the box.",
         "c": "Get someone to break the box.",
-        "d": "They have broken the box.\n**"
+        "d": "They have broken the box."
       },
       "correct_answer": "c",
       "correct_answer_text": "Get someone to break the box.",
@@ -151,7 +151,7 @@
         "a": "Carthage was expected to be conquered by the Romans.",
         "b": "The Romans were expected to conquer Carthage.",
         "c": "It was expected by the Romans that they would conquer Carthage.",
-        "d": "The Romans expected to have conquered Carthage.\n**"
+        "d": "The Romans expected to have conquered Carthage."
       },
       "correct_answer": "c",
       "correct_answer_text": "It was expected by the Romans that they would conquer Carthage.",
@@ -164,7 +164,7 @@
         "a": "Every member of the academy got a prize.",
         "b": "They give a prize to each member of the academy.",
         "c": "They are giving a prize to each member of the academy.",
-        "d": "They gave a prize to each member of the academy.\n**"
+        "d": "They gave a prize to each member of the academy."
       },
       "correct_answer": "d",
       "correct_answer_text": "They gave a prize to each member of the academy.",
@@ -177,7 +177,7 @@
         "a": "The innocent commoners had been victimised by the thieves.",
         "b": "The innocent commoners will be victimised by the thieves.",
         "c": "The innocent commoners are victimised by the thieves.",
-        "d": "The innocent commoners were victimised by the thieves.\n**"
+        "d": "The innocent commoners were victimised by the thieves."
       },
       "correct_answer": "c",
       "correct_answer_text": "The innocent commoners are victimised by the thieves.",
@@ -190,7 +190,7 @@
         "a": "I was surprised to see he had been beaten black and blue.",
         "b": "It surprised me to see that he had been beaten black and blue.",
         "c": "It was surprising that he had been beaten black and blue.",
-        "d": "That he had been beaten black and blue was surprising.\n**"
+        "d": "That he had been beaten black and blue was surprising."
       },
       "correct_answer": "b",
       "correct_answer_text": "It surprised me to see that he had been beaten black and blue.",
@@ -203,7 +203,7 @@
         "a": "A collection of old manuscripts was shown to the visitors.",
         "b": "The hostess was showing the visitors a collection of old manuscripts.",
         "c": "The hostess showed the visitors a collection of old manuscripts.",
-        "d": "The hostess was showed a collection of old manuscripts.\n**"
+        "d": "The hostess was showed a collection of old manuscripts."
       },
       "correct_answer": "c",
       "correct_answer_text": "The hostess showed the visitors a collection of old manuscripts.",
@@ -216,7 +216,7 @@
         "a": "He congratulated his teacher on his brilliant success in the examination.",
         "b": "His teacher congratulated him for his brilliant success in the recent examination.",
         "c": "His teacher congratulated him on his brilliant success in the examination.",
-        "d": "His teacher congratulated him.\n**"
+        "d": "His teacher congratulated him."
       },
       "correct_answer": "b",
       "correct_answer_text": "His teacher congratulated him for his brilliant success in the recent examination.",

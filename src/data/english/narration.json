@@ -8,7 +8,7 @@
         "a": "Kiran asked me whether I saw the Cricket match on television the earlier night.",
         "b": "Kiran asked me whether I had seen the Cricket match on television the earlier night.",
         "c": "Kiran asked me did I see the Cricket match on television the last night.",
-        "d": "Kiran asked me whether I had seen the Cricket match on television the last night.\n**"
+        "d": "Kiran asked me whether I had seen the Cricket match on television the last night."
       },
       "correct_answer": "b",
       "correct_answer_text": "Kiran asked me whether I had seen the Cricket match on television the earlier night.",
@@ -21,7 +21,7 @@
         "a": "He requested the interviewer if he could please repeat the question.",
         "b": "He requested the interviewer to please repeat the question.",
         "c": "He requested the interviewer to repeat the question.",
-        "d": "He requested the interviewer if he could repeat the question.\n**"
+        "d": "He requested the interviewer if he could repeat the question."
       },
       "correct_answer": "c",
       "correct_answer_text": "He requested the interviewer to repeat the question.",
@@ -34,7 +34,7 @@
         "a": "The government has announced that taxes would be raised.",
         "b": "The government has announced that taxes would raised.",
         "c": "The government has announced that taxes will be raised.",
-        "d": "The government has announced taxes will be raised.\n**"
+        "d": "The government has announced taxes will be raised."
       },
       "correct_answer": "c",
       "correct_answer_text": "The government has announced that taxes will be raised.",
@@ -47,7 +47,7 @@
         "a": "I said to him, \"You are not working hard.\"",
         "b": "I told to him, \"You are not working hard.\"",
         "c": "I said, \"You are not working hard.\"",
-        "d": "I said to him, \"He is not working hard.\"\n**"
+        "d": "I said to him, \"He is not working hard.\""
       },
       "correct_answer": "a",
       "correct_answer_text": "I said to him, \"You are not working hard.\"",
@@ -60,7 +60,7 @@
         "a": "The doctor advised me to undergo a surgery the following week.",
         "b": "The doctor says that it is better I undergo a surgery the following week.",
         "c": "The doctor says that it was better I underwent a surgery the coming week.",
-        "d": "The doctor advises that it is better I underwent a surgery the following week.\n**"
+        "d": "The doctor advises that it is better I underwent a surgery the following week."
       },
       "correct_answer": "b",
       "correct_answer_text": "The doctor says that it is better I undergo a surgery the following week.",
@@ -73,7 +73,7 @@
         "a": "Sachin told that his grandfather has cited the Geeta every morning.",
         "b": "Sachin told that his grandfather recited the Geeta every morning.",
         "c": "Sachin said that his grandfather recites the Geeta every morning.",
-        "d": "Sachin said that his grandfather recited the Geeta every morning.\n**"
+        "d": "Sachin said that his grandfather recited the Geeta every morning."
       },
       "correct_answer": "c",
       "correct_answer_text": "Sachin said that his grandfather recites the Geeta every morning.",
@@ -86,7 +86,7 @@
         "a": "Suma asked him if she were to wait for him forever.",
         "b": "Suma said to him if she can wait for him forever.",
         "c": "Suma asked him if she was to wait for him forever.",
-        "d": "Suma asked him if she had to wait for him forever.\n**"
+        "d": "Suma asked him if she had to wait for him forever."
       },
       "correct_answer": "c",
       "correct_answer_text": "Suma asked him if she was to wait for him forever.",
@@ -99,7 +99,7 @@
         "a": "His father said that he did not pull the dog's tail.",
         "b": "His father forbade him not to pull the dog's tail.",
         "c": "His father told him to pull the dog's tail.",
-        "d": "His father told him not to pull the dog's tail.\n**"
+        "d": "His father told him not to pull the dog's tail."
       },
       "correct_answer": "d",
       "correct_answer_text": "His father told him not to pull the dog's tail.",
@@ -112,7 +112,7 @@
         "a": "Sriram asked me in surprise if I believed all this.",
         "b": "Sriram asked me in disbelief if I was believing all this.",
         "c": "Surprised, Sriram asked me whether I believed all that.",
-        "d": "Sriram was amazed that I believed all that.\n**"
+        "d": "Sriram was amazed that I believed all that."
       },
       "correct_answer": "c",
       "correct_answer_text": "Surprised, Sriram asked me whether I believed all that.",
@@ -125,7 +125,7 @@
         "a": "She yelled at one for some help.",
         "b": "She yelled for someone to help.",
         "c": "She yelled for someone to help her.",
-        "d": "She yelled at someone to help her.\n**"
+        "d": "She yelled at someone to help her."
       },
       "correct_answer": "c",
       "correct_answer_text": "She yelled for someone to help her.",
@@ -138,7 +138,7 @@
         "a": "He said that if he had the key with him, he could give him/her the solution.",
         "b": "He said if he could have the key with him, he would give him/her the solution.",
         "c": "He told that if he could have the key with him, he would give him/her the solution.",
-        "d": "He said that if he have had the key with him, he could have given him/her the solution.\n**"
+        "d": "He said that if he have had the key with him, he could have given him/her the solution."
       },
       "correct_answer": "a",
       "correct_answer_text": "He said that if he had the key with him, he could give him/her the solution.",
@@ -151,7 +151,7 @@
         "a": "The poor examinee prayed God to take pity on him.",
         "b": "The poor examinee, invoking God, implored him to take pity on him.",
         "c": "The poor examinee exclaimed that God take pity on him.",
-        "d": "The poor examinee asked God to take pity on him.\n**"
+        "d": "The poor examinee asked God to take pity on him."
       },
       "correct_answer": "b",
       "correct_answer_text": "The poor examinee, invoking God, implored him to take pity on him.",
@@ -164,7 +164,7 @@
         "a": "Gavaskar exclaimed with joy that Azhar had done well.",
         "b": "Gavaskar called Azhar and exclaimed that he had done well.",
         "c": "Gavaskar congratulated Azhar, saying that he had done well.",
-        "d": "Gavaskar praised Azhar for his having done well.\n**"
+        "d": "Gavaskar praised Azhar for his having done well."
       },
       "correct_answer": "c",
       "correct_answer_text": "Gavaskar congratulated Azhar, saying that he had done well.",
@@ -177,7 +177,7 @@
         "a": "Mary said to Robert that if he came, they would see him.",
         "b": "Mary told Robert that they shall see him if he came.",
         "c": "Mary told Robert that once he came, they would see him.",
-        "d": "Mary told Robert that they would see him if he might come.\n**"
+        "d": "Mary told Robert that they would see him if he might come."
       },
       "correct_answer": "d",
       "correct_answer_text": "Mary told Robert that they would see him if he might come.",
@@ -190,7 +190,7 @@
         "a": "The spectators called Ravi bravo because he had played well.",
         "b": "The spectators said that Ravi played well and applauded him.",
         "c": "The spectators encouraged Ravi saying that he played well.",
-        "d": "The spectators applauded Ravi, saying that he had played well.\n**"
+        "d": "The spectators applauded Ravi, saying that he had played well."
       },
       "correct_answer": "d",
       "correct_answer_text": "The spectators applauded Ravi, saying that he had played well.",
@@ -203,7 +203,7 @@
         "a": "He said that the mice will play when the cat is away.",
         "b": "He said that the mice would play when the cat was away.",
         "c": "He said that the mice would play when the cat would be away.",
-        "d": "He said that the mice shall play, when the cat is away.\n**"
+        "d": "He said that the mice shall play, when the cat is away."
       },
       "correct_answer": "b",
       "correct_answer_text": "He said that the mice would play when the cat was away.",
@@ -216,7 +216,7 @@
         "a": "Rajan exclaimed with wonder that he was a child again.",
         "b": "Rajan wondered that were he a child again.",
         "c": "Rajan strongly wished that he had been a child again.",
-        "d": "Rajan prayed that he were a child again.\n**"
+        "d": "Rajan prayed that he were a child again."
       },
       "correct_answer": "c",
       "correct_answer_text": "Rajan strongly wished that he had been a child again.",
@@ -229,7 +229,7 @@
         "a": "He told her not to read so fast.",
         "b": "He advised her don't read so fast.",
         "c": "He requested her not to read so fast.",
-        "d": "He ordered her not to read so fast.\n**"
+        "d": "He ordered her not to read so fast."
       },
       "correct_answer": "a",
       "correct_answer_text": "He told her not to read so fast.",
@@ -242,7 +242,7 @@
         "a": "The Manager asked what he could do for him.",
         "b": "The Manager wondered what he could do for him.",
         "c": "The Manager wanted to know what he could do for him.",
-        "d": "The Manager said that he couldn't do anything for him.\n**"
+        "d": "The Manager said that he couldn't do anything for him."
       },
       "correct_answer": "c",
       "correct_answer_text": "The Manager wanted to know what he could do for him.",
@@ -255,7 +255,7 @@
         "a": "Amit questioned him whether they were ever to be meet.",
         "b": "Amit wondered whether they are never to meet.",
         "c": "Amit said whether they were never to meet.",
-        "d": "Amit asked him whether they were never to meet.\n**"
+        "d": "Amit asked him whether they were never to meet."
       },
       "correct_answer": "d",
       "correct_answer_text": "Amit asked him whether they were never to meet.",
@@ -268,7 +268,7 @@
         "a": "I told the boy get out before you are driven out.",
         "b": "I told the boy to get out before he was driven out as he had no ticket.",
         "c": "I ordered the boy to get out before he was driven out.",
-        "d": "I told the boy that he had no ticket and that he should get out before he was driven out.\n**"
+        "d": "I told the boy that he had no ticket and that he should get out before he was driven out."
       },
       "correct_answer": "b",
       "correct_answer_text": "I told the boy to get out before he was driven out as he had no ticket.",
@@ -281,7 +281,7 @@
         "a": "Sachin told that his grandfather has cited the Geeta every morning.",
         "b": "Sachin told that his grandfather recited the Geeta every morning.",
         "c": "Sachin said that his grandfather recites the Geeta every morning.",
-        "d": "Sachin said that his grandfather recited the Geeta every morning.\n**"
+        "d": "Sachin said that his grandfather recited the Geeta every morning."
       },
       "correct_answer": "c",
       "correct_answer_text": "Sachin said that his grandfather recites the Geeta every morning.",

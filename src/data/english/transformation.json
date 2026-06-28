@@ -8,7 +8,7 @@
         "a": "Tom is more intelligent than John.",
         "b": "John is not less intelligent than Tom.",
         "c": "John is less intelligent than Tom.",
-        "d": "Tom is not less intelligent than John.\n**"
+        "d": "Tom is not less intelligent than John."
       },
       "correct_answer": "b",
       "correct_answer_text": "John is not less intelligent than Tom.",
@@ -21,7 +21,7 @@
         "a": "Do I made a mistake?",
         "b": "Don't I make a mistake?",
         "c": "Did I make a mistake?",
-        "d": "Didn't I make a mistake?\n**"
+        "d": "Didn't I make a mistake?"
       },
       "correct_answer": "d",
       "correct_answer_text": "Didn't I make a mistake?",
@@ -34,7 +34,7 @@
         "a": "It is an excellent idea.",
         "b": "It is a very excellent idea.",
         "c": "It is more excellent idea.",
-        "d": "It is a very good idea.\n**"
+        "d": "It is a very good idea."
       },
       "correct_answer": "b",
       "correct_answer_text": "It is a very excellent idea.",
@@ -47,7 +47,7 @@
         "a": "Stand here so that you can die",
         "b": "Stand here only to die",
         "c": "Without standing here you will die.",
-        "d": "As you stand here you will die\n**"
+        "d": "As you stand here you will die"
       },
       "correct_answer": "b",
       "correct_answer_text": "Stand here only to die",
@@ -60,7 +60,7 @@
         "a": "Bushra is shorter than Neela",
         "b": "Bushra is not taller than Neela.",
         "c": "Neela is not shorter than Bushra.",
-        "d": "Bushra is not so tall as Neela.\n**"
+        "d": "Bushra is not so tall as Neela."
       },
       "correct_answer": "d",
       "correct_answer_text": "Bushra is not so tall as Neela.",
@@ -73,7 +73,7 @@
         "a": "He cannot but doing this.",
         "b": "He cannot help do this.",
         "c": "He must not, but do this.",
-        "d": "He cannot help doing this.\n**"
+        "d": "He cannot help doing this."
       },
       "correct_answer": "d",
       "correct_answer_text": "He cannot help doing this.",
@@ -86,7 +86,7 @@
         "a": "The house which we live suits us.",
         "b": "The house is suitable where we live.",
         "c": "The house in which we live is suitable.",
-        "d": "The house in which we live at present suits us.\n**"
+        "d": "The house in which we live at present suits us."
       },
       "correct_answer": "d",
       "correct_answer_text": "The house in which we live at present suits us.",
@@ -99,7 +99,7 @@
         "a": "His father has died ten years ago.",
         "b": "His father died since ten years ago.",
         "c": "His father has died for ten years.",
-        "d": "His father died ten years ago.\n**"
+        "d": "His father died ten years ago."
       },
       "correct_answer": "d",
       "correct_answer_text": "His father died ten years ago.",
@@ -112,7 +112,7 @@
         "a": "Honesty is not as much as it",
         "b": "Honesty are not as much as it",
         "c": "Honesty is as much as it",
-        "d": "Honesty is less much as it\n**"
+        "d": "Honesty is less much as it"
       },
       "correct_answer": "a",
       "correct_answer_text": "Honesty is not as much as it",
@@ -125,7 +125,7 @@
         "a": "Tom is more disciplined than Joseph.",
         "b": "Joseph is not less disciplined than Tom.",
         "c": "Joseph is less disciplined than Tom.",
-        "d": "Tom is not less disciplined than Joseph.\n**"
+        "d": "Tom is not less disciplined than Joseph."
       },
       "correct_answer": "b",
       "correct_answer_text": "Joseph is not less disciplined than Tom.",
@@ -138,7 +138,7 @@
         "a": "You cannot be submissive to the Almighty.",
         "b": "You cannot but being submissive to the Almighty.",
         "c": "You cannot but submissive to the Almighty.",
-        "d": "You cannot help being submissive to the Almighty.\n**"
+        "d": "You cannot help being submissive to the Almighty."
       },
       "correct_answer": "d",
       "correct_answer_text": "You cannot help being submissive to the Almighty.",

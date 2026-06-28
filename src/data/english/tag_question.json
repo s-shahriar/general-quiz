@@ -8,7 +8,7 @@
         "a": "shouldn't they",
         "b": "shouldn't one",
         "c": "should one",
-        "d": "shouldn't he\n**"
+        "d": "shouldn't he"
       },
       "correct_answer": "b",
       "correct_answer_text": "shouldn't one",
@@ -21,7 +21,7 @@
         "a": "didn't he",
         "b": "hadn't he",
         "c": "wouldn't he",
-        "d": "shouldn't he\n**"
+        "d": "shouldn't he"
       },
       "correct_answer": "b",
       "correct_answer_text": "hadn't he",
@@ -34,7 +34,7 @@
         "a": "didn't he",
         "b": "usedn't he",
         "c": "hadn't he",
-        "d": "both a & b\n**"
+        "d": "both a & b"
       },
       "correct_answer": "d",
       "correct_answer_text": "both a & b",
@@ -47,7 +47,7 @@
         "a": "mustn't you",
         "b": "needn't you",
         "c": "don't you",
-        "d": "won't you\n**"
+        "d": "won't you"
       },
       "correct_answer": "b",
       "correct_answer_text": "needn't you",
