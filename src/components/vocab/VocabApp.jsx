@@ -15,7 +15,7 @@ export default function VocabApp() {
   return (
     <Routes>
       <Route index element={<VocabHomeWrapper />} />
-      <Route path=":letterId" element={<VocabTopicRoutes />} />
+      <Route path=":letterId/*" element={<VocabTopicRoutes />} />
       <Route path="exam" element={<VocabExamConfig />} />
       <Route path="exam/run" element={<VocabExamRun />} />
       <Route path="nailed" element={<VocabNailed />} />
