@@ -2,35 +2,39 @@ import { ChevronLeft, Minus, Plus, Zap } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
-import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
+import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
 import { shuffle, validQ } from '../lib/utils'
 
 export default function ExamConfig() {
   const navigate = useNavigate()
   const { value: important } = useImportantContext()
+  // exam can pull from LiveMCQ, so load its (lazy) data when this screen opens
+  const lmReady = useLiveMcqReady(true)
 
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
   const [count, setCount]     = useState(10)
 
-  const allTopics = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
+  const allTopics = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS, ...LIVEMCQ_TOPICS]
   const filteredTopics = groupId === 'all' ? allTopics
     : groupId === 'bangla' ? BANGLA_TOPICS
     : groupId === 'english' ? ENGLISH_TOPICS
     : groupId === 'sahitya' ? BANGLA_SAHITYA_TOPICS
+    : groupId === 'livemcq' ? LIVEMCQ_TOPICS
     : GK_TOPICS
 
   const importantCount = useMemo(() =>
     allTopics.reduce((s, t) =>
       s + t.questions.filter((q, i) => validQ(q) && important.has(`${t.id}__${i}`)).length
     , 0)
-  , [important])
+  , [important, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
     if (topicId === 'all') return filteredTopics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return allTopics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, groupId, filteredTopics, importantCount])
+  }, [topicId, groupId, filteredTopics, importantCount, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
@@ -60,7 +64,7 @@ export default function ExamConfig() {
     const questions = shuffle(pool).slice(0, safeCount)
     const label = topicId === 'important' ? 'Important Questions'
       : topicId === 'all'
-        ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : groupId === 'sahitya' ? 'বাংলা সাহিত্য' : 'সাধারণ জ্ঞান')
+        ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : groupId === 'sahitya' ? 'বাংলা সাহিত্য' : groupId === 'livemcq' ? 'LiveMCQ' : 'সাধারণ জ্ঞান')
         : allTopics.find(t => t.id === topicId)?.name
     navigate('/exam/run', { state: { questions, label } })
   }
@@ -84,6 +88,7 @@ export default function ExamConfig() {
             <option value="english">English Grammar</option>
             <option value="gk">সাধারণ জ্ঞান</option>
             <option value="sahitya">বাংলা সাহিত্য</option>
+            <option value="livemcq">LiveMCQ</option>
           </select>
         </div>
 

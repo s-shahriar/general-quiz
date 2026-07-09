@@ -1,8 +1,9 @@
-import { ArrowUpRight, Lightbulb, Search, X } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, ChevronUp, Lightbulb, Search, X } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useDebounce from '../hooks/useDebounce.js'
 import Pagination from './shared/Pagination'
+import RichText from './shared/RichText'
 
 const PAGE_SIZE = 8
 
@@ -10,7 +11,7 @@ const PAGE_SIZE = 8
 //  - NFC so differently-encoded but identical text matches,
 //  - drop zero-width joiners/non-joiners (common in Bangla conjuncts),
 //  - strip punctuation (incl. Bangla dari/quotes), collapse whitespace.
-const ZERO_WIDTH = /[​-‍﻿]/g
+const ZERO_WIDTH = /[\u200B-\u200D\uFEFF]/g
 const PUNCT = /[?।!,.;:'"’‘“”()[\]{}<>—–\-_/\\|*•]+/g
 const normalize = (s) =>
   (s ?? '').toString().normalize('NFC').replace(ZERO_WIDTH, '').toLowerCase()
@@ -128,6 +129,9 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange, initia
 
 function ResultCard({ q, topic, onOpen }) {
   const Icon = topic.icon
+  // LiveMCQ explanations are long, so keep them folded by default in search.
+  const isLm = topic.id?.startsWith('lm_')
+  const [expanded, setExpanded] = useState(false)
   return (
     <div className="gs-card" style={{ '--c': topic.color }}>
       <button className="gs-card-topic" onClick={onOpen} title={`Open ${topic.name} in study mode`}>
@@ -136,21 +140,34 @@ function ResultCard({ q, topic, onOpen }) {
         <ArrowUpRight size={13} className="gs-card-open" />
       </button>
 
-      <p className="gs-card-q">{q.question}</p>
+      <RichText as="p" className="gs-card-q" html={q.question} />
 
       {q.correct_answer && q.options?.[q.correct_answer] && (
         <div className="gs-card-ans">
           <span className="gs-ans-key">{q.correct_answer.toUpperCase()}</span>
-          <span className="gs-ans-text">{q.options[q.correct_answer]}</span>
+          <RichText className="gs-ans-text" html={q.options[q.correct_answer]} />
         </div>
       )}
 
-      {q.explanation && (
+      {q.explanation && (isLm ? (
+        <>
+          <button className="gs-exp-toggle" onClick={() => setExpanded(v => !v)} style={{ '--c': topic.color }}>
+            <Lightbulb size={12} style={{ color: topic.color, flexShrink: 0 }} />
+            ব্যাখ্যা
+            {expanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+          </button>
+          {expanded && (
+            <div className="gs-card-exp gs-card-exp-open">
+              <RichText as="div" html={q.explanation} />
+            </div>
+          )}
+        </>
+      ) : (
         <div className="gs-card-exp">
           <Lightbulb size={12} style={{ color: topic.color, flexShrink: 0, marginTop: 1 }} />
-          <span>{q.explanation}</span>
+          <RichText as="div" html={q.explanation} />
         </div>
-      )}
+      ))}
     </div>
   )
 }

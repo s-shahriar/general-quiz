@@ -5,6 +5,7 @@ import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { duplicateQidsOf } from '../lib/questionIndex.js'
 import QuizOptions from './shared/QuizOptions'
+import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 
 export default function ExamMode({
@@ -90,7 +91,7 @@ export default function ExamMode({
       </div>
 
       <div className="quiz-card anim-slide">
-        <p className="quiz-question">{q.question}</p>
+        <RichText as="div" className="quiz-question" html={q.question} />
 
         <QuizOptions options={q.options} correctAnswer={q.correct_answer} selected={selected} revealed={revealed} accentColor={accent} onPick={pick} />
 
@@ -103,7 +104,7 @@ export default function ExamMode({
                 {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
               </span>
             </div>
-            <p className="explanation-text">{q.explanation}</p>
+            <RichText as="div" className="explanation-text" html={q.explanation} />
           </div>
         )}
 

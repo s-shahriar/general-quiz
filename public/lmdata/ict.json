@@ -1,0 +1,999 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "favorite_id": "150179193",
+      "question": "Which wireless broadband technology is associated with the IEEE 802.16 standard?",
+      "options": {
+        "a": "Wi-Fi",
+        "b": "Bluetooth",
+        "c": "Zigbee",
+        "d": "WiMAX"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "WiMAX",
+      "explanation": "<p>• <strong>IEEE 802.16 স্ট্যান্ডার্ড ওয়্যারলেস ব্রডব্যান্ড অ্যাক্সেস প্রযুক্তির সঙ্গে সম্পর্কিত; WiMAX এই স্ট্যান্ডার্ডভিত্তিক প্রযুক্তি হিসেবে পরিচিত।</strong></p>\r\n<p><strong>• WiMAX:</strong><br>- WiMAX-এর পূর্ণরূপ Worldwide Interoperability for Microwave Access.<br>- এটি বিস্তৃত এলাকায় তারবিহীন ব্রডব্যান্ড ইন্টারনেট সেবা দেওয়ার জন্য ব্যবহৃত যোগাযোগ প্রযুক্তি।<br>- IEEE 802.16 স্ট্যান্ডার্ড broadband wireless access বা WirelessMAN ব্যবস্থার air interface নির্ধারণ করে।<br>- WiMAX মূলত metropolitan area network পর্যায়ের বড় এলাকার সংযোগে ব্যবহৃত হতে পারে।<br>- Wi-Fi সাধারণত স্থানীয় ও তুলনামূলক ছোট এলাকার wireless LAN সংযোগে ব্যবহৃত হয়।<br>- Bluetooth কম দূরত্বে ডিভাইস-টু-ডিভাইস যোগাযোগের জন্য ব্যবহৃত হয়।<br>- Zigbee কম শক্তি খরচ করে স্বল্প দূরত্বে সেন্সর বা IoT ডিভাইসের যোগাযোগে ব্যবহৃত হয়।<br>- তাই IEEE 802.16, Wi-Fi বা Bluetooth নয়; WiMAX-সংশ্লিষ্ট ওয়্যারলেস ব্রডব্যান্ড প্রযুক্তির সঙ্গে বেশি সম্পর্কিত।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Wi-Fi:</strong> Wi-Fi সাধারণত IEEE 802.11 স্ট্যান্ডার্ডভিত্তিক wireless LAN প্রযুক্তি।<br>→ <strong>Bluetooth:</strong> Bluetooth স্বল্প দূরত্বের wireless personal area communication-এ ব্যবহৃত হয়।<br>→ <strong>Zigbee:</strong> Zigbee কম শক্তি খরচের sensor network ও IoT যোগাযোগে ব্যবহৃত হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) IEEE 802.16 Working Group [<a href=\"https://www.ieee802.org/16/\" target=\"_blank\" rel=\"noopener\">Link</a>];<br>২) IEEE Standards Association [<a href=\"https://standards.ieee.org/ieee/802.16/6996/\" target=\"_blank\" rel=\"noopener\">Link</a>];<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 2,
+      "favorite_id": "147983485",
+      "question": "Which memory is mainly used to keep frequently needed data close to the CPU?",
+      "options": {
+        "a": "Secondary memory",
+        "b": "Buffer memory",
+        "c": "Virtual memory",
+        "d": "Cache memory"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Cache memory",
+      "explanation": "<p>• <strong>Cache memory CPU-এর কাছাকাছি বারবার প্রয়োজন হতে পারে এমন ডেটা ও নির্দেশনা সাময়িকভাবে সংরক্ষণ করে।</strong></p>\r\n<p><strong>• Cache memory:</strong><br>- Cache memory হলো CPU ও প্রধান মেমোরির মাঝামাঝি ব্যবহৃত অত্যন্ত দ্রুতগতির মেমোরি।<br>- এটি সাধারণত ধারণক্ষমতায় ছোট, কিন্তু অ্যাকসেস টাইম কম হওয়ায় খুব দ্রুত ডেটা সরবরাহ করতে পারে।<br>- CPU কোনো ডেটা বা নির্দেশনা বারবার ব্যবহার করতে পারে—এমন তথ্য cache memory-তে রাখা হয়।<br>- কোনো নির্দেশনা প্রয়োজন হলে CPU প্রথমে cache memory পরীক্ষা করে। সেখানে না পেলে পরে প্রধান মেমোরিতে খোঁজ করে।<br>- এই ব্যবস্থার ফলে CPU-কে বারবার RAM-এ যেতে হয় না; ফলে প্রক্রিয়াকরণের গতি বাড়ে।<br>- Cache memory সাধারণত স্ট্যাটিক মেমোরি ধরনের দ্রুত মেমোরি হিসেবে ব্যবহৃত হয়।<br>- CPU-এর খুব কাছে অবস্থান ও দ্রুত অ্যাকসেস সুবিধার কারণে এটি কম্পিউটার পারফরম্যান্স বৃদ্ধিতে গুরুত্বপূর্ণ।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Virtual memory:</strong> RAM-এর ঘাটতি পূরণে সহায়ক মেমোরি কৌশল।<br>→ <strong>Buffer memory:</strong> ডেটা আদান-প্রদানের সময় সাময়িকভাবে ডেটা ধরে রাখতে ব্যবহৃত হয়।<br>→ <strong>Secondary memory:</strong> স্থায়ীভাবে বেশি ডেটা সংরক্ষণ করে।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Britannica;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 3,
+      "favorite_id": "147983466",
+      "question": "Which architecture is used in GPT to understand contextual relationships in language?",
+      "options": {
+        "a": "Transformer",
+        "b": "Recurrent Neural Network",
+        "c": "Convolutional Neural Network",
+        "d": "Long Short-Term Memory"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Transformer",
+      "explanation": "<p>• <strong>GPT ভাষার প্রসঙ্গভিত্তিক সম্পর্ক বিশ্লেষণের জন্য Transformer আর্কিটেকচার ব্যবহার করে।</strong></p>\r\n<p><strong>• GPT:</strong><br>- GPT-এর পূর্ণরূপ Generative Pre-trained Transformer.<br>- এটি এমন একটি ভাষা মডেল, যা মানুষের ভাষা বুঝে নতুন লেখা, উত্তর, সারাংশ, ব্যাখ্যা বা কোড তৈরি করতে পারে।<br>- Generative অংশটি ব্যবহারকারীর ইনপুট থেকে নতুন কনটেন্ট তৈরি করার ক্ষমতা বোঝায়।<br>- Pre-trained অংশটি বোঝায়, মডেলটি আগে বিপুল পরিমাণ ভাষাগত ডেটা থেকে শব্দ, বাক্যগঠন ও প্রসঙ্গের সম্পর্ক শিখেছে।<br>- Transformer হলো আধুনিক নিউরাল নেটওয়ার্ক আর্কিটেকচার, যা অ্যাটেনশন মেকানিজমের মাধ্যমে বাক্যের বিভিন্ন অংশের পারস্পরিক সম্পর্ক বিশ্লেষণ করে।<br>- এই কারণে GPT শুধু আলাদা শব্দ দেখে উত্তর দেয় না; বরং বাক্যের প্রসঙ্গ, অর্থ ও সম্পর্ক বিবেচনা করে কনটেন্ট তৈরি করে।<br>- চ্যাটজিপিটি হলো ওপেনএআই-এর তৈরি GPT-ভিত্তিক কথোপকথনমূলক AI সহকারী।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Recurrent Neural Network:</strong> ক্রমানুসারী ডেটা প্রক্রিয়াকরণে ব্যবহৃত পুরোনো ধরনের নিউরাল নেটওয়ার্ক আর্কিটেকচার।<br>→ <strong>Convolutional Neural Network:</strong> ছবি ও দৃশ্যমান প্যাটার্ন বিশ্লেষণে বেশি ব্যবহৃত আর্কিটেকচার।<br>→ <strong>Long Short-Term Memory:</strong> এটি RNN-এর উন্নত ধরন; দীর্ঘ ক্রমভিত্তিক তথ্য ধরে রাখতে ব্যবহার করা হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) OpenAI API Documentation;<br>২) OpenAI Help Center;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 4,
+      "favorite_id": "147975571",
+      "question": "Which OSI layer ensures reliable end-to-end communication?",
+      "options": {
+        "a": "Network",
+        "b": "Session",
+        "c": "Transport",
+        "d": "Application"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Transport",
+      "explanation": "<p>• OSI মডেলের Transport Layer নির্ভরযোগ্য end-to-end যোগাযোগ নিশ্চিত করে। এই স্তরটি প্রেরক ও প্রাপক ডিভাইসের মধ্যে ডেটা সঠিকভাবে ও নির্ভুলভাবে পৌঁছানো নিশ্চিত করে। এটি ডেটাকে ছোট ছোট সেগমেন্টে ভেঙে পাঠায় এবং গন্তব্যে সেগুলিকে সঠিক ক্রমে পুনর্গঠন করে। তাছাড়া, Transport Layer ত্রুটি সনাক্তকরণ, পুনঃপ্রেরণ (retransmission) এবং ফ্লো কন্ট্রোলের মতো গুরুত্বপূর্ণ কাজ করে, যাতে ডেটা হারিয়ে না যায় বা নষ্ট না হয়। TCP (Transmission Control Protocol) এই স্তরের একটি জনপ্রিয় প্রোটোকল, যা নির্ভরযোগ্য সংযোগ প্রদান করে। <strong>তাই, সঠিক উত্তর হলো – Transport Layer</strong> (গ), কারণ এটি সম্পূর্ণ ডেটা স্থানান্তর প্রক্রিয়ায় নির্ভরযোগ্যতা বজায় রাখে।</p>\r\n<p><strong>• OSI মডেলের ৭টি লেয়ার:</strong><br>Physical Layer – ডেটা বাইনারি সিগন্যাল হিসেবে ট্রান্সমিট করে।<br>Data Link Layer – MAC Address ও Frame Transmission পরিচালনা করে।<br>Network Layer – IP Addressing এবং প্যাকেট রাউটিং নিয়ন্ত্রণ করে।<br>Transport Layer – End-to-end Communication নিশ্চিত করে (TCP, UDP)।<br>Session Layer – সেশন কন্ট্রোল এবং ডাটা এক্সচেঞ্জ ব্যবস্থাপনা করে।<br>Presentation Layer – ডাটা এনক্রিপশন, ডিক্রিপশন ও কম্প্রেশন পরিচালনা করে।<br>Application Layer – ব্যবহারকারী ও নেটওয়ার্কের মধ্যে ইন্টারফেস তৈরি করে (HTTP, FTP, SMTP ইত্যাদি)।</p>\r\n<p>উৎস:<br>1. Computer &amp; ICT Cloud [Live Publications].<br>2. Cisco Learning Network. </p>"
+    },
+    {
+      "id": 5,
+      "favorite_id": "147975566",
+      "question": "Who are called crackers?",
+      "options": {
+        "a": "Illegal hackers",
+        "b": "Security experts",
+        "c": "Network administrators",
+        "d": "Software testers"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Illegal hackers",
+      "explanation": "<p><strong>• অবৈধভাবে হ্যাকিং করে যারা ডেটা চুরি বা ক্ষতি সাধন করে, তাদেরকে Cracker বলা হয়, এবং এরা সাধারণত Black Hat Hacker হিসেবে পরিচিত।</strong></p>\r\n<p><strong>• ক্রেকার (Cracker):</strong><br>- অবৈধভাবে হ্যাকিং কার্যক্রম পরিচালনাকারীদের ক্রেকার বলা হয়।<br>- ক্রেকাররা ইন্টারনেট ও অন্যান্য নেটওয়ার্ক ব্যবহার করে ডেটা চুরি বা নষ্ট করে।<br>- এদের কাছে বিভিন্ন টেকনিক থাকে, যার মাধ্যমে সফটওয়্যার সিস্টেমের দুর্বলতা শনাক্ত করে পাসওয়ার্ড সংগ্রহ করা হয়।<br>- ক্রেকারদেরকে সাধারণত Black Hat Hacker বলা হয়।</p>\r\n<p><strong>• হ্যাকারদের প্রকারভেদ:</strong><br>- হ্যাকার সাধারণত তিন প্রকার।</p>\r\n<p><strong>• হোয়াইট হ্যাট হ্যাকার (White Hat Hacker):</strong><br>- এরা কোনো অবৈধ কাজ করে না।<br>- নেটওয়ার্ক ও সিস্টেমের নিরাপত্তা বৃদ্ধি করার উদ্দেশ্যে হ্যাকিং করে।</p>\r\n<p><strong>• ব্ল্যাক হ্যাট হ্যাকার (Black Hat Hacker):</strong><br>- এরা অবৈধ হ্যাকিং করে।<br>- তথ্য চুরি, ডেটা নষ্ট করা ও সাইবার অপরাধে জড়িত থাকে।</p>\r\n<p><strong>• গ্রে হ্যাট হ্যাকার (Grey Hat Hacker):</strong><br>- এরা বৈধ ও অবৈধ উভয় ধরনের কাজ করতে পারে।<br>- নেটওয়ার্কের দুর্বলতা খুঁজে বের করে যথাযথ কর্তৃপক্ষকে জানায়, এবং দুর্বলতা ঠিক করার মাধ্যমে নেটওয়ার্ক সুরক্ষায় কাজ করে অর্থ উপার্জন করে।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>- Security experts → সিস্টেম ও নেটওয়ার্কের নিরাপত্তা নিশ্চিত করার জন্য কাজ করে।<br>- Network administrators → নেটওয়ার্ক পরিচালনা ও ব্যবস্থাপনার দায়িত্বে থাকে।<br>- Software testers → সফটওয়্যারের ত্রুটি শনাক্ত ও মান যাচাইয়ের কাজ করে।</p>\r\n<p>উৎস:<br>1. Computer &amp; ICT Cloud [Live Publications].<br>2. তথ্য ও যোগাযোগ প্রযুক্তি একাদশ - দ্বাদশ শ্রেণি, প্রকৌশলী মুজিবুর রহমান।</p>"
+    },
+    {
+      "id": 6,
+      "favorite_id": "147975520",
+      "question": "Which computer is recognized as the world’s first general-purpose electronic digital computer?",
+      "options": {
+        "a": "EDVAC",
+        "b": "ABACUS",
+        "c": "ENIAC",
+        "d": "EDSAC"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ENIAC",
+      "explanation": "<p><strong>• ENIAC (Electronic Numerical Integrator and Computer) হলো বিশ্বের প্রথম সাধারণ উদ্দেশ্যসম্পন্ন (General Purpose) পূর্ণাঙ্গ ইলেকট্রনিক ডিজিটাল কম্পিউটার। <br></strong>- এটি ১৯৪৬ সালে জে. প্রেসপার একার্ট (J. Presper Eckert) এবং জন মকলি (John Mauchly) কর্তৃক উদ্ভাবিত হয়। এটি ভ্যাকুয়াম টিউব প্রযুক্তি ব্যবহার করে তৈরি করা হয়েছিল এবং এর মাধ্যমেই কম্পিউটারের প্রথম প্রজন্ম (First Generation of Computers)-এর সূচনা হয়।</p>\r\n<p><strong>• ENIAC:</strong><br>- ১৯৪৬ সালে ড. জন মউসলি এবং তাঁর ছাত্র প্রেসপার একার্ট যৌথভাবে ENIAC নামক কম্পিউটারটি তৈরি করেছিলেন।<br>- এটিই হলো প্রথম প্রজন্মের ডিজিটাল কম্পিউটার।<br>- বিশ্বের সর্বপ্রথম ইলেকট্রনিক কম্পিউটার ENIAC.</p>\r\n<p><strong>• UNIVAC:</strong><br>- ১৯৫১ সালে ENIAC এর নির্মাতারা UNIVAC কম্পিউটারের নির্মাণকাজ শেষ করেন।<br>- ইউনিভাকই ছিল সর্বপ্রথম বাণিজ্যিক ভিত্তিতে তৈরি ইলেকট্রনিক কম্পিউটার এবং এ যন্ত্রেই সর্বপ্রথম চুম্বকীয় ফিতা ব্যবহার করা হয়েছিল।</p>\r\n<p><strong>• EDVAC:</strong><br>- EDVAC কম্পিউটারে সংরক্ষিত প্রোগ্রাম নির্বাহের কিছু সুবিধা ছিল।</p>\r\n<p><strong>• EDSAC:</strong><br>- EDSAC কম্পিউটারই প্রথম সংরক্ষিত প্রোগ্রাম বিশিষ্ট ইলেকট্রনিক কম্পিউটার।<br>- অনেকেই একে প্রথম স্বয়ংক্রিয় ডিজিটাল কম্পিউটার মনে করেন।</p>\r\n<p><strong>• ABACUS:</strong><br>- এটি মূলত একটি প্রাচীন যান্ত্রিক গণনাকারী যন্ত্র, কোনো ইলেকট্রনিক ডিজিটাল কম্পিউটার নয়।</p>\r\n<p>সূত্র:<br>১। মৌলিক কম্পিউটার শিক্ষা, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>২। Computer &amp; ICT Cloud [Live Publications].</p>"
+    },
+    {
+      "id": 7,
+      "favorite_id": "147975502",
+      "question": "Which operating system is based on the Linux kernel?",
+      "options": {
+        "a": "Fedor",
+        "b": "Windows 1",
+        "c": "MS-DOS",
+        "d": "macOS Mojave"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Fedor",
+      "explanation": "<p><strong>• সঠিক উত্তর: ক) Fedora</strong></p>\r\n<p>• Fedora লিনাক্স কার্নেল (Linux Kernel)-এর ওপর ভিত্তি করে তৈরি একটি অপারেটিং সিস্টেম।<br>- ফেডোরা (Fedora) হলো লিনাক্স কার্নেলের ওপর ভিত্তি করে তৈরি একটি উন্মুক্ত বা ওপেন-সোর্স অপারেটিং সিস্টেম। এটি রেড হ্যাট (Red Hat) কোম্পানির পৃষ্ঠপোষকতায় নতুন নতুন সফটওয়্যার প্রযুক্তির প্রধান পরীক্ষামূলক প্ল্যাটফর্ম হিসেবে কাজ করে।</p>\r\n<p><strong>• Fedora:</strong><br>- Fedora ব্যক্তিগত কম্পিউটার, সার্ভার এবং সফটওয়্যার উন্নয়নের কাজে ব্যবহৃত একটি লিনাক্সভিত্তিক অপারেটিং সিস্টেম।<br>- এটি লিনাক্স আর্কিটেকচার ব্যবহার করে তৈরি একটি সম্পূর্ণ ফ্রি ও ওপেন-সোর্স ডিস্ট্রিবিউশন।<br>- এটিতে নতুন নতুন ওপেন-সোর্স সফটওয়্যার ও সিকিউরিটি ফিচার সবার আগে যুক্ত করা হয়।<br>- এটি Red Hat Enterprise Linux-এর ভিত্তি বা পরীক্ষামূলক উৎস হিসেবে গুরুত্বপূর্ণ ভূমিকা রাখে।<br>- এটি লিনাক্সের অন্যতম জনপ্রিয় গ্নোম (GNOME) ডেস্কটপ এনভায়রনমেন্টকে ডিফল্ট হিসেবে ব্যবহার করে।<br> <br><strong>অন্যান্য অপশন:</strong><br>- Windows 10: এটি মাইক্রোসফটের নিজস্ব বাণিজ্যিক ও ক্লোজড-সোর্স অপারেটিং সিস্টেম।<br>- MS-DOS: এটি মাইক্রোসফটের তৈরি একটি প্রাচীন টেক্সট-ভিত্তিক বা কমান্ড-লাইন ইন্টারফেস সিস্টেম।<br>- macOS Mojave: এটি অ্যাপল কম্পিউটারের জন্য তৈরি একটি বাণিজ্যিক ইউনিক্স-ভিত্তিক সিস্টেম।<br><br>উৎস:<br>১। Computer &amp; ICT Cloud [Live Publications].<br>২। ব্রিটানিকা।</p>"
+    },
+    {
+      "id": 8,
+      "favorite_id": "146924012",
+      "question": "What is the ASCII decimal code of uppercase B?",
+      "options": {
+        "a": "64",
+        "b": "67",
+        "c": "66",
+        "d": "65"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "66",
+      "explanation": "<p>• <strong>ASCII table অনুযায়ী uppercase B-এর decimal code 66.</strong></p>\r\n<p><strong>• ASCII:</strong><br>- ASCII-এর পূর্ণরূপ American Standard Code for Information Interchange.<br>- ASCII হলো character encoding system, যেখানে প্রতিটি character-এর জন্য নির্দিষ্ট numeric code নির্ধারিত থাকে।<br>- English uppercase letter-এর ক্ষেত্রে A-এর decimal code 65, B-এর 66 এবং C-এর 67.<br>- Computer data processing-এ character সংরক্ষণ ও আদান-প্রদানের জন্য encoding system ব্যবহৃত হয়।<br>- ASCII code ব্যবহার করে letter, digit, punctuation mark এবং control character প্রকাশ করা যায়।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>64:</strong> ASCII table-এ @ symbol-এর decimal code.<br>→ <strong>65:</strong> uppercase A-এর decimal code.<br>→ <strong>67:</strong> uppercase C-এর decimal code.</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) IBM;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 9,
+      "favorite_id": "146923991",
+      "question": "In Windows, which function key is commonly used to search for a file or folder?",
+      "options": {
+        "a": "F2",
+        "b": "F3",
+        "c": "F5",
+        "d": "F12"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "F3",
+      "explanation": "<p>• <strong>Windows-এ file বা folder search করার জন্য F3 function key ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• Function key:</strong><br>- Function key হলো keyboard-এর ওপরের সারিতে থাকা F1 থেকে F12 পর্যন্ত বিশেষ key.<br>- এসব key operating system ও application software-এ নির্দিষ্ট command দ্রুত সম্পাদনের জন্য ব্যবহৃত হয়।<br>- Function key-এর কাজ software অনুযায়ী ভিন্ন হতে পারে। Windows, browser ও Microsoft Word-এ একই function key কখনো ভিন্ন command সম্পাদন করতে পারে।<br>- Windows File Explorer-এ file বা folder search করার জন্য F3 key ব্যবহৃত হয়।</p>\r\n<p><strong>• F1-F12 function key-এর প্রচলিত কাজ:</strong><br>- <strong>F1:</strong> Help বা সহায়তা-সংক্রান্ত window/task pane খুলতে ব্যবহৃত হয়।<br>- <strong>F2:</strong> Windows-এ selected file বা folder rename করতে ব্যবহৃত হয়।<br>- <strong>F3:</strong> Windows/File Explorer-এ file বা folder search করতে ব্যবহৃত হয়।<br>- <strong>F4:</strong> Word-এ last command repeat করতে পারে; Alt+F4 active window বা application বন্ধ করে।<br>- <strong>F5:</strong> browser বা active window refresh/reload করতে ব্যবহৃত হয়। Word-এ Go To dialog box খুলতে পারে।<br>- <strong>F6:</strong> window, ribbon, task pane, address bar বা screen element-এর মধ্যে focus পরিবর্তনে ব্যবহৃত হয়।<br>- <strong>F7:</strong> Microsoft Word-এ spelling ও grammar check করার Editor task pane খুলতে ব্যবহৃত হয়।<br>- <strong>F8:</strong> Microsoft Word-এ selection extend করতে ব্যবহৃত হয়।<br>- <strong>F9:</strong> Microsoft Word-এ selected field update করতে ব্যবহৃত হয়।<br>- <strong>F10:</strong> Microsoft Word-এ KeyTips চালু বা বন্ধ করতে ব্যবহৃত হয়; Shift+F10 shortcut menu দেখায়।<br>- <strong>F11:</strong> Microsoft Word-এ next field-এ যাওয়ার জন্য ব্যবহৃত হয়; browser-এ full screen mode-এর সাথেও সম্পর্কিত।<br>- <strong>F12:</strong> Microsoft Word-এ Save As dialog box খুলতে ব্যবহৃত হয়।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>F2:</strong> selected file বা folder rename করতে ব্যবহৃত হয়।<br>→ <strong>F5:</strong> active window বা webpage refresh/reload করতে ব্যবহৃত হয়।<br>→ <strong>F12:</strong> Microsoft Word-এ Save As dialog box খুলতে ব্যবহৃত হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Microsoft Support [<a href=\"https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec\" target=\"_blank\" rel=\"noopener\">Link-1</a>, <a href=\"https://support.microsoft.com/en-us/accessibility/word/keyboard-shortcuts-in-word\" target=\"_blank\" rel=\"noopener\">Link-2</a>];<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 10,
+      "favorite_id": "146923977",
+      "question": "Which technology uses existing copper telephone lines to provide broadband internet service?",
+      "options": {
+        "a": "Dial-up",
+        "b": "DSL",
+        "c": "Bluetooth",
+        "d": "Wi-Fi"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "DSL",
+      "explanation": "<p>• <strong>DSL বিদ্যমান টেলিফোন লাইনের মাধ্যমে ব্রডব্যান্ড ইন্টারনেট সংযোগ প্রদান করে।</strong></p>\r\n<p><strong>• DSL:</strong><br>- DSL-এর পূর্ণরূপ Digital Subscriber Line.<br>- এটি কপার টেলিফোন লাইনের মাধ্যমে ডিজিটাল ডেটা আদান-প্রদানের একটি ব্রডব্যান্ড প্রযুক্তি।<br>- DSL ব্যবস্থায় একই টেলিফোন লাইনের মাধ্যমে voice call এবং data transmission চালানো যায়।<br>- সাধারণ dial-up connection-এর তুলনায় DSL দ্রুতগতির এবং স্থায়ী internet access সুবিধা দিতে পারে।<br>- ঘরোয়া ও প্রাতিষ্ঠানিক internet connection-এ DSL প্রযুক্তি ব্যবহৃত হয়।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Dial-up:</strong> টেলিফোন লাইন ব্যবহার করে internet connection দেয়, তবে এটি ধীরগতির narrowband পদ্ধতি।<br>→ <strong>Bluetooth:</strong> স্বল্প দূরত্বে wireless data exchange-এর জন্য ব্যবহৃত হয়।<br>→ <strong>Wi-Fi:</strong> local area-তে wireless network access দেয়।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Britannica;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 11,
+      "favorite_id": "146141764",
+      "question": "Which of the following is a valid compressed IPv6 address notation?",
+      "options": {
+        "a": "2001:db8::1",
+        "b": "2001::db8::1",
+        "c": "2001-db8-0-0-0-0-0-1",
+        "d": "192.168.1.1"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "2001:db8::1",
+      "explanation": "<p><strong>• 2001:db8::1 একটি valid compressed IPv6 notation, কারণ IPv6-এ পরপর zero block একবার :: দ্বারা সংক্ষিপ্ত করা যায়।</strong></p>\r\n<p><strong>• IPv6 notation:</strong><br>- IPv6 address 128-bit দীর্ঘ হয় এবং সাধারণত eight 16-bit block-এ লেখা হয়।<br>- প্রতিটি block hexadecimal digit দিয়ে প্রকাশ করা হয় এবং block-গুলো colon দ্বারা পৃথক থাকে।<br>- পূর্ণ আকারের IPv6 address অনেক বড় হওয়ায় shorthand বা compressed notation ব্যবহারের নিয়ম আছে।</p>\r\n<p><strong>• Compression rule:</strong><br>- এক বা একাধিক consecutive zero block সংক্ষিপ্ত করে :: লেখা যায়।<br>- তবে একটি address-এ এই :: notation একবারের বেশি ব্যবহার করা যায় না।<br>- এই কারণে 2001:db8::1 একটি সঠিক compressed form, কিন্তু 2001::db8::1 সঠিক নয়, কারণ সেখানে :: দুইবার ব্যবহৃত হয়েছে।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>2001::db8::1:</strong> এক address-এ :: একাধিকবার ব্যবহার করা যায় না।<br>→ <strong>2001-db8-0-0-0-0-0-1:</strong> IPv6-এ hyphen ব্যবহার করা হয় না।<br>→ <strong>192.168.1.1:</strong> এটি IPv4 dotted-decimal notation।</p>\r\n<p><strong>উৎস:</strong><br>১) IETF RFC 3986;<br>২) Cloudflare;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 12,
+      "favorite_id": "146141757",
+      "question": "Microsoft Office is generally classified as horizontal market software because it -",
+      "options": {
+        "a": "supports operational tasks widely used within a specific industry",
+        "b": "supports workflow tasks required in a specialized professional domain",
+        "c": "supports standard productivity tasks used across different sectors",
+        "d": "supports process tasks tailored for an organization-specific environment"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "supports standard productivity tasks used across different sectors",
+      "explanation": "<p><strong>• Microsoft Office-কে horizontal market software বলা হয়, কারণ এটি বিভিন্ন খাত ও প্রতিষ্ঠানে ব্যবহৃত সাধারণ productivity task সমর্থন করে।<br><br></strong><strong>• সফটওয়্যারের ব্যবহারভিত্তিক প্রকৃতি:</strong><br>- Application software সাধারণত ব্যবহারক্ষেত্র ও কাজের ধরন অনুযায়ী ভিন্ন ভিন্ন রূপে দেখা যায়।<br>- কিছু software নির্দিষ্ট একটি কাজ, প্রতিষ্ঠান বা শিল্পক্ষেত্রকে কেন্দ্র করে তৈরি হয়।<br>- আবার কিছু software এমন, যা বহু ধরনের প্রতিষ্ঠান ও ব্যবহারকারীর সাধারণ কাজ সম্পাদনে ব্যবহার করা যায়।<br>- এই দ্বিতীয় ধরনের software-ই horizontal market software ধারণার সঙ্গে সামঞ্জস্যপূর্ণ।</p>\r\n<p><strong>• Horizontal market software:</strong><br>- Horizontal market software এমন application software, যা বহু ধরনের organization, business, educational institution এবং office environment-এ সমভাবে ব্যবহারযোগ্য।<br>- এ ধরনের software কোনো নির্দিষ্ট শিল্পখাতের একক operational need-এর জন্য সীমাবদ্ধ থাকে না।<br>- Document writing, spreadsheet calculation, presentation preparation, report drafting, tabulation, office communication—এই ধরনের সাধারণ productivity কাজ এতে অন্তর্ভুক্ত থাকে।<br>- অর্থাৎ এর ব্যবহারক্ষেত্র বিস্তৃত, এবং একই software ভিন্ন ভিন্ন sector-এ কার্যকর থাকে।</p>\r\n<p><strong>• Microsoft Office:</strong><br>- Microsoft Office একটি বহুল ব্যবহৃত office productivity software suite।<br>- এর অন্তর্গত Word, Excel, PowerPoint ইত্যাদি software বিভিন্ন ধরনের সাধারণ দাপ্তরিক ও প্রাতিষ্ঠানিক কাজে ব্যবহৃত হয়।<br>- ব্যাংক, স্কুল, বিশ্ববিদ্যালয়, সরকারি দপ্তর, বেসরকারি অফিস, ব্যবসা প্রতিষ্ঠান—সবখানেই এই suite-এর ব্যবহার দেখা যায়।<br>- এই কারণেই এটি narrowly specialized software নয়; বরং broad-use productivity software হিসেবে horizontal market software-এর উদাহরণ।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 13,
+      "favorite_id": "146136233",
+      "question": "Which programming language came under Oracle’s stewardship through its acquisition of Sun Microsystems?",
+      "options": {
+        "a": "Python",
+        "b": "COBOL",
+        "c": "PHP",
+        "d": "Jav"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Jav",
+      "explanation": "<p><strong>• Sun Microsystems অধিগ্রহণের মাধ্যমে Oracle Java-এর stewardship লাভ করে।</strong></p>\r\n<p><strong>• Sun Microsystems acquisition:</strong><br>- Oracle Sun Microsystems অধিগ্রহণের মাধ্যমে কিছু গুরুত্বপূর্ণ software asset-এর ownership ও stewardship পায়।<br>- Oracle-এর official materials অনুযায়ী, এর মধ্যে Java বিশেষভাবে উল্লেখযোগ্য।<br>- একই acquisition-এর মাধ্যমে Solaris-এর মতো technology-ও Oracle-এর অধীনে আসে।</p>\r\n<p><strong>• Java-এর গুরুত্ব:</strong><br>- Java একটি বহুল ব্যবহৃত programming language এবং development platform.<br>- Enterprise software, server-side application, mobile environment এবং cloud-based development-এ Java দীর্ঘদিন ধরে গুরুত্বপূর্ণ ভূমিকা পালন করে আসছে।</p>\r\n<p><strong>• Oracle-এর জন্য তাৎপর্য:</strong><br>- Java stewardship পাওয়ার ফলে Oracle enterprise development ecosystem-এ আরও শক্তিশালী অবস্থান পায়।<br>- Database, middleware, enterprise application এবং platform-based technology—এই সবকিছুর সঙ্গে Java-এর ব্যবহারিক সম্পর্ক আছে।</p>\r\n<p><strong>উৎস:</strong><br>১) Oracle;<br>২) Britannica;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 14,
+      "favorite_id": "146136224",
+      "question": "Which statement best explains why worst-case search in a balanced BST is O(log n)?",
+      "options": {
+        "a": "Every node stores a hash value",
+        "b": "The tree height remains proportional to log n",
+        "c": "All nodes are scanned sequentially",
+        "d": "All of the above"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The tree height remains proportional to log n",
+      "explanation": "<p><strong>• Balanced BST-তে worst-case search O(log n) হয়, কারণ tree-এর height log n-এর সমানুপাতিক থাকে।</strong></p>\r\n<p><strong>• Balanced Binary Search Tree:</strong><br>- Balanced Binary Search Tree এমন একটি binary search tree, যেখানে tree একদিকে অতিরিক্ত লম্বা হয়ে যায় না।<br>- এই ভারসাম্যের কারণে root থেকে leaf পর্যন্ত দীর্ঘতম path তুলনামূলকভাবে ছোট থাকে।<br>- ফলে search operation-এ অপ্রয়োজনীয়ভাবে অনেক node অতিক্রম করতে হয় না।</p>\r\n<p><strong>• Height ও search-এর সম্পর্ক:</strong><br>- BST-তে কোনো element খোঁজার সময় root থেকে শুরু করে প্রতিটি ধাপে বাম subtree অথবা ডান subtree-এর একটিতে এগোনো হয়।<br>- তাই search-এর সর্বোচ্চ ধাপসংখ্যা tree-এর height-এর ওপর নির্ভর করে।<br>- Balanced BST-তে height সাধারণত log n order-এর হওয়ায় worst-case search-ও O(log n) হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) GeeksforGeeks,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 15,
+      "favorite_id": "144995546",
+      "question": "In Go (Golang), which mechanism is primarily used to pass data between concurrently running goroutines?",
+      "options": {
+        "a": "Struct",
+        "b": "Pointer",
+        "c": "Package",
+        "d": "Channel"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Channel",
+      "explanation": "<p><strong>• Go ভাষায় concurrently চলমান goroutine-গুলোর মধ্যে data আদান-প্রদানের প্রধান mechanism হলো channel.</strong></p>\r\n<p><strong>• Go language:</strong><br>- Go, যা Golang নামেও পরিচিত, একটি open-source programming language.<br>- এটি simplicity, speed এবং large-scale software development-এর জন্য পরিচিত।<br>- Go-এর একটি গুরুত্বপূর্ণ বৈশিষ্ট্য হলো concurrency support.</p>\r\n<p><strong>• Goroutine ও channel:</strong><br>- Go-তে goroutine হলো lightweight concurrent execution unit।<br>- একাধিক goroutine একই program-এর ভেতরে একসঙ্গে কাজ করতে পারে।<br>- এদের মধ্যে data আদান-প্রদানের জন্য channel ব্যবহৃত হয়।<br>- Channel-এর মাধ্যমে send ও receive operation সম্পন্ন করা যায়।</p>\r\n<p><strong>• Channel-এর ভূমিকা:</strong><br>- Channel concurrent অংশগুলোর মধ্যে synchronized communication-এর সুযোগ দেয়।<br>- এতে shared data সরাসরি manipulate না করেও information pass করা সম্ভব হয়।<br>- Go specification-এ channel-কে send, receive এবং buffered বা unbuffered communication-এর জন্য ব্যবহৃত type হিসেবে দেখানো হয়েছে।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Struct:</strong> এটি related data field একত্রে রাখার জন্য ব্যবহৃত হয়।<br>→ <strong>Pointer:</strong> এটি memory address-সংক্রান্ত ধারণা।<br>→ <strong>Package:</strong> এটি code grouping ও namespace management-এর জন্য ব্যবহৃত হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) The Go Programming Language Specification;<br>২) Britannica;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 16,
+      "favorite_id": "144995459",
+      "question": "Which shortcut key moves the cursor to the beginning of a document?",
+      "options": {
+        "a": "Home",
+        "b": "Ctrl + Home",
+        "c": "Alt + Home",
+        "d": "Alt + Start"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Ctrl + Home",
+      "explanation": "<p><strong>• Ctrl + Home shortcut ব্যবহার করে cursor-কে document-এর শুরুতে নেওয়া যায়।</strong></p>\r\n<p><strong>• Cursor movement:</strong><br>- Document editing-এর সময় cursor দ্রুত নির্দিষ্ট স্থানে নেওয়ার জন্য keyboard shortcut খুব গুরুত্বপূর্ণ।<br>- লম্বা document-এ শুরু, শেষ, line-এর শুরু বা line-এর শেষ—এই ধরনের অবস্থানে দ্রুত যেতে shortcut ব্যবহার করলে কাজের গতি বাড়ে।</p>\r\n<p><strong>• Ctrl + Home:</strong><br>- Ctrl + Home চাপলে cursor সরাসরি document-এর beginning-এ চলে যায়।<br>- এটি line-এর শুরুতে নয়, পুরো document-এর শুরুতে নেওয়ার জন্য ব্যবহৃত হয়।<br>- বড় report, question set, application বা note edit করার সময় এই shortcut খুব কার্যকর।</p>\r\n<p><strong>• সম্পর্কিত গুরুত্বপূর্ণ shortcut:</strong><br>- End : current line-এর শেষে যায়।<br>- Ctrl + End : document-এর শেষে যায়।<br>- Shift + Home : current cursor position থেকে line-এর শুরু পর্যন্ত text select করে।<br>- Ctrl + Shift + Home : current cursor position থেকে document-এর শুরু পর্যন্ত text select করে।<br>- Ctrl + F : document-এর মধ্যে search চালু করে।<br>- Ctrl + G : নির্দিষ্ট page বা location-এ যাওয়ার জন্য Go To command চালু করে।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Home:</strong> এটি current line-এর শুরুতে নেয়।<br>→ <strong>Alt + Home:</strong> এটি document-এর শুরুতে যাওয়ার standard shortcut নয়।<br>→ <strong>Alt + Start:</strong> এটি প্রচলিত standard keyboard shortcut নয়।</p>\r\n<p><strong>উৎস:</strong><br>১) Microsoft Support,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 17,
+      "favorite_id": "144995434",
+      "question": "Which file extension is used for a macro-enabled Microsoft Word document?",
+      "options": {
+        "a": ".docm",
+        "b": ".docx",
+        "c": ".pptx",
+        "d": ".xlsx"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": ".docm",
+      "explanation": "<p><strong>• .docm extension ব্যবহার করা হয় macro-enabled Microsoft Word document-এর জন্য।</strong></p>\r\n<p><strong>• Macro-enabled file:</strong><br>- Microsoft Office-এ কিছু file extension macro support করে, আর কিছু করে না।<br>- Extension-এর শেষে “m” থাকলে সাধারণত macro-enabled format বোঝায়।<br>- Word document-এর ক্ষেত্রে এই macro-enabled extension হলো .docm.</p>\r\n<p><strong>• .docm এবং .docx:</strong><br>- .docx হলো non-macro Word document format.<br>- .docm হলো macro-enabled Word document format.<br>- তাই macro support-এর presence file extension দিয়েই বোঝা যায়।<strong></strong></p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>.docx:</strong> এটি non-macro Word document.<br>→ <strong>.pptx:</strong> এটি PowerPoint presentation file.<br>→ <strong>.xlsx:</strong> এটি Excel workbook file.</p>\r\n<p><strong>উৎস:</strong><br>১) Microsoft Support,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 18,
+      "favorite_id": "144830835",
+      "question": "Which of the following is a database package program?",
+      "options": {
+        "a": "PowerPoint",
+        "b": "FoxPro",
+        "c": "Lotus 1-2-3",
+        "d": "WordPerfect"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "FoxPro",
+      "explanation": "<p><strong>• FoxPro একটি database package program.</strong></p>\r\n<p><strong>• Database package program:</strong><br>- Database package program হলো এমন application software, যার সাহায্যে তথ্য সুশৃঙ্খলভাবে সংরক্ষণ, সংশোধন, অনুসন্ধান, বাছাই এবং ব্যবস্থাপনা করা যায়।<br>- সাধারণত record, field, table, query এবং report-ভিত্তিক কাজ এই ধরনের software-এর মাধ্যমে সম্পন্ন হয়।<br>- কোনো প্রতিষ্ঠানের গ্রাহকতথ্য, কর্মচারী তালিকা, ফলাফল, হিসাবসংক্রান্ত তথ্য বা inventory data সংরক্ষণ ও ব্যবস্থাপনায় database package program গুরুত্বপূর্ণ ভূমিকা রাখে।<br>- dBase, FoxPro, Oracle, Informix, Access ইত্যাদি database package program এর উদাহরণ।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>→ <strong>PowerPoint:</strong> এটি presentation package program; slide তৈরির কাজে ব্যবহৃত হয়।<br>→ <strong>Lotus 1-2-3:</strong> এটি spreadsheet package program; tabulation ও calculation-এর জন্য ব্যবহৃত হয়।<br>→ <strong>WordPerfect:</strong> এটি word processing package program; document writing ও editing-এর জন্য ব্যবহৃত হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 19,
+      "favorite_id": "144830757",
+      "question": "Prolog is best identified as a -",
+      "options": {
+        "a": "logic programming language",
+        "b": "procedural programming language",
+        "c": "functional programming language",
+        "d": "object-oriented programming language"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "logic programming language",
+      "explanation": "<p><strong>• Prolog-কে logic programming language হিসেবে চিহ্নিত করা হয়।</strong></p>\r\n<p><strong>• Programming language-এর প্রকৃতি:</strong><br>- Programming language-কে অনেক সময় তার কাজের ধরন, program control-এর ধরণ এবং problem-solving approach-এর ভিত্তিতে শ্রেণিবদ্ধ করা হয়।<br>- সব ভাষা একইভাবে instruction দেয় না; কিছু ভাষা ধাপে ধাপে কাজ নির্ধারণ করে, কিছু ভাষা function-কেন্দ্রিক হয়, আবার কিছু ভাষা logic ও rule-এর ভিত্তিতে সিদ্ধান্তে পৌঁছায়।<br>- এই শ্রেণিবিভাগের মধ্যেই Prolog-এর অবস্থান নির্ধারিত হয়।</p>\r\n<p><strong>• Prolog:</strong><br>- Prolog শব্দটি Programming in Logic ধারণার সঙ্গে সম্পর্কিত।<br>- এই ভাষায় program সাধারণত fact, rule এবং query-এর মাধ্যমে গঠিত হয়।<br>- অর্থাৎ এখানে শুধু কীভাবে কাজ করতে হবে তা ধাপে ধাপে লেখার বদলে কোন তথ্য সত্য এবং কোন নিয়মের ভিত্তিতে সিদ্ধান্ত বের হবে—তা নির্ধারণ করা হয়।<br>- এই কারণেই Prolog-কে logic programming language বলা হয়।</p>\r\n<p><strong>• ব্যবহারিক তাৎপর্য:</strong><br>- Artificial Intelligence, knowledge representation, inference এবং problem-solving ধরনের কাজে Prolog ঐতিহাসিকভাবে গুরুত্বপূর্ণ।<br>- বিশেষ করে rule-based reasoning এবং symbolic processing-এর ক্ষেত্রে এই ভাষার ব্যবহার উল্লেখযোগ্য।<br>- তাই AI-সম্পর্কিত programming language আলোচনা হলে Prolog একটি পরিচিত নাম।</p>\r\n<p><strong>• কাছাকাছি language type থেকে পার্থক্য:</strong><br>- Procedural programming language-এ সাধারণত step-by-step instruction ও control flow-এর ওপর জোর দেওয়া হয়।<br>- Functional programming language-এ computation মূলত function evaluation-কেন্দ্রিক হয়।<br>- Object-oriented programming language-এ object, class, encapsulation, inheritance ইত্যাদি ধারণা গুরুত্বপূর্ণ।<br>- কিন্তু Prolog-এর কেন্দ্রীয় ভিত্তি হলো logic, relation এবং rule-based inference.</p>\r\n<p><strong>উৎস:</strong><br>১) তথ্য ও যোগাযোগ প্রযুক্তি, একাদশ-দ্বাদশ শ্রেণি;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 20,
+      "favorite_id": "144830595",
+      "question": "In Excel, which function counts non-empty cells in a range?",
+      "options": {
+        "a": "COUNT",
+        "b": "COUNTA",
+        "c": "COUNTBLANK",
+        "d": "COUNTIF"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "COUNTA",
+      "explanation": "<p><strong>• COUNTA function একটি range-এর মধ্যে খালি নয় এমন cell-এর সংখ্যা গণনা করে।</strong></p>\r\n<p><strong>• Function-এর ধারণা:</strong><br>- MS Excel-এ function হলো পূর্বনির্ধারিত formula, যা নির্দিষ্ট ধরনের হিসাব বা বিশ্লেষণ দ্রুত সম্পাদন করে।<br>- Spreadsheet-এ data analysis, counting, summation, average, maximum-minimum value নির্ণয় ইত্যাদির জন্য বিভিন্ন function ব্যবহৃত হয়।<br>- COUNT family-এর function-গুলো বিশেষভাবে cell গণনার কাজে ব্যবহৃত হয়, তবে এদের কাজ এক নয়।</p>\r\n<p><strong>• COUNTA Function:</strong><br>- COUNTA function এমন সব cell গণনা করে, যেগুলো empty নয়।<br>- অর্থাৎ, কোনো cell-এ number, text, date, logical value, error value বা অন্য কোনো data থাকলে COUNTA সেটিকে গণনায় অন্তর্ভুক্ত করে।<br>- কিন্তু সম্পূর্ণ খালি cell COUNTA গণনা করে না।<br>- তাই mixed data range-এ কতগুলো cell-এ data আছে, তা বের করতে COUNTA বিশেষভাবে উপযোগী।</p>\r\n<p><strong>• ব্যবহারিক গুরুত্ব:</strong><br>- কোনো worksheet-এ মোট কতটি entry আছে তা নির্ণয়ে COUNTA ব্যবহৃত হয়।<br>- Attendance sheet, mark sheet, inventory list, survey response table বা form data বিশ্লেষণে এটি গুরুত্বপূর্ণ।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>COUNT:</strong> এটি শুধু numeric cell গণনা করে।<br>→ <strong>COUNTBLANK:</strong> এটি খালি cell-এর সংখ্যা গণনা করে।<br>→ <strong>COUNTIF:</strong> এটি নির্দিষ্ট শর্ত পূরণকারী cell গণনা করে।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Microsoft Support;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 21,
+      "favorite_id": "144830552",
+      "question": "Which DNS record maps one domain name to another canonical domain name?",
+      "options": {
+        "a": "A Record",
+        "b": "MX Record",
+        "c": "CNAME Record",
+        "d": "AAAA Record"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "CNAME Record",
+      "explanation": "<p><strong>• CNAME Record একটি domain name-কে অন্য একটি canonical domain name-এর সঙ্গে যুক্ত করে।</strong></p>\r\n<p><strong>• DNS record:</strong><br>- DNS বা Domain Name System হলো এমন একটি ব্যবস্থা, যার মাধ্যমে domain name-সংক্রান্ত বিভিন্ন তথ্য সংরক্ষণ ও ব্যবস্থাপনা করা হয়।<br>- প্রতিটি DNS record-এর কাজ আলাদা।<br>- কোনো record সরাসরি IP address নির্দেশ করে, আবার কোনো record domain alias বা mail routing নির্দেশ করে।</p>\r\n<p><strong>• CNAME Record:</strong><br>- CNAME-এর পূর্ণরূপ Canonical Name Record।<br>- এটি একটি domain name-কে অন্য একটি domain name-এর সঙ্গে যুক্ত করে।<br>- অর্থাৎ, এটি সরাসরি IP address নির্দেশ করে না; বরং একটি alias name-কে মূল domain name-এর দিকে নির্দেশ করে।</p>\r\n<p><strong>• ব্যবহারিক তাৎপর্য:</strong><br>- একই service-এর জন্য একাধিক domain name ব্যবহৃত হলে CNAME record উপকারী হয়।<br>- এর সাহায্যে একটি domain name-কে অন্য মূল domain-এর alias হিসেবে নির্ধারণ করা যায়।<br>- এতে DNS management তুলনামূলকভাবে সহজ হয়।</p>\r\n<p><strong>• অন্যান্য record-এর পার্থক্য:</strong><br>- A Record একটি domain name-কে IPv4 address-এর সঙ্গে যুক্ত করে।<br>- AAAA Record একটি domain name-কে IPv6 address-এর সঙ্গে যুক্ত করে।<br>- MX Record কোনো domain-এর mail server নির্দেশ করে।</p>\r\n<p><strong>উৎস:</strong> Microsoft.</p>"
+    },
+    {
+      "id": 22,
+      "favorite_id": "144828510",
+      "question": "In modern transformer-based AI language models, which concept mainly helps determine the relative importance of input tokens?",
+      "options": {
+        "a": "Backpropagation",
+        "b": "Quantization",
+        "c": "Self-attention",
+        "d": "Tokenization"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Self-attention",
+      "explanation": "<p><strong>• আধুনিক AI language model-এ self-attention এমন একটি ধারণা, যার মাধ্যমে model input-এর বিভিন্ন শব্দের পারস্পরিক সম্পর্ক ও গুরুত্ব নির্ধারণ করতে পারে।</strong></p>\r\n<p><strong>• Transformer model:</strong><br>- আধুনিক বড় language model-গুলোর একটি গুরুত্বপূর্ণ ভিত্তি হলো transformer architecture।<br>- এই architecture-এর কেন্দ্রীয় ধারণাগুলোর একটি হলো self-attention।<br>- এর মাধ্যমে model sentence-এর এক অংশের সঙ্গে অন্য অংশের সম্পর্ক বিবেচনা করতে পারে।</p>\r\n<p><strong>• Self-attention:</strong><br>- Self-attention input-এর প্রতিটি শব্দকে অন্য শব্দগুলোর সঙ্গে সম্পর্কিতভাবে বিবেচনা করে।<br>- কোন শব্দটি বেশি গুরুত্বপূর্ণ, কোন শব্দটির সঙ্গে কোন শব্দের সম্পর্ক বেশি—এটি নির্ধারণে self-attention সাহায্য করে।<br>- ফলে model শুধু আলাদা আলাদা শব্দ দেখে না; বরং পুরো বাক্যের ভেতরের সম্পর্কও বোঝার চেষ্টা করে।</p>\r\n<p><strong>• গুরুত্ব:</strong><br>- ভাষা বোঝার ক্ষেত্রে অনেক সময় দূরের শব্দের সঙ্গেও অর্থগত সম্পর্ক থাকে।<br>- Self-attention সেই সম্পর্ক ধরতে সাহায্য করে।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>→ <strong>Backpropagation:</strong> এটি model training-এর সময় error কমানোর পদ্ধতি।<br>→ <strong>Tokenization:</strong> এটি text-কে ছোট অংশ বা token-এ ভাঙার প্রক্রিয়া।<br>→ <strong>Quantization:</strong> এটি model-কে কম memory-তে চালানোর জন্য মানসংকোচনের কৌশল।</p>\r\n<p><strong>উৎস:</strong><br>১) Britannica;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 23,
+      "favorite_id": "144828424",
+      "question": "Which DNS record is used for mail server routing?",
+      "options": {
+        "a": "A Record",
+        "b": "MX Record",
+        "c": "CNAME Record",
+        "d": "TXT Record"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "MX Record",
+      "explanation": "<p><strong>• MX Record হলো সেই DNS record, যা e-mail server routing-এর জন্য ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• DNS record:</strong><br>- DNS বা Domain Name System ডোমেইন-সম্পর্কিত বিভিন্ন ধরনের তথ্য সংরক্ষণ করে।<br>- এই তথ্যগুলো আলাদা আলাদা record-এর মাধ্যমে প্রকাশ করা হয়।<br>- প্রতিটি record-এর কাজ আলাদা।</p>\r\n<p><strong>• MX Record:</strong><br>- MX-এর পূর্ণরূপ Mail Exchange.<br>- এটি নির্ধারণ করে, কোনো ডোমেইনের e-mail কোন mail server-এ যাবে।<br>- তাই ই-মেইল আদান-প্রদানের ক্ষেত্রে MX Record অত্যন্ত গুরুত্বপূর্ণ।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>A Record:</strong> এটি সাধারণত IPv4 address mapping-এর জন্য ব্যবহৃত হয়।<br>→ <strong>CNAME Record:</strong> এটি alias name নির্ধারণ করে।<br>→ <strong>TXT Record:</strong> এটি বর্ণনামূলক বা যাচাইকরণ-সংক্রান্ত তথ্য রাখার জন্য ব্যবহৃত হতে পারে।</p>\r\n<p><strong>উৎস:</strong><br>১) Microsoft;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 24,
+      "favorite_id": "144828396",
+      "question": "A phishing attack carried out through phone calls is called -",
+      "options": {
+        "a": "Spoofing",
+        "b": "Phoning",
+        "c": "Sniffing",
+        "d": "Vishing"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Vishing",
+      "explanation": "<p><strong>• Vishing হলো phone call বা voice-based phishing আক্রমণ।</strong></p>\r\n<p><strong>• Vishing:</strong><br>- Vishing শব্দটি Voice Phishing থেকে এসেছে।<br>- এতে প্রতারক মোবাইল ফোন, টেলিফোন বা ইন্টারনেটভিত্তিক কল ব্যবহার করে ব্যবহারকারীকে ধোঁকা দেয়।<br>- সাধারণত ব্যাংক কর্মকর্তা, সেবা প্রদানকারী প্রতিষ্ঠান বা বিশ্বস্ত সংস্থার প্রতিনিধি সেজে গোপন তথ্য নেওয়ার চেষ্টা করা হয়।</p>\r\n<p><strong>• কার্যপদ্ধতি:</strong><br>- আক্রমণকারী প্রথমে ভুক্তভোগীর বিশ্বাস অর্জন করে।<br>- এরপর account number, card number, PIN, OTP, password বা ব্যক্তিগত তথ্য চাইতে পারে।<br>- এই তথ্য সংগ্রহের মাধ্যমে আর্থিক প্রতারণা, পরিচয়চুরি বা অননুমোদিত লেনদেন সংঘটিত হতে পারে।</p>\r\n<p><strong>• Phishing-এর সঙ্গে সম্পর্ক:</strong><br>- Phishing সাধারণত প্রতারণামূলক উপায়ে sensitive information হাতিয়ে নেওয়ার কৌশল।<br>- E-mail বা message-এর মাধ্যমে হলে সেটি phishing নামে বেশি পরিচিত।<br>- কিন্তু একই ধরনের প্রতারণা voice call-এর মাধ্যমে হলে তাকে vishing বলা হয়।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Spoofing:</strong> এটি মিথ্যা পরিচয় বা ভুয়া তথ্য উপস্থাপনের মাধ্যমে প্রতারণার কৌশল।<br>→ <strong>Sniffing:</strong> এটি network traffic বা data packet গোপনে পর্যবেক্ষণের সঙ্গে সম্পর্কিত।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 25,
+      "favorite_id": "144828224",
+      "question": "Which Business Intelligence technology is mainly used for multidimensional analysis?",
+      "options": {
+        "a": "OLAP",
+        "b": "OLTP",
+        "c": "ETL",
+        "d": "Reporting"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "OLAP",
+      "explanation": "<p><strong>• OLAP হলো Business Intelligence-এ ব্যবহৃত এমন একটি বিশ্লেষণাত্মক ব্যবস্থা, যার মাধ্যমে বৃহৎ data-এর multidimensional analysis করা যায়।</strong></p>\r\n<p><strong>• OLAP:</strong><br>- OLAP-এর পূর্ণরূপ Online Analytical Processing.<br>- এটি বড় পরিমাণ business data বিশ্লেষণের জন্য ব্যবহৃত হয়।<br>- বিশেষভাবে multidimensional query ও analysis-এর ক্ষেত্রে এটি গুরুত্বপূর্ণ।</p>\r\n<p><strong>• Business Intelligence-এ ভূমিকা:</strong><br>- Business Intelligence-এর উদ্দেশ্য হলো data বিশ্লেষণ করে সিদ্ধান্তগ্রহণে সহায়তা করা।<br>- OLAP সেই বিশ্লেষণকে দ্রুত, সংগঠিত এবং বহু মাত্রায় সম্পন্ন করতে সাহায্য করে।<br>- IBM ও Microsoft—উভয় উৎসেই OLAP-কে BI-ভিত্তিক multidimensional analysis-এর technology হিসেবে দেখানো হয়েছে।</p>\r\n<p><strong>• ব্যবহারিক তাৎপর্য:</strong><br>- বিক্রয়, অঞ্চল, সময়, পণ্য বা বিভাগভিত্তিক তুলনামূলক বিশ্লেষণে এটি উপযোগী।<br>- জটিল analytic query দ্রুত চালানো যায়।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>OLTP:</strong> এটি মূলত দৈনন্দিন transaction processing-এর সঙ্গে সম্পর্কিত।<br>→ <strong>ETL:</strong> এটি data extract, transform এবং load করার প্রক্রিয়া।<br>→ <strong>Reporting:</strong> এটি বিশ্লেষণের ফল উপস্থাপনের কাজ।</p>\r\n<p><strong>উৎস:</strong><br>১) IBM,<br>২) Microsoft,<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 26,
+      "favorite_id": "144828179",
+      "question": "Which of the following is not a required condition of a good algorithm?",
+      "options": {
+        "a": "Clear steps",
+        "b": "Finite steps",
+        "c": "Wide applicability",
+        "d": "Graphic symbols"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Graphic symbols",
+      "explanation": "<p><strong>• Graphic symbols অ্যালগরিদমের আবশ্যিক শর্ত নয়; বরং সেগুলো Flowchart-এর ক্ষেত্রে ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• অ্যালগরিদমের শর্ত:</strong><br>- প্রতিটি ধাপ স্পষ্ট হতে হবে, যাতে সহজে বোঝা যায়।<br>- সমস্যা সমাধান সসীম সংখ্যক ধাপে সম্পন্ন হতে হবে।<br>- অ্যালগরিদম ব্যাপকভাবে প্রয়োগযোগ্য হওয়াও প্রয়োজন।</p>\r\n<p><strong>• যে কারণে Graphic symbols শর্ত নয়:</strong><br>- Graphic symbols অ্যালগরিদমের লিখিত ধাপের অংশ নয়।<br>- এগুলো ব্যবহার করা হয় Flowchart-এ, যেখানে program বা data processing-এর ধাপগুলো চিত্রের সাহায্যে দেখানো হয়।<br>- তাই অ্যালগরিদমের আবশ্যিক শর্তের তালিকায় Graphic symbols থাকে না।</p>\r\n<p><strong>• অ্যালগরিদমের গুরুত্ব:</strong><br>- Program শুরু করার আগে সমস্যার সমাধানপথ নির্ধারণে এটি সহায়তা করে।<br>- Program-এর ভুল শনাক্ত করা সহজ হয়।<br>- Program-এর প্রবাহ বোঝা যায় এবং জটিল program সহজে রচনা করা যায়।</p>\r\n<p><strong>• Algorithm ও Flowchart-এর পার্থক্য:</strong><br>- Algorithm ধাপভিত্তিক লিখিত সমাধান।<br>- Flowchart সেই সমাধানের চিত্রভিত্তিক রূপ।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 27,
+      "favorite_id": "144828143",
+      "question": "In Microsoft Word, which function key is commonly used to start Spelling &amp; Grammar checking?",
+      "options": {
+        "a": "F5",
+        "b": "F7",
+        "c": "F9",
+        "d": "F12"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "F7",
+      "explanation": "<p><strong>• F7 function key সাধারণত Spelling &amp; Grammar checking চালু করতে ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• Function key:</strong><br>- Keyboard-এর উপরের সারিতে থাকা F1 থেকে F12 পর্যন্ত key-গুলোকে function key বলা হয়।<br>- এগুলো menu-তে না গিয়েও দ্রুত নির্দিষ্ট command চালু করতে সাহায্য করে।<br>- Microsoft Office-এ editing, navigation, review এবং file management-এর বিভিন্ন কাজে function key ব্যবহৃত হয়।</p>\r\n<p><strong>• F7-এর ব্যবহার:</strong><br>- F7 চাপলে Word বা অন্য উপযুক্ত Office app-এ spelling ও grammar checking শুরু হয়।<br>- Document-এর বানান, ব্যাকরণ এবং লেখার কিছু ত্রুটি শনাক্ত করার জন্য এটি ব্যবহৃত হয়।<br>- তাই proofing বা review-ভিত্তিক কাজে F7 একটি গুরুত্বপূর্ণ function key।</p>\r\n<p><strong>• গুরুত্বপূর্ণ function key-সমূহ:</strong><br>- F1 : Help খোলে।<br>- F2 : নির্বাচিত text বা object সরানোর কাজে ব্যবহৃত হয়।<br>- F3 / Shift + F3 : text-এর case পরিবর্তনের কাজে ব্যবহৃত হতে পারে।<br>- F4 : শেষ command বা action repeat করে।<br>- F5 : Go To dialog box খোলে।<br>- F6 : document, ribbon, task pane ইত্যাদির মধ্যে স্থান পরিবর্তন করে।<br>- F7 : Spelling &amp; Grammar checking চালু করে।<br>- F8 : selection extend করে।<br>- F9 : selected field update করে।<br>- F10 : KeyTips on/off করে।<br>- F11 : next field-এ যায়।<br>- F12 : Save As dialog box খোলে।</p>\r\n<p><strong>উৎস:</strong><br>১) Microsoft Support,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 28,
+      "favorite_id": "144284221",
+      "question": "In a balanced binary search tree with n nodes, the tight asymptotic height is -",
+      "options": {
+        "a": "Θ(1)",
+        "b": "Θ(log n)",
+        "c": "Θ(n)",
+        "d": "Θ(n<sup>2</sup>)"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Θ(log n)",
+      "explanation": "<p><strong>• Balanced Binary Search Tree-এ n সংখ্যক node থাকলে তার tight asymptotic height হলো Θ(log n).</strong></p>\r\n<p><strong>• Balanced Binary Search Tree:</strong><br>- Balanced Binary Search Tree এমন একটি binary search tree, যেখানে tree-এর গঠন তুলনামূলকভাবে সমতা বজায় রাখে।<br>- এই কারণে tree একদিকে অতিরিক্ত লম্বা হয়ে যায় না।<br>- ফলে এর height সাধারণ binary search tree-এর worst case-এর মতো রৈখিক না হয়ে logarithmic order-এ থাকে।</p>\r\n<p><strong>• Height:</strong><br>- Height বলতে root থেকে leaf পর্যন্ত দীর্ঘতম path-এর দৈর্ঘ্যকে বোঝায়।<br>- Tree-এর height যত কম হয়, search, insert এবং delete-এর মতো কাজ তত দ্রুত করা যায়।<br>- Balanced tree-তে প্রতিটি level-এ node-এর সংখ্যা সাধারণত আগের level-এর তুলনায় প্রায় দ্বিগুণ হারে বাড়তে পারে।<br>- তাই যদি tree-এর height h হয়, তবে মোট node সংখ্যা প্রায় 2<sup>h</sup> ধরনের বৃদ্ধির সঙ্গে সম্পর্কিত হয়।<br>- উল্টোভাবে n সংখ্যক node ধারণ করতে প্রয়োজনীয় height হয় প্রায় log n.<br>- এই কারণে balanced BST-এর height logarithmic order-এর হয়।</p>\r\n<p><strong>• Tight asymptotic notation:</strong><br>- O(log n) শুধু upper bound বোঝায়, অর্থাৎ height সর্বোচ্চ logarithmic হারে বাড়ে।<br>- কিন্তু প্রশ্নে tight asymptotic height চাওয়া হয়েছে, যেখানে upper bound ও lower bound—দুটিই বিবেচনা করতে হয়।<br>- Balanced BST-এর ক্ষেত্রে height-এর order logarithmic হওয়ায় সবচেয়ে নির্ভুল notation হলো Θ(log n).</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>→ <strong>Θ(1):</strong> node সংখ্যা বাড়লেও height ধ্রুবক থাকে না।<br>→ <strong>Θ(n):</strong> এটি সাধারণত unbalanced BST-এর worst case height হতে পারে।<br>→ <strong>Θ(n²):</strong> tree height-এর জন্য এটি প্রযোজ্য নয়।</p>\r\n<p><strong>উৎস:</strong><br>১) Princeton University,<br>২) MIT CSAIL,<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 29,
+      "favorite_id": "144284177",
+      "question": "Which DNS record maps a domain name to an IPv6 address?",
+      "options": {
+        "a": "A Record",
+        "b": "AAAA Record",
+        "c": "NS Record",
+        "d": "MX Record"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "AAAA Record",
+      "explanation": "<p><strong>• AAAA Record একটি domain name-কে IPv6 address-এর সঙ্গে যুক্ত করে।</strong></p>\r\n<p><strong>• DNS record:</strong><br>- DNS বা Domain Name System হলো এমন একটি ব্যবস্থা, যার মাধ্যমে domain name-কে উপযুক্ত IP address-এর সঙ্গে সম্পর্কিত করা হয়।<br>- ইন্টারনেটে কোনো website বা service-এ পৌঁছাতে domain name-এর সঙ্গে সঠিক address mapping প্রয়োজন হয়।<br>- এই mapping কাজটি বিভিন্ন ধরনের DNS record-এর মাধ্যমে সম্পন্ন হয়।</p>\r\n<p><strong>• AAAA Record:</strong><br>- AAAA Record বিশেষভাবে IPv6 address-এর জন্য ব্যবহৃত হয়।<br>- অর্থাৎ, কোনো domain name-এর বিপরীতে যদি IPv6 address সংরক্ষণ করতে হয়, তাহলে AAAA Record ব্যবহৃত হয়।<br>- IPv6 হলো নতুন প্রজন্মের Internet Protocol address ব্যবস্থা, যা IPv4-এর তুলনায় দীর্ঘতর address ব্যবহার করে।</p>\r\n<p><strong>• A Record-এর সঙ্গে পার্থক্য:</strong><br>- A Record একটি domain name-কে IPv4 address-এর সঙ্গে যুক্ত করে।<br>- অন্যদিকে AAAA Record একটি domain name-কে IPv6 address-এর সঙ্গে যুক্ত করে।</p>\r\n<p><strong>• অন্যান্য DNS record:</strong><br>- NS Record name server নির্দেশ করার জন্য ব্যবহৃত হয়।<br>- MX Record mail server routing-এর জন্য ব্যবহৃত হয়।</p>\r\n<p><strong>উৎস:</strong><br>১) Microsoft Learn;<br>২) Cloudflare;<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 30,
+      "favorite_id": "144284151",
+      "question": "JSON is primarily used as a -",
+      "options": {
+        "a": "Document markup format",
+        "b": "Executable code format",
+        "c": "Database query format",
+        "d": "Data-interchange format"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Data-interchange format",
+      "explanation": "<p><strong>• JSON মূলত একটি data-interchange format, অর্থাৎ এটি structured data এক system থেকে অন্য system-এ আদান-প্রদানের জন্য ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• JSON-এর ধারণা:</strong><br>- JSON-এর পূর্ণরূপ JavaScript Object Notation.<br>- এটি একটি lightweight, text-based এবং language-independent data format.<br>- এতে key-value pair, array, string, number, boolean এবং null উপস্থাপন করা যায়।<br>- Web application, API response এবং configuration file-এ JSON ব্যাপকভাবে ব্যবহৃত হয়।</p>\r\n<p><strong>• Data-interchange format:</strong><br>- JSON-এর প্রধান কাজ হলো data-কে এমনভাবে উপস্থাপন করা, যাতে বিভিন্ন program বা system সহজে তা read ও exchange করতে পারে।<br>- এটি মানুষ সহজে পড়তে পারে এবং machine সহজে parse করতে পারে।<br>- Client-server communication-এ structured data পাঠানো ও গ্রহণ করার জন্য JSON খুবই উপযোগী।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Document markup format:</strong> Markup format সাধারণত document-এর গঠন ও tag-ভিত্তিক উপস্থাপনার জন্য ব্যবহৃত হয়; JSON সে উদ্দেশ্যে তৈরি নয়।<br>→ <strong>Executable code format:</strong> JSON data সংরক্ষণ করে, কিন্তু এটি চালনাযোগ্য code নয়।<br>→ <strong>Database query format:</strong> Database query সাধারণত SQL-এর মতো ভাষায় লেখা হয়; JSON query language নয়।</p>\r\n<p><strong>উৎস:</strong><br>১) ECMA-404,<br>২) RFC 8259,<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 31,
+      "favorite_id": "144284135",
+      "question": "Bluetooth mainly follows which IEEE standard?",
+      "options": {
+        "a": "IEEE 802.11",
+        "b": "IEEE 802.15",
+        "c": "IEEE 802.16",
+        "d": "IEEE 802.3"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "IEEE 802.15",
+      "explanation": "<p><strong>• Bluetooth প্রধানত IEEE 802.15 standard-এর সঙ্গে সম্পর্কিত।</strong></p>\r\n<p><strong>• Bluetooth:</strong><br>- Bluetooth হলো স্বল্প দূরত্বের তারবিহীন যোগাযোগ প্রযুক্তি।<br>- এটি মোবাইল ফোন, হেডফোন, কীবোর্ড, মাউস এবং অন্যান্য ডিজিটাল ডিভাইসের মধ্যে তথ্য আদান-প্রদানে ব্যবহৃত হয়।<br>- ব্যক্তিগত পর্যায়ে ডিভাইস-টু-ডিভাইস সংযোগে এটি খুবই প্রচলিত।</p>\r\n<p><strong>• IEEE standard:</strong><br>- বিভিন্ন নেটওয়ার্ক প্রযুক্তির জন্য IEEE নির্দিষ্ট standard নির্ধারণ করে।<br>- Bluetooth সাধারণত IEEE 802.15 family-এর সঙ্গে যুক্ত।<br>- অন্যদিকে Wi-Fi IEEE 802.11 এবং WiMAX IEEE 802.16 standard-এর সঙ্গে সম্পর্কিত।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>IEEE 802.11:</strong> এটি Wi-Fi-এর standard.<br>→ <strong>IEEE 802.16:</strong> এটি WiMAX-এর standard.<br>→ <strong>IEEE 802.3:</strong> এটি সাধারণত wired Ethernet-এর সঙ্গে সম্পর্কিত।</p>\r\n<p><strong>উৎস:</strong><br>১) IEEE;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 32,
+      "favorite_id": "143622637",
+      "question": "The graphical representation of an algorithm is called -",
+      "options": {
+        "a": "Pseudocode",
+        "b": "Source code",
+        "c": "Flowchart",
+        "d": "Machine code"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Flowchart",
+      "explanation": "<p><strong>• Flowchart হলো অ্যালগরিদম বা প্রক্রিয়াকরণের ধাপগুলোকে চিত্রের সাহায্যে উপস্থাপনের পদ্ধতি।</strong></p>\r\n<p><strong>• Flowchart:</strong><br>- মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম (উন্মুক্ত বিশ্ববিদ্যালয়) বইয়ের তথ্য অনুসারে, Program বা data processing-এর পদ্ধতিকে সহজে চিত্রের সাহায্যে তুলে ধরার জন্য সাংকেতিক চিহ্ন ব্যবহার করা হয়; এই চিত্রই Flowchart।<br>- Program design-এর প্রধান tools-এর একটি হলো Flowchart।<br>- এটি algorithm-এর visual representation হিসেবে কাজ করে।</p>\r\n<p><strong>• Algorithm-এর সঙ্গে সম্পর্ক:</strong><br>- Algorithm সমস্যার ধাপভিত্তিক লিখিত সমাধান দেয়।<br>- Flowchart সেই ধাপগুলোকে চিত্রের আকারে স্পষ্ট করে দেখায়।<br>- ফলে program-এর প্রবাহ এবং ধাপের ক্রম সহজে বোঝা যায়।</p>\r\n<p><strong>• ব্যবহারিক গুরুত্ব:</strong><br>- Program logic দৃশ্যমানভাবে বোঝা সহজ হয়।<br>- জটিল processing path তুলনামূলক পরিষ্কারভাবে উপস্থাপন করা যায়।<br>- Program planning, debugging এবং discussion-এ এটি সহায়ক।</p>\r\n<p><strong>• Program design tools:</strong><br>- বইয়ে Program design-এর প্রধান tools হিসেবে Algorithm, Flowchart এবং Pseudocode উল্লেখ করা হয়েছে।<br>- এদের মধ্যে Flowchart-ই graphic symbols ব্যবহার করে ধাপগুলোকে উপস্থাপন করে।<br>- তাই graphical representation বোঝাতে Flowchart-ই সঠিক উত্তর।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Pseudocode:</strong> এটি program logic-এর লিখিত কাঠামো, চিত্র নয়।<br>→ <strong>Source code:</strong> এটি programming language-এ লেখা বাস্তব code।<br>→ <strong>Machine code:</strong> এটি computer-এর বোধগম্য নিম্নস্তরের code।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 33,
+      "favorite_id": "143622606",
+      "question": "Direct access to any memory location is known as -",
+      "options": {
+        "a": "Sequential Access",
+        "b": "Random Access",
+        "c": "Serial Access",
+        "d": "Linear Access"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Random Access",
+      "explanation": "<p><strong>• Random Access বলতে এমন access পদ্ধতিকে বোঝায়, যেখানে memory-এর যেকোনো নির্দিষ্ট location-এ সরাসরি পৌঁছানো যায়।</strong></p>\r\n<p><strong>• Random Access:</strong><br>- এই পদ্ধতিতে কোনো নির্দিষ্ট memory location-এ যেতে ধারাবাহিকভাবে আগের সব location অতিক্রম করতে হয় না।<br>- ফলে প্রয়োজনীয় তথ্য দ্রুত পাওয়া যায়।<br>- Main Memory-এর ক্ষেত্রে এই ধারণা বিশেষভাবে গুরুত্বপূর্ণ।</p>\r\n<p><strong>• প্রধান বৈশিষ্ট্য:</strong><br>- সব location-এর access time প্রায় সমান থাকে।<br>- নির্দিষ্ট cell বা word সরাসরি নির্বাচন করা যায়।<br>- দ্রুত processing-এর জন্য এটি উপযোগী।</p>\r\n<p><strong>• ব্যবহারিক গুরুত্ব:</strong><br>- RAM ও ROM-ধরনের memory-তে Random Access ধারণা প্রযোজ্য।<br>- CPU প্রয়োজনীয় তথ্য কম সময়ে পেতে পারে।<br>- Computer speed বৃদ্ধিতে এই access method গুরুত্বপূর্ণ ভূমিকা রাখে।</p>\r\n<p><strong>• Sequential Access থেকে পার্থক্য:</strong><br>- Sequential Access-এ কাঙ্ক্ষিত স্থানে পৌঁছাতে শুরু থেকে পর্যায়ক্রমে এগোতে হয়।<br>- ফলে access time অবস্থানভেদে বাড়তে পারে।<br>- Random Access-এ এই সীমাবদ্ধতা থাকে না।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Sequential Access:</strong> এতে location সরাসরি access করা যায় না।<br>→ <strong>Serial Access:</strong> এটি এখানে মূল memory access term নয়।<br>→ <strong>Linear Access:</strong> এটি বইয়ের আলোচিত মানক access classification নয়।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 34,
+      "favorite_id": "143622580",
+      "question": "The printer that uses pins to strike an inked ribbon is -",
+      "options": {
+        "a": "Dot matrix printer",
+        "b": "Laser printer",
+        "c": "Inkjet printer",
+        "d": "Thermal printer"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Dot matrix printer",
+      "explanation": "<p><strong>• Dot Matrix Printer একটি impact printer, যেখানে print head-এর পিন কালি-যুক্ত ribbon-এ আঘাত করে অক্ষর বা চিহ্ন মুদ্রণ করে।</strong></p>\r\n<p><strong>• Dot Matrix Printer:</strong><br>- Dot matrix printer হলো impact printer-এর একটি পরিচিত ধরন।<br>- এতে print head-এর পিন ব্যবহার করে অক্ষর, সংখ্যা বা চিহ্ন তৈরি করা হয়।<br>- এই পিনগুলোর আঘাতে inked ribbon কাগজের ওপর চাপ পড়ে মুদ্রণ সম্পন্ন হয়।</p>\r\n<p><strong>• কাজের পদ্ধতি:</strong><br>- Print head-এ একাধিক পিন থাকে।<br>- প্রয়োজনীয় বর্ণের বিন্দু-গঠন অনুযায়ী নির্দিষ্ট পিন বাইরে আসে।<br>- Pin ribbon-এ আঘাত করলে কাগজের ওপর ডট তৈরি হয়।<br>- এভাবে বহু ডট মিলিয়ে অক্ষর বা চিত্র গঠিত হয়।</p>\r\n<p><strong>• Ribbon-এর ভূমিকা:</strong><br>- Printer-এর ভেতরে কাগজ ও print head-এর মাঝখানে কালি-যুক্ত ribbon থাকে।<br>- Pin ribbon-কে কাগজের ওপর চাপ দিয়ে মুদ্রণ ঘটায়।<br>- তাই ribbon এই printer-এর printing mechanism-এর একটি অপরিহার্য অংশ।</p>\r\n<p><strong>• বৈশিষ্ট্য:</strong><br>- এটি impact printing technology-নির্ভর।<br>- Dot-ভিত্তিক character formation এর প্রধান বৈশিষ্ট্য।<br>- Bidirectional dot matrix printer-এ উভয় দিকে মুদ্রণ করা গেলে গতি তুলনামূলকভাবে বাড়ে।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 35,
+      "favorite_id": "143156762",
+      "question": "What is the access method called when any memory location can be accessed directly?",
+      "options": {
+        "a": "Sequential Access",
+        "b": "Serial Access",
+        "c": "Linear Access",
+        "d": "Random Access"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Random Access",
+      "explanation": "<p>• <strong>Random access হলো এমন access method, যেখানে যেকোনো memory location-এ সরাসরি পৌঁছানো যায়।</strong></p>\r\n<p><strong>• Random access-এর ধারণা:</strong><br>- এই পদ্ধতিতে নির্দিষ্ট memory location-এ যেতে ধারাবাহিকভাবে আগের সব location অতিক্রম করতে হয় না।<br>- ফলে প্রয়োজনীয় data দ্রুত পাওয়া যায়।<br>- Main memory-এর ক্ষেত্রে এই ধারণা খুব গুরুত্বপূর্ণ।</p>\r\n<p><strong>• বৈশিষ্ট্য:</strong><br>- সব location-এর access time প্রায় সমান থাকে।<br>- Direct selection সম্ভব হয়।<br>- CPU প্রয়োজনীয় data দ্রুত আহরণ করতে পারে।<br>- Processing speed বৃদ্ধিতে এটি সহায়ক।</p>\r\n<p><strong>• Sequential access থেকে পার্থক্য:</strong><br>- Sequential access-এ কাঙ্ক্ষিত স্থানে পৌঁছাতে শুরু থেকে ধারাবাহিকভাবে এগোতে হয়।<br>- সেখানে access time অবস্থানভেদে ভিন্ন হয়।<br>- Random access-এ এই সীমাবদ্ধতা থাকে না।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>Sequential Access:</strong> এতে location সরাসরি access করা যায় না।<br>→ <strong>Serial Access:</strong> এটি এখানে standard main memory access term নয়।<br>→ <strong>Linear Access:</strong> এটি বইয়ের আলোচিত মানক access classification নয়।</p>\r\n<p><strong>উৎস:</strong><br>১) মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়;<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 36,
+      "favorite_id": "138302526",
+      "question": "Which type of programming language uses mnemonic codes or symbols instead of binary numbers to represent operations?",
+      "options": {
+        "a": "Fourth Generation Language (4GL)",
+        "b": "Assembly Language",
+        "c": "Machine Language",
+        "d": "Jav"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Assembly Language",
+      "explanation": "<p><strong>• সঠিক উত্তর: খ) Assembly Language</strong></p>\r\n<p>• কম্পিউটারে যে সব ভাষা ব্যবহার হয় তা তিন ধরনের হয়ে থাকে। যেমন-<br>(ক) যান্ত্রিক ভাষা (Machine Language),<br>(খ) এ্যাসেম্বলি ভাষা (Assembly Language),<br>(গ) উচ্চস্তরের ভাষা (High Level Language).</p>\r\n<p><strong>• এ্যাসেম্বলি ভাষা (Assembly Language):</strong><br><strong>- এটি একটি লো-লেভেল ল্যাঙ্গুয়েজ যেখানে বাইনারি সংখ্যার পরিবর্তে ইংরেজি সংকেত বা নেমোনিক কোড (যেমন: ADD, SUB, MOV) ব্যবহার করা হয়।</strong><br>- এটি দ্বিতীয় প্রজন্মের (2GL) প্রোগ্রামিং ভাষা হিসেবে পরিচিত।<br>- যান্ত্রিক ভাষায় প্রোগ্রাম তৈরী, কঠিন কাজকে সহজ করে তুলা, সময়ের অপচয় দূর করা, প্রোগ্রামের ভুল সংশোধন ও পরিবর্তনের কাজ সহজতর করে গতিশীল করার জন্যই এ্যাসেম্বলি ভাষার উন্নয়ন করা হয়েছে।<br>- অ্যাসেম্বলি ভাষাকে সরাসরি কম্পিউটার বুঝতে পারে না, তাই একে অনুবাদ করার জন্য অ্যাসেম্বলার (Assembler) নামক সফটওয়্যারের প্রয়োজন হয়।</p>\r\n<p><strong>• এ্যাসেম্বলি ভাষার সুবিধা ও অসুবিধা:</strong><br>- যান্ত্রিক ভাষার চেয়ে এই ভাষায় প্রোগ্রাম রচনা করা সহজ।<br>- এটি কার্যকরভাবে মেমোরি ব্যবহার করে, তাই কম মেমোরি সম্পন্ন ডিভাইসে এটি বেশ উপযোগী।<br>- বড় এবং জটিল প্রোগ্রাম লেখার জন্য এই ভাষা অত্যন্ত কষ্টসাধ্য এবং সময়সাপেক্ষ।<br><br>অন্যান্য অপশন:<br>- Fourth Generation Language (4GL): এটি মানুষের ভাষার কাছাকাছি একটি ভাষা যা সাধারণত ডেটাবেস ম্যানেজমেন্টে (যেমন: SQL) ব্যবহার করা হয়।<br>- Machine Language: এটি শুধুমাত্র বাইনারি কোড (০ এবং ১) ব্যবহার করে লেখা হয় যা কম্পিউটার সরাসরি বুঝতে পারে।<br>- Java: এটি একটি হাই-লেভেল এবং অবজেক্ট ওরিয়েন্টেড ল্যাঙ্গুয়েজ যা মূলত অ্যাপ্লিকেশন তৈরির জন্য ব্যবহৃত হয়।</p>\r\n<p>উৎস: ১। এসএসসি প্রোগ্রাম, কম্পিউটার শিক্ষা, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>২। Computer &amp; ICT Cloud [Live Publications].</p>"
+    },
+    {
+      "id": 37,
+      "favorite_id": "136766890",
+      "question": "Which cloud computing service model allows users to run their own operating system and software on rented computing resources?",
+      "options": {
+        "a": "Software-as-a-Service (SaaS)",
+        "b": "Platform-as-a-Service (PaaS)",
+        "c": "Infrastructure-as-a-Service (IaaS)",
+        "d": "Database-as-a-Service (DBaaS)"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Infrastructure-as-a-Service (IaaS)",
+      "explanation": "<p><strong>• Infrastructure-as-a-Service (IaaS) হলো ক্লাউড কম্পিউটিংয়ের এমন একটি সার্ভিস মডেল যেখানে ব্যবহারকারী অপারেটিং সিস্টেম ও সফটওয়্যার চালানোর জন্য নেটওয়ার্ক, CPU, স্টোরেজসহ মৌলিক কম্পিউটিং রিসোর্স ভাড়া নেয়।</strong></p>\r\n<p><strong>• ক্লাউড কম্পিউটিং:</strong><br>- ক্লাউড কম্পিউটিংয়ের মূল ধারণা হলো নিজের কম্পিউটারের হার্ড ড্রাইভ ব্যবহারের পরিবর্তে ইন্টারনেট সেবা প্রদানকারী প্রতিষ্ঠানের কাছ থেকে সার্ভিস বা হার্ডওয়্যার ভাড়া নিয়ে ব্যবহার করা।<br>- এটি কোনো একক প্রযুক্তি নয়; বরং বিভিন্ন প্রযুক্তির সমন্বয়ে গঠিত একটি ব্যবসায়িক মডেল বা বিশেষ সেবা।<br>- Amazon বাণিজ্যিকভাবে ২০০৬ সালে ক্লাউড কম্পিউটিংয়ের ব্যবহার শুরু করে।</p>\r\n<p><strong>• ক্লাউড কম্পিউটিংয়ের প্রধান সার্ভিস মডেল:</strong><br>- সেবার ধরণ অনুসারে ক্লাউড কম্পিউটিংকে তিনটি প্রধান ভাগে ভাগ করা যায়।</p>\r\n<p><strong>• Infrastructure-as-a-Service (IaaS):</strong><br>- এই মডেলে ক্লাউড সেবাদানকারী প্রতিষ্ঠান তাদের নেটওয়ার্ক, CPU, স্টোরেজ ও অন্যান্য মৌলিক কম্পিউটিং রিসোর্স ভাড়া দেয়।<br>- ব্যবহারকারী তার প্রয়োজন অনুযায়ী অপারেটিং সিস্টেম ও সফটওয়্যার চালাতে পারে।<br>- উদাহরণ: Amazon Elastic Compute Cloud (EC2).</p>\r\n<p><strong>• Platform-as-a-Service (PaaS):</strong><br>- এখানে ক্লাউড সেবাদানকারী প্রতিষ্ঠানের হার্ডওয়্যার, অপারেটিং সিস্টেম, ওয়েব সার্ভার, ডেটাবেজ ইত্যাদি পূর্ব থেকেই প্রস্তুত থাকে।<br>- অ্যাপ্লিকেশন ডেভেলপাররা এই প্ল্যাটফর্মে তাদের তৈরি সফটওয়্যার ভাড়ায় চালাতে পারেন।<br>- উদাহরণ: Google App Engine, Microsoft Azure.</p>\r\n<p><strong>• Software-as-a-Service (SaaS):</strong><br>- এই মডেলে ক্লাউড সেবাদানকারী প্রতিষ্ঠানের তৈরি অ্যাপ্লিকেশন সফটওয়্যার ব্যবহারকারীরা ইন্টারনেটের মাধ্যমে ব্যবহার করতে পারে।<br>- উদাহরণ: Google Docs.</p>\r\n<p><strong>• NIST এর মতে ক্লাউড কম্পিউটিংয়ের বৈশিষ্ট্য:</strong><br>- যুক্তরাষ্ট্রের National Institute of Standards and Technology (NIST) অনুযায়ী ক্লাউড কম্পিউটিং এমন একটি মডেল যেখানে ব্যবহারকারীর তথ্য ও অ্যাপ্লিকেশন সেবাদাতার সিস্টেমে আউটসোর্স করা হয়।</p>\r\n<p><strong>• রিসোর্স স্কেলেবিলিটি:</strong><br>- ব্যবহারকারীর প্রয়োজন অনুযায়ী ছোট বা বড় যেকোনো পরিমাণ রিসোর্স সরবরাহ করা সম্ভব।</p>\r\n<p><strong>• অন-ডিমান্ড:</strong><br>- ব্যবহারকারী যখন প্রয়োজন অনুভব করবে তখনই সেবা নিতে পারবে এবং চাহিদা অনুযায়ী সেবা বাড়াতে বা কমাতে পারবে।</p>\r\n<p><strong>• পে-অ্যাজ-ইউ-গো:</strong><br>- ব্যবহারকারী আগে থেকে কোনো সার্ভিস রিজার্ভ না করেই যতটুকু ব্যবহার করবে ততটুকুর জন্যই পেমেন্ট করবে।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>- Software-as-a-Service (SaaS) → ইন্টারনেটের মাধ্যমে প্রস্তুত অ্যাপ্লিকেশন সফটওয়্যার ব্যবহার করার ক্লাউড সেবা মডেল।<br>- Platform-as-a-Service (PaaS) → অ্যাপ্লিকেশন ডেভেলপমেন্টের জন্য প্রস্তুত প্ল্যাটফর্ম সরবরাহকারী ক্লাউড সেবা মডেল।<br>- Database-as-a-Service (DBaaS) → ইন্টারনেটের মাধ্যমে ডেটাবেজ ব্যবস্থাপনা সেবা প্রদানকারী ক্লাউডভিত্তিক সেবা।</p>\r\n<p>উৎস:<br>১. তথ্য ও যোগাযোগ প্রযুক্তি, একাদশ–দ্বাদশ শ্রেণী, প্রকৌশলী মুজিবুর রহমান।<br>২. তথ্য ও যোগাযোগ প্রযুক্তি, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 38,
+      "favorite_id": "136766884",
+      "question": "Which researcher is credited with naming the term “Computer Virus”?",
+      "options": {
+        "a": "Fred Cohen",
+        "b": "Charles Babbage",
+        "c": "Tim Berners-Lee",
+        "d": "Bill Gates"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Fred Cohen",
+      "explanation": "<p><strong>• Fred Cohen কম্পিউটার ভাইরাস (Computer Virus) শব্দটির নামকরণ করেন, যা কম্পিউটারে প্রবেশ করে নিজেকে বিস্তার করে পুরো সিস্টেমকে সংক্রমিত করতে পারে।</strong></p>\r\n<p><strong>• কম্পিউটার ভাইরাস:</strong><br>- কম্পিউটার ভাইরাস হলো এক ধরনের ক্ষতিকর প্রোগ্রাম, যা কম্পিউটারে প্রবেশ করার পর নিজের বংশবিস্তার করতে থাকে।<br>- এক সময় এটি পুরো কম্পিউটার সিস্টেমকে সংক্রমিত করে এবং সিস্টেমকে অচল বা ক্ষতিগ্রস্ত করে দিতে পারে।<br>- প্রখ্যাত গবেষক Fred Cohen সর্বপ্রথম “Computer Virus” শব্দটির নামকরণ করেন।</p>\r\n<p><strong>• উল্লেখযোগ্য কয়েকটি কম্পিউটার ভাইরাস:</strong><br>- VBS/Helper,<br>- Worm,<br>- VBS/Aqui,<br>- Trojan Horse,<br>- X97M/Hopper,<br>- Boot Sector Virus,<br>- Jerusalem,<br>- Stone,<br>- Dhaka Virus,<br>- Vienna,<br>- CIH, ইত্যাদি।</p>\r\n<p><strong>• এন্টিভাইরাস সফটওয়্যার:</strong><br>- কম্পিউটারকে ভাইরাসের আক্রমণ থেকে রক্ষা করার জন্য এন্টিভাইরাস সফটওয়্যার ব্যবহার করা হয়।<br>- এন্টিভাইরাস সফটওয়্যার কম্পিউটারে ভাইরাস আক্রমণের আগেই তা শনাক্ত করে প্রতিরোধ করতে পারে অথবা ব্যবহারকারীকে সতর্ক করে দেয়।</p>\r\n<p><strong>• উল্লেখযোগ্য কয়েকটি এন্টিভাইরাস সফটওয়্যার:</strong><br>- AVG,<br>- Avast,<br>- Norton,<br>- Avira,<br>- Panda, ইত্যাদি।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>- Charles Babbage → আধুনিক কম্পিউটারের জনক হিসেবে পরিচিত এবং Analytical Engine ধারণা প্রদান করেন।<br>- Tim Berners-Lee → World Wide Web (WWW) আবিষ্কারক এবং ওয়েব প্রযুক্তির পথপ্রদর্শক।<br>- Bill Gates → Microsoft প্রতিষ্ঠাতা এবং ব্যক্তিগত কম্পিউটার সফটওয়্যার শিল্পের অন্যতম গুরুত্বপূর্ণ উদ্যোক্তা।</p>\r\n<p>উৎস:<br>১. মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>২. ব্রিটানিকা।</p>"
+    },
+    {
+      "id": 39,
+      "favorite_id": "136766882",
+      "question": "Who created the first web browser named “WorldWideWeb” in 1990?",
+      "options": {
+        "a": "Vinton Cerf",
+        "b": "Marc Andreessen",
+        "c": "Tim Berners-Lee",
+        "d": "Steve Jobs"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Tim Berners-Lee",
+      "explanation": "<p><strong>• টিম বার্নাস লি (Tim Berners-Lee) ১৯৯০ সালে WorldWideWeb নামে বিশ্বের প্রথম ওয়েব ব্রাউজার তৈরি করেন, যা পরবর্তীতে ওয়েব ব্যবহারের ভিত্তি তৈরি করে।</strong></p>\r\n<p><strong>• ওয়েব ব্রাউজার (Web Browser):</strong><br>- ইন্টারনেটকে তথ্যের মহাসমুদ্র বলা হয়, কারণ ইন্টারনেট বিশ্বের বিভিন্ন দেশে ছড়িয়ে থাকা নেটওয়ার্কে সংযুক্ত সকল কম্পিউটরে যে সকল ইনফরমেশন রয়েছে তা ব্যবহারের সুযোগ করে দেয়।<br>- যে সফটওয়্যার ইন্টারনেটের ইনফরমেশন বা Web page বা World Wide Web (WWW) প্রদর্শনের কাজ করে তাকে ওয়েব ব্রাউজার বলে।<br>- পৃথিবীর বিভিন্ন দেশের ওয়েব সার্ভারে রাখা পরস্পরের সংযোগযোগ্য Web page বা WWW পরিদর্শন করাকে Web Browsing বলে।<br>- Web Browsing করে বিভিন্ন তথ্য ব্যবহারকারীর কম্পিউটারে নিয়ে আসা যায়।<br>- Web Browsing করার জন্য বিভিন্ন ধরনের সফ্টওয়্যার রয়েছে।<br>- এই সকল ওয়েব ব্রাউজার সাধারণত বিশ্বের বিভিন্ন স্থানে ইন্টারনেটের সাথে সংযুক্ত ওয়েব সার্ভার কম্পিউটারগুলোতে যে সকল ওয়েব পেইজ (Web page) সংরক্ষিত রয়েছে তা প্রদর্শনের ব্যবস্থা করে।<br>- ১৯৯০ সালে টিম বার্নাস লি WorldWideWeb নামে সর্বপ্রথম ওয়েব ব্রাউজার তৈরি করেন।<br>- উল্লেখ্য যে, World Wide Web-ই বিশ্বের প্রথম ওয়েব ব্রাউজার হিসেবে পরিচিত।<br>- বর্তমান সময়ে জনপ্রিয় কিছু ওয়েব ব্রাউজার হলো: Internet Explorer, Microsoft Edge, Mozilla Firefox, Safari, Opera, Chrome, Google Chrome ইত্যাদি।</p>\r\n<p><strong>• অন্যান্য অপশন:</strong><br>- Vinton Cerf → Internet Protocol (TCP/IP) উন্নয়নে গুরুত্বপূর্ণ ভূমিকা রাখেন এবং “Father of the Internet” নামে পরিচিত।<br>- Marc Andreessen → Mosaic Web Browser এবং Netscape Navigator তৈরির সাথে যুক্ত প্রযুক্তিবিদ।<br>- Steve Jobs → Apple Inc.-এর সহ-প্রতিষ্ঠাতা এবং Macintosh, iPhone, iPad ইত্যাদির উদ্ভাবনের সাথে যুক্ত প্রযুক্তি উদ্যোক্তা।<br>  <br>উৎস: তথ্য ও যোগাযোগ প্রযুক্তি, নবম-দশম শ্রেণি।</p>"
+    },
+    {
+      "id": 40,
+      "favorite_id": "134996714",
+      "question": "What is the term for the collection of all initiatives and information of an organization from its beginning to the present?",
+      "options": {
+        "a": "<span>Company database</span>",
+        "b": "<span>Corporate database</span>",
+        "c": "<span>Local database</span>",
+        "d": "<span>Global database</span>"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "<span>Corporate database</span>",
+      "explanation": "<p>- <strong>Corporate database</strong> is the term for the collection of all initiatives and information of an organization from its beginning to the present.</p>\r\n<p><strong>• ডাটাবেজ প্রোগ্রাম:</strong><br>- ডাটা বা তথ্য ব্যবস্থপনার জন্য সর্বোকৃষ্ট প্রোগ্রাম হল ডাটাবেজ।<br>- বড় বড় কোম্পানি, শিল্প-কারখানা, অফিস আদালত ইত্যাদিতে কর্মচারীদের নাম, ঠিকানা, পদবী, বেতন ইত্যাদি বিস্তারিত বিবরণ, আমদানী, রপ্তানী ইত্যাদি তথ্য ব্যবস্থাপনার কাজ ডাটাবেজ প্রোগ্রামের সাহায্যে করা হয়।</p>\r\n<p><strong>• কর্পোরেট ডাটাবেজ:</strong><br>- কর্পোরেট ডাটাবেজ হচ্ছে কোনো শিল্প/প্রতিষ্ঠানের শুরু থেকে বর্তমান পর্যন্ত সকল ধরনের উদ্যোগ ও তা সম্পর্কিত তথ্য। <br>- এতে কোনো ব্যবসায়ের সমস্ত কার্যকলাপের তথ্য থাকে। এখানে প্রতিষ্ঠানের ইতিহাস সম্পর্কিত তথ্যও থাকে।<br>- কর্পোরেট পর্যায়ের ডাটাবেজ তৈরির জন্য ব্যবহৃত জনপ্রিয় ডাটাবেজ সফ্টওয়‍্যারগুলোর মধ্যে উল্লেখ্যযোগ্য হলো:<br>- Informix,<br>- Oracle,<br>- SQL Server,<br>- MySQL,<br>- Teradata,<br>- FileMaker,<br>- MS-Access, ইত্যাদি।<br><br>উৎস: কম্পিউটার শিক্ষা, এসএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 41,
+      "favorite_id": "132767383",
+      "question": "Which was the first digital computer built using integrated circuit (IC)?",
+      "options": {
+        "a": "ENIAC",
+        "b": "UNIVAC",
+        "c": "Intel 4004",
+        "d": "Altair 88",
+        "e": "IBM 36"
+      },
+      "correct_answer": "e",
+      "correct_answer_text": "IBM 36",
+      "explanation": "<p><strong>⇒ ইন্টিগ্রেটেড সার্কিট (IC) দিয়ে তৈরী প্রথম ডিজিটাল কম্পিউটার হল IBM 360.</strong></p>\r\n<p><strong>তৃতীয় প্রজন্মের কম্পিউটার:</strong><br>- তৃতীয় প্রজন্মের কম্পিউটারগুলিতে ইন্টিগ্রেটেড সার্কিট (IC) ব্যবহার করা শুরু হয়।<br>- ইন্টিগ্রেটেড সার্কিটের ব্যবহারের কারণে কম্পিউটারের আকার ও বিদ্যুৎ খরচ কম হয় এবং এর কার্যক্ষমতা ও গতি অনেক বৃদ্ধি পায়।<br>- IC সিলিকন দিয়ে তৈরী।<br>- RAM, ROM এর ব্যবহার।<br>- RAM, ROM ও অর্ধপরিবাহী দিয়ে তৈরী।<br>- উচ্চতর ভাষার ব্যাপক ব্যবহার।</p>\r\n<p><em>তথ্যসূত্র - মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 42,
+      "favorite_id": "132682525",
+      "question": "Which of the following correctly represents 1 Gigabyte (GB) in bytes?",
+      "options": {
+        "a": "1024<sup>1</sup> bytes",
+        "b": "1024<sup>2</sup> bytes",
+        "c": "1024<sup>3</sup> bytes",
+        "d": "1024<sup>4</sup> bytes"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "1024<sup>3</sup> bytes",
+      "explanation": "<p>• ডিজিটাল স্টোরেজ একক:<br>- কম্পিউটারে ডেটা পরিমাপের ক্রম:<br>1 Kilobyte (KB) = 1024 bytes = 1024<sup>1</sup> bytes.<br>1 Megabyte (MB) = 1024 KB = 1024 × 1024 = 1024<sup>2</sup> bytes.<br><strong>1 Gigabyte (GB) = 1024 MB = 1024 × 1024 × 1024 = 1024<sup>3</sup> bytes.</strong><br>1 Terabyte (TB) = 1024 GB = 1024 × 1024 × 1024 × 1024 = 1024<sup>4</sup> bytes.<br>1 Petabyte (PB) = 1024 TB = 1024 × 1024 × 1024 × 1024 × 1024 = 1024<sup>5</sup> bytes.</p>\r\n<p>উৎস: ব্রিটানিকা।</p>"
+    },
+    {
+      "id": 43,
+      "favorite_id": "132682522",
+      "question": "Which of the following works as both an input and an output device?",
+      "options": {
+        "a": "Monitor",
+        "b": "Pen drive",
+        "c": "Keyboard",
+        "d": "Scanner"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Pen drive",
+      "explanation": "<p><strong>• Pen drive একটি Input-Output device, কারণ এটি কম্পিউটারে ডাটা সংরক্ষণ (output) এবং সংরক্ষিত ডাটা পুনরায় ব্যবহার বা কপি করার জন্য ইনপুট হিসেবে কাজ করে।</strong><br><br><strong>• ইনপুট-আউটপুট ডিভাইস:</strong><br>- যেসব ডিভাইস কম্পিউটারকে একসাথে ডাটা দিতে পারে (Input) এবং কম্পিউটার থেকে ডাটা নিতে পারে (Output), সেগুলোকে Input-Output device বলা হয়।<br>- এই ধরনের ডিভাইস ডাটা আদান-প্রদানের উভয় কাজ সম্পন্ন করে।<br><br><strong>• Pen Drive:</strong><br>- Pen drive একটি Portable storage device.<br>- এটি USB port-এর মাধ্যমে কম্পিউটারের সাথে সংযুক্ত হয়।<br>- কম্পিউটার থেকে ডাটা pen drive-এ সংরক্ষণ করা যায়।<br>- Pen drive থেকে ডাটা আবার কম্পিউটারে কপি বা ব্যবহার করা যায়।<br><br><strong>• Touch Screen:</strong><br>- Touch screen স্পর্শের মাধ্যমে কমান্ড গ্রহণ করে, যা ইনপুট।<br>- একই সাথে এটি তথ্য প্রদর্শন করে, যা আউটপুট।<br><br><strong>• Modem:</strong><br>- Modem ডাটা পাঠায় এবং গ্রহণ করে।<br>- এটি কম্পিউটার ও নেটওয়ার্কের মধ্যে ডাটা আদান-প্রদানে ব্যবহৃত হয়।<br> <br><strong>• অন্যান্য অপশন:</strong><br>- Monitor → কম্পিউটারের আউটপুট প্রদর্শনের জন্য ব্যবহৃত Output device.<br>- Keyboard → অক্ষর, সংখ্যা ও কমান্ড ইনপুট দেওয়ার জন্য ব্যবহৃত Input device.<br>- Scanner → কাগজে থাকা তথ্য ডিজিটাল ডাটায় রূপান্তরের জন্য ব্যবহৃত Input device.<br><br>উৎস: তথ্য ও যোগাযোগ প্রযুক্তি, এসএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 44,
+      "favorite_id": "131006351",
+      "question": "স্মার্টফোনে GPS ব্যবহারের জন্য কোনটি প্রয়োজন?",
+      "options": {
+        "a": "DHCP",
+        "b": "Accelerometer",
+        "c": "Gyroscope",
+        "d": "Satellite Signal"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Satellite Signal",
+      "explanation": "<p><em><strong>• স্মার্টফোনে GPS ব্যবহার করতে মূলত সেটেলাইট সিগন্যাল (Satellite Signal) প্রয়োজন।</strong> GPS বা গ্লোবাল পজিশনিং সিস্টেম স্যাটেলাইটের মাধ্যমে কাজ করে, যা পৃথিবীর বিভিন্ন স্থানে অবস্থান নির্ধারণ করতে সাহায্য করে। ফোনের GPS রিসিভার এই স্যাটেলাইট থেকে সংকেত গ্রহণ করে এবং সময় ও দূরত্বের হিসাব অনুযায়ী ব্যবহারকারীর সঠিক অবস্থান বের করে। অন্য অপশনগুলো যেমন DHCP ইন্টারনেট সংযোগের জন্য, অ্যাক্সেলরোমিটার এবং জাইরোস্কোপ মোবাইলের আন্দোলন, ঘূর্ণন বা স্ক্রীন অরিয়েন্টেশন বুঝতে ব্যবহৃত হয়, কিন্তু অবস্থান নির্ধারণের জন্য সরাসরি প্রয়োজন হয় না। তাই GPS চালু করতে সেটেলাইট সিগন্যাল অপরিহার্য।</em><br> <br><strong>• GPS: </strong><br>- GPS এর পূর্ণরূপ Global Positioning System।<br>- জিপিএস বা গ্লোবাল পজিশনিং হলো একটি নেভিগেশন স্যাটেলাইট সিস্টেম।<br>- এটি ব্যবহারকারীদের অবস্থান, নেভিগেশন এবং সময় সংক্রান্ত তথ্য প্রদান করে।<br>- এর সাহায্যে আমরা পৃথিবীর যেকোনো স্থানে বসে আমাদের বর্তমান লোকেশন সম্পর্কে তথ্য সংগ্রহ করতে পারি।<br>- এই প্রযুক্তি দ্বারা যেকোনো বস্তুর অবস্থান নির্ণয় করা সম্ভব।</p>\r\n<p><strong>স্মার্টফোনে GPS-এর কিছু গুরুত্বপূর্ণ ব্যবহার:</strong><br>- Google Maps, Apple Maps, Waze-এর মাধ্যমে পথনির্দেশনা পাওয়া।<br>- রাইড-শেয়ারিং অ্যাপ (Uber, Pathao, Bolt) ব্যবহার করে গন্তব্য নির্ধারণ করা।<br>- লোকেশন-ভিত্তিক সার্ভিস (Location-based Services) যেমন ফেসবুক চেক-ইন বা ফাইন্ড মাই ফোন ব্যবহার করা।<br>- স্মার্টফোন চুরি হলে তার অবস্থান ট্র্যাক করা।</p>\r\n<p><strong>• DHCP (Dynamic Host Configuration Protocol):  </strong><br>- DHCP হলো একটি নেটওয়ার্ক প্রোটোকল যা কম্পিউটার বা ডিভাইসকে স্বয়ংক্রিয়ভাবে IP অ্যাড্রেস প্রদান করে।  <br>- এটি মূলত ইন্টারনেট বা লোকাল নেটওয়ার্কে সংযোগ স্থাপনের জন্য ব্যবহৃত হয়।  <br>- DHCP-এর সাথে GPS-এর সরাসরি কোনো সম্পর্ক নেই।  <br>- IP অ্যাড্রেস পাওয়া মানে অবস্থান নির্ণয় করা যায় না।  </p>\r\n<p><strong>• Accelerometer:  </strong><br>- Accelerometer হলো একটি সেন্সর যা ডিভাইসের ত্বরণ (Acceleration) পরিমাপ করে।  <br>- এটি সাধারণত স্ক্রিনের অটো-রোটেশন, পদক্ষেপ গণনা বা গেম কন্ট্রোলের জন্য ব্যবহৃত হয়।  <br>- GPS-এর মতো অবস্থান নির্ণয় করতে Accelerometer একা যথেষ্ট নয়।  <br>- এটি শুধুমাত্র মোশন বা ভঙ্গি নির্ধারণে সাহায্য করে।  </p>\r\n<p><strong>• Gyroscope:  </strong><br>- Gyroscope হলো একটি সেন্সর যা ডিভাইসের ঘূর্ণন বা Orientation পরিবর্তন নির্ণয় করে।  <br>- এটি মোবাইলের অঙ্গভঙ্গি সনাক্তকরণ বা গেমিং ও ভার্চুয়াল রিয়ালিটি অ্যাপ্লিকেশনে ব্যবহৃত হয়।  <br>- GPS-এর সাথে সরাসরি সম্পর্ক নেই, এটি কেবল অবস্থান পরিবর্তনের দিক নির্ধারণে সাহায্য করতে পারে।  </p>\r\n<p><strong>• Satellite Signal:  </strong><br>- স্যাটেলাইট সিগন্যাল হলো GPS-এর জন্য অপরিহার্য উপাদান।  <br>- GPS স্যাটেলাইট থেকে প্রেরিত সংকেত গ্রহণ করে ডিভাইসের অবস্থান নির্ণয় করে।  <br>- সঠিক অবস্থান নির্ণয়ের জন্য অন্তত ৪টি স্যাটেলাইটের সংকেত গ্রহণ করতে হয়।  <br>- স্মার্টফোনে GPS কাজ করতে হলে এটি বাধ্যতামূলক।  </p>\r\n<p>সুতরাং, স্মার্টফোনে GPS ব্যবহারের জন্য প্রয়োজনীয় উপাদান হলো - স্যাটেলাইট সিগন্যাল।  </p>\r\n<p>উৎস: <br>- Microsoft. <a href=\"https://learn.microsoft.com/en-us/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics\" target=\"_blank\" rel=\"noopener\">[link]</a><br>- ScienceDirect. <a href=\"https://www.sciencedirect.com/topics/nursing-and-health-professions/accelerometer\" target=\"_blank\" rel=\"noopener\">[link]</a><br>- Britannica. <a href=\"https://www.britannica.com/technology/gyroscope\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 45,
+      "favorite_id": "131006344",
+      "question": "মোবাইল ফোন অপারেটররা কোন্ অ্যালগরিদম ব্যবহার করে লোকেশন ট্র্যাক করে?",
+      "options": {
+        "a": "Shortest Path",
+        "b": "Triangulation",
+        "c": "Nearest-neighbour",
+        "d": "Encryption"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Triangulation",
+      "explanation": "<p><em>• মোবাইল ফোন অপারেটররা সাধারণত ব্যবহারকারীর অবস্থান নির্ধারণের জন্য Triangulation (ত্রিভুজীকরণ) অ্যালগরিদম ব্যবহার করে। এই প্রক্রিয়ায় ফোন থেকে সংকেত পাঠানো হয় নিকটস্থ টাওয়ারগুলিতে, এবং প্রতিটি টাওয়ার থেকে সংকেতের দূরত্ব পরিমাপ করে ফোনের সঠিক অবস্থান নির্ধারণ করা হয়। একাধিক টাওয়ারের দূরত্বের ভিত্তিতে একটি ত্রিভুজ তৈরি করা হয়, যার ছেদ বিন্দু হলো ফোনের অবস্থান। Shortest Path বা Nearest-neighbour মূলত রুট খুঁজতে বা ডেটা বিশ্লেষণে ব্যবহৃত হয়, আর Encryption তথ্য সুরক্ষার জন্য ব্যবহৃত হয়।<br><strong>- সুতরাং মোবাইল লোকেশন ট্র্যাকিংয়ে মূল অ্যালগরিদম হলো Triangulation.</strong></em><br><br><strong>• Shortest Path:</strong><br>- Shortest Path হলো সেই অ্যালগরিদম যা একটি গ্রাফ বা নেটওয়ার্কে দুটি বিন্দুর মধ্যে সবচেয়ে ছোট দূরত্বের পথ খুঁজে বের করে।<br>- এটি সাধারণত নেটওয়ার্ক রাউটিং, GPS নেভিগেশন বা ট্রাফিক অপটিমাইজেশনে ব্যবহৃত হয়।<br>- মোবাইল ফোনের অবস্থান নির্ধারণে Shortest Path সরাসরি ব্যবহার করা হয় না, কারণ এখানে আমরা ফোনের সঠিক স্থান খুঁজছি, পথ নয়।<br>- তাই, এটি লোকেশন ট্র্যাকিংয়ের জন্য মূল অ্যালগরিদম নয়।  </p>\r\n<p><strong>• Triangulation:</strong><br>- Triangulation হলো সেই প্রক্রিয়া যেখানে তিন বা তার বেশি স্থাপনার অবস্থান ও কোণ ব্যবহার করে একটি বিন্দুর সঠিক অবস্থান নির্ধারণ করা হয়।<br>- মোবাইল ফোন অপারেটররা টাওয়ার থেকে ফোনের সিগন্যালের দূরত্ব ও কোণ মাপে ফোনের আপাত অবস্থান বের করে।<br>- কমপক্ষে তিনটি টাওয়ারের ডেটা ব্যবহার করে সঠিকভাবে লোকেশন নির্ধারণ করা যায়।<br>- এটি হলো মোবাইল লোকেশন ট্র্যাকিংয়ের সবচেয়ে সাধারণ ও কার্যকর পদ্ধতি।<br>- Triangulation এর মাধ্যমে GPS ছাড়াও ফোনের আনুমানিক অবস্থান নির্ণয় করা সম্ভব।  </p>\r\n<p><strong>• Nearest-neighbour:</strong><br>- Nearest-neighbour হলো একটি অ্যালগরিদম যা কোনো ডেটা পয়েন্টের সবচেয়ে কাছের পয়েন্ট খুঁজে বের করে।<br>- এটি সাধারণত ক্লাস্টারিং, ডেটা মাইনিং বা প্রেডিকশন মডেলে ব্যবহৃত হয়।<br>- মোবাইল ফোনের লোকেশন ট্র্যাকিংয়ে সরাসরি ব্যবহার করা হয় না, কারণ ফোনের সঠিক স্থান নির্ধারণের জন্য Neighbor পদ্ধতি যথেষ্ট নয়।<br>- তবে কিছু আনুমানিক বা সম্ভাব্য লোকেশন অনুমানের ক্ষেত্রে এটি সীমিতভাবে ব্যবহার হতে পারে।  </p>\r\n<p><strong>• Encryption:</strong><br>- Encryption হলো সেই প্রক্রিয়া যার মাধ্যমে তথ্যকে কোড বা সিকিউর ফর্মে রূপান্তর করা হয়, যাতে অনুমোদিত ব্যতীত কেউ তথ্য পড়তে না পারে।<br>- মোবাইল অপারেটররা ফোনের ডেটা সুরক্ষার জন্য Encryption ব্যবহার করে।<br>- এটি লোকেশন ট্র্যাকিংয়ের জন্য নয়, বরং ডেটার নিরাপত্তা নিশ্চিত করার জন্য ব্যবহৃত হয়।<br>- Encryption থাকলেও এটি ফোনের অবস্থান নির্ধারণে সরাসরি সাহায্য করে না।  </p>\r\n<p>সূত্র: University of California, Santa Barbara. <a href=\"https://sites.cs.ucsb.edu/~suri/cs235/Triangulation.pdf\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 46,
+      "favorite_id": "131006325",
+      "question": "কোনটি কম্বিনেশনাল লজিক সার্কিট নয়?",
+      "options": {
+        "a": "রেজিস্টার",
+        "b": "ডিকোডার",
+        "c": "মাল্টিপ্লেক্সার",
+        "d": "NAND গেট"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "রেজিস্টার",
+      "explanation": "<p><em>• কম্বিনেশনাল লজিক সার্কিট হলো এমন সার্কিট যেটির আউটপুট শুধুমাত্র ইনপুটের উপর নির্ভর করে এবং এর কোনো মেমরি বা স্টোরেজ এলিমেন্ট থাকে না। ডিকোডার ও মাল্টিপ্লেক্সার এই ধরনের সার্কিটের উদাহরণ, কারণ এগুলোর আউটপুট শুধুমাত্র বর্তমান ইনপুটের ভিত্তিতে নির্ধারিত হয়। NAND গেটও একটি বেসিক কম্বিনেশনাল গেট। কিন্তু রেজিস্টার হলো একটি সিকুয়েনশিয়াল লজিক সার্কিট, যা ডেটা সংরক্ষণ করতে পারে এবং এর আউটপুট পূর্ববর্তী ইনপুট বা স্টেটের উপরও নির্ভর করে। <br><strong>- তাই, এই চারটির মধ্যে শুধুমাত্র রেজিস্টার কম্বিনেশনাল লজিক সার্কিট নয়।</strong></em><br> <br><strong> • রেজিস্টার (Register):</strong><br>- রেজিস্টার হলো একটি সিকোয়েন্সিয়াল লজিক সার্কিট যা ডেটা সংরক্ষণ করে।<br>- এটি তথ্য বা বিটের একটি গ্রুপ সংরক্ষণ করতে ব্যবহৃত হয়।<br>- রেজিস্টার প্রায়ই ক্লক সিগন্যালের উপর ভিত্তি করে কাজ করে।<br>- এটি কম্বিনেশনাল লজিক নয়, কারণ এর আউটপুট শুধুমাত্র ইনপুটের উপর নির্ভর করে না, পূর্ববর্তী অবস্থানও প্রভাবিত করে।<br>- সুতরাং, রেজিস্টার হলো - সিকোয়েন্সিয়াল লজিক সার্কিট।</p>\r\n<p><strong>• ডিকোডার (Decoder):</strong><br>- ডিকোডার হলো একটি কম্বিনেশনাল লজিক সার্কিট যা একটি n-বিট ইনপুটকে 2<sup>n</sup> আউটপুট লাইনে রূপান্তর করে।<br>- এটি শুধুমাত্র বর্তমান ইনপুটের উপর নির্ভর করে আউটপুট তৈরি করে।<br>- ডিকোডার কোনো মেমরি বা স্টোরেজ ব্যবহার করে না।<br>- তাই এটি একটি কম্বিনেশনাল লজিক সার্কিট।</p>\r\n<p><strong>• মাল্টিপ্লেক্সার (Multiplexer):</strong><br>- মাল্টিপ্লেক্সার হলো একটি কম্বিনেশনাল লজিক সার্কিট যা একাধিক ইনপুট থেকে একটি নির্দিষ্ট ইনপুটকে সিলেকশন লাইন অনুযায়ী আউটপুটে প্রেরণ করে।<br>- এটি শুধুমাত্র বর্তমান ইনপুট এবং সিলেকশন সিগন্যালের উপর নির্ভর করে।<br>- মাল্টিপ্লেক্সার কোনো মেমরি বা পূর্ববর্তী অবস্থার উপর নির্ভরশীল নয়।<br>- সুতরাং এটি কম্বিনেশনাল লজিক সার্কিট।</p>\r\n<p><strong>• NAND গেট:</strong><br>- NAND গেট হলো একটি মৌলিক কম্বিনেশনাল লজিক গেট।<br>- এটি ইনপুটের উপর ভিত্তি করে সরাসরি আউটপুট দেয়।<br>- NAND গেটের আউটপুট কোনো পূর্ববর্তী অবস্থা বা মেমরির উপর নির্ভর করে না।<br>- তাই এটি সম্পূর্ণভাবে কম্বিনেশনাল লজিক সার্কিট।</p>\r\n<p>সূত্র: <br>- Imperial College London. <a href=\"https://www.doc.ic.ac.uk/~dfg/OtherLectures/hardware/HardwareLecture12.pdf\" target=\"_blank\" rel=\"noopener\">[link]</a><br>- lowa State University. <a href=\"https://www.ece.iastate.edu/~alexs/classes/2025_Fall_2810/labs/Lab_12/CPRE281_LAB12.pdf\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 47,
+      "favorite_id": "131006321",
+      "question": "x 1234 সংখ্যার বাইনারিরূপ কোনটি?",
+      "options": {
+        "a": "10100111",
+        "b": "100100101",
+        "c": "1110101111001011",
+        "d": "10010001101"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "10010001101",
+      "explanation": "<p><em>• 0x লেখা হয় সংখ্যাটি হেক্সাডেসিমাল (base-16) বোঝানোর জন্য। বিভিন্ন সংখ্যা পদ্ধতি আলাদা করে চিনতে সুবিধার জন্য এই প্রিফিক্স ব্যবহার করা হয়। যেমন, সাধারণ দশমিক সংখ্যায় কোনো প্রিফিক্স থাকে না, কিন্তু বাইনারির জন্য 0b, অক্টালের জন্য 0০ এবং হেক্সাডেসিমালের জন্য 0x ব্যবহৃত হয়। এখানে × দ্বারা বোঝানো হয় \"hexadecimal\"। তাই 0x1234 মানে হলো 1234 সংখ্যাটি দশমিক নয়, বরং হেক্সাডেসিমাল সংখ্যা পদ্ধতিতে লেখা। এটি কম্পিউটার বিজ্ঞান ও প্রোগ্রামিংয়ে খুবই প্রচলিত।</em><br><strong><em>- 0 x 1234 সংখ্যার বাইনারিরূপ হচ্ছে: 0001001000110100</em><br> <br>• হেক্সাডেসিমেল সংখ্যা পদ্ধতি: </strong><br>- এই পদ্ধতির ভিত্তি হচ্ছে 16।<br>- অর্থাৎ এই পদ্ধতিতে 16 টি মৌলিক অংক রয়েছে। এই সংখ্যাসমূহ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 এবং অতঃপর A, B, C, D, E ও F।<br>- বর্ণ (Alphabet) এবং সংখ্যা (Number) উভয়ের ব্যবহার থাকার কারণে হেক্সাডেসিমেল সংখ্যা পদ্ধতির আরেক নাম আলফানিউমেরিক সংখ্যা পদ্ধতি। - হেক্সাডেসিমেল সংখ্যা পদ্ধতির A, B, C, D, E এবং F-এর সমতুল্য দশমিক হচ্ছে যথাক্রম 10, 11, 12, 13, 14 এবং 15.<strong><br><br>• 0 x 1234 সংখ্যার বাইনারিরূপ:<br>0 x 1234</strong> একটি hexadecimal সংখ্যা।</p>\r\n<p>Hex → Binary রূপান্তরের জন্য প্রতিটি hex digit = ৪ বিট বাইনারি:</p>\r\n<p>1 → 0001</p>\r\n<p>2 → 0010</p>\r\n<p>3 → 0011</p>\r\n<p>4 → 0100</p>\r\n<p>সবগুলো একসাথে লিখলে:</p>\r\n<p><strong>0 x 1234 = 0001001000110100<sub>2</sub></strong></p>\r\n<p>সুতরাং সঠিক উত্তর হলো:<br><strong>ঘ) 0001001000110100<br><br><em>উল্লেখ্য, </em></strong><br><strong><em>১৩ জানুয়ারি, ২০২৬ -এ ৫০ তম বিসিএসের জন্য নেয়া ১ম ফাইনাল মডেল টেস্টে এ টাইপের একটি প্রশ্ন দেয়া হয়েছিল -</em><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_TLw3lC1.png\" width=\"100%\" height=\"auto\"><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_ObadEc4.png\" width=\"100%\" height=\"auto\"><br></strong>সূত্র: IBM. <a href=\"https://www.ibm.com/docs/en/ftmfm/4.0.6?topic=format-data-values\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 48,
+      "favorite_id": "130492317",
+      "question": "কোনটি ডিজিটাল টুইনের প্রধান সুবিধা?",
+      "options": {
+        "a": "বাস্তব পরীক্ষার প্রয়োজন কমায়",
+        "b": "পণ্যের ১০০% সাফল্য নিশ্চিত করে",
+        "c": "বিদ্যুৎ ব্যবহারের প্রয়োজন শেষ করে",
+        "d": "অযাচিত আয় স্বয়ংক্রিয়ভাবে তৈরি করে"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বাস্তব পরীক্ষার প্রয়োজন কমায়",
+      "explanation": "<p><em>• ডিজিটাল টুইন হল বাস্তব জগতের কোনো সিস্টেম, যন্ত্র বা প্রক্রিয়ার ভার্চুয়াল বা ডিজিটাল প্রতিরূপ, যা বাস্তব সময়ের ডেটা ব্যবহার করে সিমুলেশন ও বিশ্লেষণ করতে পারে। এর প্রধান সুবিধা হলো এটি বাস্তব পরীক্ষা বা প্রোটোটাইপ তৈরি করার প্রয়োজন কমায়, কারণ ডিজিটাল টুইনের মাধ্যমে বিভিন্ন পরিস্থিতি ও শর্ত পরীক্ষা করা যায় অনলাইনে বা কম্পিউটারে, যা সময়, অর্থ এবং সম্পদ বাঁচায়। এটি পণ্যের ১০০% সাফল্য নিশ্চিত করে না, বিদ্যুৎ ব্যবহার সম্পূর্ণভাবে বাদ দেয় না, এবং অযাচিত আয় স্বয়ংক্রিয়ভাবে তৈরি করে না। <strong>তাই সঠিক উত্তর হলো ক) বাস্তব পরীক্ষার প্রয়োজন কমায়।</strong></em><br> <br><strong>• ডিজিটাল টুইন (Digital Twin):</strong><br>- ডিজিটাল টুইন হলো একটি ভার্চুয়াল বা ডিজিটাল মডেল যা বাস্তব জগতের কোনো বস্তু, প্রক্রিয়া বা সিস্টেমের অনুরূপ।<br>- এটি মূলত বাস্তব বস্তু বা প্রক্রিয়ার পারফরম্যান্স, সমস্যা এবং সম্ভাব্য পরিবর্তন পরীক্ষা করার জন্য ব্যবহার করা হয়।<br>- ডিজিটাল টুইন ব্যবহার করে প্রকৃত বস্তুতে সরাসরি পরীক্ষা না করেও বিভিন্ন পরিস্থিতি সিমুলেট করা যায়।<br>- এটি পণ্য বা প্রক্রিয়ার উন্নতি ও সমস্যা চিহ্নিত করতে সহায়ক হয়।<br>- বাস্তব পরীক্ষার প্রয়োজন কমানো ডিজিটাল টুইনের একটি প্রধান সুবিধা, তবে এটি পণ্যের ১০০% সাফল্য, বিদ্যুৎ ব্যবহারের প্রয়োজন শেষ বা অযাচিত আয় স্বয়ংক্রিয়ভাবে তৈরি করে না।</p>\r\n<p>সূত্র: IBM. <a href=\"https://www.ibm.com/think/topics/digital-twin\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 49,
+      "favorite_id": "130492295",
+      "question": "IEEE 802.16 সাধারণত কোন প্রযুক্তি হিসেবে পরিচিত?",
+      "options": {
+        "a": "LTE",
+        "b": "Bluetooth",
+        "c": "Wi-Fi",
+        "d": "WiMAX"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "WiMAX",
+      "explanation": "<p><em><strong>• IEEE 802.16 সাধারণত WiMAX প্রযুক্তি হিসেবে পরিচিত। </strong>এটি একটি ব্রডব্যান্ড ওয়্যারলেস অ্যাক্সেস মানদণ্ড যা দূরত্বের মধ্যে উচ্চ গতির ইন্টারনেট সংযোগ প্রদান করে। WiMAX দীর্ঘ-দূরত্বের ওয়ারলেস নেটওয়ার্ককে সমর্থন করে, যা শহর বা গ্রামীণ এলাকাতেও দ্রুত ইন্টারনেট সেবা পৌঁছে দিতে সক্ষম। এটি ওয়াই-ফাই-এর চেয়ে অনেক বেশি দূরত্বে কাজ করতে পারে এবং বিভিন্ন ধরণের ডিভাইস যেমন কম্পিউটার, মোবাইল ফোন বা রাউটারকে কানেক্ট করতে সাহায্য করে। WiMAX-এর লক্ষ্য ছিল উচ্চ ব্যান্ডউইথ এবং নির্ভরযোগ্য কানেক্টিভিটি নিশ্চিত করা, বিশেষ করে যেখানে তারযুক্ত সংযোগ কঠিন বা ব্যয়বহুল। তাই IEEE 802.16 মানটি WiMAX-এর সঙ্গে সরাসরি সম্পর্কিত।</em></p>\r\n<p><strong><em>- সঠিক উত্তর: ঘ) WiMAX.</em></strong></p>\r\n<p><strong>• ওয়াইম্যাক্স (WiMAX):</strong><br>- WiMAX-এর পূর্ণরূপ হলো Worldwide Interoperability for Microwave Access.<br>- এটি এমন এক যোগাযোগ প্রযুক্তি যা বিস্তৃত ভৌগোলিক অঞ্চলে দ্রুতগতির তারবিহীন ইন্টারনেট সেবা প্রদান করে। <br>- এর কভারেজ এরিয়া প্রায় ৫০ কি.মি. পর্যন্ত হয়ে থাকে। <br>- স্পীড প্রায় 1000 Mbps পর্যন্ত হয়ে থাকে।<br>- WiMAX এর Frequency প্রায় 2-66 GHz পর্যন্ত হয়ে থাকে।<br>- WiMAX এর IEEE standard হচ্ছে IEEE 802.16</p>\r\n<p>এছাড়াও,<br>- Wi-fi এর IEEE স্ট্যান্ডার্ড IEEE 802.11<br>- Bluetooth এর IEEE স্ট্যান্ডার্ড IEEE 802.15</p>\r\n<p> উৎস: তথ্য ও যোগাযোগ প্রযুক্তি (মাহবুবুর রহমান), একাদশ-দ্বাদশ শ্রেণি।</p>"
+    },
+    {
+      "id": 50,
+      "favorite_id": "130492287",
+      "question": "নিম্নলিখিত কোনটি IIoT-এর কার্যকর উদাহরণ?",
+      "options": {
+        "a": "কারখানার সেন্সর যা যন্ত্রের ব্যর্থতা পূর্বাভাস দেয়",
+        "b": "বাড়ির স্মার্ট থার্মোস্ট্যাট",
+        "c": "স্মার্টফোন যা আপনার পদক্ষেপ ট্র্যাক করে",
+        "d": "একটি ফিটনেস অ্যাপ যা ক্যালোরি বার্ন দেখায়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কারখানার সেন্সর যা যন্ত্রের ব্যর্থতা পূর্বাভাস দেয়",
+      "explanation": "<p><em><strong>• “কারখানার সেন্সর যা যন্ত্রের ব্যর্থতা পূর্বাভাস দেয়” (ক) হলো IIoT-এর কার্যকর উদাহরণ। </strong>IIoT বা Industrial Internet of Things মূলত শিল্প ও উৎপাদন ক্ষেত্রে সংযুক্ত সেন্সর, যন্ত্র ও ডিভাইসের মাধ্যমে তথ্য সংগ্রহ এবং বিশ্লেষণকে বোঝায়। এই সেন্সরগুলি যন্ত্রপাতির অবস্থা পর্যবেক্ষণ করে, সমস্যা বা ব্যর্থতার আগাম সতর্কবার্তা দেয় এবং উৎপাদন প্রক্রিয়ার দক্ষতা বাড়ায়। অন্যদিকে, বাড়ির স্মার্ট থার্মোস্ট্যাট, স্মার্টফোন বা ফিটনেস অ্যাপ ব্যক্তিগত ব্যবহারের জন্য এবং শিল্প উৎপাদনের সাথে সরাসরি সম্পর্কিত নয়। সুতরাং, ক) অপশনটি IIoT-এর প্রকৃত উদাহরণ।</em><br><br><strong>• ইন্টারনেট অফ থিংস (Internal of things - IoT):</strong><br>- ইন্টারনেট অফ থিংস (IOT) হলো পারস্পরিক সম্পর্কযুক্ত এমন একটি সনাক্তকারী কম্পিউটিং ডিভাইস, যা একটি নেটওয়ার্কের মাধ্যমে মানুষের সাথে মানুষের বা মানুষের সাথে কম্পিউটারের মধ্যে ডেটা স্থানান্তর করতে সাহায্য করে।<br>- এটি ইন্টারনেটের সাথে শারীরিক ডিভাইস এবং দৈনন্দিন বস্তুকে সংযুক্ত করার ধারণাকে বোঝায়, তাদের ডেটা সংগ্রহ এবং বিনিময় করার অনুমতি দেয়।<br>- এই সংযুক্ত ডিভাইসগুলি স্মার্ট থার্মোস্ট্যাট এবং রেফ্রিজারেটরের মতো গৃহস্থালীর যন্ত্রপাতি থেকে শুরু করে শিল্প মেশিন, পরিধানযোগ্য এবং যানবাহন পর্যন্ত হতে পারে।<br>- IoT-এর প্রাথমিক লক্ষ্য হল এই ডিভাইসগুলিকে একে অপরের সাথে এবং কেন্দ্রীভূত সিস্টেম বা ক্লাউড প্ল্যাটফর্মের সাথে যোগাযোগ করতে সক্ষম করা।</p>\r\n<p><strong>• IoT এর উদাহরণ:</strong><br>- স্মার্ট হোম ডিভাইস (যেমন স্মার্ট লাইট, স্মার্ট থার্মোস্ট্যাট)।<br>- ওয়্যারেবল ডিভাইস (যেমন ফিটনেস ট্র্যাকার)।<br>- শিল্পক্ষেত্রে স্বয়ংক্রিয় যন্ত্রপাতি (Industrial IoT)।<br><br><strong>• IIoT-এর কার্যকর উদাহরণ (Industrial Internet of Things):</strong><br>- IIoT হলো ইন্ডাস্ট্রিয়াল সিস্টেমে সংযুক্ত সেন্সর, যন্ত্রপাতি ও ডিভাইস ব্যবহার করে ডেটা সংগ্রহ এবং বিশ্লেষণ করার প্রক্রিয়া।  <br>- এর মাধ্যমে উৎপাদন প্রক্রিয়া উন্নত করা, যন্ত্রের ব্যর্থতা পূর্বাভাস দেওয়া, এবং অপারেশনাল কার্যকারিতা বৃদ্ধি করা যায়।  <br>- এটি মূলত শিল্প ক্ষেত্রে ব্যবহৃত হয়, যেমন- ফ্যাক্টরি, উৎপাদন ইউনিট, বা বড় যন্ত্রপাতি পরিচালনার জন্য।  <br>- উদাহরণস্বরূপ, একটি কারখানার সেন্সর যা যন্ত্রের ব্যর্থতা পূর্বাভাস দেয়, এটি IIoT-এর সঠিক উদাহরণ।  <br>- অন্যদিকে, বাড়ির স্মার্ট থার্মোস্ট্যাট, স্মার্টফোনের স্টেপ কাউন্টার, বা ফিটনেস অ্যাপ সাধারণ IoT বা পার্সোনাল ডিভাইসের উদাহরণ, IIoT নয়।  </p>\r\n<p>উৎস: ব্রিটানিকা</p>"
+    },
+    {
+      "id": 51,
+      "favorite_id": "130492258",
+      "question": "(531.24)<sub>8</sub> কে হেক্সে কনভার্ট করলে মান কত হয়?",
+      "options": {
+        "a": "159.5",
+        "b": "169.5",
+        "c": "180.3",
+        "d": "120.7"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "159.5",
+      "explanation": "<p><em><strong>• (531.24)<sub>8</sub> কে হেক্সাডেসিমেলে প্রকাশ করলে 159.50 হবে। </strong></em><br>- হেক্স বা হেক্সাডেসিমাল (Hexadecimal) হলো একটি সংখ্যা পদ্ধতি যা ১৬ ভিত্তি (base-16) ব্যবহার করে। এটি দশমিক (decimal) বা বাইনারি (binary) এর মতোই সংখ্যা প্রকাশের একটি পদ্ধতি, তবে এখানে ১৬টি ভিন্ন সংখ্যা থাকে:</p>\r\n<p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9 → সাধারণ সংখ্যা<br>A, B, C, D, E, F → দশমিক ১০ থেকে ১৫ পর্যন্ত মানের জন্য<br><br>- বৈশিষ্ট্য:<br>- সংক্ষিপ্ত: বড় বাইনারি সংখ্যাকে সহজে ছোট হেক্স সংখ্যায় প্রকাশ করা যায়।<br>- কম্পিউটার ব্যবহার: কম্পিউটার বিজ্ঞান ও প্রোগ্রামিংয়ে, যেমন রঙের কোড, মেমোরি এড্রেস ইত্যাদিতে হেক্স বহুল ব্যবহৃত।<br>- সহজ রূপান্তর: প্রতিটি হেক্স সংখ্যা ঠিক ৪ বিট বাইনারির সমান, তাই বাইনারি ↔ হেক্স রূপান্তর খুব সহজ।<br><br>- উদাহরণ:<br>বাইনারি: 1010 → হেক্স: A<br>বাইনারি: 1111 → হেক্স: F<br>- হেক্স ব্যবহার করে কম্পিউটার ডেটা আরও পড়তে সহজ ও সংক্ষিপ্ত হয়।</p>\r\n<p> <strong>• অক্ট্যাল থেকে হেক্সাডেসিমেল রূপান্তর:</strong><br>- অক্ট্যাল সংখ্যাকে হেক্সাডেসিমেল সংখ্যায় রূপান্তরের জন্য প্রথমে অক্ট্যাল সংখ্যার প্রত্যেকটি অংককে ৩ বিট বাইনারি সংখ্যায় রূপান্তর করতে হবে।<br>- অত:পর পুরো বাইনারি সংখ্যাটিকে ৪ বিট বাইনারি গ্রুপে সাজিয়ে সমতুল্য হেক্সাডেসিমেল মান বসালে উক্ত অক্টাল সংখ্যাটির হেক্সাডেসিমেল মান পাওয়া যাবে।<br><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_aeFUixt.png\" width=\"820\" height=\"454\"><br>উৎস:<br>- মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়।<br>- কম্পিউটার শিক্ষা, এসএসসি প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 52,
+      "favorite_id": "130492231",
+      "question": "পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফির প্রাথমিক লক্ষ্য কী?",
+      "options": {
+        "a": "ক্রিপ্টোগ্রাফিক প্রসেসের গতি বৃদ্ধি করা",
+        "b": "কোয়ান্টাম কম্পিউটারের আক্রমণ থেকে তথ্য সুরক্ষিত রাখা",
+        "c": "সকল প্রচলিত ক্রিপ্টোগ্রাফি অবিলম্বে প্রতিস্থাপন করা",
+        "d": "এনক্রিপশন অ্যালগরিদমগুলিকে সরলীকৃত করা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কোয়ান্টাম কম্পিউটারের আক্রমণ থেকে তথ্য সুরক্ষিত রাখা",
+      "explanation": "<p><em><strong>• পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফির প্রাথমিক লক্ষ্য হলো কোয়ান্টাম কম্পিউটারের ক্ষমতা থেকে তথ্যকে সুরক্ষিত রাখা। </strong>কোয়ান্টাম কম্পিউটার প্রচলিত ক্রিপ্টোগ্রাফি, যেমন RSA বা ECC, সহজেই ভেঙে দিতে পারে কারণ এগুলো বড় সংখ্যা গুণফল বা লগারিদমিক সমস্যা সমাধান করার উপর নির্ভর করে। পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফি এমন অ্যালগরিদম তৈরি করে যা কোয়ান্টাম কম্পিউটারও ভাঙতে পারবে না। এটি ডেটা নিরাপত্তা এবং গোপনীয়তা রক্ষা করতে সাহায্য করে, বিশেষ করে ভবিষ্যতে যখন কোয়ান্টাম কম্পিউটার ব্যাপকভাবে ব্যবহারযোগ্য হবে। অন্য কোনো উদ্দেশ্য যেমন গতি বৃদ্ধি বা প্রচলিত অ্যালগরিদম সরলীকরণ এই প্রযুক্তির প্রধান লক্ষ্য নয়।</em></p>\r\n<p><strong> • পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফি (Post-Quantum Cryptography):</strong><br>- পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফির মূল লক্ষ্য হলো এমন এনক্রিপশন অ্যালগরিদম তৈরি করা যা ভবিষ্যতের কোয়ান্টাম কম্পিউটার দ্বারা ভাঙা সম্ভব নয়।<br>- বর্তমান ক্রিপ্টোগ্রাফিক অ্যালগরিদম যেমন RSA, ECC ইত্যাদি কোয়ান্টাম কম্পিউটার ব্যবহার করে খুব দ্রুত ভাঙা যেতে পারে।<br>- পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফি নিশ্চিত করে যে তথ্য এবং যোগাযোগ সুরক্ষিত থাকবে এমন ভবিষ্যতে, যেখানে কোয়ান্টাম কম্পিউটার ব্যাপকভাবে ব্যবহৃত হবে।<br>- এটি প্রচলিত অ্যালগরিদমগুলিকে অবিলম্বে প্রতিস্থাপন করার জন্য নয়, বরং ধাপে ধাপে নতুন নিরাপদ অ্যালগরিদমে রূপান্তর ঘটানোর জন্য ডিজাইন করা হয়েছে।<br>- পোস্ট-কোয়ান্টাম ক্রিপ্টোগ্রাফি মূলত তথ্য নিরাপত্তা বাড়াতে এবং এনক্রিপশন অ্যালগরিদম সরলীকরণের জন্য নয়।</p>\r\n<p>সূত্র: cloudflare. <a href=\"https://www.cloudflare.com/learning/ssl/quantum/what-is-post-quantum-cryptography/\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 53,
+      "favorite_id": "128708257",
+      "question": "নিচের কোন প্রযুক্তি রাডার নেটওয়ার্কে হ্যাক করে ভুল তথ্য প্রদর্শন বা সিস্টেমকে অকার্যকর করতে সক্ষম?",
+      "options": {
+        "a": "Suter Technology",
+        "b": "LIDAR Technology",
+        "c": "Stealth Technology",
+        "d": "GPS Technology"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Suter Technology",
+      "explanation": "<p><strong>• শত্রুপক্ষের আকাশ প্রতিরক্ষা ব্যবস্থাকে বিভ্রান্ত বা অকার্যকর করার জন্য ব্যবহৃত অত্যন্ত উন্নত এক ধরনের সাইবার-ইলেক্ট্রনিক যুদ্ধকৌশল হলো Suter Technology।</strong><br>- এটি প্রথাগত জ্যামিংয়ের মতো কেবল সিগন্যাল বাধাগ্রস্ত করে না, বরং রাডারের সিগন্যাল ব্যবহার করে সরাসরি তার নেটওয়ার্কে অনুপ্রবেশ করে। <br>- এর ফলে অপারেটরের স্ক্রিনে ভুয়া তথ্য দেখানো বা পুরো সিস্টেমের নিয়ন্ত্রণ নেওয়া সম্ভব হয়।<br><br><strong>• Suter Technology-এর বৈশিষ্ট্যসমূহ:</strong><br>- এটি মূলত একটি সাইবার-ইনট্রুশন সিস্টেম যা শত্রুর রাডার সিগন্যালকে রিসিভ করে এবং তার মাধ্যমেই ম্যালওয়্যার পাঠায়।<br>- শত্রুর রাডার স্ক্রিনকে এমনভাবে নিয়ন্ত্রণ করতে পারে যাতে তারা আসল বিমানকে দেখতে না পায়।<br>- কোনো ফিজিক্যাল অ্যাটাক বা মিসাইল ছাড়াই পুরো প্রতিরক্ষা ব্যবস্থাকে অচল করে দিতে পারে।<br>- এই প্রযুক্তিটি মূলত বিএই সিস্টেমস (BAE Systems) দ্বারা তৈরি এবং মার্কিন বিমান বাহিনী এটি ব্যবহার করে।<br><br>অন্যান্য অপশন:<br>- LIDAR প্রযুক্তি: লেজার পালস ব্যবহার করে কোনো বস্তুর দূরত্ব এবং ত্রিমাত্রিক ম্যাপিং করার জন্য ব্যবহৃত হয়।<br>- Stealth প্রযুক্তি: বিমানকে রাডারের কাছে অদৃশ্য রাখার জন্য বিমানের গঠন বা প্রলেপ পরিবর্তন করে, এটি রাডার হ্যাক করে না।<br>- GPS প্রযুক্তি: মূলত স্যাটেলাইটের মাধ্যমে অবস্থান নির্ণয় এবং নেভিগেশনের জন্য ব্যবহৃত হয়।<br><br>উৎস: International Defense Journals [<a href=\"https://aimt.cz/index.php/aimt\" target=\"_blank\" rel=\"noopener\">link</a>] এবং সংশ্লিষ্ট ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 54,
+      "favorite_id": "128708255",
+      "question": "ওয়াই-ফাই নেটওয়ার্ক কোন ধরনের মাল্টিপ্লেক্সিং পদ্ধতি ব্যবহার করে?",
+      "options": {
+        "a": "FDM",
+        "b": "TCP",
+        "c": "WDM",
+        "d": "OFDM"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "OFDM",
+      "explanation": "<p><strong>• ওয়াই-ফাই প্রযুক্তিতে সিগন্যালের দক্ষতা বৃদ্ধি এবং ইন্টারফেয়ারেন্স কমানোর জন্য Orthogonal Frequency Division Multiplexing (OFDM) ব্যবহৃত হয়।</strong><br>- এটি একটি উন্নত ডিজিটাল মড্যুলেশন কৌশল যা একটি উচ্চ গতির সিগন্যালকে অনেকগুলো সাব-ক্যারিয়ারে ভাগ করে প্রেরণ করে।<br><br><strong>• ওয়াই-ফাই:</strong><br>- Wi-Fi-এর পূর্ণরূপ হচ্ছে Wireless Fidelity<br>- Wi-Fi-এর অপর নাম হচ্ছে ওয়‍্যারলেস ইন্টারনেট এক্সেস।<br>- Wi-Fi হলো তারবিহীন এক ধরনের প্রযুক্তি, যা রেডিও ওয়েব ব্যবহার করে একটি নির্দিষ্ট সীমার মধ্যে ইন্টারনেট সেবা প্রদান করে।<br>- Wi-Fi প্রযুক্তিই বিশ্ব পর্যায়ে মানুষকে জোগাচ্ছে ব্রডব্যান্ড ওয়‍্যারলেস সার্ভিস।<br>- Wi-Fi-এ ২.৪ গিগাহার্টজ (GHz) ফ্রিকোয়েন্সির রেডিও ওয়েব ব্যবহার করা হয়।<br>- Wi-Fi-এর স্ট্যান্ডার্ড হচ্ছে IEEE 802.11b (Institute of Electrical and Electronics Engineers)।<br>- IEEE 802.11 হচ্ছে একটি ওয়‍্যারলেস বা তারবিহীন LAN স্ট্যান্ডার্ড।<br>- একটি Wi-Fi নেটওয়ার্কে দশটি বা তার অধিক কম্পিউটার বা অন্যান্য ডিভাইস সংযুক্ত করতে পারে।<br>- ডাচ কম্পিউটার বিজ্ঞানী ভিক্টর ভিক হেরেসকে Wi-Fi-এর জনক বলা হয়।<br>- Wi-Fi-এর অন্য স্ট্যান্ডার্ডসমূহ হলো 802.11a, 802.11g, 802.11n ।<br>- বর্তমানে বেশি ব্যবহৃত হচ্ছে 802.11n স্ট্যান্ডার্ডটি।<br>- IEEE 802.11a স্ট্যান্ডার্ডটি অধিক ব্যয়বহুল হওয়ায় বর্তমানে এর Public access নেই।</p>\r\n<p>উৎস:<br>১. মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>২. Stanford University.</p>"
+    },
+    {
+      "id": 55,
+      "favorite_id": "128708242",
+      "question": "LAN কে WAN এর সাথে সংযুক্ত করার জন্য নিম্নোক্ত কোন নেটওয়ার্ক ডিভাইস ব্যবহার করা হয়?",
+      "options": {
+        "a": "Router",
+        "b": "Repeater",
+        "c": "Bridge",
+        "d": "Switch"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Router",
+      "explanation": "<p>• Router হলো এমন একটি নেটওয়ার্ক ডিভাইস যা বিভিন্ন নেটওয়ার্ককে (যেমন LAN ↔ WAN) একে অপরের সাথে সংযুক্ত করে। এটি IP Address ব্যবহার করে ডেটা প্যাকেটকে সঠিক গন্তব্যে পৌঁছে দেয় এবং একাধিক নেটওয়ার্কের মধ্যে ডেটা রাউটিং করে।</p>\r\n<p><strong>রাউটার (Router):</strong><br>- রাউটার হলো একটি বুদ্ধিমান নেটওয়ার্ক ডিভাইস, যা একই প্রটোকল বিশিষ্ট দুই বা ততোধিক নেটওয়ার্ককে সংযুক্ত করে।<br>- রাউটার উৎস কম্পিউটার থেকে গন্তব্য কম্পিউটারে সবচেয়ে কম দূরত্বের পথ ব্যবহার করে ডেটা প্যাকেট (ডেটার সমষ্টি) পৌঁছে দেয় ।<br>- একই সাথে নেটওয়ার্কে ডেটার আধিক্য এবং ব্যস্ততা দেখতে পেলে রাউটার সেই রুট বা পাথ পরিহার করে অন্য রুট বা পাথ দিয়ে ডেটা পাঠাতে সক্ষম হয়।<br>- একাধিক LAN সংযুক্ত করতে বা WAN এর সাথে LAN-কে সংযুক্ত করতে রাউটার ব্যবহার করা হয়।<br>- এটি NAT (Network Address Translator) ব্যবহার করে নেটওয়ার্ক চিহ্নিত করে থাকে।</p>\r\n<p>অন্যান্য অপশনসমূহ, <br>- সুইচ (Switch): একই LAN-এর ভেতরে একাধিক ডিভাইসকে সংযুক্ত করে, কিন্তু WAN-এর সাথে সংযুক্ত করতে পারে না।<br>- রিপিটার (Repeater): সিগন্যাল দুর্বল হলে সেটিকে পুনরায় শক্তিশালী করে, নেটওয়ার্ক বিস্তৃত করতে ব্যবহৃত হয়।<br>- ব্রিজ (Bridge): একই প্রোটোকল বিশিষ্ট দুটি আলাদা ল্যান (LAN) কে যুক্ত করে একটি বড় নেটওয়ার্ক তৈরি করতে ব্যবহৃত হয়।</p>\r\n<p>উৎস: তথ্য ও যোগাযোগ প্রযুক্তি, একাদশ-দ্বাদশ শ্রেণি, মাহবুবুর রহমান।</p>"
+    },
+    {
+      "id": 56,
+      "favorite_id": "128708233",
+      "question": "CRAY-I কোন ধরণের কম্পিউটারের উদাহরণ?",
+      "options": {
+        "a": "মাইক্রোকম্পিউটার",
+        "b": "মিনি কম্পিউটার",
+        "c": "মেইনফ্রেম কম্পিউটার",
+        "d": "সুপারকম্পিউটার"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "সুপারকম্পিউটার",
+      "explanation": "<p><strong>• CRAY-1 হলো বিশ্বের ইতিহাসে অন্যতম সফল এবং জনপ্রিয় সুপারকম্পিউটার। </strong>এটি ১৯৭৫ সালে ক্রেই রিসার্চ (Cray Research) কোম্পানি দ্বারা তৈরি করা হয়েছিল। এর অসাধারণ প্রসেসিং ক্ষমতা এবং গতির কারণে এটি বৈজ্ঞানিক গবেষণা ও জটিল গাণিতিক বিশ্লেষণে ব্যবহৃত হতো।</p>\r\n<p>আকার ও ক্ষমতা বিচারে কম্পিউটারকে সাধারণত চার ভাগে ভাগ করা হয়। যথা-<br>১। অতিবৃহৎ কম্পিউটার (Super Computer)<br>২। বৃহৎ কম্পিউটার (Mainframe Computer)<br>৩। ছোট কম্পিউটার (Mini Computer)<br>৪। ক্ষুদ্র কম্পিউটার (Micro Computer)</p>\r\n<p><strong>Super Computer:</strong><br>- এ যাবৎ কাল পর্যন্ত আবিষ্কৃত সবচেয়ে শক্তিশালী ও অত্যন্ত দ্রুতগতি সম্পন্ন কম্পিউটার হচ্ছে সুপার কম্পিউটার।<br>উদাহরণ CRAY-1, CYBER 205 ইত্যাদি।</p>\r\n<p><strong>Mainframe Computer:</strong><br>- ক্ষমতা ও আকার বিচারে মেইনফ্রেম কম্পিউটার, সুপার কম্পিউটারের তুলনায় ছোট কিন্তু মাইক্রো কম্পিউটার ও মিনি কম্পিউটারের তুলনায় অনেক বেশি ক্ষমতা সম্পন্ন।<br>উদাহরণ IBM 4341, NCR N8370, IBM Amdah 1580 ইত্যাদি।</p>\r\n<p><strong>Mini Computer:</strong><br>- মেইনফ্রেম বা বৃহৎ কম্পিউটারের তুলনায় আকারে ছোট ও কম ক্ষমতা সম্পন্ন কম্পিউটার হচ্ছে মিনি কম্পিউটার।<br>- এর কেন্দ্রীয় প্রক্রিয়াকরণ অংশটি সাধারণ টেবিলের উপর বসানো সম্ভব।<br>উদাহরণ NOVA 3, PDP 11, IBM-AS/400 ইত্যাদি।</p>\r\n<p><strong>Micro Computer:</strong><br>- আকার, ক্ষমতা ও মূল্য বিচারে সবচেয়ে ছোট কম্পিউটার হচ্ছে মাইক্রো বা ছোট কম্পিউটার।<br>- উদাহরণ IBM 486, IBM Pentium ইত্যাদি।<br>- ক্ষুদ্র বা মাইক্রো কম্পিউটারের জগতে সর্বাধুনিক সংযোজন হচ্ছে ডেস্কটপ কম্পিউটার, ল্যাপটপ কম্পিউটার, নোটবুক কম্পিউটার।</p>\r\n<p>উৎস: <br>১। কম্পিউটার পরিচিতি ও ব্যবহার, স্কুল অব এগ্রিকালচার এন্ড রুরাল ডেভেলপমেন্ট, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>২। মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 57,
+      "favorite_id": "128708210",
+      "question": "সাধারণ উদ্দ্যেশ্য ব্যবহৃত প্রথম বাণিজ্যিক কম্পিউটার হিসেবে কোনটি পরিচিত?",
+      "options": {
+        "a": "ENIAC",
+        "b": "UNIVAC",
+        "c": "Mark I",
+        "d": "EDSAC"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "UNIVAC",
+      "explanation": "<p><strong>• UNIVAC (Universal Automatic Computer) হলো বিশ্বের প্রথম সাধারণ উদ্দেশ্যে নির্মিত বাণিজ্যিক কম্পিউটার।<br></strong>- ১৯৫১ সালে মার্কিন যুক্তরাষ্ট্রে এটি সর্বপ্রথম সেন্সাস ব্যুরোতে ব্যবহারের জন্য সরবরাহ করা হয়।<br>- এটি প্রথম কম্পিউটার যা তথ্য ও সংখ্যা- উভয়কেই প্রক্রিয়াকরণ করতে সক্ষম ছিল এবং এতে ম্যাগনেটিক টেপ ব্যবহারের সুবিধা ছিল।</p>\r\n<p><strong>• UNIVAC:</strong><br>- UNIVAC এর পূর্ণরূপ Universal Automatic Computer.<br>- ১৯৫১ সালে মার্কিন যুক্তরাষ্ট্রের ম্যাসাচুসেটস ইনস্টিটিউট অব টেকনোলজিতে হোয়ার্লউইন্ড-১ কম্পিউটার নির্মাণের কাজ শেষ হয়।<br>- একই বছরে ENIAC- এর নির্মাতা ড. জন মউসলি ও প্রেসপার UNIVAC কম্পিউটারের নির্মাণকাজ শেষ করেন।<br>- ইউনিভ্যাকই ছিল সর্বপ্রথম বাণিজ্যিক ভিত্তিতে তৈরি ইলেকট্রনিক কম্পিউটার এবং এ যন্ত্রেই সর্বপ্রথম চুম্বক-ফিতা ব্যবহার করা হয়েছিল।<br>- UNIVAC কম্পিউটারে একই সঙ্গে পড়া, গণনা ও তথ্য লেখার কাজ করা যেত।<br><br>উল্লেখ্য:<br>- ENIAC: এটি প্রথম ইলেকট্রনিক ডিজিটাল কম্পিউটার হলেও বাণিজ্যিকভাবে বাজারজাত করা হয়নি।<br>- Mark I: এটি হার্ভার্ড বিশ্ববিদ্যালয়ের একটি গবেষণামূলক ইলেকট্রো-মেকানিক্যাল কম্পিউটার প্রজেক্ট ছিল।<br>- EDSAC: এটি প্রথম স্টোরড প্রোগ্রাম মেমোরি কম্পিউটার হলেও বাণিজ্যিকভাবে প্রথম ছিল না।</p>\r\n<p><strong>• কিছু গুরুত্বপূর্ণ পূর্ণরূপ:</strong><br>- ENIAC: Electronic Numerical Integrator and Computer.<br>- EDVAC: Electronic Discrete Variable Automatic Computer.<br>- ASSC (MARK-1): Automatic Sequence Control Calculator.<br>- ABC: Atanasoff-Berry Computer.<br>- EDSAC: Electronic Delay Storage Automatic Calculator.</p>\r\n<p>উৎস: মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 58,
+      "favorite_id": "125913317",
+      "question": "ইন্টারনেট কোন সালে প্রথম চালু হয়েছিল?",
+      "options": {
+        "a": "১৯৮৭",
+        "b": "১৯৬৯",
+        "c": "১৯৭২",
+        "d": "১৯৯১"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "১৯৬৯",
+      "explanation": "<p><strong>• ১৯৬৯ সালে প্রথম ইন্টারনেট চালু হয়।</strong></p>\r\n<p><strong>• ইন্টারনেট:</strong><br>- বিশ্বজুড়ে ইন্টারনেট চালু হয়েছিল ১৯৬৯ সালে।<br>- এই সময়টি ছিল ARPANET নামক একটি প্রকল্পের মাধ্যমে, যা মার্কিন যুক্তরাষ্ট্রের প্রতিরক্ষা মন্ত্রণালয়ের ডিফেন্স অ্যাডভান্সড রিসার্চ প্রজেক্টস এজেন্সি (DARPA) দ্বারা তৈরি হয়েছিল।<br>- ARPANET ছিল প্রথম ডিস্ট্রিবিউটেড কম্পিউটার নেটওয়ার্ক, যা পরবর্তীতে ইন্টারনেটের প্রাথমিক ভিত্তি গড়ে তোলে।<br>- ১৯৮৩ সালে TCP/IP (Transmission Control Protocol/Internet Protocol) প্রটোকল চালু হওয়ার মাধ্যমে ইন্টারনেটের আধুনিক রূপ বিকশিত হয় এবং বিভিন্ন কম্পিউটার একে অপরের সাথে সংযুক্ত হতে শুরু করে।<br>- এরপর ইন্টারনেট ব্যাপকভাবে জনপ্রিয় হয়ে ওঠে, বিশেষত ১৯৯০-এর দশকের শেষের দিকে, যখন ওয়েব ব্রাউজার এবং ওয়েবসাইটের উন্নতি ঘটে।<br>- ১৯৯২ সালে ইন্টারনেট সোসাইটি (ISOC) প্রতিষ্ঠিত হয়।<br>- বাংলাদেশে ইন্টারনেট চালু হয় ১৯৯৬ সালে।</p>\r\n<p>উৎস: Britannica.</p>"
+    },
+    {
+      "id": 59,
+      "favorite_id": "125913310",
+      "question": "TCP/IP মডেলে প্যাকেট রাউটিং কোন লেয়ারে সম্পন্ন হয়?",
+      "options": {
+        "a": "Application Layer",
+        "b": "Session Layer",
+        "c": "Network Access Layer",
+        "d": "Internet Layer"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Internet Layer",
+      "explanation": "<p>• TCP/IP মডেলে <strong>ইন্টারনেট লেয়ারের</strong> প্রধান কাজ হলো আইপি (IP) অ্যাড্রেস ব্যবহার করে ডেটা প্যাকেটগুলোকে এক নেটওয়ার্ক থেকে অন্য নেটওয়ার্কে পাঠানোর জন্য সবচেয়ে কার্যকর পথ বা রুট নির্ধারণ করা।<br>- এই লেয়ারে রাউটার কাজ করে যা ডেটা প্যাকেটের গন্তব্য যাচাই করে থাকে।<br>​<br><strong>TCP/IP:</strong><br>- TCP/IP প্রোটোকলটি ইন্টারনেট সংযোগের ক্ষেত্রে সর্বাধিক ব্যবহৃত হয়।<br>- ইন্টারনেটের সকল কম্পিউটার কমান্ড এবং ডাটা আদান-প্রদানের TCP/IP প্রোটোকল ব্যবহার করে।<br>- ইন্টারনেটে যেকোনো কম্পিউটার আরেকটি কম্পিউটারে সাথে সহজেই সংযোজিত হতে পারে।<br>- একটি কম্পিউটার প্রথমে লোকাল বা স্থানীয় নেটওয়ার্কের সাথে সংযোজিত হয়, অতঃপর ইন্টারনেট ব্যাকবোনের মাধ্যমে সারা বিশ্বের সাথে যোগাযোগ স্থাপন করতে সক্ষম হয়।<br>- ইন্টারনেটের সকল কম্পিউটারেরই একটি IP Address থাকে এবং প্রায় সকলের একটি ঠিকানা থাকে, যা ডোমেইন নেম সিস্টেম ব্যবহার করে।</p>\r\n<p><strong>• অপশন আলোচনা:</strong><br>- Application Layer: এটি ব্যবহারকারীর অ্যাপ্লিকেশন এবং প্রোটোকলের সাথে সম্পর্কিত, রাউটিং নির্ধারণ করে না।<br>- Session Layer: এটি মূলত ওএসআই মডেলের একটি লেয়ার যা সংযোগ নিয়ন্ত্রণ করে কিন্তু টিসিপি/আইপি মডেলে এটি কোনো আলাদা লেয়ার হিসেবে নেই।<br>- Network Access Layer: এটি ফিজিক্যাল ও ডাটা লিঙ্ক লেয়ার কাজ করে, স্থানীয় নেটওয়ার্কে ডেটা প্রেরণ করে, রাউটিং নয়।</p>\r\n<p>উৎস: মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 60,
+      "favorite_id": "124080779",
+      "question": "IoT-এ অ্যাকচুয়েটর ব্যবহারের উদ্দেশ্য:",
+      "options": {
+        "a": "ডেটা সংরক্ষণ করা",
+        "b": "ডেটা বিশ্লেষণ করা",
+        "c": "সেন্সর ডেটা সংগ্রহ করা",
+        "d": "ডেটা অনুযায়ী কাজ করা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ডেটা অনুযায়ী কাজ করা",
+      "explanation": "<p><em><strong>• IoT-এ অ্যাকচুয়েটরের প্রধান উদ্দেশ্য হলো “ডেটা অনুযায়ী কাজ করা” (ঘ)। অ্যাকচুয়েটর হলো একটি ডিভাইস যা সেন্সর দ্বারা সংগ্রহকৃত তথ্য অনুযায়ী শারীরিক বা যান্ত্রিক ক্রিয়াকলাপ সম্পন্ন করে। </strong>উদাহরণস্বরূপ, একটি স্মার্ট হোমে তাপমাত্রা সেন্সর যদি ঘরের তাপমাত্রা বেশি নির্দেশ করে, তাহলে অ্যাকচুয়েটর স্বয়ংক্রিয়ভাবে এয়ার কন্ডিশনার চালু করতে পারে। এখানে অ্যাকচুয়েটর ডেটা সংরক্ষণ বা বিশ্লেষণ করে না, বরং সেন্সরের তথ্য অনুযায়ী সরাসরি কাজ সম্পন্ন করে, যা IoT সিস্টেমকে “সক্রিয়” এবং “স্বয়ংক্রিয়” করে তোলে। তাই এর মূল উদ্দেশ্য হলো সেন্সর ডেটা অনুযায়ী কার্যকরী প্রতিক্রিয়া প্রদান।</em><br> <br><strong>• ইন্টারনেট অফ থিংস (IoT):</strong><br>- ইন্টারনেট অফ থিংস (IoT) হলো এমন একটি নেটওয়ার্ক যা যন্ত্রপাতি ও ডিভাইসকে ইন্টারনেট এবং একে অপরের সাথে সংযুক্ত হতে সক্ষম করে, ইন্টারনেট প্রোটোকল (IP) এবং ট্রান্সমিশন কন্ট্রোল প্রোটোকল (TCP) ব্যবহার করে।<br>- এই প্রোটোকলগুলো ইথারনেট, ওয়াই-ফাই, ব্লুটুথ এবং ৫জি-র মতো সেলুলার নেটওয়ার্কের মাধ্যমে ডেটা বিনিময় সহজ করে, শারীরিক ও ডিজিটাল জগতের মধ্যে সেতুবন্ধন তৈরি করে।</p>\r\n<p><strong>• IoT ডিভাইসের ধরণ:</strong><br>১. ডিজিটাল-প্রথম (Digital-first): যেমন স্মার্টফোন, যেগুলিতে বিল্ট-ইন কানেক্টিভিটি থাকে এবং যন্ত্র থেকে যন্ত্রে (M2M) যোগাযোগ করে।<br>২. শারীরিক-প্রথম (Physical-first): প্রচলিত বস্তু যেমন যানবাহন বা মেডিক্যাল ডিভাইস, যেগুলিতে মাইক্রোচিপ বা সেন্সর যুক্ত করে তাদের কার্যকারিতা এবং ট্র্যাকিং সক্ষমতা বাড়ানো হয়।</p>\r\n<p><strong>• IoT-এর ব্যবহার:</strong><br>- ব্যক্তিগত স্বাস্থ্য মনিটরিং<br>- স্মার্ট ট্রাফিক নেটওয়ার্ক<br>- সংযুক্ত স্টোরেজ ট্যাংক<br>- COVID-19 মহামারীর সময় সংযুক্ত থার্মোমিটার জ্বর মনিটর করে ভাইরাসের বিস্তার ট্র্যাক করেছে।<br>- কৃষি, পরিবহন, এবং স্বাস্থ্যসেবায় সম্পদ ব্যবহার ও কার্যকারিতা বাড়ানো।</p>\r\n<p><strong>• ইতিহাস:</strong><br>- ব্রিটিশ প্রযুক্তিবিদ কেভিন অ্যাশটন ১৯৯৯ সালে \"Internet of Things\" শব্দটি প্রবর্তন করেন।</p>\r\n<p><strong>• সুরক্ষা ও গোপনীয়তা চ্যালেঞ্জ:</strong><br>- সংযুক্তি বৃদ্ধি ডেটা লঙ্ঘন এবং অবৈধ প্রবেশের সম্ভাবনা বাড়ায়।<br>- নিরাপত্তার অভাবে ব্যক্তিগত স্বাস্থ্য ও আর্থিক তথ্যসহ ডেটা হারানো, চুরি হওয়া বা অপব্যবহার হতে পারে।</p>\r\n<p>উৎস: ব্রিটানিকা। </p>"
+    },
+    {
+      "id": 61,
+      "favorite_id": "122466709",
+      "question": "Zigbee কোন ধরনের ওয়্যারলেস কমিউনিকেশন সিস্টেম ব্যবহার করে?",
+      "options": {
+        "a": "হাফ-ডুপ্লেক্স মোড",
+        "b": "সিমপ্লেক্স মোড",
+        "c": "ফুল-ডুপ্লেক্স মোড",
+        "d": "কোনটি নয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "হাফ-ডুপ্লেক্স মোড",
+      "explanation": "<p><em>• Zigbee হলো একটি কম পাওয়ার, কম ব্যান্ডউইথের ওয়্যারলেস কমিউনিকেশন প্রযুক্তি যা মূলত সংক্ষিপ্ত দূরত্বে ডিভাইসগুলোর মধ্যে তথ্য আদানপ্রদান করতে ব্যবহৃত হয়। এটি IEEE 802.15.4 স্ট্যান্ডার্ডের ওপর ভিত্তি করে তৈরি এবং স্মার্ট হোম, সেন্সর নেটওয়ার্ক, ও ইন্ডাস্ট্রিয়াল অটোমেশনসহ বিভিন্ন IoT ডিভাইসে ব্যবহৃত হয়। Zigbee সাধারণত হাফ-ডুপ্লেক্স মোডে কাজ করে, অর্থাৎ একই সময়ে শুধু একটি ডিভাইস তথ্য পাঠাতে বা গ্রহণ করতে পারে। এটি কম শক্তি ব্যবহার এবং নেটওয়ার্কে একাধিক ডিভাইস সংযোগের সুবিধা প্রদান করে, কিন্তু ফুল-ডুপ্লেক্স বা সিমপ্লেক্স মোডের মতো একই সময়ে দুই দিকের যোগাযোগ সমর্থন করে না। <br><strong>- তাই সঠিক উত্তর হলো: ক) হাফ-ডুপ্লেক্স মোড।</strong></em><br> <br><strong>• ডেটা ট্রান্সমিশন মোড: </strong><br>- দুটি ডিভাইসের মধ্যে ডেটা প্রবাহের দিক নির্দেশককে ডেটা ট্রান্সমিশন বা ডেটা কমিউনিকেশন মোড বলে। <br>- ডেটা প্রবাহের দিক-এর উপর নির্ভর করে ডেটা ট্রান্সমিশন মোডকে তিন ভাগে ভাগ করা হয়।  <br>যথা- <br><br><strong>১। সিমপ্লেক্স মোড (Simplex mode): </strong><br>- এই পদ্ধতিতে শুধু একদিকে ডেটা পাঠানো সম্ভব হয়, প্রেরক শুধু ডেটা প্রেরণ করে এবং গ্রাহক শুধু ডেটা গ্রহণ করে। <br>যেমন- কি বোর্ড, মাউস, জয়স্টিক ইত্যাদি সিমপ্লেক্স মোডের উদাহরণ। </p>\r\n<p><strong>২। হাফ-ডুপ্লেক্স মোড (Half-duplex mode): </strong><br>- এই পদ্ধতিতে দুইদিকেই ডেটা পাঠানো বা গ্রহণ করা সম্ভব, কিন্তু একসাথে নয়, আলাদা আলাদাভাবে। <br>- একটি ডিভাইস ডেটা পাঠালে অন্যটিকে অপেক্ষা করতে হয় তার সুযোগ আসার জন্য। <br>- এই পদ্ধতিতে ডেটার ভেতর সংঘর্ষ (collision) না হওয়ার জন্য বিশেষ সার্কিটের ব্যবস্থা রাখতে হয়। <br>যেমন- ওয়াকিটকি, ফ্যাক্স, এস.এম.এস ইত্যাদি হাফ-ডুপ্লেক্স মোডে চলে। </p>\r\n<p><strong>৩। ফুল-ডুপ্লেক্স মোড (Full-duplex mode): </strong><br>- ফুল-ডুপ্লেক্স মোডে একই সময়ে উভয় প্রান্তের দুটি ডিভাইস একই সাথে ডেটা প্রেরণ এবং গ্রহণ করতে পারে। <br>যেমন- টেলিফোন, মোবাইল ফোন কিংবা কম্পিউটার নেটওয়ার্ক কমিউনিকেশন এই পদ্ধতির উদাহরণ। </p>\r\n<p>উৎস: <br>- তথ্য ও যোগাযোগ প্রযুক্তি, একাদশ-দ্বাদশ ও আলিম শ্রেণি।<br>- sciencedirect. <a href=\"https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780750685979000094\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 62,
+      "favorite_id": "122466673",
+      "question": "এম্বেডেড সিস্টেমের জন্য প্রাথমিক মেমরি কোনটি?",
+      "options": {
+        "a": "Magnetic tape",
+        "b": "Flash storage",
+        "c": "ROM (Read-Only Memory)",
+        "d": "Hard Disk Drive (HDD)"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ROM (Read-Only Memory)",
+      "explanation": "<p><em><strong>• এম্বেডেড সিস্টেমে প্রাথমিক মেমরি হিসেবে সাধারণত ROM (Read-Only Memory) ব্যবহার করা হয়।</strong> এটি এমন একটি স্থায়ী মেমরি যা সিস্টেমের প্রয়োজনীয় প্রোগ্রাম ও তথ্য সংরক্ষণ করতে সক্ষম। এম্বেডেড ডিভাইসে ROM ব্যবহার করার মূল কারণ হলো এটি পাওয়ার বন্ধ হলেও তথ্য হারায় না এবং সিস্টেম বুট করার সময় তা সরাসরি প্রয়োজনীয় নির্দেশাবলী প্রদান করতে পারে। অন্যদিকে, Magnetic tape, Flash storage বা HDD প্রাথমিক মেমরির জন্য সাধারণত ব্যবহার করা হয় না, কারণ এগুলো ধীরে কাজ করে বা পরিবর্তনযোগ্য তথ্য সংরক্ষণে বেশি ব্যবহৃত হয়। তাই এম্বেডেড সিস্টেমের জন্য প্রাথমিক মেমরি হিসেবে ROM সবচেয়ে উপযুক্ত।</em></p>\r\n<p><strong><em>- সঠিক উত্তর: গ) ROM (Read-Only Memory).</em></strong></p>\r\n<p><strong>• এমবেডেড কম্পিউটার:</strong><br>- এমবেডেড কম্পিউটার হলো একটি বিশেষায়িত কম্পিউটার সিস্টেম যা একটি বৃহৎ সিস্টেম বা মেশিনের অংশবিশেষ হিসাবে ব্যবহৃত হয়।<br>- এটি হলো মাইক্রোপ্রসেসর, সুনির্দিষ্ট নির্দেশনা সম্বলিত মেমরি বা রম এবং ইনপুট/আউটপুট সিস্টেমের সমন্বয়ে গঠিত এক প্রকার কম্পিউটার।<br>- এম্বেডেড সিস্টেমে সাধারণত একটি মাইক্রোপ্রসেসর বোর্ড এবং কিছু সুনির্দিষ্ট প্রোগ্রাম সম্বলিত রম থাকে।<br>- আধুনিক এম্বেডেড সিস্টেমে মাইক্রোকন্ট্রলার এর ব্যবহার হয়।<br>- এতে মনিটর কিংবা অন্যান্য হার্ডওয়্যার থাকে না।<br>- এটি কেবলে সুনির্দিষ্ট করে দেওয়া কতিপয় কাজই সেল ফোন, এসি, প্রিন্টার, থার্মোস্ট্যাট, ভিডিও গেমস্, করে।<br>- বিশ্বের প্রথম এমবেডেড কম্পিউটার হলো The Apollo Guidance Computer.</p>\r\n<p>উৎস: ব্রিটানিকা।</p>"
+    },
+    {
+      "id": 63,
+      "favorite_id": "120868023",
+      "question": "ইন্টারনেট অফ থিংস (IoT)-এর একটি বড় চ্যালেঞ্জ কী?",
+      "options": {
+        "a": "নিম্ন-গতির প্রক্রিয়াকরণ",
+        "b": "হার্ড ডিস্ক স্টোরেজ",
+        "c": "নিরাপত্তা এবং গোপনীয়তা",
+        "d": "উচ্চ-গতির প্রক্রিয়াকরণ"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিরাপত্তা এবং গোপনীয়তা",
+      "explanation": "<p><em>• ইন্টারনেট অফ থিংস (IoT)-এর একটি বড় চ্যালেঞ্জ হলো নিরাপত্তা এবং গোপনীয়তা (গ)। IoT ব্যবস্থায় অসংখ্য ডিভাইস ইন্টারনেটের মাধ্যমে একে অপরের সাথে সংযুক্ত থাকে এবং নিয়মিত তথ্য আদান-প্রদান করে। এসব ডিভাইস ব্যক্তিগত, আর্থিক ও সংবেদনশীল তথ্য সংগ্রহ ও সংরক্ষণ করে, যা সাইবার আক্রমণের ঝুঁকি বাড়ায়। হ্যাকাররা যদি এই ডিভাইসগুলোতে অনুপ্রবেশ করতে পারে, তবে তথ্য চুরি, সিস্টেম নিয়ন্ত্রণ বা বড় ক্ষতি ঘটতে পারে। <strong>তাই শক্তিশালী নিরাপত্তা ব্যবস্থা ও গোপনীয়তা রক্ষা IoT-এর ক্ষেত্রে অত্যন্ত গুরুত্বপূর্ণ।</strong></em><br> <br><strong> ইন্টারনেট অফ থিংস (Internal of things - IoT):</strong><br>- ইন্টারনেট অফ থিংস (IoT) হলো পারস্পরিক সম্পর্কযুক্ত এমন একটি সনাক্তকারী কম্পিউটিং ডিভাইস, যা একটি নেটওয়ার্কের মাধ্যমে মানুষের সাথে মানুষের বা মানুষের সাথে কম্পিউটারের মধ্যে ডেটা স্থানান্তর করতে সাহায্য করে।<br>- একাধিক প্রযুক্তি যেমন মেশিন লার্নিং, কমোডিটি সেন্সর, এমবেডেড সিস্টেম এবং রিয়েল-টাইম অ্যানালিটিকস, একত্রিত করার কারণে ইন্টারনেট অফ থিংস বাস্তবায়িত হয়েছে।</p>\r\n<p><strong>IoT ডিভাইসের বৈশিষ্ট্য:</strong><br>- কম শক্তি ব্যবহার করে কাজ করে, <br>- ছোট আকারের কম্পিউটার চিপ ব্যবহার করে, <br>- নির্দিষ্ট কাজের জন্য প্রোগ্রাম করা হয়, <br>- সেন্সর, একচুয়েটর এবং ওয়্যারলেস কমিউনিকেশন প্রযুক্তি অন্তর্ভুক্ত থাকে। </p>\r\n<p>উৎস:<br>১। Computer Applications in Business, নেতাজি সুভাষ মুক্ত বিশ্ববিদ্যালয়।<br>২। আইবিএম ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 64,
+      "favorite_id": "120868009",
+      "question": "MAC অ্যাড্রেসগুলো কোন OSI লেয়ারে ব্যবহৃত হয়?",
+      "options": {
+        "a": "Transport Layer",
+        "b": "Data Link Layer",
+        "c": "Network Layer",
+        "d": "Physical Layer"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Data Link Layer",
+      "explanation": "<p><em>• MAC অ্যাড্রেসগুলো OSI মডেলের Data Link Layer (ডাটা লিংক লেয়ার)-এ ব্যবহৃত হয়। সঠিক উত্তর হলো খ) Data Link Layer। MAC (Media Access Control) অ্যাড্রেস হলো একটি ইউনিক হার্ডওয়্যার অ্যাড্রেস, যা নেটওয়ার্ক ইন্টারফেস কার্ড (NIC)-এর সাথে যুক্ত থাকে। এটি মূলত লোকাল নেটওয়ার্কের ভেতরে ডিভাইস শনাক্ত করতে সাহায্য করে এবং ফ্রেম আকারে ডেটা সঠিক ডিভাইসে পৌঁছাতে ব্যবহৃত হয়। Transport Layer ডেটা ট্রান্সপোর্ট নিয়ন্ত্রণ করে, Network Layer IP অ্যাড্রেস ব্যবহার করে রাউটিং করে এবং Physical Layer কেবল ও সিগন্যালের সাথে সম্পর্কিত। <br>- <strong>তাই MAC অ্যাড্রেসের কাজ Data Link Layer-এই সীমাবদ্ধ।</strong></em><br> <br><strong>OSI মডেলের ৭টি লেয়ার:</strong><br>Physical Layer – ডেটা বাইনারি সিগন্যাল হিসেবে ট্রান্সমিট করে।<br>Data Link Layer – MAC Address ও Frame Transmission পরিচালনা করে।<br>Network Layer – IP Addressing এবং প্যাকেট রাউটিং নিয়ন্ত্রণ করে।<br>Transport Layer – End-to-end Communication নিশ্চিত করে (TCP, UDP)।<br>Session Layer – সেশন কন্ট্রোল এবং ডাটা এক্সচেঞ্জ ব্যবস্থাপনা করে।<br>Presentation Layer – ডাটা এনক্রিপশন, ডিক্রিপশন ও কম্প্রেশন পরিচালনা করে।<br>Application Layer – ব্যবহারকারী ও নেটওয়ার্কের মধ্যে ইন্টারফেস তৈরি করে (HTTP, FTP, SMTP ইত্যাদি)।</p>\r\n<p>Source: <br>- AWS <a href=\"https://aws.amazon.com/what-is/osi-model/\" target=\"_blank\" rel=\"noopener\">[link]</a> <br>- IBM <a href=\"https://www.ibm.com/think/topics/osi-model\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 65,
+      "favorite_id": "120867990",
+      "question": "IPv6 কীভাবে IPv4 এর তুলনায় ব্রডকাস্ট ট্রাফিক পরিচালনা করে?",
+      "options": {
+        "a": "IPv4-এর মতো একই ব্রডকাস্ট পদ্ধতি ব্যবহার করে",
+        "b": "ব্রডকাস্ট সমর্থন করে না, মাল্টিকাস্ট ব্যবহার করে",
+        "c": "ব্রডকাস্টের জন্য ইউনিকাস্ট ব্যবহার করে",
+        "d": "BroadIPv6 নামে নতুন প্রোটোকল ব্যবহার করে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ব্রডকাস্ট সমর্থন করে না, মাল্টিকাস্ট ব্যবহার করে",
+      "explanation": "<p><em>• IPv6, IPv4-এর মতো ব্রডকাস্ট ট্রাফিক সমর্থন করে না; বরং এটি মাল্টিকাস্ট ব্যবস্থার মাধ্যমে একই কাজ আরও কার্যকরভাবে সম্পন্ন করে। IPv4-এ ব্রডকাস্ট ব্যবহারের ফলে নেটওয়ার্কের সব ডিভাইসে অপ্রয়োজনীয় ট্রাফিক পৌঁছে যায়, যা ব্যান্ডউইথ নষ্ট করে। এই সীমাবদ্ধতা দূর করার জন্য IPv6 ব্রডকাস্ট সম্পূর্ণভাবে বাদ দিয়েছে। এর পরিবর্তে মাল্টিকাস্ট ব্যবহার করা হয়, যেখানে নির্দিষ্ট একটি গ্রুপের ডিভাইসই কেবল বার্তাটি গ্রহণ করে। ফলে নেটওয়ার্ক আরও দক্ষ, দ্রুত এবং স্কেলযোগ্য হয়। <strong>তাই সঠিক উত্তর হলো খ) ব্রডকাস্ট সমর্থন করে না, মাল্টিকাস্ট ব্যবহার করে।</strong></em></p>\r\n<p><strong>• আইপি এড্রেস:</strong><br>- ইন্টারনেটে যুক্ত প্রত্যেকটি কম্পিউটারের একটি আইডেন্টিটি থাকে যা আইপি এড্রেস নামে পরিচিত। আইপি হল এক ধরনের নেটওয়ার্ক প্রটোকল। বিশ্বের প্রতিটি মানুষকে আলাদা করার জন্য যেমন নাম আছে, ইন্টারনেটে তেমনি প্রত্যেকটি কম্পিউটারকে আলাদা করে সনাক্ত করতে আইপি এড্রেস ব্যবহৃত হয়।</p>\r\n<p>• আইপি এড্রেস মূলত চারটি অংশে বিভক্ত এবং প্রতিটি অংশ ডট (.) চিহ্ন দ্বারা আলাদাভাবে বিভক্ত। এক একটি ভাগকে বলা হয় অকটেট (Octet)। তবে একটি আইপি এড্রেসকে প্রকাশ করার তিনটি পদ্ধতি আছে। যথা-<br>১। ডটেড ডেসিমেল নোটেশন,<br>২। হেক্সাডেসিম্যাল নোটেশন,<br>৩। বাইনারি নোটেশন।</p>\r\n<p>- চারটি অংশের সমন্বয়ে গঠিত আইপি অ্যাড্রেস IPv4 (IP ভার্সন 4) নামে পরিচিত। IPv4 এই অ্যাড্রেস হলো 4 × 8 বা 32 বিটের। যার 232 বা 4294967296 সংখ্যক নেটওয়ার্কযুক্ত কম্পিউটার বা ডিভাইসকে সনাক্ত করা যায়।</p>\r\n<p>- তবে আইপি অ্যাড্রেসের নতুন ভার্সন হলো IPv6; যার সাহায্যে 2128 সংখ্যা ডিভাইসকে সনাক্ত করা যায় এবং যা 128 বিটের অ্যাড্রেস।</p>\r\n<p>উৎস: তথ্য ও যোগাযোগ প্রযুক্তি, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 66,
+      "favorite_id": "118315988",
+      "question": "একটি অ্যানালগ কম্পিউটার কী ধরনের ডেটা প্রক্রিয়াকরণ করে?",
+      "options": {
+        "a": "আলফানিউমেরিক ডেটা",
+        "b": "বাইনারি-কোডেড দশমিক",
+        "c": "ধারাবাহিক ডেটা",
+        "d": "ডিজিটাল ডেটা (০ এবং ১)"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ধারাবাহিক ডেটা",
+      "explanation": "<p><em><strong>• একটি অ্যানালগ কম্পিউটার মূলত ধারাবাহিক ডেটা (continuous data) প্রক্রিয়াকরণ করে। </strong>এটি ডিজিটাল কম্পিউটারের মতো ০ এবং ১-এর ভিত্তিতে কাজ করে না। অ্যানালগ কম্পিউটার ফিজিক্যাল বা বাস্তব-জগতের পরিবর্তনশীল মান যেমন তাপমাত্রা, চাপ, ভোল্টেজ, বা গতির মতো ধ্রুবক পরিবর্তনশীল ডেটা ব্যবহার করে গণনা ও সমাধান করে। এটি সাধারণত বৈজ্ঞানিক ও ইঞ্জিনিয়ারিং সমস্যায় ব্যবহৃত হয়, যেখানে মানগুলি সারা সময় পরিবর্তিত হয় এবং সেগুলিকে নির্ভুলভাবে মাপা প্রয়োজন। ফলে, অ্যানালগ কম্পিউটার সংখ্যা বা ডিজিটাল ফরম্যাটের ডেটার পরিবর্তে ধারাবাহিক মানের উপর ভিত্তি করে কাজ করে।</em></p>\r\n<p><strong><em>- উত্তর: গ) ধারাবাহিক ডেটা।</em></strong><br> <br> • গাণিতিক ভিত্তিতে কম্পিউটারকে তিন ভাগে ভাগ করা যায়। যথা-<br>১। এনালগ কম্পিউটার (Analog Computer),<br>২। ডিজিটাল কম্পিউটার (Digital Computer),<br>৩। হাইব্রিড কম্পিউটার (Hybrid Computer)।</p>\r\n<p><strong>• এনালগ কম্পিউটার (Analog Computer):</strong><br>- এনালগ কম্পিউটার ক্রম পরিবর্তনশীল বৈদ্যুতিক সংকেত গ্রহণ করে।<br>- তথ্য প্রক্রিয়াকরণের ফলাফল সাধারণত প্রদশর্নের কাঁটা (Indicator) দিয়ে দেখানো হয় বা প্লটারের (Plotter) সাহায্যে কাগজে অঙ্কন করা হয়।<br>- বিভিন্ন শিল্প কারখানায় উৎপাদন, প্রক্রিয়াকরণ ও মান নিয়ন্ত্রণে এনালগ কম্পিউটারের ব্যবহার হয়ে থাকে।</p>\r\n<p><strong>• ডিজিটাল কম্পিউটার (Digital Computer):</strong><br>- ডিজিটাল কম্পিউটারের মূল ভিত্তি হলো বাইনারী ডিজিট (০ এবং ১)।<br>- এ কম্পিউটারের যাবতীয় গাণিতিক ও যুক্তিমূলক কাজ বাইনারী ডিজিট এর মাধ্যমে সম্পন্ন হয়।<br>- প্রক্রিয়াকরণের ফলাফল লিখিত আকারে দেয়া হয়।<br>- ইনপুট ও আউটপুট অংশ আমাদের বোধগম্যতার জন্য বর্ণ, অক্ষর ও অংক দিয়ে প্রকাশ করা হয়।<br>- এ কম্পিউটারের গতি বেশ দ্রুত ও নির্ভরশীলতা বেশি। উপাত্ত সংরক্ষণের জন্য এতে বৃহৎ মেমোরি থাকে। আজকাল আমাদের ব্যবহৃত সকল কম্পিউটারই ডিজিটাল কম্পিউটার।</p>\r\n<p><strong>• হাইব্রিড কম্পিউটার (Hybrid Computer):</strong><br>- এনালগ ও ডিজিটাল কম্পিউটারের সমন্বয়ে তৈরি হয় সংকর বা হাইব্রিড কম্পিউটার।<br>- অনেক বৈজ্ঞানিক সমস্যা সমাধানের জন্য হাইব্রিড কম্পিউটার ব্যবহৃত হয়।</p>\r\n<p>উৎস: কম্পিউটার পরিচিতি ও ব্যবহার, স্কুল অব এগ্রিকালচার এন্ড রুরাল ডেভেলপমেন্ট, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 67,
+      "favorite_id": "117100366",
+      "question": "নিচের কোনটি একটি ভুল IPv4 ঠিকানা?",
+      "options": {
+        "a": "192.168.1.1",
+        "b": "10.0.0.255",
+        "c": "172.16.300.1",
+        "d": "203.0.113.5"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "172.16.300.1",
+      "explanation": "<p><strong>সঠিক উত্তর: অপশন (গ) <br>• 172.16.300.1: এটি একটি ভুল IPv4 ঠিকানা।<br>- </strong>কারণ IPv4 ঠিকানার প্রতিটি অংশকে অক্টেট বলা হয় এবং প্রতিটি অক্টেটের মান ০ থেকে ২৫৫ (০ থেকে ২৫৫) এর মধ্যে হতে হয়। <br>- এই ঠিকানার তৃতীয় অক্টেটটি হলো 300, যা ২৫৫ এর চেয়ে বড়।</p>\r\n<p><strong>• আইপি অ্যাড্রেস:</strong><br>- ইন্টারনেটে যুক্ত প্রত্যেকটি কম্পিউটারের একটি আইডেন্টিটি থাকে যা আইপি অ্যাড্রেস নামে পরিচিত।<br>- আইপি হল এক ধরনের নেটওয়ার্ক প্রটোকল।<br>- প্রত্যেকটি কম্পিউটারকে আলাদা করে সনাক্ত করতে আইপি অ্যাড্রেস ব্যবহৃত হয়।<br>- আইপি অ্যাড্রেস মূলত চারটি অংশে বিভক্ত এবং প্রতিটি অংশ ডট (.) চিহ্ন দ্বারা আলাদাভাবে বিভক্ত। এক একটি ভাগকে বলা হয় অকটেট (Octet)।<br>- একটি আইপি অ্যাড্রেসকে প্রকাশ করার তিনটি পদ্ধতি আছে। যথা-</p>\r\n<p><strong>১. ডটেড ডেসিমেল নোটেশন (Dotted decimal notation):</strong><br>- উদাহরণ: 192.168.15.5</p>\r\n<p><strong>২. হেক্সাডেসিম্যাল নোটেশন (Hexadecimal notation):</strong><br>- উদাহরণ: CO.A8.0F.05</p>\r\n<p><strong>৩. বাইনারি নোটেশন (Binary notation):</strong><br>- উদাহরণ: 11000000.10101000.00001111.00000101</p>\r\n<p>- চারটি অংশের সমন্বয়ে গঠিত আইপি অ্যাড্রেস IPv4 (IP ভার্সন 4) নামে পরিচিত।<br>- IPv4 এই অ্যাড্রেস হলো 4 × 8 বা 32 বিটের।<br>- আইপি অ্যাড্রেসের নতুন ভার্সন হলো IPv6, যার সাহায্যে 2<sup>128</sup> সংখ্যা ডিভাইসকে সনাক্ত করা যায় এবং যা 128 বিটের অ্যাড্রেস।</p>\r\n<p>উৎস: তথ্য ও যোগাযোগ প্রযুক্তি, এসএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<strong></strong></p>"
+    },
+    {
+      "id": 68,
+      "favorite_id": "117100361",
+      "question": "হেক্সাডেসিমেল (2F)<sub>16</sub> এর সমতুল্য দশমিক মান কত?",
+      "options": {
+        "a": "(43)<sub>10</sub>",
+        "b": "(47)<sub>10</sub>",
+        "c": "(51)<sub>10</sub>",
+        "d": "(55)<sub>10</sub>"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "(47)<sub>10</sub>",
+      "explanation": "<p>প্রশ্ন: হেক্সাডেসিমেল (2F)<sub>16</sub> এর সমতুল্য দশমিক মান কত?</p>\r\n<p>সমাধান:<br>হেক্সাডেসিমেল সংখ্যা রূপান্তরের সময় প্রতিটি অংককে ১৬-এর ঘাত দ্বারা গুণ করতে হয়।<br>বাম থেকে ডানে প্রতি অংকের অবস্থান অনুযায়ী ঘাত ধাপে ধাপে বাড়ে (0, 1, 2, ......)।<br>হেক্সাডেসিমেল অক্ষরগুলো: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15।</p>\r\n<p>(2F)<sub>16</sub> এর দশমিক মান নির্ণয়:<br>= (2 × 16<sup>1</sup>) + (F × 16<sup>0</sup>)<br>= (2 × 16) + (15 × 1)<br>= 32 + 15<br>= 47</p>\r\n<p>∴ (2F)<sub>16</sub> = (47)<sub>10</sub></p>\r\n<p>উত্তর: খ) (47)<sub>10</sub></p>"
+    },
+    {
+      "id": 69,
+      "favorite_id": "115896994",
+      "question": "IMEI-এর কোন অংশ দিয়ে নির্মাতা ও মডেল নির্ধারণ করা যায়?",
+      "options": {
+        "a": "TAC (Type Allocation Code)",
+        "b": "SNR (Serial Number)",
+        "c": "CD (Check Digit)",
+        "d": "SIM code"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "TAC (Type Allocation Code)",
+      "explanation": "<p><em><strong>• IMEI-এর মাধ্যমে মোবাইলের নির্মাতা ও মডেল নির্ধারণ করা যায় TAC (Type Allocation Code) এর মাধ্যমে। IMEI হলো একটি ১৫ অঙ্কের ইউনিক নম্বর, যা প্রতিটি মোবাইল ডিভাইসের জন্য আলাদা। </strong>এর প্রথম ৮ অঙ্কের অংশকে TAC বলা হয়, যা নির্দিষ্ট ডিভাইসের মডেল ও নির্মাতাকে চিহ্নিত করে। পরবর্তী ৬ অঙ্ক SNR (Serial Number) হিসেবে ব্যবহৃত হয়, যা নির্দিষ্ট ইউনিটকে আলাদা করে, এবং শেষের ১ অঙ্ক CD (Check Digit) হলো যাচাই সংখ্যার জন্য। তাই মোবাইলের মডেল বা কোম্পানি জানতে চাইলে IMEI-এর TAC অংশটি ব্যবহার করতে হয়, SIM কোড কোনোভাবেই IMEI বা ডিভাইসের মডেল নির্ধারণে সাহায্য করে না।</em></p>\r\n<p><strong><em>উত্তর: ক) TAC (Type Allocation Code).</em></strong></p>\r\n<p><strong>• IMEI:</strong><br>- প্রতিটি স্বতন্ত্র ফোনের জন্য একটি করে স্বতন্ত্র IMEI নাম্বার থাকে যার সাহায্যে ওই ফোনটি সনাক্ত করা যায়।<br>- IMEI: IMEI-এর পূর্ণরূপ International Mobile Equipment Identity.<br>- এটি একটি নাম্বার যা নির্দিষ্ট ধরনের মোবাইল এবং স্যাটেলাইট ফোন সনাক্ত করতে ব্যবহৃত হয়।<br>- এটি সাধারণত ব্যাটারি কম্পার্টমেন্টের ভিতরে প্রিন্ট করা হয় বা *#06# ডায়াল করে ফোনটি চালু হলে অ্যাক্সেস করা হয়।<br>- স্মার্টফোনে এটি বেশিরভাগ অপারেটিং সিস্টেমের সেটিংস মেনুতে পাওয়া যায়।</p>\r\n<p>উৎস: <br>- androidauthority. <a href=\"https://www.androidauthority.com/what-is-imei-923061/\" target=\"_blank\" rel=\"noopener\">[link]</a><br>- GSMA. <a href=\"https://www.gsma.com/solutions-and-impact/industry-services/device-services/tac-allocation\" target=\"_blank\" rel=\"noopener\">[link]</a></p>\r\n<p></p>"
+    },
+    {
+      "id": 70,
+      "favorite_id": "115896989",
+      "question": "Wi-Fi নেটওয়ার্কে SSID এর পূর্ণরূপ কী?",
+      "options": {
+        "a": "Standard Security ID",
+        "b": "System Signal ID",
+        "c": "Secure Service Identifier",
+        "d": "Service Set Identifier"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Service Set Identifier",
+      "explanation": "<p><em><strong>• Wi-Fi নেটওয়ার্কে SSID-এর পূর্ণরূপ হলো Service Set Identifier।</strong> এটি একটি ইউনিক নাম যা একটি নির্দিষ্ট Wi-Fi নেটওয়ার্ককে অন্য নেটওয়ার্ক থেকে আলাদা করে চিনতে সাহায্য করে। যখন কোনো ডিভাইস Wi-Fi সংযোগের জন্য স্ক্যান করে, তখন এটি চারপাশের সমস্ত নেটওয়ার্কের SSID তালিকায় প্রদর্শিত হয়। SSID সাধারণত একটি স্ট্রিং বা নাম আকারে থাকে, যা ব্যবহারকারী কাস্টমাইজ করতে পারে। এটি একটি নেটওয়ার্কের “পরিচয়” হিসেবে কাজ করে এবং একই এলাকায় একাধিক Wi-Fi থাকলেও আলাদা SSID থাকায় ব্যবহারকারী সহজেই সঠিক নেটওয়ার্কে সংযোগ করতে পারে। তাই, SSID হলো Wi-Fi নেটওয়ার্কের অপরিহার্য পরিচিতি।</em></p>\r\n<p><strong><em>সঠিক উত্তর: ঘ) Service Set Identifier.</em></strong></p>\r\n<p><strong>• Wi-Fi:</strong><br>- Wi-fi এর পূর্ণরূপ হলো Wireless Fidelity.<br>- Wi-fi হলো একটি জনপ্রিয় তারবিহীন প্রযুক্তি যা উচ্চগতির ইন্টারনেট ও নেটওয়ার্ক সংযোগসমূহ সরবরাহ করে থাকে রেডিও ওয়েভ ব্যবহাররের মাধ্যমে।<br>- ওয়াই-ফাই সাধারণত 2.4 থেকে 5 GHz ফ্রিকোয়েন্সিতে কাজ করে।<br>- এটি Wi-fi Alliance এর একটি ট্রেডমার্ক এবং IEEE 802.11 স্ট্যান্ডার্ড ব্যবহারকারী পণ্যসমূহের একটি ব্র্যান্ড নাম।<br>- ভিক্টর ভিক হেরেসকে ওয়াই-ফাই এর জনক বলা হয়।<br>- ওয়াই-ফাই এর ডাটা ট্রান্সমিশনে এ হাফ ডুপ্লেক্স মুড ব্যবহৃত হয়।<br>- কাভারেজ ঘরের ভিতর ৩৩ মিটার এবং বাইরে প্রায় ১০০ মিটার জুড়ে হয়ে থাকে।</p>\r\n<p>• এছাড়াও,<br>- WiMAX এর IEEE স্ট্যান্ডার্ড 802.16.<br>- Bluetooth এর IEEE স্ট্যান্ডার্ড 802.15.</p>\r\n<p>উৎস:<br>১. তথ্য ও যোগাযোগ প্রযুক্তি, একাদশ-দ্বাদশ শ্রেণি , প্রকৌশলী মুজিবুর রহমান।<br>২. মৌলক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>৩. Avira Website. <a href=\"https://www.avira.com/en/blog/what-is-an-ssid?srsltid=AfmBOornCX5fS5dHZ1S8RQtJWDzAFUPM8S0FXuBeSwfjGPNvu4rJEGAB\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 71,
+      "favorite_id": "115896965",
+      "question": "প্রচলিতভাবে কোনটি দ্রুত কার্যকর হয়?",
+      "options": {
+        "a": "ইন্টারপ্রেটার",
+        "b": "কম্পাইলার",
+        "c": "দুটিই সমানভাবে দ্রুত",
+        "d": "IDE-এর উপর নির্ভর করে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কম্পাইলার",
+      "explanation": "<p><em>• কম্পাইলার সাধারণত ইন্টারপ্রেটারের তুলনায় দ্রুত কার্যকর হয়। কারণ কম্পাইলার সম্পূর্ণ প্রোগ্রামকে একবারে মেশিন কোডে অনুবাদ করে, ফলে প্রোগ্রাম চালানোর সময় সরাসরি কম্পিউটার প্রসেসর সেই কোডটি কার্যকর করে। অন্যদিকে ইন্টারপ্রেটার কোডকে প্রতি লাইনে পড়ে এবং অনুশীলনের সময়ই অনুবাদ করে, যা সময়সাপেক্ষ। তাই বড় এবং জটিল প্রোগ্রামের ক্ষেত্রে কম্পাইলার বেশি দ্রুততার সুবিধা দেয়। যদিও IDE বা অন্যান্য টুল ব্যবহারের ক্ষেত্রে কিছু পার্থক্য দেখা যেতে পারে, সাধারণভাবে, কার্যকরতার দিক থেকে কম্পাইলার ইন্টারপ্রেটারের চেয়ে এগিয়ে। <br><strong>- সুতরাং দ্রুত কার্যকর হওয়ার দিক থেকে উত্তর হবে কম্পাইলার।</strong></em></p>\r\n<p><strong>• অনুবাদক প্রোগ্রাম (Translator Program):</strong><br>- বর্তমানে হাজার খানেক প্রোগ্রামিং ভাষা প্রচলিত, যদিও সব ভাষা সমানভাবে জনপ্রিয় নয়।<br>- কম্পিউটারের প্রসেসর কেবল বাইনারি ভাষা অর্থাৎ 0 ও 1-এর সংকেত বুঝে।<br>- তাই বিভিন্ন ভাষায় লেখা প্রোগ্রামকে মেশিন কোডে রূপান্তর করতে হয়।<br>- এই কাজটি করার জন্য বিশেষ প্রোগ্রাম তৈরি করা হয়, যাকে বলে অনুবাদক প্রোগ্রাম।</p>\r\n<p>• নিচে তিন ধরনের অনুবাদকের বর্ণনা দেওয়া হলো:<br><strong>১। অ্যাসেম্বলার (Assembler): </strong><br>- অ্যাসেম্বলি ভাষায় লেখা প্রোগ্রামকে মেশিন কোডে অনুবাদ করে অ্যাসেম্বলার নামক একটি প্রোগ্রাম।<br>- উচ্চ স্তরের যেসব প্রোগ্রামিং ভাষা সেগুলোকে মেশিন কোডে অনুবাদ করার কাজটি করার জন্য দু ধরনের প্রোগ্রাম রয়েছে- কম্পাইলার (Compiler) ও ইন্টারপ্রেটার (Interpreter)।<br>- প্রতিটি উচ্চ স্তরের প্রোগ্রামিং ভাষারই পৃথক কম্পাইলার অথবা ইন্টারপ্রেটার রয়েছে।<br>- এই দুই ধরনের অনুবাদক প্রোগ্রামের উদ্দেশ্য এক হলেও কাজের ধরনে কিছুটা ভিন্নতা রয়েছে।</p>\r\n<p><strong>২। কম্পাইলার (Compiler):</strong><br>- কম্পাইলার প্রথমে পুরো প্রোগ্রামটি পরীক্ষা করে দেখে যে ভাষার গঠনগত নিয়ম (Syntax) ঠিক আছে কি না। যদি ঠিক থাকে, তখন সে পুরো প্রোগ্রামটি কম্পাইল করে মেশিন কোডে রূপান্তর করে।<br>- যেহেতু পুরো প্রোগ্রামটি একবারে কম্পাইল করা হয় তাই প্রোগ্রামে কোনো ভুল থাকলে সব একসাথে দেখানো হয়। সে কারণে ভুলগুলো শুদ্ধ করা একটু জটিল।<br>- তবে কম্পাইল করার পর এই প্রোগ্রামগুলো অনেক দ্রুতগতিতে কাজ করে।</p>\r\n<p><strong>৩। ইন্টারপ্রেটার (Interpreter):</strong><br>- ইন্টারপ্রেটার পুরো প্রোগ্রাম পরীক্ষা না করে প্রোগ্রামের প্রতিটি স্টেটমেন্ট (statement বা নির্দেশ) মেশিন কোডে রূপান্তর করে সেটিকে এক্সিকিউট করে।<br>- অর্থাৎ, কোনো প্রোগ্রামে যদি দশটি স্টেটমেন্ট থাকে, তাহলে প্রথম স্টেটমেন্ট আগে মেশিন কোডে রূপান্তর হয়ে চলবে, তারপর দ্বিতীয় স্টেটমেন্ট, তারপর তৃতীয় স্টেটমেন্ট, একে একে সব স্টেটমেন্ট এক্সিকিউট হবে। এ কারণে ভুল শুদ্ধ করা অনেক সহজ।<br>- কিন্তু একটি একটি করে স্টেটমেন্ট মেশিন কোডে রূপান্তর হয় বলে সময় তুলনামূলকভাবে বেশি লাগে।</p>\r\n<p>উৎস: মৌলিক কম্পিউটার শিক্ষা, বিবিএ প্রোগ্রাম, উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    }
+  ]
+}

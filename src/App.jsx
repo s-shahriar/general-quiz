@@ -44,7 +44,8 @@ function AppRoutes() {
     location.pathname === '/bangla-grammer' ||
     location.pathname === '/english-grammer' ||
     location.pathname === '/sahitto' ||
-    location.pathname === '/gk'
+    location.pathname === '/gk' ||
+    location.pathname === '/livemcq'
 
   const showNav = isGeneralHome ||
     location.pathname === '/vocabulary' ||
@@ -71,7 +72,7 @@ function AppRoutes() {
               { path: '/utility',       label: 'Utility' },
             ].map(({ path, label }) => {
               const isActive = location.pathname === path ||
-                (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important')) ||
+                (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname === '/livemcq' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important')) ||
                 (path === '/vocabulary' && location.pathname.startsWith('/vocabulary')) ||
                 (path === '/utility' && (location.pathname === '/math' || location.pathname === '/financial'))
               return (
@@ -99,6 +100,7 @@ function AppRoutes() {
           <Route path="/english-grammer" element={<HomeScreen activeGroup="english" onBackup={() => setShowBackup(true)} />} />
           <Route path="/sahitto" element={<HomeScreen activeGroup="sahitya" onBackup={() => setShowBackup(true)} />} />
           <Route path="/gk" element={<HomeScreen activeGroup="gk" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/livemcq" element={<HomeScreen activeGroup="livemcq" onBackup={() => setShowBackup(true)} />} />
           <Route path="/topic/:topicId" element={<ModeSelect />} />
           <Route path="/topic/:topicId/quiz" element={<QuizMode />} />
           <Route path="/topic/:topicId/study" element={<StudyMode />} />

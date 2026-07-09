@@ -4,12 +4,14 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
-import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { duplicateQidsOf } from '../lib/questionIndex.js'
 import { shuffle } from '../lib/utils'
 import CategorySidebar from './CategorySidebar.jsx'
 import QuizOptions from './shared/QuizOptions'
+import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
+import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
 
 export default function QuizMode({
   topic: topicProp,
@@ -22,6 +24,8 @@ export default function QuizMode({
   const navigate = useNavigate()
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
+  const isLm = (topicId || '').startsWith('lm_')
+  const lmReady = useLiveMcqReady(isLm)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
   const { value: important, add: markImportant, removeMany: unmarkImportant } = useImportantContext()
   const { theme, toggleTheme } = useThemeContext()
@@ -30,6 +34,7 @@ export default function QuizMode({
   const [revealed, setRevealed] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
+  // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place
   const questions = useMemo(
     () => topic
       ? shuffle(
@@ -38,7 +43,7 @@ export default function QuizMode({
             .filter(q => q.options && q.correct_answer)
         )
       : [],
-    [topic]
+    [topic, lmReady] // eslint-disable-line react-hooks/exhaustive-deps
   )
 
   const [idx, setIdx]           = useState(0)
@@ -46,6 +51,7 @@ export default function QuizMode({
   const [done, setDone]         = useState(false)
 
   if (!topic) return <Navigate to="/" replace />
+  if (isLm && !lmReady) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
   const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
   const goHome   = () => onHomeProp ? onHomeProp() : navigate('/')
@@ -84,6 +90,7 @@ export default function QuizMode({
     if (BANGLA_TOPICS.some(x => x.id === t.id))       return BANGLA_TOPICS
     if (ENGLISH_TOPICS.some(x => x.id === t.id))      return ENGLISH_TOPICS
     if (BANGLA_SAHITYA_TOPICS.some(x => x.id === t.id)) return BANGLA_SAHITYA_TOPICS
+    if (LIVEMCQ_TOPICS.some(x => x.id === t.id))        return LIVEMCQ_TOPICS
     return GK_TOPICS
   }
 
@@ -129,7 +136,7 @@ export default function QuizMode({
       </div>
 
       <div className="quiz-card anim-slide">
-        <p className="quiz-question">{q.question}</p>
+        <RichText as="div" className="quiz-question" html={q.question} />
 
         <QuizOptions options={q.options} correctAnswer={q.correct_answer} selected={selected} revealed={revealed} accentColor={topic.color} onPick={pick} />
 
@@ -142,7 +149,7 @@ export default function QuizMode({
                 {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
               </span>
             </div>
-            <p className="explanation-text">{q.explanation}</p>
+            <RichText as="div" className="explanation-text" html={q.explanation} />
           </div>
         )}
 

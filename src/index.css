@@ -851,7 +851,7 @@ button {
 
 .quiz-topbar {
   position: sticky;
-  top: -16px;
+  top: -8px;
   z-index: 100;
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
@@ -1439,7 +1439,7 @@ button {
 
 .study-topbar {
   position: sticky;
-  top: -16px;
+  top: -8px;
   z-index: 100;
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
@@ -4126,3 +4126,41 @@ button {
 /* disabled mode card (e.g. MCQ not yet added) */
 .mode-card-disabled { opacity: 0.55; cursor: not-allowed; }
 .mode-card-disabled:hover { transform: none; }
+
+/* ── LiveMCQ rich HTML content (math sup/sub, figures, tables) ─────────── */
+.rich { line-height: 1.6; }
+.rich img {
+  max-width: 100%;
+  height: auto !important;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+}
+.rich sup, .rich sub { font-size: 0.72em; line-height: 0; }
+.rich strong, .rich b { font-weight: 700; }
+.rich em, .rich i { font-style: italic; }
+.rich u { text-decoration: underline; text-underline-offset: 2px; }
+.rich a { color: var(--c, #38bdf8); text-decoration: underline; word-break: break-word; }
+.rich p { margin: 0.35em 0; }
+.rich p:first-child { margin-top: 0; }
+.rich p:last-child { margin-bottom: 0; }
+.rich table { border-collapse: collapse; margin: 0.5rem 0; font-size: 0.9em; }
+.rich th, .rich td { border: 1px solid var(--border, rgba(148,163,184,0.4)); padding: 4px 8px; text-align: left; }
+.rich ul, .rich ol { margin: 0.35em 0; padding-left: 1.4em; }
+/* inside option chips keep images compact and inline */
+.opt-text.rich img, .study-opt-text.rich img { display: inline-block; margin: 2px 0; max-height: 140px; padding: 2px; }
+
+/* search result: collapsible LiveMCQ explanation toggle */
+.gs-exp-toggle {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 6px; padding: 4px 10px;
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--c, #38bdf8);
+  background: color-mix(in srgb, var(--c, #38bdf8) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c, #38bdf8) 28%, transparent);
+  border-radius: 999px; cursor: pointer;
+}
+.gs-exp-toggle:hover { background: color-mix(in srgb, var(--c, #38bdf8) 18%, transparent); }
+.gs-card-exp-open { margin-top: 8px; }

@@ -1,0 +1,1407 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "favorite_id": "150179152",
+      "question": "Which system is used by the Government of Bangladesh as an integrated financial management system?",
+      "options": {
+        "a": "NEIR",
+        "b": "e-GP",
+        "c": "iBAS++",
+        "d": "NIDW"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "iBAS++",
+      "explanation": "<p>• <strong>iBAS++ বাংলাদেশ সরকারের সমন্বিত আর্থিক ব্যবস্থাপনা তথ্যব্যবস্থা। এটি বাজেট, হিসাবরক্ষণ ও আর্থিক রিপোর্টিং কার্যক্রমে ব্যবহৃত হয়।</strong></p>\r\n<p><strong>• iBAS++:</strong><br>- iBAS++ হলো Integrated Budget and Accounting System.<br>- এটি Government of Bangladesh-এর Integrated Financial Management Information System বা IFMIS.<br>- সরকারি বাজেট প্রস্তুতি, বাজেট বাস্তবায়ন, হিসাবরক্ষণ, রসিদ, পেমেন্ট ও আর্থিক রিপোর্টিংয়ের মতো কাজ iBAS++-এর মাধ্যমে পরিচালিত হয়।<br>- এটি সরকারি আর্থিক লেনদেনকে ডিজিটাল, কেন্দ্রীয় এবং তুলনামূলক দ্রুত করতে সহায়তা করে।<br>- iBAS++ সরকারি আর্থিক তথ্য real-time ভিত্তিতে দেখাতে পারে; ফলে বাজেট নিয়ন্ত্রণ ও সিদ্ধান্ত গ্রহণ সহজ হয়।<br>- সরকারি কর্মচারীর বেতন, পেনশন, ভাতা এবং বিভিন্ন আর্থিক দাবির প্রক্রিয়াতেও এই ব্যবস্থা ব্যবহৃত হয়।<br>- সরকারি অর্থ ব্যবস্থাপনায় স্বচ্ছতা, নির্ভুলতা এবং রিপোর্টিং সক্ষমতা বাড়ানো iBAS++-এর গুরুত্বপূর্ণ ভূমিকা।</p>\r\n<p><strong>অন্যান্য অপশন:</strong><br>→ <strong>NEIR:</strong> NEIR মোবাইল ডিভাইসের পরিচয় ও নিবন্ধনের সঙ্গে সম্পর্কিত।<br>→ <strong>e-GP:</strong> e-GP সরকারি ক্রয়প্রক্রিয়ার ইলেকট্রনিক ব্যবস্থাপনার সঙ্গে সম্পর্কিত।<br>→ <strong>NIDW:</strong> NIDW জাতীয় পরিচয়পত্রভিত্তিক নাগরিক তথ্যভান্ডারের সঙ্গে সম্পর্কিত।</p>\r\n<p><strong>উৎস:</strong><br>১) iBAS++ Portal [<a href=\"https://ibas.finance.gov.bd/\" target=\"_blank\" rel=\"noopener\">Link</a>];<br>২) SPFMS [<a href=\"https://spfms.gov.bd/home/SchemeAchievement?sid=2\" target=\"_blank\" rel=\"noopener\">Link</a>];<br>৩) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 2,
+      "favorite_id": "149987936",
+      "question": "Who is most affected by Sovereign Default Risk?",
+      "options": {
+        "a": "Individual consumers",
+        "b": "Tourists",
+        "c": "Foreign investors and lenders",
+        "d": "Local business owners"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Foreign investors and lenders",
+      "explanation": "<p><strong>→ ঋণ-জিডিপি অনুপাত:</strong><br>- Debt-to-GDP Ratio বা ঋণ-জিডিপি অনুপাত হলো একটি দেশের মোট সরকারি ঋণের সঙ্গে সেই দেশের মোট দেশজ উৎপাদনের (GDP) তুলনামূলক পরিমাপ।<br>- এই অনুপাতের মাধ্যমে বোঝা যায়, দেশের অর্থনৈতিক সক্ষমতার তুলনায় ঋণের পরিমাণ কতটুকু।<br>- Debt-to-GDP Ratio দ্রুত বেড়ে গেলে অর্থনীতিতে বিভিন্ন ধরনের ঝুঁকি তৈরি হতে পারে।<br><br><strong>→ সার্বভৌম ডিফল্ট ঝুঁকি (Sovereign Default Risk):</strong><br><strong>- সরকারি ঋণের পরিমাণ যদি GDP-এর তুলনায় অতিরিক্ত বেড়ে যায়, তাহলে ঋণদাতা ও বিনিয়োগকারীদের মধ্যে উদ্বেগ তৈরি হয়।</strong><br>- তারা আশঙ্কা করে যে সরকার সময়মতো ঋণ ও সুদ পরিশোধে ব্যর্থ হতে পারে।<br>- এই পরিস্থিতিকেই সার্বভৌম ডিফল্ট ঝুঁকি বলা হয়।<br><br><strong>→ উচ্চ সুদের চাপ (Higher Interest Burden):</strong><br>- ঋণের পরিমাণ বৃদ্ধি পেলে সরকারকে বিপুল অঙ্কের সুদ পরিশোধ করতে হয়।<br>- ফলে জাতীয় বাজেটের বড় অংশ উন্নয়ন খাতে ব্যয় না হয়ে ঋণের সুদ পরিশোধে চলে যায়।<br><br><strong>→ ব্যাংকিং খাতে নেতিবাচক প্রভাব:</strong><br>- ব্যাংকগুলো সরকারি ট্রেজারি বিল ও বন্ডে বড় অঙ্কের বিনিয়োগ করে থাকে।<br>- সরকারের ঋণঝুঁকি বাড়লে ব্যাংকিং খাতেও অস্থিরতা তৈরি হতে পারে।</p>\r\n<p><em>তথ্যসূত্র - Investopedia.</em></p>"
+    },
+    {
+      "id": 3,
+      "favorite_id": "148599660",
+      "question": "What is the term used for the risky assets created from the possibility that a bank may not recover the money it lends?",
+      "options": {
+        "a": "Fixed Assets",
+        "b": "Liquid Assets",
+        "c": "Non-Performing Assets",
+        "d": "Risk-Weighted Assets"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Non-Performing Assets",
+      "explanation": "<p><strong>Non-Performing Assets (NPA):</strong><br>- ব্যাংক যখন কোনো গ্রাহককে ঋণ দেয়, তখন সেই ঋণটি ব্যাংকের জন্য একটি 'Asset' বা সম্পদ, কারণ এখান থেকে ব্যাংক সুদ আয় করে। <br><strong>- কিন্তু গ্রাহক যখন ঋণের কিস্তি বা সুদ সময়মতো ফেরত দিতে পারে না এবং একটি নির্দিষ্ট সময় (সাধারণত ৯০ দিন) পার হয়ে যাওয়ার পরও টাকা আদায় হয় না, তখন সেই ঋণকে ঝুঁকিপূর্ণ সম্পদ বা Non-Performing Asset বলা হয়।<br></strong>- সাধারণ ভাষায় একে আমরা খেলাপি ঋণ বা মন্দ ঋণ বলি। </p>\r\n<p>অন্যদিকে,<br>- Fixed Assets: এগুলো হলো ব্যাংকের নিজস্ব ব্যবহারের জন্য কেনা স্থায়ী সম্পত্তি, যেমন—ব্যাংকের ভবন, জমি, কম্পিউটার বা আসবাবপত্র।<br>- Liquid Assets: এগুলো হলো নগদ টাকা বা এমন সম্পদ যা খুব দ্রুত নগদে রূপান্তর করা যায় (যেমন—সরকারি বন্ড বা প্রাইজবন্ড)।<br>- Risk-Weighted Assets : ব্যাংকের বিভিন্ন সম্পদের ঝুঁকির মাত্রা বিবেচনা করে এই হিসাবটি করা হয়, যাতে বোঝা যায় ব্যাংকের কী পরিমাণ মূলধন (Capital) জমা রাখা উচিত। <br><br>উৎস: Investopedia</p>"
+    },
+    {
+      "id": 4,
+      "favorite_id": "148599656",
+      "question": "Under the Anti-Money Laundering Act, 2012, what is the minimum imprisonment term for a money laundering offence in general cases?",
+      "options": {
+        "a": "1 years",
+        "b": "2 years",
+        "c": "3 years",
+        "d": "4 years"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "4 years",
+      "explanation": "<p>- মানিলন্ডারিং অপরাধ বা তার চেষ্টা করলে Anti-Money Laundering Act, 2012 অনুযায়ী কঠোর শাস্তির বিধান রয়েছে।<br>- অপরাধের গুরুত্ব বিবেচনায় অভিযুক্ত ব্যক্তিকে কারাদণ্ড ও অর্থদণ্ড উভয়ই দেওয়া যেতে পারে।<br><strong>- সাধারণভাবে ন্যূনতম ৪ বছর থেকে সর্বোচ্চ ১২ বছর পর্যন্ত কারাদণ্ড হতে পারে।</strong><br>- কারাদণ্ডের পাশাপাশি আদালত অর্থদণ্ড আরোপ করে।<br>- এই জরিমানার পরিমাণ হবে অপরাধের সাথে সংশ্লিষ্ট সম্পত্তির মূল্যের দ্বিগুণ, অথবা নির্ধারিত ন্যূনতম অর্থমূল্য (যেটি বেশি হবে)।<br>- অপরাধের মাধ্যমে অর্জিত বা সংশ্লিষ্ট সব সম্পত্তি রাষ্ট্রের অনুকূলে বাজেয়াপ্ত করার ক্ষমতা আদালতের রয়েছে।<br>- অর্থাৎ, শাস্তি শুধু কারাদণ্ডে সীমাবদ্ধ নয়; আর্থিক জরিমানা ও সম্পত্তি রাষ্ট্রের কাছে হস্তান্তরও এই আইনের গুরুত্বপূর্ণ অংশ।</p>\r\n<p><em>তথ্যসূত্র - Anti-Money Laundering Act, 2012.</em></p>"
+    },
+    {
+      "id": 5,
+      "favorite_id": "148408766",
+      "question": "Where is the headquarters of the Islamic Development Bank (IsDB) located?",
+      "options": {
+        "a": "Abu Dhabi",
+        "b": "Jeddah",
+        "c": "Istanbul",
+        "d": "Doh"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Jeddah",
+      "explanation": "<p><strong>Islamic Development Bank (IsDB):</strong><br>- ইসলামিক ডেভেলপমেন্ট ব্যাংক (IsDB) গঠনের সিদ্ধান্ত নেওয়া হয় ১৯৭৩ সালের ডিসেম্বর মাসে সৌদি আরবের জেদ্দায় অনুষ্ঠিত মুসলিম দেশগুলোর অর্থমন্ত্রীদের প্রথম সম্মেলনে।<br>- সংস্থাটি আনুষ্ঠানিকভাবে কার্যক্রম শুরু করে ২০ অক্টোবর ১৯৭৫ সালে।<br><strong>- IsDB-এর প্রধান কার্যালয় সৌদি আরবের জেদ্দা শহরে অবস্থিত।</strong><br>- বর্তমানে ব্যাংকটির সদস্যরাষ্ট্রের সংখ্যা ৫৭টি।<br>- ইসলামী সহযোগিতা সংস্থা বা OIC-এর সদস্য হওয়া IsDB-এর সদস্যপদ লাভের অন্যতম প্রধান শর্ত।<br>- বর্তমানে ইসলামিক ডেভেলপমেন্ট ব্যাংকের প্রেসিডেন্ট হিসেবে দায়িত্ব পালন করছেন মুহাম্মদ সুলাইমান আল জাসের।<br>- তিনি সৌদি আরবের নাগরিক।</p>\r\n<p>উল্লেখ্য:<br>- বাংলাদেশ ১২ আগস্ট, ১৯৭৪ সালে IsDB-এর সদস্যপদ লাভ করে।</p>\r\n<p><em>তথ্যসূত্র - IDB অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 6,
+      "favorite_id": "148408753",
+      "question": "Who issues an Invoice?",
+      "options": {
+        "a": "Buyer",
+        "b": "Customs Authority",
+        "c": "Seller",
+        "d": "Bank"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Seller",
+      "explanation": "<p><strong>Invoice:</strong><br>- Invoice হলো একটি বাণিজ্যিক দলিল, যেখানে বিক্রিত পণ্য বা সেবার বিস্তারিত তথ্য উল্লেখ থাকে।<br><strong>- এটি সাধারণত বিক্রেতা ক্রেতার কাছে ইস্যু করে।</strong><br>- Invoice পণ্য বা সেবা সরবরাহের পর পেমেন্ট দাবি করার জন্য ব্যবহার করা হয়।<br>- এতে পণ্যের পরিমাণ, মূল্য, কর এবং মোট বিলের তথ্য থাকে।<br>- এটি একটি গুরুত্বপূর্ণ Accounting Document হিসেবে ব্যবহৃত হয়।<br>- আন্তর্জাতিক বাণিজ্যে Invoice কাস্টমস ক্লিয়ারেন্সের জন্য অপরিহার্য।<br>- Invoice ব্যবসায়িক লেনদেনের আইনগত ও আর্থিক প্রমাণ হিসেবে কাজ করে।<br><br><em>তথ্যসূত্র - Investopedia.com</em></p>"
+    },
+    {
+      "id": 7,
+      "favorite_id": "148408751",
+      "question": "Who issues the Bill of Lading?",
+      "options": {
+        "a": "Exporter",
+        "b": "Importer",
+        "c": "Customs Authority",
+        "d": "Carrier"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Carrier",
+      "explanation": "<p><strong>Bill of Lading:</strong><br>- Bill of Lading হলো আন্তর্জাতিক শিপিংয়ে ব্যবহৃত একটি গুরুত্বপূর্ণ পরিবহন দলিল।<br><strong>- এটি সাধারণত পরিবহনকারী বা শিপিং কোম্পানি দ্বারা ইস্যু করা হয়।</strong><br>- পরিবহনকারী বা শিপিং কোম্পানি পণ্য গ্রহণের পর শিপারকে এই দলিল প্রদান করে।<br>- এটি প্রমাণ করে যে নির্দিষ্ট পণ্য পরিবহনের জন্য জাহাজ/ক্যারিয়ারের কাছে হস্তান্তর করা হয়েছে।<br>- Bill of Lading একই সঙ্গে পরিবহন চুক্তির প্রমাণ হিসেবেও কাজ করে।<br>- এতে পণ্যের বিবরণ, প্রেরক, গ্রাহক ও গন্তব্যের তথ্য উল্লেখ থাকে।<br>- এটি পণ্য গ্রহণ ও ডেলিভারির ক্ষেত্রে একটি আইনগত দলিল হিসেবে ব্যবহৃত হয়।<br><br><em>তথ্যসূত্র - unctad ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 8,
+      "favorite_id": "148408731",
+      "question": "Which component of the Basel Framework helps banks manage liquidity risk?",
+      "options": {
+        "a": "LCR",
+        "b": "GDP",
+        "c": "NPL",
+        "d": "VAT"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "LCR",
+      "explanation": "<p><strong>Basel Framework:</strong><br>- LCR হলো Basel III Framework-এর একটি গুরুত্বপূর্ণ তারল্য মানদণ্ড।<br>- LCR এর পূর্ণরূপ Liquidity Coverage Ratio.<br><strong>- LCR এর উদ্দেশ্য ব্যাংকের তারল্য ঝুঁকি মোকাবিলায় সহায়তা করা।</strong><br>- Basel Committee on Banking Supervision (BCBS) অনুযায়ী, LCR ব্যাংককে পর্যাপ্ত উচ্চমানের তরল সম্পদ ধারণ করতে উৎসাহিত করে।<br>- ৩০ দিনের তীব্র আর্থিক চাপের পরিস্থিতিতেও এই সম্পদগুলো নগদে রূপান্তর করা যায়।<br>- এর মাধ্যমে ব্যাংকের স্বল্পমেয়াদি তারল্য ঝুঁকি কমানো হয়।<br>- ২০০৭-০৯ সালের বৈশ্বিক আর্থিক সংকটের অভিজ্ঞতার ভিত্তিতে Basel III-তে LCR চালু করা হয়।<br><br><em>তথ্যসূত্র - Basel Framework ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 9,
+      "favorite_id": "148408714",
+      "question": "In which year did Bangladesh obtain membership in the IMF?",
+      "options": {
+        "a": "1972",
+        "b": "1973",
+        "c": "1974",
+        "d": "1975"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "1972",
+      "explanation": "<p><strong>→ বাংলাদেশ ১৯৭২ সালে IMF-এর সদস্যপদ লাভ করে।</strong><br><br><strong>IMF:</strong><br>- IMF এর পূর্ণরূপ হলো International Monetary Fund.<br>- আন্তর্জাতিক মুদ্রা তহবিল ১৯৪৪ সালে প্রতিষ্ঠিত হয়।<br>- IMF-এর সদর দপ্তর যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে অবস্থিত।<br>- প্রতিষ্ঠাকালে এর সদস্য সংখ্যা ছিল ৪৪টি দেশ।<br>- বর্তমানে এর সদস্য সংখ্যা ১৯১টি।<br>- আন্তর্জাতিক মুদ্রা তহবিলে সর্বশেষ সদস্য হিসেবে যুক্ত হয়েছে লিচেনস্টাইন।<br>- বর্তমানে IMF-এর ব্যবস্থাপনা পরিচালক হলেন ক্রিস্টালিনা জর্জিয়েভা।</p>\r\n<p><em>তথ্যসূত্র - IMF অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 10,
+      "favorite_id": "148408708",
+      "question": "Which is not a deposit?",
+      "options": {
+        "a": "Savings Account",
+        "b": "Checking Account",
+        "c": "Certificate of Deposit (CD)",
+        "d": "Stock Investment"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Stock Investment",
+      "explanation": "<p><strong>→ Stock Investment ডিপোজিট নয়।</strong><br><br><strong>ডিপোজিট:</strong><br>- ডিপোজিট বলতে সাধারণত ব্যাংক বা আর্থিক প্রতিষ্ঠানে অর্থ জমা রাখাকে বোঝায়।<br>- Savings Account একটি আমানত হিসাব, যেখানে অর্থ সঞ্চয় করা হয় এবং সুদ পাওয়া যায়।<br>- Checking Account হল দৈনন্দিন লেনদেনের জন্য ব্যবহৃত একটি আমানত হিসাব।<br>- Certificate of Deposit (CD) হল নির্দিষ্ট সময়ের জন্য অর্থ জমা রাখার একটি ডিপোজিট পণ্য।<br>- Money Market Deposit Account ব্যাংকের একটি আমানত হিসাব, যা সাধারণ সঞ্চয় হিসাবের তুলনায় বেশি সুদ দিতে পারে।<br>- Time Deposit নির্দিষ্ট মেয়াদের জন্য অর্থ জমা রাখার একটি ব্যবস্থা।<br>- এসব ক্ষেত্রেই গ্রাহকের অর্থ ব্যাংকে আমানত হিসেবে সংরক্ষিত থাকে।<br><br><strong>→ উল্লেখ্য:</strong><br>- Stock Investment হলো কোনো কোম্পানির শেয়ার ক্রয় করে বিনিয়োগ করা।<br>- শেয়ার ক্রয়ের মাধ্যমে বিনিয়োগকারী প্রতিষ্ঠানের মালিকানার অংশ অর্জন করেন, কিন্তু এটি ব্যাংক আমানত নয়।<br><br><em>তথ্যসূত্র - Investopedia.</em></p>"
+    },
+    {
+      "id": 11,
+      "favorite_id": "148408666",
+      "question": "What does a company raise by selling shares?",
+      "options": {
+        "a": "Short-term loan",
+        "b": "Subsidy",
+        "c": "Grant",
+        "d": "Long-term capital"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Long-term capital",
+      "explanation": "<p><strong>পুঁজি বাজারের হাতিয়ার:</strong><br>- যে সকল আর্থিক সম্পদ পুঁজি বাজারে ক্রয়- বিক্রয় হয় সে গুলোকে পুঁজি বাজারের হাতিয়ার বা উপাদান বলে। যেমন: শেয়ার, অগ্রাধিকার শেয়ার এবং বন্ড ইত্যাদি। নিম্নে পুঁজি বাজারের এসব উপাদান বা হাতিয়ার সম্পর্কে আলোচনা করা হলো:<br><br><strong>• সাধারণ শেয়ার:</strong><br>- সাধারণ শেয়ার পুঁজি বাজারের একটি প্রধান উপাদান, যা কোম্পানির আংশিক মালিকানা নির্দেশ করে।<br>- যৌথমূলধনী কোম্পানি শেয়ার বিক্রয়ের মাধ্যমে মূলধন সংগ্রহ করে।<br>- শেয়ার ক্রয়ের মাধ্যমে শেয়ারহোল্ডাররা কোম্পানির আংশিক মালিকানা পায়।<br>- তারা লভ্যাংশ হিসেবে কোম্পানির মুনাফার একটি অংশ লাভ করে।<br><br><strong>• অগ্রাধিকার শেয়ার: </strong><br><strong>- অগ্রাধিকার শেয়ার বিক্রয়ের মাধ্যমে কোম্পানি দীর্ঘমেয়াদি মূলধন সংগ্রহ করে।</strong><br>- এ শেয়ারের মালিকরা লভ্যাংশ ও অন্যান্য আর্থিক সুবিধার ক্ষেত্রে সাধারণ শেয়ারহোল্ডারদের চেয়ে অগ্রাধিকার পায়।<br>- তবে তাদের কোনো ভোটাধিকার নেই এবং তারা সিদ্ধান্ত গ্রহণে অংশ নিতে পারে না।<br>- এ শেয়ারের লভ্যাংশের হার পূর্ব নির্ধারিত থাকে এবং সাধারণত এর নির্দিষ্ট মেয়াদ থাকে না।<br><br><em>তথ্যসূত্র - ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 12,
+      "favorite_id": "148408646",
+      "question": "Which is the largest financial market in the world?",
+      "options": {
+        "a": "Real Estate Market",
+        "b": "Forex Market",
+        "c": "Bond Market",
+        "d": "Stock Market"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Forex Market",
+      "explanation": "<p><strong>Forex:</strong><br>- Foreign Exchange (Forex) বলতে এক দেশের মুদ্রার বিনিময়ে অন্য দেশের মুদ্রা ক্রয়-বিক্রয়ের ব্যবস্থাকে বোঝায়।<br>- আন্তর্জাতিক বাণিজ্য, বিনিয়োগ ও পর্যটনে বৈদেশিক মুদ্রা বিনিময় অপরিহার্য।<br><strong>- Forex Market বিশ্বের সবচেয়ে বড় আর্থিক বাজার হিসেবে পরিচিত।</strong><br>- বৈদেশিক মুদ্রার বিনিময় হার একটি মুদ্রার মূল্য অন্য মুদ্রার তুলনায় কত তা নির্দেশ করে।<br>- আমদানি ও রপ্তানি কার্যক্রম পরিচালনায় Foreign Exchange গুরুত্বপূর্ণ ভূমিকা পালন করে।<br>- কেন্দ্রীয় ব্যাংকগুলো বৈদেশিক মুদ্রা বাজারের স্থিতিশীলতা রক্ষায় বিভিন্ন নীতি গ্রহণ করে।<br>- Forex লেনদেনের মাধ্যমে ব্যবসা প্রতিষ্ঠান আন্তর্জাতিক অর্থপ্রদান সম্পন্ন করে।<br>- পর্যটক ও ভ্রমণকারীরা বিদেশে ব্যয়ের জন্য স্থানীয় মুদ্রাকে বৈদেশিক মুদ্রায় রূপান্তর করে।<br>- বৈদেশিক মুদ্রার রিজার্ভ একটি দেশের অর্থনৈতিক সক্ষমতার গুরুত্বপূর্ণ নির্দেশক।<br><br><em>তথ্যসূত্র - IMF ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 13,
+      "favorite_id": "148408638",
+      "question": "Bond is an instrument of which market?",
+      "options": {
+        "a": "Money Market",
+        "b": "Capital Market",
+        "c": "Agricultural Market",
+        "d": "Retail Market"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Capital Market",
+      "explanation": "<p><strong>→ বন্ড পুঁজি বাজার (Capital Market) উপাদান।</strong><br><br><strong>বন্ড বা ঋণপত্র:</strong><br>- বন্ড হলো একটি দীর্ঘ মেয়াদি ঋণের দলিল যা ইস্যুকারি প্রতিষ্ঠানকে এর ধারককে একটি নির্দিষ্ট পরিমাণ অর্থ পরিশোধ করতে বাধ্য থাকে।<br>- এটিতে ফেস ভেলু, সুদের হার, ঋণের পরিমাণ এবং মেয়াদ ইত্যাদি বিষয় উল্লেখ করা থাকে। <br>- এটি ইস্যু করার সাহায্যে একটি কোম্পানি দীর্ঘ মেয়াদি মূলধন সংগ্রহ করে থাকে।<br>- এর হোল্ডারগণ নির্দিষ্ট হারে সুদ পেয়ে থাকেন।<br><br><em>তথ্যসূত্র - ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 14,
+      "favorite_id": "148408602",
+      "question": "Who receives the money in the primary market?",
+      "options": {
+        "a": "Share buyers",
+        "b": "Government",
+        "c": "Banks",
+        "d": "Issuing company"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Issuing company",
+      "explanation": "<p><strong>প্রাথমিক বাজার:</strong> <br>- যে বাজারে কোন কোম্পানির শেয়ার প্রথম বার ইস্যু করা হয় তাকে প্রাথমিক বাজার বলে। <br><strong>- এক্ষেত্রে শেয়ার বা সিকিউরিটি বিক্রয়ের অর্থ ইস্যুকারী কোম্পানি সরাসরি পেয়ে থাকে।</strong> <br>- BSEC-এর Bangladesh Securities and Exchange Commission (Public Offer of Equity Securities) Rules, 2025 অনুযায়ী, একজন বিনিয়োগকারী কোনো কোম্পানির শেয়ার বিক্রির প্রথম প্রস্তাবে অংশগ্রহণ করে প্রাথমিক বাজারে IPO (Initial Public Offering)-এ আবেদন করার মাধ্যমে শেয়ার কিনতে পারে। এজন্য তাকে নির্ধারিত IPO আবেদনপত্র পূরণ করে নির্ধারিত ব্যাংক, ইস্যুকারী প্রতিষ্ঠানের মাধ্যমে আবেদন জমা দিতে হয়।<br>- সুতরাং কোন কোম্পানি যে বাজারে শেয়ার বিক্রির প্রথম প্রস্তাব (Initial public offer) করে, সে বাজারকে প্রাথমিক বাজার বলে।<br><br><em>তথ্যসূত্র - BSEC ওয়েবসাইট ও ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 15,
+      "favorite_id": "148408583",
+      "question": "Who prepares a commercial Invoice?",
+      "options": {
+        "a": "Bank",
+        "b": "Shipping agent",
+        "c": "Importer",
+        "d": "Exporter"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Exporter",
+      "explanation": "<p><strong>Commercial Invoice:</strong><br>- Commercial Invoice বা বাণিজ্যিক চালান আন্তর্জাতিক বাণিজ্যের একটি গুরুত্বপূর্ণ দলিল।<br><strong>- এটি সাধারণত পণ্যের বিক্রেতা বা রপ্তানিকারক (Exporter) প্রস্তুত করে।</strong><br>- রপ্তানিকারক এই চালান আমদানিকারকের (Importer) কাছে প্রদান করে।<br>- এতে পণ্যের নাম, পরিমাণ, মূল্য, ওজন এবং শিপমেন্ট সংক্রান্ত তথ্য উল্লেখ থাকে।<br>- কাস্টমস কর্তৃপক্ষ শুল্ক ও কর নির্ধারণে এই ইনভয়েস ব্যবহার করে।<br>- এলসি (Letter of Credit) লেনদেনের ক্ষেত্রেও ব্যাংক Commercial Invoice যাচাই করে।<br>- এটি ক্রেতা ও বিক্রেতার মধ্যকার বিক্রয় চুক্তির প্রমাণ হিসেবেও কাজ করে।<br>- সাধারণত রপ্তানিকারকের অফিসিয়াল প্যাড বা লেটারহেডে এটি প্রস্তুত করা হয়।<br><br><strong>উল্লেখ্য:</strong><br>- ব্যাংক, শিপিং এজেন্ট বা বিমা কোম্পানি অন্যান্য কাজ করলেও Commercial Invoice প্রস্তুত করে না।<br><br><em>তথ্যসূত্র - International Chamber of Commerce (ICC) ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 16,
+      "favorite_id": "148408568",
+      "question": "What type of security is a Repurchase Agreement (Repo)?",
+      "options": {
+        "a": "Long-term security",
+        "b": "Medium-term security",
+        "c": "Short-term security",
+        "d": "Bond security"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Short-term security",
+      "explanation": "<p><strong>পুণঃক্রয় চুক্তি: </strong><br><strong>- পুণঃক্রয় চুক্তি হলো একটা স্বল্প মেয়াদি সিকিউরিটি যা একটি নির্দিষ্ট সময় পরে শর্তসাপেক্ষে মূল বিক্রেতা পূর্বনির্ধারিত মূল্যে সিকিউরিটি পুণরায় ক্রয় করে নিবে।</strong> <br>- এর নির্ধারিত মূল্য এবং বিক্রয় মূল্যের পার্থক্য হলো এটি ক্রয়কারী প্রতিষ্ঠানের সুদ বা মুনাফা। <br>- এ সুদের হারকে রিপোরেট বলা হয়। যদি পুণঃক্রয় চুক্তি একদিন অথবা খুব কম সময়ের জন্য হয় তখন তাকে ওভার রিপো বলা হয়। <br>- আবার যদি এ চুক্তি দীর্ঘ সময়ের জন্য হয় তখন তাকে টার্ম রিপো বলা হয়।<br><br><em>তথ্যসূত্র - ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 17,
+      "favorite_id": "148408554",
+      "question": "In which year did the official operation of the Dhaka Stock Exchange begin?",
+      "options": {
+        "a": "1954",
+        "b": "1955",
+        "c": "1956",
+        "d": "1957"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "1956",
+      "explanation": "<p><strong>স্টক এক্সচেঞ্জ:</strong><br>- সিকিউরিটিজ অ্যান্ড এক্সচেঞ্জ কমিশন (SEC) ১৯৯৩ সালের ৮ জুন সিকিউরিটিজ অ্যান্ড এক্সচেঞ্জ কমিশন অ্যাক্ট, ১৯৯৩-এর অধীনে প্রতিষ্ঠিত হয়।<br>- বাংলাদেশে পুঁজি বাজার নিয়ন্ত্রণ ও পরিচালনার দায়িত্ব পালন করে বাংলাদেশ সিকিউরিটিজ অ্যান্ড এক্সচেঞ্জ কমিশন (BSEC)।<br>- এর মূল উদ্দেশ্য হলো বিনিয়োগকারীদের পুঁজির নিরাপত্তা নিশ্চিত করা এবং পুঁজি বাজারে সুশৃঙ্খল বিনিয়োগ পরিবেশ বজায় রাখা।<br>- বাংলাদেশে দুটি স্টক এক্সচেঞ্জ রয়েছে। যথা: ঢাকা স্টক এক্সচেঞ্জ এবং চট্টগ্রাম স্টক এক্সচেঞ্জ।<br>- পুঁজি বাজার বা স্টক মার্কেটকে সাধারণত সেকেন্ডারি মার্কেট হিসেবে অভিহিত করা হয়।</p>\r\n<p><strong>ঢাকা স্টক এক্সচেঞ্জ:</strong><br>- বাংলাদেশের শেয়ারবাজারের প্রধান অংশ হলো ঢাকা স্টক এক্সচেঞ্জ (DSE)।<br>- এটি দেশের সর্ববৃহৎ শেয়ারবাজার।<br>- ঢাকা স্টক এক্সচেঞ্জ রাজধানী ঢাকার নিকুঞ্জ-২ এ অবস্থিত।<br>- এটি ১৯৫৪ সালে প্রতিষ্ঠিত হয়।<br><strong>- ঢাকা স্টক এক্সচেঞ্জের আনুষ্ঠানিক কার্যক্রম শুরু হয় ১৯৫৬ সালে।</strong></p>\r\n<p><strong>চট্টগ্রাম স্টক এক্সচেঞ্জ:</strong><br>- চট্টগ্রাম স্টক এক্সচেঞ্জ (CSE) ১৯৯৫ সালের ১০ অক্টোবর চট্টগ্রাম থেকে কার্যক্রম শুরু করে।<br>- এর প্রতিষ্ঠাতা সদস্যরা ১৯৯৫ সালের জানুয়ারিতে সরকারের কাছে আবেদন করেন।<br>- পরবর্তীতে সিকিউরিটিজ অ্যান্ড এক্সচেঞ্জ কমিশন ১৯৯৫ সালের ১২ ফেব্রুয়ারি এটিকে দেশের দ্বিতীয় স্টক এক্সচেঞ্জ হিসেবে অনুমোদন প্রদান করে।<br><br><em>তথ্যসূত্র- ঢাকা স্টক এক্সচেঞ্জ ও BSEC ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 18,
+      "favorite_id": "148408538",
+      "question": "Which market deals with the trading of financial assets?",
+      "options": {
+        "a": "Money Market",
+        "b": "Capital Market",
+        "c": "Secondary Market",
+        "d": "Financial Market"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Financial Market",
+      "explanation": "<p><strong>আর্থিক বাজার:</strong><br><strong>- আর্থিক বাজার এমন একটি বাজার যেখানে আর্থিক সম্পদসমূহ ক্রয়-বিক্রয় হয়।</strong> <br>- আর্থিক সম্পদসমূহ হলো: শেয়ার, বন্ড ও বাণিজ্যিক পত্র ইত্যাদি। আর্থিক বাজারে দু'ধরনের একক থাকে যেমন: উদ্ধৃত্ত একক/সঞ্চয়কারী ও ঘাটতি একক। <br>- উদ্ধৃত্ত একক বলতে তাদেরকে বুঝায় যাদের আয়ের চেয়ে ব্যয় কম অর্থাৎ যারা আর্থিক বাজারে অর্থ সরবরাহকারী অন্যদিকে ঘাটতি একক হলো তারা যাদের আয়ের চেয়ে ব্যয় বেশি অর্থাৎ যাদের অর্থের চাহিদা রয়েছে। যেমন: ব্যক্তি, ব্যবসায় প্রতিষ্ঠান ও সরকার ইত্যাদি।<br>- আর্থিক বাজারে একটি পক্ষ তহবিল সরবরাহ করে এবং অন্য একটি পক্ষের তহবিলের প্রয়োজন হয়। তহবিলের চাহিদাকারীগণকে ঘাটতি একক বলে এবং তহবিলের যোগানদাতাগণকে উদ্ধৃত্ত একক বা সঞ্চয়কারী বলে।<br>- আর্থিক বাজারকে দু'ভাগে ভাগ করা যায়। যথা:<br>• অর্থ বাজার (Money Market)।<br>• পুঁজি বাজার (Capital Market)।<br><br><em>তথ্যসূত্র - ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 19,
+      "favorite_id": "146923680",
+      "question": "In international trade, what does the term 'FOB' stand for in shipping contracts?",
+      "options": {
+        "a": "Free On Board",
+        "b": "Forward On Board",
+        "c": "Financial Obligation Bond",
+        "d": "Freight On Balance"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Free On Board",
+      "explanation": "<p><strong>FOB:</strong><br><strong>- FOB-এর পূর্ণরূপ: Free On Board.</strong><br><br>• Free On Board (FOB) হলো একটি স্ট্যান্ডার্ড Incoterm (International Commercial Terms) যা সমুদ্রপথে পণ্য পরিবহনে ব্যবহৃত হয়। এর অর্থ হলো বিক্রেতা (Seller) পণ্যসমূহ নির্দিষ্ট লোডিং পোর্টে জাহাজে লোড করা পর্যন্ত সকল খরচ ও ঝুঁকি বহন করবেন। জাহাজে লোড হওয়ার পর ঝুঁকি ও খরচ ক্রেতা (Buyer)-এর উপর বর্তায়।<br>- এটি বিশেষ করে বাংলাদেশের রপ্তানি বাণিজ্যে (যেমন: গার্মেন্টস, চামড়া ইত্যাদি) খুবই প্রচলিত। বাংলাদেশ ব্যাংকের ফরেন এক্সচেঞ্জ গাইডলাইনস ও Export Policy-তে FOB ভিত্তিক রপ্তানি স্পষ্টভাবে স্বীকৃত।<br><br>উৎস: Investopedia.</p>"
+    },
+    {
+      "id": 20,
+      "favorite_id": "146923667",
+      "question": "Which of the following is considered a non-negotiable instrument under the Negotiable Instruments Act?",
+      "options": {
+        "a": "Cheque",
+        "b": "Bill of Exchange",
+        "c": "Promissory Note",
+        "d": "Fixed Deposit Receipt"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Fixed Deposit Receipt",
+      "explanation": "<p><strong>Negotiable Instruments:</strong><br>- The Negotiable Instruments Act, 1881-এর ধারা ১৩ অনুসারে,  Negotiable Instruments হলো: Promissory note, Bill of exchange, Cheque। <br>- Negotiable Instrument বলতে এমন দলিলকে বোঝায়, যা সহজে এক ব্যক্তি থেকে অন্য ব্যক্তির কাছে হস্তান্তর করা যায় এবং যার মাধ্যমে অর্থ পরিশোধের অধিকার স্থানান্তরিত হয়। এর মধ্যে রয়েছে—Promissory Note, Bill of Exchange, Cheque.<br>- এগুলো Order বা Bearer উভয় ধরনের হতে পারে।<br><br>• Explanation (i): Order Instrument<br>- যে Promissory Note, Bill of Exchange বা Cheque-এ নির্দিষ্ট ব্যক্তিকে অর্থ প্রদানের কথা বলা থাকে এবং যেখানে হস্তান্তর নিষিদ্ধ করার কোনো শব্দ থাকে না, তাকে Order Instrument বলা হয়।</p>\r\n<p>• Explanation (ii): Bearer Instrument<br>যে দলিলে “Bearer” শব্দ ব্যবহার করা হয় অথবা যার শেষ Endorsement ফাঁকা (Blank Endorsement) থাকে, তাকে Bearer Instrument বলা হয়।</p>\r\n<p>• Explanation (iii): Payable to Order<br>যদি কোনো দলিল নির্দিষ্ট ব্যক্তির নামে প্রদানযোগ্য বলা হয়, তবে সেই ব্যক্তি চাইলে সেটিকে নিজের আদেশে (to his order) প্রদানযোগ্য হিসেবে ব্যবহার করতে পারেন।<br><br>উল্লেখ্য,<br>- Negotiable Instruments Act, ১৮৮১ অনুসারে negotiable instrument বলতে শুধুমাত্র তিন ধরনের দলিলকে বোঝানো হয়: Promissory Note, Bill of Exchange এবং Cheque। এগুলো order বা bearer-এর মাধ্যমে স্থানান্তরযোগ্য এবং endorsement দিয়ে হস্তান্তর করা যায়।<br><strong>- Fixed Deposit Receipt (FDR) কোনো negotiable instrument নয়। </strong>এটি ব্যাংকের সাথে আমানতকারীর মধ্যে একটি চুক্তিপত্রমাত্র, যা endorsement-এর মাধ্যমে স্বয়ংক্রিয়ভাবে হস্তান্তর হয় না। এর হস্তান্তরের জন্য ব্যাংকের অনুমোদন ও অন্যান্য আনুষ্ঠানিকতা প্রয়োজন।<br><br>উৎস: The Negotiable Instruments Act, 1881.</p>"
+    },
+    {
+      "id": 21,
+      "favorite_id": "146923653",
+      "question": "Which component of the Balance of Payments (BOP) records imports and exports of goods and services?",
+      "options": {
+        "a": "Capital Account",
+        "b": "Financial Account",
+        "c": "Current Account",
+        "d": "Reserve Account"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Current Account",
+      "explanation": "<p><strong>Balance of Payments (BOP):</strong><br>- ব্যালান্স অব পেমেন্টস (Balance of Payments বা BOP) হলো একটি নির্দিষ্ট সময়ে কোনো দেশের সকল আন্তর্জাতিক আর্থিক লেনদেনের হিসাব সংরক্ষণের পদ্ধতি। সাধারণত প্রতি ত্রৈমাসিক ও প্রতি এক বছরে BOP হিসাব করা হয়।<br>- দেশের সরকারি ও বেসরকারি—উভয় খাতের সকল আন্তর্জাতিক বাণিজ্য ও আর্থিক লেনদেন এতে অন্তর্ভুক্ত থাকে, যাতে বোঝা যায় দেশে কত অর্থ প্রবেশ করছে এবং কত অর্থ বের হয়ে যাচ্ছে।<br>- যদি কোনো দেশ অর্থ গ্রহণ করে, তবে তা “ক্রেডিট” (Credit) হিসেবে গণ্য হয়; আর যদি কোনো দেশ অর্থ প্রদান করে, তবে তা “ডেবিট” (Debit) হিসেবে ধরা হয়।</p>\r\n<p><strong>• BoP-এর প্রধান অংশসমূহ:</strong><br><strong>১. চলতি হিসাব (Current Account): পণ্য ও সেবার আমদানি-রপ্তানি এবং রেমিট্যান্সের হিসাব।</strong><br>২. মূলধন হিসাব (Capital Account): স্থাবর সম্পত্তি বা মূলধনী সম্পদের মালিকানা বদলের হিসাব।<br>৩. আর্থিক হিসাব (Financial Account): সরাসরি বৈদেশিক বিনিয়োগ (FDI) এবং শেয়ার বাজারে।</p>\r\n<p>উৎস: Investopedia</p>"
+    },
+    {
+      "id": 22,
+      "favorite_id": "146923650",
+      "question": "In the Monetary Policy Statement for the second half of fiscal year 2025-26, what is the policy rate set by Bangladesh Bank?",
+      "options": {
+        "a": "8.5%",
+        "b": "9.0%",
+        "c": "10.0%",
+        "d": "11.5%"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "10.0%",
+      "explanation": "<p><strong>২০২৫-২৬ অর্থবছরের দ্বিতীয়ার্ধের মুদ্রানীতি বিবৃতিতে বাংলাদেশ ব্যাংক কর্তৃক নির্ধারিত প্রাথমিক নীতিগত হার (পলিসি রেপো রেট) হলো ১০.০০%। </strong><br><br><strong>Policy Rate (Repo Rate):</strong><br>- পলিসি রেট (Policy Rate) হলো কেন্দ্রীয় ব্যাংক কর্তৃক নির্ধারিত সেই সুদের হার, যে হারে দেশের বাণিজ্যিক ব্যাংকগুলো কেন্দ্রীয় ব্যাংক থেকে স্বল্পমেয়াদে ঋণ গ্রহণ করতে পারে। এটি মূলত 'রেপো রেট' (Repo Rate) নামে পরিচিত এবং মুদ্রানীতির প্রধান হাতিয়ার হিসেবে বাজার থেকে অর্থের সরবরাহ ও মূল্যস্ফীতি নিয়ন্ত্রণে এটি ব্যবহৃত হয়। <br>- ২০২৫-২৬ অর্থবছরের দ্বিতীয়ার্ধের (জানুয়ারি থেকে জুন) জন্য ১০.০০% মুদ্রানীতি ঘোষণা করেছে বাংলাদেশ ব্যাংক।<br>- বাংলাদেশ ব্যাংক যে সুদহারে বাণিজ্যিক ব্যাংকগুলোকে ঋণ দেয়, সেটিই নীতি সুদহার। এই হার অপরিবর্তিত রাখার মূল কারণ হলো, আগের মুদ্রানীতিতে ২০২৬ অর্থবছরের জন্য যে ৬ দশমিক ৫ শতাংশ মূল্যস্ফীতির লক্ষ্যমাত্রা নির্ধারণ করা হয়েছিল, তা এখনো অর্জিত হয়নি।<br><br>• বাংলাদেশ ব্যাংক ছয় মাস অন্তর মুদ্রানীতি ঘোষণা করে।<br>- ২০২৪ সালের অক্টোবর থেকে নীতি সুদহার ১০ শতাংশে অপরিবর্তিত রয়েছে।</p>\r\n<p>উল্লেখ্য,<br>- Policy Rate (Repo Rate): 10.00%,<br>- SLF Rate: 11.50%,<br>- SDF Rate: 7.50%,<br>- Bank Rate: 4.00%.<br><br>উৎস: i) বাংলাদেশ ব্যাংক ওয়েবসাইট।<br>ii) প্রথম আলো।</p>"
+    },
+    {
+      "id": 23,
+      "favorite_id": "146923637",
+      "question": "What is the main composition of Special Drawing Rights (SDR) allocated by the IMF?",
+      "options": {
+        "a": "A basket of major international currencies",
+        "b": "Physical gold reserves",
+        "c": "US Treasury bonds only",
+        "d": "Digital cryptocurrency tokens"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "A basket of major international currencies",
+      "explanation": "<p><strong>IMF কর্তৃক বরাদ্দকৃত বিশেষ অঙ্কন অধিকার (SDR)-এর প্রধান উপাদান হলো পাঁচটি প্রধান আন্তর্জাতিক মুদ্রার একটি ঝুড়ি (বাস্কেট)। SDR-এর মূল্য নির্ধারণ করা হয় এই মুদ্রাগুলোর একটি ওজনভিত্তিক গড়ের মাধ্যমে।<br><br>Special Drawing Rights (SDR):</strong><br>- SDR হলো আন্তর্জাতিক মুদ্রা তহবিল (IMF) দ্বারা তৈরি একটি বিশেষ ধরনের মুদ্রা।<br>- এটি কোনো দেশের স্থানীয় মুদ্রা নয় বরং একটি আন্তর্জাতিক \"মুদ্রা ইউনিট\" যা বিভিন্ন দেশ তাদের আর্থিক প্রয়োজন মেটাতে ব্যবহার করতে পারে। এটি এমনভাবে তৈরি হয়েছে যেন বিশ্বের দেশগুলো একে ব্যবহার করে তাদের অর্থনৈতিক সমস্যা সমাধান করতে পারে।<br><br>• বিশ্ব অর্থনীতিতে আন্তর্জাতিক মুদ্রা তহবিল-এর Special Drawing Rights (SDR)-কে 'পেপার গোল্ড' (Paper Gold) বোঝানো হয়।<br>- ১৯৬৯ সালে IMF SDR প্রবর্তন করে।<br>- এটি একটি আন্তর্জাতিক রিজার্ভ সম্পদ হিসেবে কাজ করে। এটি কোনো বাস্তব মুদ্রা বা সোনা নয় বরং একটি কাগজের (paper-based) সম্পদ যা সোনার মতো রিজার্ভের ভূমিকা পালন করে বলে এর নামকরণ করা হয় \"Paper Gold\"।<br>- বর্তমানে SDR-এর মূল্য পাঁচটি প্রধান মুদ্রা যথা: মার্কিন ডলার (USD), ইউরো (EUR), চীনা রেনমিনবি (CNY), জাপানি ইয়েন (JPY) এবং ব্রিটিশ পাউন্ড (GBP)-এর ওপর নির্ভর করে। SDR মুদ্রার ঝুড়ির সংমিশ্রণ ও ওজন প্রতি পাঁচ বছর পর পর পর্যালোচনা করা হয়, যা বিশ্ব অর্থনীতিতে মুদ্রাগুলোর আপেক্ষিক গুরুত্বের পরিবর্তনকে প্রতিফলিত করে।<br><br>উৎস: i) IMF ওয়েবসাইট।<br>ii) Investopedia ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 24,
+      "favorite_id": "146141603",
+      "question": "What is the validity period of a cheque?",
+      "options": {
+        "a": "<span>1 month </span>",
+        "b": "<span>2 months</span>",
+        "c": "<span>3 months</span>",
+        "d": "<span>6 months</span>"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "<span>6 months</span>",
+      "explanation": "<p><strong>• ব্যাংক চেকের মেয়াদ: </strong><br><strong>- বাংলাদেশে একটি সাধারণ ব্যাংক চেকের মেয়াদ হলো ইস্যুর তারিখ থেকে ৬ মাস বা ১৮০ দিন। </strong><br>- এই সময়ের মধ্যে চেক ব্যাংকে জমা দিয়ে নগদায়ন করতে হয়। <br>- ৬ মাস পার হলে সেটি stale cheque হিসেবে গণ্য হয় এবং সাধারণত ব্যাংক তা গ্রহণ করে না।<br>- চেকের মেয়াদ চেকের তারিখ (date of issue) থেকে গণনা করা হয়।<br>- Negotiable Instruments Act, 1881 এর Section 84 অনুযায়ী, চেক ডিসচার্জের ক্ষেত্রে চেকটি ৬ মাসের মধ্যে ব্যাংকে উপস্থাপন করতে হয়। <br><br>তথ্যসূত্র: বাংলাদেশ ব্যাংক ও আইন মন্ত্রণালয়। </p>"
+    },
+    {
+      "id": 25,
+      "favorite_id": "146141583",
+      "question": "How many principal pillars are included in the Basel III framework?",
+      "options": {
+        "a": "<span>2</span>",
+        "b": "3",
+        "c": "4",
+        "d": "5"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "3",
+      "explanation": "<p><strong>• Basel III: </strong><br>- ব্যাংকিং ভাষায় Basel III হলো ব্যাংকের জন্য আন্তর্জাতিক নিয়ন্ত্রক কাঠামো, যা ব্যাংকের মূলধন, তারল্য এবং ঝুঁকি ব্যবস্থাপনা (Risk Management) আরও শক্তিশালী করার জন্য তৈরি করা হয়েছে। <br>- এটি Basel Committee on Banking Supervision (BCBS) কর্তৃক ২০০৭-০৯ সালের বিশ্বব্যাপী আর্থিক সংকটের পরিপ্রেক্ষিতে তৈরি করা হয়।<br><br><strong>⇒ Basel III এর মূল স্তম্ভ:</strong><br><strong>- এটি তিনটি প্রধান স্তম্ভের ওপর ভিত্তি করে কাজ করে:</strong><br>• ন্যূনতম মূলধন পর্যাপ্ততা (Minimum Capital Requirement): ব্যাংককে তার মোট ঝুঁকির বিপরীতে একটি নির্দিষ্ট পরিমাণ মূলধন (Capital) সবসময় জমা রাখতে হয়। বাংলাদেশে এর হার বর্তমানে মোট ঝুঁকিভিত্তিক সম্পদের ১০% (এবং ২.৫% অতিরিক্ত বাফার সহ মোট ১২.৫%)।<br>• তত্ত্বাবধানমূলক পর্যালোচনা (Supervisory Review Process): কেন্দ্রীয় ব্যাংক (যেমন- বাংলাদেশ ব্যাংক) নিয়মিত পর্যবেক্ষণ করবে যে ব্যাংকটি ঝুঁকি মোকাবিলায় পর্যাপ্ত মূলধন রাখছে কি না।<br>• বাজার শৃঙ্খলা (Market Discipline): ব্যাংকগুলোকে তাদের আর্থিক অবস্থা, মূলধনের পরিমাণ এবং ঝুঁকির তথ্য জনসাধারণের কাছে প্রকাশ করতে হবে যেন বাজারে স্বচ্ছতা থাকে।<br><br><strong>⇒ মূল উদ্দেশ্য: </strong><br>• ব্যাংকগুলোকে আর্থিক সংকট সহ্য করার ক্ষমতা বাড়ানো।<br><strong>• </strong>ঝুঁকি শোষণের জন্য উচ্চমানের মূলধন নিশ্চিত করা।<br>• তারল্য সংকট রোধ করা।<br>• ব্যাংকিং সেক্টরের সামগ্রিক স্থিতিশীলতা বৃদ্ধি করা যাতে বাস্তব অর্থনীতিতে ঋণ প্রবাহ অব্যাহত থাকে। <br><br><br>তথ্যসূত্র: i) Bangladesh Bank<br>ii)  Bank for International Settlements <br>iii)  Investopedia</p>"
+    },
+    {
+      "id": 26,
+      "favorite_id": "146136183",
+      "question": "In BD-RTGS, the term “gross settlement” means payments are settled -",
+      "options": {
+        "a": "fter multilateral netting at day end",
+        "b": "individually on a one-to-one basis",
+        "c": "in batches at fixed intervals",
+        "d": "only after branch reconciliation"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "individually on a one-to-one basis",
+      "explanation": "<p><strong>• BD-RTGS-এ “gross settlement” বলতে প্রতিটি payment instruction-কে অন্য লেনদেনের সঙ্গে netting না করে one-to-one basis-এ পৃথকভাবে নিষ্পত্তি করাকে বোঝায়।</strong></p>\r\n<p><strong>• RTGS:</strong><br>- RTGS-এর পূর্ণরূপ Real Time Gross Settlement.<br>- এটি আন্তঃব্যাংক তহবিল স্থানান্তরের একটি ইলেকট্রনিক settlement ব্যবস্থা।<br>- এখানে “real time” এবং “gross settlement” — এই দুই অংশের আলাদা তাৎপর্য রয়েছে।</p>\r\n<p><strong>• Gross settlement:</strong><br>- Gross settlement বলতে বোঝায়, প্রতিটি transaction আলাদাভাবে নিষ্পত্তি হয়।<br>- একটি payment অন্য payment-এর সঙ্গে সমন্বয় বা netting করে নিষ্পত্তি করা হয় না।<br>- অর্থাৎ প্রতিটি transfer central bank account-এ স্বতন্ত্রভাবে book হয়।<br>- এই কারণে RTGS-এ settlement individual এবং one-to-one basis-এ সম্পন্ন হয়।</p>\r\n<p><strong>• Real time-এর সঙ্গে পার্থক্য:</strong><br>- “Real time” বলতে বোঝায় transaction-এর নিষ্পত্তিতে অযথা waiting period থাকে না।<br>- কিন্তু “gross settlement” শব্দটি waiting period নয়, বরং settlement-এর ধরন বোঝায়।</p>\r\n<p><strong>উৎস:</strong><br>১) Bangladesh Bank,<br>২) Computer &amp; ICT Cloud, Live Publications.</p>"
+    },
+    {
+      "id": 27,
+      "favorite_id": "146136159",
+      "question": "Which is the highest policy-making body of the IMF?",
+      "options": {
+        "a": "Executive Board",
+        "b": "Financial Committee",
+        "c": "Board of Governors",
+        "d": "Development Committee"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Board of Governors",
+      "explanation": "<p><strong>IMF Board of Governors (গভর্নর পর্ষদ):</strong><br><strong>- গভর্নর পর্ষদ (Board of Governors) হলো আইএমএফ-এর সর্বোচ্চ সিদ্ধান্ত গ্রহণকারী সংস্থা।</strong><br>- এটি প্রতিটি সদস্য দেশের জন্য একজন গভর্নর এবং একজন বিকল্প গভর্নর নিয়ে গঠিত।<br>- গভর্নর সদস্য দেশ কর্তৃক নিযুক্ত হন এবং তিনি সাধারণত অর্থমন্ত্রী বা কেন্দ্রীয় ব্যাংকের প্রধান হন।</p>\r\n<p><strong>IMF:</strong><br>- IMF এর পূর্ণরূপ The International Monetary Fund.<br>- এটি আন্তর্জাতিক মুদ্রা তহবিল (আইএমএফ), যা বৈশ্বিক আর্থিক স্থিতিশীলতা ও সহযোগিতা নিশ্চিত করার লক্ষ্যে কাজ করে।<br>- সংস্থাটি প্রতিষ্ঠিত হয় ১৯৪৪ সালে।<br>- এর প্রধান কার্যালয় যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে অবস্থিত।<br>- শুরুতে এর প্রতিষ্ঠাতা সদস্য ছিল মোট ৪৪টি দেশ।<br>- বর্তমানে এই সংস্থার সদস্য সংখ্যা ১৯১টি রাষ্ট্রে উন্নীত হয়েছে।<br>- আইএমএফের বর্তমান ব্যবস্থাপনা পরিচালক হিসেবে দায়িত্ব পালন করছেন ক্রিস্টালিনা জর্জিয়েভা।</p>\r\n<p><em>তথ্যসূত্র - IMF অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 28,
+      "favorite_id": "146131075",
+      "question": "The Statutory Liquidity Ratio (SLR) requires banks to maintain liquid assets as a percentage of-",
+      "options": {
+        "a": "Net profit",
+        "b": "Paid-up capital",
+        "c": "Net Demand and Time Liabilities",
+        "d": "Tier-1 capital"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Net Demand and Time Liabilities",
+      "explanation": "<p>Statutory Liquidity Ratio (SLR): <br><strong>- SLR (Statutory Liquidity Ratio) হলো কেন্দ্রীয় ব্যাংকের একটি নিয়ম, যেখানে প্রতিটি বাণিজ্যিক ব্যাংককে তাদের মোট আমানতের (NDTL) একটি নির্দিষ্ট শতাংশ তরল সম্পদ হিসেবে সংরক্ষণ করতে হয়।</strong><br>- সহজ কথায়, গ্রাহকরা ব্যাংকে যে টাকা জমা রাখেন (কারেন্ট অ্যাকাউন্ট, সেভিংস অ্যাকাউন্ট, এফডিআর ইত্যাদি), তার একটি নির্দিষ্ট শতাংশ হিসেবে SLR রাখতে হয়।</p>\r\n<p>উল্লেখ্য, <br>- ব্যাংকের তারল্য সংকট মোকাবেলা এবং গ্রাহকদের আমানতের সুরক্ষা নিশ্চিত করতে কেন্দ্রীয় ব্যাংক (বাংলাদেশ ব্যাংক) এই হার নির্ধারণ করে দেয়।<br>-  বাংলাদেশে বর্তমানে সাধারণ বাণিজ্যিক ব্যাংকগুলোর জন্য এই হার ১৩% এবং ইসলামী ব্যাংকগুলোর জন্য ৫.৫% (যা সময়ের সাথে পরিবর্তিত হতে পারে)।<br><br>উৎস: বাংলাদেশ ব্যাংক ওয়েবসাইট। </p>"
+    },
+    {
+      "id": 29,
+      "favorite_id": "146131069",
+      "question": "How many government-owned scheduled specialized banks are there in Bangladesh?",
+      "options": {
+        "a": "2",
+        "b": "6",
+        "c": "5",
+        "d": "3"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "3",
+      "explanation": "<p><strong>- ২০২৬ সালের বর্তমান তথ্য অনুযায়ী, বাংলাদেশে রাষ্ট্রায়ত্ত তফসিলি বিশেষায়িত ব্যাংক (Government-owned Scheduled Specialized Banks) রয়েছে মোট ৩টি।</strong></p>\r\n<p> • ব্যাংকগুলোর তালিকা:<br>১. বাংলাদেশ কৃষি ব্যাংক (BKB), <br>২. রাজশাহী কৃষি উন্নয়ন ব্যাংক (RAKUB), <br>৩. প্রবাসী কল্যাণ ব্যাংক (PKB)। </p>\r\n<p>• বিশেষায়িত ব্যাংক (Specialized Banks): এই ব্যাংকগুলো নির্দিষ্ট কোনো খাতের (যেমন: কৃষি বা বৈদেশিক কর্মসংস্থান) উন্নয়নের লক্ষ্যে বিশেষ বিশেষ উদ্দেশ্যে প্রতিষ্ঠিত।</p>\r\n<p><em>উৎস: বাংলাদেশ ব্যাংক ওয়েবসাইট। </em></p>"
+    },
+    {
+      "id": 30,
+      "favorite_id": "144995716",
+      "question": "When was the first law on preventing money laundering enacted in Bangladesh?",
+      "options": {
+        "a": "2002",
+        "b": "2009",
+        "c": "2012",
+        "d": "2015"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "2002",
+      "explanation": "<p><strong>• মানিলন্ডারিং (Money Laundering) প্রতিরোধ আইন: </strong><br><br><strong>⇒ প্রথম আইন: মানিলন্ডারিং প্রতিরোধ আইন, ২০০২</strong><br><strong>- বাংলাদেশে মানিলন্ডারিং প্রতিরোধ আইন প্রথম পাস হয় ২০০২ সালে।</strong><br>- ৭ এপ্রিল ২০০২ তারিখে গেজেটে প্রকাশিত হয়। <br>- এটি দক্ষিণ এশিয়ায় প্রথম এ ধরনের আইন।<br><br><strong>⇒ দ্বিতীয় আইন: মানিলন্ডারিং প্রতিরোধ আইন, ২০০৯ </strong><br>- প্রথম আইনের বিধানাবলি অপর্যাপ্ত মনে করে ২০০৮ সালে তত্ত্বাবধায়ক সরকার এ লক্ষ্যে একটি অধ্যাদেশ জারী করে। <br>- পরবর্তীতে আওয়ামী লীগের নেতৃত্বাধীন মহাজোট সরকার গঠনের পর অধ্যাদেশটি সংবিধানের অনুশাসন অনুযায়ী পরীক্ষা করে ২০০৯ সালে আইনে রূপান্তরিত করে। আইনটির শিরোনাম হলো মানিলন্ডারিং আইন, ২০০৯ (২০০৯ সালের ৮নং আইন)। <br>- সংসদ অনুমোদিত আইনটি জনগণের অবগতির জন্য ২০০৯ সালের ২৪ ফেব্রুয়ারি গেজেটে প্রকাশিত হয়। <br><br><strong>⇒ তৃতীয় ও বর্তমান আইন: মানিলন্ডারিং প্রতিরোধ আইন, ২০১২: </strong><br>- আগের আইনগুলো রহিত করে আরও শক্তিশালী ও যুগোপযোগী মানিলন্ডারিং প্রতিরোধ আইন, ২০১২ (২০১২ সনের ৫ নং আইন) পাস হয়। <br>- ২০১২ সালের ২০ ফেব্রুয়ারি গেজেট প্রকাশ করা হয়। <br>- পরবর্তীতে, ২০১২ সালের আইনটিকে আরও শক্তিশালী করতে 'মানিলন্ডারিং প্রতিরোধ (সংশোধন) আইন, ২০১৫' পাস করা হয়।<br><br><br>তথ্যসূত্র: i) Bangladesh Financial Intelligence Unit (BFIU)<br>ii) Ministry of Law <br>iii) Bangladesh Bank Guidelines &amp;  Banglapedia. </p>"
+    },
+    {
+      "id": 31,
+      "favorite_id": "144993963",
+      "question": "According to the IMF's BPM-6 manual, what was Bangladesh’s gross foreign exchange reserve in march 2026?",
+      "options": {
+        "a": "$29.50 billion",
+        "b": "$25.80 billion",
+        "c": "$30.62 billion",
+        "d": "$35.31 billion"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "$29.50 billion",
+      "explanation": "<p>• <strong>Foreign Exchange Reserve:</strong><br>- রিজার্ভ বলতে বোঝায় তাৎক্ষণিকভাবে ব্যবহারযোগ্য বৈদেশিক মুদ্রার মজুদের পরিমাণ কত সেটা। <br>- যে অর্থ তাৎক্ষণিকভাবে ব্যবহারের জন্য পাওয়া যায় না সেটি রিজার্ভের মোট হিসাব থেকে বাদ দেয়ার কথা বলে আন্তর্জাতিক মুদ্রা সংস্থা আইএমএফ।<br>- ২০২৫-২০২৬ অর্থবর্ষের মার্চ মাসে বাংলাদেশ ব্যাংক-এর তথ্য অনুযায়ী রিজার্ভ ৩৫১০৯.২ মিলিয়ন মার্কিন ডলার (৩৫.১০ বিলিয়ন USD)।<br><strong>- IMF এর BPM-6 manual অনুসারে রিজার্ভ - ২৯৫০১ মিলিয়ন মার্কিন ডলার।</strong></p>\r\n<p>উৎস: Foreign Exchange Reserve (Monthly), Bangladesh Bank.</p>"
+    },
+    {
+      "id": 32,
+      "favorite_id": "144993564",
+      "question": "What does DPS stand for?",
+      "options": {
+        "a": "Direct Payment System",
+        "b": "Deposit Payment System",
+        "c": "Deposit Pension Scheme",
+        "d": "Deferred Pension Savings"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Deposit Pension Scheme",
+      "explanation": "<p><strong>DPS</strong>:<br><strong>- DPS–এর পূর্ণরূপ: Deposit Pension Scheme.</strong><br>- একটি নির্দিষ্ট সময় বা মেয়াদের জন্য নির্দিষ্ট পরিমাণ অর্থ জমা রেখে এবং মেয়াদ শেষে সুদ সহ সেই অর্থ ফেরত পাওয়াকে ডিপিএস ( DPS) বলে।<br>- ডিপিএসের মেয়াদ বিভিন্ন ধরনের হতে পারে।<br>- মেয়াদের ভিত্তিতে মুনাফা বা সুদের পরিমান নির্ধারন হয়।</p>\r\n<p>উৎস: i) সোনালী ব্যাংক ওয়েবসাইট।<br>ii) প্রথম আলো।</p>"
+    },
+    {
+      "id": 33,
+      "favorite_id": "144993546",
+      "question": "Which of the following is true regarding a Demand Draft?",
+      "options": {
+        "a": "It can be made payable to the bearer.",
+        "b": "Payment can be easily stopped by the purchaser at any time.",
+        "c": "It is drawn by one bank branch on another bank branch.",
+        "d": "It is only valid for international trade"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "It is drawn by one bank branch on another bank branch.",
+      "explanation": "<p><strong>ডিমান্ড ড্রাফট (Demand Draft):</strong><br><strong>- একটি ডিমান্ড ড্রাফট (Demand Draft) বা ডিডি হলো একটি ব্যাংকিং দলিল যা একটি ব্যাংকের এক শাখা অন্য শাখার ওপর ইস্যু করে থাকে।</strong><br><strong>ব্যাংক বনাম ব্যাংক: </strong>ডিডি মূলত এক ব্যাংক শাখা থেকে অন্য ব্যাংক শাখার কাছে একটি লিখিত আদেশ যেখানে নির্দিষ্ট ব্যক্তিকে অর্থ প্রদানের নির্দেশ দেওয়া হয়। এটি চেক (Cheque) থেকে আলাদা কারণ এটি ব্যাংক নিজে ইস্যু করে।<br>নিশ্চয়তা: যেহেতু ব্যাংক এটি ইস্যু করার আগেই টাকা সংগ্রহ করে নেয়, তাই ডিডি কখনো ডিজনার (Dishonor) হয় না।<br><br>অন্যদিকে,<br>- ডিমান্ড ড্রাফট সাধারণত \"Order\" ইনস্ট্রুমেন্ট হিসেবে ইস্যু করা হয়। এটি চেক-এর মতো 'বিয়ারার' বা যে বহন করবে তাকে দেওয়ার জন্য সাধারণত করা হয় না যাতে জালিয়াতি ঠেকানো যায়।<br>- চেকে খুব সহজে 'স্টপ পেমেন্ট' দেওয়া গেলেও ডিডিতে তা সম্ভব নয়। কেবল ইস্যুকারী ব্যাংক বিশেষ পরিস্থিতিতে এটি বাতিল (Cancel) করতে পারে, কিন্তু পেমেন্ট একবার চলে গেলে তা সহজে থামানো যায় না।<br>- ডিডি কেবল আন্তর্জাতিক বাণিজ্যে নয়, বরং দেশের ভেতরেও বড় অংকের নিরাপদ লেনদেনের জন্য ব্যাপকভাবে ব্যবহৃত।<br><br>উৎস: ব্যাংকিং নিউজ ও Investopedia</p>"
+    },
+    {
+      "id": 34,
+      "favorite_id": "144993533",
+      "question": "What do the '4Rs' in Green Banking stand for?",
+      "options": {
+        "a": "Reduce, Reuse, Recycle, Replenish",
+        "b": "Reduce, Reuse, Recycle, Recovery",
+        "c": "Read, Record, Retail, Recover",
+        "d": "Rethink, Reduce, Reuse, Return"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Reduce, Reuse, Recycle, Recovery",
+      "explanation": "<p><strong>• গ্রিন ব্যাংকিং:</strong><br>- গ্রিন ব্যাংকিং (Green Banking) বা পরিবেশবান্ধব ব্যাংকিংয়ের মূল ভিত্তি হলো পরিবেশের ক্ষতি কমিয়ে টেকসই উন্নয়ন নিশ্চিত করা। এই লক্ষ্যে '4Rs' নীতিটি ব্যবহৃত হয়।<br>৪টি R-এর বিস্তারিত অর্থ:<br>• Reduce (হ্রাস করা): কাগজের ব্যবহার কমানো (যেমন: অনলাইন ব্যাংকিং), বিদ্যুৎ ও শক্তির অপচয় রোধ করা।<br>• Reuse (পুনরায় ব্যবহার): অফিসের আসবাবপত্র বা ইলেকট্রনিক যন্ত্রপাতি ফেলে না দিয়ে পুনরায় ব্যবহারযোগ্য করে তোলা।<br>• Recycle (পুনরুৎপাদন): ব্যবহৃত কাগজ বা প্লাস্টিক বর্জ্যকে রিসাইক্লিংয়ের মাধ্যমে নতুন পণ্যে রূপান্তর করা।<br>• Recovery (পুনরুদ্ধার): বর্জ্য থেকে শক্তি উৎপাদন বা নষ্ট হয়ে যাওয়া সম্পদ থেকে প্রয়োজনীয় অংশ উদ্ধার করা।</p>\r\n<p>উৎস: ipieca</p>"
+    },
+    {
+      "id": 35,
+      "favorite_id": "144993484",
+      "question": "According to Bangladesh Bank guidelines, who typically serves as the Chairman of the ALCO?",
+      "options": {
+        "a": "The Chairman of the Board of Directors",
+        "b": "The Head of Treasury",
+        "c": "The Managing Director (MD) or CEO",
+        "d": "The External Auditor"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The Managing Director (MD) or CEO",
+      "explanation": "<p>বাংলাদেশ ব্যাংকের অ্যাসেট-লায়াবিলিটি ম্যানেজমেন্ট (ALM) গাইডলাইন অনুযায়ী,<strong> ব্যাংকের ব্যবস্থাপনা পরিচালক (MD) বা প্রধান নির্বাহী কর্মকর্তা (CEO) সাধারণত ALCO (Asset Liability Committee)-এর চেয়ারম্যান হিসেবে দায়িত্ব পালন করেন।</strong><br><br><strong>ALCO:</strong><br>ALCO হলো ব্যাংকের অভ্যন্তরীণ একটি উচ্চপদস্থ কমিটি যা সুদের হার পরিবর্তন, তারল্য স্বল্পতা এবং বৈদেশিক বিনিময় ঝুঁকি নিয়ন্ত্রণ করে। এর কাজ ব্যাংকের সম্পদ ও দায়ের মধ্যে সামঞ্জস্য বজায় রাখা।<br><br>উৎস: অ্যাসেট-লায়াবিলিটি ম্যানেজমেন্ট (ALM) গাইডলাইন।</p>"
+    },
+    {
+      "id": 36,
+      "favorite_id": "144993405",
+      "question": "Which of the following best describes the 'Reverse Repo Rate'?",
+      "options": {
+        "a": "The rate at which commercial banks borrow money from the Central Bank.",
+        "b": "The rate at which the Central Bank borrows money from commercial banks.",
+        "c": "The rate at which banks lend money to the general public.",
+        "d": "The interest rate the government pays on its long-term bonds."
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The rate at which the Central Bank borrows money from commercial banks.",
+      "explanation": "<p><strong>• রিভার্স রিপো রেট:</strong><br><strong>- রিভার্স রিপো রেট (Reverse Repo Rate) হলো সেই সুদের হার, যে হারে দেশের কেন্দ্রীয় ব্যাংক (যেমন: বাংলাদেশ ব্যাংক) বাণিজ্যিক ব্যাংকগুলোর কাছ থেকে টাকা ধার করে।</strong><br>- যখন বাজারে টাকার পরিমাণ অনেক বেড়ে যায় (Excess Liquidity), তখন কেন্দ্রীয় ব্যাংক বাজার থেকে অতিরিক্ত টাকা তুলে নিয়ে মুদ্রাস্ফীতি (Inflation) নিয়ন্ত্রণ করার জন্য রিভার্স রিপো রেট ব্যবহার করে।<br>- বাণিজ্যিক ব্যাংকগুলো যখন তাদের বাড়তি টাকা কেন্দ্রীয় ব্যাংকে জমা রাখে, তখন কেন্দ্রীয় ব্যাংক তাদের যে হারে সুদ দেয়, সেটিই হলো রিভার্স রিপো রেট।<br>বর্তমান Reverse Repo Rate (SDF): ৮%।<br><br>উৎস: Investopedia ও বাংলাদেশ ব্যাংক।</p>"
+    },
+    {
+      "id": 37,
+      "favorite_id": "144993319",
+      "question": "The 'Balance of Payments' (BoP) is a record of all economic transactions between -",
+      "options": {
+        "a": "Different commercial banks within a country",
+        "b": "The government and the private sector",
+        "c": "Residents of a country and the rest of the world",
+        "d": "The Central Bank and the Ministry of Finance"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Residents of a country and the rest of the world",
+      "explanation": "<p><strong>• ব্যালেন্স অফ পেমেন্ট (BoP):</strong><br><strong>- ব্যালেন্স অফ পেমেন্ট (BoP) বা লেনদেনের ভারসাম্য হলো একটি নির্দিষ্ট সময়ের মধ্যে (সাধারণত এক বছর) একটি দেশের অধিবাসীদের সাথে বিশ্বের অন্যান্য দেশের অধিবাসীদের সমস্ত অর্থনৈতিক লেনদেনের একটি পদ্ধতিগত হিসাবের রেকর্ড।</strong> <br>- এর মাধ্যমে বোঝা যায় একটি দেশ থেকে কত টাকা বিদেশে গেল এবং বিদেশ থেকে কত টাকা দেশে এল।<br><br>BoP-এর প্রধান অংশসমূহ:<br>১. চলতি হিসাব (Current Account): পণ্য ও সেবার আমদানি-রপ্তানি এবং রেমিট্যান্সের হিসাব।<br>২. মূলধন হিসাব (Capital Account): স্থাবর সম্পত্তি বা মূলধনী সম্পদের মালিকানা বদলের হিসাব।<br>৩. আর্থিক হিসাব (Financial Account): সরাসরি বৈদেশিক বিনিয়োগ (FDI) এবং শেয়ার বাজারে।<br><br>উৎস: Investopedia</p>"
+    },
+    {
+      "id": 38,
+      "favorite_id": "144993290",
+      "question": "Md. Mostaqur Rahman is __ Governor of Bangladesh Bank.",
+      "options": {
+        "a": "12th",
+        "b": "13th",
+        "c": "14th",
+        "d": "15th"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "14th",
+      "explanation": "<p>মোঃ মোস্তাকুর রহমান:<br><strong>- মোঃ মোস্তাকুর রহমান বাংলাদেশ ব্যাংকের ১৪তম গভর্নর।</strong></p>\r\n<p>উল্লেখ্য,<br>- ২৫ ফেব্রুয়ারি, ২০২৬ তারিখে বাংলাদেশ ব্যাংকের গভর্নর পদে মো. মোস্তাকুর রহমানকে নিয়োগ দিয়েছে সরকার।<br>- বাংলাদেশ ব্যাংক অর্ডার, ১৯৭২ (প্রেসিডেস্ট’স অর্ডার নম্বর ১২৭ অব ১৯৭২) এর ১০ (৫) অনুযায়ী মো. মোস্তাকুর রহমান এফসিএমএ-কে অন্যান্য সকল প্রতিষ্ঠান ও সংগঠনের সাথে কর্ম-সম্পর্ক পরিত্যাগের শর্তে তাঁর যোগদানের তারিখ থেকে ৪ (চার) বছরের জন্য বাংলাদেশ ব্যাংক-এর গভর্নর পদে নিয়োগ প্রদান করা হয়েছে।</p>\r\n<p>উৎস: আর্থিক প্রতিষ্ঠান বিভাগ ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 39,
+      "favorite_id": "144993280",
+      "question": "The 'Debt-to-GDP' ratio is a crucial indicator for banking stability. If this ratio rises rapidly, what is the primary risk?",
+      "options": {
+        "a": "Liquidity Surplus",
+        "b": "Sovereign Default Risk and higher interest burden",
+        "c": "Decrease in Inflation",
+        "d": "Increase in Foreign Direct Investment (FDI)"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Sovereign Default Risk and higher interest burden",
+      "explanation": "<p><strong>Debt-to-GDP Ratio:</strong><br>Debt-to-GDP Ratio বা ঋণ ও জিডিপির অনুপাত হলো একটি দেশের মোট সরকারি ঋণ এবং সেই দেশের মোট অভ্যন্তরীণ উৎপাদনের (GDP) তুলনা। এই অনুপাতটি দ্রুত বৃদ্ধি পাওয়ার প্রধান ঝুঁকিগুলো নিচে দেওয়া হলো:<br><br><strong>সার্বভৌম ডিফল্ট ঝুঁকি (Sovereign Default Risk):</strong> একটি দেশের ঋণ যদি তার উৎপাদন ক্ষমতার (GDP) তুলনায় অনেক বেশি হয়ে যায়, তবে বিনিয়োগকারীরা ভয় পায় যে সরকার সময়মতো ঋণ পরিশোধ করতে পারবে না। একেই 'ডিফল্ট ঝুঁকি' বলা হয়।<br>উচ্চ সুদের বোঝা (Higher Interest Burden): ঋণ বাড়লে সরকারকে সেই ঋণের বিপরীতে প্রচুর পরিমাণ সুদ দিতে হয়। ফলে জাতীয় বাজেটের একটি বড় অংশ উন্নয়নমূলক কাজে ব্যয় না হয়ে শুধুমাত্র সুদ পরিশোধেই চলে যায়।<br><strong>ব্যাংকিং খাতের ওপর প্রভাব:</strong> ব্যাংকগুলো যখন সরকারকে বড় অংকের লোন দেয় (ট্রেজারি বন্ড বা বিলের মাধ্যমে), তখন সরকারের ডিফল্ট হওয়ার সম্ভাবনা বাড়লে পুরো ব্যাংকিং খাত অস্থিতিশীল হয়ে পড়ে।</p>\r\n<p>অন্যদিকে,<br>- Liquidity Surplus (তারল্য উদ্বৃত্ত): ঋণ বাড়লে সাধারণত বাজারে তারল্য কমে যায়, কারণ সরকার বাজার থেকে টাকা তুলে নেয়।<br>- Decrease in Inflation (মূল্যস্ফীতি হ্রাস): সরকারি ঋণ বাড়লে টাকার সরবরাহ বাড়তে পারে, যা সাধারণত মূল্যস্ফীতি বাড়ায়, কমায় না।<br>- Increase in FDI (বৈদেশিক বিনিয়োগ বৃদ্ধি): কোনো দেশের ঋণের বোঝা বাড়লে বিদেশি বিনিয়োগকারীরা সেখানে বিনিয়োগ করতে ভয় পায়, তাই FDI কমে যাওয়ার সম্ভাবনা বেশি থাকে।<br><br>উৎস: Investopedia.</p>"
+    },
+    {
+      "id": 40,
+      "favorite_id": "144993274",
+      "question": "According to the latest BBS data (April, 2026), which specific non-food category has recorded the highest inflation rate?",
+      "options": {
+        "a": "Clothing and Footwear",
+        "b": "Restaurants and Hotels",
+        "c": "Transport",
+        "d": "Furnishing and Household Equipment"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Transport",
+      "explanation": "<p><strong>বাংলাদেশ মূল্যস্ফীতি প্রতিবেদন (এপ্রিল-মে ২০২৬):</strong><br>২০২৬ সালের এপ্রিল মাসে বাংলাদেশের বার্ষিক মূল্যস্ফীতি গত মাসের ৮.৭১% থেকে বেড়ে ৯.০৪%-এ দাঁড়িয়েছে। মূলত বৈশ্বিক জ্বালানি সংকটের কারণে পরিবহন ও আবাসন খাতে খরচ বেড়ে যাওয়ায় এই পরিস্থিতি তৈরি হয়েছে।</p>\r\n<p><strong>১. প্রধান তিন খাতের চিত্র (সর্বোচ্চ চাপ):</strong><br><strong>• পরিবহন (Transportation): সবচেয়ে বেশি দাম বেড়েছে এই খাতে। এটি মার্চ মাসের ৭.৪৭% থেকে লাফিয়ে ৯.৩১%-এ পৌঁছেছে। মধ্যপ্রাচ্যের অস্থিরতার কারণে জ্বালানি তেলের আমদানি খরচ বেড়ে যাওয়াই এর প্রধান কারণ।</strong><br>• আবাসন ও ইউটিলিটি (Housing &amp; Utilities): বিদ্যুৎ, পানি ও ঘর ভাড়া বাবদ খরচ মার্চ মাসের ৮.৪৩% থেকে বেড়ে ৮.৯২% হয়েছে।<br>• খাদ্য ও পানীয় (Food &amp; Beverages): মার্চ মাসে এটি ছিল ৮.২৪%, যা এপ্রিলে বেড়ে ৮.৩৯% হয়েছে।<br><br><strong>২. অন্যান্য খাতের মূল্যস্ফীতি:</strong><br>শুধুমাত্র বড় খাতগুলোই নয়, জীবনযাত্রার অন্যান্য সব ক্ষেত্রেই দাম বাড়ার প্রবণতা দেখা গেছে:<br>•  রেস্টুরেন্ট ও হোটেল: মার্চে ১০.৩৮% থেকে বেড়ে ১০.৮৮% হয়েছে।<br>• মাদকদ্রব্য ও তামাক: ৯.৬৯% থেকে বেড়ে ৯.৮১% হয়েছে।<br>• বিনোদন ও সংস্কৃতি: ৯.২৬% থেকে বেড়ে ৯.৮৫% হয়েছে।<br>• যোগাযোগ (Communication): ৮.৬৫% থেকে বেড়ে ৯.২১% হয়েছে।<br>• শিক্ষা: ৮.৩২% থেকে বেড়ে ৮.৪৮% হয়েছে।<br>• গৃহস্থালি সরঞ্জাম ও রক্ষণাবেক্ষণ: ৬.১৫% থেকে বেড়ে ৬.১৯% হয়েছে।<br>• স্বাস্থ্যসেবা: ৩.৬৯% থেকে বেড়ে ৩.৯% হয়েছে।</p>\r\n<p>উৎস: Trading Economics.com ও  বিবিএস রিপোর্ট।</p>"
+    },
+    {
+      "id": 41,
+      "favorite_id": "144993263",
+      "question": "Which indicator is used to differentiate between 'Real GDP' and 'Nominal GDP'?",
+      "options": {
+        "a": "Population",
+        "b": "GDP Deflator",
+        "c": "Exchange Rate",
+        "d": "Interest Rate"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "GDP Deflator",
+      "explanation": "<p><strong>• নমিনাল জিডিপি (Nominal GDP):</strong> এটি বর্তমান বাজার মূল্যে একটি দেশের মোট উৎপাদন পরিমাপ করে। অর্থাৎ, কোনো বছরের পণ্য ও সেবার পরিমাণকে ওই বছরের বাজার দাম দিয়ে গুণ করলে নমিনাল জিডিপি পাওয়া যায়। <strong>এতে মূল্যস্ফীতি (Inflation) অন্তর্ভুক্ত থাকে।</strong><br><strong>• রিয়েল জিডিপি (Real GDP): </strong>এটি মূল্যস্ফীতির প্রভাব বাদ দিয়ে প্রকৃত উৎপাদন পরিমাপ করে। এটি একটি নির্দিষ্ট ভিত্তি বছরের (Base Year) স্থির মূল্যে হিসাব করা হয়।<br><strong>• জিডিপি ডিফ্লেটর (GDP Deflator)/ : এটি হলো সেই সূচক যা নমিনাল জিডিপি থেকে মূল্যস্ফীতির প্রভাব দূর করে রিয়েল জিডিপিতে রূপান্তর করতে ব্যবহৃত হয়।</strong><br><br>মনে করুন, গত বছরের তুলনায় এই বছর দেশে উৎপাদনের পরিমাণ বাড়েনি, কিন্তু সব জিনিসের দাম দ্বিগুণ হয়েছে। এক্ষেত্রে নমিনাল জিডিপি দ্বিগুণ দেখাবে, কিন্তু রিয়েল জিডিপি একই থাকবে। এই দুইয়ের পার্থক্যই হলো মূল্যস্ফীতি বা জিডিপি ডিফ্লেটর।<br><br>উৎস: Investopedia.</p>"
+    },
+    {
+      "id": 42,
+      "favorite_id": "144993233",
+      "question": "The total market value of all final goods and services produced within a country's borders is-",
+      "options": {
+        "a": "Gross National Product (GNP)",
+        "b": "Gross Domestic Product (GDP)",
+        "c": "Net National Product (NNP)",
+        "d": "Per Capita Income"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Gross Domestic Product (GDP)",
+      "explanation": "<p><strong>• মোট দেশজ উৎপাদন / GDP : </strong><br>- পূর্ণরূপ: Gross Domestic Product <br><strong>- একটি দেশের ভৌগোলিক ও রাজনৈতিক সীমারেখার মধ্যে দেশে অবস্থিত সকল ব্যক্তিবর্গ (দেশি ও বিদেশি) প্রাপ্ত সম্পদ ব্যবহার করে যে পরিমাণ দ্রব্য ও সেবাসামগ্রী উৎপাদন করে তার আর্থিক মূল্যকে মোট দেশজ উৎপাদন বা GDP বলে।</strong><br> - অর্থাৎ, জিডিপি তে দেশের অভ্যন্তরে উৎপাদিত সকল দ্রব্যসামগ্রী ও সেবাকর্মের মূল্য হিসাব করা হয়।</p>\r\n<p>- উদাহরণস্বরূপ বলা যায়, বাংলাদেশের অভ্যন্তরে সকল জনগণ এবং অবস্থানরত বিদেশি মিলে একবছরে যে পরিমাণ দ্রব্যসামগ্রী ও সেবা উৎপাদন করে তা হচ্ছে সেই নির্দিষ্ট বছরে বাংলাদেশের জিডিপি।<br> - সুতরাং একটি দেশের জিডিপি থেকে ঐ দেশের মোট উৎপাদন ক্ষমতা তথা অর্থনীতির চিত্র সম্পর্কে ধারণা পাওয়া যায়।</p>\r\n<p>⇒ মোট দেশজ উৎপাদন = মোট জাতীয় উৎপাদন – বিদেশে অবস্থানকারী দেশীয় নাগরিকদের আয় + দেশে অবস্থানকারী বিদেশীদের আয়। </p>\r\n<p>অর্থ্যাৎ, GDP = [GNP- (বিদেশ থেকে অর্জিত সম্পত্তি খাতে নিট আয়+দেশে অবস্থানকারী বিদেশীদের আয়)] <br><strong><br>• মোট জাতীয় উৎপাদন / GNP:</strong><br>- পূর্ণরূপ: Gross National Product <br>- একটি দেশে একটি নির্দিষ্ট সময়ে (সাধারণত এক বছরে) যে পরিমাণ চূড়ান্ত দ্রব্যসামগ্রী ও সেবা উৎপাদিত হয় তার চলতি বাজার মূল্য তথা আর্থিক মূল্যকে জাতীয় উৎপাদন বা জাতীয় আয় বলে।<br>- মোট জাতীয় উৎপাদন বা GNP বলতে শুধুমাত্র একটি দেশের নাগরিকদের উৎপাদিত দ্রব্য ও কাজের মোট মূল্যকে বোঝায়।<br> - সেই হিসেবে জিএনপি-তে কোন দেশে বিদেশীদের আয় ধরা হয় না, কিন্তু সে দেশের নাগরিকদের বিদেশ থেকে প্রেরিত আয় অন্তর্ভুক্ত করা হয়।</p>\r\n<p> ⇒ মোট জাতীয় উৎপাদন = মোট দেশজ উৎপাদন + বিদেশে অবস্থানরত দেশীয় নাগরিকদের আয় – দেশে অবস্থানরত বিদেশীদের আয়। <strong></strong></p>\r\n<p>উৎস: অর্থনীতি ও বাংলাদেশ স্টাডিজ, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয় ও অর্থনৈতিক সমীক্ষা ২০২৫ ।  </p>"
+    },
+    {
+      "id": 43,
+      "favorite_id": "144992964",
+      "question": "What is the 'Standing Deposit Facility' (SDF) in the context of the new interest rate corridor?",
+      "options": {
+        "a": "The ceiling (highest rate) of the corridor",
+        "b": "The floor (lowest rate) of the corridor",
+        "c": "The mid-point of the corridor",
+        "d": "A long-term loan facility"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The floor (lowest rate) of the corridor",
+      "explanation": "<p>বাংলাদেশ ব্যাংক বর্তমানে সুদহার নিয়ন্ত্রণের জন্য 'ইন্টারেস্ট রেট করিডোর' (Interest Rate Corridor) পদ্ধতি ব্যবহার করে। এই করিডোর বা সীমার দুটি প্রান্ত থাকে:<br>১. সিলিং বা সর্বোচ্চ সীমা ( Standing Lending Facility): যে সর্বোচ্চ সুদে ব্যাংকগুলো কেন্দ্রীয় ব্যাংক থেকে টাকা ধার করতে পারে। একে বলা হয় স্ট্যান্ডিং লেন্ডিং ফ্যাসিলিটি (SLF)।<br>২. ফ্লোর বা সর্বনিম্ন সীমা (Standing Deposit Facility): <strong>ব্যাংকগুলোর কাছে যদি অতিরিক্ত টাকা থাকে এবং তারা তা কেন্দ্রীয় ব্যাংকে জমা রাখতে চায়, তবে কেন্দ্রীয় ব্যাংক যে সর্বনিম্ন হারে তাদের সুদ দেয়, তাকেই বলা হয় স্ট্যান্ডিং ডিপোজিট ফ্যাসিলিটি (SDF)।</strong><br><br>উৎস: Investopedia ও বাংলাদেশ ব্যাংক।</p>"
+    },
+    {
+      "id": 44,
+      "favorite_id": "144992956",
+      "question": "What is the current 'Policy Rate' (Repo Rate) mechanism in Bangladesh often referred to?",
+      "options": {
+        "a": "Interest Rate Targeting",
+        "b": "Interest Rate Corridor",
+        "c": "Fixed Exchange Rate",
+        "d": "Credit Rationing"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Interest Rate Corridor",
+      "explanation": "<p>বাংলাদেশ ব্যাংক বর্তমানে মুদ্রানীতি পরিচালনার জন্য <strong>Interest Rate Corridor (IRC)</strong> বা সুদের হারের করিডোর কাঠামো ব্যবহার করছে। <br><br>এই ব্যবস্থায় তিনটি মূল হার থাকে: <br>• Policy Rate (Repo Rate): এটি করিডোরের মাঝামাঝি বা মূল হার, বর্তমানে যা ১০.০০%<br>• Standing Lending Facility (SLF) Rate: এটি করিডোরের সর্বোচ্চ সীমা (Upper Bound), যা বর্তমানে ১১.৫০%<br>• Standing Deposit Facility (SDF) Rate: এটি করিডোরের সর্বনিম্ন সীমা (Lower Bound), যা বর্তমানে ৭.৫০%<br><br>উৎস: বাংলাদেশ ব্যাংক ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 45,
+      "favorite_id": "144992829",
+      "question": "Under the Anti-Money Laundering Act, 2012, what is the maximum punishment for money laundering?",
+      "options": {
+        "a": "5 years imprisonment",
+        "b": "12 years imprisonment and fine",
+        "c": "Life imprisonment",
+        "d": "Death penalty"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "12 years imprisonment and fine",
+      "explanation": "<p>Anti-Money Laundering Act, 2012 অনুযায়ী, কোনো ব্যক্তি মানিলন্ডারিং অপরাধ করলে বা করার চেষ্টা করলে তার জন্য কঠোর শাস্তির ব্যবস্থা রয়েছে:<br>১. কারাদণ্ড: অপরাধের গুরুত্ব বিবেচনা করে সর্বনিম্ন ৪ বছর থেকে সর্বোচ্চ <strong>১২ বছর পর্যন্ত কারাদণ্ড হতে পারে ।</strong><br>২. অর্থদণ্ড: কারাদণ্ডের পাশাপাশি আদালত অপরাধীকে অর্থদণ্ড প্রদান করবেন। এই জরিমানার পরিমাণ হবে অপরাধের সাথে সংশ্লিষ্ট সম্পত্তির মূল্যের দ্বিগুণ অথবা ১০ লক্ষ টাকা (এর মধ্যে যেটি বেশি হয়)।<br>৩. সম্পত্তি বাজেয়াপ্তকরণ: অপরাধের মাধ্যমে অর্জিত যাবতীয় সম্পত্তি রাষ্ট্রের অনুকূলে বাজেয়াপ্ত করার আদেশও আদালত দিতে পারেন।<br><br>উৎস: Anti-Money Laundering Act, 2012.</p>"
+    },
+    {
+      "id": 46,
+      "favorite_id": "144992818",
+      "question": "What is \"Call Money Rate\"?",
+      "options": {
+        "a": "The rate at which banks lend to the public",
+        "b": "The interest rate for long-term government bonds",
+        "c": "The interest rate on the inter-bank overnight market",
+        "d": "The rate at which the public deposits money"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The interest rate on the inter-bank overnight market",
+      "explanation": "<p><strong>• কল মানি রেট (Call Money Rate):</strong><br><strong>- এটি হলো সেই সুদের হার, যে হারে একটি বাণিজ্যিক ব্যাংক অন্য একটি বাণিজ্যিক ব্যাংক থেকে অত্যন্ত স্বল্প সময়ের জন্য (সাধারণত ১ দিনের জন্য বা রাতারাতি) টাকা ধার নেয়</strong>।<br><br>- প্রতিদিনের লেনদেন শেষে কোনো ব্যাংকের হাতে প্রয়োজনের চেয়ে বেশি টাকা জমা থাকে, আবার কোনো ব্যাংকের নগদ টাকার ঘাটতি দেখা দেয়। যাদের ঘাটতি থাকে, তারা যাদের কাছে বাড়তি টাকা আছে তাদের কাছ থেকে ১ দিনের জন্য বা খুব অল্প সময়ের জন্য (সর্বোচ্চ ১৪ দিন) টাকা ধার নেয়।<br>- এই হারটি দেশের মুদ্রাবাজারের তারল্য পরিস্থিতির (Liquidity) একটি গুরুত্বপূর্ণ নির্দেশক। যদি বাজারে টাকার সংকট থাকে, তবে কল মানি রেট বেড়ে যায়। আর বাজারে পর্যাপ্ত টাকা থাকলে এই রেট কমে আসে।<br><br>উৎস: Investopedia.</p>"
+    },
+    {
+      "id": 47,
+      "favorite_id": "144992789",
+      "question": "What is the minimum Capital Adequacy Ratio (CAR) banks must maintain in Bangladesh under Basel III?",
+      "options": {
+        "a": "8%",
+        "b": "10%",
+        "c": "12.5%",
+        "d": "15%"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "12.5%",
+      "explanation": "<p><strong>• Capital Adequacy Ratio (CAR):</strong><br>- Capital Adequacy Ratio (CAR) বা মূলধন পর্যাপ্ততা অনুপাত হলো একটি ব্যাংকের আর্থিক সক্ষমতা বা শক্তি মাপার মাপকাঠি।<br>- এটি দেখায় যে একটি ব্যাংক তার ঝুঁকির তুলনায় কতটা নিজস্ব মূলধন সংরক্ষণ করছে।<br>ব্যাংক যখন কাউকে ঋণ দেয়, তখন সেই টাকা ফেরত না পাওয়ার একটা ঝুঁকি থাকে (যাকে Risk-weighted Assets বলা হয়)। <br>- এই ঝুঁকির বিপরীতে ব্যাংক যদি দেউলিয়া হওয়ার ঝুঁকিতে পড়ে, তবে সেই ধাক্কা সামলানোর জন্য তাকে নির্দিষ্ট পরিমাণ টাকা নিজের কাছে 'নিরাপত্তা তহবিল' হিসেবে রাখতে হয়। এটাই হলো CAR।<br><br>- বাংলাদেশ ব্যাংকের ব্যাসেল ৩ (Basel III) নীতিমালার নির্দেশনা অনুযায়ী, ব্যাংকগুলোকে বর্তমানে মোট ঝুঁকি-ভিত্তিক সম্পদের (Risk-Weighted Assets) বিপরীতে ১০% ন্যূনতম মূলধন (Minimum Capital Requirement - MCR) এবং অতিরিক্ত ২.৫% ক্যাপিটাল কনজারভেশন বাফার (CCB) সংরক্ষণ করতে হয়।<br><strong>- এই দুইয়ে মিলে মোট ১২.৫% মূলধন পর্যাপ্ততা অনুপাত বা CAR বজায় রাখা বাধ্যতামূলক।<br><br></strong>উৎস: Market Discipline Basel- III 2023 ও বাংলাদেশ ব্যাংক ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 48,
+      "favorite_id": "144992243",
+      "question": "What is the current Policy Rate (Repo Rate) set by Bangladesh Bank for the January–June 2026 period?",
+      "options": {
+        "a": "8.5%",
+        "b": "9.0%",
+        "c": "10.0%",
+        "d": "11.5%"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "10.0%",
+      "explanation": "<p><strong>• নীতি সুদহার:</strong><br><strong>- বর্তমানে দেশে নীতি সুদহার ১০ শতাংশ।</strong><br>- মূল্যস্ফীতি এখনো কাঙ্ক্ষিত মাত্রায় না আসায় নীতি সুদহার (পলিসি রেট) অপরিবর্তিত রেখে নতুন মুদ্রানীতি ঘোষণা করেছে বাংলাদেশ ব্যাংক।<br>- কেন্দ্রীয় ব্যাংক জানিয়েছে, মূল্যস্ফীতি ৭ শতাংশে না নামা পর্যন্ত এই সংকোচনমূলক অবস্থান বজায় রাখা হবে।<br>- বাংলাদেশ ব্যাংকের সভাকক্ষে চলতি অর্থবছরের দ্বিতীয়ার্ধের (জানুয়ারি-জুন) মুদ্রানীতি ঘোষণা করেন সাবেক গভর্নর আহসান এইচ মনসুর।<br>- ২০২৪ সালের অক্টোবর থেকে নীতি সুদহার ১০ শতাংশে অপরিবর্তিত রয়েছে।<br>- SLF Rate: 11.50%.<br>- SDF Rate 7.50%.<br>- Bank Rate: 4.00. </p>\r\n<p><strong>• একনজরে মুদ্রানীতি:</strong><br>- নীতি সুদহার ১০ শতাংশ।<br>- মূল্যস্ফীতি লক্ষ্য: ৭ শতাংশে না আসা পর্যন্ত সংকোচনমূলক নীতি চলবে।<br>- বেসরকারি ঋণ প্রবৃদ্ধির লক্ষ্যমাত্রা বাড়িয়ে সাড়ে ৮ শতাংশ।<br>- মুদ্রা সরবরাহের লক্ষ্যমাত্রা জুন নাগাদ সাড়ে ১১ শতাংশ।</p>\r\n<p>উৎস: বাংলাদেশ ব্যাংক ও প্রথম আলো পত্রিকা।</p>"
+    },
+    {
+      "id": 49,
+      "favorite_id": "144831211",
+      "question": "What does BoP indicate?",
+      "options": {
+        "a": "Only the country’s debt",
+        "b": "The country’s internal budget",
+        "c": "Record of international transactions",
+        "d": "Profit and loss of banks"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Record of international transactions",
+      "explanation": "<p><strong>ব্যালেন্স অফ পেমেন্ট (BoP):</strong><br><strong>- ব্যালেন্স অফ পেমেন্ট (BoP) বা লেনদেনের ভারসাম্য হলো একটি নির্দিষ্ট সময় ধরে একটি দেশের অধিবাসীদের সঙ্গে বিশ্বের অন্যান্য দেশের অধিবাসীদের সব ধরনের অর্থনৈতিক লেনদেনের একটি পদ্ধতিগত হিসাব।</strong><br>- এর মাধ্যমে বোঝা যায় কোনো দেশ থেকে কত অর্থ বাইরে গেছে এবং কত অর্থ দেশে এসেছে।<br> <br>BoP-এর প্রধান অংশসমূহ<br>১. চলতি হিসাব (Current Account):<br>- পণ্য ও সেবা আমদানি-রপ্তানি, আয় এবং রেমিট্যান্সসহ নিয়মিত আন্তর্জাতিক লেনদেনের হিসাব।<br><br>২. মূলধন হিসাব (Capital Account):<br>- স্থাবর সম্পদ, জমি বা অন্যান্য মূলধনী সম্পদের মালিকানা পরিবর্তন ও মূলধন স্থানান্তরের হিসাব।<br><br>৩. আর্থিক হিসাব (Financial Account):<br>- বৈদেশিক বিনিয়োগ যেমন FDI, পোর্টফোলিও ইনভেস্টমেন্ট, শেয়ার ও বন্ডে বিনিয়োগের প্রবাহের হিসাব।<br><br><em>তথ্যসূত্র - Investopedia</em></p>"
+    },
+    {
+      "id": 50,
+      "favorite_id": "144831093",
+      "question": "What is the full form of CTR?",
+      "options": {
+        "a": "Cash Transfer Report",
+        "b": "Credit Transaction Report",
+        "c": "Cash Transaction Report",
+        "d": "Current Transaction Report"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Cash Transaction Report",
+      "explanation": "<p><strong>CTR:</strong><br><strong>- CTR-এর পূর্ণরূপ হলো Cash Transaction Report, যার বাংলা অর্থ নগদ লেনদেন প্রতিবেদন।</strong><br>- বাংলাদেশের আর্থিক গোয়েন্দা সংস্থা Bangladesh Financial Intelligence Unit (BFIU)-এর নির্দেশনা অনুযায়ী, কোনো ব্যাংক হিসাবের মাধ্যমে একদিনে বিপুল অঙ্কের নগদ লেনদেন হলে ব্যাংককে তা রিপোর্ট করতে হয়।<br>- কোনো গ্রাহক যদি একটি দিনে একই অ্যাকাউন্টে মোট ১০ লক্ষ টাকা বা তার বেশি নগদ জমা বা উত্তোলন করেন, তাহলে সেই তথ্য ব্যাংক কর্তৃপক্ষ BFIU-কে পাঠায়।<br>- এই রিপোর্টিং ব্যবস্থাকেই বলা হয় CTR।<br>- এটি শুধুমাত্র নগদ লেনদেনের ক্ষেত্রে প্রযোজ্য; চেক, অনলাইন ট্রান্সফার বা ডিজিটাল পেমেন্ট সাধারণত এর আওতায় পড়ে না।<br>- গ্রাহক একই দিনে কয়েকবার টাকা জমা বা উত্তোলন করলেও, সব মিলিয়ে পরিমাণ ১০ লক্ষ টাকা বা তার বেশি হলে ব্যাংককে CTR জমা দিতে হয়।<br>- মূলত মানিলন্ডারিং (অর্থ পাচার) ও সন্ত্রাসী অর্থায়ন প্রতিরোধের উদ্দেশ্যে এই তথ্য সংগ্রহ করা হয়।<br>- CTR জমা দেওয়া ব্যাংকের একটি নিয়মিত ও বাধ্যতামূলক কার্যক্রম; এর অর্থ এই নয় যে সংশ্লিষ্ট গ্রাহক অপরাধের সঙ্গে জড়িত।<br>- তবে কোনো লেনদেন অস্বাভাবিক বা সন্দেহজনক মনে হলে BFIU প্রয়োজনীয় তদন্ত কার্যক্রম পরিচালনা করতে পারে।</p>\r\n<p><em>তথ্যসূত্র - BFIU ও Investopedia.</em></p>"
+    },
+    {
+      "id": 51,
+      "favorite_id": "144831041",
+      "question": "What is the loan called that a bank grants through a current account against the security of goods or movable property?",
+      "options": {
+        "a": "Overdraft loan",
+        "b": "Cash credit",
+        "c": "Long-term loan",
+        "d": "Documentary loan"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Cash credit",
+      "explanation": "<p><strong>নগদ ঋণ:</strong><br><strong>- পণ্য অথবা অস্থাবর সম্পত্তি জামানত রেখে ব্যাংক চলতি হিসাবের মাধ্যমে যে ঋণ মঞ্জুর করে তাকে নগদ ঋণ বলে।</strong><br>- এজন্য ব্যাংক গ্রাহককে নগদ ঋণ হিসাব বা Cash Credit Account খুলতে বলে বা তার নামের আগের কোন মঞ্জুরীকৃত ঋণের অর্থ জমা দেখায়।<br>- চেক কেটে গ্রাহক এই ঋণের অর্থ উত্তোলন করতে পারে। গ্রাহক যে পরিমাণ অর্থ উঠায় তার উপরে সুদ দিতে হয় এবং একাধিক কিস্তিতে ঋণ পরিশোধ করা যায়।</p>\r\n<p><em>তথ্যসূত্র - ব্যাংকিং এন্ড ইন্স্যুরেন্স, বিবিএস প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয় ও প্রথম আলো পত্রিকার রিপোর্ট।</em></p>"
+    },
+    {
+      "id": 52,
+      "favorite_id": "144831000",
+      "question": "What is it called when a bank issues an L.C. (Letter of Credit) or credit certificate in the name of its client?",
+      "options": {
+        "a": "Funded loan",
+        "b": "Commercial documentary loan",
+        "c": "Non-commercial loan",
+        "d": "None of these"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Commercial documentary loan",
+      "explanation": "<p><strong>দলিলি ঋণ:</strong><br>- ব্যাংক বিভিন্ন প্রকার দলিলপত্র ইস্যুর মাধ্যমে মক্কেলদের যে ঋণ দেয় তাকে দলিলি ঋণ বলে।<br>- এতে ব্যাংক নগদ অর্থে ঋণ দেয় না, কিন্তু নিজের সুনাম ও বিশ্বাস ধার দিয়ে গ্রাহকদের আর্থিক কাজে সহযোগিতা করে।<br>- নিচে দুই ধরনের দলিলি ঋণ আলোচনা করা হলো:</p>\r\n<p><strong>→ বাণিজ্যিক দলিলি ঋণ: ব্যবসা বাণিজ্যে সহযোগিতার জন্য ব্যাংক যে সমস্ত দলিলি ঋণ দেয় তাকে বাণিজ্যিক দলিলি ঋণ বলে। যেমন, এলসি বা প্রত্যয়নপত্র, পে-অর্ডার, ব্যাংক গ্যারান্টি পত্র ইত্যাদি।</strong></p>\r\n<p>→ অবাণিজ্যিক দলিলি ঋণ: মক্কেলদের ব্যক্তিগত ব্যবহারের জন্য ব্যাংক যে সব দলিলি ঋণ দিয়ে থাকে তাকে অবাণিজ্যিক দলিলি ঋণ বলে। ভ্রমণকারীর চেক, ভ্রমণকারীর প্রত্যয়নপত্র ইত্যাদি এ জাতীয় অবাণিজ্যিক দলিলি ঋণের উদাহরণ।</p>\r\n<p><em>তথ্যসূত্র - ব্যাংকিং এন্ড ইন্স্যুরেন্স, বিবিএস প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয় ও প্রথম আলো পত্রিকার রিপোর্ট।</em></p>"
+    },
+    {
+      "id": 53,
+      "favorite_id": "144827399",
+      "question": "Which of the following nationalized commercial banks was the first to be privatized?",
+      "options": {
+        "a": "City Bank PLC",
+        "b": "Uttara Bank PLC",
+        "c": "AB Bank PL",
+        "d": "Trust Bank PLC"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Uttara Bank PLC",
+      "explanation": "<p><strong> জাতীয়করণ থেকে বেসরকারীকৃত প্রথম ব্যাংক Uttara Bank PLC.</strong><br><br>- উত্তরা ব্যাংক পিএলসি-এর পূর্ব নাম ছিল ইস্টার্ন ব্যাংকিং কর্পোরেশন।<br>- এটি প্রতিষ্ঠিত হয় ১৯৬৫ সালে।<br>- ব্যাংকটি আনুষ্ঠানিকভাবে কার্যক্রম শুরু করে ২৮ জানুয়ারি ১৯৬৫।<br>- শুরুতে এর শাখা ছিল ৪টি, স্বাধীনতার আগে তা বেড়ে প্রায় ৬০টি হয়।<br>- ১৯৭১ সালের অসহযোগ আন্দোলনে এটি পূর্ব বাংলার কোষাগারের দায়িত্ব পালন করে।<br>- স্বাধীনতার পর ব্যাংকটি জাতীয়করণ করা হয়।<br>- তখন এর নতুন নাম রাখা হয় উত্তরা ব্যাংক।<br>- পুনরায় কার্যক্রম শুরু করে ২৬ মার্চ ১৯৭২।<br>- ১৯৮৩ সালের জুন মাসে ব্যাংকটি বেসরকারীকরণ করা হয়।<br>- এরপর এর নাম হয় উত্তরা ব্যাংক লিমিটেড।<br>- ২০২৩ সালের ৩ জুলাই থেকে এর নতুন নাম হয় উত্তরা ব্যাংক পিএলসি।<br>- বর্তমানে ব্যাংকটির ২৫০টি শাখা ও ৫০টি উপশাখা রয়েছে।</p>\r\n<p>  উৎস: Uttara Bank PLC.</p>"
+    },
+    {
+      "id": 54,
+      "favorite_id": "144827381",
+      "question": "In Islamic banking within Bangladesh, which shariah principle is typically used for mobilizing current deposits?",
+      "options": {
+        "a": "Murabah",
+        "b": "Al-Wadiah",
+        "c": "Musharak",
+        "d": "None of these"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Al-Wadiah",
+      "explanation": "<p>» আল-ওয়াদিয়াহ:<br>- আল-ওয়াদিয়াহ হলো শরীয়ত অনুমোদিত একটি 'নিরাপদ হেফাজত' ব্যবস্থা। <strong>ইসলামী ব্যাংকগুলো চলতি হিসাবে আমানত গ্রহণের জন্য আল-ওয়াদিয়াহ নীতি ব্যবহার করে। </strong>ইসলামী ব্যাংকগুলো নিজ দায়িত্বে তহবিল ব্যবহারের জন্য আল-ওয়াদিয়াহ আমানতকারীদের কাছ থেকে অনুমতি গ্রহণ করে এবং ব্যাংক কর্তৃক এই তহবিল ব্যবহারের ফলে অর্জিত বা সংঘটিত কোনো লাভ বা লোকসানের অংশীদার আমানতকারীরা হন না। আমানতকারীদের চাহিদামাত্র ব্যাংকগুলোকে গৃহীত আল-ওয়াদিয়াহ আমানত ফেরত দিতে হয়।<br><br>অন্যদিকে,<br>» মুদারাবা:<br>- মুদারাবা হলো শ্রম ও মূলধনের একটি অংশীদারিত্ব, যেখানে একজন অংশীদার সম্পূর্ণ মূলধন সরবরাহ করেন এবং অন্যজন তার সময় ও শ্রম বিনিয়োগ করে ব্যবসা পরিচালনা করেন। মূলধন সরবরাহকারীকে সাহিব-আল-মাল বা রব-আল-মাল বা মূলধন সরবরাহকারী বলা হয় এবং মূলধন ব্যবহারকারীকে মুদারিব বা ব্যবস্থাপক বা প্রতিনিধি বলা হয়। <br><br>» মুশারাকা:<br>- মুশারাকা মানে অংশীদারি ব্যবসা। প্রত্যেক অংশীদারকে সম্মত অনুপাতে অংশীদারি ব্যবসার মূলধন তহবিল গঠনে অংশগ্রহণ করতে হয়। ব্যাংক এবং বিনিয়োগকারী উভয়েই ব্যবসার ব্যবস্থাপনায় অংশ নেওয়ার অধিকার সংরক্ষণ করে। <br><br>উৎস: Trust Bank PLC.</p>"
+    },
+    {
+      "id": 55,
+      "favorite_id": "144827371",
+      "question": "What is the full form of CHIPS?",
+      "options": {
+        "a": "Central House International Payment System",
+        "b": "Clearing House Interbank Payments System",
+        "c": "Commercial High-speed Interbank Payment Service",
+        "d": "Credit Handling Integrated Payment System"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Clearing House Interbank Payments System",
+      "explanation": "<p><strong>The full form of CHIPS is Clearing House Interbank Payments System.<br><br></strong>» CHIPS সম্পর্কে:<br> - The Clearing House Interbank Payments System (CHIPS) হলো বিশ্বের বৃহত্তম বেসরকারি খাতের ইউএসডি ক্লিয়ারিং ও সেটেলমেন্ট নেটওয়ার্ক, যা প্রতিদিন ২.২ ট্রিলিয়ন ডলারের অভ্যন্তরীণ ও আন্তর্জাতিক পেমেন্ট ক্লিয়ারিং ও সেটেল করে।</p>\r\n<p>- CHIPS নেটওয়ার্ক দ্রুত ও চূড়ান্ত অর্থপ্রদান এবং বর্তমানে উপলব্ধ সবচেয়ে কার্যকর তারল্য সাশ্রয় ব্যবস্থা প্রদান করে। এর পেটেন্টকৃত অ্যালগরিদম অর্থপ্রদানগুলোকে মিলিয়ে দেয় ও সমন্বয় করে, যার ফলে একটি অত্যন্ত কার্যকর ক্লিয়ারিং প্রক্রিয়া তৈরি হয়। CHIPS নেটওয়ার্কের তারল্য দক্ষতার গড় অনুপাত ২৬:১, যার অর্থ হলো, নেটওয়ার্কে অবদান রাখা ১ ডলার তহবিল ২৬ ডলারের নিষ্পত্তিকৃত অর্থপ্রদানকে সমর্থন করে।</p>\r\n<p>- এই বৃহৎ অঙ্কের অর্থপ্রদান ব্যবস্থাটিতে ৪২ জন অংশগ্রহণকারী রয়েছে এবং এটি ফেডওয়্যার-এর বেসরকারি খাতের প্রতিরূপ।</p>\r\n<p>উৎস: The Clearing House.</p>"
+    },
+    {
+      "id": 56,
+      "favorite_id": "144827354",
+      "question": "Which authority is responsible for appointing the Governor of Bangladesh Bank?",
+      "options": {
+        "a": "The Prime Minister",
+        "b": "The President of Bangladesh",
+        "c": "The Ministry of Finance",
+        "d": "The Board of Directors of Bangladesh Bank"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The Ministry of Finance",
+      "explanation": "<p>- ২৫ ফেব্রুয়ারি, ২০২৬ – সরকার চার বছরের মেয়াদে বাংলাদেশ ব্যাংকের নতুন গভর্নর হিসেবে মো. মোস্তাকুর রহমান, এফসিএমএ-কে নিয়োগ দিয়েছে।</p>\r\n<p><strong>- অর্থ মন্ত্রণালয়ের আর্থিক প্রতিষ্ঠান বিভাগ কর্তৃক আজ জারি করা এক বিজ্ঞপ্তি অনুসারে, বাংলাদেশ ব্যাংক আদেশ, ১৯৭২ (রাষ্ট্রপতির আদেশ নং ১২৭, ১৯৭২)-এর ধারা ১০(৫)-এর অধীনে এই নিয়োগ দেওয়া হয়েছে।</strong></p>\r\n<p>- বিজ্ঞপ্তিতে বলা হয়েছে, অন্যান্য প্রতিষ্ঠান ও সংস্থার সঙ্গে সকল কর্মসম্পর্ক ত্যাগ সাপেক্ষে মো. মোস্তাকুর রহমান যোগদানের তারিখ থেকে চার বছরের জন্য গভর্নর হিসেবে দায়িত্ব পালন করবেন।</p>\r\n<p>- গভর্নর হিসেবে তাঁর কার্যকালে, সরকারের সাথে সম্পাদিতব্য চুক্তির শর্তানুযায়ী তিনি বাংলাদেশ ব্যাংক থেকে বেতন, ভাতা ও অন্যান্য সুবিধাদি গ্রহণ করবেন। তাঁর নিয়োগের অন্যান্য শর্তাবলী চুক্তিপত্রে নির্ধারিত হবে।</p>\r\n<p>- রাষ্ট্রপতির নির্দেশে আর্থিক প্রতিষ্ঠান বিভাগের উপ-সচিব মোহাম্মদ আবরাউল হাসান মজুমদার বিজ্ঞপ্তিটি জারি করেন।<br><br>উৎস: অর্থমন্ত্রণালয় এবং BSS NEWS.</p>"
+    },
+    {
+      "id": 57,
+      "favorite_id": "144827344",
+      "question": "Where is the headquarters of the Financial Action Task Force (FATF) located?",
+      "options": {
+        "a": "Vienn",
+        "b": "Paris",
+        "c": "Genev",
+        "d": "Brussels"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Paris",
+      "explanation": "<p>- FATF (Financial Action Task Force) হলো অর্থপাচার ও সন্ত্রাসবাদের অর্থায়ন প্রতিরোধে বৈশ্বিক মানদণ্ড নির্ধারণকারী একটি আন্তঃসরকারি সংস্থা। <br>- এটি ১৯৮৯ সালে প্রতিষ্ঠিত হয় এবং বর্তমানে প্রায় ৪০টি সদস্য দেশ নিয়ে কাজ করে। <br>- বিশ্বের ২০০টিরও বেশি দেশ ও বিচারব্যবস্থা এর নীতিমালা বাস্তবায়নে প্রতিশ্রুতিবদ্ধ। <br>- FATF-এর প্রধান কাজ হলো অবৈধ আর্থিক লেনদেন, মাদক পাচার, সাইবার অপরাধ, দুর্নীতি এবং সন্ত্রাসী অর্থায়ন প্রতিরোধে আন্তর্জাতিক মান নির্ধারণ ও দেশগুলোর আইন ও নীতিমালা উন্নত করতে সহায়তা করা।<br><strong>- এর সদর দপ্তর প্যারিস, ফ্রান্স-এ অবস্থিত।</strong></p>\r\n<p>উৎস: FATF.</p>"
+    },
+    {
+      "id": 58,
+      "favorite_id": "144827329",
+      "question": "The Dhaka Stock Exchange (DSE), formally started trading in which year?",
+      "options": {
+        "a": "1954",
+        "b": "1956",
+        "c": "1971",
+        "d": "1986"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "1956",
+      "explanation": "<p><strong>ঢাকা স্টক এক্সচেঞ্জ:</strong><br><span>- ঢাকার শেয়ারবাজার ঢাকা স্টক এক্সচেঞ্জ নিয়ে গঠিত।</span><br><span>- এটি দেশের বৃহত্তম শেয়ার বাজার।</span><br><span>- এটি রাজধানী ঢাকার প্রধানতম বাণিজ্যিক এলাকা মতিঝিলে অবস্থিত। </span><br>- ঢাকা স্টক এক্সচেঞ্জ প্রতিষ্ঠা লাভ করে ১৯৫৪ সালে।</p>\r\n<p>- যদিও এটি ১৯৫৪ সালে নিবন্ধিত হয়েছিল, ব্যবসা শুরুর সনদপত্র পাওয়ার পর <strong>১৯৫৬ সালে নারায়ণগঞ্জে এর আনুষ্ঠানিক লেনদেন শুরু হয়।</strong> কিন্তু ১৯৫৮ সালে এটি ঢাকায় স্থানান্তরিত হয় এবং মতিঝিল সি/এ-র নারায়ণগঞ্জ চেম্বার বিল্ডিং-এ কার্যক্রম শুরু করে।</p>\r\n<p>- ১৯৫৭ সালের ১ অক্টোবর স্টক এক্সচেঞ্জটি সরকারের কাছ থেকে মতিঝিল সি/এ-র ৯এফ-এ ৮.৭৫ কাঠা জমি ক্রয় করে এবং ১৯৫৯ সালে নিজস্ব বর্তমান অবস্থানে স্থানান্তরিত হয়।<br><span><br> উৎস: ঢাকা স্টক এক্সচেঞ্জ ও BSEC ওয়েবসাইট।<br></span></p>"
+    },
+    {
+      "id": 59,
+      "favorite_id": "144827306",
+      "question": "A Garnishee Order is issued by-",
+      "options": {
+        "a": "The Central Bank",
+        "b": "A Commercial Bank",
+        "c": "A Court of Law",
+        "d": "The Ministry of Finance"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "A Court of Law",
+      "explanation": "<p><strong>Garnishee Order হলো আদালত কর্তৃক জারি করা একটি আইনগত নির্দেশ,</strong> যার মাধ্যমে কোনো দেনাদারের (debtor) ব্যাংক অ্যাকাউন্ট বা তৃতীয় পক্ষের কাছে থাকা অর্থ জব্দ করে সরাসরি ঋণ পরিশোধের নির্দেশ দেওয়া হয়।</p>\r\n<p>গার্নিশি কার্যধারা সম্পর্কে:<br>- দেওয়ানি মামলায়, আদালত কোনো পক্ষকে অন্য পক্ষকে একটি নির্দিষ্ট পরিমাণ অর্থ পরিশোধ করার আদেশ দিতে পারে। যে পক্ষকে ঋণ পরিশোধ করতে হয়, তাকে দেনাদার (judgment debtor) বলা হয় , আর যে পক্ষের অর্থ প্রাপ্তির কথা, তাকে পাওনাদার (judgment creditor) বলা হয় ।</p>\r\n<p>- যদি দেনাদার অর্থ পরিশোধ না করেন, তবে পাওনাদার বিভিন্ন উপায়ে রায়টি কার্যকর করতে পারেন। যদি কোনো তৃতীয় পক্ষ (যাকে অর্থদণ্ডদাতা বলা হয় ) দেনাদারের কাছে ঋণী থাকে, তবে পাওনাদার সেই অর্থ দেনাদারের পরিবর্তে তাকে পরিশোধ করার জন্য আবেদন করতে পারেন।</p>\r\n<p>এর মাধ্যমে দেনাদারের কাছে গার্নিশির ঋণ পরিশোধ করা হয় এবং এটি গার্নিশি আদেশ নামে পরিচিত।</p>\r\n<p>উৎস: Singapore Courts.</p>"
+    },
+    {
+      "id": 60,
+      "favorite_id": "144283774",
+      "question": "Non-Banking Financial Institutions (NBFIs) are primarily regulated by which act?",
+      "options": {
+        "a": "Bangladesh Bank Order, 1972",
+        "b": "Bank Company Act, 1991",
+        "c": "Negotiable Instruments Act, 1881",
+        "d": "Financial Institution Act, 1993"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Financial Institution Act, 1993",
+      "explanation": "<p><strong>বাংলাদেশে ব্যাংকবহির্ভূত আর্থিক প্রতিষ্ঠানগুলো (Non-Bank Financial Institutions - NBFIs) প্রধানত আর্থিক প্রতিষ্ঠান আইন, ১৯৯৩ (The Financial Institutions Act, 1993) অনুযায়ী গঠিত, পরিচালিত ও নিয়ন্ত্রিত হয়।<br><br>ব্যাংক বহির্ভূত আর্থিক প্রতিষ্ঠান:</strong><br>- ব্যাংক বহির্ভূত আর্থিক প্রতিষ্ঠান বলতে ঐ সকল আর্থিক প্রতিষ্ঠানকে বুঝায়, যে সকল প্রতিষ্ঠান সাধারণ ব্যাংকিং কার্যক্রম যেমন- বিভিন্ন হিসাব খুলে আমানত গ্রহণ, গ্রাহকদের চেক বই ইস্যু, চেকের মাধ্যমে অর্থ উত্তোলন, বিনিময়ের বিভিন্ন মাধ্যম সৃষ্টির মত কার্য পরিচালনা করতে পারে না। <br>- ব্যাংক বহির্ভূত আর্থিক প্রতিষ্ঠানসমূহ – ব্যাংক বহির্ভূত আর্থিক প্রতিষ্ঠান সাধারণত সংশ্লিষ্ট পক্ষের মাঝে মধ্যস্থতাকারীর ভূমিকা পালন করে। এসব প্রতিষ্ঠান অনেক সময় জনগণের অতিরিক্ত এবং অলস অর্থ গ্রহণ করে এবং তাদের মাঝেই আর্থিক চাহিদা পূরণার্থে তা ব্যবহার করে। এদের গুরুত্বপূর্ণ কার্যাবলির মাঝে রয়েছে ভারী যন্ত্রপাতি ইজারা প্রদান, ভাড়ায় ক্রয়, গৃহায়নে অর্থ বিনিয়োগ, আর্থিক সিকিউরিটিতে বিনিয়োগ ইত্যাদি।<br><br>উল্লেখ্য,<br><strong>- Non Bank Financial Institutions (FIs) are those types of financial institutions which are regulated under Financial Institution Act, 1993 and controlled by Bangladesh Bank. অর্থাৎ নন ব্যাংক ফাইন্যান্সিয়াল ইনস্টিটিউশন (FIs) সেই ধরনের আর্থিক প্রতিষ্ঠান যেগুলো Financial Institution Act, 1993 এর অধীনে বাংলাদেশ ব্যাংক দ্বারা নিয়ন্ত্রিত।</strong><br> <br>উৎস: আর্থিক প্রতিষ্ঠান আইন, ১৯৯৩। </p>"
+    },
+    {
+      "id": 61,
+      "favorite_id": "144283740",
+      "question": "Who benefits the most during a period of high inflation?",
+      "options": {
+        "a": "Creditors",
+        "b": "Debtors",
+        "c": "Fixed Income Earners",
+        "d": "Savings Account Holders"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Debtors",
+      "explanation": "<p><strong>উচ্চ মুদ্রাস্ফীতি (High Inflation):</strong><br>- উচ্চ মুদ্রাস্ফীতি (High Inflation) হলো এমন একটি অর্থনৈতিক পরিস্থিতি, যখন পণ্য ও সেবার সাধারণ দামের স্তর দ্রুত এবং উল্লেখযোগ্য হারে বৃদ্ধি পায়, যার ফলে অর্থের ক্রয়ক্ষমতা বা মান কমে যায়। <br><br>উল্লেখ্য,<br>- বড় ধরণের মুদ্রাস্ফীতিকে অর্থনীতির জন্য অভিঘাত হিসেবে দেখা হয়। মুদ্রাস্ফীতি বলতে বোঝায় পণ্য ও সেবার দাম বেড়ে যাওয়াকে যা সাধারণত ঘটে অতিরিক্ত মুদ্রা সরবরাহের কারণে। সহজ ভাষায় বললে, একটি দেশের বাজারে পণ্যের মজুদ এবং মুদ্রার পরিমাণের মধ্যে ভারসাম্য থাকতে হয়। যদি পণ্যের তুলনায় মুদ্রার সরবরাহ অনেক বেড়ে যায় অর্থাৎ দেশটির কেন্দ্রীয় ব্যাংক অতিরিক্ত মাত্রায় টাকা ছাপায় তখনই মুদ্রাস্ফীতি ঘটে।<br>- এর ফলে একই পরিমাণ পণ্য কিনতে আপনাকে আগের চাইতে বেশি মুদ্রা খরচ করতে হবে। এর মানে জিনিষপত্রের দাম বেড়ে যাবে। সব মিলিয়ে ওই মুদ্রার মান বা ক্রয়ক্ষমতা কমে যাবে।<br> <br>উল্লেখ্য,<br><strong>- উচ্চ মুদ্রাস্ফীতির সময় সবচেয়ে বেশি লাভবান হন ঋণগ্রহীতারা (Debtors) বা যারা ধার নিয়ে ব্যবসা বা সম্পদ কিনেছেন।</strong> কারণ, মুদ্রাস্ফীতির ফলে অর্থের প্রকৃত মূল্য কমে যায়, ফলে ঋণের আসল পরিমাণও সহজলভ্য হয়ে পড়ে। তারা যখন ধার নিয়েছিলেন তখন টাকার যে মূল্য ছিল, পরিশোধের সময় তার চেয়ে কম মূল্য দিয়ে ঋণ শোধ করতে পারেন। <br><br>অন্যদিকে,<br>- Creditors (ঋণদাতা) সবচেয়ে বেশি ক্ষতিগ্রস্ত হন কারণ ঋণদাতা যেই টাকা দিয়েছিলেন, পরে ফেরত পাওয়া টাকার প্রকৃত ক্রয়ক্ষমতা অনেক কমে যায়। তিনি মূল্যস্ফীতির কারণে লোকসান দেন।<br>- Fixed Income Earners (স্থির আয়গ্রহীতা) যেমন: পেনশনার, বেতনভোগী যাদের বেতন বাড়ে না। তাদের আয় স্থির, কিন্তু দ্রব্যমূল্য বাড়ায় তারা কম পণ্য কিনতে পারেন।<br>- Savings Account Holders (সঞ্চয়ী হিসাবধারী): সাধারণ সঞ্চয় অ্যাকাউন্টে সুদের হার মূল্যস্ফীতির চেয়ে কম থাকে, ফলে জমানো টাকার প্রকৃত মান কমে যায়।<br><br>উৎস: i) BBC.<br>ii) Investopedia.<br>iii) সামষ্টিক অর্থনীতি, বিবিএ বাংলা, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 62,
+      "favorite_id": "144283576",
+      "question": "What is the minimum capital requirement for establishing a new commercial bank in Bangladesh? [May, 2026]",
+      "options": {
+        "a": "Tk 300 crore",
+        "b": "Tk 400 crore",
+        "c": "Tk 500 crore",
+        "d": "Tk 600 crore"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Tk 500 crore",
+      "explanation": "<p><strong>নতুন ব্যাংকের ন্যূনতম মূলধন:</strong><br><strong>- বাংলাদেশে একটি নতুন বাণিজ্যিক ব্যাংক প্রতিষ্ঠার জন্য ন্যূনতম ৫০০ কোটি টাকা পরিশোধিত মূলধন (Paid-up Capital) প্রয়োজন।</strong></p>\r\n<p>উল্লেখ্য,<br>- বাংলাদেশ ব্যাংক ২০২৩ সালের জুন মাসে এই ন্যূনতম মূলধনের সীমা আগের ৪০০ কোটি টাকা থেকে বাড়িয়ে ৫০০ কোটি টাকা নির্ধারণ করে। এই নিয়মটি নতুন লাইসেন্সের জন্য আবেদনকারী সকল সাধারণ বাণিজ্যিক ব্যাংকের ক্ষেত্রে প্রযোজ্য।<br><br>এছাড়াও,<br>- কেন্দ্রীয় ব্যাংকের নতুন প্রজ্ঞাপনে বলা হয়েছে, ‘ব্যাংক কোম্পানি আইনের ১৩ ধারায় প্রদত্ত ক্ষমতাবলে শাখাভিত্তিক কার্যরত ব্যাংক-কোম্পানিসহ যেকোনো নতুন ব্যাংক-কোম্পানি স্থাপনের জন্য বাংলাদেশ ব্যাংক ন্যূনতম পরিশোধিত মূলধন ৫০০ কোটি টাকা নির্ধারণ করল। <br>- কেন্দ্রীয় ব্যাংকের নীতিমালা অনুযায়ী, ডিজিটাল ব্যাংকের ন্যূনতম পরিশোধিত মূলধন হতে হবে ৩০০ কোটি টাকা।<br><br>উৎস: i) প্রথম আলো।<br>ii) মাইক্রোফাইন্যান্স ব্যাংক অধ্যাদেশ, ২০২৬।  [<a href=\"http://bdlaws.minlaw.gov.bd/act-print-1612/section-print-56623.html\" target=\"_blank\" rel=\"noopener\">link</a>]</p>"
+    },
+    {
+      "id": 63,
+      "favorite_id": "144283572",
+      "question": "Which of the following is considered a 'Money Market' instrument?",
+      "options": {
+        "a": "Treasury Bond",
+        "b": "Treasury Bill",
+        "c": "Share",
+        "d": "Debenture"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Treasury Bill",
+      "explanation": "<p><strong>অর্থ বাজার (Money Market):</strong><br>- অর্থ বাজার (Money Market) হলো এমন একটি আর্থিক বাজার যেখানে ১ বছর বা তার চেয়ে কম মেয়াদের স্বল্পমেয়াদী আর্থিক সম্পদ ও দায়সমূহ কেনা-বেচা বা আদান-প্রদান করা হয়। <br>- এটি সাধারণত উচ্চ তারল্যসম্পন্ন (সহজেই নগদে রূপান্তরযোগ্য) এবং নিরাপদ বিনিয়োগের ক্ষেত্র, যেখানে ব্যাংক, আর্থিক প্রতিষ্ঠান এবং সরকার তাদের স্বল্পমেয়াদী তহবিলের চাহিদা পূরণ করে। <br><br>• অর্থ বাজার নির্দিষ্ট কোন স্থানে কেন্দ্রীভূত থাকে না। আর্থিক প্রতিষ্ঠানের সাহায্যে অর্থ বাজার পরিচালিত হয় যেমন: কেন্দ্রীয় ব্যাংক, বাণিজ্যিক ব্যাংক ও নন-ব্যাংক আর্থিক প্রতিষ্ঠান ইত্যাদি। সাধারনত কেন্দ্রীয় ব্যাংক অর্থ বাজার নিয়ন্ত্রণ করে এবং এটি সর্বোচ্চ ক্ষমতার অধিকারী।<br>- অর্থ বাজারের সবচেয়ে গুরুত্বপূর্ণ অংশ হলো বাণিজ্যিক ব্যাংক, কারণ এটি ব্যবসায় প্রতিষ্ঠান ও ব্যক্তি শ্রেণিকে স্বল্পমেয়াদি ঋণ সুবিধা প্রদানের মাধ্যমে অর্থ সরবরাহ করে থাকে। যেমন: ব্যাংক বাণিজ্যিক কাগজ বাট্টাকরণের মাধ্যমে ব্যবসায় প্রতিষ্ঠানকে অর্থায়ন সুবিধা প্রদান করে।<br> <br>• অর্থ বাজার সিকিউরিটিজ/উপাদানসমূহ:<br>- অর্থ বাজারের উপাদানসমূহ হলো: ট্রেজারি বিল, বাণিজ্যিক কাগজ, ব্যাংকের স্বীকৃতিপত্র, পুণঃক্রয় চুক্তি, হস্তান্তরযোগ্য আমানত সার্টিফিকেট ইত্যাদি।<br><br>উল্লেখ্য,<br><strong>- ট্রেজারি বিল একটি স্বল্পমেয়াদী অর্থবাজার (Money Market) বিনিয়োগ উপকরণ। </strong>এটি সরকার জারি করে, সাধারণত ৯১ দিন, ১৮২ দিন বা ৩৬৪ দিন মেয়াদী হয়ে থাকে। এতে স্বল্প সময়ের জন্য বিনিয়োগ করা হয় এবং এটি অত্যন্ত তারল্যসম্পন্ন ও নিরাপদ।<br><br>অন্যদিকে, <br>- দীর্ঘমেয়াদী পুঁজিবাজার (Capital Market) মূলত ১ বছরের বেশি মেয়াদের আর্থিক সম্পদ বা সিকিউরিটিজ কেনা-বেচার স্থান। এটি সাধারণত উচ্চ তারল্যসম্পন্ন এবং নিরাপদ বিনিয়োগের ক্ষেত্র, যেখানে ব্যাংক, আর্থিক প্রতিষ্ঠান এবং সরকার তাদের দীর্ঘমেয়াদী তহবিলের চাহিদা পূরণ করে। প্রধান উপকরণসমূহ হলো ট্রেজারি বন্ড: দীর্ঘমেয়াদী (২ বছর, ৫ বছর, ১০ বছর বা তার বেশি মেয়াদী), শেয়ার: কোম্পানির মালিকানা স্বত্ব যা দীর্ঘমেয়াদি বিনিয়োগ, ডিবেঞ্চার: কোম্পানি কর্তৃক জারিকৃত দীর্ঘমেয়াদী ঋণপত্র। <br><br>উৎস: i) ফিন্যান্স, ব্যাংকিং ও বিমা প্রথম পত্র, এইচএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।<br>ii) Investopedia.</p>"
+    },
+    {
+      "id": 64,
+      "favorite_id": "143622257",
+      "question": "A 'Bull Market' indicates that stock prices are -",
+      "options": {
+        "a": "Rising",
+        "b": "Falling",
+        "c": "Stable",
+        "d": "Volatile"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Rising",
+      "explanation": "<p><strong>Bull Market:</strong><br><strong>- বুল মার্কেট (Bull Market) হলো শেয়ার বাজার বা আর্থিক বাজারের এমন একটি ইতিবাচক পরিস্থিতি, যেখানে দীর্ঘ সময় ধরে শেয়ারের দাম ক্রমাগত বাড়তে থাকে। </strong><br>- অর্থনীতিতে সাধারণত আশাবাদ, বিনিয়োগকারীদের আস্থা এবং উচ্চ কর্মসংস্থানের সময় বাজার এই অবস্থায় থাকে।<br>- একটি বুল মার্কেট হলো সমষ্টিগত শেয়ারসমূহের একটি আর্থিক বাজারের পরিস্থিতি যেখানে মূল্যসমূহ বাড়তে থাকে বা বাড়ার আশা করা হয়। বুল মার্কেট শব্দটি প্রায়সই শেয়ার বাজারের ক্ষেত্রে ব্যবহৃত হয় কিন্তু যেকোন কিছু যার বেচাকেনা হয় যেমন: বন্ড, জমি, মুদ্রা, এবং পণ্যসমূহের ক্ষেত্রেও প্রয়োগ করা যায়।<br><br>উৎস:  Investopedia.</p>"
+    },
+    {
+      "id": 65,
+      "favorite_id": "143622251",
+      "question": "What is the main objective of Basel III Accord?",
+      "options": {
+        "a": "Attracting foreign investment",
+        "b": "Increasing agricultural credit",
+        "c": "Introducing only online banking",
+        "d": "Strengthening risk management and ensuring adequate capital of banks"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Strengthening risk management and ensuring adequate capital of banks",
+      "explanation": "<p><strong>ব্যাসেল-III (Basel III) আন্তর্জাতিক ব্যাংকিং নিয়ন্ত্রক কাঠামোর মূল লক্ষ্য হলো ব্যাংকিং খাতের ঝুঁকি ব্যবস্থাপনা শক্তিশালী করা এবং যথেষ্ট মূলধন সংরক্ষণ নিশ্চিত করা, যাতে ভবিষ্যতে কোনো আর্থিক সংকট দেখা দিলে ব্যাংকগুলো তা সহ্য করতে পারে।</strong><br><br><strong>ব্যাসেল চুক্তি (Basel Accord):</strong><br>- বাংলাদেশ ব্যাংক \"ব্যাংক কোম্পানি আইন ১৯৯১\" এর ধারা ১৩ এবং ধারা ৪৫ তে ঝুঁকি ভিত্তিক মূলধন নিয়ে নির্দেশনা প্রকাশ করে।<br>- ঝুঁকিভিত্তিক মূলধনের ক্ষেত্রে প্রত্যেকটি ব্যাংক \"ব্যাসেল -১, ব্যাসেল-২, ব্যাসেল-৩\" (Basel-1, Basel -2, Basel -3) এর সুপারিশ মেনে চলে।</p>\r\n<p>• ব্যাসেল-III:<br>- ব্যাসেল-III হলো ব্যাংকিং খাতের জন্য আন্তর্জাতিকভাবে স্বীকৃত ঝুঁকি ব্যবস্থাপনা ও মূলধনের নিয়মাবলীর একটি সেট। এটি ব্যাংকগুলোকে আরও শক্তিশালী, নিরাপদ ও সংকট-প্রতিরোধী করার জন্য তৈরি করা হয়েছে।<br><br>ব্যাসেল-III-এর মূল উদ্দেশ্য:<br>- ২০০৮ সালের বৈশ্বিক আর্থিক সংকটের পর ব্যাংকগুলোর দুর্বলতা দূর করা।<br>- ব্যাংকের মূলধন বাড়ানো।<br>- ঝুঁকি সঠিকভাবে মাপা ও নিয়ন্ত্রণ করা।<br>- ব্যাংক যাতে সহজে দেউলিয়া না হয় সেটা নিশ্চিত করা।<br><br>উল্লেখ্য,<br>- বাংলাদেশ ব্যাংক ২০১৪ সাল থেকে ধাপে ধাপে বাস্তবায়ন করছে।<br>- বর্তমানে বাংলাদেশের সব ব্যাংককে ব্যাসেল III-এর নিয়ম মেনে চলতে হয়। এটি ব্যাংকের মূলধন অনুপাত (CAR) নির্ধারণ করে।<br><br>উৎস: i) Corporate Finance Institute.<br>ii) ব্যাংক ব্যবস্থাপনা, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 66,
+      "favorite_id": "143622225",
+      "question": "The rate at which the Central Bank lends money to commercial banks for short-term requirements is -",
+      "options": {
+        "a": "Repo Rate",
+        "b": "SLR",
+        "c": "Reverse Repo Rate",
+        "d": "None of above"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Repo Rate",
+      "explanation": "<p><strong>যে হারে কেন্দ্রীয় ব্যাংক স্বল্পমেয়াদী প্রয়োজনের জন্য বাণিজ্যিক ব্যাংকগুলোকে অর্থ ঋণ দেয় তা হলো রেপো রেট (Repo Rate) বা নীতি সুদহার (Policy Rate)।</strong><br><br><strong>রেপো রেট (Repo Rate):</strong> <br>- এটি এমন একটি সুদের হার, যা ব্যাংকগুলো তাদের তহবিলের ঘাটতি দেখা দিলে স্বল্পমেয়াদী সময়ের জন্য কেন্দ্রীয় ব্যাংক থেকে অর্থ ধার করে।<br>- বাণিজ্যিক ব্যাংকগুলো সরকারি বন্ড বা সিকিউরিটিজ জামানত রেখে এই অর্থ গ্রহণ করে।<br>- মুদ্রাস্ফীতি নিয়ন্ত্রণ ও বাজারে অর্থের তারল্য ঠিক রাখতে কেন্দ্রীয় ব্যাংক এই হার ব্যবহার করে। <br>- অর্থাৎ কোনো দেশের কেন্দ্রীয় ব্যাংক বাণিজ্যিক ব্যাংকগুলোকে যে হারে ঋণ দেয় তাকেই পলিসি রেট বা রেপো রেট বলে।<br><br>অন্যদিকে,<br>- রিভার্স রেপো রেট: ব্যাংকগুলি তাদের উদ্বৃত্ত অর্থ রিজার্ভ ব্যাংকে রেখে যে হারে সুদ পায় তাকে বলে রিভার্স রেপো রেট।<br>- SLR (Statutory Liquidity Ratio): এটি একটি বাধ্যতামূলক তারল্য অনুপাত, যা বাণিজ্যিক ব্যাংককে তাদের মোট দায়ের একটি নির্দিষ্ট অংশ নগদ, সোনা বা সরকারি সিকিউরিটি আকারে রাখতে হয়। এটি কোনো সুদের হার নয়।<br><br>উৎস: i) Investopedia.<br>ii) দ্য ডেইলি স্টার বাংলা।</p>"
+    },
+    {
+      "id": 67,
+      "favorite_id": "143622222",
+      "question": "Bangladesh Bank was established under -",
+      "options": {
+        "a": "Bank Company Act, 1991",
+        "b": "Bangladesh Bank Order, 1972",
+        "c": "Financial Institutions Act, 1993",
+        "d": "Companies Act, 1994"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Bangladesh Bank Order, 1972",
+      "explanation": "<p><strong>বাংলাদেশ ব্যাংক দেশের কেন্দ্রীয় ব্যাংক হিসেবে ৩১ অক্টোবর, ১৯৭২ তারিখে প্রণীত প্রেসিডেন্ট অর্ডার নং ১২৭ (বাংলাদেশ ব্যাংক অর্ডার, ১৯৭২)-এর মাধ্যমে প্রতিষ্ঠিত হয়। </strong><br><br><strong>বাংলাদেশ ব্যাংক:</strong><br>- বাংলাদেশ ব্যাংক বাংলাদেশের কেন্দ্রীয় ব্যাংক। <br>- বাংলাদেশ ব্যাংক দেশের মুদ্রা ব্যবস্থাপনার প্রবর্তক ও নিয়ন্ত্রক, আর্থিক খাতের রেগুলেটর এবং ব্যাংকের ব্যাংক।<br>- এটি মুদ্রানীতি ও ব্যাংকিং বিষয়ক সরকারের পরামর্শদাতা এবং 'সরকারের ব্যাংক বা কোষাগার' হিসেবেও দায়িত্ব পালন করে।<br><br>• বাংলাদেশ ব্যাংক অর্ডার, ১৯৭২ (১৯৭২ সালের রাষ্ট্রপতির আদেশ নং ১২৭) এর মাধ্যমে বাংলাদেশ ব্যাংক প্রতিষ্ঠিত হলেও এর কার্যক্রম শুরুর তারিখ ধরা হয় ১৯৭১ এর ১৬ ডিসেম্বর অর্থাৎ বিজয় দিবস থেকে। এর পূর্বে ১৯৭২ সালের রাষ্ট্রপতির ২৬ নম্বর অধ্যাদেশ বলে এদেশে কার্যরত বারোটি বাণিজ্যিক ব্যাংককে জাতীয়করণ এবং পুনর্বিন্যাসের মাধ্যমে ছয়টি বাণিজ্যিক ব্যাংকে রূপ দেয়া হয়। তবে বিদেশি ব্যাংকগুলোকে জাতীয়করণের আওতামুক্ত রাখা হয়। এছাড়া তদানীন্তন দু'টি বিশেষায়িত ব্যাংক- পাকিস্তান কৃষি উন্নয়ন ব্যাংক ও শিল্প উন্নয়ন ব্যাংককে যথাক্রমে 'বাংলাদেশ কৃষি ব্যাংক' এবং 'বাংলাদেশ শিল্প ব্যাংক' নামে নামকরণ করা হয়।<br><br>উল্লেখ্য,<br>- ১৯৭২ সালে সদ্য স্বাধীন গণপ্রজাতন্ত্রী বাংলাদেশের রাষ্ট্রপতির ৩১ অক্টোবর ১৯৭২ তারিখের অনুমোদনক্রমে জারিকৃত বাংলাদেশ ব্যাংক অর্ডার ১৯৭২ (রাষ্ট্রপতির আদেশ নম্বর ১২৭/১৯৭২) এর মাধ্যমে বাংলাদেশ ব্যাংক প্রতিষ্ঠিত হয়; যা ১৯৭১ সালের ১৬ ডিসেম্বর থেকেই কার্যকর বলে গণ্য হয়। দীর্ঘ নয়মাস সশস্ত্র স্বাধীনতা যুদ্ধে জয়লাভের পর ১৯৭১ সালের ১৬ ডিসেম্বর বিশ্ব মানচিত্রে জায়গা করে নেয় একটি স্বাধীন সার্বভৌম দেশ, বাংলাদেশ। সেই দিন থেকে যাত্রা শুরু হয় বাংলাদেশ ব্যাংকের।<br><br>এছাড়াও,<br>- ব্যাংক কোম্পানি আইন, ১৯৯১: ব্যাংক কোম্পানি আইন, ১৯৯১ (১৯৯১ সনের ১৪ নং আইন) বাংলাদেশে ব্যাংকিং ব্যবসা, পরিচালনা, নিয়ন্ত্রণ ও তদারকির প্রধান আইন।<br><br>উৎস: বাংলাদেশ ব্যাংক ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 68,
+      "favorite_id": "143622210",
+      "question": "Which policy is concerned with government spending and taxation?",
+      "options": {
+        "a": "Monetary Policy",
+        "b": "Trade Policy",
+        "c": "Fiscal Policy",
+        "d": "Industrial Policy"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Fiscal Policy",
+      "explanation": "<p><strong>সরকারি ব্যয় ও কর সংক্রান্ত নীতিটি হলো রাজস্ব নীতি (Fiscal Policy)।</strong><br><br><strong>রাজস্ব নীতি (Fiscal Policy):</strong><br>- Fiscal Policy বা রাজস্ব নীতি হলো সরকারের আয় (Taxation) এবং ব্যয় (Government Spending) সংক্রান্ত নীতি। এটি অর্থ মন্ত্রণালয়ের অধীনে প্রণয়ন করা হয়।<br>• উদ্দেশ্য: মূল্যস্ফীতি নিয়ন্ত্রণ, কর্মসংস্থান বৃদ্ধি, অর্থনৈতিক প্রবৃদ্ধি ত্বরান্বিত করা, দারিদ্র্য হ্রাস। <br>- এটি মূলত জাতীয় বাজেটের মাধ্যমে সরকারের আয় ও ব্যয়ের পরিকল্পনা, যা দেশের অর্থনৈতিক স্থিতিশীলতা বজায় রাখতে সহায়তা করে।<br><br>অন্যদিকে,<br>- Monetary Policy বা মুদ্রানীতি হলো একটি দেশের কেন্দ্রীয় ব্যাংক কর্তৃক অর্থনীতিতে অর্থের সরবরাহ, সুদের হার এবং ঋণের প্রবাহ নিয়ন্ত্রণ করার কৌশল। এটি মূলত মূল্যস্ফীতি (Inflation) নিয়ন্ত্রণ, কর্মসংস্থান সৃষ্টি এবং টেকসই অর্থনৈতিক প্রবৃদ্ধি অর্জনের লক্ষ্যে ব্যবহৃত একটি অন্যতম সামষ্টিক অর্থনৈতিক টুল।<br>- বাণিজ্য নীতি (Trade Policy) হলো একটি দেশের সরকার কর্তৃক আন্তর্জাতিক বাণিজ্য (রপ্তানি ও আমদানি) নিয়ন্ত্রণের জন্য প্রণীত আইন, প্রবিধান, এবং চুক্তির সমষ্টি। <br>- শিল্প নীতি (Industrial Policy) হলো সরকারের একটি কৌশলগত পরিকল্পনা ও হস্তক্ষেপ, যার মাধ্যমে নির্দিষ্ট শিল্পখাত, উৎপাদন, কর্মসংস্থান বৃদ্ধি, অর্থনৈতিক রূপান্তর এবং প্রযুক্তির বিকাশকে উৎসাহিত করা হয়। <br> <br>উৎস: i) IMF ওয়েবসাইট।<br>ii) সামষ্টিক অর্থনীতি, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</p>"
+    },
+    {
+      "id": 69,
+      "favorite_id": "143156424",
+      "question": "Which organization of the World Bank Group works for the development of the private sector in developing countries?",
+      "options": {
+        "a": "IDA",
+        "b": "MIGA",
+        "c": "IFC",
+        "d": "ICSID"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "IFC",
+      "explanation": "<p><strong>IFC:</strong><br>- IFC বিশ্বব্যাংক গ্রুপের একটি প্রতিষ্ঠান।<br><strong>- IFC প্রধানত উন্নয়নশীল দেশগুলোতে বেসরকারি বা ব্যক্তিমালিকানা খাতের উন্নয়নে কাজ করে।</strong><br>- IFC এর পূর্ণরূপ International Finance Corporation.<br>- ১৯৫৬ সালের ২৫শে জুলাই IFC প্রতিষ্ঠিত হয়।<br>- এর বর্তমান সদস্য দেশের সংখ্যা ১৮৬টি।<br>- যুক্তরাষ্ট্রের ওয়াশিংটন ডিসিতে এর সদর দপ্তর অবস্থিত।।<br>- IFC এর বর্তমান ব্যবস্থাপনা পরিচালক মাখতার ডিওপ।</p>\r\n<p><em>তথ্যসূত্র - IFC অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 70,
+      "favorite_id": "137752130",
+      "question": "Which organization provides low-interest concessional loans to underdeveloped Third World countries?",
+      "options": {
+        "a": "IMF",
+        "b": "IBRD",
+        "c": "IFC",
+        "d": "IDA"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "IDA",
+      "explanation": "<p><strong>IDA:</strong><br>- IDA এর পূর্ণরূপ International Development Association.<br><strong>- তৃতীয় বিশ্বের অনুন্নত দেশগুলোকে সহজ শর্তে ও স্বল্পসুদে ঋণ প্রদান করে থাকে।</strong><br>- যার কারণে IDA কে 'Soft Loan Window' বলা হয়।<br>- যেসব দেশ IBRD থেকে ঋণ পায় না, সেসব দেশকে IDA ঋণ প্রদান করে থাকে।<br>- IDA বিশ্বব্যাংক গ্রুপের একটি প্রতিষ্ঠান।<br>- এটি ১৯৬০ সালের ২৪ সেপ্টেম্বর প্রতিষ্ঠিত হয়।<br>- বর্তমান সদস্য সংখ্যা ১৭৫টি।<br>- বাংলাদেশ ১৯৭২ সালে IDA এর সদস্যপদ লাভ করে।</p>\r\n<p><em>তথ্যসূত্র - IDA অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 71,
+      "favorite_id": "137752129",
+      "question": "Who is the current Governor of Bangladesh Bank? (March, 2026)",
+      "options": {
+        "a": "Ahsan H Mansur",
+        "b": "Mostaqur Rahman",
+        "c": "Abdur Rouf Talukder",
+        "d": "Fazle Kabir"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Mostaqur Rahman",
+      "explanation": "<p><strong>বাংলাদেশ ব্যাংক:</strong><br>- ১৯৭১ সালের ১৬ ডিসেম্বর বাংলাদেশ ব্যাংক স্থাপিত হয়।<br>- বাংলাদেশ ব্যাংক বাংলাদেশের কেন্দ্রীয় ব্যাংক।<br>- বাংলাদেশ ব্যাংক প্রধানের পদবী গভর্নর।<br>- বাংলাদেশ ব্যাংকের প্রথম গভর্ণর ছিলেন- এ. এন. হামিদুল্লাহ।<br><strong>- বাংলাদেশ ব্যাংকের বর্তমান গভর্নর মোস্তাকুর রহমান।</strong><br>- তিনি বাংলাদেশ ব্যাংকের ১৪তম গভর্নর।<br>- বাংলাদেশ ব্যাংকের গভর্নর পদের মেয়াদ ৪ বছর।</p>\r\n<p><em>তথ্যসূত্র - বাংলাদেশ ব্যাংকের অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 72,
+      "favorite_id": "137752128",
+      "question": "When did the Black Sea Trade and Development Bank start its operations?",
+      "options": {
+        "a": "199",
+        "b": "1993",
+        "c": "1996",
+        "d": "1999"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "1999",
+      "explanation": "<p><strong>BSTDB:</strong><br>- BSTDB এর পূর্ণরূপ Black Sea Trade and Development Bank.<br>- এই ব্যাংকটি Black Sea Region অঞ্চলে বাণিজ্য ও প্রকল্প অর্থায়ন ঋণ, গ্যারান্টি এবং সদস্যদেশগুলোর বেসরকারি প্রতিষ্ঠান ও সরকারি সংস্থায় ইকুইটি অংশগ্রহণের মাধ্যমে অর্থনৈতিক উন্নয়ন ও আঞ্চলিক সহযোগিতা বৃদ্ধি করে।<br>- সদর দপ্তর: থেসালোনিকি, গ্রিস।<br><strong>- কার্যক্রম শুরু করে: জুন, ১৯৯৯ সাল।</strong><br>- প্রতিষ্ঠাতা সদস্য: ১১টি। যথা:<br>• আলবেনিয়া, আর্মেনিয়া, আজারবাইজান, বুলগেরিয়া, জর্জিয়া, গ্রিস, মলদোভা, রোমানিয়া, রাশিয়া, তুর্কি এবং ইউক্রেন।<br>- বর্তমান সভাপতি: সেরহাট কোকসাল।</p>\r\n<p><em>তথ্যসূত্র - BSTDB ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 73,
+      "favorite_id": "137752123",
+      "question": "What is the current tax-free income limit for women? (March, 2026)",
+      "options": {
+        "a": "350000 BDT",
+        "b": "400000 BDT",
+        "c": "450000 BDT",
+        "d": "500000 BDT"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "400000 BDT",
+      "explanation": "<p><strong>করমুক্ত আয় সীমা:</strong><br>- বর্তমানে সাধারণ ব্যক্তির করমুক্ত আয় সীমা: ৩৫০০০০ টাকা।<br><strong>- নারী ও ৬৫ বছর বা তদূর্ধ্ব ব্যক্তির করমুক্ত আয় সীমা: ৪০০০০০ টাকা।</strong><br>- প্রতিবন্ধী ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।<br>- গেজেটভুক্ত যুদ্ধাহত বীর মুক্তিযোদ্ধাদের করমুক্ত আয় সীমা: ৫০০০০০ টাকা।<br>- তৃতীয় লিঙ্গের ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।</p>\r\n<p>উল্লেখ্য:<br>- ২০২৬-২৭ অর্থবছর ও ২০২৭-২৮ অর্থবছর এ সাধারণ ব্যক্তির করমুক্ত আয় সীমা হবে ৩৭৫০০০ টাকা।</p>\r\n<p><em>তথ্যসূত্র - জাতীয় বাজেট ২০২৫-২৬ অর্থবছর।</em></p>"
+    },
+    {
+      "id": 74,
+      "favorite_id": "137611369",
+      "question": "What was the average inflation rate in Bangladesh in 2025?",
+      "options": {
+        "a": "8.29%",
+        "b": "8.49%",
+        "c": "8.58%",
+        "d": "8.77%"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "8.77%",
+      "explanation": "<p><span>- বাংলাদেশ পরিসংখ্যান ব্যুরো (বিবিএস) জানুয়ারি মাসের মূল্যস্ফীতির চিত্র প্রকাশ করে।</span><br><span>- সময়: ৮ ফেব্রুয়ারি, ২০২৬ প্রকাশ করে।</span><br><strong>- ২০২৫ সালে দেশের গড় মূল্যস্ফীতি  ৮ দশমিক ৭৭ শতাংশ ছিল।</strong><br><span>- ২০২৬ সালের জানুয়ারি মাসে সার্বিক মূল্যস্ফীতি বেড়ে দাঁড়িয়েছে ৮ দশমিক ৫৮ শতাংশ।</span><br><span>-  ডিসেম্বরে সার্বিক মূল্যস্ফীতি হয়েছিল ৮ দশমিক ৪৯ শতাংশ।</span><br><span>- এর আগে নভেম্বর মাসে মূল্যস্ফীতি বেড়ে হয়েছিল ৮ দশমিক ২৯ শতাংশ।</span><br><br>উৎস:প্রথম আলো।</p>"
+    },
+    {
+      "id": 75,
+      "favorite_id": "137611331",
+      "question": "What is the current policy rate of Bangladesh Bank?  (March 2026)",
+      "options": {
+        "a": "8%",
+        "b": "9%",
+        "c": "10%",
+        "d": "11%"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "10%",
+      "explanation": "<p>- বাংলাদেশ ব্যাংক চলতি অর্থবছরের দ্বিতীয়ার্ধের (জানুয়ারি-জুন ২০২৬ সাল) মুদ্রানীতি ঘোষণা করেন গভর্নর আহসান এইচ মনসুর।<br>- মূল্যস্ফীতি এখনো কাঙ্ক্ষিত মাত্রায় না আসায় নীতি সুদহার (পলিসি রেট) অপরিবর্তিত রেখে নতুন মুদ্রানীতি ঘোষণা হয়।<br><br><strong>• বর্তমান নীতি সুদহার ১০ শতাংশ।</strong><br>• মূল্যস্ফীতি লক্ষ্য: ৭ শতাংশে না আসা পর্যন্ত সংকোচনমূলক নীতি চলবে।<br>• বেসরকারি ঋণ প্রবৃদ্ধির লক্ষ্যমাত্রা বাড়িয়ে সাড়ে ৮ শতাংশ।<br>• মুদ্রা সরবরাহের লক্ষ্যমাত্রা জুন নাগাদ সাড়ে ১১ শতাংশ।</p>\r\n<p>উৎস: প্রথম আলো।</p>"
+    },
+    {
+      "id": 76,
+      "favorite_id": "134996710",
+      "question": "What is the inflation target percentage in the revised budget for the 2025-26 fiscal year?",
+      "options": {
+        "a": "5.5%",
+        "b": "6%",
+        "c": "6.5%",
+        "d": "7%"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "7%",
+      "explanation": "<p><strong>সংশোধিত বাজেট ২০২৫-২৬:</strong><br>- সংশোধিত বাজেটের আকার: ৭ লাখ ৮৮ হাজার কোটি টাকা।<br>- জিডিপির প্রবৃদ্ধির হার: ৫ শতাংশ।<br><strong>- মূল্যস্ফীতি: ৭ শতাংশ। </strong><br>- রাজস্ব আয়ের লক্ষ্যমাত্রা: ৫ লাখ ৮৮ হাজার কোটি টাকা।<br>- বার্ষিক উন্নয়ন কর্মসূচির (ADP): ২ লাখ কোটি টাকা।<br>- বাজেটে ঘাটতি: ২ লাখ কোটি টাকা (জিডিপির ৩.৩%)।<br><br>উৎস: i) অর্থ বিভাগ, অর্থ মন্ত্রণালয় ওয়েবসাইট।<br>ii) প্রথম আলো।</p>"
+    },
+    {
+      "id": 77,
+      "favorite_id": "132767357",
+      "question": "What is the current tax-free income limit for an ordinary person? (February, 2026)",
+      "options": {
+        "a": "350000 BDT",
+        "b": "375000 BDT",
+        "c": "400000 BDT",
+        "d": "450000 BDT",
+        "e": "475000 BDT"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "350000 BDT",
+      "explanation": "<p><strong>করমুক্ত আয় সীমা:</strong><br><strong>- বর্তমানে সাধারণ ব্যক্তির করমুক্ত আয় সীমা: ৩৫০০০০ টাকা।</strong><br>- নারী ও ৬৫ বছর বা তদূর্ধ্ব ব্যক্তির করমুক্ত আয় সীমা: ৪০০০০০ টাকা।<br>- প্রতিবন্ধী ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।<br>- গেজেটভুক্ত যুদ্ধাহত বীর মুক্তিযোদ্ধাদের করমুক্ত আয় সীমা: ৫০০০০০ টাকা।<br>- তৃতীয় লিঙ্গের ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।</p>\r\n<p>উল্লেখ্য:<br>- ২০২৬-২৭ অর্থবছর ও ২০২৭-২৮ অর্থবছর এ সাধারণ ব্যক্তির করমুক্ত আয় সীমা হবে ৩৭৫০০০ টাকা।</p>\r\n<p><em>তথ্যসূত্র - জাতীয় বাজেট ২০২৫-২৬ অর্থবছর।</em></p>"
+    },
+    {
+      "id": 78,
+      "favorite_id": "132767334",
+      "question": "Who is the current Managing Director of the IMF? (February, 2026)",
+      "options": {
+        "a": "Christine Lagarde",
+        "b": "Kristalina Georgiev",
+        "c": "Dominique Strauss-Kahn",
+        "d": "Rodrigo Rato",
+        "e": "David Lipton"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Kristalina Georgiev",
+      "explanation": "<p><strong>IMF:</strong><br>- IMF এর পূর্ণরূপ The International Monetary Fund.<br>- এটি আন্তর্জাতিক মুদ্রা তহবিল।<br>- প্রতিষ্ঠিত হয়: ১৯৪৪ সাল।<br>- সদর দপ্তর: ওয়াশিংটন ডিসি, যুক্তরাষ্ট্র।<br>- প্রতিষ্ঠাতা সদস্য: ৪৪টি।<br>- বর্তমান সদস্য: ১৯১টি।<br>- সর্বশেষ সদস্য: লিচেনস্টাইন।<br><strong>- বর্তমান ব্যবস্থাপনা পরিচালক: ক্রিস্টালিনা জর্জিয়েভা।</strong><br>- বাংলাদেশ সদস্যপদ লাভ করে: ১৯৭২ সালে।</p>\r\n<p><em>তথ্যসূত্র - IMF অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 79,
+      "favorite_id": "132767330",
+      "question": "According to the Economic Survey 2025, what is the proportion of manpower employed in the agricultural sector in GDP?",
+      "options": {
+        "a": "37.59%",
+        "b": "38.43%",
+        "c": "40.16%",
+        "d": "44.67%",
+        "e": "46.81%"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "44.67%",
+      "explanation": "<p><strong>অর্থনৈতিক সমীক্ষা ২০২৫:</strong><br>- অর্থনীতি/জিডিপিতে কৃষিখাতের অবদান = ১০.৯৪%।<br>- অর্থনীতি/জিডিপিতে শিল্পখাতের অবদান = ৩৭.৪৪%।<br>- অর্থনীতি/জিডিপিতে সেবাখাতের অবদান= ৫১.৬২%।</p>\r\n<p><strong>অন্যদিকে,</strong><br><strong>- অর্থনীতি/জিডিপিতে কৃষিখাতে নিয়োজিত জনশক্তির পরিমাণ - ৪৪.৬৭%।</strong><br>- অর্থনীতি/জিডিপিতে শিল্পখাতে নিয়োজিত জনশক্তির পরিমাণ - ১৭.৩৭%।<br>- অর্থনীতি/জিডিপিতে সেবাখাতে নিয়োজিত জনশক্তির পরিমাণ - ৩৭.৯৬%।</p>\r\n<p><em>তথ্যসূত্র - অর্থনৈতিক সমীক্ষা ২০২৫।</em></p>"
+    },
+    {
+      "id": 80,
+      "favorite_id": "131006549",
+      "question": "আফ্রিকান উন্নয়ন ব্যাংকের সদর দপ্তর _____ অবস্থিত।",
+      "options": {
+        "a": "নাইরোবি",
+        "b": "আবিদজান",
+        "c": "আদ্দিস আবাবা",
+        "d": "লাগোস"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "আবিদজান",
+      "explanation": "<p><strong>● আফ্রিকান উন্নয়ন ব্যাংকের সদর দপ্তর আবিদজান, আইভরি কোস্টে অবস্থিত।<br></strong><br><strong>আফ্রিকান উন্নয়ন ব্যাংক (African Development Bank - AfDB):</strong> <br>- আফ্রিকান উন্নয়ন ব্যাংক হলো আফ্রিকা মহাদেশের প্রধান মাল্টিল্যাটারাল ডেভেলপমেন্ট ব্যাংক।<br>- এটি আফ্রিকার অর্থনৈতিক ও সামাজিক উন্নয়নের জন্য অর্থায়ন, প্রযুক্তিগত সহায়তা এবং নীতি পরামর্শ প্রদান করে।<br><br>• AfDB প্রতিষ্ঠার চুক্তি কার্যকর হয়: ৪ আগস্ট, ১৯৬৩ (Organisation of African Unity-এর উদ্যোগে)।<br>- প্রতিষ্ঠার চুক্তি স্বাক্ষরিত হয়: খার্তুম, সুদান।<br>- প্রতিষ্ঠিত হয়: ১০ সেপ্টেম্বর, ১৯৬৪। <br>- কার্যকর: ১ জুলাই, ১৯৬৬।<br>- সদর দপ্তর: আবিদজান, আইভরি কোস্ট।<br>- সদস্য দেশ: ৮২টি (৫৪টি আফ্রিকান + ২৮টি অ-আফ্রিকান)।<br>- সভাপতি: ডঃ সিদি ওউলদ তাহ (মৌরিতানিয়া)।<br>- লক্ষ্য: আফ্রিকায় টেকসই অর্থনৈতিক বৃদ্ধি, সামাজিক অগ্রগতি এবং দারিদ্র্য হ্রাস করা।<br>- আফ্রিকান ডেভেলপমেন্ট ব্যাংকের কাজ হলো আফ্রিকার দেশগুলোর অর্থনৈতিক ও সামাজিক উন্নয়নে আর্থিক ও কারিগরি সহায়তা প্রদান।<br><br>উল্লেখ্য,<br>- এটি African Development Bank Group-এর মূল প্রতিষ্ঠান।<br>- গ্রুপের অন্যান্য অংশ: African Development Fund (ADF), Nigeria Trust Fund (NTF)।<br><br>উৎস: African Development Bank ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 81,
+      "favorite_id": "131006542",
+      "question": "মাল্টিল্যাটারাল ইনভেস্টমেন্ট গ্যারান্টি এজেন্সি (MIGA) কোন সংস্থার অংশ?",
+      "options": {
+        "a": "বিশ্বব্যাংক গ্রুপ",
+        "b": "আন্তর্জাতিক মুদ্রা তহবিল",
+        "c": "জাতিসংঘ উন্নয়ন কর্মসূচি",
+        "d": "এশীয় অবকাঠামো বিনিয়োগ ব্যাংক (AIIB)"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "বিশ্বব্যাংক গ্রুপ",
+      "explanation": "<p><strong>● মাল্টিল্যাটারাল ইনভেস্টমেন্ট গ্যারান্টি এজেন্সি (MIGA) বিশ্বব্যাংক গ্রুপ-এর অংশ।</strong><br><br><strong>বিশ্বব্যাংক গ্রুপ:</strong><br>- বিশ্বব্যাংক গ্রুপ ৫টি আর্থিক প্রতিষ্ঠানের সমন্বয়ে গঠিত। প্রতিষ্ঠানগুলো হলো:<br>১. International Bank for Reconstruction and Development (IBRD).<br>২. International Finance Corporation (IFC).<br>৩. Multilateral Investment Guarantee Agency (MIGA).<br>৪. International Center for Settlement of Investment Disputes (ICSID).<br>৫. International Development Association (IDA).</p>\r\n<p><strong>• MIGA:<br></strong>- মাল্টিল্যাটারাল ইনভেস্টমেন্ট গ্যারান্টি এজেন্সি (MIGA) হলো বিশ্বব্যাংক গ্রুপের একটি সদস্য প্রতিষ্ঠান।<br>- এটি উন্নয়নশীল দেশগুলোতে বিদেশি সরাসরি বিনিয়োগ (FDI) প্রচার ও সুরক্ষিত করার জন্য কাজ করে।<br>- প্রতিষ্ঠিত হয়: ১২ এপ্রিল, ১৯৮৮।<br>- বর্তমান সদস্য: ১৮২টি।<br>- সদরদপ্তর: ওয়াশিংটন ডি.সি., যুক্তরাষ্ট্র।<br>- উদ্দেশ্য: বৈদেশিক বিনিয়োগে মধ্যস্থতা এবং গ্যারান্টি প্রদানের মাধ্যমে উন্নয়নশীল দেশগুলোকে সরাসরি বৈদেশিক বিনিয়োগে সহায়তা করে থাকে।<br>- লক্ষ্য: বিদেশী বিনিয়োগকারীদের রাজনৈতিক ঝুঁকি থেকে সুরক্ষা দেওয়া, উন্নয়নশীল দেশগুলিতে টেকসই বিনিয়োগ বৃদ্ধি করা অর্থনৈতিক উন্নয়ন ও দারিদ্র্য হ্রাস।<br>- MIGA-এর গ্যারান্টি সাধারণত ৩-১৫ বছর মেয়াদী হয়, তবে ঋণ/প্রকল্পের মেয়াদ এবং ঝুঁকি বিশ্লেষণ এর ভিত্তিতে ২০ বছর পর্যন্ত বাড়ানো সম্ভব। ন্যূনতম ৩ বছর মেয়াদ আবশ্যিক।<br><br>এছাড়াও,<br>• IDA-এর কাজ: বিশ্বের সবচেয়ে দরিদ্র দেশগুলোকে স্বল্প সুদ বা বিনা সুদে ঋণ প্রদান।<br>• IFC-এর কাজ: উন্নয়নশীল দেশগুলোতে বেসরকারি খাতের (private sector) প্রবৃদ্ধি, বিনিয়োগ, এবং কর্মসংস্থান সৃষ্টির মাধ্যমে দারিদ্র্য বিমোচনে কাজ করে। এটি সরাসরি বিনিয়োগ, ঋণ প্রদান, এবং প্রযুক্তিগত পরামর্শের মাধ্যমে টেকসই ব্যবসায়িক প্রকল্প ও অর্থনৈতিক উন্নয়নে সহায়তা করে।<br>• ICSID-এর কাজ: আন্তর্জাতিক বিনিয়োগ বিরোধ নিষ্পত্তি- সরকার ও বিদেশি বিনিয়োগকারীর মধ্যে বিরোধ মধ্যস্থতা।<br>• IBRD-এর কাজ: এর প্রধান কাজ হলো মধ্যম আয়ের এবং ঋণ পরিশোধে সক্ষম নিম্ন আয়ের দেশগুলোকে দারিদ্র্য হ্রাস ও টেকসই উন্নয়নের লক্ষ্যে ঋণ, গ্যারান্টি ও ঝুঁকি ব্যবস্থাপনা পরিষেবা প্রদান করা, যা শিক্ষা, স্বাস্থ্য, অবকাঠামো ও জলবায়ু পরিবর্তনের মতো খাতগুলোতে সহায়তা করে। </p>\r\n<p>উৎস: World Bank ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 82,
+      "favorite_id": "131006523",
+      "question": "'______' ব্রিকস (BRICS) কর্তৃক অবকাঠামো এবং টেকসই উন্নয়ন প্রকল্পের অর্থায়নের লক্ষ্যে প্রতিষ্ঠিত হয়।",
+      "options": {
+        "a": "NDB",
+        "b": "ADB",
+        "c": "AIIB",
+        "d": "IMF"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "NDB",
+      "explanation": "<p><strong>● NDB ব্রিকস (BRICS) কর্তৃক অবকাঠামো এবং টেকসই উন্নয়ন প্রকল্পের অর্থায়নের লক্ষ্যে প্রতিষ্ঠিত হয়।</strong><br><br><strong>New Development Bank:</strong><br>- New Development Bank (NDB) প্রথমে BRICS Development Bank নামে পরিচিত ছিল।<br>- এটি ব্রিকস দেশসমূহ দ্বারা প্রতিষ্ঠিত একটি বহুমুখী উন্নয়ন ব্যাংক।<br>- প্রতিষ্ঠিত হয়: ৭ জুলাই, ২০১৫।<br>- প্রতিষ্ঠাতা সদস্য: ৫টি (ব্রাজিল, রাশিয়া, ভারত, চীন ও দক্ষিণ আফ্রিকা)।<br>- বর্তমান সদস্য: ১১টি।<br>- সদস্য দেশগুলো হলো: ব্রাজিল, রাশিয়া, ভারত, চীন, দক্ষিণ আফ্রিকা, বাংলাদেশ, সংযুক্ত আরব আমিরাত, মিশর, আলজেরিয়া, উজবেকিস্তান (জুলাই ২০২৫) এবং কলম্বিয়া (জুলাই ২০২৫)। [উরুগুয়ে এখনও সম্ভাব্য সদস্য হিসেবে রয়েছে]<br>- দাপ্তরিক ভাষা: ইংরেজি।<br>- বর্তমান সভাপতি: দিলমা রুসেফ।<br>- সদর দপ্তর: সাংহাই, চীন।<br>- উদ্দেশ্য: BRICS সদস্য দেশসহ অন্যান্য উদীয়মান বাজার ও উন্নয়নশীল দেশগুলোতে অবকাঠামো এবং টেকসই উন্নয়ন প্রকল্পের জন্য অর্থায়ন সংগ্রহ ও প্রদান করা। এটি বিশ্বব্যাংক ও IMF-এর মতো পশ্চিমা-নেতৃত্বাধীন প্রতিষ্ঠানের বিকল্প হিসেবে গড়ে উঠেছে, যাতে দক্ষিণ-দক্ষিণ সহযোগিতা বাড়ানো যায় এবং ডলার-নির্ভরতা কমানো যায়।<br>- বাংলাদেশ ১৬ সেপ্টেম্বর, ২০২১ সালে New Development Bank-এর সদস্য পদ লাভ করে।</p>\r\n<p>উল্লেখ্য,<br>- BRICS দেশগুলো (Brazil, Russia, India, China, South Africa) দ্বারা ২০১৪ সালে Fortaleza-এর BRICS সম্মেলনে এর চুক্তি স্বাক্ষরিত হয় এবং ২০১৫ সালে আনুষ্ঠানিকভাবে NDB প্রতিষ্ঠিত হয়।<br><br>• ২০১২ সালে ভারতে অনুষ্ঠিত ৪র্থ ব্রিকস সম্মেলনে তৎকালীন ভারতের প্রধানমন্ত্রী মনমােহন সিং ব্রিকস জোটের একটি ব্যাংক প্রতিষ্ঠার প্রস্তাব করে।<br>- ২০১৩ সালে দক্ষিণ আফ্রিকার ডারবানে অনুষ্ঠিত পঞ্চম সম্মেলনে ব্রিকসের নেতারা একটি ব্যাংক প্রতিষ্ঠার ব্যাপারে একমত হয়।<br>- ২০১৪ সালের ১৫ জুলাই ব্রাজিলের ফোর্টালেজায় অনুষ্ঠিত ব্রিকসের ষষ্ঠ সম্মেলনে আনুষ্ঠানিকভাবে ব্যাংক প্রতিষ্ঠার চুক্তি স্বাক্ষর হয়। আনুষ্ঠানিক এই চুক্তিটির নাম - Fortaleza Declaration এবং এই ঘোষণার মধ্য দিয়ে New Development Bank (NDB) প্রতিষ্ঠিত হয়।<br>- ২০১৫ সালের ৭ জুলাই Fortaleza Declaration কার্যকর হয় এবং আনুষ্ঠানিকভাবে New Development Bank (NDB) প্রতিষ্ঠিত হয়।<br><br>অন্যদিকে -<br>- ADB (Asian Development Bank): এটি একটি আঞ্চলিক উন্নয়ন ব্যাংক যার মূল লক্ষ্য এশিয়া ও প্রশান্ত মহাসাগরীয় অঞ্চলে দারিদ্র্য বিমোচন এবং টেকসই অর্থনৈতিক প্রবৃদ্ধি অর্জন।<br>- AIIB (Asian Infrastructure Investment Bank): এশিয়ান ইনফ্রাস্ট্রাকচার ইনভেস্টমেন্ট ব্যাংক (AIIB) হলো বেইজিং-ভিত্তিক একটি বহুপাক্ষিক উন্নয়ন ব্যাংক যা এশিয়া ও এর বাইরে টেকসই অবকাঠামো ও উৎপাদনশীল খাতে অর্থায়ন করে।<br>- IMF (International Monetary Fund): আন্তর্জাতিক মুদ্রা তহবিল একটি প্রধান আন্তর্জাতিক আর্থিক সংস্থা, যা বিশ্বব্যাপী মুদ্রানীতি পর্যবেক্ষণ, আর্থিক স্থিতিশীলতা নিশ্চিতকরণ এবং সদস্য দেশগুলোর লেনদেনের ভারসাম্য সংকটে ঋণ সহায়তা প্রদান করে।<br><br>উৎস: New Development Bank ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 83,
+      "favorite_id": "131006515",
+      "question": "বিশ্ব অর্থনীতিতে 'পেপার গোল্ড' (Paper Gold) বলতে কী বোঝায়?",
+      "options": {
+        "a": "বিশ্বব্যাংকের সুবিধালাভ",
+        "b": "বিশেষ উত্তোলন অধিকার (SDR)",
+        "c": "স্বর্ণের মানসম্পন্ন ভিত্তিতে মুদ্রা",
+        "d": "ঘাটতি অর্থায়ন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "বিশেষ উত্তোলন অধিকার (SDR)",
+      "explanation": "<p><strong>● বিশ্ব অর্থনীতিতে 'পেপার গোল্ড' (Paper Gold) বলতে বোঝায় বিশেষ উত্তোলন অধিকার (SDR)।</strong><br><br><strong>SDR:</strong><br>- SDR-এর পূর্ণরূপ: Special Drawing Rights বা বিশেষ উত্তোলন অধিকার।<br>- SDR হলো আন্তর্জাতিক মুদ্রা তহবিল (IMF) দ্বারা তৈরি একটি বিশেষ ধরনের মুদ্রা।<br>- এটা কোনো দেশের স্থানীয় মুদ্রা নয় বরং একটি আন্তর্জাতিক \"মুদ্রা ইউনিট\" যা বিভিন্ন দেশ তাদের আর্থিক প্রয়োজন মেটাতে ব্যবহার করতে পারে।<br>- এটা এমনভাবে তৈরি হয়েছে যেন বিশ্বের দেশগুলো একে ব্যবহার করে তাদের অর্থনৈতিক সমস্যা সমাধান করতে পারে।<br><br>⇒ বিশ্ব অর্থনীতিতে আন্তর্জাতিক মুদ্রা তহবিল-এর Special Drawing Rights (SDR)-কে 'পেপার গোল্ড' (Paper Gold) বোঝানো হয়।<br>- ১৯৬৯ সালে IMF SDR প্রবর্তন করে।<br>- এটি একটি আন্তর্জাতিক রিজার্ভ সম্পদ হিসেবে কাজ করে। <br>- এটি কোনো বাস্তব মুদ্রা বা সোনা নয় বরং একটি কাগজের (paper-based) সম্পদ যা সোনার মতো রিজার্ভের ভূমিকা পালন করে বলে এর নামকরণ করা হয় \"Paper Gold\"।<br><br>উল্লেখ্য,<br>- প্রথমদিকে SDR-এর মূল্য নির্ধারিত হয়েছিল সোনার সাথে সম্পর্কিত (0.888671 গ্রাম বিশুদ্ধ সোনা = ১ SDR, যা তখন ১ মার্কিন ডলারের সমান ছিল)। <br>- এটি সোনা ও ডলারের উপর অতিরিক্ত নির্ভরতা কমাতে এবং বিশ্বব্যাপী তারল্য (liquidity) বাড়াতে তৈরি করা হয়।<br>- বর্তমানে SDR-এর মূল্য পাঁচটি প্রধান মুদ্রা যথা: মার্কিন ডলার (USD), ইউরো (EUR), চীনা রেনমিনবি (CNY), জাপানি ইয়েন (JPY) এবং ব্রিটিশ পাউন্ড (GBP)-এর ওপর নির্ভর করে।<br><br>উৎস: i) IMF ওয়েবসাইট।<br>ii) Investopedia ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 84,
+      "favorite_id": "131006513",
+      "question": "আন্তর্জাতিক অর্থায়নের ভিত্তি স্থাপনে ব্রেটন উডস্ (Bretton Woods) সম্মেলন কোথায় অনুষ্ঠিত হয়েছিল?",
+      "options": {
+        "a": "নেদারল্যান্ডস",
+        "b": "নিউ ইয়র্ক",
+        "c": "নিউ হ্যাম্পশায়ার",
+        "d": "নিউ জার্সি"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "নিউ হ্যাম্পশায়ার",
+      "explanation": "<p><strong>● আন্তর্জাতিক অর্থায়নের ভিত্তি স্থাপনে ঐতিহাসিক ব্রেটন উডস সম্মেলন ১৯৪৪ সালের ১ থেকে ২২ জুলাই মার্কিন যুক্তরাষ্ট্রের নিউ হ্যাম্পশায়ারের ব্রেটন উডসের মাউন্ট ওয়াশিংটন হোটেলে অনুষ্ঠিত হয়েছিল। </strong><br><br><strong>ব্রেটন উডস সম্মেলন (Bretton Woods Conference):</strong><br>- ব্রেটন উডস সম্মেলন আনুষ্ঠানিকভাবে United Nations Monetary and Financial Conference নামে পরিচিত।<br>- ১৯৪৪ সালের ১ - ২২ জুলাই যুক্তরাষ্ট্রের নিউ হ্যাম্পশায়ার অঙ্গরাজ্যের ব্রেটন উডস নামক স্থানে মাউন্ট ওয়াশিংটন হোটেলে অনুষ্ঠিত হয়েছিল।<br>- সম্মেলনের মূল উদ্দেশ্য ছিল দ্বিতীয় বিশ্বযুদ্ধের পর প্রায় বিধ্বস্ত বিশ্ব অর্থনীতিকে সচল করা। <br>- এই সম্মেলনে ৪৪টি দেশের ৭৩০ জন প্রতিনিধি অংশ নেন।<br>- এই সম্মেলনের প্রধান উদ্যোক্তা ছিলেন যুক্তরাষ্ট্রের সেক্রেটারি অব দ্য স্টেটের বিশেষ সহকারী হ্যারি ডেক্সটার হোয়াইট এবং ব্রিটিশ অর্থনীতিবিদ জন মেনার্ড কেইনস।<br>- ১৯৪৪-এর এ সম্মেলনের সূত্র ছিল ১৯৪১ সালের আটলান্টিক কনফারেন্সে।<br><br>⇒ ১৯৪৪-এর জুনে আটলান্টিক শহরে একটি প্রাথমিক সম্মেলন হয় এবং ১ জুলাই বসে চূড়ান্ত ব্রেটন উডস কনফারেন্স। <br>- এ সম্মেলনে দুটি প্রতিষ্ঠান জন্ম নেয়- IMF এবং IBRD।<br>- IBRD শিগগিরই বিশ্বব্যাংকে পরিণত হয়।<br>- IMF এবং IBRD যাত্রা শুরু করে ১৯৪৫ সালের ২৭ ডিসেম্বর।<br>- শুরুতে আইএমএফের প্রধান কাজ নির্ধারণ করা হয়েছিল আমেরিকান ডলার ও স্বর্ণের ভিত্তিতে মুদ্রা বিনিময় হারে ভারসাম্য বজায় রাখা। অন্যদিকে আইবিআরডির দায়িত্ব ছিল যুদ্ধবিধ্বস্ত দেশগুলো পুনর্নির্মাণ এবং স্বল্পোন্নত দেশগুলোর অর্থনৈতিক উন্নয়নে সহায়তা করা। <br><br>উল্লেখ্য,<br>- ১৯৪৫ সালের ২৭ ডিসেম্বর যুক্তরাষ্ট্রের কংগ্রেস বিশ্বব্যাংক ও IMF গঠনের Articles of Agreement অনুমোদন করে।<br>- যুক্তরাষ্ট্রের নিউ হ্যাম্পশায়ার শহরে ২৯টি দেশ ব্রেটন উডস চুক্তিতে স্বাক্ষর করে।<br>- মোট ২৯টি দেশের অনুমোদন নিয়ে আনুষ্ঠানিকভাবে ১৯৪৫ সালের ২৭ ডিসেম্বর বিশ্বব্যাংক ও IMF প্রতিষ্ঠিত হয়।<br><br>উৎস: i) World Bank Group ওয়েবসাইট।<br>ii) U.S. Department of State (.gov) ওয়েবসাইট। </p>"
+    },
+    {
+      "id": 85,
+      "favorite_id": "131006399",
+      "question": "কোন বিষয়টি মুদ্রাপাচারের অন্তর্ভুক্ত নয়?",
+      "options": {
+        "a": "রপ্তানী পণ্যের অবমূল্যায়ন",
+        "b": "আমদানী পণ্যের অধিক মূল্য নির্ধারণ",
+        "c": "আয়কর ফাঁকি দেয়া",
+        "d": "অবৈধ চ্যানেলে বিদেশে টাকা পাঠানো"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আয়কর ফাঁকি দেয়া",
+      "explanation": "<p><strong>♣ আয়কর ফাঁকি দেয়ার বিষয়টি মুদ্রাপাচারের অন্তর্ভুক্ত নয়।</strong><br>- এটি একটি পৃথক অপরাধ (আয়কর আইন, ২০২৩ অনুসারে), যা আয় গোপন করে কর এড়ানো।<br>- যদিও কর ফাঁকির অর্থ পরবর্তীতে পাচার হতে পারে কিন্তু শুধু আয়কর ফাঁকি নিজে মুদ্রাপাচারের সংজ্ঞায় পড়ে না।</p>\r\n<p><strong>♦ অর্থ পাচার:</strong><br>- বৈধ বা অবৈধ যেকোনো উপায়ে উপার্জিত টাকা বা সম্পদ গোপনে বিদেশে পাচার করা কিংবা এর আসল উৎস আড়াল করাকে মানি লন্ডারিং বলে।<br>- কোনো অপরাধলব্ধ অর্থ বিদেশ থেকে বাংলাদেশে আনা বা পাঠানো যদি এর অবৈধ উৎস গোপন করার উদ্দেশ্যে করা হয়, তাহলেও সেটি মানি লন্ডারিং হিসেবে গণ্য হয়।</p>\r\n<p>⇒ মানি লন্ডারিং সাধারণত ৩টি ধাপে সম্পন্ন হয়। যথা:<br>• প্লেসমেন্ট - এই ধাপে অবৈধভাবে অর্জিত অর্থ প্রথমবারের মতো বৈধ আর্থিক ব্যবস্থার মধ্যে জমা বা প্রবেশ করানো হয়।<br>• লেয়ারিং - বিভিন্ন অপ্রয়োজনীয় লেনদেন ও হিসাবনিকাশের কৌশলের মাধ্যমে লেনদেনকে ছোট ছোট অংশে ভাগ করে টাকার আসল উৎস গোপন করা।<br>• ইন্টিগ্রেশন - এই ধাপে আপাতদৃষ্টিতে বৈধ হয়ে যাওয়া অর্থ হিসাব থেকে তুলে নেওয়া হয় এবং অপরাধীরা তাদের ইচ্ছামতো কাজে তা ব্যবহার করে।<br><br><strong>♦ অর্থ পাচারের (মানি লন্ডারিং) পেছনে প্রধান কারণসমূহ:</strong><br>• দেশে বিনিয়োগের উপযুক্ত পরিস্থিতি না থাকা।<br>• ব্যবসায়ীরা প্রতিযোগিতার চাপের মধ্যে টিকে থাকতে না পারা।<br>• অবৈধ চ্যানেলে বিদেশে টাকা পাঠানো।<br>• বাংলাদেশের ভবিষ্যতের প্রতি আস্থা না থাকা।<br>• রপ্তানী পণ্যের অবমূল্যায়ন।<br>• আমদানী পণ্যের অধিক মূল্য নির্ধারণ।<br>• অবৈধভাবে উপার্জিত অর্থ গোপন করার চেষ্টা।</p>\r\n<p><strong>♦ উল্লেখ্য:</strong><br>- মানি লন্ডারিং প্রতিরোধ আইন, ২০১২ অনুযায়ী মানি লন্ডারিং অপরাধ তদন্তের জন্য নিম্নোক্ত সংস্থাগুলোকে ক্ষমতা প্রদান করা হয়েছে -<br>• বাংলাদেশ পুলিশ-এর ক্রিমিনাল ইনভেস্টিগেশন ডিপার্টমেন্ট (CID)।<br>• দুর্নীতি দমন কমিশন (ACC)।<br>• মাদকদ্রব্য নিয়ন্ত্রণ অধিদপ্তর (DNC)।<br>• পরিবেশ অধিদপ্তর।<br>• বাংলাদেশ সিকিউরিটিজ অ্যান্ড এক্সচেঞ্জ কমিশন (BSEC)।</p>\r\n<p><em>তথ্যসূত্র - বাংলাদেশ ফাইন্যান্সিয়াল ইন্টেলিজেন্স ইউনিট ওয়েবসাইট, বণিক বার্তা পত্রিকা রিপোর্ট ও সিপিডি ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 86,
+      "favorite_id": "128708571",
+      "question": "২০২৫-২৬ অর্থবছরের অনুন্নয়ন বাজেটে সবচেয়ে বেশি বরাদ্দ কোন খাতে?",
+      "options": {
+        "a": "ভর্তুকি ও প্রণোদনা",
+        "b": "সুদ",
+        "c": "বেতন-ভাতা",
+        "d": "পেনশন"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "সুদ",
+      "explanation": "<p><strong>জাতীয় বাজেট ২০২৫-২৬:</strong><br>- জিডিপির আকার: ৬২ লাখ ৪৪ হাজার ৫৭৮ কোটি টাকা।<br>- জিডিপি প্রবৃদ্ধির হার: ৫.৫%।<br>- বাজেটের আকার: ৭ লাখ ৯০ হাজার কোটি টাকা।<br>- অনুদান ব্যতিত বাজেট ঘাটতি: ২ লাখ ২৬ হাজার কোটি টাকা।<br>- অনুদান সহ বাজেট ঘাটতি: ২,২১,০০০ কোটি টাকা।<br>- সর্বোচ্চ বরাদ্দ প্রাপ্ত খাত (পরিচালন ও উন্নয়ন বাজেট): জনপ্রশাসন।<br>- উন্নয়ন বাজেটে সর্বোচ্চ বরাদ্দপ্রাপ্ত খাত: পরিবহন ও যোগাযোগ।<br><strong>- অনুন্নয়ন (পরিচালন) বাজেটে সর্বোচ্চ বরাদ্দ প্রাপ্ত খাত: সুদ।</strong><br>- মাথাপিছু আয়: ২,৮২০ মার্কিন ডলার।<br>- বার্ষিক উন্নয়ন কর্মসূচী (ADP): ২ লাখ ৩০ হাজার কোটি টাকা (জিডিপির ৩.৭%)।<br>- উন্নয়ন বাজেটে বরাদ্দের পরিমাণ: ২,৪৫,৬০৯ কোটি টাকা।<br>- অনুমিত মুদ্রাস্ফীতির হার: ৬.৫%।</p>\r\n<p><em>তথ্যসূত্র - জাতীয় বাজেট ২০২৫-২৬।</em></p>"
+    },
+    {
+      "id": 87,
+      "favorite_id": "122466883",
+      "question": "IFC এর বর্তমান সদস্য সংখ্যা কত? (ডিসেম্বর, ২০২৫)",
+      "options": {
+        "a": "১৮৬টি",
+        "b": "১৮৭টি",
+        "c": "১৮৮টি",
+        "d": "১৮৯টি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "১৮৬টি",
+      "explanation": "<p><strong>IFC:</strong><br>- IFC বিশ্বব্যাংক গ্রুপের একটি প্রতিষ্ঠান।<br>- IFC এর পূর্ণরূপ International Finance Corporation.<br>- প্রতিষ্ঠিত হয়: ১৯৫৬ সালে।<br><strong>- বর্তমান সদস্য: ১৮৬টি।</strong><br>- প্রধান কার্যালয়: ওয়াশিংটন ডিসি, যুক্তরাষ্ট্র।<br>- বর্তমান ব্যবস্থাপনা পরিচালক মাখতার ডিওপ।<br>- এটি প্রধানত উন্নয়নশীল দেশগুলোতে বেসরকারি বা ব্যক্তিমালিকানা খাতের উন্নয়নে কাজ করে।</p>\r\n<p><em>তথ্যসূত্র - IFC অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 88,
+      "favorite_id": "122465482",
+      "question": "ঢাকা স্টক এক্সচেঞ্জ প্রতিষ্ঠা লাভ করে কত সালে?",
+      "options": {
+        "a": "১৯৫৬ সালে",
+        "b": "১৯৫৪ সালে",
+        "c": "১৯৫৫ সালে",
+        "d": "১৯৫৩ সালে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "১৯৫৪ সালে",
+      "explanation": "<p><strong>• স্টক এক্সচেঞ্জ:</strong><br>- বাংলাদেশের পুঁজি বাজার পরিচালনা করে বাংলাদেশে স্টক এক্সচেঞ্জ কিমিশন বা Bangladesh Securities and Exchange Commission.<br>- গ্রাহকের পুঁজির নিরাপত্তা বিধান ও পুঁজি বাজারে বিনিয়োগ পরিবেশ নিয়ন্ত্রণ করা এই কমিশন প্রতিষ্ঠার উদ্দেশ্য।<br><br>• বাংলাদেশে শেয়ার বাজার দুইটি।<br><strong>• ঢাকা স্টক এক্সচেঞ্জ:</strong><br>- এটি দেশের বৃহত্তম শেয়ার বাজার।<br>- এটি রাজধানী ঢাকার প্রধানতম বাণিজ্যিক এলাকা মতিঝিলে অবস্থিত।<br><strong>- প্রতিষ্ঠা লাভ করে: ১৯৫৪ সালে।</strong><br>- কার্যক্রম শুরু করে: ১৯৫৬ সালে।<br><br><strong>• চট্টগ্রাম স্টক এক্সচেঞ্জ:</strong><br>- অনুমোদন পায়: ১২ ফেব্রুয়ারি, ১৯৯৫ সালে।<br>- চট্টগ্রাম স্টক এক্সচেঞ্জ ১৯৯৫ সালের ১০ অক্টোবর চট্টগ্রাম থেকে শুরু হয়।<br><br><em>উৎস: ঢাকা স্টক এক্সচেঞ্জ ও BSEC ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 89,
+      "favorite_id": "122465295",
+      "question": "নিচের কোনটি পরোক্ষ কর?",
+      "options": {
+        "a": "আমদানী শুল্ক",
+        "b": "আয়কর",
+        "c": "ভূমি রাজস্ব",
+        "d": "সম্পদ কর"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "আমদানী শুল্ক",
+      "explanation": "<p><strong>- আমদানী শুল্ক একটি পরোক্ষ কর।<br><br>প্রত্যক্ষ কর:</strong><br>- যে কর প্রথমে যার উপর ধার্য করা হয় চূড়ান্তভাবে তাকেই পরিশোধ করতে হয় তাকে প্রত্যক্ষ কর বলা হয়।<br>- এ কর কোনোভাবেই অন্যের উপর চাপানো যায় না।<br>-যেমন: আয়কর, ভূমি রাজস্ব, সম্পদ কর প্রভৃতি।<br><br><strong>• পরোক্ষ কর:</strong><br>- কোনো ব্যক্তির উপর কর ধার্য করা হলে সে যদি করের ভার অন্যের উপর চাপাতে পারে তাকে বলা হয় পরোক্ষ কর।<br>- এরূপ করের বোঝা প্রাথমিকভাবে একজন বহন করলেও পরে তা অন্যের উপর চাপাতে পারে।<br>- যেমন: মূল্য সংযোজন কর, বিক্রয় কর, <strong>আমদানী শুল্ক </strong>প্রভৃতি।<br><br><em>উৎস: কর ব্যবস্থা ও নিরীক্ষা শাস্ত্র, বিবিএ প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 90,
+      "favorite_id": "120868548",
+      "question": "জাতীয় বাজেট ২০২৫-২৬ অনুযায়ী, বর্তমানে মাথাপিছু আয় কত?",
+      "options": {
+        "a": "২,৬৩০ মার্কিন ডলার",
+        "b": "২,৭১০ মার্কিন ডলার",
+        "c": "২,৮২০ মার্কিন ডলার",
+        "d": "২,৯৬০ মার্কিন ডলার"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "২,৮২০ মার্কিন ডলার",
+      "explanation": "<p><strong>জাতীয় বাজেট ২০২৫-২৬:</strong><br>- বাজেটের ক্রম: ৫৪তম (অন্তবর্তীকালীনসহ ৫৫তম)।<br>- বাজেটের শিরোনাম: 'বৈষম্যহীন ও টেকসই অর্থনৈতিক ব্যবস্থা গড়ার প্রত্যয়'।<br>- বাজেট উত্থাপনকারী: ড. সালেহউদ্দিন আহমেদ (অর্থ উপদেষ্টা)।<br>- বাজেট উত্থাপন: ২ জুন, ২০২৫।<br>- অনুমোদন হয় : ২২ জুন, ২০২৫।<br>- কার্যকর হয়: ১ জুলাই, ২০২৫।<br>- জিডিপির আকার: ৬২ লাখ ৪৪ হাজার ৫৭৮ কোটি টাকা।<br>- জিডিপি প্রবৃদ্ধির হার: ৫.৫%।<br>- বাজেটের আকার: ৭ লাখ ৯০ হাজার কোটি টাকা।<br>- অনুদান ব্যতিত বাজেট ঘাটতি: ২ লাখ ২৬ হাজার কোটি টাকা।<br>- অনুদান সহ বাজেট ঘাটতি: ২,২১,০০০ কোটি টাকা।<br>- সর্বোচ্চ বরাদ্দ প্রাপ্ত খাত (পরিচালন ও উন্নয়ন বাজেট): জনপ্রশাসন।<br>- উন্নয়ন বাজেটে সর্বোচ্চ বরাদ্দপ্রাপ্ত খাত: পরিবহন ও যোগাযোগ।<br>- অনুন্নয়ন (পরিচালন) বাজেটে সর্বোচ্চ বরাদ্দ প্রাপ্ত খাত: সুদ।<br><strong>- মাথাপিছু আয়: ২,৮২০ মার্কিন ডলার।</strong><br>- বার্ষিক উন্নয়ন কর্মসূচী (ADP): ২ লাখ ৩০ হাজার কোটি টাকা (জিডিপির ৩.৭%)।<br>- উন্নয়ন বাজেটে বরাদ্দের পরিমাণ: ২,৪৫,৬০৯ কোটি টাকা।<br>- অনুমিত মুদ্রাস্ফীতির হার: ৬.৫%।</p>\r\n<p><em>তথ্যসূত্র - জাতীয় বাজেট ২০২৫-২৬।</em></p>"
+    },
+    {
+      "id": 91,
+      "favorite_id": "119491315",
+      "question": "জিডিপি বা মোট দেশজ উৎপাদন গণনায় নিচের কোনটি পরিমাপ করা হয়?",
+      "options": {
+        "a": "সরকারি ও বেসরকারি মোট আয়",
+        "b": "প্রাথমিক দ্রব্য ও সেবার মূল্য",
+        "c": "চূড়ান্ত দ্রব্য ও সেবার মূল্য",
+        "d": "শুধু দেশীয় নাগরিকদের আয়"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "চূড়ান্ত দ্রব্য ও সেবার মূল্য",
+      "explanation": "<p><strong>মোট দেশজ উৎপাদন:</strong><br><strong>- একটি নির্দিষ্ট সময়ে সাধারণত এক বছরে একটি দেশের ভৌগোলিক সীমানার মধ্যে মোট যে পরিমাণ চূড়ান্ত দ্রব্য ও সেবা উৎপাদিত হয়, তার বাজার দামের সমষ্টিকে মোট দেশজ উৎপাদন বা GDP বলে।</strong><br>- মোট দেশজ উৎপাদনে দেশের অভ্যন্তরীণ আয় এবং দেশের অভ্যন্তরে বিদেশিদের আয় অন্তর্ভুক্ত (includes) হয় এবং দেশীয় নাগরিক যারা প্রবাসে, তাদের প্রেরিত অর্থ ধরা হয় না।<br>- কোনো নির্দিষ্ট সময়ে দেশের অভ্যন্তরে উৎপাদিত দ্রব্য ও সেবার বাজার মূল্য এবং উক্ত দেশে অবস্থানরত বিদেশিদের উপার্জিত আয় এর সমষ্টি (includes) থেকে বিদেশে অবস্থানকারী দেশীয় নাগরিক কর্তৃক বিদেশ হতে প্রেরিত অর্থ বাদ (excludes) দেয়ার পর অবশিষ্ট আর্থিক মূল্যকে মোট দেশজ উৎপাদন বলে।<br>- অর্থাৎ GDP = মোট জাতীয় উৎপাদন (GNP)+ উক্ত দেশে অবস্থানকারী বিদেশিদের অর্জিত আয় বিদেশে অবস্থানকারী দেশীয় নাগরিকদের আয়।</p>\r\n<p><em>তথ্যসূত্র - অর্থনীতি, নবম-দশম শ্রেণি, বোর্ড বই ও বাংলাদেশ ও বিশ্বপরিচয়, এসএসসি প্রোগ্রাম, বাংলাদেশ উন্মুক্ত বিশ্ববিদ্যালয়।</em></p>"
+    },
+    {
+      "id": 92,
+      "favorite_id": "118315999",
+      "question": "iBAS++ কোন ধরনের সিস্টেম?",
+      "options": {
+        "a": "পরিবহন ব্যবস্থাপনা সিস্টেম",
+        "b": "মেট্রো পরিচালনা সিস্টেম",
+        "c": "আর্থিক ব্যবস্থাপনা সিস্টেম",
+        "d": "স্বাস্থ্য ব্যবস্থাপনা সিস্টেম"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "আর্থিক ব্যবস্থাপনা সিস্টেম",
+      "explanation": "<p><em>• iBAS++ বাংলাদেশে Integrated Budget and Accounting System এর সংক্ষিপ্ত রূপ। <strong>iBAS++ একটি আধুনিক আর্থিক ব্যবস্থাপনা সিস্টেম যা বাংলাদেশে সরকারি বাজেট প্রণয়ন, ব্যয় অনুমোদন এবং হিসাবরক্ষণ কার্যক্রমকে স্বয়ংক্রিয় ও কেন্দ্রীয়কৃত করে। </strong>এটি ব্যবহার করে বিভিন্ন সরকারি দপ্তর ও সংস্থা তাদের আর্থিক লেনদেন অনলাইনে রেকর্ড করতে পারে, যা স্বচ্ছতা, নির্ভুলতা এবং সময়োপযোগী হিসাবরক্ষণ নিশ্চিত করে। iBAS++ সরকারের আর্থিক তথ্য বিশ্লেষণ সহজ করে, বাজেটের অপ্রয়োজনীয় ব্যয় কমায় এবং সরকারি অর্থনৈতিক সিদ্ধান্তকে কার্যকর করে। এছাড়া, কর্মচারীদের বেতন, পেনশন ও জিপিএফসহ বিভিন্ন আর্থিক প্রক্রিয়া এই সিস্টেমের মাধ্যমে সম্পন্ন করা হয়। সুতরাং, iBAS++ বাংলাদেশের সরকারি আর্থিক ব্যবস্থাপনায় একটি গুরুত্বপূর্ণ প্রযুক্তিগত উদ্ভাবন।</em></p>\r\n<p><strong><em>- উত্তর: গ) আর্থিক ব্যবস্থাপনা সিস্টেম। </em></strong></p>\r\n<p><strong>• iBAS++:</strong><br>- iBAS++ হলো সরকারের একটি সমন্বিত আর্থিক ব্যবস্থাপনা সফটওয়্যার।<br>- এটি বাজেট তৈরি, অনুমোদন এবং বাস্তবায়ন—সবকিছু এক জায়গায় পরিচালনা করতে সাহায্য করে।<br>- সরকারি অফিসগুলোর খরচ, বরাদ্দ ও হিসাব স্বয়ংক্রিয়ভাবে এতে রেকর্ড হয়।<br>- সিস্টেমটি বাস্তব সময়েই (real-time) আর্থিক তথ্য দেখায়, ফলে সিদ্ধান্ত নেওয়া সহজ হয়।<br>- কর্মচারীদের বেতন, পেনশন, জিপিএফসহ নানা আর্থিক কার্যক্রমও iBAS++ এর মাধ্যমে সম্পন্ন হয়।<br>- চেক বা ইলেকট্রনিক ফান্ড ট্রান্সফারের মাধ্যমে পেমেন্ট ছাড়ানোর সুবিধা রয়েছে।<br>- বরাদ্দ অনুযায়ী খরচ নিয়ন্ত্রণ করার জন্য এতে বাজেট নিয়ন্ত্রণ ব্যবস্থা থাকে।<br>- বিভিন্ন ধরনের আর্থিক রিপোর্ট স্বয়ংক্রিয়ভাবে তৈরি করা যায়।<br>- এটি সরকারের আর্থিক কার্যক্রমকে স্বচ্ছ, দ্রুত এবং কাগজবিহীন করতে গুরুত্বপূর্ণ ভূমিকা রাখে।<br>- সামগ্রিকভাবে, iBAS++ পুরো সরকারি অর্থব্যবস্থাকে ডিজিটাল ও আধুনিক করে তুলেছে।<br><br>সূত্র: iBAS++ <a href=\"https://mof.portal.gov.bd/sites/default/files/files/mof.portal.gov.bd/page/8b31f768_35db_46b0_bf7d_cb6c4754a011/iBAS%2B%2B%20Brochure-English.pdf\" target=\"_blank\" rel=\"noopener\">[link]</a></p>"
+    },
+    {
+      "id": 93,
+      "favorite_id": "118315787",
+      "question": "তৃতীয় বিশ্বের অনুন্নত দেশগুলোকে সহজ শর্তে ও স্বল্পসুদে ঋণ প্রদান করে -",
+      "options": {
+        "a": "IDA",
+        "b": "IMF",
+        "c": "IFC",
+        "d": "IBRD"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "IDA",
+      "explanation": "<p><strong>IDA:</strong><br>- IDA এর পূর্ণরূপ International Development Association.<br><strong>- তৃতীয় বিশ্বের অনুন্নত দেশগুলোকে সহজ শর্তে ও স্বল্পসুদে ঋণ প্রদান করে থাকে।</strong><br>- যার কারণে IDA কে 'Soft Loan Window' বলা হয়।<br>- যেসব দেশ IBRD থেকে ঋণ পায় না, সেসব দেশকে IDA ঋণ প্রদান করে থাকে।<br>- IDA বিশ্বব্যাংক গ্রুপের একটি প্রতিষ্ঠান।<br>- এটি ১৯৬০ সালের ২৪ সেপ্টেম্বর প্রতিষ্ঠিত হয়।<br>- বর্তমান সদস্য সংখ্যা ১৭৫টি। (ডিসেম্বর, ২০২৫)<br>- বাংলাদেশ ১৯৭২ সালে IDA এর সদস্যপদ লাভ করে।</p>\r\n<p><em>তথ্যসূত্র - IDA অফিসিয়াল ওয়েবসাইট।</em></p>"
+    },
+    {
+      "id": 94,
+      "favorite_id": "117100484",
+      "question": "বাংলাদেশে প্রচলিত সরকারি নোট কোনটি?",
+      "options": {
+        "a": "১০ টাকা",
+        "b": "৫ টাকা",
+        "c": "২০ টাকা",
+        "d": "৫০ টাকা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "৫ টাকা",
+      "explanation": "<p>• বাংলাদেশে প্রচলিত সরকারি নোট ৩টি।<br><strong>- বাংলাদেশের প্রচলিত ১, ২ ও ৫ টাকার নোট হলো সরকারি নোট। </strong><br>- এসব নোট অর্থ মন্ত্রণালয় বের করে। <br>- এগুলোতে অর্থসচিবের স্বাক্ষর থাকে।</p>\r\n<p>• বাংলাদেশ ব্যাংক থেকে যেসব নোট বের করা হয় সেগুলো ব্যাংক নোট নামে পরিচিত।<br>- এসব নোটে বাংলাদেশ ব্যাংকের গভর্নরের স্বাক্ষর থাকে।<br>- বর্তমানে দেশে সাতটি ব্যাংক নোট প্রচলিত রয়েছে।<br>- নোটগুলো হলো- ১০, ২০, ৫০, ১০০, ২০০, ৫০০ এবং ১০০০ টাকার নোট।</p>\r\n<p>উৎস: বাংলাদেশ ব্যাংকের ওয়েবসাইট।</p>"
+    },
+    {
+      "id": 95,
+      "favorite_id": "115895238",
+      "question": "বর্তমানে প্রতিবন্ধী ব্যক্তির করমুক্ত আয় সীমা কত? (নভেম্বর, ২০২৫)",
+      "options": {
+        "a": "৪০০০০০ টাকা",
+        "b": "৪৫০০০০ টাকা",
+        "c": "৪৭৫০০০ টাকা",
+        "d": "৫০০০০০ টাকা"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "৪৭৫০০০ টাকা",
+      "explanation": "<p><strong>করমুক্ত আয় সীমা:</strong><br>- বর্তমানে সাধারণ ব্যক্তির করমুক্ত আয় সীমা: ৩৫০০০০ টাকা।<br>- নারী ও ৬৫ বছর বা তদূর্ধ্ব ব্যক্তির করমুক্ত আয় সীমা: ৪০০০০০ টাকা।<br><strong>- প্রতিবন্ধী ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।</strong><br>- গেজেটভুক্ত যুদ্ধাহত বীর মুক্তিযোদ্ধাদের করমুক্ত আয় সীমা: ৫০০০০০ টাকা।<br>- তৃতীয় লিঙ্গের ব্যক্তির করমুক্ত আয় সীমা: ৪৭৫০০০ টাকা।</p>\r\n<p><strong>উল্লেখ্য:</strong><br>- ২০২৬-২৭ অর্থবছর ও ২০২৭-২৮ অর্থবছর এ সাধারণ ব্যক্তির করমুক্ত আয় সীমা হবে ৩৭৫০০০ টাকা।</p>\r\n<p><em>তথ্যসূত্র - জাতীয় বাজেট ২০২৫-২৬ অর্থবছর।</em></p>"
+    },
+    {
+      "id": 96,
+      "favorite_id": "152471812",
+      "question": "What is the current threshold for reporting a CTR to the BFIU in Bangladesh?",
+      "options": {
+        "a": "BDT 5,00,",
+        "b": "BDT 7,00,",
+        "c": "BDT 10,00,",
+        "d": "BDT 15,00,"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "BDT 10,00,",
+      "explanation": "<p><strong>• বাংলাদেশে BFIU (Bangladesh Financial Intelligence Unit)-এর নির্দেশনা অনুযায়ী, একটি নির্দিষ্ট দিনে কোনো একটি ব্যাংক অ্যাকাউন্টে যদি ১০ লক্ষ টাকা বা তার বেশি নগদ লেনদেন (Cash Transaction) হয়, তবে ব্যাংক সেই তথ্য বিএফআইইউ-কে জানাতে বাধ্য। একেই বলা হয় CTR।</strong></p>\r\n<p><strong>CTR:</strong><br><strong>CTR এর পূর্ণরূপ হলো Cash Transaction Report (নগদ লেনদেন রিপোর্ট)।</strong><br>- যখন কোনো গ্রাহক একদিনে একটি অ্যাকাউন্টে (জমা বা উত্তোলন যেকোনোটি) নগদ ১০,০০,০০০ (দশ লক্ষ) টাকা বা তার বেশি লেনদেন করেন। <br>- এটি কেবল নগদ (Cash) লেনদেনের ক্ষেত্রে প্রযোজ্য, অনলাইন ট্রান্সফার বা চেকের ক্ষেত্রে নয়।<br>- যদি কোনো গ্রাহক একই দিনে কয়েক দফায় টাকা জমা দেন বা তোলেন এবং সব মিলিয়ে পরিমাণ ১০ লক্ষ টাকা বা তার বেশি হয়, তবুও ব্যাংককে CTR রিপোর্ট করতে হবে।<br>- মানিলন্ডারিং (Money Laundering) বা অর্থ পাচার এবং সন্ত্রাসী অর্থায়ন (Terrorist Financing) প্রতিরোধ করার জন্য এই রিপোর্ট সংগ্রহ করা হয়। <br>এটি একটি নিয়মিত প্রক্রিয়া এবং এর মানে এই নয় যে গ্রাহক অপরাধী। <br>- তবে অস্বাভাবিক লেনদেন দেখলে বিএফআইইউ তদন্ত করতে পারে।<br><br>উৎস: BFIU ও Investopedia।</p>"
+    },
+    {
+      "id": 97,
+      "favorite_id": "152471784",
+      "question": "The 'Unemployment Rate' is calculated as a percentage of-",
+      "options": {
+        "a": "The total population",
+        "b": "The total adult population",
+        "c": "The total labor force",
+        "d": "The total number of taxpayers"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The total labor force",
+      "explanation": "<p><strong>• বেকারত্বের হার (Unemployment Rate) বলতে মোট জনসংখ্যার কত শতাংশ বেকার তা বোঝায় না, বরং এটি শ্রমশক্তির (Labor Force) একটি শতাংশ হিসেবে গণনা করা হয়।</strong><br><br><strong> শ্রমশক্তি (Labor Force):</strong><br>শ্রমশক্তি গঠিত হয় মূলত সেই সব মানুষদের নিয়ে যারা বর্তমানে কাজ করছেন (Employed) এবং যারা সক্রিয়ভাবে কাজ খুঁজছেন কিন্তু এখনও পাননি (Unemployed)। অর্থাৎ(Labor Force = Employed + Unemployed)। [1]<br>২. হিসাবের সূত্র:<br>বেকারত্বের হার বের করার সূত্রটি হলো:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_kGEhFKu.png\"><br>উৎস: Investopedia</p>"
+    },
+    {
+      "id": 98,
+      "favorite_id": "152471744",
+      "question": "Which ratio is a commercial bank required to maintain with the Central Bank?",
+      "options": {
+        "a": "Statutory Liquidity Ratio (SLR)",
+        "b": "Cash Reserve Ratio (CRR)",
+        "c": "Debt-to-Equity Ratio",
+        "d": "Loan-to-Value Ratio"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Cash Reserve Ratio (CRR)",
+      "explanation": "<p><strong>• Cash Reserve Ratio (CRR): এটি বাণিজ্যিক ব্যাংকগুলোর মোট আমানতের সেই শতাংশ যা নগদ আকারে কেন্দ্রীয় ব্যাংকের (বাংলাদেশ ব্যাংক) কাছে জমা রাখা বাধ্যতামূলক</strong>। বাজারে টাকার প্রবাহ বা মুদ্রাস্ফীতি নিয়ন্ত্রণের জন্য কেন্দ্রীয় ব্যাংক এই হার ব্যবহার করে । বর্তমানে বাংলাদেশে সাধারণ ব্যাংকগুলোর জন্য এই হার ৪%।<br><br>অন্যদিকে,<br><strong>• Statutory Liquidity Ratio (SLR): </strong>এটিও একটি বাধ্যতামূলক রিজার্ভ, তবে এটি কেন্দ্রীয় ব্যাংকে জমা দিতে হয় না। ব্যাংকগুলোকে এই অর্থ নিজেদের কাছেই নগদ টাকা, স্বর্ণ বা সরকারি বন্ড আকারে রাখতে হয়। ব্যাংক যাতে যেকোনো সময় গ্রাহকের টাকার চাহিদা মেটাতে পারে, তা নিশ্চিত করাই এর লক্ষ্য।<br><strong>• Debt-to-Equity Ratio: </strong>এটি একটি আর্থিক অনুপাত যা নির্দেশ করে একটি প্রতিষ্ঠান তার নিজের মূলধনের তুলনায় কতটা ঋণ নিয়েছে। এটি কেন্দ্রীয় ব্যাংকের কাছে জমা রাখার মতো কোনো রিজার্ভ নয়।<br><strong>• Loan-to-Value Ratio (LTV): </strong>এটি ঋণ দেওয়ার সময় ব্যবহৃত হয়। কোনো সম্পদের (যেমন জমি বা গাড়ি) দামের কত শতাংশ ব্যাংক ঋণ হিসেবে দেবে, তা এই অনুপাত দ্বারা নির্ধারিত হয়।<br><br>উৎস: বিজনেস স্টান্ডার্ড ও Investopedia.</p>"
+    },
+    {
+      "id": 99,
+      "favorite_id": "152471710",
+      "question": "Which institution is often called the \"Lender of Last Resort\"?",
+      "options": {
+        "a": "World Bank",
+        "b": "Commercial Bank",
+        "c": "Central Bank",
+        "d": "Investment Bank"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Central Bank",
+      "explanation": "<p><strong>• Lender of Last Resort:</strong><br><strong>- যেকোনো দেশের কেন্দ্রীয় ব্যাংক (Central Bank)-কে সাধারণত \"ঋণদানের শেষ আশ্রয়স্থল\" বা \"Lender of Last Resort (LoLR)\" বলা হয়। </strong>বাংলাদেশে এই ভূমিকা পালন করে বাংলাদেশ ব্যাংক।<br>- সাধারণত বাণিজ্যিক ব্যাংকগুলো তাদের দৈনন্দিন কার্যক্রম চালানোর জন্য আমানতকারী বা অন্যান্য ব্যাংক থেকে টাকা ধার নেয় কিন্তু কোনো জরুরি পরিস্থিতিতে (যেমন আর্থিক মন্দা বা গ্রাহকদের টাকা তুলে নেওয়ার হিড়িক) যখন একটি বাণিজ্যিক ব্যাংক অন্য কোনো উৎস থেকে ঋণ পেতে ব্যর্থ হয়, তখন তারা চূড়ান্ত সাহায্য বা ঋণের জন্য কেন্দ্রীয় ব্যাংকের শরণাপন্ন হয়।</p>\r\n<p>উৎস: Investopedia</p>"
+    },
+    {
+      "id": 100,
+      "favorite_id": "152471697",
+      "question": "Non-Bank Financial Institutions (NBFIs) in Bangladesh are regulated under which act?",
+      "options": {
+        "a": "The Companies Act, 1994",
+        "b": "The Bank Company Act, 1991",
+        "c": "The Financial Institutions Act, 1993",
+        "d": "The Negotiable Instruments Act, 1881"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "The Financial Institutions Act, 1993",
+      "explanation": "<p><strong>বাংলাদেশে ব্যাংক-বহির্ভূত আর্থিক প্রতিষ্ঠানসমূহ (NBFIs) পরিচালনা, তদারকি এবং পর্যবেক্ষণের জন্য ১৯৯৩ সালে The Financial Institutions Act (FIA) প্রবর্তন করা হয়েছিল।</strong><br>এটি আইনি কাঠামো প্রদান করে:<br>১. ব্যাংক-বহির্ভূত আর্থিক প্রতিষ্ঠানসমূহ-এর লাইসেন্স ও নিবন্ধন: কোনো প্রতিষ্ঠান যদি ব্যাংক না হয়েও লিজিং, বিনিয়োগ বা ঋণের ব্যবসা করতে চায়, তবে তাদের কীভাবে লাইসেন্স নিতে হবে এবং বাংলাদেশ ব্যাংকের অধীনে নিবন্ধিত হতে হবে, তা এই আইনে বলা হয়েছে।<br>২. মূলধন পর্যাপ্ততার প্রয়োজনীয়তা (Capital Adequacy): একটি প্রতিষ্ঠান কতটুকু ঝুঁকি নিতে পারবে এবং তার বিপরীতে কতটুকু নিজস্ব মূলধন জমা রাখতে হবে, সেই নিয়ম এই আইন নির্ধারণ করে দেয় (যাতে প্রতিষ্ঠানটি দেউলিয়া না হয়)।<br>৩. রিপোর্টিং এবং সুশাসন (Governance): প্রতিষ্ঠানগুলো কীভাবে তাদের আর্থিক হিসাব জমা দেবে এবং তাদের পরিচালনা পর্ষদ (Board of Directors) কীভাবে স্বচ্ছতার সাথে কাজ করবে, তার মানদণ্ড এখানে দেওয়া আছে।<br>৪. আমানতকারী এবং বিনিয়োগকারীদের সুরক্ষা: সাধারণ মানুষ বা বিনিয়োগকারীরা যখন এসব প্রতিষ্ঠানে টাকা রাখেন, তাদের স্বার্থ যাতে ক্ষুণ্ণ না হয় এবং কোনো জালিয়াতি না ঘটে, তা নিশ্চিত করাই এই আইনের মূল লক্ষ্য।<br>উল্লেখ্য,<br>- ১৯৯৩ সালের আগে বাংলাদেশে এই ধরনের আর্থিক প্রতিষ্ঠানগুলোর জন্য কোনো পূর্ণাঙ্গ বা নির্দিষ্ট আইন ছিল না। ফলে তাদের তদারকি করা কঠিন ছিল। এই আইনের মাধ্যমেই প্রথমবারের মতো এনবিএফআই-গুলোকে একটি সুসংগঠিত আইনি কাঠামোর আওতায় আনা হয়।<br><br>উৎস: <br>i) Financial Institutions Act, 1993 – Bangladesh Legal Database<br>ii) Khan, M.Y., &amp; Jain, P.K., Financial Management: Text, Problems, and Cases, Section on NBFI Regulation</p>"
+    }
+  ]
+}

@@ -4,11 +4,14 @@ import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from '
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
-import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { duplicateQidsOf } from '../lib/questionIndex.js'
 import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
+import RichText from './shared/RichText'
+import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import useDebounce from '../hooks/useDebounce.js'
 
 const PAGE_SIZE = 20
 
@@ -22,6 +25,7 @@ function getTopicGroup(t, groupProp) {
   if (BANGLA_TOPICS.some(x => x.id === t.id))         return BANGLA_TOPICS
   if (ENGLISH_TOPICS.some(x => x.id === t.id))        return ENGLISH_TOPICS
   if (BANGLA_SAHITYA_TOPICS.some(x => x.id === t.id)) return BANGLA_SAHITYA_TOPICS
+  if (LIVEMCQ_TOPICS.some(x => x.id === t.id))        return LIVEMCQ_TOPICS
   return GK_TOPICS
 }
 
@@ -38,6 +42,8 @@ export default function StudyMode({
   const backTo = location.state?.backTo  // set when arriving from search — return there
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
+  const isLm = (topicId || '').startsWith('lm_')
+  const lmReady = useLiveMcqReady(isLm)
   const { value: mastered, add: onNail } = useMasteredContext()
   const { value: important, add: onMarkImportant, removeMany: onUnmarkImportant } = useImportantContext()
   const { theme, toggleTheme } = useThemeContext()
@@ -46,15 +52,17 @@ export default function StudyMode({
   const [sidebarOpen, setSidebarOpen]         = useState(false)
   const [query, setQuery]                     = useState('')
   const [page, setPage]                       = useState(1)
+  const dQuery = useDebounce(query, 250)
 
   const topics = topic ? getTopicGroup(topic, topicGroupProp) : []
 
+  // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place
   const validQ = useMemo(() => {
     if (!topic) return []
     return topic.questions
       .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
       .filter(({ q }) => q.options && q.correct_answer)
-  }, [topic])
+  }, [topic, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const nonNailed      = validQ.filter(({ qid }) => !mastered.has(qid))
   const nailedCt       = validQ.length - nonNailed.length
@@ -65,17 +73,17 @@ export default function StudyMode({
     : nonNailed
 
   const visible = useMemo(() => {
-    if (!query.trim()) return afterFilter
-    const q = normalize(query)
+    if (!dQuery.trim()) return afterFilter
+    const q = normalize(dQuery)
     return afterFilter.filter(({ q: question }) =>
       normalize(question.question).includes(q) ||
       Object.values(question.options ?? {}).some(v => normalize(v).includes(q))
     )
-  }, [query, afterFilter])
+  }, [dQuery, afterFilter])
 
   // Reset to page 1 when the filter/search/topic changes (adjust state during
   // render — avoids setState-in-effect cascading renders).
-  const filterKey = `${query}|${filterImportant}|${topic?.id}`
+  const filterKey = `${dQuery}|${filterImportant}|${topic?.id}`
   const [prevKey, setPrevKey] = useState(filterKey)
   if (prevKey !== filterKey) {
     setPrevKey(filterKey)
@@ -114,6 +122,7 @@ export default function StudyMode({
   const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
 
   if (!topic) return <Navigate to="/" replace />
+  if (isLm && !lmReady) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
   return (
     <div className="study-page anim-fade">
@@ -271,7 +280,7 @@ function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNa
         </div>
       </div>
 
-      <p className="study-question">{q.question}</p>
+      <RichText as="div" className="study-question" html={q.question} />
 
       <div className="study-options">
         {opts.map(key => {
@@ -286,7 +295,7 @@ function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNa
           return (
             <button key={key} className={cls} style={isCorrect && shown ? { '--c': color } : {}} onClick={() => pick(key)}>
               <span className="study-opt-key">{key.toUpperCase()}</span>
-              <span className="study-opt-text">{q.options[key]}</span>
+              <RichText className="study-opt-text" html={q.options[key]} />
               {shown && isCorrect && <CheckCircle size={13} style={{ color, marginLeft: 'auto', flexShrink: 0 }} />}
               {shown && isWrong   && <XCircle size={13} style={{ color: '#ef4444', marginLeft: 'auto', flexShrink: 0 }} />}
             </button>
@@ -300,7 +309,7 @@ function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNa
             <Lightbulb size={14} style={{ color, flexShrink: 0 }} />
             <span className="explanation-label" style={{ color }}>Explanation</span>
           </div>
-          <p className="explanation-text">{q.explanation}</p>
+          <RichText as="div" className="explanation-text" html={q.explanation} />
         </div>
       )}
     </div>

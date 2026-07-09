@@ -1,0 +1,1027 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "favorite_id": "149988046",
+      "question": "Find the missing number.<br><img alt=\"missing character finding\" src=\"https://www.examveda.com/images/missing-character-finding11.png\" width=\"380\" height=\"380\">",
+      "options": {
+        "a": "63",
+        "b": "51",
+        "c": "72",
+        "d": "47"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "51",
+      "explanation": "<p><strong>Question: </strong>Find the missing number.<br><img alt=\"missing character finding\" src=\"https://www.examveda.com/images/missing-character-finding11.png\" width=\"380\" height=\"380\"><br><strong>Solution: </strong><br><strong>First Row Element - Third Row Element = Second Row Element.</strong></p>\r\n<p>Now, <br>56 - 44 = 12<br><strong>65 - 14 = 51</strong><br>78 - 48 = 30.<br>Hence, in the missing number should be 51.</p>"
+    },
+    {
+      "id": 2,
+      "favorite_id": "149988014",
+      "question": "If 6<sup>th</sup> March, 2005 is Monday, what was the day of the week on 6<sup>th</sup> March, 2004?",
+      "options": {
+        "a": "Wednesday",
+        "b": "Saturday",
+        "c": "Tuesday",
+        "d": "Sunday"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Sunday",
+      "explanation": "<p><strong>Question: </strong>If 6<sup>th</sup> March, 2005 is Monday, what was the day of the week on 6<sup>th</sup> March, 2004? <br><br><strong>Solution: </strong><br>2004 সাল একটি Leap Year (কারণ 2004 সংখ্যা 4 দ্বারা বিভাজ্য)।</p>\r\n<p>তাই, 6 মার্চ 2004 থেকে 6 মার্চ 2005 = 365 দিন।</p>\r\n<p>আমরা জানি,<br>365 ÷ 7 = 52 সপ্তাহ + 1 দিন<br>অর্থাৎ, 1 বছর পরে একই তারিখে বার 1 দিন এগিয়ে যায়।<br><br>দেওয়া আছে,<br>6 মার্চ 2005 = Monday<br>তাহলে, ১ বছর আগে অর্থাৎ 6 মার্চ 2004 হবে 1 দিন পিছিয়ে।<br>Monday-এর 1 দিন আগে = Sunday<br><br>সুতরাং, 6 মার্চ 2004 হবে Sunday</p>"
+    },
+    {
+      "id": 3,
+      "favorite_id": "149987973",
+      "question": "An accurate clock shows 2:00 PM. Through how many degrees will the hour hand rotate when the clock shows 4:30 PM on the same day?",
+      "options": {
+        "a": "120°",
+        "b": "60°",
+        "c": "105°",
+        "d": "75°"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "75°",
+      "explanation": "<p><strong>Question: </strong>An accurate clock shows 2:00 PM. Through how many degrees will the hour hand rotate when the clock shows 4:30 PM on the same day?<br><br><strong>Solution:</strong><br>From 2:00 PM to 4:30 PM,<br>Total time = 2.5 hours or 2 hours and 30 minutes.</p>\r\n<p>We know,<br>Angle traced by hour hand in 12 hours = 360°</p>\r\n<p>∴ Angle traced by hour hand in 2.5 hours,<br>= (360 × 2.5)/12<br>= 75°</p>\r\n<p>So, correct answer is 75°</p>"
+    },
+    {
+      "id": 4,
+      "favorite_id": "148599694",
+      "question": "Find the odd one out from the given alternatives.",
+      "options": {
+        "a": "Whale",
+        "b": "Dolphin",
+        "c": "Shark",
+        "d": "Seal"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Shark",
+      "explanation": "<p><strong>Question:</strong> Find the odd one out from the given alternatives.</p>\r\n<p><strong>Solution:</strong><br>এখানে Whale, Dolphin এবং Seal — তিনটিই স্তন্যপায়ী (Mammal) প্রাণী।</p>\r\n<p>কিন্তু Shark হলো মাছ। এটি ফুলকার সাহায্যে শ্বাস নেয় এবং স্তন্যপায়ী নয়।<br>তাই Shark অন্যগুলোর থেকে আলাদা।</p>\r\n<p>∴ Correct Answer: গ) Shark</p>"
+    },
+    {
+      "id": 5,
+      "favorite_id": "148599683",
+      "question": "What is the angle between the hour and minute hands of a clock at 10 : 20?",
+      "options": {
+        "a": "170°",
+        "b": "160°",
+        "c": "150°",
+        "d": "165°"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "170°",
+      "explanation": "<p><strong>Question: </strong>What is the angle between the hour and minute hands of a clock at 10 : 20?</p>\r\n<p><strong>Solution:</strong><br>At 10 : 20, we have H = 10 and M = 20.</p>\r\n<p>We know,<br>Angle = |(11M - 60H)/2|</p>\r\n<p>সুতরাং,<br>Angle = |(11 × 20) - (60 × 10)|/2<br>= |220 - 600|/2<br>= |-380|/2<br>= 190°</p>\r\n<p>যেহেতু এই মানটি 180° এর চেয়ে বড়, এটি হলো প্রবৃদ্ধ কোণ (Reflex Angle)।<br>The angle between two hands is always the smaller one.</p>\r\n<p>∴ The smaller angle between hands = 360° - 190°<br>= 170°</p>\r\n<p>So, the angle between the hour and minute hands at 10 : 20 is <strong>170°</strong>.</p>"
+    },
+    {
+      "id": 6,
+      "favorite_id": "148599682",
+      "question": "It was Wednesday on January 1, 2020. What was the day of the week on January 1, 2021?",
+      "options": {
+        "a": "Thursday",
+        "b": "Friday",
+        "c": "Saturday",
+        "d": "Wednesday"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Friday",
+      "explanation": "<p><strong>Question: </strong>It was Wednesday on January 1, 2020. What was the day of the week on January 1, 2021?</p>\r\n<p><strong>Solution:</strong><br>2020 সাল একটি লিপ ইয়ার (Leap Year), কারণ 2020 ÷ 4 = 505; অর্থাৎ 2020 সংখ্যা 4 দ্বারা বিভাজ্য।</p>\r\n<p>লিপ ইয়ারে মোট দিন = 366 দিন।<br>আমরা জানি,<br>366 দিন = 52 সপ্তাহ + 2 দিন অতিরিক্ত</p>\r\n<p>অর্থাৎ, লিপ ইয়ারে পরের বছরের একই তারিখে দিন 2 দিন এগিয়ে যায়।</p>\r\n<p>দেওয়া আছে,<br>January 1, 2020 = Wednesday</p>\r\n<p>সুতরাং,<br>January 1, 2021 = Wednesday + 2 দিন<br>= Friday</p>\r\n<p>∴ সঠিক উত্তর: খ) Friday</p>"
+    },
+    {
+      "id": 7,
+      "favorite_id": "147983392",
+      "question": "Chef : Diner :: Author : ?",
+      "options": {
+        "a": "Book",
+        "b": "Library",
+        "c": "Publisher",
+        "d": "Reader"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Reader",
+      "explanation": "<p>Question: Chef : Diner :: Author : ?</p>\r\n<p>Solution:<br>প্রথমে আমাদের প্রথম জোড়ার (Chef : Diner) সম্পর্কটি বুঝতে হবে<br>একজন শেফ (Chef) খাবার প্রস্তুত করেন এবং সেই খাবার ভোজনকারী বা Diner উপভোগ করেন।<br>অর্থাৎ, এখানে সম্পর্কটি হলো সৃষ্টিকারী (Creator) এবং সেই সৃষ্টির উপভোক্তা (Consumer)</p>\r\n<p>এখন একই সম্পর্ক দ্বিতীয় জোড়ায় প্রয়োগ করি<br>একজন লেখক (Author) বই, গল্প বা অন্যান্য লেখা রচনা করেন এবং সেই লেখা পাঠক (Reader) পড়েন ও উপভোগ করেন।</p>\r\n<p>অতএব,<br>Chef : Diner :: Author : Reader</p>\r\n<p>অন্যান্য অপশন:<br>Book → এটি লেখকের সৃষ্টি, উপভোক্তা নয়।<br>Library → এটি বই সংরক্ষণের স্থান।<br>Publisher → এটি বই প্রকাশের সঙ্গে জড়িত ব্যক্তি বা প্রতিষ্ঠান, পাঠক নয়।<br>সুতরাং, শেফের তৈরি খাবার যেমন Diner উপভোগ করে, তেমনি লেখকের লেখা Reader উপভোগ করে।</p>\r\n<p>সঠিক উত্তর: ঘ) Reader</p>"
+    },
+    {
+      "id": 8,
+      "favorite_id": "147983217",
+      "question": "1, 10, 7, 20, 13, 30, 19, ... choose which pair of numbers comes next?",
+      "options": {
+        "a": "26, 4",
+        "b": "25, 31",
+        "c": "29, 36",
+        "d": "40, 25"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "40, 25",
+      "explanation": "<p><strong>Question: </strong>1, 10, 7, 20, 13, 30, 19, ... choose which pair of numbers comes next?<br><br><strong>Solution:</strong><br>Given series, <br>1, 10, 7, 20, 13, 30, 19, ......</p>\r\n<p>Odd positions,<br>1st, 3rd, 5th, 7th<br>= 1, 7, 13, 19</p>\r\n<p>This is an arithmetic sequence = + 6 each time<br>So next odd term = 19 + 6 = 25<br><br>Even positions,<br>2nd, 4th, 6th<br>= 10, 20, 30</p>\r\n<p>This is an arithmetic sequence = + 10 each time<br>So next even term = 30 + 10 = 40<br><br>Next two numbers are 40, 25.</p>"
+    },
+    {
+      "id": 9,
+      "favorite_id": "147982897",
+      "question": "Choose the analogy of Referee: Whistle ::",
+      "options": {
+        "a": "Lecturer: Podium",
+        "b": "Judge: Gavel",
+        "c": "Doctor: Stethoscope",
+        "d": "Detective: Uniform"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Judge: Gavel",
+      "explanation": "<p><strong>Correct answer: Judge: Gavel.</strong></p>\r\n<p>• প্রশ্নে উল্লিখিত শব্দজোড়ার অর্থ:<br>- Referee: Whistle<br>- Referee: যে ব্যক্তি প্রতিযোগিতা পরিচালনা করেন, বিতর্কিত প্রশ্নে সিদ্ধান্ত দেন; রেফারি; বিচারক।<br>- Whistle: যে যন্ত্রের সাহায্যে এরকম শিসধ্বনি সৃষ্টি করা হয়; হুইসল, বাঁশি।<br><br>• Given options: <br>ক) Lecturer: Podium<br>- Lecturer: কলেজ বা বিশ্ববিদ্যালয়ের লেকচারার (অধ্যাপকের চেয়ে নিম্নপদমর্যাদাসম্পন্ন শিক্ষক); প্রভাষক।<br>- Podium: (বাদকদলের পরিচালক, বক্তা প্রভৃতির জন্য) মঞ্চ।</p>\r\n<p>খ) Judge: Gavel<br>- Judge: বিচারক।<br>- Gavel: বিচারকের হাতুড়ি।<br><br>গ) Doctor: Stethoscope <br>- Doctor: চিকিৎসক।<br>- Stethoscope: হৃদবীক্ষণ যন্ত্র; স্টেথিস্‌কোপ; রোগীর হৃদস্পন্দন ও শ্বাসপ্রশ্বাসক্রিয়া পরীক্ষা করার জন্য ডাক্তার যে যন্ত্র ব্যবহার করেন।</p>\r\n<p>ঘ) Detective: Uniform<br>- Detective: গোয়েন্দা।<br>- Uniform: একই; সমান; একরূপ; সমরূপ।</p>\r\n<p> • একজন Referee যেমন তার Whistle বাজিয়ে খেলোয়াড়দের মনোযোগ আকর্ষণ এবং শৃঙ্খলা নির্দেশের বার্তা দেন। <br>- তেমনি একজন Judge তার হাতুড়ি বা Gavel শৃঙ্খলা নির্দেশের বা মনোযোগ আকর্ষণে ব্যবহার করেন।<br>- সুতরাং, অপশনে উল্লেখিত শব্দ বিশ্লেষণ করলে বোঝা যাচ্ছে, The complete  analogy is \"Referee: Whistle:: Judge: Gavel\"<br><br>Source: Accessible Dictionary by Bangla Academy.</p>"
+    },
+    {
+      "id": 10,
+      "favorite_id": "146923974",
+      "question": "If in a certain language PROSE is coded as PPOQE. How is LIGHT coded in that code ?",
+      "options": {
+        "a": "LIGFT",
+        "b": "LGGHT",
+        "c": "LGGFT",
+        "d": "LLGFE"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "LGGFT",
+      "explanation": "<p><strong>Question: </strong>If in a certain language PROSE is coded as PPOQE. How is LIGHT coded in that code ?<br><br><strong>Solution:</strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_bKPaf77.png\" width=\"467\" height=\"235\"> <br>Letters in odd positions (1st, 3rd, 5th) remain unchanged.<br>Letters in even positions (2nd, 4th) are decreased by 2 letters.<br>Now, <br>PROSE = PPOQE<br>P (1st) = P (unchanged)<br>R (2nd) = P (R - 2)<br>O (3rd) = O (unchanged)<br>S (4th) = Q (S - 2)<br>E (5th) = E (unchanged)<br><br>Now apply to LIGHT:<br>L = L (unchanged)<br>I = G ( - 2)<br>G = G (unchanged)<br>H = F (- 2)<br>T = T (unchanged)<br>So coded word = LGGFT<br><br><strong>So, correct answer: গ) LGGFT</strong></p>"
+    },
+    {
+      "id": 11,
+      "favorite_id": "146923765",
+      "question": "Find the next three numbers: 1, 3, 4, 7, 11, 18, ___, ___, ___?",
+      "options": {
+        "a": "25, 43, 68",
+        "b": "29, 48, 77",
+        "c": "30, 48, 78",
+        "d": "29, 47, 76"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "29, 47, 76",
+      "explanation": "<p><strong>Question: </strong>Find the next three numbers: 1, 3, 4, 7, 11, 18, ___, ___, ___?</p>\r\n<p><strong>Solution: </strong><br>This is a Fibonacci-type sequence where each number is the sum of the two numbers before it.<br>1 + 3 = 4<br>3 + 4 = 7<br>4 + 7 = 11<br>7 + 11 = 18<br><strong>11 + 18 = 29</strong><br><strong>18 + 29 = 47</strong><br><strong>29 + 47 = 76<br></strong>The next three numbers are 29, 47, and 76.<strong><br></strong></p>"
+    },
+    {
+      "id": 12,
+      "favorite_id": "146141694",
+      "question": "Select a suitable figure from the four alternatives that would complete the figure matrix.<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_zdF97oJ.png\" width=\"443\" height=\"411\">",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "3",
+      "explanation": "<p>Question: Select a suitable figure from the four alternatives that would complete the figure matrix.<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_wd4838L.png\"></p>\r\n<p><strong>Solution:</strong><br>- ম্যাট্রিক্সের প্রথম সারিতে দেখা যাচ্ছে যে, বাম দিকের পূর্ণ চিত্রটি থেকে নির্দিষ্ট অংশ বাদ দিয়ে ডান দিকের চিত্রটি তৈরি হয়েছে।<br><br>- দ্বিতীয় সারিতে ডান দিকে একটি পূর্ণ 'X' আকৃতি (সরলরেখা দ্বারা গঠিত) রয়েছে। অর্থাৎ, বাম দিকের প্রশ্নবোধক চিহ্নের স্থানে এমন একটি চিত্র বসবে যেখান থেকে নির্দিষ্ট অংশ সরিয়ে নিলে এই 'X' আকৃতিটি পাওয়া যাবে। চিত্র (3) পর্যবেক্ষণ করলে দেখা যায়, এটি একটি বর্গক্ষেত্রের ভেতর 'X' আকৃতি। এখান থেকে বর্গক্ষেত্রের বাহুগুলো সরিয়ে নিলে কেবল মাঝের 'X' অংশটি অবশিষ্ট থাকে।<br><br>∴ চিত্র ম্যাট্রিক্সটি পূর্ণ করতে হলে <strong>(3)</strong> নং চিত্রটি সবচেয়ে উপযুক্ত।<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_VNkDGKX.png\"></p>"
+    },
+    {
+      "id": 13,
+      "favorite_id": "146141690",
+      "question": "Which one will replace the question mark?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_l7wFnZU.png\" width=\"504\" height=\"221\">",
+      "options": {
+        "a": "15",
+        "b": "9",
+        "c": "12",
+        "d": "8"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "9",
+      "explanation": "<p>Question: Which one will replace the question mark?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_K9z9myY.png\" width=\"485\" height=\"213\"><br><br>Solution: <br>(17 + 37 + 16)/10 = 7</p>\r\n<p>(12 + 18 + 30)/10 = 6</p>\r\n<p>Similarly, (45 + 27 + 18)/10 = <strong>9</strong></p>"
+    },
+    {
+      "id": 14,
+      "favorite_id": "146141661",
+      "question": "A man starts climbing a 15m high wall at 10 am. In each minute he climbs up 2m but slips down 1m. At what time will he climb the wall?",
+      "options": {
+        "a": "10 : 13 am",
+        "b": "10 : 14 am",
+        "c": "10 : 15 am",
+        "d": "10 : 12 am"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "10 : 14 am",
+      "explanation": "<p>Question: A man starts climbing a 15m high wall at 10 am. In each minute he climbs up 2m but slips down 1m. At what time will he climb the wall?</p>\r\n<p>Solution:<br>প্রতি মিনিটে উঠে 2 মিটার, নামে 1 মিটার।<br>প্রকৃতপক্ষে প্রতি মিনিটে উঠে = (2 - 1) মিটার = 1 মিটার।<br><br>দেয়ালের মোট উচ্চতা 15 মিটার।<br>ব্যক্তিটি শেষ লাফে 2 মিটার উঠে দেয়ালের শীর্ষে পৌঁছে যাবে এবং তখন আর পিছলে পড়বে না।<br>তাই, শেষ লাফের দূরত্ব বাদ দিলে থাকে = (15 - 2) মিটার = 13 মিটার।<br><br>1 মিটার উঠতে সময় লাগে 1 মিনিট।<br>13 মিটার উঠতে সময় লাগে 13 মিনিট।<br>পরের 1 মিনিটে সে বাকি 2 মিটার উঠে যায় এবং শীর্ষে পৌঁছে যায়।<br><br>মোট সময় লাগে = 13 + 1 = 14 মিনিট।<br>যেহেতু সে সকাল 10 টায় শুরু করেছিল, তাই সে শীর্ষে পৌঁছাবে 10 : 14 am মিনিটে।</p>\r\n<p>সঠিক উত্তর: খ) 10 : 14 am</p>"
+    },
+    {
+      "id": 15,
+      "favorite_id": "146141626",
+      "question": "One evening before sunset, Rafia and Habiba were talking to each other face to face. If Habiba's shadow was exactly to the right of Habiba, which direction was Rafia facing?",
+      "options": {
+        "a": "North",
+        "b": "South",
+        "c": "West",
+        "d": "Data is inadequate"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "South",
+      "explanation": "<p>Question: One evening before sunset, Rafia and Habiba were talking to each other face to face. If Habiba's shadow was exactly to the right of Habiba, which direction was Rafia facing?</p>\r\n<p>Solution:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_S1wdv6D.png\" width=\"470\" height=\"225\"><br>- সূর্যাস্তের সময় সূর্য পশ্চিমে থাকে, তাই ছায়া সবসময় <b>পূর্ব</b> দিকে পড়ে।<br>- হাবিবার ছায়া তার ডানে ছিল, অর্থাৎ হাবিবার <b>ডান দিক = পূর্ব</b>।<br>- যদি ডান দিক পূর্ব হয়, তবে হাবিবা <b>উত্তর (North)</b> দিকে মুখ করে আছে।<br>- যেহেতু তারা মুখোমুখি কথা বলছে, তাই রাফিয়া অবশ্যই হাবিবার বিপরীত দিকে অর্থাৎ <b>দক্ষিণ (South)</b> দিকে মুখ করে আছে।</p>\r\n<p>সঠিক উত্তর: খ) South</p>"
+    },
+    {
+      "id": 16,
+      "favorite_id": "146141616",
+      "question": "Pointing to a photograph, a lady tells Foysal, “I am the only daughter of this lady and her son is your maternal uncle.” How is the speaker related to Foysal’s father?",
+      "options": {
+        "a": "Sister",
+        "b": "Daughter",
+        "c": "Wife",
+        "d": "Mother-in-law"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Wife",
+      "explanation": "<p>Question: Pointing to a photograph, a lady tells Foysal, “I am the only daughter of this lady and her son is your maternal uncle.” How is the speaker related to Foysal’s father?</p>\r\n<p>Solution:<br>- বক্তা মহিলাটি বললেন, \"I am the only daughter of this lady\" (আমি এই মহিলার একমাত্র কন্যা)। অর্থাৎ ছবিতে থাকা মহিলাটি হলো স্পিকারের (বক্তার) মা।<br>- আবার বলা হয়েছে, \"Her son is your maternal uncle\" (উনার ছেলে তোমার মামা)। অর্থাৎ ছবির মহিলার ছেলে হলো ফয়সালের মামা।<br>- এখন, ছবির মহিলার ছেলে যদি ফয়সালের মামা হয়, তবে ওই ছেলেটি হলো স্পিকারের ভাই (যেহেতু তারা একই মায়ের সন্তান)।<br>- যেহেতু স্পিকার ছবির মহিলার 'একমাত্র কন্যা', তাই ফয়সালের মামার বোন হিসেবে স্পিকার নিজেই ফয়সালের মা।<br><br>যেহেতু স্পিকার (বক্তা) ফয়সালের মা, তাই তিনি ফয়সালের বাবার স্ত্রী (Wife)।</p>\r\n<p>সঠিক উত্তর: গ) Wife</p>"
+    },
+    {
+      "id": 17,
+      "favorite_id": "146141610",
+      "question": "It was Friday on January 1, 2016. What was the day of the week on January 1, 2017?",
+      "options": {
+        "a": "Saturday",
+        "b": "Sunday",
+        "c": "Monday",
+        "d": "Friday"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Sunday",
+      "explanation": "<p>Question: It was Friday on January 1, 2016. What was the day of the week on January 1, 2017?</p>\r\n<p>Solution:<br>2016 সাল একটি লিপ ইয়ার (Leap Year), কারণ 2016 ÷ 4 = 504 (অতএব 4 দ্বারা বিভাজ্য)।<br><br>লিপ ইয়ারে মোট দিন = 366 দিন।<br>আমরা জানি, 366 দিন = 52 সপ্তাহ + 2 দিন অতিরিক্ত (Odd Days)।<br>অর্থাৎ লিপ ইয়ারে পরের বছরের একই তারিখে দিন 2 দিন এগিয়ে যাবে।<br><br>দেওয়া আছে, 1 Jan 2016 = Friday<br>সুতরাং, 1 Jan 2017 = Friday + 2 দিন = Sunday</p>\r\n<p>সঠিক উত্তর: খ) Sunday</p>"
+    },
+    {
+      "id": 18,
+      "favorite_id": "146131058",
+      "question": "Group the given figures into three classes using each figure only once.<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_kiXN0Kr.png\">",
+      "options": {
+        "a": "7,8,9 ;  2,4,3 ;  1,5,6",
+        "b": "1,3,2 ;  4,5,7 ;  6,8,9",
+        "c": "1,6,5 ;  3,4,7 ;  2,5,9",
+        "d": "1,6,9 ;  3,4,7 ;  2,5,8"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "1,6,9 ;  3,4,7 ;  2,5,8",
+      "explanation": "<p>Question: Group the given figures into three classes using each figure only once.<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_nbbFrkp.png\"><br><br>Solution:<br>চিত্রগুলোর বাহুর সংখ্যার ওপর ভিত্তি করে এদের 3টি দলে ভাগ করা যায়:<br>শ্রেণি ১ (ত্রিভুজ): 1, 6 এবং 9 নম্বর চিত্রগুলো 3টি বাহু দিয়ে গঠিত।<br>শ্রেণি ২ (চতুর্ভুজ): 3, 4 এবং 7 নম্বর চিত্রগুলো 4টি বাহু দিয়ে গঠিত।<br>শ্রেণি ৩ (পঞ্চভুজ): 2, 5 এবং 8 নম্বর চিত্রগুলো 5টি বাহু দিয়ে গঠিত।<br><br>সঠিক উত্তর: (ঘ) 1,6,9 ;  3,4,7 ;  2,5,8</p>"
+    },
+    {
+      "id": 19,
+      "favorite_id": "146131015",
+      "question": "Introducing a lady, Karim said, \"Her mother is the only daughter of my mother-in-law.\" What is Karim to the lady?",
+      "options": {
+        "a": "Son",
+        "b": "Husband",
+        "c": "Uncle",
+        "d": "Father"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Father",
+      "explanation": "<p>Question: Introducing a lady, Karim said, \"Her mother is the only daughter of my mother-in-law.\" What is Karim to the lady?</p>\r\n<p>Solution:<br>করিমের শাশুড়ির একমাত্র কন্যা হলো করিমের নিজের স্ত্রী। আর ঐ মহিলার মা যদি করিমের স্ত্রী হন, তবে করিম ঐ মহিলার বাবা।</p>\r\n<p>∴ করিম ঐ মহিলার বাবা (Father)।</p>"
+    },
+    {
+      "id": 20,
+      "favorite_id": "144996316",
+      "question": "FRIVOLOUS : SERIOUSNESS ::",
+      "options": {
+        "a": "Garrulous : Articulate",
+        "b": "Industrious : Laborious",
+        "c": "Selfish : Generosity",
+        "d": "Indolent : Laziness"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Selfish : Generosity",
+      "explanation": "<p><strong>• The correct answer is - FRIVOLOUS : SERIOUSNESS :: Selfish : Generosity.</strong></p>\r\n<p><strong>• প্রশ্নে উল্লিখিত শব্দগুলোর অর্থ:</strong><br>- Frivolous - তুচ্ছ; হালকা; চপল; অকিঞ্চিৎকর; (ব্যক্তি) লঘুচিত্ত; ছেবলা; হালকা।<br>- Seriousness - গুরুতর অবস্থা; ঐকান্তিকতা; গাম্ভীর্য; একনিষ্ঠতা; একাগ্রচিত্ততা।</p>\r\n<p><strong>• সঠিক উত্তরের শব্দগুলোর অর্থ:</strong><br>- Selfish - স্বার্থপর; স্বার্থিক; স্বার্থপরায়ণ; স্বার্থচিন্তক; স্বার্থসাধক; আত্মপরায়ণ; আত্মগ্রাহী।<br>- Generosity - উদারতা; মহত্ত্ব; সহৃদয়তা।</p>\r\n<p><strong>• Analogical Relation:</strong><br>- \"Frivolous\" (lacking seriousness) -এর মধ্যে যেমন seriousness থাকে না, তেমনি \"Selfish\" (lacking generosity) -এর মধ্যে generosity থাকে না।</p>\r\n<p><strong>• Other options,</strong><br>- Garrulous (বাচাল; বাক্যবাগীশ): Articulate (স্পষ্টভাবে (শব্দ) উচ্চারণ করা; স্পষ্টভাবে কথা বলা).<br>- Industrious (পরিশ্রমী; অধ্যবসায়ী; কর্মোদ্যোগী; কৃতশ্রম): Laborious ( পরিশ্রমী শ্রমশীল, শ্রমসাধ্য).<br>- Indolent (অলস; নিশ্চেষ্ট; নিরুদ্যম; নিরুদ্যোগী; পরিশ্রমবিমুখ): Laziness (আলস্য, কুঁড়েমি).</p>\r\n<p><strong>• সুতরাং, option বিশ্লেষণ করলে দেখা যায় যে, সঠিক analogy টি হচ্ছে- গ) Selfish : Generosity.</strong></p>\r\n<p>Source: Accessible Dictionary by Bangla Academy, Merriam-Webster Dictionary.</p>\r\n<p></p>"
+    },
+    {
+      "id": 21,
+      "favorite_id": "144828101",
+      "question": "If 'C' rotates clockwise at 30 rpm, in which direction and at what speed will 'A' rotate?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_FQ9ViGw.png\" width=\"478\" height=\"290\">",
+      "options": {
+        "a": "Clockwise, 30 rpm",
+        "b": "Anticlockwise, 15 rpm",
+        "c": "Clockwise, 15 rpm",
+        "d": "Anticlockwise, 30 rpm"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Clockwise, 15 rpm",
+      "explanation": "<p><strong>Question: </strong>If 'C' rotates clockwise at 30 rpm, in which direction and at what speed will 'A' rotate?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_9O1xtHc.png\" width=\"490\" height=\"297\"><br><strong>Solution: </strong><br>আমরা জানি, <br>- পাশাপাশি সংযুক্ত গিয়ারগুলো পরস্পর পরস্পরের বিপরীতে ঘুরে।<br>- সমান সংখ্যক দাঁত সংশ্লিষ্ট গিয়ার একই গতিতে ঘুরে।<br>- যে গিয়ারের দাঁত কম থাকে তার গতি বেশি এবং দাঁত বেশি হলে গতি কম থাকে। </p>\r\n<p>এখানে,<br>- 'C' ঘড়ির কাঁটার দিকে ঘুরে।<br>- 'B' গিয়ারটি 'C' গিয়ারের সাথে যুক্ত হওয়ায় 'B' ঘড়ির কাঁটার বিপরীত দিকে ঘুরে।<br>- আবার 'A' গিয়ার 'B' এর সাথে যুক্ত হওয়ায় এটি ঘড়ির কাঁটার দিকে ঘুরে।<br>- 'A' এর দাঁত সংখ্যা 'C' এর দাঁতের দ্বিগুণ হওয়ায়। 'A' এর গতি 'C' এর অর্ধেক হবে। <br>- সুতরাং,  'C' এর গতি 30 rpm হওয়ায়, 'A' এর গতি হবে 15 rpm।</p>\r\n<p>অর্থাৎ, 'A' ঘড়ির কাঁটার দিকে 15 rpm গতিতে ঘুরবে।</p>"
+    },
+    {
+      "id": 22,
+      "favorite_id": "144827996",
+      "question": "If 10th March of a certain year is a Friday, what day of the week will 20th April of that year be?",
+      "options": {
+        "a": "Wednesday",
+        "b": "Sunday",
+        "c": "Saturday",
+        "d": "Thursday"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Thursday",
+      "explanation": "<p><strong>Question:</strong> If 10th March of a certain year is a Friday, what day of the week will 20th April of that year be?</p>\r\n<p><strong>Solution:</strong><br>Given that,<br>10th March is a Friday in a given year.</p>\r\n<p>From 10th March to 31st March = 21 days<br>And up to 20th April = 20 days</p>\r\n<p>So, total days = 21 + 20 = 41 days<br>= 41 ÷ 7 = 5 weeks + 6 days ; (because 5 × 7 = 35, and 41 - 35 = 6 )</p>\r\n<p>Starting from Friday, after 6 days, <br>1 day Saturday, 2 days Sunday, 3 days Monday, 4 days Tuesday, 5 days Wednesday<br>and <strong>6 days Thursday</strong><br><br>Therefore, 20th April will be Thursday.</p>"
+    },
+    {
+      "id": 23,
+      "favorite_id": "144827915",
+      "question": "A person walks 2 km towards the North. Then he turns East and walks 5 km. After that, he turns North again and walks 4 km. Finally, he turns East again and walks 3 km. How far is he from the starting point?",
+      "options": {
+        "a": "12 km",
+        "b": "24 km",
+        "c": "14 km",
+        "d": "10 km"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "10 km",
+      "explanation": "<p><strong>Question: A person walks 2 km towards the North. Then he turns East and walks 5 km. After that, he turns North again and walks 4 km. Finally, he turns East again and walks 3 km. How far is he from the starting point?    </strong></p>\r\n<p><strong>Solution: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_H2cwb4F.png\" width=\"581\" height=\"218\"><br>Total North distance: 4 km + 2 km = 6 km<br>Total East distance: 5 km + 3 km = 8 km<br><br>To solve this, you can use the Pythagorean theorem. <br>∴ Direct distance (Hypotenuse) = √(6<sup>2</sup> + 8<sup>2</sup>) = √(36 + 64)<br>= √100 = 10 km</p>"
+    },
+    {
+      "id": 24,
+      "favorite_id": "144827781",
+      "question": "In a certain code language, 'VAJR' is coded as '102' and 'DOTG' is coded as '92'. What is the code for 'ZELW' in the given code language?",
+      "options": {
+        "a": "124",
+        "b": "132",
+        "c": "138",
+        "d": "121"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "132",
+      "explanation": "<p><strong>Question: </strong>In a certain code language, 'VAJR' is coded as '102' and 'DOTG' is coded as '92'. What is the code for 'ZELW' in the given code language?<br><br><strong>Solution: </strong><br><strong>Logic: Sum of positions × 2<br></strong><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_omYKmOQ.png\" width=\"425\" height=\"224\"><br>Checking the given codes:<br>For, VAJR<br>V(22) + A(1) + J(10) + R(18) = 51<br>⇒ 51 × 2 = 102 </p>\r\n<p>For, DOTG<br>D(4) + O(15) + T(20) + G(7) = 46<br>⇒ 46 × 2 = 92 </p>\r\n<p>Now, for ZELW<br>Z(26) + E(5) + L(12) + W(23) = 66<br>⇒ 66 × 2 = 132</p>\r\n<p>Hence, the correct answer is Option খ</p>"
+    },
+    {
+      "id": 25,
+      "favorite_id": "144348546",
+      "question": "Homeowners aged 40 to 50 are more likely to purchase ice cream and are more likely to purchase it in larger amounts than are members of any other demographic group. The popular belief that teenagers eat more ice cream than adults must, therefore, be false.<br><strong>The argument is flawed primarily because the author:</strong>",
+      "options": {
+        "a": "fails to distinguish between purchasing and consuming",
+        "b": "does not supply information about homeowners in age groups other than 40 to 5",
+        "c": "depends on popular belief rather than on documented research findings",
+        "d": "does not specify the precise amount of ice cream purchased by any demographic group"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "fails to distinguish between purchasing and consuming",
+      "explanation": "<p>Question: Homeowners aged 40 to 50 are more likely to purchase ice cream and are more likely to purchase it in larger amounts than are members of any other demographic group. The popular belief that teenagers eat more ice cream than adults must, therefore, be false.</p>\r\n<p><strong>The argument is flawed primarily because the author:</strong></p>\r\n<p>Solution:<br>• লেখকের যুক্তিটি মূলত ত্রুটিপূর্ণ কারণ তিনি কেনা (purchasing) এবং খাওয়া (consuming)-এর মধ্যে পার্থক্য করেননি।<br>- 40 থেকে 50 বছর বয়সী homeowners বেশি আইসক্রিম কেনেন — এটি সত্য হতে পারে।<br>- কিন্তু তারা কিনলেই নিজেরা সব খান এমন নয়। তারা হয়তো পরিবারের জন্য, সন্তানদের জন্য বা অতিথিদের জন্য কেনেন।<br>- Teenagers নিজেরা কিনুক বা না কিনুক — বেশি খেতেই পারে।</p>\r\n<p>অর্থাৎ \"বেশি কেনা\" থেকে \"বেশি খাওয়া\" প্রমাণ করা যায় না। লেখক এই দুটি ধারণার মধ্যে পার্থক্য করতে ব্যর্থ হয়েছেন।<br><strong>মূল সমস্যা:</strong> 40 - 50 বছরের বাবা-মা হয়তো তাদের সন্তানদের (টিনেজারদের) জন্য আইসক্রিম কিনে থাকেন। ফলে কেনার দায়িত্ব তাদের, কিন্তু খাওয়ার পরিমাণ টিনেজারদেরই বেশি হতে পারে।<br><br><strong>অন্যান্য অপশন:</strong><br>- খ) অন্য বয়সীদের তথ্য না দেওয়া এখানে মূল সমস্যা নয়।<br>- গ) যুক্তিটি popular belief-এর উপর নির্ভর করে না, বরং তথ্যের উপর ভিত্তি করে ভুল সিদ্ধান্ত নিয়েছে।<br>- ঘ) সঠিক পরিমাণ না বলা মূল সমস্যা নয়। এখানে, মূল সমস্যা হলো purchasing ও consuming-এর মধ্যে পার্থক্য না করা।</p>\r\n<p><strong>সঠিক উত্তর: A) fails to distinguish between purchasing and consuming</strong></p>"
+    },
+    {
+      "id": 26,
+      "favorite_id": "144348537",
+      "question": "The only true education comes through the stimulation of the child's powers by the demands of the social situations in which he finds himself. Through these demands, he is stimulated to act as a member of a unity, to emerge from his original narrowness of action and feeling, and to conceive himself from the standpoint of the welfare of the group to which he belongs.<br><strong><br>The passage best supports the statement that real education:</strong>",
+      "options": {
+        "a": "will take place if the children imbibe action and feeling.",
+        "b": "will take place if the children are physically strong.",
+        "c": "is not provided in our schools today.",
+        "d": "comes through the interaction with social situations."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "comes through the interaction with social situations.",
+      "explanation": "<p><strong>Question:</strong> The only true education comes through the stimulation of the child's powers by the demands of the social situations in which he finds himself. Through these demands, he is stimulated to act as a member of a unity, to emerge from his original narrowness of action and feeling, and to conceive himself from the standpoint of the welfare of the group to which he belongs.</p>\r\n<p><strong>The passage best supports the statement that real education:</strong><br><br><strong>Solution:</strong><br>Passage-এর মূল বক্তব্য হলো:<br>• প্রকৃত শিক্ষা আসে সামাজিক পরিস্থিতির চাহিদার মাধ্যমে শিশুর শক্তিকে উদ্দীপিত করে।<br>• এই চাহিদাগুলো শিশুকে দলের সদস্য হিসেবে কাজ করতে এবং নিজের সংকীর্ণতা থেকে বেরিয়ে আসতে অনুপ্রাণিত করে।<br>• শিশু নিজেকে দলের কল্যাণের দৃষ্টিকোণ থেকে দেখতে শেখে।</p>\r\n<p>অর্থাৎ, শিক্ষা আসে সামাজিক পরিস্থিতির সাথে মিথস্ক্রিয়ার (interaction) মাধ্যমে। </p>\r\n<p>সঠিক উত্তর: D. comes through the interaction with social situations.<br><br><strong>অন্যান্য অপশন:</strong><br>- ক) শুধু action ও feeling নেওয়া নয়, সামাজিক পরিস্থিতির সাথে যোগাযোগই মূল কথা।<br>- খ) শারীরিক শক্তির কথা অনুচ্ছেদে কোথাও বলা হয়নি।<br>- গ) অনুচ্ছেদে বর্তমান স্কুল ব্যবস্থার সমালোচনা করা হয়নি।</p>"
+    },
+    {
+      "id": 27,
+      "favorite_id": "144348536",
+      "question": "<strong>Directions: </strong>The question consists of a statement followed by two arguments I and II. You have to decide which of the arguments is a STRONG argument and which is a WEAK Argument.<br><strong><br>Statement: </strong>Should there be only one rate of interest for term deposits of varying durations in banks?<br><strong><br>Arguments :</strong><br>I. No, People will refrain from keeping money for a longer duration, resulting in a reduction of the liquidity level of banks.<br>II. Yes. This will be much simpler for the common people, and they may be encouraged to keep more money in banks.",
+      "options": {
+        "a": "Only argument I is strong",
+        "b": "Only Argument II is strong",
+        "c": "Either I or II is strong",
+        "d": "Both I and II are strong"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Only argument I is strong",
+      "explanation": "<p><strong>Question: Directions: </strong>The question consists of a statement followed by two arguments I and II. You have to decide which of the arguments is a STRONG argument and which is a WEAK Argument.<br><strong>Statement: </strong>Should there be only one rate of interest for term deposits of varying durations in banks?<br><strong>Arguments :</strong><br>I. No, People will refrain from keeping money for a longer duration, resulting in a reduction of the liquidity level of banks.<br>II. Yes. This will be much simpler for the common people, and they may be encouraged to keep more money in banks.<br><br>Solution:<br>সঠিক উত্তর: ক) Only argument I is strong</p>\r\n<p>• Argument I — STRONG :<br>এটি একটি শক্তিশালী যুক্তি। সাধারণত দীর্ঘমেয়াদী আমানতের (long-term deposits) ক্ষেত্রে বেশি সুদ দেওয়া হয় যাতে মানুষ দীর্ঘ সময়ের জন্য ব্যাংকে টাকা রাখতে উৎসাহিত হয়। যদি সব মেয়াদের জন্য একই সুদের হার থাকে, তবে মানুষ দীর্ঘ মেয়াদে টাকা রাখতে চাইবে না, যার ফলে ব্যাংকের দীর্ঘমেয়াদী তারল্য (liquidity) সংকট দেখা দিতে পারে।</p>\r\n<p>• Argument II — WEAK:<br>\"সহজ হবে\" এই যুক্তিটি অতি সাধারণ ও দুর্বল। একই সুদের হার মানুষকে বেশি টাকা রাখতে উৎসাহিত করবে — এমন কোনো নিশ্চিত কারণ নেই। বরং বৈচিত্র্যময় সুদের হারই মানুষকে বেশি বিনিয়োগে আকৃষ্ট করে। তাই এই যুক্তি দুর্বল (Weak)।<br><br>∴ সঠিক উত্তর: A. Only argument I is strong.</p>"
+    },
+    {
+      "id": 28,
+      "favorite_id": "144348528",
+      "question": "What will come in the blank space?<br>ELFA, GLHA, ILJA, _____, MLNA",
+      "options": {
+        "a": "OLPC",
+        "b": "KLNA",
+        "c": "LLMB",
+        "d": "KLLA"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "KLLA",
+      "explanation": "<p>Question: What will come in the blank space?<br> ELFA, GLHA, ILJA, _____, MLNA</p>\r\n<p>Solution:<br>এখানে প্রতিটি পদের বর্ণগুলোর প্যাটার্ন লক্ষ্য করি:<br><br>প্রথম বর্ণ (First letter): E (+2) → G (+2) → I (+2) → <b>K</b> (+2) → M<br>দ্বিতীয় বর্ণ (Second letter): L (সবগুলোতে অপরিবর্তিত) → <b>L</b><br>তৃতীয় বর্ণ (Third letter): F (+2) → H (+2) → J (+2) → <b>L</b> (+2) → N<br>চতুর্থ বর্ণ (Fourth letter): A (সবগুলোতে অপরিবর্তিত) → <b>A</b><br><br>∴ প্যাটার্ন অনুযায়ী পরবর্তী পদটি হবে: KLLA</p>\r\n<p>সঠিক উত্তর: D. KLLA</p>"
+    },
+    {
+      "id": 29,
+      "favorite_id": "144283939",
+      "question": "Which number replaces the question mark?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_AwWPSHK.png\" width=\"362\" height=\"290\">",
+      "options": {
+        "a": "24",
+        "b": "6",
+        "c": "1",
+        "d": "34"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "6",
+      "explanation": "<p>Question: Which number replaces the question mark?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_x6h58Si.png\"><br><br>Solution:<br>এই পিরামিডের ক্ষেত্রে,<br>উপরে থাকা প্রতিটি সংখ্যা তার সরাসরি নিচের দুটি সংখ্যার পার্থক্যের সমান।<br>অর্থাৎ, প্রতিটি সংখ্যা = নিচের বাম সংখ্যা - নিচের ডান সংখ্যা<br>এখানে,<br>23 = 38 - 15<br>38 = 65 - 27<br>15 = 27 - 12<br>65 = 110 - 45<br>27 = 45 - 18</p>\r\n<p>যেহেতু, 12 = 18 - ?<br>∴ ? = 18 - 12 = 6</p>\r\n<p>সুতরাং, প্রশ্নবোধক চিহ্নের স্থানে 6 বসবে।</p>"
+    },
+    {
+      "id": 30,
+      "favorite_id": "143622567",
+      "question": "A is the father of C, and D is the son of B. E is the brother of A. If C is the sister of D, then how is B related to E?",
+      "options": {
+        "a": "Daughter",
+        "b": "Brother-in-law",
+        "c": "Husband",
+        "d": "Brother’s wife"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Brother’s wife",
+      "explanation": "<p><strong>Question:</strong> A is the father of C, and D is the son of B. E is the brother of A. If C is the sister of D, then how is B related to E?<br> <br><strong>Solution:</strong><br>দেওয়া তথ্যমতে, <br>A, C এর বাবা → A = C এর পিতা।<br>D, B এর ছেলে → B = D এর মা।<br>E, A এর ভাই → E এবং A ভাই।<br>C, D এর বোন → C এবং D একই পিতা-মাতার সন্তান।</p>\r\n<p>এখন, <br>A, C ও D এর বাবা এবং B, C ও D এর মা।<br>E, A এর ভাই, তাই B হলো A এবং E এর স্ত্রী।<br>E এর দৃষ্টিকোণ থেকে, B হলো তার ভাইয়ের (A এর) বৌ।</p>\r\n<p>সুতরাং, সঠিক উত্তর ঘ) ভাইয়ের বৌ</p>"
+    },
+    {
+      "id": 31,
+      "favorite_id": "143622538",
+      "question": "Suman walked 8 miles north, then turned right and walked 5 miles east. After that, he walked 3 miles south. Then he turned right again and walked 5 miles west. How far is Suman from his starting point?",
+      "options": {
+        "a": "8 miles",
+        "b": "6 miles",
+        "c": "4 miles",
+        "d": "5 miles"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "5 miles",
+      "explanation": "<p>Question: Suman walked 8 miles north, then turned right and walked 5 miles east. After that, he walked 3 miles south. Then he turned right again and walked 5 miles west. How far is Suman from his starting point?<br> <br>Solution:<br> <img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_GigGPGx.png\" width=\"352\" height=\"342\"></p>\r\n<p>চিত্র অনুযায়ী, সুমন প্রথমে 8 মাইল উত্তরে গেছে।<br>এরপর 5 মাইল পূর্বে গেছে।<br>তারপর 3 মাইল দক্ষিণে নেমেছে।<br>সবশেষে 5 মাইল পশ্চিমে গেছে।</p>\r\n<p>এখানে,<br>পূর্বে 5 মাইল এবং পশ্চিমে 5 মাইল যাওয়ায় এই দুই দিকের দূরত্ব পরস্পর কাটাকাটি হয়ে গেছে।</p>\r\n<p>অন্যদিকে, উত্তরে গেছে 8 মাইল এবং দক্ষিণে এসেছে 3 মাইল।<br>সুতরাং নিট অগ্রগতি = 8 - 3 = 5 মাইল উত্তর দিকে।</p>\r\n<p>∴ সুমন শুরুর স্থান থেকে 5 মাইল দূরে অবস্থান করছে।</p>\r\n<p></p>"
+    },
+    {
+      "id": 32,
+      "favorite_id": "143622491",
+      "question": "Which of the following happens when a smaller gear wheel is connected to a larger gear wheel?",
+      "options": {
+        "a": "It will move slowly",
+        "b": "It will move at the same speed",
+        "c": "It will move faster",
+        "d": "None of these"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "It will move faster",
+      "explanation": "<p>Question: Which of the following happens when a smaller gear wheel is connected to a larger gear wheel?</p>\r\n<p>Solution:<br> <img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_KokP5kx_96wH7jb.png\" width=\"317\" height=\"235\" alt=\"\"><br>কোন যান্ত্রিক গিয়ারের চাকার বৃত্তাকার ব্যাস যতো বড় হবে, চাকাটি তত ধীরে ঘুরবে কারণ একটি সম্পূর্ণ ঘূর্ণণের জন্য বেশি দূরত্ব অতিক্রম করতে হয়।<br>অর্থাৎ, কোন যান্ত্রিক গিয়ারে সংযুক্ত অবস্থায়, ছোট চাকা বড় চাকার থেকে দ্রুতগতিতে চলবে।</p>\r\n<p></p>"
+    },
+    {
+      "id": 33,
+      "favorite_id": "143622446",
+      "question": "What is the angle between the hour and minute hands of a clock when it is 4 : 40?",
+      "options": {
+        "a": "100°",
+        "b": "105°",
+        "c": "110°",
+        "d": "120°"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "100°",
+      "explanation": "<p>Question: What is the angle between the hour and minute hands of a clock when it is 4 : 40?</p>\r\n<p>Solution:<br>We know, the angle between the hour and minute hands is,<br>Angle = |(11M - 60H) / 2|<br>Here, H = 4 and M = 40</p>\r\n<p>∴ Angle = |(11 × 40) - (60 × 4)|/2<br>= |440 - 240|/2<br>= |200|/2<br>= 100°<br><br>∴ The angle between the hour and minute hands at 4 : 40 is 100°.</p>"
+    },
+    {
+      "id": 34,
+      "favorite_id": "143622277",
+      "question": "1, 10, 7, 20, 13, 30, 19, ... choose which pair of numbers comes next?",
+      "options": {
+        "a": "40, 25",
+        "b": "30, 25",
+        "c": "25, 31",
+        "d": "29, 36"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "40, 25",
+      "explanation": "<p><strong>Question: </strong>1, 10, 7, 20, 13, 30, 19, ... choose which pair of numbers comes next?<br><br><strong>Solution:</strong><br>Given series, <br>1, 10, 7, 20, 13, 30, 19, ......</p>\r\n<p>Odd positions,<br>1st, 3rd, 5th, 7th<br>= 1, 7, 13, 19</p>\r\n<p>This is an arithmetic sequence = + 6 each time<br>So next odd term = 19 + 6 = 25<br><br>Even positions,<br>2nd, 4th, 6th<br>= 10, 20, 30</p>\r\n<p>This is an arithmetic sequence = + 10 each time<br>So next even term = 30 + 10 = 40<br><br>Next two numbers are 40, 25.</p>"
+    },
+    {
+      "id": 35,
+      "favorite_id": "143621710",
+      "question": "Complete the analogy of \"Ascetic: Austere::",
+      "options": {
+        "a": "Obdurate: Foolish",
+        "b": "Prosaic: Mundane",
+        "c": "Clamorous: Captive",
+        "d": "Loquacious: Taciturn"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Prosaic: Mundane",
+      "explanation": "<p><strong>Correct answer: Prosaic: Mundane.</strong><br><br>• প্রশ্নে উল্লিখিত শব্দগুলোর অর্থ:<br>• Ascetic: Austere<br>- Ascetic: আত্মনিরোধী, কঠোর।<br>- Austere: নির্মম নীতিপরায়ণ, কঠোর।<br>- এ শব্দজোড়া সমার্থক।<br><br>• Given options:<br>ক) Obdurate: Foolish<br>- Obdurate: একগুঁয়ে।<br>- Foolish: বোকামিপূর্ণ। </p>\r\n<p>খ) Prosaic: Mundane<br>- Prosaic: গদ্যময়; গতানুগতিক; বিরস।<br>- Mundane: নীরস; নিরানন্দ; মামুলি; গতানুগতিক। <br><br>গ) Clamorous: Captive<br>- Clamorous: শোরগোলপূর্ণ।<br>- Captive - বন্দি। </p>\r\n<p>ঘ) Loquacious: Taciturn<br>- Loquacious: বাচাল।<br>- Taciturn: মিতবাক।  </p>\r\n<p>• এখানে  \"Ascetic: Austere\" শব্দজোড়া যেমন পরস্পর সমার্থক অর্থ প্রকাশ করছে তেমনি অপশনসমূহ বিবেচনা করে দেখা যায়,   Prosaic এবং Mundane শব্দজোড়াও পরস্পর সমার্থক অর্থ প্রকাশ করছে।</p>\r\n<p>Source: <br>1. Cambridge Dictionary. <br>2. Accessible Dictionary by Bangla Academy. </p>"
+    },
+    {
+      "id": 36,
+      "favorite_id": "143621704",
+      "question": "Complete the analogy \"Malleable: Plasticity::",
+      "options": {
+        "a": "Dormant: Inactivity",
+        "b": "Prone: Uprightness",
+        "c": "Infuriating: Tedium",
+        "d": "Slack: Excess"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Dormant: Inactivity",
+      "explanation": "<p><strong>Correct answer: Dormant: Inactivity.</strong><br><br>• প্রশ্নে উল্লিখিত শব্দগুলোর অর্থ:<br>• Malleable: Plasticity<br>- Malleable: নমনীয়/পিটিয়ে অন্য আকৃতি আনা যায় এমন/ নমনীয়তা।<br>- Plasticity- স্থিতিস্থাপকতা।<br>- Malleable (নমনীয়তা) হলো Plasticity হলো (স্থিতিস্থাপকতা) এর গুণাবলী।</p>\r\n<p>Given options:<br>ক) Dormant :: Inactivity<br>- Dormant: সুপ্ত।<br>- Inactivity: আলস্য।<br><br>খ) Prone: Uprightness<br>- Prone: প্রবণতা।<br>- Uprightness: ঋজুতা।</p>\r\n<p>গ) Infuriating: Tedium<br>- Infuriating: ক্ষিপ্ত করা।<br>- Tedium: এক ঘেয়েমি।</p>\r\n<p>ঘ) Slack: Excess<br>- Slack: অদৃঢ়/ শিথিল।<br>- Excess: আতিশয্য/অতিরিক্ততা।</p>\r\n<p>- Option বিশ্লেষণ করে দেখা যায় Malleable (নমনীয়তা) হলো Plasticity হলো (স্থিতিস্থাপকতা) এর গুণাবলী। আর যে Dormant (সুপ্ত) হলো Inactivity (আলস্য) এর গুণাবলী।</p>\r\n<p>Source:<br>1. Accessible Dictionary by Bangla Academy.<br>2. Merriam-Webster Dictionary.</p>"
+    },
+    {
+      "id": 37,
+      "favorite_id": "140015384",
+      "question": "What will come at the place of question mark?<br>4, 13, 40, 121, ?",
+      "options": {
+        "a": "26",
+        "b": "364",
+        "c": "384",
+        "d": "42"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "364",
+      "explanation": "<p>Question: What will come at the place of question mark?<br>4, 13, 40, 121, ?<br><br>Solution:<br>Each term is obtained by:<br>Next term = (Previous term × 3) + 1<br><br>1st term: 4<br>2nd term: 13 = 4 × 3 + 1<br>3rd term: 40 = 13 × 3 + 1<br>4th term: 121 = 40 × 3 + 1<br>5th term: 364 = 121 × 3 + 1</p>"
+    },
+    {
+      "id": 38,
+      "favorite_id": "138302460",
+      "question": "8, 6, 9, 23, ...  what number should come next?",
+      "options": {
+        "a": "42",
+        "b": "128",
+        "c": "87",
+        "d": "429"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "87",
+      "explanation": "<p>Question: 8, 6, 9, 23, ...  what number should come next?<br><br>Solution: <br>Here,<br>(8 × 1) - 2 = 6<br>(6 × 2) - 3 = 9<br>(9 × 3) - 4 = 23<br>(23 × 4) - 5 = 87</p>"
+    },
+    {
+      "id": 39,
+      "favorite_id": "137611297",
+      "question": "A clock seen through a mirror shows quarter past five. What is the correct time shown by the clock?",
+      "options": {
+        "a": "11 : 45",
+        "b": "6 : 45",
+        "c": "11 : 15",
+        "d": "6 : 15"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "6 : 45",
+      "explanation": "<p>Question: A clock seen through a mirror shows quarter past five. What is the correct time shown by the clock?</p>\r\n<p>Solution: <br>The time quarter past 5 is 5 : 15</p>\r\n<p>প্রকৃতপক্ষে সময় <br>= 11 : 60 - আয়নায় দেখা সময় <br>= 11 : 60 - 5 : 15<br>= 6 : 45</p>"
+    },
+    {
+      "id": 40,
+      "favorite_id": "136766794",
+      "question": "A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:",
+      "options": {
+        "a": "140°",
+        "b": "155°",
+        "c": "165°",
+        "d": "180°"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "155°",
+      "explanation": "<p><strong>Question:</strong> A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:<br><br><strong>Solution:</strong> <br>Total time from 12:00 to 5:10 is 5 hours 10 minutes<br>5 hours = 60 × 5 = 300 min<br>∴ 5 hours 10 min = 300 min + 10 min <br>= 310 min<br>= 310 min/60 min <br>= 31/6 hours<br><br>Now, <br>Angle traced by the hour hand in 12 hours = 360°</p>\r\n<p>∴ Angle traced by the hour hand in 5 hours 10 min. i.e. (31/6) hours = [(360/12) × (31/6)]°<br>= 155°</p>"
+    },
+    {
+      "id": 41,
+      "favorite_id": "134996525",
+      "question": "What is the angle between the hour and minute hand of a clock when it is 8 : 20 am?",
+      "options": {
+        "a": "105°",
+        "b": "110°",
+        "c": "120°",
+        "d": "130°"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "130°",
+      "explanation": "<p>Question: What is the angle between the hour and minute hand of a clock when it is 8 : 20 am?</p>\r\n<p>Solution:<br>8টা 20 মিনিট = 8 + (20/60) ঘণ্টা<br>= 8 + (1/3) = 25/3 ঘণ্টা<br><br>আমরা জানি,<br>ঘণ্টার কাঁটা 12 ঘণ্টায় 360° ঘোরে।<br>∴ 1 ঘণ্টায় ঘোরে = 360°/12 = 30°<br>∴ 25/3 ঘণ্টায় ঘোরে = (30° × 25)/3 = 250°<br><br>আবার,<br>মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে।<br>∴ 1 মিনিটে ঘোরে = 360°/60 = 6°<br>∴ 20 মিনিটে ঘোরে = 20 × 6° = 120°<br><br>∴ ঘড়ির কাঁটা দুটির মধ্যবর্তী কোণ = |250° - 120°| = 130°</p>"
+    },
+    {
+      "id": 42,
+      "favorite_id": "132767284",
+      "question": "What is the reflex angle between the hands of a clock at 9 : 35?",
+      "options": {
+        "a": "277.5°",
+        "b": "280°",
+        "c": "282.5°",
+        "d": "285°",
+        "e": "290°"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "282.5°",
+      "explanation": "<p><strong>Question: </strong>What is the reflex angle between the hands of a clock at 9 : 35?</p>\r\n<p><strong>Solution:</strong><br>The angle between the hands of the clock is |11M - 60H|°/2<br>= |(11 × 35) - (60 × 9)|°/2<br>= |385 - 540|°/2<br>= |- 155|°/2<br>= 155°/2<br>= 77.5°</p>\r\n<p>∴ Reflex angle = 360° - 77.5°<br>= 282.5°</p>\r\n<p></p>"
+    },
+    {
+      "id": 43,
+      "favorite_id": "132682328",
+      "question": "An accurate clock shows 3:20 PM. How many degrees will the hour hand rotate from 3:20 PM to 11:50 PM on the same day?",
+      "options": {
+        "a": "240°",
+        "b": "260°",
+        "c": "255°",
+        "d": "270°"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "255°",
+      "explanation": "<p>Question: An accurate clock shows 3:20 PM. How many degrees will the hour hand rotate from 3:20 PM to 11:50 PM on the same day?<br><br>Solution: <br>Given that, <br>From 3 : 20 PM to 11 : 20 PM = 8 hours<br>And from 11 : 20 PM to 11 : 50 PM = 30 minutes<br>∴ Total time = 8 hours 30 minutes<br><br>Now,<br>30 minutes = 30/60 = 0.5 hours<br>∴ Total time = 8 + 0.5 = 8.5 hours<br><br>We know, <br>The hour hand moves 360° in 12 hours.<br>∴ Speed of hour hand = 360°/12 = 30° per hour<br><br>∴ Degrees rotated by hour hand = 8.5 × 30° = 255°<br><br>So the hour hand will rotate 255°.</p>"
+    },
+    {
+      "id": 44,
+      "favorite_id": "131006313",
+      "question": "ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটা একদিনে কতবার মিলিত হয়?",
+      "options": {
+        "a": "১২",
+        "b": "১৮",
+        "c": "২২",
+        "d": "২৪"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "২২",
+      "explanation": "<p>প্রশ্ন: ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটা একদিনে কতবার মিলিত হয়?</p>\r\n<p>সমাধান:<br>ঘড়ির ঘণ্টার কাঁটা ও মিনিটের কাঁটা ১২ ঘণ্টায় ১১ বার মিলিত হয়। [ কারণ ১১ টা থেকে ১ টা এই দুই ঘণ্টায় ১ বার মিলিত হয়]<br>∴ ২৪ ঘণ্টায় ঘণ্টার কাঁটা ও মিনিটের কাঁটা ১১ × ২ = ২২ বার মিলিত হবে। <br><br>এছাড়া <br>⋅ প্রতি ঘণ্টায় দুইবার ঘড়ির মিনিটের কাঁটা এবং ঘণ্টার কাঁটা পরস্পর লম্বভাবে অবস্থান করে।<br>⋅ প্রতি এক ঘণ্টায় ১ বার ঘড়ির মিনিটের কাঁটা ও ঘণ্টার কাঁটা পরস্পর ১৮০° কোণে অবস্থান করে।</p>"
+    },
+    {
+      "id": 45,
+      "favorite_id": "130492506",
+      "question": "নিচের চিত্রে মোট কয়টি ত্রিভুজ আছে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_xePh9Un.png\" width=\"404\" height=\"269\">",
+      "options": {
+        "a": "1",
+        "b": "13",
+        "c": "15",
+        "d": "17"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "15",
+      "explanation": "<p>প্রশ্ন: নিচের চিত্রে মোট কয়টি ত্রিভুজ আছে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_xePh9Un.png\" width=\"327\" height=\"218\"><br><br>সমাধান:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_g11rYJF.png\" width=\"360\" height=\"292\"></p>\r\n<p>একটি ফাঁকা ঘর নিয়ে গঠিত ত্রিভুজগুলো হলো: AFB, FEB, EBC, DEC, DFE এবং AFD — অর্থাৎ মোট 6টি।</p>\r\n<p>দুটি ফাঁকা ঘর নিয়ে গঠিত ত্রিভুজগুলো হলো: AEB, FBC, DFC, ADE, DBE এবং ABD — অর্থাৎ মোট 6টি।</p>\r\n<p>তিনটি ফাঁকা ঘর নিয়ে গঠিত ত্রিভুজগুলো হলো: ADC এবং ABC — অর্থাৎ মোট 2টি।</p>\r\n<p>চারটি ফাঁকা ঘর নিয়ে গঠিত মাত্র একটি ত্রিভুজ রয়েছে, সেটি হলো DBC</p>\r\n<p>অতএব, চিত্রটিতে মোট ত্রিভুজের সংখ্যা = 6 + 6 + 2 + 1 = 15টি।</p>"
+    },
+    {
+      "id": 46,
+      "favorite_id": "128708132",
+      "question": "একজন ব্যক্তি উত্তর দিকে 2 কিমি হাঁটেন। তারপর তিনি পূর্ব দিকে মোড় নেন এবং 10 কিমি হাঁটেন। এরপর তিনি উত্তর দিকে মোড় নেন এবং 3 কিমি হাঁটেন। আবার তিনি পূর্ব দিকে মোড় নেন এবং 2 কিমি হাঁটেন। তিনি শুরুর স্থান থেকে কত দূরে আছেন?",
+      "options": {
+        "a": "8 কিমি",
+        "b": "13 কিমি",
+        "c": "15 কিমি",
+        "d": "17 কিমি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "13 কিমি",
+      "explanation": "<p>প্রশ্ন: একজন ব্যক্তি উত্তর দিকে 2 কিমি হাঁটেন। তারপর তিনি পূর্ব দিকে মোড় নেন এবং 10 কিমি হাঁটেন। এরপর তিনি উত্তর দিকে মোড় নেন এবং 3 কিমি হাঁটেন। আবার তিনি পূর্ব দিকে মোড় নেন এবং 2 কিমি হাঁটেন। তিনি শুরুর স্থান থেকে কত দূরে আছেন?<br><br>সমাধান:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_17JAXLm.png\" width=\"600\" height=\"293\"><br>উত্তর দিকে মোট দূরত্ব (উল্লম্ব সরণ) = 2 কিমি + 3 কিমি = 5 কিমি<br>পূর্ব দিকে মোট দূরত্ব (অনুভূমিক সরণ) = 10 কিমি + 2 কিমি = 12 কিমি</p>\r\n<p>শুরুর বিন্দু থেকে সরাসরি দূরত্ব বের করার জন্য পিথাগোরাসের উপপাদ্য অনুসারে,<br>দূরত্ব, AE = √(মোট উত্তর দিকের দূরত্ব<sup>2 </sup>+ মোট পূর্ব দিকের দূরত্ব<sup>2</sup>)<br>⇒ দূরত্ব, AE = √(5<sup>2</sup> + 12<sup>2</sup>)<br>⇒ দূরত্ব, AE = √(25 + 144)<br>⇒ দূরত্ব, AE = √169<br>⇒ দূরত্ব, AE = 13<br><br>অতএব, তিনি শুরুর স্থান থেকে 13 কিমি দূরে আছেন।</p>"
+    },
+    {
+      "id": 47,
+      "favorite_id": "125913192",
+      "question": "প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_GIxPaRw.png\" width=\"386\" height=\"260\">",
+      "options": {
+        "a": "12টি",
+        "b": "13টি",
+        "c": "14টি",
+        "d": "কোনটিই নয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "13টি",
+      "explanation": "<p><strong>প্রশ্ন:</strong> প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_GIxPaRw.png\" width=\"386\" height=\"260\"><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_Rxxd2Wj.png\" width=\"388\" height=\"255\"><br>একটি ফাঁকা ঘর নিয়ে ত্রিভুজ আছে - 1, 2, 3, 5, 6 = 5টি<br>দুইটি ফাঁকা ঘর নিয়ে ত্রিভুজ আছে - 12, 23, 34, 14, 56 = 5টি<br>তিনটি ফাঁকা ঘর নিয়ে ত্রিভুজ আছে - 236 = 1টি<br>চারটি ফাঁকা ঘর নিয়ে ত্রিভুজ আছে = 1234 = 1টি <br>সবগুলো ফাঁকা ঘর নিয়ে ত্রিভুজ আছে - 123456 = 1টি<br><br>মোট ত্রিভুজ আছে = 5 + 5 + 1 + 1 + 1 = 13টি</p>"
+    },
+    {
+      "id": 48,
+      "favorite_id": "125913168",
+      "question": "আলী প্রথমে উত্তর দিকে 10 কিলোমিটার হাঁটে। তারপর সেখান থেকে দক্ষিণ দিকে 6 কিলোমিটার হাঁটে। তারপর পূর্ব দিকে 3 কিলোমিটার হাঁটে। শুরুর স্থানের তুলনায় সে কত দূরে এবং কোন দিকে আছে?",
+      "options": {
+        "a": "7 কি.মি. এবং পশ্চিম দিকে",
+        "b": "5 কি.মি. এবং উত্তর-পূর্ব দিকে",
+        "c": "7 কি.মি. এবং পূর্ব দিকে",
+        "d": "5 কি.মি. এবং দক্ষিণ-পূর্ব দিকে"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "5 কি.মি. এবং উত্তর-পূর্ব দিকে",
+      "explanation": "<p><strong>প্রশ্ন: </strong>আলী প্রথমে উত্তর দিকে 10 কিলোমিটার হাঁটে। তারপর সেখান থেকে দক্ষিণ দিকে 6 কিলোমিটার হাঁটে। তারপর পূর্ব দিকে 3 কিলোমিটার হাঁটে। শুরুর স্থানের তুলনায় সে কত দূরে এবং কোন দিকে আছে?<br><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_44H1Lzj.png\" width=\"251\" height=\"234\"><br>উত্তরে 10 কি.মি. হাঁটার পর দক্ষিণে 6 কি.মি. হাঁটলে, উত্তর দিক বরাবর দূরত্ব = 10 - 6 = 4 কি.মি.।<br>তারপর পূর্ব দিকে 3 কি.মি. হাঁটে।<br>শুরুর স্থান থেকে তার অবস্থান: উত্তর-পূর্ব কোণে একটি সমকোণী ত্রিভুজে (উত্তরে 4 কি.মি., পূর্বে 3 কি.মি.)।<br>∴ সরল দূরত্ব = √(4<sup>2</sup> + 3<sup>2</sup>) = √(16 + 9) = √25 = 5 কি.মি.।<br>এবং দিক উত্তর-পূর্ব <br><br>সুতরাং, সে শুরুর স্থান থেকে 5 কিলোমিটার দূরে, উত্তর-পূর্ব দিকে।</p>"
+    },
+    {
+      "id": 49,
+      "favorite_id": "125913118",
+      "question": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_txRRVcf.png\" width=\"755\" height=\"57\">",
+      "options": {
+        "a": "11",
+        "b": "2",
+        "c": "3",
+        "d": "1"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "1",
+      "explanation": "<p><strong>প্রশ্ন: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_bKnTmUh.png\" width=\"848\" height=\"64\"><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_9TqXBOV.png\" width=\"555\" height=\"414\"></p>"
+    },
+    {
+      "id": 50,
+      "favorite_id": "125913114",
+      "question": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_iPb6glC.png\">",
+      "options": {
+        "a": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip4_wuK56xU.png\">",
+        "b": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip3_gJAd5lI.png\" width=\"53\" height=\"74\">",
+        "c": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip5_M6mKmEV.png\" width=\"54\" height=\"107\">",
+        "d": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip6_gnfZzfE.png\" width=\"39\" height=\"84\">"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip3_gJAd5lI.png\" width=\"53\" height=\"74\">",
+      "explanation": "<p><strong>প্রশ্ন: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_wOb9zNx.png\" width=\"228\" height=\"63\"><br><strong>সমাধান:</strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_WYG7a75.png\" width=\"392\" height=\"465\"></p>"
+    },
+    {
+      "id": 51,
+      "favorite_id": "124080661",
+      "question": "প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/2459-ma4.png\" width=\"493\" height=\"281\">",
+      "options": {
+        "a": "17",
+        "b": "15",
+        "c": "14",
+        "d": "16"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "15",
+      "explanation": "<p><strong>প্রশ্ন: </strong>প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/2459-ma4.png\" width=\"493\" height=\"281\"><br><br><strong>সমাধান:</strong><br> <img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/2459-ma4e.jpg\" width=\"324\" height=\"190\"><br>একটি করে ঘর নিয়ে ত্রিভুজ আছে - AFB, FEB, EBC, DEC, DFE এবং AFD = 6<br>দুইটি করে ঘর নিয়ে ত্রিভুজ আছে - AEB, FBC, DFC, ADE, DBE এবং ABD = 6<br>তিনটি করে ঘর নিয়ে ত্রিভুজ আছে - ADC এবং ABC = 2.<br>চারটি করে ঘর নিয়ে ত্রিভুজ আছে - DBC = 1</p>\r\n<p>∴ মোট ত্রিভুজ 6 + 6 + 2 + 1 = 15</p>"
+    },
+    {
+      "id": 52,
+      "favorite_id": "124080628",
+      "question": "প্রশ্নবোধক চিহ্নিত স্থানে কোন সংখ্যাটি বসবে?<br>0.12 : 0.0012 : : 1.02 : ?",
+      "options": {
+        "a": ".102",
+        "b": ".12",
+        "c": ".00102",
+        "d": ".0102"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": ".0102",
+      "explanation": "<p><span><strong>প্রশ্ন:</strong> প্রশ্নবোধক চিহ্নিত স্থানে কোন সংখ্যাটি বসবে?</span><br>0.12 : 0.0012 : : 1.02 : ?<br><br><strong>সমাধান:<br></strong>১ম ক্ষেত্রে, <br><strong></strong>0.12 থেকে 0.0012 পেতে, <br>0.12 ÷ 0.0012 = 100<br>অর্থাৎ, 0.12 কে 100 দ্বারা ভাগ করলে 0.0012 পাওয়া যায়।<br>তাই, প্রথম সংখ্যাকে 100 দ্বারা ভাগ করলে দ্বিতীয় সংখ্যা পাওয়া যায়।<br><br>২য় ক্ষেত্রে, একই সম্পর্ক প্রয়োগ করে পাই, <br>? = 1.02 ÷ 100 = 0.0102<br><br>সুতরাং, প্রশ্নবোধক চিহ্নিত স্থানে সংখ্যাটি 0.0102।<strong></strong></p>"
+    },
+    {
+      "id": 53,
+      "favorite_id": "124080527",
+      "question": "রতন পশ্চিম দিকে 4 কি.মি. হেঁটে, বামদিকে ঘুরে 5 কি.মি. হাঁটলো। তারপর সে পূর্বদিকে ঘুরে 2 কি.মি. হাঁটলো। আবার সে দক্ষিণ দিকে 3 কি.মি. হাঁটলো । তারপর সে আরও 2 কি.মি. পূর্ব দিকে হাঁটলো। রতন শুরুর বিন্দু থেকে সরাসরি কত দূরে আছে?",
+      "options": {
+        "a": "16 কি.মি.",
+        "b": "5 কি.মি.",
+        "c": "13 কি.মি.",
+        "d": "8 কি.মি."
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "8 কি.মি.",
+      "explanation": "<p><strong>প্রশ্ন:</strong><span><strong> </strong>রতন পশ্চিম দিকে 4 কি.মি. হেঁটে, বামদিকে ঘুরে 5 কি.মি. হাঁটলো। তারপর সে পূর্বদিকে ঘুরে 2 কি.মি. হাঁটলো। আবার সে দক্ষিণ দিকে 3 কি.মি. হাঁটলো । তারপর সে আরও 2 কি.মি. পূর্ব দিকে হাঁটলো। রতন শুরুর বিন্দু থেকে সরাসরি কত দূরে আছে?</span><br><br><strong>সমাধান:</strong><span></span><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/Screenshot_2024-07-09_131636.png\" alt=\"\" width=\"298\" height=\"314\"><br><span>যাত্রা শুরুর স্থান A এবং গন্তব্যস্থান F</span><br><span>∴ সরাসরি দূরত্ব, AF = 5 + 3 = 8 কি.মি.</span></p>"
+    },
+    {
+      "id": 54,
+      "favorite_id": "122466552",
+      "question": "প্রশ্নবোধক স্থানে কোন সংখ্যা বসবে?<br>        17  (112)  39<br>        28   ( ? )   49",
+      "options": {
+        "a": "84",
+        "b": "96",
+        "c": "148",
+        "d": "154"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "154",
+      "explanation": "<p>প্রশ্ন: প্রশ্নবোধক স্থানে কোন সংখ্যা বসবে?<br>        17  (112)  39<br>        28   ( ? )   49</p>\r\n<p>সমাধান:<br>বন্ধনীর দুই পাশের সংখ্যার যোগফলের দ্বিগুণ বন্ধনীতে বসবে।<br>17 + 39 = 56 ⇒ 56 × 2 = 112<br>28 + 49 = 77 ⇒ 77 × 2 = 154</p>"
+    },
+    {
+      "id": 55,
+      "favorite_id": "122466458",
+      "question": "প্রদত্ত চিত্রটি গঠন করতে সর্বনিম্ন কতটি সরলরেখা লাগবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_1DmFk6b.png\" width=\"439\" height=\"324\">",
+      "options": {
+        "a": "৯ টি",
+        "b": "১২ টি",
+        "c": "১৫ টি",
+        "d": "১৬ টি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "১২ টি",
+      "explanation": "<p>প্রশ্ন: প্রদত্ত চিত্রটি গঠন করতে সর্বনিম্ন কতটি সরলরেখা লাগবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_1DmFk6b.png\" width=\"366\" height=\"270\"><br><br>সমাধান:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_vXckgHA.png\" width=\"385\" height=\"342\"><br><br></p>\r\n<p>আনুভূমিক বরাবর সরলরেখা DE, FH, IL এবং BC মোট ৪টি।</p>\r\n<p>তীর্যক সরলরেখা AC, DO, FN, IM, AB, EM, HN এবং LO মোট ৮টি</p>\r\n<p>∴ মোট সরল রেখা লাগে = ৮ + ৪ = ১২টি</p>"
+    },
+    {
+      "id": 56,
+      "favorite_id": "120867938",
+      "question": "যদি TELEPHONE কে ENOHPELET লেখা হয়, তাহলে  ALIGATOR কে লেখা হবে?",
+      "options": {
+        "a": "ROTEGILA",
+        "b": "ROTAGILE",
+        "c": "ROTAGAIL",
+        "d": "ROTAGILA"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "ROTAGILA",
+      "explanation": "<p><strong>প্রশ্ন:</strong> যদি TELEPHONE কে ENOHPELET লেখা হয়, তাহলে  ALIGATOR কে লেখা হবে?<br><br><strong>সমাধান:</strong><br>শব্দটির অক্ষরগুলোকে উল্টো ক্রমে সাজিয়ে লেখা হয়।<br>TELEPHONE → ENOHPELET (উল্টো করে লিখয়ে পাই)<br><br>একইভাবে, <br>ALIGATOR-এর জন্য উল্টো ক্রমে লখে পাই, <br>A L I G A T O R <strong>→ </strong>R O T A G I L A<br><br>∴ ALIGATOR = ROTAGILA</p>"
+    },
+    {
+      "id": 57,
+      "favorite_id": "120867930",
+      "question": "Thermometer : Temperature : : Glucometer : ?",
+      "options": {
+        "a": "Body sugar",
+        "b": "Body resistance",
+        "c": "Blood",
+        "d": "Blood sugar"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Blood sugar",
+      "explanation": "<p><strong>প্রশ্ন: </strong>Thermometer : Temperature : : Glucometer : ?<br><br><strong>সমাধান: </strong><br>Thermometer দিয়ে Temperature(তাপমাত্রা) পরিমাপ করা হয়।<br>Glucometer দিয়ে Blood sugar (শর্করার) মাত্রা পরিমাপ করা হয়।<br><br>সুতরাং, সঠিক উত্তর ঘ) <strong>Blood sugar</strong></p>"
+    },
+    {
+      "id": 58,
+      "favorite_id": "120867883",
+      "question": "'X' চিত্রটিকে পানিতে কেমন দেখাবে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_lNerG6s.png\" width=\"789\" height=\"172\">",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "2",
+      "explanation": "<p><strong>প্রশ্ন:</strong> 'X' চিত্রটিকে পানিতে কেমন দেখাবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_Hke0zZ5.png\" width=\"789\" height=\"172\"><br><strong>সমাধান:</strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_Me25crd.png\" width=\"256\" height=\"278\"><br>সঠিক উত্তর খ) 2 নং </p>"
+    },
+    {
+      "id": 59,
+      "favorite_id": "120867828",
+      "question": "প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_tF5GnUN.png\" width=\"698\" height=\"220\">",
+      "options": {
+        "a": "3",
+        "b": "9",
+        "c": "4",
+        "d": "11"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "3",
+      "explanation": "<p><strong>প্রশ্ন:</strong> প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_tF5GnUN.png\" width=\"698\" height=\"220\"><br><strong>সমাধান: </strong><br><strong>মাঝের সংখ্যা = চার পাশের সংখ্যা গুলোর সমষ্টি</strong><br>১ম চিত্রে, <br>9 + 16 + 18 + 11 = 54<br><br>২য় চিত্রে,<br>14 + 14 + 13 + 7 = 48<br><br>৩য় চিত্রে,<br>12 + 7 + x + 14 = 36<br>⇒ 33 + x = 36<br>⇒ x = 36 - 33<br>∴ x = 3<br><br>সুতরাং, প্রশ্নবোধক স্থানে 3 সংখ্যাটি বসবে। </p>"
+    },
+    {
+      "id": 60,
+      "favorite_id": "120867815",
+      "question": "একটি ছবির দিকে ইঙ্গিত করে দীনেশ বলল, 'ওর বাবা আমার মায়ের একমাত্র পুত্র।' ছবিটি কার?",
+      "options": {
+        "a": "দীনেশ",
+        "b": "দীনেশের বাবা",
+        "c": "দীনেশের ছেলে",
+        "d": "দীনেশের ভাই"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "দীনেশের ছেলে",
+      "explanation": "<p><strong>প্রশ্ন:</strong> একটি ছবির দিকে ইঙ্গিত করে দীনেশ বলল, 'ওর বাবা আমার মায়ের একমাত্র পুত্র।' ছবিটি কার?</p>\r\n<p><strong>সমাধান:</strong><br>দীনেশ বলছে 'ওর বাবা আমার মায়ের একমাত্র পুত্র।'</p>\r\n<p>অর্থাৎ, 'ওর বাবা' = দীনেশের মায়ের একমাত্র ছেলে = দীনেশ নিজে</p>\r\n<p>সুতরাং, 'ওর বাবা' = দীনেশ<br>⇒ 'ও = দীনেশের ছেলে</p>\r\n<p>∴ ছবিটি দীনেশের ছেলের।</p>"
+    },
+    {
+      "id": 61,
+      "favorite_id": "119491511",
+      "question": "X চিত্রটিকে আয়নায় কেমন দেখাবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_ZDCryey.png\" width=\"659\" height=\"187\">",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "1",
+      "explanation": "<p><strong>প্রশ্ন: </strong>X চিত্রটিকে আয়নায় কেমন দেখাবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_ZDCryey.png\" width=\"659\" height=\"187\"><br><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_3VWWHXd.png\" width=\"274\" height=\"137\"><br><br>সঠিক উত্তর ক) 1 নং </p>"
+    },
+    {
+      "id": 62,
+      "favorite_id": "119491506",
+      "question": "যদি A = 4, K = 3, N = 2, P = 1 হয়, তাহলে নিচের কোন অক্ষরের সেটটির সমষ্টি সবচেয়ে বড় সংখ্যা দিবে?",
+      "options": {
+        "a": "KANPK",
+        "b": "NPAKN",
+        "c": "PKANA",
+        "d": "NAKNA"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "NAKNA",
+      "explanation": "<p><strong>প্রশ্ন: </strong>যদি A = 4, K = 3, N = 2, P = 1 হয়, তাহলে নিচের কোন অক্ষরের সেটটির সমষ্টি সবচেয়ে বড় সংখ্যা দিবে?<br><br><strong>সমাধান: </strong><br>দেওয়া আছে, <br>A = 4, K = 3, N = 2, P = 1.<br>প্রথম সেটের সমষ্টি,<br>= K + A + N + P +K = 3 + 4 + 2 + 1 + 3 = 13.<br><br>দ্বিতীয় সেটের সমষ্টি,<br>N + P + A + K +N = 2 + 1 + 4 + 3 + 2 = 12.<br><br>তৃতীয় সেটের সমষ্টি,<br>P + K + A + N + A = 1 + 3 + 4 + 2 + 3 = 13.<br><br>চতুর্থ সেটের সমষ্টি,<br>N + A + K + N + A = 2 + 4 + 3 + 2 + 4 = 15.<br><br>সুতরাং, NAKNA সেটটির সমষ্টি সবচেয়ে বড় সংখ্যা দিবে। </p>"
+    },
+    {
+      "id": 63,
+      "favorite_id": "119491494",
+      "question": "প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_4awSJEm.png\" width=\"335\" height=\"338\">",
+      "options": {
+        "a": "১৬ টি",
+        "b": "১২ টি",
+        "c": "১৪ টি",
+        "d": "১০ টি"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "১২ টি",
+      "explanation": "<p><strong>প্রশ্ন:</strong> প্রদত্ত চিত্রে কয়টি ত্রিভুজ আছে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_4awSJEm.png\" width=\"335\" height=\"338\"><br><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_8Ni3Xhz.png\" width=\"290\" height=\"305\"><br>একটি অংশ নিয়ে ত্রিভুজ আছে - A, B, C, D, E, F, G এবং H =  ৮টি ।<br>দুটি করে মিলিয়ে ত্রিভুজ আছে - E &amp; F, F &amp; G &amp; H এবং E &amp; H = ৪টি।</p>\r\n<p>সুতরাং মোট ত্রিভুজের সংখ্যা = ৮ + ৪<br>= ১২ টি</p>"
+    },
+    {
+      "id": 64,
+      "favorite_id": "119491482",
+      "question": "1 নং গিয়ারটি ঘড়ির কাঁটার বিপরীত দিকে 5 নং গিয়ারটি কোন দিকে ঘুরবে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_Rnc1JIy.png\" width=\"525\" height=\"347\">",
+      "options": {
+        "a": "ঘড়ির কাঁটার বিপরীত দিকে ঘুরবে",
+        "b": "ঘড়ির কাঁটার দিকে ঘুরবে",
+        "c": "স্থির থাকবে",
+        "d": "কোনোটিই নয়"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ঘড়ির কাঁটার দিকে ঘুরবে",
+      "explanation": "<p><strong>প্রশ্ন:</strong> 1 নং গিয়ারটি ঘড়ির কাঁটার বিপরীত দিকে 5 নং গিয়ারটি কোন দিকে ঘুরবে? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_Rnc1JIy.png\" width=\"525\" height=\"347\"><br><strong>সমাধান: </strong><br>- 1 নং গিয়ার আর 2 নং গিয়ার ক্রস ব্যাল্ট দ্বারা যুক্ত তাই 2 নং গিয়ারটি ঘড়ির কাঁটার দিকে ঘুরবে। <br>- 2 নং গিয়ারটি ঘড়ির কাঁটার দিকে ঘুরলে, 3 নং গিয়ারটি ঘড়ির কাঁটার বিপরীত দিকে ঘুরবে।<br>- 3 নং গিয়ারটি ঘড়ির কাঁটার বিপরীত দিকে ঘুরলে, 4 নং গিয়ারটি ঘড়ির কাঁটার দিকে ঘুরবে।<br><br>আবার, 4 নং গিয়ার আর 5 নং গিয়ার একই ব্যাল্ট দ্বারা যুক্ত তাই, 5 নং গিয়ারটি ঘড়ির কাঁটার দিকে ঘুরবে। <br><br>সুতরাং, 5 নং গিয়ারটি ঘড়ির কাঁটার দিকে ঘুরবে।</p>"
+    },
+    {
+      "id": 65,
+      "favorite_id": "118316143",
+      "question": "ঘড়িতে যখন ৫ : ৫০ বাজে, তখন ঘণ্টার কাঁটা এবং মিনিটের কাঁটার মধ্যকার কোণটি কত ডিগ্রি?",
+      "options": {
+        "a": "১৪০°",
+        "b": "১১৫°",
+        "c": "১২৫°",
+        "d": "১২০°"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "১২৫°",
+      "explanation": "<p>প্রশ্ন: ঘড়িতে যখন ৫ : ৫০ বাজে, তখন ঘণ্টার কাঁটা এবং মিনিটের কাঁটার মধ্যকার কোণটি কত ডিগ্রি?</p>\r\n<p>সমাধান:<br>মধ্যবর্তী কোণ = | (১১M - ৬০H)/২ |<br>= | {(১১ × ৫০) - (৬০ × ৫)}/২ |<br>= | (৫৫০ - ৩০০)/২ |<br>= | ২৫০/২ |<br>= | ১২৫ |<br>= ১২৫°</p>"
+    },
+    {
+      "id": 66,
+      "favorite_id": "118316133",
+      "question": "প্রদত্ত চিত্রে ত্রিভুজ সংখ্যা কতটি?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_Lo9CLWW.png\" width=\"362\" height=\"323\">",
+      "options": {
+        "a": "11 টি",
+        "b": "13 টি",
+        "c": "9 টি",
+        "d": "14 টি"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "11 টি",
+      "explanation": "<p>প্রশ্ন: প্রদত্ত চিত্রে ত্রিভুজ সংখ্যা কতটি?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_Lo9CLWW.png\" width=\"198\" height=\"177\"><br><br>সমাধান:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_cUTk3XF.png\" width=\"204\" height=\"197\"><br>চিত্রে 1টি করে ঘর নিয়ে ত্রিভুজ আছে 6 টি।<br>চিত্রে 2টি করে ঘর নিয়ে ত্রিভুজ (12, 34, 56) আছে 3 টি। <br>চিত্রে 4টি করে ঘর নিয়ে ত্রিভুজ (1234, 3456) আছে 2টি।</p>\r\n<p>∴ মোট ত্রিভুজ আছে = (6 + 3 + 2) = 11 টি</p>"
+    },
+    {
+      "id": 67,
+      "favorite_id": "118316123",
+      "question": "নিচের নাম্বার সিরিজে একটি সংখ্যা ভুল আছে। সংখ্যাটি কত?<br>২, ৫, ৯, ১৪, ২০, ২৭, ৩৪, ৪৪",
+      "options": {
+        "a": "২০",
+        "b": "১৪",
+        "c": "৩৪",
+        "d": "৪৪"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "৩৪",
+      "explanation": "<p>প্রশ্ন: নিচের নাম্বার সিরিজে একটি সংখ্যা ভুল আছে। সংখ্যাটি কত?<br>২, ৫, ৯, ১৪, ২০, ২৭, ৩৪, ৪৪</p>\r\n<p>সমাধান:<br>সিরিজের সংখ্যাগুলো যেভাবে গঠিত হয়েছে-<br>২ + ৩ = ৫<br>৫ + ৪ = ৯<br>৯ + ৫ = ১৪<br>১৪ + ৬ = ২০<br>২০ + ৭ = ২৭<br>২৭ + ৮ = ৩৫<br>৩৫ + ৯ = ৪৪</p>\r\n<p>সে অনুসারে সংখ্যাটি ২৭ + ৮ = ৩৫ হওয়া উচিত ছিলো।<br>∴ ৩৪ সংখ্যাটি ভুল।</p>"
+    },
+    {
+      "id": 68,
+      "favorite_id": "117100927",
+      "question": "X চিত্রটিকে পানিতে কেমন দেখাবে ? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_vvYE8RX.png\" width=\"830\" height=\"177\">",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "3",
+      "explanation": "<p><strong>প্রশ্ন: </strong>X চিত্রটিকে পানিতে কেমন দেখাবে ? <br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_vvYE8RX.png\" width=\"581\" height=\"124\"><br><strong>সমাধান: </strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_Oip97iX.png\" width=\"148\" height=\"262\"> <br>সঠিক উত্তর 3 নং </p>"
+    },
+    {
+      "id": 69,
+      "favorite_id": "117100906",
+      "question": "'QUALITY' শব্দটিকে আয়নায় কেমন দেখাবে?",
+      "options": {
+        "a": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_UyWdvNW.png\" width=\"240\" height=\"71\">",
+        "b": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_96LUO10.png\" width=\"233\" height=\"82\">",
+        "c": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_lGenM2u.png\" width=\"231\" height=\"71\">",
+        "d": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip3_wfu4alw.png\" width=\"230\" height=\"76\">"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "<img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip2_lGenM2u.png\" width=\"231\" height=\"71\">",
+      "explanation": "<p><strong>প্রশ্ন:</strong> 'QUALITY' শব্দটিকে আয়নায় কেমন দেখাবে? </p>\r\n<p><strong>সমাধান:</strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip4_ELrOTXi.png\"><br>সঠিক উত্তর <strong>গ) </strong></p>"
+    },
+    {
+      "id": 70,
+      "favorite_id": "117100889",
+      "question": "প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_6p60ecB.png\" width=\"328\" height=\"315\">",
+      "options": {
+        "a": "22",
+        "b": "14",
+        "c": "18",
+        "d": "12"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "12",
+      "explanation": "<p><strong>প্রশ্ন:</strong> প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে?<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip1_n3QWrRc.png\" width=\"145\" height=\"140\"><br><strong>সমাধান: </strong><br>সারি বরাবর,<br>(১ম সংখ্যা ÷ ২য় সংখ্যা) × 2 = শেষ সংখ্যা <br>এখন, <br>১ম সারিতে, <br>(72 ÷ 24) × 2 = 3 × 2 = 6<br><br>২য় সারিতে,<br>(96 ÷ 16) × 2 = 6 × 2 = 12<br><br>৩য় সারিতে, <br>(108 ÷ x) × 2 = 18<br>⇒ 108/x = 9<br>⇒ x = 108/9<br>∴ x = 12<br><br>∴ প্রশ্নবোধক স্থানে 12 সংখ্যাটি বসবে?</p>"
+    },
+    {
+      "id": 71,
+      "favorite_id": "117100869",
+      "question": "একজন লোক 1 কি.মি. পূর্ব দিকে হাঁটে এবং তারপর দক্ষিণ দিকে ঘুরে 5 কি.মি. হাঁটে। আবার সে পূর্ব দিকে ঘুরে 2 কি.মি. হাঁটে। এরপর সে উত্তর দিকে ঘুরে 9 কি.মি. হাঁটে। এখন সে তার শুরুর স্থান থেকে কত দূরে আছে?",
+      "options": {
+        "a": "14 কি.মি.",
+        "b": "5 কি.মি.",
+        "c": "9 কি.মি.",
+        "d": "25 কি.মি."
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "5 কি.মি.",
+      "explanation": "<p><strong>প্রশ্ন: </strong>একজন লোক 1 কি.মি. পূর্ব দিকে হাঁটে এবং তারপর দক্ষিণ দিকে ঘুরে 5 কি.মি. হাঁটে। আবার সে পূর্ব দিকে ঘুরে 2 কি.মি. হাঁটে। এরপর সে উত্তর দিকে ঘুরে 9 কি.মি. হাঁটে। এখন সে তার শুরুর স্থান থেকে কত দূরে আছে?<br><br><strong>সমাধান:</strong><br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_R9s4jsv.png\" width=\"276\" height=\"223\"><br><br>লোকটির শেষ অবস্থান E এবং ODE একটি সমকোণী ত্রিভুজ। <br>যেখানে OD = OA + AD = 1 + 2 = 3 কি.মি. এবং DE = CE - CD = 9 - 5 = 4 কি.মি.<br><br>আমরা জানি, <br>OE<sup>2</sup> = OD<sup>2</sup> + DE<sup>2</sup> = 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25<br>⇒ OE = √25 = 5<br>∴ OE = 5 কি.মি.<br><br>সুতরাং, সে তার শুরুর স্থান থেকে 5 কি.মি. দূরে আছে। </p>"
+    },
+    {
+      "id": 72,
+      "favorite_id": "117100852",
+      "question": "প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে?<br>6, 13, 28, 59, ?, 249.",
+      "options": {
+        "a": "12",
+        "b": "128",
+        "c": "122",
+        "d": "132"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "122",
+      "explanation": "<p><strong>প্রশ্ন:</strong> প্রশ্নবোধক স্থানে কোন সংখ্যাটি বসবে?<br>6, 13, 28, 59, ?, 249.<br><br><strong>সমাধান: </strong><br>১ম পদ = 6<br>২য় পদ = (6 × 2 + 1) = 13<br>৩য় পদ = (13 × 2 + 2) = 28<br>৪র্থ পদ = (28 × 2 + 3) = 59<br>৫ম পদ = (59 × 2 + 4) = 122<br>৬ষ্ঠ পদ = (122 × 2 + 5) = 249<br><br>সুতরাং, প্রশ্নবোধক স্থানে 122 সংখ্যাটি বসবে। </p>"
+    },
+    {
+      "id": 73,
+      "favorite_id": "115896651",
+      "question": "যদি RAJSHAHI = 74 হয়, তবে CUMILLA = কত?",
+      "options": {
+        "a": "91",
+        "b": "78",
+        "c": "71",
+        "d": "84"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "71",
+      "explanation": "<p>প্রশ্ন: যদি RAJSHAHI = 74 হয়, তবে CUMILLA = কত?<br><br>সমাধান:<br><img src=\"https://elasticbeanstalk-ap-southeast-1-051040323559.s3.amazonaws.com/livemcq-files/media/uploads/mceclip0_aBhTMjj.png\" width=\"410\" height=\"219\"><br>এখন,<br>RAJSHAHI = R + A + J + S + H + A + H + I <br>= 18 + 1 + 10 + 19 + 8 + 1 + 8 + 9 <br>= 74</p>\r\n<p>একইভাবে,<br>CUMILLA = C + U + M + I + L + L + A<br> = 3 + 21 + 13 + 9 + 12 + 12 + 1 <br>= 71</p>"
+    }
+  ]
+}

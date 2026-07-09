@@ -1,14 +1,15 @@
-import { BookOpen, BookOpenText, Globe, Languages, ShieldCheck } from 'lucide-react'
+import { BookOpen, BookOpenText, Globe, Languages, ShieldCheck, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
-import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS } from '../data/index.js'
+import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
+import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
 
-const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান' }
-const GROUP_PATHS  = { bangla: '/bangla-grammer', english: '/english-grammer', sahitya: '/sahitto', gk: '/gk' }
+const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান', livemcq: 'LiveMCQ' }
+const GROUP_PATHS  = { bangla: '/bangla-grammer', english: '/english-grammer', sahitya: '/sahitto', gk: '/gk', livemcq: '/livemcq' }
 
 export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
   const navigate = useNavigate()
@@ -17,9 +18,10 @@ export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
   const { value: important } = useImportantContext()
   const [searching, setSearching] = useState(false)
   const urlSearch = searchParams.get('search') || ''
+  const lmReady = useLiveMcqReady(activeGroup === 'livemcq')
 
-  const allTopicsFlat = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
-  const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : GK_TOPICS
+  const allTopicsFlat = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS, ...LIVEMCQ_TOPICS]
+  const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : activeGroup === 'livemcq' ? LIVEMCQ_TOPICS : GK_TOPICS
 
   const totalNailed = allTopicsFlat.reduce((s, t) =>
     s + t.questions.filter((_, i) => mastered.has(`${t.id}__${i}`)).length
@@ -50,6 +52,9 @@ export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
           <button className={`module-btn${activeGroup === 'sahitya' ? ' active' : ''}`} onClick={() => navigate('/sahitto')}>
             <BookOpen size={15} /> বাংলা সাহিত্য
           </button>
+          <button className={`module-btn${activeGroup === 'livemcq' ? ' active' : ''}`} onClick={() => navigate('/livemcq')}>
+            <Sparkles size={15} /> LiveMCQ
+          </button>
         </div>
       </header>
 
@@ -79,11 +84,17 @@ export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
           </div>
 
           <p className="section-label">
-            {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
+            {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : activeGroup === 'livemcq' ? 'LiveMCQ — বিষয় বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
           </p>
-          <main className="topics-grid">
-            {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => navigate('/topic/' + t.id)} />)}
-          </main>
+          {activeGroup === 'livemcq' && !lmReady ? (
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '2.5rem', color: 'var(--text-3)', fontSize: '0.85rem' }}>
+              LiveMCQ লোড হচ্ছে…
+            </div>
+          ) : (
+            <main className="topics-grid">
+              {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => navigate('/topic/' + t.id)} />)}
+            </main>
+          )}
         </>
       )}
     </div>

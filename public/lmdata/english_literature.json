@@ -1,0 +1,396 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "favorite_id": "146135673",
+      "question": "The literary term \"Synecdoche\" refers-",
+      "options": {
+        "a": "A figure of speech in which a part stands for the whole",
+        "b": "The central Idea of a literary work",
+        "c": "An exaggerated statement",
+        "d": "A comparison between two similar things"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "A figure of speech in which a part stands for the whole",
+      "explanation": "<p><strong>Correct answer: A figure of speech in which a part stands for the whole.</strong><br><br>​​• Synecdoche (প্রতিরূপক):<br>- A synecdoche is a figure of speech which allows a part to stand for a whole or for a whole to stand for a part.<br>- Synecdoche হলো এমন একটি literary device যেখানে:<br>- একটি অংশ দিয়ে সমগ্রকে বোঝানো হয় (part represents the whole)<br>- অথবা সমগ্র দিয়ে একটি অংশকে বোঝানো হয় (whole represents a part)<br>- A figure of speech in which a part stands for the whole or a whole stands for the part.<br>- (ব্যাকরণ আলংকারিক অর্থ) বাক্যালংকারবিশেষ, যাতে 'অংশ' সমগ্রকে নির্দেশ করে (যেমন 50 ships অর্থে 50 sails); প্রতিরূপক।<br>- Examples: \"All hands on deck\".<br>- When the captain of a ship calls, “All hands on deck!” certainly no hands can be seen running across the ship. Rather, the speaker is using synecdoche: allowing a part (hands) to represent the whole (a crew member in the ship).<br><br>Source: An ABC of English Literature, Dr. M Mofizar Rahman.</p>"
+    },
+    {
+      "id": 2,
+      "favorite_id": "146135667",
+      "question": "The celebrated novel Dr. Zhivago was written by-",
+      "options": {
+        "a": "Maxim Gorky",
+        "b": "Boris Pasternak",
+        "c": "Anita Desai",
+        "d": "Orhan Pamuk"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Boris Pasternak",
+      "explanation": "<p><strong>Correct answer: Boris Pasternak.</strong><br><br>• Doctor Zhivago:<br>- রচনা করেন Boris Pasternak.<br>- ১৯৫৭ সালে ইটালিতে এই উপন্যাসটি প্রকাশিত হয়।<br>- ১৯১৭ সালের রুশ বিপ্লবের পটভূমিতে এই উপন্যাসের কাহিনী রচিত। বিপ্লব এবং বিপ্লব পরবর্তী সময়ে একটি বুর্জোয়া পরিবারের উপর নেমে আসা বিভিন্ন পরিণতি এর উপজীব্য বিষয়।</p>\r\n<p>• কেন্দ্রীয় চরিত্র: Dr. Yury Zhivago এবং তার প্রেমিকা Lara.</p>\r\n<p>• Boris Leonidovich Pasternak:<br>- He is a Russian poet whose novel Doctor Zhivago helped win him the Nobel Prize for Literature in 1958.  <br>- The novel became an international bestseller. <br>- It was published in Italy in 1957.</p>\r\n<p>Source: Britannica.</p>"
+    },
+    {
+      "id": 3,
+      "favorite_id": "146135633",
+      "question": "The literary term 'Aphorism' means-",
+      "options": {
+        "a": "A type of narrative structure",
+        "b": "A literary device that contrasts opposing ideas",
+        "c": "A  memorable expression of a universal truth",
+        "d": "Showing the relation between two things."
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "A  memorable expression of a universal truth",
+      "explanation": "<p><strong>Correct answer: A  memorable expression of a universal truth.</strong><br><br><strong>• Aphorism</strong><br>- A terse, memorable expression of a universal truth.<br>- Aphorism is a concise expression of doctrine, principle, or any generally accepted truth conveyed in a pithy, memorable statement.<br>- The use of aphorisms reflects the range of an author's experience and adds universality to the text in which it is used.<br>- Aphorism is different from a proverb: A proverb is an anonymous expression of a general truth, while an aphorism is a truth taken from one's personal experience.<br>- অর্থ্যাৎ একটি প্রবাদ (proverb) এবং নীতিবাক্যের (aphorism) মধ্যে পার্থক্য হলো: প্রবাদ হলো সাধারণ সত্যের একটি নামবিহীন অভিব্যক্তি, যেখানে নীতিবাক্য হলো ব্যক্তিগত অভিজ্ঞতা থেকে নেওয়া একটি সত্য।<br>- Proverbs are traditional, but aphorisms are individual.</p>\r\n<p>- Example:<br>- 'To err is human, to forgive divine' হচ্ছে একটি universal truth যার অর্থ “মানুষ মাত্রেই ভুল” এবং “ক্ষমা করা স্বর্গীয়।<br>- সুতরাং, এই উক্তিটি Aphorism এর একটি উদাহরণ।<br>- উক্তিটি Alexander Pope এর An essay on criticism হতে উদ্ধৃত।</p>\r\n<p>Source: An ABC of English Literature, Dr. M Mofizar Rahman.</p>"
+    },
+    {
+      "id": 4,
+      "favorite_id": "146130760",
+      "question": "Who wrote the line: “If Winter comes, can Spring be far behind?”",
+      "options": {
+        "a": "William Wordsworth",
+        "b": "John Keats",
+        "c": "Lord Byron",
+        "d": "P. B. Shelley"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "P. B. Shelley",
+      "explanation": "<p><strong>• The line: “If Winter comes, can Spring be far behind?” was written by - P. B. Shelley.</strong><br>- এটি Percy Bysshe Shelley এর Ode to the West Wind কবিতার লাইন।</p>\r\n<p><strong>• Ode to the West Wind:</strong><br>- কবিতাটি প্রকাশিত হয় ১৮২০ সালে।<br>- এই কবিতাকে গণ্য করা হয়, কবির passionate language and symbolic imagery ব্যবহারের একটি অনন্য দৃষ্টান্ত রুপে।<br>- Shelley এখানে West Wind এর কাছে সাহায্য আহবান করছেন।<br>- কবিতাটি লেখা হয় Cascine wood near Florence, Italy তে।<br>- কারো কারো মতে, কবিতাটি Shelley তার পুত্র William এর মৃত্যুশোকে লিখেছিলেন।<br><br>- কবি West Wind এর প্রলয়ংকারী ক্ষমতাকে সমাদর করেছেন এবং একইভাবে আশাবাদ ব্যক্ত করেছেন এভাবেই যেন বৈপ্লবিক চিন্তাগুলো সারা পৃথিবীতে ছড়িয়ে যায়।<br>- কবিতার শেষ লাইনটি বিখ্যাত: \"If Winter comes, can Spring be far behind?\"<br>- Shelley তাঁর কবিতা \"Ode to the West Wind\"-এ প্রকৃতির শক্তি ও নিজের মানসিক অবস্থার মধ্যে গভীর সংযোগ স্থাপন করেছেন। তিনি পশ্চিম বাতাসকে একদিকে ধ্বংসের প্রতীক, অন্যদিকে পুনর্জন্ম ও নবজাগরণের প্রতীক হিসেবে উপস্থাপন করেছেন। পুরো কবিতাটি পাঁচটি ক্যান্টো বা স্তবকে বিভক্ত, এবং প্রতিটি স্তবকই আলাদা তাৎপর্য বহন করে।<br><br>- \"Ode to the West Wind\" শুধুমাত্র একটি প্রকৃতিনির্ভর কবিতা নয়, বরং এটি এক বিপ্লবাত্মক বার্তার প্রতীক। যেমন পশ্চিম বাতাস প্রকৃতিতে পরিবর্তন আনে, তেমনি কবি চান তাঁর কবিতা সমাজে এক নতুন চেতনার সূচনা করুক। এই কবিতাটি রোমান্টিক সাহিত্যের অন্যতম শ্রেষ্ঠ রচনারূপে বিবেচিত।<br><br><strong>• Percy Bysshe Shelley:</strong><br>- তিনি Romantic Period এর একজন কবি ছিলেন।<br>- তিনি ১৯ শতকের সবচেয়ে সম্মানিত এবং প্রভাবশালী কবিদের একজন।<br>- Title: Revolutionary Poet, Lyrical Poet.<br><br><strong>• Best Works of P. B. Shelley:</strong><br>- Ode to the West Wind,<br>- Ozymandias,<br>- The Cloud,<br>- Prometheus Unbound,<br>- Queen Mab,<br>- Adonais,<br>- To a Skylark,<br>- When Soft Voices Die<br>- Song of Proserpine, etc.<br><br><strong>• Some of his famous quotations are:</strong><br>- Our sweetest songs are those that tell of saddest thought (Ode To A Skylark).<br>- If Winter comes, can spring be far behind? (Ode to the West Wind).<br>- The more we study, the more we discover our ignorance.<br>- Oh! lift me as a wave, a leaf, a cloud! I fall upon the thorns of life (Ode to the West Wind).<br><br>Source: English Essence by Live MCQ, Britannica.</p>"
+    },
+    {
+      "id": 5,
+      "favorite_id": "144832530",
+      "question": "In which poem does P. B. Shelley use the famous closing line \"If Winter comes, can Spring be far behind\"?",
+      "options": {
+        "a": "To a Skylark",
+        "b": "Ozymandias",
+        "c": "Adonais",
+        "d": "Ode to the West Wind"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Ode to the West Wind",
+      "explanation": "<p><strong>• The required answer is - Ode to the West Wind.<br></strong>- The poem symbolizes change, renewal, and hope.<br>- \"Winter\" represents hardship, and \"Spring\" represents hope and new beginnings.<strong><br></strong></p>\r\n<p><strong>• Ode to the West Wind:</strong><br>- কবিতাটি প্রকাশিত হয় ১৮২০ সালে।<br>- এই কবিতাকে গণ্য করা হয়, কবির passionate language and symbolic imagery ব্যবহারের একটি অনন্য দৃষ্টান্ত রুপে।<br>- Shelley এখানে West Wind এর কাছে সাহায্য আহবান করছেন।</p>\r\n<p>- কবিতাটি লেখা হয় Cascine wood near Florence, Italy তে।<br>- কারো কারো মতে, কবিতাটি Shelley তার পুত্র William এর মৃত্যুশোকে লিখেছিলেন।<br>- কবি West Wind এর প্রলয়ংকারী ক্ষমতাকে সমাদর করেছেন এবং একইভাবে আশাবাদ ব্যক্ত করেছেন এভাবেই যেন বৈপ্লবিক চিন্তাগুলো সারা পৃথিবীতে ছড়িয়ে যায়।<br>- কবিতার শেষ লাইনটি বিখ্যাত: \"If Winter comes, can Spring be far behind?\"</p>\r\n<p>- Shelley তাঁর কবিতা \"Ode to the West Wind\"-এ প্রকৃতির শক্তি ও নিজের মানসিক অবস্থার মধ্যে গভীর সংযোগ স্থাপন করেছেন। তিনি পশ্চিম বাতাসকে একদিকে ধ্বংসের প্রতীক, অন্যদিকে পুনর্জন্ম ও নবজাগরণের প্রতীক হিসেবে উপস্থাপন করেছেন। পুরো কবিতাটি পাঁচটি ক্যান্টো বা স্তবকে বিভক্ত, এবং প্রতিটি স্তবকই আলাদা তাৎপর্য বহন করে।</p>\r\n<p>- \"Ode to the West Wind\" শুধুমাত্র একটি প্রকৃতিনির্ভর কবিতা নয়, বরং এটি এক বিপ্লবাত্মক বার্তার প্রতীক। যেমন পশ্চিম বাতাস প্রকৃতিতে পরিবর্তন আনে, তেমনি কবি চান তাঁর কবিতা সমাজে এক নতুন চেতনার সূচনা করুক। এই কবিতাটি রোমান্টিক সাহিত্যের অন্যতম শ্রেষ্ঠ রচনারূপে বিবেচিত।</p>\r\n<p><strong>• Percy Bysshe Shelley:</strong><br>- ইংল্যান্ডের সাসেক্স শহরে জন্ম লাভ করেন। পড়াশোনা করেছেন Oxford University তে।<br>- কিন্তু পরবর্তীতে ১৮১১ সালে বিশ্ববিদ্যালয় থেকে তাকে বহিষ্কার করা হয় \"The necessity of Atheism\" পুস্তিকা লেখার জন্য। ২১ বছর তিনি বয়সে নিজেকে \"নাস্তিক” ঘোষণা করেন।<br>- তাকে গণ্য করা হয় ইংরেজি সাহিত্যের অন্যতম একজন Revolutionary poets হিসেবে। তিনি বিশ্বাস করতেন সমাজ পরিবর্তনের জন্য একটি গুনগত বিপ্লবের প্রয়োজন।<br>- এছাড়াও তাকে বলা হয়, \"The poet of Hope and Regeneration\".<br>- তার স্ত্রী Mary Shelley ও একজন লেখিকা ছিলেন।</p>\r\n<p><strong>• Best Works of P. B. Shelley:</strong><br>- Ode to the West Wind,<br>- Ozymandias,<br>- The Cloud,<br>- Prometheus Unbound,<br>- Queen Mab,<br>- Adonais,<br>- To a Skylark,<br>- When Soft Voices Die<br>- Song of Proserpine, etc.</p>\r\n<p><strong>• Some of his famous quotations are:</strong><br>- Our sweetest songs are those that tell of saddest thought (Ode To A Skylark).<br>- If Winter comes, can spring be far behind? (Ode to the West Wind).<br>- The more we study, the more we discover our ignorance.<br>- Oh! lift me as a wave, a leaf, a cloud! I fall upon the thorns of life (Ode to the West Wind).</p>\r\n<p>Source: Live MCQ Lecture, Britannica.</p>"
+    },
+    {
+      "id": 6,
+      "favorite_id": "144832289",
+      "question": "What is an \"Epithalamion\" primarily written for?",
+      "options": {
+        "a": "To express grief over death",
+        "b": "To describe natural scenery",
+        "c": "To express unfulfilled love",
+        "d": "To celebrate a marriage ceremony"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "To celebrate a marriage ceremony",
+      "explanation": "<p><strong>• The required answer is - To celebrate a marriage ceremony.</strong></p>\r\n<p><strong>• Epithalamion:</strong><br>- It is used as a wedding lyric.<br>- This song is sung to the Bride &amp; Bridegroom at their wedding.<br>- অর্থাৎ, বিবাহ অনুষ্ঠানে বর এবং কনেকে উদ্দেশ্য করে যে গান গাওয়া হয়।</p>\r\n<p>• Epithalamion হলো একটি বিশেষ ধরনের কাব্য যা বিবাহের আনন্দ উদযাপন এবং নবদম্পতির জন্য শুভ কামনা জানাতে লেখা হয়। এই কবিতা প্রাচীন গ্রিক এবং রোমান সময় থেকে উদ্ভূত এবং সাধারণত বিয়ের দিন এবং নবদম্পতির ভবিষ্যতের জন্য সৌভাগ্য কামনা করে।</p>\r\n<p>• স্পেনসারের বিখ্যাত Epithalamion একটি কাব্যিক উদাহরণ, যা তার নিজস্ব বিয়ের দিনকে কেন্দ্র করে লেখা হয়। এতে প্রকৃতির সৌন্দর্য, ঐশ্বরিক আশীর্বাদ, এবং নবদম্পতির প্রতি প্রেম ও ভক্তি গভীরভাবে প্রকাশ পায়।</p>\r\n<p><strong>• উল্লিখিত অন্য অপশনগুলো এক্ষেত্রে অপ্রাসঙ্গিক।</strong></p>\r\n<p><br>Source: <br>1. Britannica.<br>2. An ABC of English Literature, Dr. M Mofizar Rahman.</p>"
+    },
+    {
+      "id": 7,
+      "favorite_id": "144826559",
+      "question": "The literary terms 'Diction' refers to-",
+      "options": {
+        "a": "The selection of words in writing or speech",
+        "b": "A break or pause in the rhythmic progression",
+        "c": "The dreadful consequence of the story of a tragedy",
+        "d": "The direct meaning of a word"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "The selection of words in writing or speech",
+      "explanation": "<p><strong>Correct answer: The selection of words in writing or speech.</strong></p>\r\n<p>• The literary term 'Diction' refers to \"the selection of words in writing or speech.\"<br>- A particular writer chooses a particular type of words and phrases.<br>- অর্থাৎ প্রতিটি লেখকের নিজস্ব বা বিশেষ শব্দচয়ন রয়েছে।<br>- যেমন John Milton তাঁর লেখায় bombastic, unusual, allusive এবং Latinized শব্দের ব্যবহার করেছেন।<br>- কিন্তু George Orwell এর সাহিত্য পর্যালোচনা করলে দেখা যায় যে তাঁর লেখায় simple, lucid এবং common শব্দের ব্যবহার বেশি। <br>- সুতরাং, সাহিত্যিকদের সাহিত্য রচনার জন্য করা শব্দচয়নকে সেই সাহিত্যিকের diction বলা হয়।<br><br>• Other options:<br>খ) A break or pause in the rhythmic progression- is called \"Causera.\"</p>\r\n<p>গ) The dreadful consequence of the story of a tragedy- is called \"Catastrophe.\"</p>\r\n<p>ঘ) The direct meaning of a word is called- \"Denotation.\"</p>\r\n<p>Source:<br>1. Britannica.<br>2. English Essence by Live MCQ.</p>"
+    },
+    {
+      "id": 8,
+      "favorite_id": "144826547",
+      "question": "What is the name of the central character of the novel \"Gulliver's Travels\"?",
+      "options": {
+        "a": "William Gulliver",
+        "b": "Jonathan Gulliver",
+        "c": "James Gulliver",
+        "d": "Lemuel Gulliver"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Lemuel Gulliver",
+      "explanation": "<p><strong>Correct answer: Lemuel Gulliver.</strong></p>\r\n<p>• Gulliver's Travels: <br>- Jonathan Swift রচিত একটি novel.<br>- এর full title হচ্ছে - Travels into Several Remote Places in the World.<br>- এই novel টি ১৭২৬ সালে প্রকাশিত হয়।<br>- এটি 18th century এর একটি famous satire.<br>- এটি ৪ খন্ডের একটি রম্য রচনা। <br>- Gulliver’s Travels উপন্যাসে Lemuel Gulliver নামের এক ইংরেজ ভ্রমণকারীর চারটি ভিন্ন ও কল্পনাপ্রসূত দেশে ভ্রমণের কাহিনি বর্ণিত হয়েছে। প্রতিটি দেশ একেকটি মানব প্রকৃতির রূপকে তুলে ধরে।</p>\r\n<p>• Important characters:<br>- Lemuel Gulliver,<br>- Blefuscudian,<br>- Yahoos,<br>- Houyhnhnms,<br>- Lilliputians,<br>- Laputans, etc.</p>\r\n<p>• Jonathan Swift (1667-1745):<br>- তিনি একজন Anglo-Irish author এবং clergyman ছিলেন।<br>- তিনি Augustan age এর একজন Author.<br>- Jonathan Swift, an Anglo-Irish author, who was the foremost prose satirist in the English language.<br>- অর্থাৎ, ইংরেজি সাহিত্যের সবচেয়ে বিখ্যাত ব্যঙ্গরচয়িতা বা satirist হলেন Jonathan Swift.<br>- তার রচিত বিখ্যাত satire হলো ‘Gulliver’s Travels’.<br>- তাঁর ছদ্মনাম Isaac Bickerstaff.</p>\r\n<p>• Notable works:<br>- Gulliver's Travels,<br>- A Tale of a Tub,<br>- A Modest Proposal,<br>- The Battle of Books, etc.<br><br>Source:<br>1. Britannica.<br>2. English Essence by Live MCQ.</p>"
+    },
+    {
+      "id": 9,
+      "favorite_id": "144826516",
+      "question": "\"Brevity is the soul of wit\" is taken from which play of William Shakespeare?",
+      "options": {
+        "a": "Othello",
+        "b": "Macbeth",
+        "c": "Hamlet",
+        "d": "King Lear"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Hamlet",
+      "explanation": "<p><strong>Correct answer: Hamlet.</strong><br><br>Hamlet.<br>- Shakespeare রচিত tragedy গুলোর মধ্যে Hamlet is one of the most celebrated tragedies in English literature.<br>- এটিও 5acts বিশিষ্ট এই tragedy টি ১৫৯৯-১৬০১ সালের মধ্যে লেখা এই ট্র্যাজিডিটি প্রকাশিত হয় ১৬০৩ সালে।<br>- Hamlet জার্মানি থেকে নিজ দেশে ফিরে আসে তাঁর বাবার শেষকৃত্যে অংশগ্রহণ করতে এবং জানতে পারে তার চাচা Claudius, তার মা Gertrude কে বিয়ে করেছে এবং এই চাচাই তার বাবার খুনী।<br>- Subsequently, Prince Hamlet adopts various strategies to avenge his father's murder, and the tragic tale unfolds through a series of dramatic events.<br>- এই নাটকে Antagonist অর্থাৎ ভিলেন হিসেবে দেখানো হয়েছে Claudius কে।<br>- শেষাংশে Hamlet এর মৃত্যুর মধ্যে দিয়ে এর সমাপ্তি ঘটে</p>\r\n<p>• Some Famous quotations of Hamlet:<br>- \"To be or not to be, that is the question.\"<br>- \"Frailty, thy name is woman.\"<br><strong>- \"Brevity is the soul of wit.\"</strong><br>- \"Neither a borrower nor a lender be; For loan oft loses both itself and friend.\"<br>- \"There is divinity that shapes our end.\"</p>\r\n<p>• Shakespeare (1564-1616)<br>- তার জন্মস্থান Stratford Avon.<br>- তিনি একাধারে একজন English poet, dramatist এবং actor.<br>- তাকে English national poet বলা হয়।<br>- তাকে 'Bard of Avon' বলা হয়।<br>- He is considered by many to be the greatest dramatist of all time. </p>\r\n<p>• His Notable works:<br>• Tragedy:<br>- Hamlet,<br>- Othello,<br>- King Lear,<br>- Macbeth,<br>- Julius Caesar.</p>\r\n<p>• Comedy:<br>- As You Like It,<br>- The Tempest,<br>- Twelfth Night,<br>- A Midsummer Night's Dream, etc.</p>\r\n<p>• Famous poem:<br>- Shall I Compare Thee to a Summer Day/Sonnet 18,<br>- The Rape of Lucrece,<br>- Venus and Adonis.<br><br>Source: <br>1. Britannica.<br>2. English Essence by Live MCQ.</p>"
+    },
+    {
+      "id": 10,
+      "favorite_id": "143155504",
+      "question": "Who wrote Ode to a Nightingale?",
+      "options": {
+        "a": "William Wordsworth",
+        "b": "John Keats",
+        "c": "P. B. Shelley",
+        "d": "Lord Byron"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "John Keats",
+      "explanation": "<p>• Ode to a Nightingale:<br>- এটি একটি Ode.<br>- এই কবিতাটিকে গণ্য করা যায় Meditation upon art and life হিসেবে।<br><strong>- John Keats মোট ছয়টি গুরুত্বপূর্ণ ode লিখেছেন, তার মধ্যে এই কবিতাটি অন্যতম।</strong></p>\r\n<p>- এই কবিতাটি Nightingale পাখির গানে অনুপ্রাণিত হয়ে লেখা।<br>- পাখিটি কবির বাগানে এসে গান করছিল।<br>- পাখির সাথে কাল্পনিক কথোপকথনে কবি আনন্দিত হচ্ছেন। পাখির আনন্দ স্পর্শ করছে কবিকেও।<br>- দুঃখ-বেদনা পাশ কাটিয়ে তিনি চিরসুখী হতে চান। কিন্তু খেয়াল করে দেখেন, সুখ, সৌন্দর্য, যৌবন সব কিছুই ক্ষণস্থায়ী।<br>- কবিতায় মূলত Nightingale পাখিকে দেখানো হয়েছে অমরত্বের প্রতীক হিসেবে।</p>\r\n<p>• John Keats:<br>- তিনি একজন British Poet.<br>- Romantic period এর লেখক।<br>- He is an English Romantic Lyric Poet who devoted his short life to the perfection of poetry marked by vivid imagery, great sensuous appeal, and an attempt to express a philosophy through classical legend. </p>\r\n<p>• তার Title গুলো হলো:<br>- Poet of Beauty;<br>- Poet of Sensuousness.<br>- এর পাশাপাশি তিনি Physician, Surgeon, এবং Doctor ছিলেন।</p>\r\n<p>• His Famous works:<br>- Ode to psyche;<br>- Ode to a Nightingale;<br>- Ode on a Grecian Urn;<br>- To Autumn;<br>- Ode on Melancholy;<br>- Isabella;<br>- Lamia. </p>\r\n<p> Source: An ABC of English Literature by M Mofizar Rahman, Britannica.</p>"
+    },
+    {
+      "id": 11,
+      "favorite_id": "143155488",
+      "question": "The play \"Englishmen for My Money\" was written by -",
+      "options": {
+        "a": "Thomas Hardy",
+        "b": "George Bernard Shaw",
+        "c": "George Orwell",
+        "d": "William Haughton"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "William Haughton",
+      "explanation": "<p><strong>• The play \"Englishmen for My Money\" was written by William Haughton.</strong></p>\r\n<p>• Englishmen For My Money: Or A Woman Will Have Her Will:<br>- Englishmen for My Money, or A Woman Will Have Her Will হলো এলিজাবেথীয় যুগের একটি কমেডি নাটক, যা ১৫৯৮ সালে William Haughton রচনা করেছিলেন।<br>- Scholars and critics often cite it as the first city comedy.<br>- এই নাটকটি একটি dramatic subgenre সূচনা করেছিল, যা পরবর্তীতে Thomas Dekker, Thomas Middleton, Ben Jonson, এবং অন্যান্যরা পরবর্তী বছর ও দশকে আরও প্রসারিত ও উন্নত করেছিলেন।</p>\r\n<p>• Summary:<br>- গল্পটি আবর্তিত হয় এক ধনী বিধবা মিসেস ফ্লাওয়ারডেলকে নিয়ে, যাকে তিনজন পুরুষ - স্যার লিওনেল ফ্রিভিল, স্যার থমাস লং এবং মাস্টার গ্যালিয়ার্ড - এর প্রতি আকৃষ্ট হয়। প্রতিটি পুরুষ তার স্নেহ ও ভাগ্য জয়ের চেষ্টা করে, কিন্তু মিসেস ফ্লাওয়ারডেল তার নিজের পথ নির্ধারণ করতে দৃঢ়প্রতিজ্ঞ এবং সে এমন ব্যক্তিকে বেছে নেয় যে তার ইচ্ছা পূরণ করতে পারে। নাটকটি সেই সময়ের সামাজিক রীতিনীতি এবং নারী-পুরুষের মধ্যে ক্ষমতার গতিশীলতার উপর একটি বুদ্ধিদীপ্ত এবং বিনোদনমূলক দৃষ্টিপাত। হটনের লেখনী ধারালো ও হাস্যরসাত্মক, এবং চরিত্রগুলি সুসংহত ও স্মরণীয়।</p>\r\n<p>• William Haughton (1575-1605):<br>- William Haughton ছিলেন এলিজাবেথীয় যুগের একজন ইংরেজ নাট্যকার।<br>- তিনি ১৫৯৭ থেকে ১৬০৫ সাল পর্যন্ত সক্রিয় ছিলেন এবং প্রখ্যাত Admiral’s Men (a theatrical company) নাট্যকোম্পানির জন্য নাটক লিখতেন।<br>- He collaborated in many plays with Henry Chettle, Thomas Dekker, John Day and Richard Hathway.<br>- তার সবচেয়ে বিখ্যাত নাটক হলো \"Englishmen For My Money\", এই নাটকটিকেই ইংরেজি ভাষার প্রথম প্রহসন-ভিত্তিক শহুরে কমেডি (City Comedy) হিসেবে ধরা হয়।</p>\r\n<p>• Notable works:<br>- Englishmen For My Money,<br>- The Devil and His Dame,<br>- The English Moor, etc.</p>\r\n<p>Source:<br>1. Britannica.<br>2. Goodreads.com</p>"
+    },
+    {
+      "id": 12,
+      "favorite_id": "140014977",
+      "question": "Who wrote the famous line:<br>“To err is human; to forgive, divine.”?",
+      "options": {
+        "a": "William Shakespeare",
+        "b": "Alexander Pope",
+        "c": "John Milton",
+        "d": "Francis Bacon"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Alexander Pope",
+      "explanation": "<p><strong>• \"To err is human, to forgive, divine.\" This is quoted by Alexander Pope.</strong><br><strong>-  This line is from his book “An Essay on Criticism\".</strong><br><strong>- এর বাংলা অর্থ - মানুষ মাত্রেই ভুল; ক্ষমা করা স্বর্গীয়।</strong></p>\r\n<p>• Alexander Pope:<br>- তিনি Neo-Classical Period- এর Augustan Age এর কবি ও satirist. <br>- তার নাম অনুসারে Augustan Age -এর নামকরণ করা হয় 'Age of Pope'.<br>- তিনি Mock Heroic Poet নামে পরিচিত।<br>- তিনি ইংরেজি সাহিত্যের বুদ্ধিদীপ্ত সাহিত্যিকদের মধ্যে অন্যতম। <br>- তিনি গ্রিক কবি Homer -এর কালজয়ী সৃষ্টি 'The Iliad' এবং 'The Odysse' কাব্যগ্রন্থ ইংরেজিতে অনুবাদ করেন।</p>\r\n<p>• Some famous quotations by Alexander Pope:<br>- 'Charms strike the sight but merit strikes the heart',<br>- 'A little learning is a dangerous thing',<br>- 'To err is human, to forgive is divine',<br>- 'Fools rush in where angels fear to tread',<br>- 'An honest man is the noblest work of God',<br>- 'The proper study of mankind is a man',<br>- 'Hope springs eternal in the human breast'.</p>\r\n<p>• Poems by Alexander Pope:<br>- The Rape of the Lock,<br>- An Essay on Criticism,<br>- The Dunciad,<br>- The Imitation of Horace,<br>- An Essay on Man, etc.</p>\r\n<p>Source:<br>1. Britannica.<br>2. SparkNotes.<br>3. An ABC of English Literature by Dr. M. Mofizar Rahman.</p>"
+    },
+    {
+      "id": 13,
+      "favorite_id": "140014891",
+      "question": "The central Idea or underlying message conveyed by a text is referred to as its:",
+      "options": {
+        "a": "Motif",
+        "b": "Theme",
+        "c": "Tone",
+        "d": "Mood"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Theme",
+      "explanation": "<p>[২০২৩ সাল ভিত্তিক সমন্বিত ৯ ব্যাংক ও ২ আর্থিক প্রতিষ্ঠান। পদের নাম: সিনিয়র অফিসার]</p>\r\n<p><strong>সঠিক উত্তর: খ) theme.</strong></p>\r\n<p>Theme:<br>- The central idea of a literary work.<br>- For example, the major theme of Pride and Prejudice is love, of Othello - jealousy, of Hamlet- Revenge.<br>- A work of literature may have several themes. For example, the themes of Great Expectations are: a child's growth to be a gentleman, love, the power of money, etc.</p>\r\n<p>Other options,<br>Motif:<br>- বারবার আসা কোনো প্রতীক, চিত্র, বা ধারণা। <br>- A motif is a symbolic image or idea that appears frequently in a story. Motifs can be symbols, sounds, actions, ideas, or words. Motifs strengthen a story by adding images and ideas to the theme present throughout the narrative.</p>\r\n<p>Tone:<br>- লেখকের বিষয়ের প্রতি দৃষ্টিভঙ্গি বা মনোভাব।<br>- Tone হলো কীভাবে বলা হচ্ছে, theme হলো কী বলা হচ্ছে।<br>- Tone does not mean quite the same thing in literature as it does for the way people speak, but it’s pretty close; it refers to the “feel” of a piece of writing. It’s a more complex and general quality than, say, an “angry tone of voice”; instead, it is closer to the meaning of “style” or “voice” in writing, possibly referring to any or all of the stylistic qualities of the writing, such as formality, dialect, and atmosphere.</p>\r\n<p>Mood: <br>- পাঠক যে অনুভূতি পায় (emotional atmosphere).<br>- Tone is very closely related to “mood,” or the overall emotional color of a piece. Indeed, these two terms are almost synonymous. The only difference is that mood refers to an emotional quality, whereas tone can refer to emotional and non-emotional qualities alike. So, a “sad tone” is the same thing as a “sad mood”; but you could only say that a piece has a “formal tone,” not a “formal mood,” because formality is not an emotion.</p>\r\n<p>Source:<br>- An ABC of English Literature by M Mofizar Rahman.<br>- Literary.net.</p>"
+    },
+    {
+      "id": 14,
+      "favorite_id": "139241894",
+      "question": "Which of Dickens's novels focuses on the struggles of a young boy in London?",
+      "options": {
+        "a": "Great Expectations",
+        "b": "Oliver Twist",
+        "c": "David Copperfield",
+        "d": "Bleak House"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Oliver Twist",
+      "explanation": "<p><strong>• The required answer is - Oliver Twist.</strong></p>\r\n<p>• Oliver Twist:<br>- এটি Charles Dickens রচিত একটি novel.<br>- Oliver Twist, in full Oliver Twist; or, The Parish Boy’s Progress, একটি উপন্যাস যা Charles Dickens ছদ্মনাম 'Boz' ব্যবহার করে প্রকাশ করেন।<br>- এই উপন্যাসটি ১৮৩৭ সাল থেকে ১৮৩৯ সাল পর্যন্ত ধারাবাহিকভাবে প্রকাশিত হয়।<br>- The novel follows the journey of the titular character, Oliver Twist, an orphan since birth.<br>- লেখক এই কাহিনির মাধ্যমে তৎকালীন লন্ডন শহরের দুরবস্থার চিত্র তুলে ধরেছেন। তিনি সার্থকভাবে দেখিয়েছেন, কীভাবে দারিদ্র্য মানুষকে অপরাধের দিকে ঠেলে দেয়।</p>\r\n<p>• Characters:<br>- Oliver Twist,<br>- Fagin,<br>- Bill Sikes,<br>- Nancy,<br>- Agnes Fleming,<br>- Mr. Brownlow,<br>- Charley Bates, etc.</p>\r\n<p>• সার-সংক্ষেপ:<br>- Oliver Twist একজন অনাথ ছেলে, যার জন্ম ও বেড়ে ওঠা হয় একটি কাজের ঘরে (workhouse)। তার জীবন কঠিন ও সংগ্রামী। কাজের ঘরে সে খাবার চাওয়ার জন্য শাস্তি পায় এবং পরে পালিয়ে লন্ডনে যায়।<br>- লন্ডনে সে Fagin নামে এক চোরের সাথে পরিচিত হয়ে তার দলে জড়িয়ে পড়ে, যেখানে Bill Sikes ও Nancy এর মতো চরিত্রের সঙ্গে তার পরিচয় হয়। Fagin তাকে চুরির প্রশিক্ষণ দিতে চায়, কিন্তু অলিভারের নিষ্পাপ মন তা মেনে নিতে পারে না।<br>- পরে Mr. Brownlow নামে এক দয়ালু ব্যক্তি তাকে উদ্ধার করেন।<br>- কাহিনির শেষে জানা যায়, অলিভার একটি ধনী পরিবারের সন্তান এবং তার জীবন সুখী পরিণতিতে শেষ হয়।<br>- উপন্যাসটি দরিদ্র শিশুদের প্রতি সমাজের নিষ্ঠুরতা, নৈতিকতার লড়াই এবং শ্রেণি বিভেদের বাস্তবতা তুলে ধরেছে।</p>\r\n<p>• Charles Dickens (February 7, 1812 - June 9, 1870):<br>- In full, Charles John Huffam Dickens.<br>- তিনি একজন ব্রিটিশ novelist.<br>- Charles Dickens এর ছদ্মনাম ছিল Boz.<br>- He is the greatest novelist in the Victorian Period.</p>\r\n<p>• His famous work:<br>- David Copperfield; (Autobiography)<br>- Oliver Twist; <br>- Great Expectations;<br>- A Tale of Two Cities;<br>- Hard Times.</p>\r\n<p>Source: Britannica, An ABC of English Literature by M Mofizar Rahman.</p>"
+    },
+    {
+      "id": 15,
+      "favorite_id": "138302332",
+      "question": "Who quoted ‘Corruption wins not more than honesty'?",
+      "options": {
+        "a": "Francis Bacon",
+        "b": "William Wordsworth",
+        "c": "William Blake",
+        "d": "William Shakespeare"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "William Shakespeare",
+      "explanation": "<p>Correct answer: William Shakespeare.<br>- \"Corruption wins not more than honesty.\"<br>- উক্তিটি William Shakespeare রচিত নাটক Henry VIII থেকে নেওয়া হয়েছে।</p>\r\n<p>• Henry VIII:<br>- উইলিয়াম শেক্সপিয়রের একটি Chronicle play.<br>- নাটকটি পাঁচটি অঙ্কে বিভক্ত, যা প্রথমবার ১৬১৩ সালে মঞ্চস্থ হয়েছিল। <br>- পরবর্তীতে ১৬২৩ সালে, লেখকের নিজস্ব পাণ্ডুলিপির প্রতিলিপি থেকে এটি বিখ্যাত ফার্স্ট ফোলিওতে (First Folio) প্রকাশিত হয়।<br>- The play centers on the internal political struggles of King Henry VIII.<br>- The play explores themes of power, pride, the fall from greatness, and the complexities of truth<br><br>• William Shakespeare:<br>- He was an English dramatist and poet of the sixteenth century, এবং The Great Dramatist of All Time.<br>- তিনি একাধারে একজন English poet, dramatist এবং actor.<br>- William Shakespeare was born on 23 April 1564 AD and died on 23 April 1616 AD.<br>- তার জন্মস্থান Stratford Avon.<br>- তাকে English national poet এর পাশাপাশি 'Bard of Avon' বা Swan of Avon বলা হয়।<br>- Dr. Samuel Johnson Shakespeare কে Poet of Human Nature হিসাবেও আখ্যায়িত করেছেন। <br>- Shakespeare তাঁর সাহিত্যি জীবনে মোট ১৫৪ টি Sonnet এবং  ৩৭টি Drama লিখেছেন।<br><br>• Notable works:<br>• Tragedy:<br>- Hamlet,<br>- Othello,<br>- King Lear,<br>- Macbeth,<br>- Titus Andronicus,<br>- Antony and Cleopatra.</p>\r\n<p>• Comedy:<br>- As You Like It,<br>- The Tempest,<br>- Twelfth Night,<br>- A Comedy of Errors,<br>- The Taming of the Shrew,<br>- Much Ado About Nothing,<br>- All's Well That Ends Well,<br>- A Midsummer Night's Dream, etc.</p>\r\n<p>Source:<br>1. Britannica<br>2. An ABC of English Literature, Dr.M. Mofizar Rahman.</p>"
+    },
+    {
+      "id": 16,
+      "favorite_id": "138302291",
+      "question": "The literary term 'Aphorism' means-",
+      "options": {
+        "a": "An indirect reference to another work of literature",
+        "b": "Repetition of a consonant at the beginning of two or more words",
+        "c": "Repetition of a word or phrase at the beginnings of two or more lines",
+        "d": "A short and memorable expression of a universal truth"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "A short and memorable expression of a universal truth",
+      "explanation": "<p><strong>Correct answer: A short and memorable expression of a universal truth.<br><br></strong><strong>• Aphorism:</strong><br>- A terse, memorable expression of a universal truth.<br>- The use of aphorisms reflects the range of an author's experience and adds universality to the text in which it is used.<br>- Aphorism is different from a proverb: A proverb is an anonymous expression of a general truth, while an aphorism is a truth taken out of one's personal experience.<br>- Proverbs are traditional, but aphorisms are individual.</p>\r\n<p>• 'To err is human, to forgive divine' হচ্ছে একটি universal truth যার অর্থ “মানুষ মাত্রেই ভুল” এবং “ক্ষমা করা স্বর্গীয়।<br>- সুতরাং, এই উক্তিটি Aphorism এর একটি উদাহরণ।<br>- উক্তিটি Alexander Pope এর An essay on criticism হতে উদ্ধৃত।<br><br>• Source: <br>1. Britannica.<br>2. An ABC of English Literature, Dr.M. Mofizar Rahman.</p>"
+    },
+    {
+      "id": 17,
+      "favorite_id": "137611265",
+      "question": "Bloomsbury Group is based on which city?",
+      "options": {
+        "a": "Copenhagen",
+        "b": "Newcastle",
+        "c": "London",
+        "d": "Wolferton"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "London",
+      "explanation": "<p><strong>Bloomsbury Group হলো ইংল্যান্ডের একটি ছোট্ট সমিতি যেখানে সাহিত্যিক, দার্শনিক এবং শিল্পীরা অন্তর্ভুক্ত ছিলেন। - এই গোষ্ঠী প্রায় ১৯০৭ থেকে ১৯৩০ সাল পর্যন্ত লন্ডনের Bloomsbury এলাকাতে মিলিত হতো।</strong><br>- তারা প্রধানত Clive, Vanessa Bell এবং Vanessa এর ভাই-বোন Adrian এবং Virginia Stephen (পরবর্তীতে Virginia Woolf) এর বাড়িতে মিলিত হতো।<br>- এই এলাকা ব্রিটিশ মিউজিয়ামের আশেপাশের অঞ্চল।<br>- তারা ২০শ শতকের শুরুতে লন্ডনের Bloomsbury এলাকাতে বসবাস করতেন এবং মিলিত হতেন।</p>\r\n<p>• এই গোষ্ঠীর সদস্যরা নান্দনিক (aesthetic) এবং দার্শনিক (philosophical) বিষয়গুলো নিয়ে আলোচনা করতেন, সাধারণত নিরপেক্ষতা বা agnosticism-এর মানসিকতা নিয়ে। তাদের চিন্তাভাবনায় প্রভাব ফেলেছিল:</p>\r\n<p>Source: Britannica.</p>"
+    },
+    {
+      "id": 18,
+      "favorite_id": "137611256",
+      "question": "An implicit comparison between two different things is:",
+      "options": {
+        "a": "Analogy",
+        "b": "Personification",
+        "c": "Metaphor",
+        "d": "Hyperbole"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Metaphor",
+      "explanation": "<p><strong>An implicit comparison between two different things is: গ) Metaphor.</strong></p>\r\n<p>Metaphor:<br>- A metaphor is an implicit comparison between two different things.<br>- যখন কোনো বাক্যে দুটি ভিন্ন বা বিজাতীয় জিনিসের মাঝে পরোক্ষভাবে বা রূপকার্থে তুলনা করা হয় তাকে বলা হয় Metaphor.<br>- সাধারণত Metaphor দ্বারা এমন দুইটি জিনিসের মধ্যে তুলনা দেওয়া হয় যারা একই রকম বা সদৃশ নয় কিন্তু তাদের মধ্যে কিছু সাধারণ মিল থাকে।</p>\r\n<p>• Metaphor এর কিছু উদাহরণ হলো-<br>- \"Life is but a walking shadow.\"<br>- \"She's all states, and all princes, I\"<br>- \"Revenge is a wild justice.\"<br>- \".He has a heart of stone.\"<br>- \"All the world's a stage, And all the men and women merely players.\"</p>\r\n<p>Other options,<br>ক) Analogy:<br>- a comparison between things that have similar features, often used to help explain a principle or idea.</p>\r\n<p>খ) Personification: (ব্যক্তিরুপ দান)<br>- A figure of speech in which lifeless objects or ideas are given imaginary life.<br>- অর্থাৎ নির্জীব বা জড় বস্তুকে ব্যক্তিরুপে প্রয়োগ করার কৌশল।<br>- Personification এর মাধ্যমে কোন জড় বস্তকে কাল্পনিক জীবন দান করে সেগুলোকে উপমা হিসাবে লেখায় ব্যবহার করা হয়। <br>যেমন:<br>''There lies the port: the vessel puffs her sail:<br>(Tennyson: ''Ulysses'')<br>The vessel has been used as a living being.</p>\r\n<p>ঘ) Hyperbole: <br>- An exaggerated statement or an extreme overstatement.<br>- অতিশয়োক্তি; অত্যুক্তি; অতিরঞ্জন।<br>- কমেডিতে ইচ্ছাকৃতভাবে অতিরঞ্জিত ভাব প্রকাশের জন্য Hyperbole ব্যবহৃত হয়। <br>- Love poetry তে প্রিয়জনের প্রতি তীব্র প্রশংসা জানাতে Hyperbole ব্যবহৃত হয়। <br>- Hyperbole হাসির উদ্রেক অথবা কঠিন সমালোচনা প্রকাশ করতে পারে।</p>\r\n<p>• Example: <br>\"Ten thousand saw I at a glance,\" (Wordsworth: Daffodils). </p>\r\n<p>Source:<br>- An ABC of English Literature by M Mofizar Rahman.<br>- Live MCQ English Essence.</p>"
+    },
+    {
+      "id": 19,
+      "favorite_id": "134996588",
+      "question": "The elegy Thyrsis was written by whom?",
+      "options": {
+        "a": "Alfred Lord Tennyson",
+        "b": "John Keats",
+        "c": "Matthew Arnold",
+        "d": "W.B. Yeats"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Matthew Arnold",
+      "explanation": "<p><strong>“Thyrsis” হলো একটি elegy, যা লিখেছেন Matthew Arnold.</strong><br><br><strong>• Thyrsis:</strong><br>- Matthew Arnold -এর লিখা \"Thyrsis\" হলো একটি elegy কবিতা।<br>- এটি প্রথম প্রকাশিত হয় ১৮৬৬ সালে ম্যাকমিলান'স ম্যাগাজিনে।পরবর্তীতে ১৮৬৭ সালে এটি আর্নল্ডের New Poems -এ অন্তর্ভুক্ত হয়। <br>- এটি Arnold -এর অন্যতম শ্রেষ্ঠ কবিতা হিসেবে বিবেচিত।<br>- “Thyrsis” কবিতায় আর্নল্ড এক জটিল দশ-পঙ্‌ক্তির স্তবক ছন্দে দক্ষতা দেখিয়েছেন।<br>- ২৪ পঙ্ক্তির এই কবিতাটি Arnold তার বন্ধু ও কবি Arthur Hugh Clough এর প্রশংসা করে লিখেন, যিনি ১৮৬১ সালে মারা যান।<br>- কবিতায় Arnold, Clough-কে উপস্থাপন করেছেন “Thyrsis” রূপে—যা প্রাচীন গ্রিক সাহিত্যে রাখাল-কবির নাম হিসেবে ব্যবহৃত হতো।<br>- সমৃদ্ধ pastoral (গ্রামীণ/রাখালজীবনের) চিত্রকল্পের মাধ্যমে আর্নল্ড স্মরণ করেছেন অক্সফোর্ডের সেই প্রাকৃতিক পরিবেশ, যেখানে তারা দুজন ছাত্রজীবনে (১৮৪০-এর দশকে) একসাথে ঘুরে বেড়াতেন। একইসঙ্গে তিনি ফিরে দেখেছেন বিশ্ববিদ্যালয় ছেড়ে আসার পর তাঁদের তরুণ বয়সের আদর্শগুলোর পরিণতি।</p>\r\n<p>• Matthew Arnold:<br>- তিনি একজন বিখ্যাত English Victorian poet এবং literary ও social critic.<br>- তিনি সমসাময়িক সমাজের বিভিন্ন শ্রেণির রুচি ও আচরণের সমালোচনার জন্য পরিচিত।<br>- তিনি শুরুতে inspector of schools হিসেবে কাজ করেন, পরে তিনি professor of poetry হিসেবে যোগ দান করেন Oxford -এ।<br>- তিনি সংস্কৃতির একজন প্রচারক হিসেবে খ্যাত, বিশেষ করে তাঁর বিখ্যাত criticism রচনা Culture and Anarchy (1869)-এর জন্য।<br>- Matthew was the eldest son of the renowned Thomas Arnold.</p>\r\n<p>Source: Britannica.</p>"
+    },
+    {
+      "id": 20,
+      "favorite_id": "134996587",
+      "question": "Famous poem The Solitary Reaper is set in—",
+      "options": {
+        "a": "England",
+        "b": "Ireland",
+        "c": "Scotland",
+        "d": "Russi"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Scotland",
+      "explanation": "<p><strong>সঠিক উত্তর: গ) Scotland.</strong><br>•The Solitary Reaper কবিতাটি রচনা করেছেন William Wordsworth.<br>- কবিতাটি Scotland–এর প্রেক্ষাপটে রচিত।<br>- এখানে কবি একটি স্কটিশ মেয়েকে মাঠে একা ফসল কাটতে ও গান গাইতে দেখেন।<br>- কবিতায় প্রকৃতির সৌন্দর্য এবং সেই মেয়ের গানের গভীর আবেগ ফুটে উঠেছে।<br><br>• The Solitary Reaper: <br>- এটি William Wordsworth রচিত একটি কবিতা।<br>- এই কবিতাটি প্রকাশিত হয় ১৮০৭ সালে। <br> - কবিতায় দেখা যায়, একটা তরুনী মেয়ে স্কটল্যান্ডের গ্রামীন পরিবেশে এবং পাহাড়ী এলাকায় একাকী কাজে মগ্ন।<br>- কাজের পাশাপাশী সে করুন দু:খের গান গুনগুনিয়ে গাইছে।<br>-  The Solitary Reaper  বাংলা অর্থ একাকী শস্যচ্ছেদক(যে ফসল কাটে)।</p>\r\n<p>• William Wordsworth: <br>- William Wordsworth রোমান্টিক যুগের একজন বিখ্যাত কবি। <br>- তিনি ‘Poet of Nature’ নামে পরিচিত। <br>- তার বিখ্যাত কবিতা The Solitary Reaper (একাকী শস্য আহরণকারী)। </p>\r\n<p>• তার অন্যান্য কবিতাগুলো হচ্ছে:<br>- Daffodils,<br>- The Excursion,<br>- The Prelude,<br>- The Recluse,<br>- Lucy etc.</p>\r\n<p>Source: Britannica.</p>"
+    },
+    {
+      "id": 21,
+      "favorite_id": "134996583",
+      "question": "Which play of Shakespeare deals with the character Prospero?",
+      "options": {
+        "a": "The Tempest",
+        "b": "Othello",
+        "c": "Hamlet",
+        "d": "Julius Caesar"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "The Tempest",
+      "explanation": "<p><strong>সঠিক উত্তর: ক) The Tempest.</strong><br><strong>Prospero হলেন Shakespeare–এর নাটক The Tempest–এর প্রধান চরিত্র।</strong><br><br>• The Tempest:<br>- 'The Tempest' by William Shakespeare is a Comedy play/ drama.<br>- এটি 5 act এ বিভক্ত একটি Romance/Tragicomedy, যা ১৬২৩ সালে First Foilo এর অন্তর্ভুক্ত হয়ে প্রকাশিত হয়।<br>- The Tempest হচ্ছে William Shakespeare এর last work বা Swan Song.<br>- Tempest শব্দটির অর্থ হচ্ছে Violent Storm.</p>\r\n<p>• Summary:<br>- এই কমেডিতে Duke Prospero এবং তাঁর কন্যা Miranda এর কথা বলা হয়েছে, যারা কিনা ডিউকের ছোট ভাইয়ের দ্বারা ষড়যন্ত্রের স্বীকার হয়ে এক দূরদ্বীপে নির্বাসিত হয়।<br>- এই নাটকে Propero কে supernatural powers এর অধিকারী হিসেবে দেখানো হয়েছে যার আয়ত্ত্বে থাকে Ariel এবং Caliban নামক দুইটি supernatural creature.<br>- নাটকের শুরুতেই দেখা যায় Prospero তার জাদু শক্তির ব্যবহার করে সমুদ্রে এক ভয়াবহ ঝড়ের সৃষ্টি করেছেন, যার ফলে নাটকের অন্য চরিত্র গুলো তার নির্বাসিত স্বীপে এসে পৌঁছেছে।<br>- Prospero, using his knowledge of magic and sorcery, conjures a storm (the tempest) to shipwreck his brother Antonio, who had usurped his position and cast him out.</p>\r\n<p>• Main Characters: <br>- Prospero (Duke),<br>- Miranda(Heroine),<br>- Ariel (Supernatural creature - good character),<br>- Caliban (Supernatural creature - bad in character),<br>- Antony (Villain/ brother of Duke),<br>- Ferdinand (Hero),<br>- Gonzalo, etc.</p>\r\n<p>• Famous quotations from The Tempest: <br>- “Hell is empty and all the devils are here.”<br>- “We are such stuff as dreams are made on, and our little life is rounded with a sleep.”<br>- “This thing of darkness, I acknowledge mine.”<br>- “Thought is free.”<br>- “O, brave new world, that has such people in't!”<br>- “Awake, dear heart, awake. Thou hast slept well. Awake.”<br>- “Misery acquaints a man with strange bedfellows.”</p>\r\n<p>• William Shakespeare (1564-1616):<br>- William Shakespeare was born on 23 April 1564 AD and died on 23 April 1616 AD.<br>- তার জন্মস্থান Stratford-upon-Avon.<br>- তিনি একাধারে একজন English poet, dramatist এবং actor.<br>- তাকে English national poet বলা হয়।<br>- তাকে 'Bard of Avon' বা Swan of Avon বলা হয়।<br>- Shakespeare wrote a total of 37 plays and 154 sonnets.<br><br>Source: Britannica.</p>"
+    },
+    {
+      "id": 22,
+      "favorite_id": "134996572",
+      "question": "Who of the following writers is considered the most renowned satirist in English literature?",
+      "options": {
+        "a": "Alfred Lord Tennyson",
+        "b": "Jonathan Swift",
+        "c": "Alexander Pope",
+        "d": "Thomas Hardy"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "Jonathan Swift",
+      "explanation": "<p><strong>সঠিক উত্তর: খ) Jonathan Swift.<br>- ইংরেজি সাহিত্যে সবচেয়ে বিখ্যাত satirist হিসেবে যাকে ধরা হয়, তিনি হলেন Jonathan Swift.</strong><br><br>• Jonathan Swift (1667-1745):<br>- তিনি একজন Anglo-Irish author এবং clergyman ছিলেন।<br>- তিনি Neoclassical period -এর অন্তর্ভুক্ত Augustan age -এর একজন Author.<br>- Jonathon Swift, an Anglo-Irish author, who was the foremost prose satirist in the English language.<br>- অর্থাৎ, ইংরেজি সাহিত্যের সবচেয়ে বিখ্যাত ব্যঙ্গরচয়িতা বা satirist হলেন Jonathan Swift.<br>- তার রচিত বিখ্যাত satire হলো ‘Gulliver’s Travels’.<br>- তাঁর ছদ্মনাম Isaac Bickerstaff.</p>\r\n<p>• Notable works:<br>- Gulliver's Travels (Novel),<br>- The Battle of Books,<br>- A Tale of a Tub (Prose Satire),<br>- A Modest Proposal (Satiric Essay),<br>- Argument Against Abolishing Christianity (Essay),<br>- A Journey to Stella (Collection of letters from Swift to Stella).</p>\r\n<p>Source:<br>- Britannica.<br>- Live MCQ English Essence.</p>"
+    },
+    {
+      "id": 23,
+      "favorite_id": "134233982",
+      "question": "Who wrote 'The Winter’s Tale'?",
+      "options": {
+        "a": "Ben Jonson",
+        "b": "John Milton",
+        "c": "Christopher Marlowe",
+        "d": "William Shakespeare"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "William Shakespeare",
+      "explanation": "<p> The Winter's Tale:<br>-<strong> এটি William Shakespeare -এর লেখা 5 acts </strong>বিশিষ্ট একটি play.<br>- যা ১৬০৯-১১ সালের মধ্যে রচিত এবং লন্ডনের Globe Theatre মঞ্চস্থ হয়।<br>- The play was first published in the First Folio edition of Shakespeare’s plays in 1623.<br>- The plot was based on Robert Greene’s book \"Pandosto\" (1588).<br>- Shakespeare -এর শেষের দিকে রচিত নাটকগুলির মধ্যে একটি, মূলত 'The Winter's Tale' একটি romantic comedy, যার মধ্যে tragedy-এর উপাদানও রয়েছে।<br>- \"The Winter's Tale\" সাধারণত মানবীয় অনুভূতির জটিলতাগুলির (বিশেষত ঈর্ষা, ক্ষমা, এবং অনুসন্ধানের) জন্য প্রশংসিত হয়।<br>- নাটকটি তার Pastoral উপাদানগুলির (with the idyllic setting of Bohemia) এবং Tragi-comedy-এর মিশ্রণের (blending) জন্যও গুরুত্ব পেয়েছে।</p>\r\n<p>• William Shakespeare:<br>- William Shakespeare was born on 23 April 1564 AD and died on 23 April 1616 AD.<br>- তার জন্মস্থান Stratford Avon.<br>- তিনি একাধারে একজন English poet, dramatist এবং actor.<br>- তাকে English national poet বলা হয়।<br>- তাকে 'Bard of Avon' বা Swan of Avon বলা হয়।<br>- Shakespeare wrote a total of 37 plays and 154 sonnets.</p>\r\n<p>• Comedies of Shakespeare:<br>- As You Like It,<br>- The Tempest,<br>- Twelfth Night,<br>- A Comedy of Errors,<br>- The Taming of the Shrew,<br>- Much Ado about Nothing,<br>- A Midsummer Night's Dream.</p>\r\n<p>Source:<br>1. Britannica.<br>2. An ABC of English Literature, Dr. M Mofizar Rahman.</p>"
+    },
+    {
+      "id": 24,
+      "favorite_id": "122465602",
+      "question": "In Hamlet, Hamlet was the prince of _____.",
+      "options": {
+        "a": "France",
+        "b": "Scotland",
+        "c": "Denmark",
+        "d": "England"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Denmark",
+      "explanation": "<p><strong>• In Hamlet, Hamlet was the prince of <u>Denmark</u>.</strong><br><br><strong>• Hamlet:</strong><br>- William Shakespeare রচিত tragedy গুলোর মধ্যে Hamlet is one of the most celebrated tragedies in English literature.<br>- এটি একটি 5acts বিশিষ্ট tragedy.<br>- ১৫৯৯-১৬০১ সালের মধ্যে লেখা এই tragedy টি প্রকাশিত হয় 1603 সালে।<br>- এর কেন্দ্রীয় চরিত্র Prince Hamlet ছিলেন <strong>'prince of Denmark'</strong> যিনি  জার্মানি থেকে নিজ দেশে ফিরে আসে তাঁর বাবার শেষকৃত্যে অংশগ্রহণ  করতে এবং জানতে পারে যে তার চাচা Claudius তার মাকে বিয়ে করেছে এবং এই চাচাই তার বাবার খুনী।<br>- সত্য উদঘাটনের পর বিভিন্ন ঘটনা প্রবাহের মধ্যে দিয়ে tragedy -এর কাহিনী সামনে এগিয়ে যায় এবং শেষাংশে Hamlet -এর মৃত্যুর মধ্যে দিয়ে এই tragedy -র সমাপ্তি ঘটে।</p>\r\n<p><strong>• Main characters of Hamlet:</strong><br>- Hamlet,<br>- Ophelia,<br>- Claudius,<br>- Gertrude,<br>- Horatio (Loyal and Best friend of Hamlet),<br>- Polonius (Ophelia's Father),<br>- Laertes (Ophelia's brother), etc.</p>\r\n<p>• Famous quotations from Hamlet:<br>- \"To be or not to be that is the question.\"<br>- \"Frailty, thy name is woman.\"<br>- \"Brevity is the soul of wit.\"<br>- \"Listen to many, speak to a few.\"<br>- \"Though this be madness, yet there is method in't.\"<br>- \"Conscience does make cowards of us all.\"<br>- \"One may smile, and smile, and be a villain.\"<br>- \"There's a divinity that shapes our ends,<br>Rough-hew them how we will.\"<br>- \"There is nothing either good or bad, but thinking makes it so.\"<br>- \"There are more things in heaven and earth, Horatio,<br>Than are dreamt of in your philosophy.\"</p>\r\n<p>• William Shakespeare (1564-1616):<br>- William Shakespeare একাধারে একজন English poet, dramatist এবং actor.<br>- তাকে 'English National Poet' বলা হয়।<br>- Stratford-upon-Avon -এ জন্মগ্রহণ করেছেন বলে তাকে Bard of Avon বা Swan of Avon বলা হয়।<br>- তাকে অনেকেই সর্বকালের সর্বশ্রেষ্ঠ নাট্যকার হিসেবে বিবেচনা করেন।<br>- Shakespeare occupies a unique position in world literature.<br>- William Shakespeare মূলত তাঁর Drama and Sonnet -এর জন্য পরিচিত।<br>- তিনি মোট ১৫৪ টি sonnet এবং ৩৭ টি play লিখেছেন।<br>- এছাড়া তিনি Long narrative poem ও লিখেছেন।<br><br>Source:<br>1. Britannica.<br>2. SparkNotes.</p>"
+    },
+    {
+      "id": 25,
+      "favorite_id": "118315299",
+      "question": "The most famous romantic poet of English literature is-",
+      "options": {
+        "a": "Alexander Pope",
+        "b": "William Wordsworth",
+        "c": "T. S. Eliot",
+        "d": "John Dryden"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "William Wordsworth",
+      "explanation": "<p><strong>• The most famous romantic poet of English literature is William Wordsworth. (43rd BCS Preli)</strong><br>- He was one of the founders of English Romanticism and one of its most central figures and important intellectuals.</p>\r\n<p><strong>• William Wordsworth (1770-1850):</strong><br>- He is one of the major poets of the Romantic Period.<br>- William Wordsworth এবং Samuel Taylor Coleridge রচিত Lyrical Ballads এর প্রকাশনার মাধ্যমে Romantic Period এর সূচনা হয় ।<br>- Lyrical Ballads, William Wordsworth and Samuel Taylor এর যৌথ প্রকাশনা কিন্তু এই প্রকাশনায় William Wordsworth এর অবদান ছিল সর্বোচ্চ ছিল বলে তাকে The father of Romantic Age বলা হয়।<br>- William Wordsworth তার সাহিত্য জীবনের শুরুতে The French Revolution দ্বারা অনুপ্রাণিত হোন এবং তার কবিতায় এর প্রভাব দেখা যায়।<br>- French Revolution এর মূল ছিল Liberty, equality and Fraternity.<br>- Wordsworth, one of them, who greeted the revolution with enthusiasm.</p>\r\n<p>• তাঁর আরো কয়েকটি উপাধি হচ্ছে - <br>- Poet of Nature<br>- Poet of Childhood<br>- Lake Poet.<br><br>• Notable works of William Wordsworth:<br>- Lyrical Ballads,<br>- The Daffodils,<br>- Resolution and Independence,<br>- Lucy Poems,<br>- The Solitary Reaper,<br>- Tintern Abbey,<br>- The Excursion,<br>- Michael,<br>- Ode on Immortality,<br>- To the Cuckoo,<br>- The Prelude,<br>- The Recluse, etc.</p>\r\n<p>• The only play by William Wordsworth is The Borderers.<br>- The Borderers, a tragedy in five acts, was Wordsworth's first major work.</p>\r\n<p>• অন্যদিকে, <br>• John Dryden হচ্ছেন The restoration Period/The Neoclassical period এর একজন English poet, dramatist, and literary critic, যিনি তাঁর সময়ের সাহিত্যিক প্রেক্ষাপটে এতটাই আধিপত্য বিস্তার করেছিলেন যে, তাঁর যুগটিকে 'The Age of Dryden' হিসাবেও ধরা হয়।</p>\r\n<p>• Alexander Pope is the most famous poet of the Augustan Age/the Neoclassical period.<br>- এই যুগের অন্যতম সাহিত্যিক ছিলেন Alexander Pope যিনি এই যুগে তাঁর লেখনীর দ্বারা আধিপত্য বিস্তার করেছিলেন।<br>- তিনি একজন Mock Heroic Poet হিসাবেও পরিচিত।</p>\r\n<p>• T. S. Eliot কে Modern Period বা বিংশ শতাব্দীর অন্যতম শ্রেষ্ঠ সাহিত্যিক বিবেচেনা করা হয়। <br>- তিনি একাধারে  American-English poet, playwright, literary critic, এবং editor.<br>- তিনি ১৯৪৮ সালে সাহিত্যে Nobel Prize পান।<br><br>Source:<br>1. Britannica.<br>2. Poetry Foundation.</p>"
+    },
+    {
+      "id": 26,
+      "favorite_id": "117100059",
+      "question": "What is a central theme of Beowulf?",
+      "options": {
+        "a": "Betrayal and politics",
+        "b": "Science and discovery",
+        "c": "Heroism and loyalty",
+        "d": "Love and romance"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Heroism and loyalty",
+      "explanation": "<p><em><strong>• Beowulf-এর কেন্দ্রীয় থিম হলো “Heroism and loyalty” (গ)। </strong>এ কাব্যিক গল্পে বীরত্ব এবং আনুগত্যের মূল্যবোধের গুরুত্ব প্রতিফলিত হয়। বেওউলফ, যিনি তার দেশ ও জনগণের সুরক্ষায় নিজেকে উৎসর্গ করে, বিভিন্ন দানব ও শত্রুর সঙ্গে লড়াই করে, তা দেখায় যে সত্যিকারের বীরত্ব কেবল শারীরিক শক্তি নয়, বরং নৈতিক দায়বদ্ধতা ও আনুগত্যের মধ্যেও নিহিত। তিনি রাজা ও জনগণের প্রতি বিশ্বস্ত থাকেন, যা সমাজে সম্মান এবং কর্তব্যবোধের প্রতীক। গল্পটি শক্তি, সাহস, ন্যায় এবং বন্ধুত্বের গুরুত্বকে তুলে ধরে, যা মূলত মানুষের চরিত্র ও মানবিক মূল্যবোধকে কেন্দ্র করে।</em></p>\r\n<p><strong>• বিস্তারিত আলোচনা:</strong><br>• Beowulf is Old English literature's earliest epic and highest achievement.<br>- It is the first long poem in English literature<br>- এটি ৬ শতকের একটি প্রায় ৩ হাজার লাইনের long Heroic poem, যার লেখক এর নাম খুঁজে পাওয়া যায় নি।<br>- Beowulf কে highest achievement of Old English literature হিসাবে বিবেচনা করা হয়ে থাকে।<br>-  এছাড়াও, এটাকে Earliest European vernacular epic ও বলা হয়।</p>\r\n<p>• এই Epic টি দুইটি ভাগে বিভক্ত।<br>- এই কবিতার প্রধান চরিত্র  Beowulf একজন Scandinavian hero.<br>-  Beowulf এর তিনটি দু:সাহসিক অভিযানকে কেন্দ্র করে কাহিনী এগিয়ে চলে। <br>- ধারনা করা হয় এই Epic এর প্রধান চরিত্র Beowulf এর নাম অনুযায়ী এর নামকরণ করা হয়েছে।<br>- It opens in Denmark, where King Hrothgar has a splendid mead hall known as Heorot, a place of celebration and much merriment.'<br>- There is no evidence of a historical Beowulf, but some characters, sites, and events in the poem can be historically verified<br>- It is also the first monument in English literature.</p>\r\n<p>Source: Live MCQ Lecture and Britannica.com</p>"
+    },
+    {
+      "id": 27,
+      "favorite_id": "117099886",
+      "question": "Literary usage defines \"irony\" as:",
+      "options": {
+        "a": "The use of exaggeration for emphasis",
+        "b": "A contrast between expectation and reality",
+        "c": "A story with no plot",
+        "d": "The repetition of sounds at the beginning of words"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "A contrast between expectation and reality",
+      "explanation": "<p><strong><em>• সঠিক উত্তর হলো খ) A contrast between expectation and reality।</em></strong></p>\r\n<p><em>সাহিত্যিক দৃষ্টিকোণ থেকে \"আইরনি\" বা বিদ্রূপ হলো এমন একটি রূপকৌশল যেখানে ঘটনার বাস্তবতা আমাদের প্রত্যাশার সঙ্গে পুরোপুরি মিলিত হয় না। মানে, আমরা কিছু একটা আশা করি, কিন্তু বাস্তবতা তা উল্টোদিক থেকে প্রকাশ পায়। উদাহরণস্বরূপ, যদি একজন অগ্নিনির্বাপক নিজেই আগুনে পুড়ে যায়, সেটি একটি আয়রনির উদাহরণ। এখানে প্রত্যাশা হলো অগ্নিনির্বাপক আগুন থেকে নিরাপদ থাকবেন, কিন্তু বাস্তবতা সম্পূর্ণ বিপরীত। সাহিত্যিক কাজগুলোতে এই ধরনের ব্যবধান পাঠককে অবাক করে এবং গভীর অর্থ বা সামাজিক বিদ্রূপ তুলে ধরে। তাই আয়রনি মূলত প্রত্যাশা ও বাস্তবতার মধ্যে পার্থক্যকে কেন্দ্র করে তৈরি হয়।</em></p>\r\n<p><strong>• বিস্তারিত আলোচনা:</strong></p>\r\n<p><strong>Irony:</strong><br>- 'Irony' is an Expression or statement where real meaning is concealed or contradicted.<br>- 'Irony' বলতে মূলত বক্তব্য জোরালো করতে নিজ চিন্তার সম্পূর্ণ বিপরীত কিছু বলে মনোভাব ব্যক্তকরণকে বুঝায়।<br>- প্রশংসার আদলে নিন্দা কিংবা নিন্দার আদলে প্রশংসা করা হয় এরূপ রচনা দ্বারা।<br>- অর্থাৎ এ ধরনের উক্তি দ্বারা যা বলা হয়, প্রকৃত অর্থ তার সম্পূর্ন বিপরীত বুঝানো হয়।<br>- The first sentence of Pride and Prejudice is an example of irony:<br>- \"It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\"<br>- This line from Samuel Coleridge's \"Rime of the Ancient Mariner\" describes the dark irony of a sailor dying of thirst on his boat while he is surrounded by water.</p>\r\n<p>Source: Britannica.</p>"
+    },
+    {
+      "id": 28,
+      "favorite_id": "117099879",
+      "question": "In 1984, what is Big Brother?",
+      "options": {
+        "a": "The protagonist",
+        "b": "The leader of the Party",
+        "c": "Winston’s friend",
+        "d": "A secret rebel organization"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "The leader of the Party",
+      "explanation": "<p><em>• \"1984\" -এ “Big Brother” হলো পার্টির নেতা। এটি কোনো ব্যক্তি হিসেবে বাস্তবিকভাবে উপস্থিত না থাকলেও, সে সরকার এবং পার্টির সর্বদৃষ্টি ও সর্বশক্তির প্রতীক। পার্টি জনগণকে সর্বদৃশ্যে পর্যবেক্ষণ করে এবং সকল কর্মকাণ্ড নিয়ন্ত্রণ করে, যাতে কেউ সরকারের বিরুদ্ধে বিদ্রোহ করতে না পারে। “Big Brother is watching you” এই স্লোগান মানুষের মনে ভয় এবং আনুগত্য জন্মায়। তাই Big Brother কোনো গোপন বিদ্রোহী বা উইনস্টনের বন্ধু নয়, বরং সমাজের ওপর সর্বদৃষ্টিসহ রাজতান্ত্রিক ক্ষমতার প্রতীক। পার্টির আধিপত্য বজায় রাখার জন্য Big Brother-এর উপস্থিতি একটি মানসিক ও রাজনৈতিক প্রভাব তৈরি করে।</em></p>\r\n<p><strong><em>উত্তর: খ) The leader of the Party.</em></strong></p>\r\n<p><strong>• বিস্তারিত আলোচনা:</strong></p>\r\n<p><strong>• Nineteen Eighty-four:</strong><br>- This novel is written by George Orwell.<br>- এটি প্রথম প্রকাশিত হয় ১৯৪৯ সালে।<br>- কাহিনী গড়ে উঠেছে Oceania নামক রাষ্ট্রে যেটি একটি কর্তৃত্ববাদী রাষ্ট্র।<br>- সরকার জনগণের ব্রেইনওয়াশ করে এবং বিন্দুমাত্র সমালোচনাও না করতে উৎসাহ দেয়।<br>- মুক্তচিন্তা এবং বাক স্বাধীনতা বলে কিছু ছিলো না সেই রাষ্ট্রে।<br>- সরকার দলের স্লোগান ছিল: “War is peace,” “Freedom is slavery,” and “Ignorance is strength.”<br>- কেন্দ্রীয় চরিত্রের নাম: Winston Smith যাকে সরকারের পক্ষ থেকে ইতিহাস কিংবা বিকৃত ইতিহাস লেখার দায়িত্ব দেয়া হয়। পরবর্তীতে সে প্রকৃত সত্য উদঘাটনে - ব্রত হয় এবং এক পর্যায়ে সরকারের বিরুদ্ধে বিদ্রোহ করে।<br>- এর আগে, সে Julia নামের এক মেয়ের প্রেমে পড়ে। পাশাপাশি তারা গোপনে সরকার বিরোধী বিভিন্ন দলের সাথে যোগাযোগ রাখতে শুরু করে। যদিও তাদের অগোচরে তাদেরকে সরকারী নজরদারির মধ্যে রাখা হয়।<br>- এরপর Thought Criminal হিসেবে তাদেরকে গ্রেফতার করা হয় এবং সংশোধনাগারে পাঠানো হয়।</p>\r\n<p>• Important terms: Newspeak, Big Brother, Thought Police.</p>\r\n<p><strong>• George Orwell:</strong><br>- তার আসল নাম হলো Eric Arthur Blair.<br>- তিনি ব্রিটিশ ভারতে জন্মগ্রহণ করেন। Animal Farm এবং Nineteen Eighty-Four George Orwell দুটি বিখ্যাত উপন্যাস।</p>\r\n<p><strong>• Famous Works:</strong><br><strong>Novels:</strong><br>- Animal Farm (1945 – a fairy story)<br>- Nineteen Eighty-Four<br>- Burmese Days<br>- Coming up for Air.</p>\r\n<p><strong>Story/Essay:</strong><br>- Shooting an Elephant<br>- A Hanging.</p>\r\n<p>Source: Encyclopedia Britannica.</p>"
+    }
+  ]
+}

@@ -3,7 +3,8 @@ import {
   BookOpen, Hash, Globe, CheckSquare,
   Type, Clock, PenTool, Users, Mic, MessageSquare, ArrowLeftRight,
   HelpCircle, MapPin, Layout, AlertCircle, Crosshair, Trophy,
-  Shuffle
+  Shuffle,
+  Languages, Flag, Brain, FlaskConical, Cpu, Mountain, Scale, Calculator, Landmark, BookText
 } from 'lucide-react'
 
 // ── Bangla Grammar topics ──────────────────────────────────────
@@ -107,4 +108,28 @@ export const BANGLA_SAHITYA_TOPICS = [
   { id: 'others',             name: 'বিবিধ সাহিত্য',            shortName: 'বিবিধ',           icon: BookOpen, color: '#06b6d4', questions: others.questions            || [] },
 ]
 
-export const ALL_TOPICS = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS]
+// ── LiveMCQ module ─────────────────────────────────────────────
+// 2000+ questions imported from the user's LiveMCQ favourites, categorized into
+// 13 subjects. Same MCQ shape as Bangla/English topics (question, options a–e,
+// correct_answer, explanation) — content may carry HTML (sup/sub, <img>, tables)
+// rendered via RichText. To keep the initial JS bundle small, each topic's
+// `questions` are lazy-loaded from /lmdata/<file>.json on demand (see
+// data/livemcqLoader.js + hooks/useLiveMcq.js). Metadata (name/icon/color) is
+// available immediately so the module lists and routes work before data loads.
+export const LIVEMCQ_TOPICS = [
+  { id: 'lm_bangla_sahitya',   name: 'বাংলা সাহিত্য',                shortName: 'বাংলা সাহিত্য',   icon: BookText,     color: '#f472b6', file: 'bangla_sahitya',    questions: [] },
+  { id: 'lm_bangla_byakoron',  name: 'বাংলা ব্যাকরণ',                shortName: 'বাংলা ব্যাকরণ',   icon: Languages,    color: '#22d3ee', file: 'bangla_byakoron',   questions: [] },
+  { id: 'lm_english_lit',      name: 'English Literature',            shortName: 'Eng. Literature', icon: BookOpen,     color: '#a78bfa', file: 'english_literature', questions: [] },
+  { id: 'lm_english_grammar',  name: 'English Grammar',               shortName: 'Eng. Grammar',    icon: Type,         color: '#38bdf8', file: 'english_grammar',   questions: [] },
+  { id: 'lm_bd_affairs',       name: 'বাংলাদেশ বিষয়াবলি',            shortName: 'বাংলাদেশ',         icon: Flag,         color: '#22c55e', file: 'bd_affairs',        questions: [] },
+  { id: 'lm_intl_affairs',     name: 'আন্তর্জাতিক বিষয়াবলি',         shortName: 'আন্তর্জাতিক',      icon: Globe,        color: '#f59e0b', file: 'intl_affairs',      questions: [] },
+  { id: 'lm_mental_ability',   name: 'মানসিক দক্ষতা',                shortName: 'মানসিক দক্ষতা',    icon: Brain,        color: '#e879f9', file: 'mental_ability',    questions: [] },
+  { id: 'lm_science',          name: 'সাধারণ বিজ্ঞান',               shortName: 'বিজ্ঞান',          icon: FlaskConical, color: '#34d399', file: 'general_science',   questions: [] },
+  { id: 'lm_ict',              name: 'কম্পিউটার ও তথ্য প্রযুক্তি',   shortName: 'কম্পিউটার',        icon: Cpu,          color: '#60a5fa', file: 'ict',               questions: [] },
+  { id: 'lm_geography',        name: 'ভূগোল',                        shortName: 'ভূগোল',            icon: Mountain,     color: '#fb923c', file: 'geography',         questions: [] },
+  { id: 'lm_ethics',           name: 'নৈতিকতা, মূল্যবোধ ও সু-শাসন',   shortName: 'নৈতিকতা',          icon: Scale,        color: '#fbbf24', file: 'ethics',            questions: [] },
+  { id: 'lm_math',             name: 'গণিত',                         shortName: 'গণিত',             icon: Calculator,   color: '#f87171', file: 'math',              questions: [] },
+  { id: 'lm_banking',          name: 'ব্যাংকিং',                      shortName: 'ব্যাংকিং',        icon: Landmark,     color: '#2dd4bf', file: 'banking',           questions: [] },
+]
+
+export const ALL_TOPICS = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS, ...LIVEMCQ_TOPICS]
