@@ -14,6 +14,7 @@ export const SECTIONS = [
   { id: 'pnc',       label: 'বিন্যাস-সমাবেশ',      icon: 'nPr', color: '#6d28d9' },
   { id: 'set',       label: 'সেট ও সম্ভাবনা',      icon: '∩', color: '#be123c' },
   { id: 'lcm',       label: 'ল.সা.গু-গ.সা.গু',    icon: '÷', color: '#b45309' },
+  { id: 'real-number', label: 'বাস্তব সংখ্যা',      icon: 'ℝ', color: '#6d28d9' },
   { id: 'profit',    label: 'মুনাফা',              icon: '৳', color: '#0d9488' },
   { id: 'percentage',label: 'শতকরা',               icon: '%', color: '#1d4ed8' },
   { id: 'unitary',   label: 'ঐকিক নিয়ম',           icon: '⚖', color: '#be123c' },

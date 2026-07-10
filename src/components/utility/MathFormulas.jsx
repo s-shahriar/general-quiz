@@ -16,6 +16,7 @@ import PncSection from './math-formulas/sections/PncSection'
 import ProfitSection from './math-formulas/sections/ProfitSection'
 import QuadraticSection from './math-formulas/sections/QuadraticSection'
 import QuadSection from './math-formulas/sections/QuadSection'
+import RealNumberSection from './math-formulas/sections/RealNumberSection'
 import SeriesSection from './math-formulas/sections/SeriesSection'
 import SetSection from './math-formulas/sections/SetSection'
 import SolidSection from './math-formulas/sections/SolidSection'
@@ -130,6 +131,7 @@ export default function MathFormulas() {
         <PncSection />
         <SetSection />
         <LcmSection />
+        <RealNumberSection />
         <ProfitSection />
         <PercentageSection />
         <UnitarySection />

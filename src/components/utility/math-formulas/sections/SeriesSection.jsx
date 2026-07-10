@@ -12,7 +12,11 @@ export default function SeriesSection() {
           </p>
           <div className="mf-series-card"><div className="step">n-তম পদ (Tₙ)</div><div className="formula"><Tex>{"T_n = a + (n-1)d"}</Tex></div></div>
           <div className="mf-series-card"><div className="step">n পদের সমষ্টি (Sₙ)</div><div className="formula"><Tex>{"S_n = \\dfrac{n}{2}\\bigl[2a+(n-1)d\\bigr]"}</Tex></div></div>
-          <div className="mf-series-card"><div className="step">গাণিতিক গড় (AM)</div><div className="formula">AM = (প্রথম পদ + শেষ পদ) / 2</div></div>
+          <div className="mf-series-card"><div className="step">গাণিতিক গড় (AM)</div><div className="formula"><Tex>{"AM = \\dfrac{\\text{প্রথম পদ} + \\text{শেষ পদ}}{2}"}</Tex></div></div>
+          <div className="mf-series-card" style={{borderLeft:'3px solid #0fdba8'}}>
+            <div className="step">ধারার সমষ্টি (প্রথম ও শেষ পদ দিয়ে)</div>
+            <div className="formula"><Tex>{"\\text{ধারার সমষ্টি} = \\dfrac{\\text{শেষ পদ} + \\text{প্রথম পদ}}{2} \\times \\text{পদ সংখ্যা}"}</Tex></div>
+          </div>
           <div className="mf-series-card" style={{borderLeft:'3px solid #a78bfa'}}>
             <div className="step">পদ সংখ্যা (Number of Terms)</div>
             <div className="formula"><Tex>{"n = \\dfrac{\\text{শেষ পদ} - \\text{প্রথম পদ}}{\\text{সা. অন্তর}} + 1"}</Tex></div>
