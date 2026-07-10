@@ -1,18 +1,21 @@
 import { Bookmark, Lightbulb, X } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { ALL_TOPICS } from '../data/index.js'
+import { GROUP_TOPICS } from '../data/groups.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import RichText from './shared/RichText'
 import { useAllModulesReady } from '../data/contentLoader.js'
 
 export default function ImportantScreen({ topics: topicsProp, important: importantProp, onUnmark: onUnmarkProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const importantCtx = useImportantContext()
   const important = importantProp ?? importantCtx.value
   const onUnmark = onUnmarkProp ?? importantCtx.remove
   const onHome = onHomeProp ?? (() => navigate('/'))
-  const topics = topicsProp ?? ALL_TOPICS
+  // Scope to the section that opened this screen (?g=bangla…), else all general.
+  const topics = topicsProp ?? GROUP_TOPICS[searchParams.get('g')] ?? ALL_TOPICS
 
   // Saved uids can belong to any module — load all content to render them.
   const lmReady = useAllModulesReady()

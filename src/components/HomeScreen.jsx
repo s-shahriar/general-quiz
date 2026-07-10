@@ -4,6 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
+import { uidOf } from '../lib/qid.js'
 import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
 import { useModuleReady } from '../data/contentLoader.js'
@@ -23,9 +24,10 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
 
   const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : activeGroup === 'livemcq' ? LIVEMCQ_TOPICS : GK_TOPICS
 
-  // Progress totals are just the sizes of the uid sets — no question data needed.
-  const totalNailed = mastered.size
-  const totalImportant = important?.size ?? 0
+  // Totals are scoped to THIS section's topics (not global) — a flag set in one
+  // module must not inflate another module's card. Needs the module loaded.
+  const totalNailed = allTopics.reduce((s, t) => s + t.questions.filter(q => mastered.has(uidOf(q))).length, 0)
+  const totalImportant = allTopics.reduce((s, t) => s + t.questions.filter(q => important?.has(uidOf(q))).length, 0)
 
   return (
     <div className="home anim-fade">
@@ -70,8 +72,8 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
             totalNailed={totalNailed}
             totalImportant={totalImportant}
             onExam={() => navigate('/exam')}
-            onNailed={() => navigate('/nailed')}
-            onImportant={() => navigate('/important')}
+            onNailed={() => navigate('/nailed?g=' + activeGroup)}
+            onImportant={() => navigate('/important?g=' + activeGroup)}
           />
 
           <p className="section-label">

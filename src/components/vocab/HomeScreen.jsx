@@ -1,9 +1,12 @@
 import { BookMarked } from 'lucide-react'
+import { uidOf } from '../../lib/qid.js'
 import ActionCardsRow from '../shared/ActionCardsRow'
 
 export default function VocabHomeScreen({ topics, mastered, important, onSelectTopic, onExam, onNailed, onImportant }) {
-  const totalNailed    = mastered.size
-  const totalImportant = important?.size ?? 0
+  // Scoped to vocab topics only (not the global set), so vocab's card reflects
+  // vocab progress — not flags from the general modules.
+  const totalNailed    = topics.reduce((s, t) => s + t.questions.filter(q => mastered.has(uidOf(q))).length, 0)
+  const totalImportant = topics.reduce((s, t) => s + t.questions.filter(q => important?.has(uidOf(q))).length, 0)
 
   return (
     <div className="home anim-fade">

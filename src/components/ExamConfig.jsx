@@ -25,11 +25,12 @@ export default function ExamConfig() {
     : groupId === 'livemcq' ? LIVEMCQ_TOPICS
     : GK_TOPICS
 
+  // Important count is scoped to the SELECTED subject group, not all modules.
   const importantCount = useMemo(() =>
-    allTopics.reduce((s, t) =>
+    filteredTopics.reduce((s, t) =>
       s + t.questions.filter(q => validQ(q) && important.has(uidOf(q))).length
     , 0)
-  , [important, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  , [important, filteredTopics, groupId, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
@@ -50,7 +51,7 @@ export default function ExamConfig() {
   const handleStart = () => {
     let pool
     if (topicId === 'important') {
-      pool = allTopics.flatMap(t =>
+      pool = filteredTopics.flatMap(t =>
         t.questions
           .map((q) => ({ ...q, _color: t.color, _label: t.shortName }))
           .filter(q => validQ(q) && important.has(uidOf(q)))

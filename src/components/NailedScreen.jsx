@@ -1,21 +1,24 @@
 import { Star, X } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS } from '../data/index.js'
+import { GROUP_TOPICS } from '../data/groups.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import RichText from './shared/RichText'
 import { useAllModulesReady } from '../data/contentLoader.js'
 
 export default function NailedScreen({ topics: topicsProp, mastered: masteredProp, onUnnail: onUnnailProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const masteredCtx = useMasteredContext()
   const mastered = masteredProp ?? masteredCtx.value
   const onUnnail = onUnnailProp ?? masteredCtx.remove
   const onHome = onHomeProp ?? (() => navigate('/'))
-  const topics = topicsProp ?? ALL_TOPICS
+  // Scope to the section that opened this screen (?g=bangla…), else all general.
+  const topics = topicsProp ?? GROUP_TOPICS[searchParams.get('g')] ?? ALL_TOPICS
 
-  // Saved uids can belong to any module and uids don't carry their module,
-  // so load all content to resolve and render every saved question.
+  // Saved uids don't carry their module, so ensure all content is loaded to
+  // resolve/render every saved question.
   const lmReady = useAllModulesReady()
 
   return (
