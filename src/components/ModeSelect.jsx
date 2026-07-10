@@ -1,20 +1,25 @@
 import { useNavigate, useParams, Navigate } from 'react-router-dom'
 import { ChevronLeft, Brain, BookOpen } from 'lucide-react'
 import { ALL_TOPICS } from '../data/index.js'
+import { useModuleReady } from '../data/contentLoader.js'
 
 export default function ModeSelect() {
   const { topicId } = useParams()
   const navigate = useNavigate()
   const topic = ALL_TOPICS.find(t => t.id === topicId)
+  const ready = useModuleReady(topic?.module)
 
   if (!topic) return <Navigate to="/" replace />
 
   const Icon = topic.icon
   const isStudyNotes = !!topic.study           // GK categories carry study notes
   const groupCount = topic.study?.groups?.length || 0
+  const qCount = topic.questions.length
+  // Only treat a study-notes topic as "no MCQ yet" once its module has loaded.
+  const noMcq = isStudyNotes && ready && !qCount
   const meta = isStudyNotes
-    ? `${groupCount} টপিক${topic.questions.length ? ` · ${topic.questions.length} MCQ` : ''}`
-    : `${topic.questions.length} questions available`
+    ? `${groupCount} টপিক${qCount ? ` · ${qCount} MCQ` : ''}`
+    : ready ? `${qCount} questions available` : 'লোড হচ্ছে…'
   return (
     <div className="mode-page anim-fade">
       <button className="back-btn" onClick={() => navigate('/')}>
@@ -34,19 +39,19 @@ export default function ModeSelect() {
 
       <div className="mode-cards">
         <button
-          className={`mode-card${isStudyNotes && !topic.questions.length ? ' mode-card-disabled' : ''}`}
-          onClick={() => topic.questions.length || !isStudyNotes ? navigate('quiz') : null}
-          disabled={isStudyNotes && !topic.questions.length}
+          className={`mode-card${noMcq ? ' mode-card-disabled' : ''}`}
+          onClick={() => !noMcq ? navigate('quiz') : null}
+          disabled={noMcq}
         >
           <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
             <Brain size={26} />
           </div>
           <h3>MCQ Mode</h3>
-          <p>{isStudyNotes && !topic.questions.length
+          <p>{noMcq
             ? 'এই ক্যাটাগরিতে এখনো কোনো MCQ যোগ করা হয়নি।'
             : 'প্রশ্ন একটি একটি করে উত্তর দাও। তাৎক্ষণিক ঠিক/ভুল ফিডব্যাক ও স্কোর।'}</p>
           <span className="mode-card-cta" style={{ color: topic.color }}>
-            {isStudyNotes && !topic.questions.length ? 'শীঘ্রই আসছে' : 'Start Quiz →'}
+            {noMcq ? 'শীঘ্রই আসছে' : 'Start Quiz →'}
           </span>
         </button>
 

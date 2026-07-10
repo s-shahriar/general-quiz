@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from 're
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../../contexts/MasteredContext.jsx'
 import { VOCAB_TOPICS } from '../../data/vocabTopics.js'
+import { useModuleReady } from '../../data/contentLoader.js'
 import ExamMode from '../ExamMode.jsx'
 import ImportantScreen from '../ImportantScreen.jsx'
 import NailedScreen from '../NailedScreen.jsx'
@@ -27,6 +28,7 @@ export default function VocabApp() {
 
 function VocabHomeWrapper() {
   const navigate = useNavigate()
+  useModuleReady('vocab') // fetch vocab questions so topic counts / search work
   const { value: mastered } = useMasteredContext()
   const { value: important } = useImportantContext()
 

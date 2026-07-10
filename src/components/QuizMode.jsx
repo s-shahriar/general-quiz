@@ -5,13 +5,13 @@ import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
-import { duplicateQidsOf } from '../lib/questionIndex.js'
+import { uidOf } from '../lib/qid.js'
 import { shuffle } from '../lib/utils'
 import CategorySidebar from './CategorySidebar.jsx'
 import QuizOptions from './shared/QuizOptions'
 import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useModuleReady } from '../data/contentLoader.js'
 
 export default function QuizMode({
   topic: topicProp,
@@ -24,10 +24,9 @@ export default function QuizMode({
   const navigate = useNavigate()
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
-  const isLm = (topicId || '').startsWith('lm_')
-  const lmReady = useLiveMcqReady(isLm)
+  const ready = useModuleReady(topic?.module)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
-  const { value: important, add: markImportant, removeMany: unmarkImportant } = useImportantContext()
+  const { value: important, add: markImportant, remove: unmarkImportant } = useImportantContext()
   const { theme, toggleTheme } = useThemeContext()
 
   const [selected, setSelected] = useState(null)
@@ -37,13 +36,9 @@ export default function QuizMode({
   // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place
   const questions = useMemo(
     () => topic
-      ? shuffle(
-          topic.questions
-            .map((q, i) => ({ ...q, _origIndex: i }))
-            .filter(q => q.options && q.correct_answer)
-        )
+      ? shuffle(topic.questions.filter(q => q.options && q.correct_answer))
       : [],
-    [topic, lmReady] // eslint-disable-line react-hooks/exhaustive-deps
+    [topic, ready] // eslint-disable-line react-hooks/exhaustive-deps
   )
 
   const [idx, setIdx]           = useState(0)
@@ -51,17 +46,16 @@ export default function QuizMode({
   const [done, setDone]         = useState(false)
 
   if (!topic) return <Navigate to="/" replace />
-  if (isLm && !lmReady) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
+  if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
   const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
   const goHome   = () => onHomeProp ? onHomeProp() : navigate('/')
   const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz')
 
   const q    = questions[idx]
-  const qid  = q ? `${topic.id}__${q._origIndex}` : null
-  const dupeQids = qid ? duplicateQidsOf(qid) : []
+  const qid  = q ? uidOf(q) : null
   const isNailed = qid ? mastered?.has(qid) : false
-  const isImportant = qid ? dupeQids.some(id => important?.has(id)) : false
+  const isImportant = qid ? important?.has(qid) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -166,7 +160,7 @@ export default function QuizMode({
               </button>
               <button
                 className={`quiz-important-btn${isImportant ? ' marked' : ''}`}
-                onClick={() => isImportant ? unmarkImportant(dupeQids) : markImportant(qid)}
+                onClick={() => isImportant ? unmarkImportant(qid) : markImportant(qid)}
                 title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
               >
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
-import { duplicateQidsOf } from '../lib/questionIndex.js'
+import { uidOf } from '../lib/qid.js'
 import QuizOptions from './shared/QuizOptions'
 import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
@@ -16,7 +16,7 @@ export default function ExamMode({
   const location = useLocation()
   const navigate = useNavigate()
   const { value: mastered, add: onNail, remove: onUnnail } = useMasteredContext()
-  const { value: important, add: onMarkImportant, removeMany: onUnmarkImportant } = useImportantContext()
+  const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
 
   const routeState = location.state || {}
   const questions = questionsProp || routeState.questions
@@ -34,12 +34,9 @@ export default function ExamMode({
   if (!questions) return <Navigate to="/exam" replace />
 
   const q    = questions[idx]
-  const qid  = q?._topicId != null ? `${q._topicId}__${q._origIndex}` : null
-  // A question can have duplicate copies (different qids). Treat it as important
-  // if ANY copy is marked, and unmark every copy so it reliably clears.
-  const dupeQids = qid ? duplicateQidsOf(qid) : []
+  const qid  = q ? uidOf(q) : null
   const isNailed = qid ? mastered?.has(qid) : false
-  const isImportant = qid ? dupeQids.some(id => important?.has(id)) : false
+  const isImportant = qid ? important?.has(qid) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -120,7 +117,7 @@ export default function ExamMode({
               </button>
               <button
                 className={`quiz-important-btn${isImportant ? ' marked' : ''}`}
-                onClick={() => isImportant ? onUnmarkImportant(dupeQids) : onMarkImportant(qid)}
+                onClick={() => isImportant ? onUnmarkImportant(qid) : onMarkImportant(qid)}
               >
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />
                 {isImportant ? 'Saved!' : 'Important'}

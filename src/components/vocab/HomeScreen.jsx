@@ -1,9 +1,9 @@
-import { BookMarked, ShieldCheck } from 'lucide-react'
+import { BookMarked } from 'lucide-react'
 import ActionCardsRow from '../shared/ActionCardsRow'
 
-export default function VocabHomeScreen({ topics, mastered, important, onSelectTopic, onExam, onNailed, onImportant, onBackup }) {
-  const totalNailed    = topics.reduce((s, t) => s + t.questions.filter((_, i) => mastered.has(`${t.id}__${i}`)).length, 0)
-  const totalImportant = topics.reduce((s, t) => s + t.questions.filter((_, i) => important?.has(`${t.id}__${i}`)).length, 0)
+export default function VocabHomeScreen({ topics, mastered, important, onSelectTopic, onExam, onNailed, onImportant }) {
+  const totalNailed    = mastered.size
+  const totalImportant = important?.size ?? 0
 
   return (
     <div className="home anim-fade">
@@ -22,12 +22,6 @@ export default function VocabHomeScreen({ topics, mastered, important, onSelectT
         onNailed={onNailed}
         onImportant={onImportant}
       />
-
-      <div className="backup-trigger-row">
-        <button className="backup-trigger-btn" onClick={onBackup}>
-          <ShieldCheck size={13} /> Backup & Restore
-        </button>
-      </div>
 
       <p className="section-label">Choose a letter to start studying</p>
       <main className="topics-grid">

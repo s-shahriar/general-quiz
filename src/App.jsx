@@ -1,11 +1,11 @@
 import { Moon, Sun } from 'lucide-react'
-import { lazy, Suspense, useState } from 'react'
+import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import BackupModal from './components/BackupModal.jsx'
-import { ImportantProvider, useImportantContext } from './contexts/ImportantContext.jsx'
-import { MasteredProvider, useMasteredContext } from './contexts/MasteredContext.jsx'
+import AccountButton from './components/auth/AccountButton.jsx'
+import SyncOverlay from './components/SyncOverlay.jsx'
+import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
+import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext.jsx'
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
-import { ALL_TOPICS } from './data/index.js'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
 const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
@@ -23,22 +23,21 @@ const VocabApp         = lazy(() => import('./components/vocab/VocabApp.jsx'))
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <MasteredProvider>
-        <ImportantProvider>
+    <AuthProvider>
+      <ThemeProvider>
+        <ProgressProvider>
           <AppRoutes />
-        </ImportantProvider>
-      </MasteredProvider>
-    </ThemeProvider>
+        </ProgressProvider>
+      </ThemeProvider>
+    </AuthProvider>
   )
 }
 
 function AppRoutes() {
   const { theme, toggleTheme } = useThemeContext()
-  const { value: mastered, restore: restoreMastered } = useMasteredContext()
-  const { value: important, restore: restoreImportant } = useImportantContext()
+  const { loading: authLoading } = useAuth()
+  const syncing = useProgressSyncing()
   const location = useLocation()
-  const [showBackup, setShowBackup] = useState(false)
 
   const isGeneralHome = location.pathname === '/' ||
     location.pathname === '/bangla-grammer' ||
@@ -50,11 +49,6 @@ function AppRoutes() {
   const showNav = isGeneralHome ||
     location.pathname === '/vocabulary' ||
     location.pathname === '/utility'
-
-  const handleRestore = (nailedArr, importantArr) => {
-    restoreMastered(nailedArr)
-    restoreImportant(importantArr)
-  }
 
   return (
     <div className="app-root">
@@ -87,20 +81,23 @@ function AppRoutes() {
               )
             })}
           </div>
-          <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
-            {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <AccountButton />
+            <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+            </button>
+          </div>
         </div>
       )}
 
       <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>}>
         <Routes>
-          <Route path="/" element={<HomeScreen activeGroup="bangla" onBackup={() => setShowBackup(true)} />} />
-          <Route path="/bangla-grammer" element={<HomeScreen activeGroup="bangla" onBackup={() => setShowBackup(true)} />} />
-          <Route path="/english-grammer" element={<HomeScreen activeGroup="english" onBackup={() => setShowBackup(true)} />} />
-          <Route path="/sahitto" element={<HomeScreen activeGroup="sahitya" onBackup={() => setShowBackup(true)} />} />
-          <Route path="/gk" element={<HomeScreen activeGroup="gk" onBackup={() => setShowBackup(true)} />} />
-          <Route path="/livemcq" element={<HomeScreen activeGroup="livemcq" onBackup={() => setShowBackup(true)} />} />
+          <Route path="/" element={<HomeScreen activeGroup="bangla" />} />
+          <Route path="/bangla-grammer" element={<HomeScreen activeGroup="bangla" />} />
+          <Route path="/english-grammer" element={<HomeScreen activeGroup="english" />} />
+          <Route path="/sahitto" element={<HomeScreen activeGroup="sahitya" />} />
+          <Route path="/gk" element={<HomeScreen activeGroup="gk" />} />
+          <Route path="/livemcq" element={<HomeScreen activeGroup="livemcq" />} />
           <Route path="/topic/:topicId" element={<ModeSelect />} />
           <Route path="/topic/:topicId/quiz" element={<QuizMode />} />
           <Route path="/topic/:topicId/study" element={<StudyMode />} />
@@ -118,15 +115,7 @@ function AppRoutes() {
         </Routes>
       </Suspense>
 
-      {showBackup && (
-        <BackupModal
-          mastered={mastered}
-          important={important}
-          topics={ALL_TOPICS}
-          onRestore={handleRestore}
-          onClose={() => setShowBackup(false)}
-        />
-      )}
+      {(authLoading || syncing) && <SyncOverlay />}
     </div>
   )
 }

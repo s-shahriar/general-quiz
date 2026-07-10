@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { X, ChevronDown, ChevronUp } from 'lucide-react'
+import { uidOf } from '../../lib/qid.js'
 
 export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHome, config }) {
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint, totalLabel, removeHint, renderItem } = config
 
   const groupedByTopic = topics.map(t => {
     const items = t.questions
-      .map((q, i) => ({ q, qid: `${t.id}__${i}` }))
+      .map((q) => ({ q, qid: uidOf(q) }))
       .filter(({ q }) => q.options && q.correct_answer)
       .filter(({ qid }) => savedSet.has(qid))
     return { topic: t, items }

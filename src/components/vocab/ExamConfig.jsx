@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
 import { VOCAB_TOPICS } from '../../data/vocabTopics.js'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
+import { useModuleReady } from '../../data/contentLoader.js'
+import { uidOf } from '../../lib/qid.js'
 import { shuffle, validQ } from '../../lib/utils'
 
 export default function VocabExamConfig() {
   const navigate = useNavigate()
+  const ready = useModuleReady('vocab')
   const { value: important } = useImportantContext()
   const topics = VOCAB_TOPICS
 
@@ -15,15 +18,15 @@ export default function VocabExamConfig() {
 
   const importantCount = useMemo(() =>
     topics.reduce((s, t) =>
-      s + t.questions.filter((q, i) => validQ(q) && important.has(`${t.id}__${i}`)).length
+      s + t.questions.filter(q => validQ(q) && important.has(uidOf(q))).length
     , 0)
-  , [important, topics])
+  , [important, topics, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
     if (topicId === 'all') return topics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return topics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, topics, importantCount])
+  }, [topicId, topics, importantCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
@@ -38,8 +41,8 @@ export default function VocabExamConfig() {
     if (topicId === 'important') {
       pool = topics.flatMap(t =>
         t.questions
-          .map((q, i) => ({ ...q, _color: t.color, _label: t.shortName, _topicId: t.id, _origIndex: i }))
-          .filter(q => validQ(q) && important.has(`${q._topicId}__${q._origIndex}`))
+          .map((q) => ({ ...q, _color: t.color, _label: t.shortName }))
+          .filter(q => validQ(q) && important.has(uidOf(q)))
       )
     } else {
       const selected = topicId === 'all' ? topics : topics.filter(t => t.id === topicId)
@@ -96,9 +99,9 @@ export default function VocabExamConfig() {
           </div>
         </div>
 
-        <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0}>
+        <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0 || !ready}>
           <Zap size={16} />
-          Start Exam — {safeCount} Questions
+          {ready ? `Start Exam — ${safeCount} Questions` : 'লোড হচ্ছে…'}
         </button>
       </div>
     </div>
