@@ -4,7 +4,7 @@ import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { ALL_TOPICS } from '../data/index.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import RichText from './shared/RichText'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useAllModulesReady } from '../data/contentLoader.js'
 
 export default function NailedScreen({ topics: topicsProp, mastered: masteredProp, onUnnail: onUnnailProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
@@ -14,10 +14,9 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
   const onHome = onHomeProp ?? (() => navigate('/'))
   const topics = topicsProp ?? ALL_TOPICS
 
-  // load LiveMCQ data if any saved item belongs to it (so they render here)
-  let hasLm = false
-  for (const k of (mastered || [])) { if (typeof k === 'string' && k.startsWith('lm_')) { hasLm = true; break } }
-  const lmReady = useLiveMcqReady(hasLm)
+  // Saved uids can belong to any module and uids don't carry their module,
+  // so load all content to resolve and render every saved question.
+  const lmReady = useAllModulesReady()
 
   return (
     <SavedQuestionsScreen

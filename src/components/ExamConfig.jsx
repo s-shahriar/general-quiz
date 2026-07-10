@@ -3,14 +3,15 @@ import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useAllModulesReady } from '../data/contentLoader.js'
+import { uidOf } from '../lib/qid.js'
 import { shuffle, validQ } from '../lib/utils'
 
 export default function ExamConfig() {
   const navigate = useNavigate()
   const { value: important } = useImportantContext()
-  // exam can pull from LiveMCQ, so load its (lazy) data when this screen opens
-  const lmReady = useLiveMcqReady(true)
+  // Exam pools can span every module, so load all content when this screen opens.
+  const ready = useAllModulesReady()
 
   const [groupId, setGroupId] = useState('all')
   const [topicId, setTopicId] = useState('all')
@@ -26,15 +27,15 @@ export default function ExamConfig() {
 
   const importantCount = useMemo(() =>
     allTopics.reduce((s, t) =>
-      s + t.questions.filter((q, i) => validQ(q) && important.has(`${t.id}__${i}`)).length
+      s + t.questions.filter(q => validQ(q) && important.has(uidOf(q))).length
     , 0)
-  , [important, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
+  , [important, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
     if (topicId === 'all') return filteredTopics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return allTopics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, groupId, filteredTopics, importantCount, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topicId, groupId, filteredTopics, importantCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
@@ -51,8 +52,8 @@ export default function ExamConfig() {
     if (topicId === 'important') {
       pool = allTopics.flatMap(t =>
         t.questions
-          .map((q, i) => ({ ...q, _color: t.color, _label: t.shortName, _topicId: t.id, _origIndex: i }))
-          .filter(q => validQ(q) && important.has(`${q._topicId}__${q._origIndex}`))
+          .map((q) => ({ ...q, _color: t.color, _label: t.shortName }))
+          .filter(q => validQ(q) && important.has(uidOf(q)))
       )
     } else {
       const topics = topicId === 'all' ? filteredTopics : allTopics.filter(t => t.id === topicId)
@@ -121,9 +122,9 @@ export default function ExamConfig() {
           </div>
         </div>
 
-        <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0}>
+        <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0 || !ready}>
           <Zap size={16} />
-          Start Exam — {safeCount} Questions
+          {ready ? `Start Exam — ${safeCount} Questions` : 'লোড হচ্ছে…'}
         </button>
       </div>
     </div>

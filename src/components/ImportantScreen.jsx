@@ -2,23 +2,20 @@ import { Bookmark, Lightbulb, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { ALL_TOPICS } from '../data/index.js'
-import { duplicateQidsOf } from '../lib/questionIndex.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import RichText from './shared/RichText'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useAllModulesReady } from '../data/contentLoader.js'
 
 export default function ImportantScreen({ topics: topicsProp, important: importantProp, onUnmark: onUnmarkProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
   const importantCtx = useImportantContext()
   const important = importantProp ?? importantCtx.value
-  // Remove every duplicate copy of the question so it fully clears.
-  const onUnmark = onUnmarkProp ?? ((qid) => importantCtx.removeMany(duplicateQidsOf(qid)))
+  const onUnmark = onUnmarkProp ?? importantCtx.remove
   const onHome = onHomeProp ?? (() => navigate('/'))
   const topics = topicsProp ?? ALL_TOPICS
 
-  let hasLm = false
-  for (const k of (important || [])) { if (typeof k === 'string' && k.startsWith('lm_')) { hasLm = true; break } }
-  const lmReady = useLiveMcqReady(hasLm)
+  // Saved uids can belong to any module — load all content to render them.
+  const lmReady = useAllModulesReady()
 
   return (
     <SavedQuestionsScreen

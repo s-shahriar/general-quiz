@@ -5,12 +5,12 @@ import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
-import { duplicateQidsOf } from '../lib/questionIndex.js'
+import { uidOf } from '../lib/qid.js'
 import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
 import RichText from './shared/RichText'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useModuleReady } from '../data/contentLoader.js'
 import useDebounce from '../hooks/useDebounce.js'
 
 const PAGE_SIZE = 20
@@ -42,10 +42,9 @@ export default function StudyMode({
   const backTo = location.state?.backTo  // set when arriving from search — return there
   const topicId = topicProp?.id || params.topicId
   const topic = topicProp || ALL_TOPICS.find(t => t.id === topicId)
-  const isLm = (topicId || '').startsWith('lm_')
-  const lmReady = useLiveMcqReady(isLm)
+  const ready = useModuleReady(topic?.module)
   const { value: mastered, add: onNail } = useMasteredContext()
-  const { value: important, add: onMarkImportant, removeMany: onUnmarkImportant } = useImportantContext()
+  const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
   const { theme, toggleTheme } = useThemeContext()
 
   const [filterImportant, setFilterImportant] = useState(false)
@@ -60,9 +59,9 @@ export default function StudyMode({
   const validQ = useMemo(() => {
     if (!topic) return []
     return topic.questions
-      .map((q, i) => ({ q, qid: `${topic.id}__${i}` }))
+      .map((q) => ({ q, qid: uidOf(q) }))
       .filter(({ q }) => q.options && q.correct_answer)
-  }, [topic, lmReady]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topic, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const nonNailed      = validQ.filter(({ qid }) => !mastered.has(qid))
   const nailedCt       = validQ.length - nonNailed.length
@@ -93,8 +92,8 @@ export default function StudyMode({
   // Deep-link: ?q=<index> focuses a specific question — jump to its page,
   // then scroll it into view and pulse it.
   const [searchParams] = useSearchParams()
-  const focusIdx = searchParams.get('q')
-  const focusQid = focusIdx != null && topic ? `${topic.id}__${focusIdx}` : null
+  // ?q=<uid> — GroupSearch deep-links to a specific question by its stable uid.
+  const focusQid = searchParams.get('q') || null
 
   const [focusApplied, setFocusApplied] = useState(false)
   if (focusQid && !focusApplied && visible.length) {
@@ -122,7 +121,7 @@ export default function StudyMode({
   const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
 
   if (!topic) return <Navigate to="/" replace />
-  if (isLm && !lmReady) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
+  if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
   return (
     <div className="study-page anim-fade">
@@ -224,10 +223,10 @@ export default function StudyMode({
                 index={(page - 1) * PAGE_SIZE + i}
                 color={topic.color}
                 nailed={mastered.has(qid)}
-                isImportant={duplicateQidsOf(qid).some(id => important?.has(id))}
+                isImportant={important?.has(qid)}
                 onNail={() => onNail(qid)}
                 onMarkImportant={() => onMarkImportant?.(qid)}
-                onUnmarkImportant={() => onUnmarkImportant?.(duplicateQidsOf(qid))}
+                onUnmarkImportant={() => onUnmarkImportant?.(qid)}
               />
             ))}
           </div>

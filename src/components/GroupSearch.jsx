@@ -2,6 +2,7 @@ import { ArrowUpRight, ChevronDown, ChevronUp, Lightbulb, Search, X } from 'luci
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import useDebounce from '../hooks/useDebounce.js'
+import { uidOf } from '../lib/qid.js'
 import Pagination from './shared/Pagination'
 import RichText from './shared/RichText'
 
@@ -30,7 +31,7 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange, initia
     const out = []
     const seen = new Set() // collapse duplicate questions that recur across topics
     for (const t of topics) {
-      t.questions.forEach((q, i) => {
+      t.questions.forEach((q) => {
         if (!q.options || !q.correct_answer) return
         const key = normalize(q.question)
         if (seen.has(key)) return
@@ -42,7 +43,7 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange, initia
         // in any order (so "ধ্বনি পার্শ্বিক" finds "পার্শ্বিক ধ্বনি …").
         if (tokens.every(tok => haystack.includes(tok))) {
           seen.add(key)
-          out.push({ q, topic: t, qid: `${t.id}__${i}` })
+          out.push({ q, topic: t, qid: uidOf(q) })
         }
       })
     }
@@ -107,7 +108,7 @@ export default function GroupSearch({ topics, groupLabel, onActiveChange, initia
                       // Back (via state) and the browser Back land on it.
                       const home = homePath + '?search=' + encodeURIComponent(query)
                       navigate(home, { replace: true })
-                      navigate('/topic/' + topic.id + '/study?q=' + qid.split('__').pop(), { state: { backTo: home } })
+                      navigate('/topic/' + topic.id + '/study?q=' + qid, { state: { backTo: home } })
                     }}
                   />
                 ))}

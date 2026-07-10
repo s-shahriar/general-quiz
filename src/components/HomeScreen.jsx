@@ -1,4 +1,4 @@
-import { BookOpen, BookOpenText, Globe, Languages, ShieldCheck, Sparkles } from 'lucide-react'
+import { BookOpen, BookOpenText, Globe, Languages, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
@@ -6,29 +6,26 @@ import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
-import { useLiveMcqReady } from '../hooks/useLiveMcq.js'
+import { useModuleReady } from '../data/contentLoader.js'
 
 const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান', livemcq: 'LiveMCQ' }
 const GROUP_PATHS  = { bangla: '/bangla-grammer', english: '/english-grammer', sahitya: '/sahitto', gk: '/gk', livemcq: '/livemcq' }
 
-export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
+export default function HomeScreen({ activeGroup = 'bangla' }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const { value: mastered } = useMasteredContext()
   const { value: important } = useImportantContext()
   const [searching, setSearching] = useState(false)
   const urlSearch = searchParams.get('search') || ''
-  const lmReady = useLiveMcqReady(activeGroup === 'livemcq')
+  // activeGroup id matches the DB module name (bangla/english/sahitya/gk/livemcq).
+  const ready = useModuleReady(activeGroup)
 
-  const allTopicsFlat = [...BANGLA_TOPICS, ...ENGLISH_TOPICS, ...GK_TOPICS, ...BANGLA_SAHITYA_TOPICS, ...LIVEMCQ_TOPICS]
   const allTopics = activeGroup === 'bangla' ? BANGLA_TOPICS : activeGroup === 'english' ? ENGLISH_TOPICS : activeGroup === 'sahitya' ? BANGLA_SAHITYA_TOPICS : activeGroup === 'livemcq' ? LIVEMCQ_TOPICS : GK_TOPICS
 
-  const totalNailed = allTopicsFlat.reduce((s, t) =>
-    s + t.questions.filter((_, i) => mastered.has(`${t.id}__${i}`)).length
-  , 0)
-  const totalImportant = allTopicsFlat.reduce((s, t) =>
-    s + t.questions.filter((_, i) => important?.has(`${t.id}__${i}`)).length
-  , 0)
+  // Progress totals are just the sizes of the uid sets — no question data needed.
+  const totalNailed = mastered.size
+  const totalImportant = important?.size ?? 0
 
   return (
     <div className="home anim-fade">
@@ -77,18 +74,12 @@ export default function HomeScreen({ activeGroup = 'bangla', onBackup }) {
             onImportant={() => navigate('/important')}
           />
 
-          <div className="backup-trigger-row">
-            <button className="backup-trigger-btn" onClick={onBackup}>
-              <ShieldCheck size={13} /> Backup & Restore
-            </button>
-          </div>
-
           <p className="section-label">
             {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : activeGroup === 'livemcq' ? 'LiveMCQ — বিষয় বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
           </p>
-          {activeGroup === 'livemcq' && !lmReady ? (
+          {!ready ? (
             <div style={{ display: 'flex', justifyContent: 'center', padding: '2.5rem', color: 'var(--text-3)', fontSize: '0.85rem' }}>
-              LiveMCQ লোড হচ্ছে…
+              লোড হচ্ছে…
             </div>
           ) : (
             <main className="topics-grid">
