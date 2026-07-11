@@ -63,6 +63,29 @@ your saved "favourites"
   - `answer = 0` means the server has **no answer key** for it (rare).
   - `question`, `option*`, `exp` may contain **HTML** (see §5).
 
+### 2.1 Quick hit (copy-paste) — "hit backend api"
+
+Sanity-check the API / see the newest favourites in one shot:
+
+```bash
+TOKEN="<LiveMCQ token>"   # do NOT commit the real token; it lives in the app prefs (§2)
+curl -s -H "Authorization: Token $TOKEN" \
+  "https://livemcq.com/api/v1/central-favorite-list/?page=1" \
+  -o /tmp/lm_check.json -w "HTTP %{http_code} | %{size_download} bytes\n"
+jq '{ total: .pagination.total_results,
+      pages: .pagination.total_pages,
+      newest: .question_list[0].favorite_id }' /tmp/lm_check.json
+```
+
+Expected: `HTTP 200` and e.g. `{ "total": 2023, "pages": 102, "newest": "152853716" }`.
+- `total` = total favourites (compare to the app's current count).
+- `newest` = highest `favorite_id`; if it's greater than the last-synced baseline,
+  there are new questions to sync (§8).
+
+> ⚠️ **Security:** the token is a live credential for the account. Keep it out of
+> the repo and any committed file. (The assistant holds it in private memory, so
+> "hit backend api" can be run on request without pasting it here.)
+
 ---
 
 ## 3. JSON data format for the app (how a question is "given")
