@@ -47,8 +47,8 @@ async function main() {
   if (!existsSync(dir)) mkdirSync(dir)
 
   // ── ALL content ──
-  const categories = await fetchAll('categories', '*', 'sort_order')
-  const questions = await fetchAll('questions', '*', 'sort_order')
+  const categories = await fetchAll('categories', '*', 'id')
+  const questions = await fetchAll('questions', '*', 'id')
   writeFileSync(join(dir, 'content.json'), JSON.stringify({
     counts: { categories: categories.length, questions: questions.length },
     categories, questions,
