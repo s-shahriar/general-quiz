@@ -29,3 +29,6 @@ dist-ssr
 *.sw?
 .vercel
 .claude
+
+# Backups live on the dedicated "backups" branch, not master
+backups/
