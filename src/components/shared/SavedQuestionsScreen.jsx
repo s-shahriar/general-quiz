@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import { X, Lightbulb } from 'lucide-react'
+import { X, Lightbulb, ChevronDown, ChevronUp } from 'lucide-react'
 import RichText from './RichText'
 import { uidOf } from '../../lib/qid.js'
+
+// Below this many categories the chip grid collapses to ~2 rows with a toggle.
+const COLLAPSE_AFTER = 6
 
 // Saved (Nailed / Important) questions, grouped by topic and browsed via a
 // horizontal category chip-bar (pick one topic at a time — far easier to filter
@@ -11,6 +14,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
           totalLabel, removeHint, rowIcon, rowIconColor, showExplanation } = config
   const [activeId, setActiveId] = useState(null)
+  const [chipsOpen, setChipsOpen] = useState(false)
 
   const grouped = topics.map(t => {
     const items = t.questions
@@ -55,24 +59,36 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
             Tap <X size={11} style={{ display: 'inline', verticalAlign: 'middle' }} /> {removeHint}
           </div>
 
-          <div className="nailed-cat-bar">
-            {grouped.map(({ topic: t, items }) => {
-              const TIcon = t.icon
-              const on = active?.topic.id === t.id
-              return (
-                <button
-                  key={t.id}
-                  className={`nailed-cat-chip${on ? ' active' : ''}`}
-                  style={{ '--c': t.color }}
-                  onClick={() => setActiveId(t.id)}
-                >
-                  {TIcon && <span className="nailed-cat-chip-ic"><TIcon size={16} /></span>}
-                  <span className="nailed-cat-chip-name">{t.shortName || t.name}</span>
-                  <span className="nailed-cat-chip-count">{items.length}</span>
-                </button>
-              )
-            })}
-          </div>
+          {(() => {
+            const collapsible = grouped.length > COLLAPSE_AFTER
+            return (
+              <>
+                <div className={`nailed-cat-bar${collapsible && !chipsOpen ? ' collapsed' : ''}`}>
+                  {grouped.map(({ topic: t, items }) => {
+                    const TIcon = t.icon
+                    const on = active?.topic.id === t.id
+                    return (
+                      <button
+                        key={t.id}
+                        className={`nailed-cat-chip${on ? ' active' : ''}`}
+                        style={{ '--c': t.color }}
+                        onClick={() => setActiveId(t.id)}
+                      >
+                        {TIcon && <span className="nailed-cat-chip-ic"><TIcon size={16} /></span>}
+                        <span className="nailed-cat-chip-name">{t.shortName || t.name}</span>
+                        <span className="nailed-cat-chip-count">{items.length}</span>
+                      </button>
+                    )
+                  })}
+                </div>
+                {collapsible && (
+                  <button className="nailed-cat-toggle" onClick={() => setChipsOpen(v => !v)}>
+                    {chipsOpen ? <>Show less <ChevronUp size={13} /></> : <>Show all {grouped.length} categories <ChevronDown size={13} /></>}
+                  </button>
+                )}
+              </>
+            )
+          })()}
 
           {active && (
             <div className="nailed-screen-list anim-fade" style={{ '--c': active.topic.color }}>
