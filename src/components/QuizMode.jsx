@@ -134,19 +134,6 @@ export default function QuizMode({
 
         <QuizOptions options={q.options} correctAnswer={q.correct_answer} selected={selected} revealed={revealed} accentColor={topic.color} onPick={pick} />
 
-        {revealed && q.explanation && (
-          <div className="explanation-box anim-slide" style={{ '--c': topic.color }}>
-            <div className="explanation-header">
-              <Lightbulb size={14} style={{ color: topic.color, flexShrink: 0 }} />
-              <span className="explanation-label" style={{ color: topic.color }}>ব্যাখ্যা</span>
-              <span className={`answer-badge ${isCorrect ? 'correct' : 'wrong'}`}>
-                {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
-              </span>
-            </div>
-            <RichText as="div" className="explanation-text" html={q.explanation} />
-          </div>
-        )}
-
         {revealed && (
           <div className="quiz-revealed-actions">
             <div className="quiz-mark-btns">
@@ -171,6 +158,19 @@ export default function QuizMode({
               {idx + 1 >= questions.length ? 'ফলাফল দেখুন' : 'পরবর্তী প্রশ্ন'}
               <ArrowRight size={16} />
             </button>
+          </div>
+        )}
+
+        {revealed && q.explanation && (
+          <div className="explanation-box anim-slide" style={{ '--c': topic.color }}>
+            <div className="explanation-header">
+              <Lightbulb size={14} style={{ color: topic.color, flexShrink: 0 }} />
+              <span className="explanation-label" style={{ color: topic.color }}>ব্যাখ্যা</span>
+              <span className={`answer-badge ${isCorrect ? 'correct' : 'wrong'}`}>
+                {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
+              </span>
+            </div>
+            <RichText as="div" className="explanation-text" html={q.explanation} />
           </div>
         )}
       </div>
