@@ -49,6 +49,18 @@ async function main() {
   // ── ALL content ──
   const categories = await fetchAll('categories', '*', 'id')
   const questions = await fetchAll('questions', '*', 'id')
+
+  // Integrity guard: the snapshot must be COMPLETE and DUPLICATE-FREE. A
+  // pagination-on-non-unique-column bug once produced dupes + missing rows that
+  // slipped through a weaker check, so fail loudly rather than publish garbage.
+  const distinctQ = new Set(questions.map(q => q.id)).size
+  const distinctC = new Set(categories.map(c => c.id)).size
+  const { count: dbQ } = await db.from('questions').select('*', { count: 'exact', head: true })
+  const { count: dbC } = await db.from('categories').select('*', { count: 'exact', head: true })
+  if (distinctQ !== questions.length || questions.length !== dbQ || distinctC !== categories.length || categories.length !== dbC) {
+    throw new Error(`integrity check failed — questions ${questions.length}/${distinctQ} distinct vs DB ${dbQ}; categories ${categories.length}/${distinctC} vs DB ${dbC}`)
+  }
+
   writeFileSync(join(dir, 'content.json'), JSON.stringify({
     counts: { categories: categories.length, questions: questions.length },
     categories, questions,
