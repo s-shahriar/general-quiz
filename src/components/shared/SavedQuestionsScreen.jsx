@@ -1,11 +1,18 @@
 import { useState } from 'react'
-import { X, ChevronDown, ChevronUp } from 'lucide-react'
+import { X, Lightbulb } from 'lucide-react'
+import RichText from './RichText'
 import { uidOf } from '../../lib/qid.js'
 
+// Saved (Nailed / Important) questions, grouped by topic and browsed via a
+// horizontal category chip-bar (pick one topic at a time — far easier to filter
+// than a long vertical list). Explanations are folded by default and expand on
+// demand, so long LiveMCQ explanations don't bury the list.
 export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHome, config }) {
-  const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint, totalLabel, removeHint, renderItem } = config
+  const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
+          totalLabel, removeHint, rowIcon, rowIconColor, showExplanation } = config
+  const [activeId, setActiveId] = useState(null)
 
-  const groupedByTopic = topics.map(t => {
+  const grouped = topics.map(t => {
     const items = t.questions
       .map((q) => ({ q, qid: uidOf(q) }))
       .filter(({ q }) => q.options && q.correct_answer)
@@ -13,7 +20,8 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
     return { topic: t, items }
   }).filter(g => g.items.length > 0)
 
-  const total = groupedByTopic.reduce((s, g) => s + g.items.length, 0)
+  const total = grouped.reduce((s, g) => s + g.items.length, 0)
+  const active = grouped.find(g => g.topic.id === activeId) || grouped[0]
 
   return (
     <div className="nailed-screen anim-fade">
@@ -41,39 +49,78 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
         <>
           <div className="nailed-screen-summary">
             <span className="nailed-screen-total">{total}</span>
-            <span className="nailed-screen-total-label">{totalLabel(total, groupedByTopic.length)}</span>
+            <span className="nailed-screen-total-label">{totalLabel(total, grouped.length)}</span>
           </div>
           <div className="nailed-screen-hint">
             Tap <X size={11} style={{ display: 'inline', verticalAlign: 'middle' }} /> {removeHint}
           </div>
-          <div className="nailed-screen-list">
-            {groupedByTopic.map(({ topic: t, items }) => (
-              <TopicGroup key={t.id} topic={t} items={items} onRemove={onRemove} renderItem={renderItem} />
-            ))}
+
+          <div className="nailed-cat-bar">
+            {grouped.map(({ topic: t, items }) => {
+              const TIcon = t.icon
+              const on = active?.topic.id === t.id
+              return (
+                <button
+                  key={t.id}
+                  className={`nailed-cat-chip${on ? ' active' : ''}`}
+                  style={{ '--c': t.color }}
+                  onClick={() => setActiveId(t.id)}
+                >
+                  {TIcon && <span className="nailed-cat-chip-ic"><TIcon size={16} /></span>}
+                  <span className="nailed-cat-chip-name">{t.shortName || t.name}</span>
+                  <span className="nailed-cat-chip-count">{items.length}</span>
+                </button>
+              )
+            })}
           </div>
+
+          {active && (
+            <div className="nailed-screen-list anim-fade" style={{ '--c': active.topic.color }}>
+              {active.items.map(({ q, qid }) => (
+                <SavedRow
+                  key={qid}
+                  q={q}
+                  qid={qid}
+                  rowIcon={rowIcon}
+                  rowIconColor={rowIconColor}
+                  showExplanation={showExplanation}
+                  onRemove={onRemove}
+                />
+              ))}
+            </div>
+          )}
         </>
       )}
     </div>
   )
 }
 
-function TopicGroup({ topic: t, items, onRemove, renderItem }) {
-  const [open, setOpen] = useState(true)
+function SavedRow({ q, qid, rowIcon: RowIcon, rowIconColor, showExplanation, onRemove }) {
+  const [open, setOpen] = useState(false)   // explanation folded by default
   return (
-    <div className="nailed-group" style={{ '--c': t.color }}>
-      <button className="nailed-group-header" onClick={() => setOpen(v => !v)}>
-        <div className="nailed-group-label">
-          <span className="nailed-group-dot" style={{ background: t.color }} />
-          <span style={{ color: t.color }}>{t.name}</span>
-          <span className="nailed-group-badge" style={{ background: `${t.color}20`, color: t.color }}>{items.length}</span>
-        </div>
-        {open ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+    <div className="nailed-row">
+      <RowIcon size={11} fill="currentColor" style={{ color: rowIconColor, flexShrink: 0, marginTop: 3 }} />
+      <div className="nailed-row-body">
+        <RichText className="nailed-row-text" html={q.question} />
+        {q.correct_answer && q.options?.[q.correct_answer] && (
+          <div className="nailed-row-answer">
+            <span className="nailed-ans-key">{q.correct_answer.toUpperCase()}</span>
+            <RichText className="nailed-ans-text" html={q.options[q.correct_answer]} />
+          </div>
+        )}
+        {showExplanation && q.explanation && (
+          <>
+            <button className="nailed-exp-toggle" onClick={() => setOpen(v => !v)}>
+              <Lightbulb size={11} />
+              {open ? 'Hide explanation' : 'Show explanation'}
+            </button>
+            {open && <RichText as="div" className="nailed-row-explanation" html={q.explanation} />}
+          </>
+        )}
+      </div>
+      <button className="nailed-unnail-btn" onClick={() => onRemove(qid)} title="Remove">
+        <X size={13} />
       </button>
-      {open && (
-        <div className="nailed-group-body anim-slide">
-          {items.map(({ q, qid }) => renderItem({ q, qid, t, onRemove }))}
-        </div>
-      )}
     </div>
   )
 }

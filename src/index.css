@@ -4164,3 +4164,57 @@ button {
 }
 .gs-exp-toggle:hover { background: color-mix(in srgb, var(--c, #38bdf8) 18%, transparent); }
 .gs-card-exp-open { margin-top: 8px; }
+
+/* ── Saved-screen category chip-bar + folded explanation (Nailed / Important) ── */
+.nailed-cat-bar {
+  display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden;
+  padding: 10px 0 12px; margin: 2px 0 10px;
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg);
+  scrollbar-width: thin;
+}
+.nailed-cat-bar::-webkit-scrollbar { height: 5px; }
+.nailed-cat-bar::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 999px; }
+.nailed-cat-chip {
+  display: inline-flex; align-items: center; gap: 9px; flex-shrink: 0;
+  padding: 8px 13px 8px 9px; border-radius: 13px; cursor: pointer;
+  border: 1px solid var(--border-md); background: var(--surface-glass);
+  color: var(--text-2);
+  transition: border-color .2s, background .2s, color .2s, box-shadow .2s, transform .15s;
+}
+.nailed-cat-chip:hover {
+  border-color: color-mix(in srgb, var(--c, #6366f1) 45%, transparent);
+  color: var(--text);
+}
+.nailed-cat-chip:active { transform: scale(0.97); }
+.nailed-cat-chip.active {
+  color: var(--c, #6366f1);
+  border-color: color-mix(in srgb, var(--c, #6366f1) 55%, transparent);
+  background: color-mix(in srgb, var(--c, #6366f1) 12%, var(--surface-glass));
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--c, #6366f1) 32%, transparent),
+    0 6px 18px color-mix(in srgb, var(--c, #6366f1) 14%, transparent);
+}
+.nailed-cat-chip-ic {
+  width: 30px; height: 30px; border-radius: 9px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--c, #6366f1);
+  background: color-mix(in srgb, var(--c, #6366f1) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c, #6366f1) 20%, transparent);
+}
+.nailed-cat-chip-name { font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
+.nailed-cat-chip-count {
+  font-size: 0.66rem; font-weight: 700;
+  padding: 2px 7px; border-radius: 999px;
+  background: color-mix(in srgb, var(--c, #6366f1) 20%, transparent);
+  color: var(--c, #6366f1);
+}
+.nailed-exp-toggle {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 7px; padding: 4px 10px; border-radius: 8px;
+  border: 1px solid var(--border-md); background: transparent;
+  color: var(--text-3); font-size: 0.72rem; font-weight: 600; cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.nailed-exp-toggle:hover { color: var(--text-2); border-color: var(--border-bright); }
+.nailed-row-explanation { margin-top: 7px; }
