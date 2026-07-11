@@ -46,7 +46,7 @@ export function loadModule(moduleId) {
         .from('questions')
         .select('uid,question,options,correct_answer,correct_answer_text,explanation,extra,sort_order,categories!inner(slug,module)')
         .eq('categories.module', moduleId)
-        .order('sort_order')
+        .order('sort_order', { ascending: false })
         .range(from, from + pageSize - 1)
       if (error) throw error
       for (const r of data) {
@@ -81,7 +81,7 @@ export async function fetchQuestionsByUids(uids) {
       .from('questions')
       .select('uid,question,options,correct_answer,correct_answer_text,explanation,extra,sort_order,categories!inner(slug,module,name)')
       .in('uid', list.slice(i, i + chunk))
-      .order('sort_order')
+      .order('sort_order', { ascending: false })
     if (error) throw error
     for (const r of data) out.push({ ...mapRow(r), _slug: r.categories.slug, _module: r.categories.module, _catName: r.categories.name })
   }
