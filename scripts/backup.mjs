@@ -50,7 +50,6 @@ async function main() {
   const categories = await fetchAll('categories', '*', 'sort_order')
   const questions = await fetchAll('questions', '*', 'sort_order')
   writeFileSync(join(dir, 'content.json'), JSON.stringify({
-    exported_at: new Date().toISOString(),
     counts: { categories: categories.length, questions: questions.length },
     categories, questions,
   }, null, 2))
@@ -67,7 +66,6 @@ async function main() {
     progress = data
   }
   writeFileSync(join(dir, 'progress.json'), JSON.stringify({
-    exported_at: new Date().toISOString(),
     owner: OWNER_EMAIL,
     count: progress.length,
     nailed: progress.filter(p => p.nailed).length,
