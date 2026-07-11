@@ -1075,9 +1075,16 @@ button {
   animation: slideUp 0.25s ease;
 }
 .quiz-revealed-actions .quiz-next-btn {
-  flex: 1.3;
+  flex: 1;
   margin-top: 0;
   animation: none;
+}
+.qmark-label { white-space: nowrap; }
+/* Mobile: compact icon-only Nail/Important, Next fills the row */
+@media (max-width: 540px) {
+  .quiz-mark-btns .quiz-nail-btn,
+  .quiz-mark-btns .quiz-important-btn { padding: 10px; }
+  .quiz-revealed-actions .qmark-label { display: none; }
 }
 
 .quiz-nail-btn {
@@ -1137,11 +1144,11 @@ button {
 .quiz-mark-btns {
   display: flex;
   gap: 8px;
-  flex: 2;
+  flex: 0 0 auto;
 }
 .quiz-mark-btns .quiz-nail-btn,
 .quiz-mark-btns .quiz-important-btn {
-  flex: 1;
+  flex: 0 0 auto;
   justify-content: center;
 }
 
