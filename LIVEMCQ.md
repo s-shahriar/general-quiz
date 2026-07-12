@@ -1,9 +1,13 @@
 # LiveMCQ Module — Pipeline, Data Format & Setup
 
 > This document explains the **LiveMCQ** module: how questions are pulled from the
-> LiveMCQ app, categorized, given to this app as JSON, rendered, and kept
-> duplicate‑free. It also documents the **Termux** setup for the sync script
-> (`livefav`) — including the gotchas we hit — so it can be reproduced cleanly.
+> LiveMCQ app, categorized, stored, rendered, and kept duplicate‑free. It also
+> documents the **Termux** setup for the sync script (`livefav`) — including the
+> gotchas we hit — so it can be reproduced cleanly.
+>
+> **Storage moved to Supabase — read §0 first.** Where older sections say questions
+> are "given as JSON" in `public/lmdata/*.json`, the live app now reads them from
+> the **DB**; the JSON files are a frozen seed. Syncing = INSERT into the DB (§8).
 >
 > LiveMCQ is a plain **MCQ module** (like Bangla/English Grammar): each topic has
 > `question · options · correct answer · explanation`, and gets Quiz, Study,
@@ -12,7 +16,41 @@
 
 ---
 
+## ⚠️ 0. SOURCE OF TRUTH — read this before syncing anything
+
+**The Supabase database is the source of truth.** The app reads LiveMCQ questions
+**live from the DB** at runtime (`src/data/contentLoader.js`), NOT from the JSON
+files. To sync new favourites you **INSERT rows into the Supabase `questions`
+table** — see §8.
+
+The `public/lmdata/*.json` files are the **original seed only** (a historical
+snapshot / backup). **Writing to them does nothing for the live app** — an agent
+that appends to `public/lmdata/*.json` (as older sections of this doc describe)
+produces a change that never appears in the app. Sections §1, §3, §6, §7 below
+still describe the old JSON pipeline; treat them as **format/reference only** and
+mentally substitute "DB `questions` table" wherever they say "`public/lmdata/*.json`".
+
+Baseline/dedup is measured against the **DB**, not the JSON files:
+
+```sql
+select count(*) as db_count, max((extra->>'favorite_id')::bigint) as db_max
+from questions q join categories c on c.id=q.category_id where c.module='livemcq';
+```
+
+> **Two-baseline gotcha (why counts disagree):** the DB has already been synced
+> past the frozen JSON seed. Counting "new" from the JSON files (e.g. 2008) vs.
+> from the DB (e.g. 2023) yields different totals for the *same* backend — always
+> use the DB `db_max` as the baseline.
+
+---
+
 ## 1. Big picture (the pipeline)
+
+> **⚠️ This diagram is the OLD (pre-Supabase) pipeline** — kept because the
+> fetch→categorize→dedup front half is still how you get + classify favourites.
+> The back half changed: the categorized questions now land in the **Supabase
+> `questions` table** (which the app reads), **not** in `public/lmdata/*.json`.
+> Read §0; the current end-to-end sync is §8.
 
 ```
 LiveMCQ app (phone)                     PC / this repo
@@ -28,16 +66,16 @@ your saved "favourites"
         ▼
   favourites_clean_categorized.json  ──►  per-category build
         │
-        ▼
-  public/lmdata/<category>.json  ──►  lazy-loaded by the app
+        ▼           [OLD]  public/lmdata/<category>.json  (frozen seed)
+        └──────────► [NOW]  INSERT into Supabase `questions`  ──►  app reads live
 ```
 
-- **Source of truth (off-repo):** `~/Downloads/livemcq_favourites/` on the PC
-  holds the full categorized master (`favourites_clean_categorized.json`,
-  2000+ questions) plus per-category splits and a summary.
-- **What ships in the app:** 13 JSON files in **`public/lmdata/`**, one per
-  category. These are static assets (NOT bundled into JS) and are fetched on
-  demand — see §6.
+- **Source of truth = the Supabase `questions` table** (§0). The off-repo
+  `~/Downloads/livemcq_favourites/` PC master and the `public/lmdata/*.json` files
+  are **historical seed/backup**, not what the app renders.
+- **What the app renders:** rows from the DB, loaded lazily per module via
+  `src/data/contentLoader.js` (see §6). The 13 `public/lmdata/*.json` files no
+  longer feed the runtime.
 
 ---
 
@@ -88,9 +126,15 @@ Expected: `HTTP 200` and e.g. `{ "total": 2023, "pages": 102, "newest": "1528537
 
 ---
 
-## 3. JSON data format for the app (how a question is "given")
+## 3. Data format (fields of one question)
 
-Each category is one file: **`public/lmdata/<category>.json`**, shaped:
+> **These fields are the DB columns.** The JSON shape below is the legacy seed
+> format, but every field maps 1:1 to a column on the Supabase `questions` table
+> (`uid, category_id, question, options, correct_answer, correct_answer_text,
+> explanation, extra, sort_order`) — `favorite_id` lives in `extra->>'favorite_id'`.
+> This section is the field/mapping reference for the INSERT in §8.
+
+Legacy per-file shape (`public/lmdata/<category>.json` — seed only):
 
 ```json
 {
@@ -125,9 +169,11 @@ Field rules:
 > `on*=` handlers stripped — the data has none). Do **not** strip `<sup>/<sub>/<img>`
 > or the math/figures break.
 
-To add a question by hand: append an object to the right category file with a
-unique `favorite_id`, a `correct_answer` letter that exists in `options`, and
-(optionally) HTML in `question`/`explanation`.
+To add a question: **INSERT a row into the DB** (§8) with a unique
+`extra->>'favorite_id'`, a `correct_answer` letter that exists in `options`, the
+`uid` from `qid.js`, and (optionally) HTML in `question`/`explanation`. *(The old
+"append to the category JSON file" method is seed-only and does not reach the
+live app — see §0.)*
 
 ---
 
@@ -137,7 +183,14 @@ The LiveMCQ subject endpoint is unreliable (it mislabels e.g. English grammar as
 "Surgery"), so **categories are assigned by reading the question content**, into
 these 13 topics (`src/data/index.js` → `LIVEMCQ_TOPICS`):
 
-| # | file (`public/lmdata/…`) | topic name | what goes here |
+> **DB slug = `lm_` + the key below**, and one key differs from its file name.
+> The `categories.slug` you INSERT against (§8, `category_id` lookup) is
+> `lm_bangla_sahitya`, `lm_math`, `lm_banking`, etc. Exceptions to watch:
+> `english_literature` → slug **`lm_english_lit`**, `general_science` → slug
+> **`lm_science`**. Always resolve the real id with
+> `select id, slug from categories where module='livemcq'` rather than guessing.
+
+| # | key (legacy file `public/lmdata/…`; DB slug = `lm_`+key) | topic name | what goes here |
 |--:|---|---|---|
 | 1 | `bangla_sahitya` | বাংলা সাহিত্য | authors, works, novels, poets, periodicals, pen-names, quotes, চর্যাপদ, ছন্দ/অলংকার |
 | 2 | `bangla_byakoron` | বাংলা ব্যাকরণ | সন্ধি, সমাস, কারক, প্রত্যয়, উপসর্গ, বানান, পদ, বাক্য, বাগধারা, সমার্থক/বিপরীত, phonetics, loanwords, পরিভাষা |
@@ -198,6 +251,15 @@ in `src/index.css`.
 
 ## 6. How the app loads LiveMCQ (lazy, to keep the bundle small)
 
+> **⚠️ Outdated as of the Supabase migration (§0).** The app now loads LiveMCQ
+> questions **from the DB** via `src/data/contentLoader.js` (lazy per module,
+> paginated with `.range()` past PostgREST's 1000-row cap), **not** by fetching
+> `/lmdata/*.json`. The description below documents the original static-file
+> loader (`livemcqLoader.js` / `useLiveMcq.js`) and is kept for history; the
+> lazy-load *idea* is unchanged, only the source (DB, not JSON) differs. The
+> `livemcqLoader.js` and `useLiveMcq.js` files named below **no longer exist** —
+> they were replaced by the generalized `contentLoader.js`.
+
 The 13 files are ~4.6 MB, so they are **not** imported into JS. Instead:
 
 - `src/data/index.js` → `LIVEMCQ_TOPICS`: metadata only (`id, name, icon, color,
@@ -255,29 +317,57 @@ duplicates**, and removing them would delete real questions:
   *"নিচের কোন বানানটি অশুদ্ধ?"* (×2). Same stem, **different options/answer** →
   distinct questions.
 
-So the current data (2008 items) has **0 real duplicates** — every `favorite_id`
-is unique, and text collisions are expected. Do **not** collapse by text.
-(GroupSearch does hide same-text results in the *search list* for readability;
-that is a UI convenience only and does not affect the underlying data.)
+So the data has **0 real duplicates** — every `favorite_id` is unique, and text
+collisions are expected. Do **not** collapse by text. (GroupSearch does hide
+same-text results in the *search list* for readability; that is a UI convenience
+only and does not affect the underlying data.) *(The `2008`-item figure this
+section originally cited was the JSON-seed snapshot; the live DB count grows with
+each sync — get the current count from §0/§8's baseline query.)*
 
 ---
 
-## 8. Syncing new favourites (adding more later)
+## 8. Syncing new favourites (adding more later) → INSERT INTO THE DB
 
-1. Fetch page 1 (newest 20) with the token:
+**Target = the Supabase `questions` table, NOT `public/lmdata/*.json` (§0).** No
+rebuild/redeploy is needed — the app reads the DB live, so new rows appear on the
+next load.
+
+1. **Baseline from the DB** (this is the dedup key — never the JSON files):
+   ```sql
+   select max((extra->>'favorite_id')::bigint) as db_max
+   from questions q join categories c on c.id=q.category_id where c.module='livemcq';
+   ```
+2. **Fetch** page 1 (newest 20) with the token; page 2, 3, … until an id drops
+   `≤ db_max` (newest-first):
    ```bash
    curl -s -H "Authorization: Token <TOKEN>" \
      "https://livemcq.com/api/v1/central-favorite-list/?page=1"
    ```
-   or run `livefav` on the phone (§9).
-2. Keep only items with `favorite_id > <last-synced max>` (dedup).
-3. Classify each new question into one of the 13 categories (§4).
-4. Append to the PC master `favourites_clean_categorized.json`, then regenerate
-   the affected `public/lmdata/<file>.json` (same shape as §3).
-5. Run the dedup check (§7). Rebuild.
+   or run `livefav` on the phone (§9). New count ≈ `pagination.total_results −
+   db_count`.
+3. Keep only items with `favorite_id > db_max` (dedup).
+4. **Classify** each new question into one of the 13 categories (§4) → gives the
+   topic `slug` (`lm_banking`, `lm_math`, …) → look up the `category_id`:
+   `select id from categories where module='livemcq' and slug=$slug`.
+5. **Map API → DB row** (shape per §3): `answer 1→a…5→e` (`0`/absent → `null`);
+   `[option1..option5]` non-empty → `options` jsonb `{a..e}`; `correct_answer_text`
+   = the chosen option; `question`/`explanation` HTML **as-is**; `type='mcq'`;
+   `extra = {"favorite_id":"<id>"}` (**required — the dedup key**);
+   `sort_order` = that category's current max + 1.
+6. **`uid` = `uidOfText(question)`** from `src/lib/qid.js` — import that module so
+   the uid matches what the browser computes (do NOT invent a uid). A Node
+   generator + Supabase MCP `apply_migration` (batch INSERT) is the proven path.
+7. **Verify** (should match the API): re-run the baseline query —
+   `count(*)` = API `total_results`, `db_max` = API newest, and
+   `count(distinct extra->>'favorite_id')` = `count(*)` (0 duplicates).
 
-The last-synced `favorite_id` baseline is recorded outside the repo (in the PC
-master / notes).
+The last-synced `favorite_id` baseline is **the DB `db_max`** (step 1) — nothing
+to record outside the repo.
+
+> **Legacy JSON path (deprecated):** the old flow appended to the PC master
+> `favourites_clean_categorized.json` and regenerated `public/lmdata/<file>.json`.
+> That store is a frozen seed now (§0) — only touch it if you are deliberately
+> refreshing the backup snapshot, and know it does **not** feed the live app.
 
 ---
 
@@ -355,13 +445,16 @@ working after an app re-login.
 
 | path | purpose |
 |---|---|
-| `public/lmdata/*.json` | the 13 category question files (static, lazy-loaded) |
-| `src/data/index.js` → `LIVEMCQ_TOPICS` | topic metadata + `file` refs (no data import) |
-| `src/data/livemcqLoader.js` | fetches `/lmdata/*.json`, fills `questions` |
-| `src/hooks/useLiveMcq.js` | `useLiveMcqReady()` load-on-demand hook |
+| **Supabase `questions` table** (`module='livemcq'`) | **the live source of truth** (§0) — what the app renders |
+| `src/data/contentLoader.js` | loads questions **from the DB** per module (lazy, paginated `.range()`) — the current loader |
+| `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; import it when inserting so client/DB uids match (§8) |
+| `public/lmdata/*.json` | the 13 category files — **frozen original seed / backup only**, not read at runtime |
+| `src/data/index.js` → `LIVEMCQ_TOPICS` | topic metadata (name/icon/color); `questions:[]` filled from the DB |
 | `src/components/shared/RichText.jsx` | HTML/entity-safe renderer for math/figures |
-| `~/Downloads/livemcq_favourites/` (off-repo) | PC master + per-category + summary |
+| `~/Downloads/livemcq_favourites/` (off-repo) | old PC master + per-category + summary (legacy) |
 | `~/Downloads/livefav.sh` (off-repo) | the Termux sync script source |
+| ~~`src/data/livemcqLoader.js`, `src/hooks/useLiveMcq.js`~~ | **removed** in the Supabase migration (superseded by `contentLoader.js`) |
 
-To add more questions later: regenerate the relevant `public/lmdata/<file>.json`
-(dedup by `favorite_id`) — no code changes needed.
+To add more questions later: **INSERT rows into the Supabase `questions` table**
+(dedup by `favorite_id`, uid via `qid.js`) — see §8. No code changes or redeploy
+needed; the app reads the DB live.
