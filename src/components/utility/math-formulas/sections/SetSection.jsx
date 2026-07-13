@@ -67,6 +67,7 @@ export default function SetSection() {
         <Card color="violet">
           <CardTitle color="var(--mf-violet)">সম্ভাবনা (Probability)</CardTitle>
           <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন (Independent)</div><div className="form">P(A∩B) = P(A) · P(B)</div></div>
+          <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন হলে (সংযোগ)</div><div className="form">P(A∪B) = P(A) + P(B) − P(A) · P(B)</div></div>
           <div className="mf-prob-item"><div className="cond">A ও B বর্জনশীল (Mutually Exclusive)</div><div className="form">P(A∪B) = P(A) + P(B)</div></div>
           <div className="mf-prob-item"><div className="cond">A ও B সাধারণ ঘটনা</div><div className="form">P(A∪B) = P(A) + P(B) − P(A∩B)</div></div>
           <div className="mf-prob-item"><div className="cond">শর্তাধীন — A ঘটলে B এর সম্ভাবনা</div><div className="form">P(B|A) = P(A∩B) / P(A)</div></div>
