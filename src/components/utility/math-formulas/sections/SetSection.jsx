@@ -66,19 +66,23 @@ export default function SetSection() {
 
         <Card color="violet">
           <CardTitle color="var(--mf-violet)">সম্ভাবনা (Probability)</CardTitle>
+          <div className="mf-prob-item"><div className="cond">সম্ভাবনার সংজ্ঞা</div><div className="form">P = অনুকূল ফলাফল / মোট ফলাফল</div></div>
+          <div className="mf-prob-item"><div className="cond">ছক্কা n বার নিক্ষেপ — মোট ফলাফল</div><div className="form">6ⁿ  (২ বার = 6² = 36 · ৩ বার = 6³ = 216)</div></div>
+          <div className="mf-prob-item"><div className="cond">কয়েন n বার নিক্ষেপ — মোট ফলাফল</div><div className="form">2ⁿ  (২ বার = 2² = 4 · ৩ বার = 2³ = 8)</div></div>
           <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন (Independent)</div><div className="form">P(A∩B) = P(A) · P(B)</div></div>
           <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন হলে (সংযোগ)</div><div className="form">P(A∪B) = P(A) + P(B) − P(A) · P(B)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B বর্জনশীল (Mutually Exclusive)</div><div className="form">P(A∪B) = P(A) + P(B)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B সাধারণ ঘটনা</div><div className="form">P(A∪B) = P(A) + P(B) − P(A∩B)</div></div>
+          <div className="mf-prob-item"><div className="cond">A ও B বর্জনশীল — একসাথে ঘটে না, P(A∩B)=0</div><div className="form">P(A∪B) = P(A) + P(B)</div></div>
+          <div className="mf-prob-item"><div className="cond">A ও B সাধারণ — overlap থাকতে পারে (General)</div><div className="form">P(A∪B) = P(A) + P(B) − P(A∩B)</div></div>
           <div className="mf-prob-item"><div className="cond">শর্তাধীন — A ঘটলে B এর সম্ভাবনা</div><div className="form">P(B|A) = P(A∩B) / P(A)</div></div>
           <div className="mf-prob-item"><div className="cond">A না ঘটার সম্ভাবনা</div><div className="form">P(A') = 1 − P(A)</div></div>
           <div className="mf-prob-item"><div className="cond">P(A'∩B')</div><div className="form">= P((A∪B)') = 1 − P(A∪B)</div></div>
           <div className="mf-prob-item"><div className="cond">P(A'∪B')</div><div className="form">= P((A∩B)') = 1 − P(A∩B)</div></div>
-          <Mem title="💡 মনে রাখুন">
+          <Mem title="💡 মনে রাখুন — গুলিয়ো না">
             <ul>
-              <li><strong>স্বাধীন:</strong> গুণ (P·P) &nbsp;|&nbsp; <strong>বর্জনশীল:</strong> যোগ</li>
-              <li>P(A) + P(A') = <strong>1</strong> সবসময়</li>
-              <li>0 ≤ P(A) ≤ 1 সবসময়</li>
+              <li><strong>দুই আলাদা জিনিস:</strong> সাধারণ ও বর্জনশীল = <strong>যোগ</strong> (A∪B); স্বাধীন = <strong>গুণ</strong> (A∩B)।</li>
+              <li><strong>সাধারণ</strong> = general সূত্র, সবসময় খাটে। <strong>বর্জনশীল</strong> = তারই special case, যখন <strong>P(A∩B)=0</strong> (একসাথে ঘটে না)।</li>
+              <li>⚠️ <strong>বর্জনশীল আর স্বাধীন একসাথে হয় না</strong> — একটায় P(A∩B)=0, অন্যটায় P(A∩B)=P(A)·P(B)।</li>
+              <li>P(A) + P(A') = <strong>1</strong> &nbsp;·&nbsp; 0 ≤ P(A) ≤ 1 &nbsp;— সবসময়।</li>
             </ul>
           </Mem>
         </Card>

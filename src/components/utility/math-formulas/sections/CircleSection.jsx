@@ -51,10 +51,41 @@ export default function CircleSection() {
           </div>
           <FBox label="অভ্যন্তরীণ কোণের সমষ্টি" tex={"= (n-2)\\times 180^\\circ"}/>
           <FBox label="প্রতিটি বহিঃকোণ (সুষম)" tex={"= \\dfrac{360^\\circ}{n}"} highlight/>
+          <div style={{fontSize:11,color:'var(--text-3)',padding:'2px 10px 4px',marginBottom:4}}>
+            অন্তঃস্থ কোণ + বহিঃস্থ কোণ = <strong>180°</strong>
+          </div>
           <FBox label="n বাহুর কর্ণ সংখ্যা" tex={"= \\dfrac{n(n-3)}{2}"}/>
           <Mem title="💡 দ্রুত মনে রাখুন">
             <p>ত্রিভুজ (n=3): 180° ✓ | চতুর্ভুজ (n=4): 360° ✓<br/>
             পঞ্চভুজ (n=5): 540° | ষড়ভুজ (n=6): 720°</p>
+          </Mem>
+        </Card>
+
+        <Card color="teal">
+          <CardTitle color="var(--mf-teal)">বর্গের অন্তর্বৃত্ত (Circle in Square)</CardTitle>
+          <div style={{textAlign:'center',margin:'10px 0'}}>
+            <svg width="160" height="150" viewBox="0 0 160 150">
+              <rect x="27" y="20" width="106" height="106" fill="rgba(15,219,168,.05)" stroke="#0fdba8" strokeWidth="2"/>
+              <line x1="27" y1="20" x2="133" y2="126" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <line x1="133" y1="20" x2="27" y2="126" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <circle cx="80" cy="73" r="53" fill="rgba(91,164,245,.07)" stroke="#5ba4f5" strokeWidth="2"/>
+              <line x1="27" y1="73" x2="133" y2="73" stroke="#f0a500" strokeWidth="1.6"/>
+              <circle cx="80" cy="73" r="3.5" fill="#f0a500"/>
+              <text x="84" y="70" fill="#f0a500" fontSize="11" fontWeight="700">O</text>
+              <text x="16" y="16" fill="#8899aa" fontSize="11">D</text>
+              <text x="137" y="16" fill="#8899aa" fontSize="11">C</text>
+              <text x="137" y="138" fill="#8899aa" fontSize="11">B</text>
+              <text x="16" y="138" fill="#8899aa" fontSize="11">A</text>
+              <text x="40" y="145" fill="#0fdba8" fontSize="10" fontWeight="700">বাহু = ব্যাস (d)</text>
+            </svg>
+          </div>
+          <FBox label="বর্গের একবাহু = বৃত্তের ব্যাস" tex={"a = d = 2r"} highlight/>
+          <FBox label="বৃত্তের ব্যাসার্ধ" tex={"r = \\dfrac{a}{2}"}/>
+          <FBox label="বৃত্তের ক্ষেত্রফল" tex={"= \\pi r^2 = \\dfrac{\\pi a^2}{4}"}/>
+          <FBox label="ফাঁকা অংশ (বর্গ − বৃত্ত)" tex={"= a^2\\left(1-\\tfrac{\\pi}{4}\\right)\\approx 0.215\\,a^2"}/>
+          <Mem title="💡 উল্টোটা গুলিয়ো না">
+            <p><strong>বর্গের ভেতরে বৃত্ত</strong> (অন্তর্বৃত্ত): বাহু = ব্যাস → <strong>a = 2r</strong>।<br/>
+            <strong>বৃত্তের ভেতরে বর্গ</strong> (অন্তর্লিখিত বর্গ): বর্গের <strong>কর্ণ</strong> = ব্যাস → <strong>a√2 = 2r</strong>।</p>
           </Mem>
         </Card>
       </div>

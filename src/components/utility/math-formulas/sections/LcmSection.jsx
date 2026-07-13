@@ -26,6 +26,23 @@ export default function LcmSection() {
             <strong>গ.সা.গু:</strong> উল্টো — লব-এ গ, হর-এ ল</p>
           </Mem>
         </Card>
+
+        <Card color="violet">
+          <CardTitle color="var(--mf-violet)">কতগুলো সংখ্যা ভাগ যায় (ল.সা.গু প্রয়োগ)</CardTitle>
+          <div style={{fontSize:11,color:'var(--text-3)',padding:'0 10px 6px'}}>
+            d দিয়ে ভাগ যায় এমন সংখ্যা = (সীমা ÷ d) এর ভাগফলের পূর্ণ অংশ।
+          </div>
+
+          <IdItem n="১">
+            <strong>প্রশ্ন:</strong> ১০–১০০০ এর মধ্যে ৩০ অথবা ১৫ দিয়ে ভাগ যায় কয়টি?
+            <div style={exBox}><strong>Ans →</strong> (৩০ দিয়ে ভাগ যায় এমন + ১৫ দিয়ে ভাগ যায় এমন) − (৩০ ও ১৫ এর ল.সা.গু দিয়ে ভাগ যায় সংখ্যা)</div>
+          </IdItem>
+
+          <IdItem n="২">
+            <strong>প্রশ্ন:</strong> ১০–১০০০ এর মধ্যে ৩০ দিয়ে যাবে কিন্তু ১৫ দিয়ে ভাগ যাবে না — কয়টি?
+            <div style={exBox}><strong>Ans →</strong> (৩০ দিয়ে ভাগ যায় এমন সংখ্যাগুলো) − (৩০ ও ১৫ এর ল.সা.গু দিয়ে যা ভাগ যায়)</div>
+          </IdItem>
+        </Card>
       </div>
 
       <Card color="gold" style={{marginTop:14}}>

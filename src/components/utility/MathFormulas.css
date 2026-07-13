@@ -342,6 +342,7 @@
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  height: auto;   /* keep aspect ratio when width is capped — else circles stretch to ellipses */
 }
 
 /* Ensure icons in titles don't get centered by mistake */
