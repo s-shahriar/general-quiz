@@ -1,6 +1,6 @@
-import { Moon, Sun } from 'lucide-react'
+import { Moon, Sun, Trash2 } from 'lucide-react'
 import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import AccountButton from './components/auth/AccountButton.jsx'
 import SyncOverlay from './components/SyncOverlay.jsx'
 import SyncStatus from './components/SyncStatus.jsx'
@@ -39,6 +39,7 @@ export default function App() {
 }
 
 function AppRoutes() {
+  const navigate = useNavigate()
   const { theme, toggleTheme } = useThemeContext()
   const { loading: authLoading } = useAuth()
   const syncing = useProgressSyncing()
@@ -87,6 +88,9 @@ function AppRoutes() {
             })}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <button className="theme-toggle-nav" onClick={() => navigate('/recycle-bin')} title="Recycle Bin">
+              <Trash2 size={17} />
+            </button>
             <AccountButton />
             <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
               {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}

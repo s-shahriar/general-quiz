@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { X, Lightbulb, ChevronDown, ChevronUp } from 'lucide-react'
 import RichText from './RichText'
+import Pagination from './Pagination'
 import DeleteButton from './DeleteButton.jsx'
 import { uidOf } from '../../lib/qid.js'
 import { useTrash } from '../../contexts/TrashContext.jsx'
 
 // Below this many categories the chip grid collapses to ~2 rows with a toggle.
 const COLLAPSE_AFTER = 6
+const PAGE_SIZE = 20
 
 // Saved (Nailed / Important) questions, grouped by topic and browsed via a
 // horizontal category chip-bar (pick one topic at a time — far easier to filter
@@ -17,6 +19,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
           totalLabel, removeHint, rowIcon, rowIconColor, showExplanation } = config
   const [activeId, setActiveId] = useState(null)
   const [chipsOpen, setChipsOpen] = useState(false)
+  const [page, setPage] = useState(1)
   const { trashedIds } = useTrash()
 
   const grouped = topics.map(t => {
@@ -29,6 +32,14 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
 
   const total = grouped.reduce((s, g) => s + g.items.length, 0)
   const active = grouped.find(g => g.topic.id === activeId) || grouped[0]
+
+  // Paginate the active topic's saved questions (long lists — e.g. 190 nailed —
+  // shouldn't render as one endless scroll).
+  const activeItems = active?.items ?? []
+  const totalPages = Math.max(1, Math.ceil(activeItems.length / PAGE_SIZE))
+  const curPage = Math.min(page, totalPages)
+  const pageItems = activeItems.slice((curPage - 1) * PAGE_SIZE, curPage * PAGE_SIZE)
+  useEffect(() => { setPage(1) }, [active?.topic.id])
 
   return (
     <div className="nailed-screen anim-fade">
@@ -75,7 +86,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
                         key={t.id}
                         className={`nailed-cat-chip${on ? ' active' : ''}`}
                         style={{ '--c': t.color }}
-                        onClick={() => setActiveId(t.id)}
+                        onClick={() => { setActiveId(t.id); setPage(1) }}
                       >
                         {TIcon && <span className="nailed-cat-chip-ic"><TIcon size={16} /></span>}
                         <span className="nailed-cat-chip-name">{t.shortName || t.name}</span>
@@ -95,7 +106,10 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
 
           {active && (
             <div className="nailed-screen-list anim-fade" style={{ '--c': active.topic.color }}>
-              {active.items.map(({ q, qid }) => (
+              {totalPages > 1 && (
+                <div className="nailed-page-info">Page {curPage} of {totalPages} · {activeItems.length} questions</div>
+              )}
+              {pageItems.map(({ q, qid }) => (
                 <SavedRow
                   key={qid}
                   q={q}
@@ -106,6 +120,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
                   onRemove={onRemove}
                 />
               ))}
+              {totalPages > 1 && <Pagination page={curPage} totalPages={totalPages} onPageChange={setPage} />}
             </div>
           )}
         </>
