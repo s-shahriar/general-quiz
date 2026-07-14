@@ -259,7 +259,8 @@ export default function StudyMode({
 function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
-  const opts = ['a','b','c','d'].filter(k => q.options?.[k])
+  // Questions may have 4 OR 5 options (LiveMCQ uses up to `e`); keep canonical order.
+  const opts = ['a','b','c','d','e'].filter(k => q.options?.[k])
 
   const pick = (key) => {
     if (shown) return
