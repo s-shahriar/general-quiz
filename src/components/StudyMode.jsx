@@ -29,11 +29,24 @@ function getTopicGroup(t, groupProp) {
   return GK_TOPICS
 }
 
+// Home-section key (matches GROUP_TOPICS / the `?g=` param) so the Nailed screen
+// opens scoped to the section this topic belongs to — livemcq included.
+function getGroupKey(t) {
+  if (!t) return null
+  if (BANGLA_TOPICS.some(x => x.id === t.id))         return 'bangla'
+  if (ENGLISH_TOPICS.some(x => x.id === t.id))        return 'english'
+  if (BANGLA_SAHITYA_TOPICS.some(x => x.id === t.id)) return 'sahitya'
+  if (LIVEMCQ_TOPICS.some(x => x.id === t.id))        return 'livemcq'
+  if (GK_TOPICS.some(x => x.id === t.id))             return 'gk'
+  return null
+}
+
 export default function StudyMode({
   topic: topicProp,
   topics: topicGroupProp,
   onBack: onBackProp,
   onHome: onHomeProp,
+  onNailed: onNailedProp,
   onChangeTopic: onChangeTopicProp,
 }) {
   const params = useParams()
@@ -118,6 +131,11 @@ export default function StudyMode({
 
   const goBack  = () => onBackProp ? onBackProp() : navigate(backTo || '/topic/' + topic.id)
   const goHome  = () => onHomeProp ? onHomeProp() : navigate('/')
+  const goNailed = () => {
+    if (onNailedProp) return onNailedProp()
+    const key = getGroupKey(topic)
+    navigate('/nailed' + (key ? '?g=' + key : ''))
+  }
   const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
 
   if (!topic) return <Navigate to="/" replace />
@@ -194,7 +212,7 @@ export default function StudyMode({
       {nailedCt > 0 && !filterImportant && !query && (
         <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
-          <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={goHome} className="nailed-notice-link">Nailed It</button></span>
+          <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={goNailed} className="nailed-notice-link">Nailed It</button></span>
         </div>
       )}
 

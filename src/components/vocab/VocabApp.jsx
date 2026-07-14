@@ -114,6 +114,7 @@ function VocabStudyModeWrapper({ topic }) {
       topics={VOCAB_TOPICS}
       onBack={() => navigate('/vocabulary/' + topic.id)}
       onHome={() => navigate('/vocabulary')}
+      onNailed={() => navigate('/vocabulary/nailed')}
       onChangeTopic={(t) => navigate('/vocabulary/' + t.id + '/study')}
     />
   )

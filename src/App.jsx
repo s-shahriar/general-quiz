@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import AccountButton from './components/auth/AccountButton.jsx'
 import SyncOverlay from './components/SyncOverlay.jsx'
+import SyncStatus from './components/SyncStatus.jsx'
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
 import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext.jsx'
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
@@ -116,6 +117,7 @@ function AppRoutes() {
       </Suspense>
 
       {(authLoading || syncing) && <SyncOverlay />}
+      <SyncStatus />
     </div>
   )
 }
