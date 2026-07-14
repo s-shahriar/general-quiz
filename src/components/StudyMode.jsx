@@ -10,7 +10,9 @@ import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
 import RichText from './shared/RichText'
+import DeleteButton from './shared/DeleteButton.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
+import { useTrash } from '../contexts/TrashContext.jsx'
 import useDebounce from '../hooks/useDebounce.js'
 
 const PAGE_SIZE = 20
@@ -58,6 +60,7 @@ export default function StudyMode({
   const ready = useModuleReady(topic?.module)
   const { value: mastered, add: onNail } = useMasteredContext()
   const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
+  const { trashedIds } = useTrash()
   const { theme, toggleTheme } = useThemeContext()
 
   const [filterImportant, setFilterImportant] = useState(false)
@@ -73,8 +76,8 @@ export default function StudyMode({
     if (!topic) return []
     return topic.questions
       .map((q) => ({ q, qid: uidOf(q) }))
-      .filter(({ q }) => q.options && q.correct_answer)
-  }, [topic, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+      .filter(({ q }) => q.options && q.correct_answer && !trashedIds.has(q._id))
+  }, [topic, ready, trashedIds]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const nonNailed      = validQ.filter(({ qid }) => !mastered.has(qid))
   const nailedCt       = validQ.length - nonNailed.length
@@ -290,6 +293,7 @@ function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNa
             <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
             {isImportant ? 'Important ✓' : 'Important'}
           </button>
+          <DeleteButton question={q} className="nail-btn" size={12} />
           {shown && (
             <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
               Hide

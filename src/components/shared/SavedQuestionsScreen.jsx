@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { X, Lightbulb, ChevronDown, ChevronUp } from 'lucide-react'
 import RichText from './RichText'
+import DeleteButton from './DeleteButton.jsx'
 import { uidOf } from '../../lib/qid.js'
+import { useTrash } from '../../contexts/TrashContext.jsx'
 
 // Below this many categories the chip grid collapses to ~2 rows with a toggle.
 const COLLAPSE_AFTER = 6
@@ -15,11 +17,12 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
           totalLabel, removeHint, rowIcon, rowIconColor, showExplanation } = config
   const [activeId, setActiveId] = useState(null)
   const [chipsOpen, setChipsOpen] = useState(false)
+  const { trashedIds } = useTrash()
 
   const grouped = topics.map(t => {
     const items = t.questions
       .map((q) => ({ q, qid: uidOf(q) }))
-      .filter(({ q }) => q.options && q.correct_answer)
+      .filter(({ q }) => q.options && q.correct_answer && !trashedIds.has(q._id))
       .filter(({ qid }) => savedSet.has(qid))
     return { topic: t, items }
   }).filter(g => g.items.length > 0)
@@ -134,9 +137,12 @@ function SavedRow({ q, qid, rowIcon: RowIcon, rowIconColor, showExplanation, onR
           </>
         )}
       </div>
-      <button className="nailed-unnail-btn" onClick={() => onRemove(qid)} title="Remove">
-        <X size={13} />
-      </button>
+      <div className="nailed-row-btns">
+        <button className="nailed-unnail-btn" onClick={() => onRemove(qid)} title="Remove from this list">
+          <X size={13} />
+        </button>
+        <DeleteButton question={q} className="nailed-unnail-btn" iconOnly size={13} />
+      </div>
     </div>
   )
 }

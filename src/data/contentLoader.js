@@ -25,12 +25,18 @@ const loaded = new Set()
 const inflight = new Map()
 
 function mapRow(r) {
-  const { uid, question, options, correct_answer, correct_answer_text, explanation, extra } = r
-  return { uid, question, options, correct_answer, correct_answer_text, explanation, ...(extra || {}) }
+  const { id, uid, question, options, correct_answer, correct_answer_text, explanation, extra } = r
+  return { _id: id, uid, question, options, correct_answer, correct_answer_text, explanation, ...(extra || {}) }
 }
 
 export function isModuleLoaded(moduleId) {
   return loaded.has(moduleId)
+}
+
+// Drop a module's cache so it re-fetches next time it's needed (e.g. after
+// restoring a question from the recycle bin, so it reappears in that module).
+export function invalidateModule(moduleId) {
+  loaded.delete(moduleId)
 }
 
 export function loadModule(moduleId) {
@@ -49,6 +55,7 @@ export function loadModule(moduleId) {
         .from('questions')
         .select('id,uid,question,options,correct_answer,correct_answer_text,explanation,extra,sort_order,categories!inner(slug,module)')
         .eq('categories.module', moduleId)
+        .is('deleted_at', null)
         .order('id')
         .range(from, from + pageSize - 1)
       if (error) throw error
@@ -83,8 +90,9 @@ export async function fetchQuestionsByUids(uids) {
   for (let i = 0; i < list.length; i += chunk) {
     const { data, error } = await supabase
       .from('questions')
-      .select('uid,question,options,correct_answer,correct_answer_text,explanation,extra,sort_order,categories!inner(slug,module,name)')
+      .select('id,uid,question,options,correct_answer,correct_answer_text,explanation,extra,sort_order,categories!inner(slug,module,name)')
       .in('uid', list.slice(i, i + chunk))
+      .is('deleted_at', null)
       .order('sort_order', { ascending: false })
     if (error) throw error
     for (const r of data) out.push({ ...mapRow(r), _slug: r.categories.slug, _module: r.categories.module, _catName: r.categories.name })

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { LogIn, LogOut, User, Check, CloudOff, Star, Bookmark } from 'lucide-react'
+import { LogIn, LogOut, User, Check, CloudOff, Star, Bookmark, Trash2 } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import { useProgressMeta } from '../../contexts/ProgressContext.jsx'
 
@@ -32,6 +33,7 @@ function timeAgo(date) {
 export default function AccountButton() {
   const { configured, user, signInWithGoogle, signOut } = useAuth()
   const { nailedCount, importantCount, lastSaved } = useProgressMeta()
+  const navigate = useNavigate()
   const [open, setOpen] = useState(false)
 
   if (!configured) {
@@ -84,6 +86,10 @@ export default function AccountButton() {
                   <Check size={13} style={{ color: '#22c55e', flexShrink: 0 }} />
                   {lastSaved ? `Saved ${timeAgo(lastSaved)}` : 'Synced across your devices'}
                 </div>
+
+                <button onClick={() => { navigate('/recycle-bin'); setOpen(false) }} style={{ ...signOutBtn, marginBottom: 8 }}>
+                  <Trash2 size={15} /> Recycle Bin
+                </button>
 
                 <button onClick={() => { signOut(); setOpen(false) }} style={signOutBtn}>
                   <LogOut size={15} /> Sign out

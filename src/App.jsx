@@ -6,6 +6,7 @@ import SyncOverlay from './components/SyncOverlay.jsx'
 import SyncStatus from './components/SyncStatus.jsx'
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
 import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext.jsx'
+import { TrashProvider } from './contexts/TrashContext.jsx'
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
@@ -21,13 +22,16 @@ const UtilityHome      = lazy(() => import('./components/utility/HomeScreen.jsx'
 const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas.jsx'))
 const UtilityFinancialTerms = lazy(() => import('./components/utility/FinancialTerms.jsx'))
 const VocabApp         = lazy(() => import('./components/vocab/VocabApp.jsx'))
+const RecycleBinScreen = lazy(() => import('./components/RecycleBinScreen.jsx'))
 
 export default function App() {
   return (
     <AuthProvider>
       <ThemeProvider>
         <ProgressProvider>
-          <AppRoutes />
+          <TrashProvider>
+            <AppRoutes />
+          </TrashProvider>
         </ProgressProvider>
       </ThemeProvider>
     </AuthProvider>
@@ -112,6 +116,7 @@ function AppRoutes() {
           <Route path="/financial" element={<UtilityFinancialTerms />} />
           <Route path="/vocabulary" element={<VocabApp />} />
           <Route path="/vocabulary/*" element={<VocabApp />} />
+          <Route path="/recycle-bin" element={<RecycleBinScreen />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
