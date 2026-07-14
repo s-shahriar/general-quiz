@@ -4375,3 +4375,9 @@ button {
 }
 
 .nailed-page-info { font-size: 0.74rem; font-weight: 600; color: var(--text-3); text-align: center; margin: 0 0 10px; }
+
+/* Mobile: collapse Nail It / Important / Delete action buttons to icons only. */
+@media (max-width: 540px) {
+  .qmark-label { display: none; }
+  .quiz-nail-btn, .quiz-important-btn, .nail-btn { padding-left: 10px; padding-right: 10px; }
+}
