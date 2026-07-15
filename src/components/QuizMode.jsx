@@ -4,6 +4,7 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
+import HandToggle from './shared/HandToggle.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { uidOf } from '../lib/qid.js'
 import { shuffle } from '../lib/utils'
@@ -97,6 +98,7 @@ export default function QuizMode({
         </button>
         <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName || topic.name}</span>
         <div className="topbar-right-actions">
+          <HandToggle />
           <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>

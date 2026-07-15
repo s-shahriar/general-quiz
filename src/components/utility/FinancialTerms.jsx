@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { ChevronLeft, Search, Sun, Moon } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
+import HandToggle from '../shared/HandToggle.jsx'
 import { FIN_CATEGORIES, FIN_CARDS } from '../../data/utility/finTermsData'
 import './FinancialTerms.css'
 
@@ -19,7 +20,8 @@ export default function FinancialTerms() {
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="ft-topbar-title">ফিনান্সিয়াল টার্ম</span>
-          <div style={{ marginLeft: 'auto' }}>
+          <div className="topbar-right-actions ft-topbar-actions">
+            <HandToggle className="ft-theme-toggle" />
             <button
               className="ft-theme-toggle"
               onClick={toggleTheme}

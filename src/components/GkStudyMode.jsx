@@ -1,8 +1,9 @@
-import { ChevronLeft, Home, Lightbulb, Info, AlertCircle, LayoutGrid, Moon, Sun } from 'lucide-react'
+import { ChevronLeft, Lightbulb, Info, AlertCircle, LayoutGrid, Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { GK_TOPICS } from '../data/index.js'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
+import HandToggle from './shared/HandToggle.jsx'
 import CategorySidebar from './CategorySidebar.jsx'
 
 // Render inline **bold** spans as highlighted keywords (the "marked words").
@@ -126,10 +127,10 @@ export default function GkStudyMode() {
         </button>
         <span className="study-title" style={{ color: topic.color }}>{topic.name}</span>
         <div className="topbar-right-actions">
+          <HandToggle />
           <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-          <button className="study-home-btn" onClick={() => navigate('/')} title="Home"><Home size={16} /></button>
           <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
             <LayoutGrid size={16} />
           </button>

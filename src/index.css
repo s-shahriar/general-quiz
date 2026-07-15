@@ -4391,3 +4391,100 @@ button {
   .qmark-label { display: none; }
   .quiz-nail-btn, .quiz-important-btn, .nail-btn { padding-left: 10px; padding-right: 10px; }
 }
+
+/* ── Left-hand layout ──────────────────────────────────────────────
+   [data-hand="left"] on <html> mirrors every bar that holds actions,
+   so the controls land under a left thumb. Set by useHand(). */
+[data-hand="left"] .module-nav-bar,
+[data-hand="left"] .quiz-topbar,
+[data-hand="left"] .study-topbar,
+[data-hand="left"] .nailed-screen-topbar,
+[data-hand="left"] .study-card-top,
+[data-hand="left"] .study-card-actions,
+[data-hand="left"] .topbar-right-actions,
+[data-hand="left"] .quiz-revealed-actions,
+[data-hand="left"] .quiz-mark-btns,
+[data-hand="left"] .nailed-row,
+[data-hand="left"] .nailed-row-btns,
+[data-hand="left"] .back-btn {
+  flex-direction: row-reverse;
+}
+
+/* The chevron and the hand both point the other way once mirrored. */
+[data-hand="left"] .back-btn > svg,
+[data-hand="left"] .hand-toggle > svg {
+  transform: scaleX(-1);
+}
+
+/* Labels truncate rather than overlapping their neighbour when the bar is tight. */
+.module-nav-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Three module tabs plus four icon buttons are tight in one pill on a phone —
+   tighten both so they still fit on a single row. */
+@media (max-width: 540px) {
+  .module-nav-bar { padding: 0.25rem 0.3rem; }
+  /* Size each tab to its label instead of an equal third — "Vocabulary" needs
+     more room than "Utility" and would otherwise be the one that truncates. */
+  .module-nav-item { flex: 0 1 auto; font-size: 0.68rem; padding: 0.5rem 0.45rem; }
+  .module-nav-links { justify-content: space-around; }
+  .module-nav-bar .topbar-right-actions { gap: 4px; }
+  .theme-toggle-nav { width: 29px; height: 29px; }
+}
+
+/* Below ~400px even the tightened row can't hold "Vocabulary", so the tabs
+   fall back to their short labels rather than truncating mid-word. */
+.nav-label-short { display: none; }
+@media (max-width: 400px) {
+  .nav-label-full { display: none; }
+  .nav-label-short { display: inline; }
+}
+
+/* Delete is destructive, so it sits at the far end of its cluster — away from
+   the thumb. order:-1 pins it to the flex start, and because the mirror above
+   reverses these clusters, that start lands on whichever side is furthest in
+   each hand mode. */
+.study-card-actions .qdelete-btn,
+.quiz-mark-btns .qdelete-btn,
+.nailed-row-btns .qdelete-btn {
+  order: -1;
+}
+
+/* ── Account dropdown ──────────────────────────────────────────────
+   top/left/width are set by AccountButton, which clamps the panel to the
+   viewport — hence `fixed` rather than anchoring to the button's box. */
+.account-dropdown {
+  position: fixed;
+  z-index: 1001;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.22);
+}
+
+/* Keep the quiz/study bar on one row on phones. These bars are flex-wrap:wrap,
+   so anything too wide drops the icon cluster onto a second line. Topic names
+   run long (e.g. "প্রকৃতি প্রত্যয়"), so the pill truncates and the round
+   controls shrink rather than letting the bar break. */
+@media (max-width: 540px) {
+  /* nowrap is what lets the pill shrink at all — a wrapping flex container
+     breaks to a new line instead of shrinking its items. The .quiz-page scope
+     is load-bearing: utility-kit.css re-declares a bare `.quiz-topbar` and is
+     imported after this file, so a bare selector here loses on source order. */
+  .quiz-page .quiz-topbar,
+  .study-topbar { gap: 6px; flex-wrap: nowrap; }
+  .quiz-topbar .study-home-btn, .study-topbar .study-home-btn { width: 32px; height: 32px; }
+  .quiz-topbar .cat-browse-btn, .study-topbar .cat-browse-btn { width: 32px; height: 32px; }
+  .quiz-topbar .topbar-right-actions, .study-topbar .topbar-right-actions { gap: 5px; }
+  .quiz-topbar .back-btn, .study-topbar .back-btn { flex: 0 0 auto; }
+  .quiz-topic-pill, .study-topbar .study-title {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

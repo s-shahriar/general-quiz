@@ -1,13 +1,15 @@
-import { Moon, Sun, Trash2 } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import AccountButton from './components/auth/AccountButton.jsx'
+import HandToggle from './components/shared/HandToggle.jsx'
 import SyncOverlay from './components/SyncOverlay.jsx'
 import SyncStatus from './components/SyncStatus.jsx'
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
 import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext.jsx'
 import { TrashProvider } from './contexts/TrashContext.jsx'
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
+import { HandProvider } from './contexts/HandContext.jsx'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
 const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
@@ -28,18 +30,19 @@ export default function App() {
   return (
     <AuthProvider>
       <ThemeProvider>
-        <ProgressProvider>
-          <TrashProvider>
-            <AppRoutes />
-          </TrashProvider>
-        </ProgressProvider>
+        <HandProvider>
+          <ProgressProvider>
+            <TrashProvider>
+              <AppRoutes />
+            </TrashProvider>
+          </ProgressProvider>
+        </HandProvider>
       </ThemeProvider>
     </AuthProvider>
   )
 }
 
 function AppRoutes() {
-  const navigate = useNavigate()
   const { theme, toggleTheme } = useThemeContext()
   const { loading: authLoading } = useAuth()
   const syncing = useProgressSyncing()
@@ -67,10 +70,10 @@ function AppRoutes() {
         <div className="module-nav-bar anim-fade">
           <div className="module-nav-links">
             {[
-              { path: '/',              label: 'General' },
-              { path: '/vocabulary',    label: 'Vocabulary' },
-              { path: '/utility',       label: 'Utility' },
-            ].map(({ path, label }) => {
+              { path: '/',              label: 'General',    short: 'General' },
+              { path: '/vocabulary',    label: 'Vocabulary', short: 'Vocab' },
+              { path: '/utility',       label: 'Utility',    short: 'Utility' },
+            ].map(({ path, label, short }) => {
               const isActive = location.pathname === path ||
                 (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname === '/livemcq' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important')) ||
                 (path === '/vocabulary' && location.pathname.startsWith('/vocabulary')) ||
@@ -82,16 +85,15 @@ function AppRoutes() {
                   href={path}
                   onClick={(e) => { e.preventDefault(); window.history.pushState({}, '', path); window.dispatchEvent(new PopStateEvent('popstate')) }}
                 >
-                  {label}
+                  <span className="nav-label-full">{label}</span>
+                  <span className="nav-label-short">{short}</span>
                 </a>
               )
             })}
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <button className="theme-toggle-nav" onClick={() => navigate('/recycle-bin')} title="Recycle Bin">
-              <Trash2 size={17} />
-            </button>
+          <div className="topbar-right-actions">
             <AccountButton />
+            <HandToggle className="theme-toggle-nav" size={17} />
             <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
               {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
             </button>

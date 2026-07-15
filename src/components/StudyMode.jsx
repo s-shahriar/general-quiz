@@ -1,9 +1,10 @@
-import { CheckCircle, ChevronLeft, Home, LayoutGrid, Lightbulb, Bookmark, Moon, Search, Star, Sun, X, XCircle } from 'lucide-react'
+import { CheckCircle, ChevronLeft, LayoutGrid, Lightbulb, Bookmark, Moon, Search, Star, Sun, X, XCircle } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
+import HandToggle from './shared/HandToggle.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { uidOf } from '../lib/qid.js'
 import { focusScroll } from '../lib/focusScroll.js'
@@ -150,10 +151,10 @@ export default function StudyMode({
         <button className="back-btn" onClick={goBack}><ChevronLeft size={15} /> Back</button>
         <span className="study-title" style={{ color: topic.color }}>{topic.name}</span>
         <div className="topbar-right-actions">
+          <HandToggle />
           <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
             {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-          <button className="study-home-btn" onClick={goHome} title="Home"><Home size={16} /></button>
           {topics.length > 1 && (
             <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
               <LayoutGrid size={16} />

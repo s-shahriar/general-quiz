@@ -3,6 +3,7 @@ import { ChevronLeft, LayoutGrid, Moon, Sun } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
+import HandToggle from '../shared/HandToggle.jsx'
 import { SECTIONS } from '../../data/utility/mathFormulasData'
 import CategorySidebar from '../CategorySidebar'
 import AlgebraSection from './math-formulas/sections/AlgebraSection'
@@ -79,7 +80,8 @@ export default function MathFormulas() {
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>
-          <div className="topbar-right-actions" style={{ marginLeft: 'auto', display: 'flex', gap: '8px' }}>
+          <div className="topbar-right-actions mf-topbar-actions" style={{ display: 'flex', gap: '8px' }}>
+            <HandToggle className="cat-browse-btn" />
             <button
               className="theme-toggle-btn"
               onClick={toggleTheme}

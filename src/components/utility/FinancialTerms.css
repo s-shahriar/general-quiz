@@ -307,3 +307,8 @@
     font-size: 12px;
   }
 }
+
+/* Left-hand layout: mirror the bar and flip which side the actions hug. */
+.ft-topbar-actions { margin-left: auto; }
+[data-hand="left"] .ft-topbar { flex-direction: row-reverse; }
+[data-hand="left"] .ft-topbar-actions { margin-left: 0; margin-right: auto; }

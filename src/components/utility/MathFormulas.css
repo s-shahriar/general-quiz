@@ -846,3 +846,8 @@
     scroll-margin-top: 110px;
   }
 }
+
+/* Left-hand layout: mirror the bar and flip which side the actions hug. */
+.mf-topbar-actions { margin-left: auto; }
+[data-hand="left"] .mf-topbar { flex-direction: row-reverse; }
+[data-hand="left"] .mf-topbar-actions { margin-left: 0; margin-right: auto; }
