@@ -1,4 +1,4 @@
-import { Card, CardTitle, IdItem, Mem, SectionHeader, Tex, Warn } from '../MathFormulaHelpers'
+import { Card, CardTitle, IdItem, SectionHeader, Tex } from '../MathFormulaHelpers'
 
 export default function AlgebraSection() {
   return (
@@ -15,13 +15,6 @@ export default function AlgebraSection() {
             <IdItem n="5"><Tex>{"4ab = (a+b)^2 - (a-b)^2"}</Tex></IdItem>
             <IdItem n="6"><Tex>{"ab = \\left[\\dfrac{a+b}{2}\\right]^2 - \\left[\\dfrac{a-b}{2}\\right]^2"}</Tex></IdItem>
           </div>
-          <Mem title="💡 মনে রাখুন">
-            <ul>
-              <li>(a+b)² আর (a−b)²-এর পার্থক্য সবসময় <strong>4ab</strong></li>
-              <li>ওদের যোগফল <strong>2(a²+b²)</strong> — মাঝের পদ কেটে যায়</li>
-              <li>a²+b² চাইলে বর্গ থেকে <strong>2ab</strong> বিয়োগ করো</li>
-            </ul>
-          </Mem>
         </Card>
 
         <Card color="violet">
@@ -38,20 +31,8 @@ export default function AlgebraSection() {
             <IdItem n="15"><Tex>{"a^3+b^3 = (a+b)^3-3ab(a+b)"}</Tex></IdItem>
             <IdItem n="16"><Tex>{"a^3-b^3 = (a-b)^3+3ab(a-b)"}</Tex></IdItem>
           </div>
-          <Mem title="💡 ঘন সূত্র মনে রাখুন">
-            <ul>
-              <li>(a+b)³: a³, <strong>+</strong>3a²b, <strong>+</strong>3ab², <strong>+</strong>b³</li>
-              <li>(a−b)³: a³, <strong>−</strong>3a²b, <strong>+</strong>3ab², <strong>−</strong>b³ (চিহ্ন পাল্টায়)</li>
-              <li>সংক্ষিপ্ত রূপ: (a±b)³ = a³ ± b³ <strong>± 3ab(a±b)</strong> — পরীক্ষায় দ্রুত কাজে লাগে</li>
-              <li>উল্টো করে: a³+b³ = (a+b)³ <strong>−</strong> 3ab(a+b) &nbsp;|&nbsp; a³−b³ = (a−b)³ <strong>+</strong> 3ab(a−b) — চিহ্ন উল্টো!</li>
-              <li>a³+b³ → মাঝে <strong>−ab</strong> → (a²−ab+b²) &nbsp;|&nbsp; a³−b³ → মাঝে <strong>+ab</strong> → (a²+ab+b²)</li>
-            </ul>
-          </Mem>
         </Card>
       </div>
-      <Warn title="⚠️ সবচেয়ে বেশি ভুল হয় এই সূত্রগুলোতে" style={{marginTop:10}}>
-        <p>(a+b)³ ≠ a³ + b³ (3ab(a+b) ভুলে যাবেন না!) &nbsp;|&nbsp; a³+b³ ≠ (a+b)³ &nbsp;|&nbsp; সংক্ষিপ্ত রূপে 3ab পদটি বাদ দেবেন না</p>
-      </Warn>
     </div>
   )
 }

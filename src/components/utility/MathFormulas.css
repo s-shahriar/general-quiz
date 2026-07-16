@@ -867,3 +867,90 @@
 .mf-topbar-actions { margin-left: auto; }
 [data-hand="left"] .mf-topbar { flex-direction: row-reverse; }
 [data-hand="left"] .mf-topbar-actions { margin-left: 0; margin-right: auto; }
+
+/* ─────────────────────────────────────────────────────────────
+   Important: per-card star toggle + "Important only" filter
+   ───────────────────────────────────────────────────────────── */
+
+/* Reserve room at the card's top-right so the title never runs under the star. */
+.mf-card-title { padding-right: 30px; }
+
+/* Per-card star button (top-right corner of every markable card). */
+.mf-imp-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.mf-imp-btn:hover {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.08);
+}
+.mf-imp-btn.on {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.12);
+}
+/* Marked card gets a subtle red ring so it stands out at a glance. */
+.mf-card.is-important {
+  box-shadow: 0 0 0 1.5px rgba(239, 68, 68, 0.5) inset, var(--shadow-sm);
+}
+
+/* Topbar "Important only" filter toggle. */
+.mf-imp-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.mf-imp-filter-btn:hover { background: var(--hover-bg); }
+.mf-imp-filter-btn.on {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.12);
+}
+.mf-imp-count {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 14px;
+  text-align: center;
+}
+
+/* Filter mode: show only marked cards, drop empty sections and page chrome. */
+.mf-important-only .mf-sec-picker { display: none; }
+.mf-important-only .mf-card:not(.is-important) { display: none; }
+.mf-important-only .mf-section:not(:has(.mf-card.is-important)) { display: none; }
+
+/* Empty state when Important-only is on but nothing is marked yet. */
+.mf-empty-important {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-3);
+}
+.mf-empty-important svg { color: #ef4444; opacity: 0.55; margin-bottom: 4px; }
+.mf-empty-important p { margin: 0; font-size: 14px; }
+.mf-empty-important .sub { font-size: 12px; color: var(--text-dim); }

@@ -1,5 +1,8 @@
 import katex from 'katex'
-import { AlertTriangle, Lightbulb } from 'lucide-react'
+import { AlertTriangle, Lightbulb, Star } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { useImportantContext } from '../../../contexts/ImportantContext.jsx'
+import { mathUidOfText } from '../../../lib/qid.js'
 
 export function SectionHeader({ icon, title, sub }) {
   return (
@@ -13,9 +16,36 @@ export function SectionHeader({ icon, title, sub }) {
   )
 }
 
-export function Card({ color = 'gold', children, style }) {
+export function Card({ color = 'gold', children, style, markable = true }) {
+  const ref = useRef(null)
+  const [uid, setUid] = useState(null)
+  const { value: important, add, remove } = useImportantContext()
+
+  // Derive a stable identity once mounted: "<sectionId>::<card title>" (falls
+  // back to full text for the rare title-less card). Body edits keep the flag.
+  useEffect(() => {
+    if (!markable || !ref.current) return
+    const sectionId = ref.current.closest('.mf-section')?.id || ''
+    const title = ref.current.querySelector('.mf-card-title')?.textContent
+    setUid(mathUidOfText(`${sectionId}::${title || ref.current.textContent || ''}`))
+  }, [markable])
+
+  const isImportant = uid ? important.has(uid) : false
+  const toggle = () => { if (uid) (isImportant ? remove : add)(uid) }
+
   return (
-    <div className={`mf-card ${color}`} style={style}>
+    <div ref={ref} className={`mf-card ${color}${isImportant ? ' is-important' : ''}`} style={style}>
+      {markable && (
+        <button
+          type="button"
+          className={`mf-imp-btn${isImportant ? ' on' : ''}`}
+          onClick={toggle}
+          aria-pressed={isImportant}
+          title={isImportant ? 'Important — সরাতে ক্লিক করুন' : 'Important হিসেবে সেভ করুন'}
+        >
+          <Star size={15} fill={isImportant ? 'currentColor' : 'none'} />
+        </button>
+      )}
       {children}
     </div>
   )

@@ -19,7 +19,7 @@ export default function SolidSection() {
         <CardTitle>ঘনক vs ঘনবস্তু (আয়তাকার ঘনবস্তু) সূত্র তুলনা</CardTitle>
         <div className="mf-table-scroll"><table className="mf-cmp-table">
           <thead>
-            <tr><th>বৈশিষ্ট্য</th><th>ঘনক (Cube) — বাহু a</th><th>ঘনবস্তু / আয়তাকার ঘনবস্তু — a, b, c</th></tr>
+            <tr><th>বৈশিষ্ট্য</th><th>ঘনক (Cube) — বাহু a</th><th>ঘনবস্তু (Solid) / আয়তাকার ঘনবস্তু — a, b, c</th></tr>
           </thead>
           <tbody>
             <tr><td>আয়তন</td><td className="hl">a³</td><td className="hl">a × b × c</td></tr>

@@ -59,3 +59,14 @@ export function uidOfText(text) {
 export function uidOf(q) {
   return uidOfText(q?.question)
 }
+
+// Stable uid for a non-question item (e.g. a math formula card), prefixed 'm'
+// so it shares the same per-user `user_progress` table as questions without
+// ever colliding with a question's 'q' uid. `key` should be a stable string
+// identity for the item (we use "<sectionId>::<card title>"), so a card keeps
+// its Important flag when its body is edited — only a retitle changes identity.
+export function mathUidOfText(key) {
+  const norm = normalizeQ(key)
+  if (!norm) return null
+  return 'm' + cyrb53(norm).toString(36)
+}

@@ -1,8 +1,9 @@
 import 'katex/dist/katex.min.css'
-import { ChevronLeft, LayoutGrid, Moon, Sun } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Bookmark, ChevronLeft, LayoutGrid, Moon, Star, Sun } from 'lucide-react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
+import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import HandToggle from '../shared/HandToggle.jsx'
 import { SECTIONS } from '../../data/utility/mathFormulasData'
 import CategorySidebar from '../CategorySidebar'
@@ -30,8 +31,18 @@ import './MathFormulas.css'
 export default function MathFormulas() {
   const navigate = useNavigate()
   const { theme, toggleTheme } = useThemeContext()
+  const { value: important } = useImportantContext()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
+  const [importantOnly, setImportantOnly] = useState(false)
+
+  // Math cards use 'm'-prefixed uids; count only those (the same Set also holds
+  // question 'q' uids from the quiz routes).
+  const importantCount = useMemo(() => {
+    let n = 0
+    important.forEach(u => { if (u && u[0] === 'm') n++ })
+    return n
+  }, [important])
 
   useEffect(() => {
     if (theme && document.documentElement.dataset.theme !== theme) {
@@ -65,7 +76,7 @@ export default function MathFormulas() {
   }))
 
   return (
-    <div className="mf-root">
+    <div className={`mf-root${importantOnly ? ' mf-important-only' : ''}`}>
       <CategorySidebar
         topics={topics}
         currentTopicId={activeSectionId}
@@ -81,6 +92,14 @@ export default function MathFormulas() {
           </button>
           <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>
           <div className="topbar-right-actions mf-topbar-actions" style={{ display: 'flex', gap: '8px' }}>
+            <button
+              className={`mf-imp-filter-btn${importantOnly ? ' on' : ''}`}
+              onClick={() => setImportantOnly(v => !v)}
+              title={importantOnly ? 'সব কার্ড দেখান' : 'শুধু Important দেখান'}
+            >
+              <Bookmark size={15} fill={importantOnly ? 'currentColor' : 'none'} />
+              {importantCount > 0 && <span className="mf-imp-count">{importantCount}</span>}
+            </button>
             <HandToggle className="cat-browse-btn" />
             <button
               className="theme-toggle-btn"
@@ -118,6 +137,14 @@ export default function MathFormulas() {
           ))}
         </div>
 
+        {importantOnly && importantCount === 0 && (
+          <div className="mf-empty-important">
+            <Star size={40} />
+            <p>এখনো কোনো কার্ড Important হিসেবে সেভ করা হয়নি।</p>
+            <p className="sub">যেকোনো কার্ডের কোণায় ⭐ বাটনে ক্লিক করে Important করুন।</p>
+          </div>
+        )}
+
         <TriangleSection />
         <TrigSection />
         <TriCenterSection />
@@ -137,11 +164,6 @@ export default function MathFormulas() {
         <ProfitSection />
         <PercentageSection />
         <UnitarySection />
-
-        <div className="mf-footer">
-          <p>গণিত সূত্র সংকলন · সব সূত্র একটি পৃষ্ঠায়</p>
-          <p className="sub">জ্যামিতি · বীজগণিত · সেট তত্ত্ব · সম্ভাবনা · ধারা · বিন্যাস-সমাবেশ</p>
-        </div>
 
       </div>
     </div>
