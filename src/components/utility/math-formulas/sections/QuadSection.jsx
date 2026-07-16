@@ -39,6 +39,10 @@ export default function QuadSection() {
           <FBox label="ক্ষেত্রফল" tex={"= a^2"}/>
           <FBox label="পরিসীমা" val="= 4a"/>
           <FBox label="কর্ণ" tex={"= \\sqrt{2}\\,a"} highlight/>
+          <ul className="mf-prop-list" style={{marginTop:8}}>
+            <li><strong>কোণ:</strong> চারটি কোণই <strong>90°</strong></li>
+            <li>কর্ণ কোণকে সমদ্বিখণ্ডিত করে → প্রতিটি অর্ধেক <strong>45°</strong></li>
+          </ul>
           <p style={{fontSize:12,color:'var(--text-3)',marginTop:6}}>১ হেক্টর = ১০,০০০ বর্গমিটার</p>
         </Card>
 
@@ -60,6 +64,10 @@ export default function QuadSection() {
           <FBox label="ক্ষেত্রফল" val="= a × b"/>
           <FBox label="পরিসীমা" val="= 2(a + b)"/>
           <FBox label="কর্ণ" tex={"= \\sqrt{a^2+b^2}"} highlight/>
+          <ul className="mf-prop-list" style={{marginTop:8}}>
+            <li><strong>কোণ:</strong> চারটি কোণই <strong>90°</strong></li>
+            <li>তবে বর্গ/রম্বসের মত কর্ণ কোণকে সমদ্বিখণ্ডিত করে <strong>না</strong></li>
+          </ul>
           <Mem title="💡"><p>কর্ণদ্বয় সমান এবং পরস্পরকে <strong>সমদ্বিখণ্ডিত</strong> করে।</p></Mem>
         </Card>
 
@@ -75,13 +83,22 @@ export default function QuadSection() {
               <text x="115" y="52" fill="#f0a500" fontSize="11">d₂</text>
               <text x="66" y="25" fill="#0fdba8" fontSize="12">a</text>
               <text x="66" y="88" fill="#0fdba8" fontSize="12">a</text>
+              {/* opposite angles equal: single arc (top & bottom), double arc (left & right) */}
+              <path d="M 54.64 14.42 A 14 14 0 0 0 75.36 14.42" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 54.64 95.58 A 14 14 0 0 1 75.36 95.58" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 18.14 47.60 A 11 11 0 0 1 18.14 62.40" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 21.10 44.91 A 15 15 0 0 1 21.10 65.09" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 111.86 47.60 A 11 11 0 0 0 111.86 62.40" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 108.90 44.91 A 15 15 0 0 0 108.90 65.09" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{1}{2}\\,d_1 d_2"} highlight/>
           <FBox label="পরিসীমা" val="= 4a"/>
           <ul className="mf-prop-list" style={{marginTop:8}}>
-            <li>কর্ণদ্বয় পরস্পরকে <strong>সমকোণে সমদ্বিখণ্ডিত</strong> করে</li>
             <li>চার বাহু সমান, কিন্তু কোণ ≠ 90°</li>
+            <li><strong>বিপরীত কোণ সমান</strong>; সন্নিহিত দুই কোণের যোগ = <strong>180°</strong></li>
+            <li>কর্ণদ্বয় পরস্পরকে <strong>সমকোণে সমদ্বিখণ্ডিত</strong> করে</li>
+            <li>প্রতিটি কর্ণ কোণকেও সমদ্বিখণ্ডিত করে</li>
           </ul>
           <Warn title="⚠️ মিলিয়ে ফেলবেন না"><p>রম্বস ≠ বর্গ। রম্বুসে কোণ ৯০° নয়।</p></Warn>
         </Card>
@@ -96,12 +113,20 @@ export default function QuadSection() {
               <text x="70" y="97" fill="#a78bfa" fontSize="12">a (ভূমি)</text>
               <text x="127" y="55" fill="#a78bfa" fontSize="12">b</text>
               <text x="86" y="52" fill="#f0a500" fontSize="11">h</text>
+              {/* opposite angles equal: single arc (BL & TR), double arc (BR & TL) */}
+              <path d="M 39 88 A 14 14 0 0 0 22.29 74.26" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 111 12 A 14 14 0 0 0 127.71 25.74" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 129 88 A 11 11 0 0 1 137.87 77.21" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 125 88 A 15 15 0 0 1 137.10 73.28" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 21 12 A 11 11 0 0 1 12.13 22.79" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 25 12 A 15 15 0 0 1 12.90 26.72" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" val="= ভূমি × উচ্চতা (a × h)" highlight/>
           <FBox label="পরিসীমা" val="= 2(a + b)"/>
           <ul className="mf-prop-list" style={{marginTop:8}}>
             <li>বিপরীত বাহু সমান ও সমান্তরাল</li>
+            <li><strong>বিপরীত কোণ সমান</strong>; সন্নিহিত দুই কোণ <strong>সম্পূরক (যোগ = 180°)</strong></li>
             <li>কর্ণদ্বয় পরস্পরকে সমদ্বিখণ্ডিত করে</li>
           </ul>
         </Card>
@@ -127,15 +152,35 @@ export default function QuadSection() {
         </Card>
       </div>
 
-      <Mem title="💡 সব ক্ষেত্রফল মনে রাখার সহজ ট্রিক" style={{marginTop:8}}>
-        <ul>
-          <li><strong>বর্গ:</strong> এক বাহু একবার নিজেকে গুণ → a²</li>
-          <li><strong>আয়ত:</strong> দৈর্ঘ্য × প্রস্থ → ab</li>
-          <li><strong>রম্বস:</strong> দুই কর্ণের গুণফলের অর্ধেক → ½d₁d₂</li>
-          <li><strong>সামান্তরিক:</strong> ভূমি × উচ্চতা (আয়তের মতো)</li>
-          <li><strong>ট্রাপিজিয়াম:</strong> দুই সমান্তরাল বাহুর গড় × উচ্চতা → ½(a+b)h</li>
-        </ul>
-      </Mem>
+      <Card color="teal" style={{marginTop:16}}>
+        <CardTitle color="var(--mf-teal)">কোন প্রশ্নে কী বের করবে? — ক্ষেত্রফল / পরিসীমা / আয়তন</CardTitle>
+        <p style={{fontSize:13, color:'var(--text-3)', margin:'2px 0 10px'}}>শব্দ-সমস্যায় (word problem) সঠিক জিনিসটা বের করা সবচেয়ে জরুরি — সূত্র জানার আগেই বুঝতে হবে কোনটা লাগবে।</p>
+        <div className="mf-table-scroll"><table className="mf-cmp-table">
+          <thead>
+            <tr><th>প্রশ্নে যা চাওয়া হয়</th><th>যা বের করবে</th><th>কীভাবে</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>জায়গা ঢাকতে কতগুলো <strong>ইট / টাইলস / পাথর / ঘাস</strong> লাগবে (প্রতিটির মাপ দেওয়া)</td>
+              <td><strong style={{color:'var(--mf-gold)'}}>ক্ষেত্রফল</strong> <span style={{color:'var(--text-dim)'}}>(Area)</span></td>
+              <td className="hl">মোট ক্ষেত্রফল ÷ প্রতিটির ক্ষেত্রফল</td>
+            </tr>
+            <tr>
+              <td>চারপাশে <strong>বেড়া / তার / কাঁটা</strong> দিতে কতটুকু লাগবে, বা মাঠ একবার ঘুরতে কত পথ</td>
+              <td><strong style={{color:'var(--mf-blue)'}}>পরিসীমা</strong> <span style={{color:'var(--text-dim)'}}>(Perimeter)</span></td>
+              <td className="hl">সব বাহুর যোগফল <strong>(ক্ষেত্রফল নয়)</strong></td>
+            </tr>
+            <tr>
+              <td>পাত্র / ট্যাংক / ঘর ভরতে কতটুকু <strong>পানি / গ্যাস / বালি</strong> লাগবে — মোট শূন্যস্থান</td>
+              <td><strong style={{color:'var(--mf-rose)'}}>আয়তন</strong> <span style={{color:'var(--text-dim)'}}>(Volume)</span></td>
+              <td className="hl">দৈর্ঘ্য × প্রস্থ × উচ্চতা</td>
+            </tr>
+          </tbody>
+        </table></div>
+        <Warn title="⚠️ সবচেয়ে বড় ফাঁদ" style={{marginTop:10}}>
+          <p>“চারপাশে বেড়া দিতে কতটুকু লাগবে” শুনলে অনেকে ক্ষেত্রফল করে ফেলে — আসলে <strong>পরিসীমা</strong>। মনে রাখো: <strong>ঢাকতে/মুড়তে → ক্ষেত্রফল</strong>, <strong>চারপাশ ঘিরতে → পরিসীমা</strong>, <strong>ভরতে → আয়তন</strong>।</p>
+        </Warn>
+      </Card>
     </div>
   )
 }

@@ -38,6 +38,7 @@ export default function TriangleSection() {
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{\\sqrt{3}}{4}\\,a^2"} highlight/>
           <Mem title="💡 মনে রাখুন">
             <p>সব বাহু সমান = শুধু "a"</p>
+            <p style={{marginTop:4}}><strong>কোণ:</strong> প্রতিটি কোণ = <strong>60°</strong> — তিনটিই সমান, সবসময় ধ্রুব।</p>
             <p style={{marginTop:4}}><strong>h = মধ্যমা</strong> — উচ্চতা, মধ্যমা ও কোণের সমদ্বিখণ্ডক একই রেখা।</p>
           </Mem>
         </Card>
@@ -49,15 +50,25 @@ export default function TriangleSection() {
               <polygon points="70,8 122,110 18,110" fill="rgba(91,164,245,.08)" stroke="#5ba4f5" strokeWidth="2"/>
               <text x="99" y="61" fill="#5ba4f5" fontSize="12" fontWeight="700">a</text>
               <text x="31" y="61" fill="#5ba4f5" fontSize="12" fontWeight="700">a</text>
+              {/* single ticks on the two equal sides */}
+              <line x1="43.0" y1="52.1" x2="50.2" y2="55.7" stroke="#5ba4f5" strokeWidth="1.6"/>
+              <line x1="89.8" y1="55.7" x2="97.0" y2="52.1" stroke="#5ba4f5" strokeWidth="1.6"/>
               <line x1="70" y1="8" x2="70" y2="110" stroke="#ffd166" strokeWidth="1.5" strokeDasharray="4,3"/>
               <text x="74" y="57" fill="#ffd166" fontSize="10" fontWeight="600">h</text>
               <rect x="70" y="102" width="8" height="8" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <text x="55" y="108" fill="#f0a500" fontSize="12" fontWeight="700">b</text>
+              <text x="55" y="108" fill="#5ba4f5" fontSize="12" fontWeight="700">b</text>
+              {/* equal base angles: matching single arcs inside each corner */}
+              <path d="M 31 110 A 13 13 0 0 0 23.9 98.4" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
+              <path d="M 109 110 A 13 13 0 0 1 116.1 98.4" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{b}{4}\\sqrt{4a^2-b^2}"} highlight/>
           <FBox label="উচ্চতা h" tex={"= \\sqrt{a^2 - \\dfrac{b^2}{4}}"}/>
-          <Mem title="💡 মনে রাখুন"><p><strong>b = ভূমি</strong>, <strong>a = সমান দুটি বাহু</strong></p></Mem>
+          <Mem title="💡 মনে রাখুন">
+            <p><strong>b = ভূমি</strong>, <strong>a = সমান দুটি বাহু</strong></p>
+            <p style={{marginTop:4}}><strong>কোণ:</strong> ভূমি সংলগ্ন দুই কোণ <strong>সমান</strong> (সমান বাহুর বিপরীত কোণ সমান) — এক পাশে 60° হলে অন্য পাশেও 60°।</p>
+            <p style={{marginTop:4}}>শীর্ষকোণ জানা থাকলে → প্রতি ভূমিকোণ = <strong>(180° − শীর্ষকোণ) ÷ 2</strong></p>
+          </Mem>
         </Card>
 
         <Card color="rose">
@@ -68,10 +79,18 @@ export default function TriangleSection() {
               <text x="30" y="65" fill="#f06d7e" fontSize="12" fontWeight="700">a</text>
               <text x="103" y="65" fill="#f06d7e" fontSize="12" fontWeight="700">b</text>
               <text x="60" y="104" fill="#f06d7e" fontSize="12" fontWeight="700">c</text>
+              {/* three different-size angle arcs: all angles unequal; the biggest arc sits opposite the longest side */}
+              <path d="M 75.5 22.9 A 11 11 0 0 0 86.0 24.2" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
+              <path d="M 23 106 A 8 8 0 0 0 19.7 99.5" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
+              <path d="M 101 106 A 17 17 0 0 1 111.8 90.2" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\sqrt{s(s-a)(s-b)(s-c)}"} highlight/>
           <FBox label="s (অর্ধপরি)" tex={"= \\dfrac{a+b+c}{2}"}/>
+          <Mem title="💡 কোণ ও বাহু">
+            <p>তিন বাহু অসমান → তিন কোণও <strong>অসমান</strong></p>
+            <p style={{marginTop:4}}>বড় বাহুর বিপরীতে <strong>বড় কোণ</strong>, ছোট বাহুর বিপরীতে ছোট কোণ।</p>
+          </Mem>
           <Mem title="💡 হেরনের সূত্র"><p>"<strong>s</strong> থেকে তিনটি বাদ দাও, গুণ করো, বর্গমূল নাও"</p></Mem>
         </Card>
 

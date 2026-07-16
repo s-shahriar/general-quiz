@@ -345,6 +345,16 @@
   height: auto;   /* keep aspect ratio when width is capped — else circles stretch to ellipses */
 }
 
+/* KaTeX draws radicals and stretchy delimiters as a 400em-wide SVG that .hide-tail
+   clips to size. The centering rule above would cap it at 100% and drop its height,
+   erasing the surd and its overline — opt KaTeX's SVGs back out. */
+.mf-card span.katex svg {
+  display: block;
+  margin: 0;
+  max-width: none;
+  height: inherit;
+}
+
 /* Ensure icons in titles don't get centered by mistake */
 .mf-mem-title svg,
 .mf-warn-title svg,
@@ -399,19 +409,25 @@
   margin: 6px 0;
   font-size: 15px;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  /* wraps back to stacked when label + formula no longer fit side by side */
+  flex-wrap: wrap;
+  gap: 4px 14px;
 }
 .mf-f-box .label {
   color: var(--text-3);
   font-size: 12px;
+  flex-shrink: 0;
 }
 .mf-f-box .val {
   color: var(--mf-gold2);
   font-weight: 600;
   word-break: break-word;
+  /* auto margin parks a short formula flush right, next to its label; a long text
+     value grows to the full width instead, where left-aligned lines read better */
   text-align: left;
-  width: 100%;
+  margin-left: auto;
 }
 .mf-f-box.highlight .val {
   color: var(--mf-teal);
