@@ -213,8 +213,25 @@ these 13 topics (`src/data/index.js` → `LIVEMCQ_TOPICS`):
   computation (profit/loss, algebra, geometry, probability, DI) → **12**.
 - **Science vs Computer:** physics/chem/bio/astronomy → **8**; anything IT →
   **9**. (The redundant "Science & Computer" bucket is not used.)
-- **Banking (13)** = finance/economics concepts. Macro indicators (GDP,
-  inflation, budget, tax) → 13; BD trade *facts* (top export partner) → 5.
+- **Banking (13) vs Intl affairs (6) — ask what the question actually measures.**
+  If the thing being asked about is an **economic/financial property**, it is
+  **13**, even when framed as a world ranking or a foreign country's policy. If it
+  is an **institutional or procedural fact** about a body that merely happens to
+  work on trade/economics, it is **6** — answering needs no economics, just recall.
+
+  Worked contrast (settled 2026-07-19):
+  | Question | Topic | Why |
+  |---|---|---|
+  | "Which country tops the Index of Economic Freedom?" | **13** | the property being measured *is* economic |
+  | "How often does the WTO Ministerial Conference meet?" | **6** | org procedure; purely knowledge-based |
+
+  → **13:** global economic indices (Economic Freedom, Doing Business, GDP league
+  tables), world macro indicators, foreign central-bank/monetary policy, any
+  finance/economics *concept*.
+  → **6:** WTO/IMF/World Bank founding treaties, membership, structure, meeting
+  cadence; trade *geography* (busiest container port).
+  → **5:** BD trade facts (top export partner).
+- Macro indicators (GDP, inflation, budget, tax) → 13.
 - **BD affairs (5) vs Geography (10):** BD-specific history/politics/culture/
   admin → **5**; physical/world geography (even BD rivers/hills) → **10**.
 - **Analogies:** abstract/relationship/vocab analogies → **7**; analogies that
