@@ -51,7 +51,6 @@ const db = DRY_RUN ? null : createClient(URL, SERVICE_KEY, { auth: { persistSess
 
 // ---- content manifest: every category, in display order ----
 // slug MUST match the app's existing topic.id so routes stay stable.
-const lm = (slug, file, name) => ({ slug, file, name })
 const MANIFEST = [
   { module: 'bangla', dir: 'src/data/bangla', key: 'questions', nameField: 'topic',
     files: ['dhwoni_o_borno','dhwoni_poriborton','notwo_bidhan','sondhi','uposhorgo',
@@ -69,32 +68,30 @@ const MANIFEST = [
     names: { a:'A',b:'B',c:'C',d:'D',e:'E',f:'F',gh:'G–H',i:'I',jk:'J–K',l:'L',m:'M',n:'N',
              o:'O',p:'P',q:'Q',r:'R',s:'S',t:'T',u:'U',v:'V',w:'W',xyz:'X–Y–Z' } },
 
+  // intl_economic_orgs is intentionally absent: it is study-notes only now, so it
+  // has no MCQs to seed. Its notes are bundled from the JSON at build time.
   { module: 'gk', dir: 'src/data/gk', key: 'mcqs', nameField: 'name',
-    files: ['intl_economic_orgs'] },
+    files: ['gk_bd_affairs','gk_intl_affairs','gk_science','gk_ict','gk_lang_misc'] },
 
-  { module: 'livemcq', dir: 'public/lmdata', key: 'questions',
-    // livemcq slug = app topic.id; file basename differs for a few.
-    entries: [
-      lm('lm_bangla_sahitya','bangla_sahitya','বাংলা সাহিত্য'),
-      lm('lm_bangla_byakoron','bangla_byakoron','বাংলা ব্যাকরণ'),
-      lm('lm_english_lit','english_literature','English Literature'),
-      lm('lm_english_grammar','english_grammar','English Grammar'),
-      lm('lm_bd_affairs','bd_affairs','বাংলাদেশ বিষয়াবলি'),
-      lm('lm_intl_affairs','intl_affairs','আন্তর্জাতিক বিষয়াবলি'),
-      lm('lm_mental_ability','mental_ability','মানসিক দক্ষতা'),
-      lm('lm_science','general_science','সাধারণ বিজ্ঞান'),
-      lm('lm_ict','ict','কম্পিউটার ও তথ্য প্রযুক্তি'),
-      lm('lm_geography','geography','ভূগোল'),
-      lm('lm_ethics','ethics','নৈতিকতা, মূল্যবোধ ও সু-শাসন'),
-      lm('lm_math','math','গণিত'),
-      lm('lm_banking','banking','ব্যাংকিং'),
-    ] },
+  // ⚠️ livemcq is deliberately NOT seeded — see SKIP_MODULES below.
 ]
 
-// Live app total. NOTE: src/data/bangla/practice_exam.json (133 q) exists on
-// disk but is imported nowhere, so it is intentionally excluded — we seed only
-// what the app actually shows.
-const EXPECTED_TOTAL = 4465
+// Modules this script must never touch.
+//
+// LiveMCQ's source of truth is the Supabase `questions` table, NOT local JSON
+// (LIVEMCQ.md §0). `public/lmdata/*.json` is a frozen historical seed: as of
+// 2026-07-20 the DB held 2111 livemcq rows against 2008 on disk, the difference
+// being questions added by the favourites sync. Seeding livemcq from disk would
+// destroy them. This script only rebuilds modules whose JSON really is the
+// source of truth; everything else stays untouched.
+const SKIP_MODULES = ['livemcq']
+
+// Total for the modules THIS script owns (livemcq excluded — see SKIP_MODULES).
+// bangla 603 + english 381 + sahitya 401 + vocab 1025 + gk 352.
+// NOTE: src/data/bangla/practice_exam.json (133 q) exists on disk but is
+// imported nowhere, so it is intentionally excluded — we seed only what the
+// app actually shows.
+const EXPECTED_TOTAL = 2762
 const KNOWN = new Set(['id','question','options','correct_answer','correct_answer_text','explanation'])
 
 function readJson(dir, file) {
@@ -184,10 +181,21 @@ async function dryRun() {
 
 async function main() {
   if (DRY_RUN) return dryRun()
-  console.log('→ Wiping existing content…')
-  // Delete questions first (FK), then categories. Non-empty WHERE required.
-  await db.from('questions').delete().neq('id', '00000000-0000-0000-0000-000000000000')
-  await db.from('categories').delete().neq('id', '00000000-0000-0000-0000-000000000000')
+  console.log(`→ Wiping existing content (skipping: ${SKIP_MODULES.join(', ')})…`)
+  // Scope the wipe to the modules we are about to rebuild. A blanket delete
+  // would take livemcq with it and never put it back — see SKIP_MODULES.
+  const { data: doomedCats, error: cErr } = await db
+    .from('categories').select('id').not('module', 'in', `(${SKIP_MODULES.join(',')})`)
+  if (cErr) throw new Error(`wipe: ${cErr.message}`)
+  const doomed = doomedCats.map(c => c.id)
+  if (doomed.length) {
+    // Delete questions first (FK), then the categories themselves.
+    const { error: qe } = await db.from('questions').delete().in('category_id', doomed)
+    if (qe) throw new Error(`wipe questions: ${qe.message}`)
+    const { error: ce } = await db.from('categories').delete().in('id', doomed)
+    if (ce) throw new Error(`wipe categories: ${ce.message}`)
+  }
+  console.log(`  removed ${doomed.length} categories and their questions`)
 
   const cats = categoryList()
   console.log(`→ Seeding ${cats.length} categories…`)
@@ -220,9 +228,14 @@ async function main() {
   for (const [mod, n] of Object.entries(perModule)) console.log(`  ${mod.padEnd(10)} ${n}`)
   console.log(`  ${'TOTAL'.padEnd(10)} ${grandTotal}`)
 
-  // Verify against DB and the expected count.
-  const { count } = await db.from('questions').select('*', { count: 'exact', head: true })
-  console.log(`\nDB row count: ${count}`)
+  // Verify against DB and the expected count — scoped to the modules we seeded,
+  // so untouched modules (livemcq) do not skew the check.
+  const { data: ourCats } = await db
+    .from('categories').select('id').not('module', 'in', `(${SKIP_MODULES.join(',')})`)
+  const { count } = await db.from('questions')
+    .select('*', { count: 'exact', head: true })
+    .in('category_id', ourCats.map(c => c.id))
+  console.log(`\nDB row count (seeded modules): ${count}`)
   if (grandTotal !== EXPECTED_TOTAL || count !== EXPECTED_TOTAL) {
     console.error(`\n✖ COUNT MISMATCH — expected ${EXPECTED_TOTAL}, seeded ${grandTotal}, in DB ${count}`)
     process.exit(1)

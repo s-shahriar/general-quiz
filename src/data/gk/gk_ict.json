@@ -1,0 +1,315 @@
+{
+  "id": "gk_ict",
+  "name": "কম্পিউটার ও তথ্যপ্রযুক্তি",
+  "shortName": "কম্পিউটার",
+  "mcqs": [
+    {
+      "question": "SCSI এর পূর্ণরূপ কী?",
+      "options": {
+        "a": "Small Computer System Interface",
+        "b": "Small Computer Software Interface",
+        "c": "Small Computer Storage Interface",
+        "d": "Small Computer Standard Interface"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Small Computer System Interface",
+      "explanation": "SCSI = Small Computer System Interface, হার্ডডিস্ক-স্ক্যানারের মতো পেরিফেরাল যুক্ত করার ANSI মান। ✗ বাকি তিনটিতে System-এর বদলে Software/Storage/Standard বসানো, কোনোটিই প্রকৃত পূর্ণরূপ নয়।",
+      "source_ref": "bcs600#2",
+      "id": 1
+    },
+    {
+      "question": "কম্পিউটারের ভাষাকে কি বলা হয়?",
+      "options": {
+        "a": "সাধুভাষা",
+        "b": "লেখ্য ভাষা",
+        "c": "প্রমিত ভাষা",
+        "d": "যান্ত্রিক ভাষা"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "যান্ত্রিক ভাষা",
+      "explanation": "কম্পিউটার সরাসরি বোঝে ০ ও ১-এর বাইনারি কোড, একেই যান্ত্রিক ভাষা বা machine language বলে। ✗ সাধুভাষা = বাংলা লেখ্য রীতি; লেখ্য ভাষা = লিখিত রূপ; প্রমিত ভাষা = মান্য চলিত বাংলা।",
+      "source_ref": "bcs600#50",
+      "id": 2
+    },
+    {
+      "question": "কোন টপোলজিতে প্রথম শেষ কম্পিউটার পরস্পর সরাসরি যুক্ত থাকে? i. বাস  ii. রিং  iii. মেশ — নিচের কোনটি সঠিক?",
+      "options": {
+        "a": "i ও ii",
+        "b": "i ও iii",
+        "c": "ii ও iii",
+        "d": "i, ii ও iii"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "ii ও iii",
+      "explanation": "রিং-এ শেষ কম্পিউটার প্রথমটির সাথে যুক্ত হয়ে বৃত্ত হয়, মেশে প্রতিটি নোড সবার সাথেই যুক্ত। ✗ বাস = একটি মূল কেবলে সবাই যুক্ত, দুই প্রান্তে টার্মিনেটর, প্রথম-শেষ যুক্ত নয়।",
+      "source_ref": "bcs600#153",
+      "id": 3
+    },
+    {
+      "question": "কম্পিউটারকে নেটওয়ার্কে যুক্ত করার জন্য যে কার্ড ব্যবহৃত হয় তাকে বলে?",
+      "options": {
+        "a": "Modem",
+        "b": "NIC",
+        "c": "Router",
+        "d": "Hub"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "NIC",
+      "explanation": "NIC = Network Interface Card, নিজস্ব MAC ঠিকানা দিয়ে কম্পিউটারকে নেটওয়ার্কে যুক্ত করে। ✗ Modem = সংকেত রূপান্তর; Router = পথ নির্ধারণ; Hub = একাধিক ডিভাইসের সংযোগবিন্দু।",
+      "source_ref": "bcs600#154",
+      "id": 4
+    },
+    {
+      "question": "কোন কোডের দশমিক সংখ্যার প্রত্যেকটি অংককে সমতুল্য বাইনারি সংখ্যায় প্রকাশ করা যায়?",
+      "options": {
+        "a": "ESCII",
+        "b": "EBCDIC",
+        "c": "BCD",
+        "d": "ASCII"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "BCD",
+      "explanation": "BCD = Binary Coded Decimal, দশমিক সংখ্যার প্রতিটি অংককে আলাদা ৪-বিট বাইনারিতে প্রকাশ করে। ✗ EBCDIC = IBM-এর ৮-বিট কোড; ASCII = ৭-বিট বর্ণ কোড; ESCII = প্রকৃত কোনো কোড নয়।",
+      "source_ref": "bcs600#155",
+      "id": 5
+    },
+    {
+      "question": "এইচটিএমএল কি?",
+      "options": {
+        "a": "ওয়েব ব্রাউজার",
+        "b": "ডেটা উপস্থাপনের ভাষা",
+        "c": "প্রোগ্রামিং ভাষা",
+        "d": "ডাটাবেজ ভাষা"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ডেটা উপস্থাপনের ভাষা",
+      "explanation": "HTML = HyperText Markup Language, ট্যাগ দিয়ে ওয়েবপেজে ডেটা সাজিয়ে উপস্থাপন করে, লজিক চালায় না। ✗ ব্রাউজার = Chrome, Firefox; প্রোগ্রামিং ভাষা = C, Python; ডাটাবেজ ভাষা = SQL।\n\n❗ বইয়ে উত্তরের অক্ষরটি ছাপা হয়নি; HTML একটি মার্কআপ (উপস্থাপন) ভাষা, প্রোগ্রামিং ভাষা নয়।",
+      "source_ref": "bcs600#156",
+      "id": 6
+    },
+    {
+      "question": "ডোমেইন নাম হলো–",
+      "options": {
+        "a": "ওয়েব সাইটের একটি স্বতন্ত্র নাম",
+        "b": "সার্ভারের নাম",
+        "c": "ওয়েব ফাইলের নাম",
+        "d": "ফোল্ডারের নাম"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ওয়েব সাইটের একটি স্বতন্ত্র নাম",
+      "explanation": "ডোমেইন নাম IP ঠিকানার বদলে ওয়েবসাইটের অনন্য পরিচয়, একই নাম দুবার দেওয়া যায় না। ✗ সার্ভারের নাম = হোস্ট কম্পিউটার; ওয়েব ফাইল = index.html জাতীয় পেজ; ফোল্ডার = ফাইল রাখার ডিরেক্টরি।",
+      "source_ref": "bcs600#157",
+      "id": 7
+    },
+    {
+      "question": "ব্রাউজার যদি কোনো কারণে ইমেজ লোড করতে ব্যর্থ হয় তখন ইমেজের পরিবর্তে কোন টেক্সট প্রদর্শনের জন্য ব্যবহৃত এট্রিবিউট কোনটি?",
+      "options": {
+        "a": "src",
+        "b": "title",
+        "c": "alt",
+        "d": "align"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "alt",
+      "explanation": "alt (alternative text) ইমেজ লোড না হলে বিকল্প লেখা দেখায়, স্ক্রিন রিডারও এটিই পড়ে। ✗ src = ইমেজের ঠিকানা; title = মাউস রাখলে টুলটিপ; align = ছবির অবস্থান নির্ধারণ।",
+      "source_ref": "bcs600#158",
+      "id": 8
+    },
+    {
+      "question": "উৎস প্রোগ্রাম → ? → বস্তু প্রোগ্রাম। (?) প্রশ্নবোধক স্থানে কি হবে?",
+      "options": {
+        "a": "কম্পাইলার",
+        "b": "ইন্টারপ্রেটার",
+        "c": "অ্যাসেম্বলার",
+        "d": "লিংকার"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "কম্পাইলার",
+      "explanation": "কম্পাইলার পুরো সোর্স কোড একসাথে অনুবাদ করে বস্তু বা অবজেক্ট প্রোগ্রাম তৈরি করে। ✗ ইন্টারপ্রেটার = লাইন ধরে অনুবাদ, অবজেক্ট ফাইল দেয় না; অ্যাসেম্বলার = অ্যাসেম্বলি ভাষার অনুবাদক; লিংকার = অবজেক্ট ফাইল জোড়া দেয়।",
+      "source_ref": "bcs600#159",
+      "id": 9
+    },
+    {
+      "question": "সকল ধনাত্মক পূর্ণসংখ্যাকে কি বলা হয়?",
+      "options": {
+        "a": "ক্যারেকটার",
+        "b": "ইন্টিজার",
+        "c": "রিয়েল",
+        "d": "ডাবল"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ইন্টিজার",
+      "explanation": "ইন্টিজার ডেটা টাইপ ভগ্নাংশহীন পূর্ণসংখ্যা ধারণ করে। ✗ ক্যারেকটার = একটি বর্ণ বা চিহ্ন; রিয়েল = দশমিকযুক্ত সংখ্যা; ডাবল = দ্বিগুণ নির্ভুলতার ভগ্নাংশ সংখ্যা।",
+      "source_ref": "bcs600#160",
+      "id": 10
+    },
+    {
+      "question": "ডেটাবেজ এ কোনগুলো একই অর্থে ব্যবহৃত হয়?",
+      "options": {
+        "a": "এনটিটি ও টেবিল",
+        "b": "এনটিটি সেট ও টেবিল",
+        "c": "টেবিল ও কলাম",
+        "d": "এট্রিবিউট ও ফিল্ড"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "এট্রিবিউট ও ফিল্ড",
+      "explanation": "টেবিলের অ্যাট্রিবিউট বা কলামই রেকর্ডের ফিল্ড, তাই দুটি একই অর্থে ব্যবহৃত হয়। ✗ এনটিটি = একক সত্তা বা বস্তু; এনটিটি সেট = সমজাতীয় এনটিটির সমষ্টি; কলাম = টেবিলের একটি অংশ মাত্র।",
+      "source_ref": "bcs600#161",
+      "id": 11
+    },
+    {
+      "question": "ডেটা ফাইল তৈরির সঠিক অনুক্রম কোনটি?",
+      "options": {
+        "a": "বর্ণ > ফিল্ড > রেকর্ড > ডেটাবেজ",
+        "b": "ফিল্ড > রেকর্ড > টেবিল > ডেটাবেজ",
+        "c": "রেকর্ড > ফিল্ড > তথ্য > ডেটাবেজ",
+        "d": "রেকর্ড > ফিল্ড > বর্ণ > ডেটাবেজ"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "ফিল্ড > রেকর্ড > টেবিল > ডেটাবেজ",
+      "explanation": "ছোট থেকে বড় স্তরক্রম: বর্ণ → ফিল্ড → রেকর্ড → টেবিল → ডেটাবেজ। ✗ বাকি অপশনে রেকর্ডকে ফিল্ডের আগে বা বর্ণকে শেষে বসানো হয়েছে, স্তরক্রম উল্টো।",
+      "source_ref": "bcs600#162",
+      "id": 12
+    },
+    {
+      "question": "ইন্টারনেট চালু হয় কত সালে?",
+      "options": {
+        "a": "১৯৬৯",
+        "b": "১৯৮২",
+        "c": "১৯৮৪",
+        "d": "১৯৮৯"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "১৯৬৯",
+      "explanation": "১৯৬৯ সালে যুক্তরাষ্ট্রে ARPANET চালু হয়, এটিই ইন্টারনেটের সূচনা। ✗ ১৯৮২ = TCP/IP প্রমিত হয়; ১৯৮৪ = DNS চালু; ১৯৮৯ = টিম বার্নার্স-লির WWW প্রস্তাব।\n\n❗ বইয়ের উত্তর (১৯৬৯) অপশনে ছিল না; অপশনে যোগ করা হয়েছে।",
+      "source_ref": "bcs600#190",
+      "id": 13
+    },
+    {
+      "question": "কোনটি আউটপুট ডিভাইস?",
+      "options": {
+        "a": "মনিটর",
+        "b": "কীবোর্ড",
+        "c": "ইউপিএস",
+        "d": "মাউস"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "মনিটর",
+      "explanation": "মনিটর প্রক্রিয়াকৃত ফলাফল পর্দায় দেখায়, তাই এটি আউটপুট ডিভাইস। ✗ কীবোর্ড ও মাউস = ইনপুট ডিভাইস; ইউপিএস = বিদ্যুৎ ব্যাকআপ যন্ত্র, ইনপুট-আউটপুট কোনোটিই নয়।\n\n❗ বইয়ে উত্তর \"ক+ঘ\" (মনিটর ও প্রিন্টার) দেওয়া ছিল; একক উত্তরের জন্য প্রিন্টারের বদলে মাউস রাখা হয়েছে।",
+      "source_ref": "bcs600#208",
+      "id": 14
+    },
+    {
+      "question": "কম্পিউটারের কি-বোর্ড একটি-",
+      "options": {
+        "a": "ইনপুট ডিভাইস",
+        "b": "আউটপুট ডিভাইস",
+        "c": "ইন্টারনাল ডিভাইস",
+        "d": "কোনটি নয়"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "ইনপুট ডিভাইস",
+      "explanation": "কী-বোর্ড দিয়ে ব্যবহারকারী অক্ষর ও কমান্ড কম্পিউটারে পাঠান, তাই এটি ইনপুট ডিভাইস। ✗ আউটপুট ডিভাইস = মনিটর, প্রিন্টার; ইন্টারনাল ডিভাইস = RAM, CPU-র মতো ভেতরের অংশ।",
+      "source_ref": "bcs600#266",
+      "id": 15
+    },
+    {
+      "question": "চ্যাটজিপিটি একটি-",
+      "options": {
+        "a": "প্রোগ্রামিং ল্যাঙ্গুয়েজ",
+        "b": "কৃত্রিম বুদ্ধিমত্তা",
+        "c": "ম্যালওয়ার",
+        "d": "সোশ্যাল মিডিয়া"
+      },
+      "correct_answer": "b",
+      "correct_answer_text": "কৃত্রিম বুদ্ধিমত্তা",
+      "explanation": "চ্যাটজিপিটি OpenAI-এর তৈরি কৃত্রিম বুদ্ধিমত্তাভিত্তিক চ্যাটবট, ২০২২ সালের নভেম্বরে উন্মুক্ত হয়। ✗ প্রোগ্রামিং ল্যাঙ্গুয়েজ = Python, C; ম্যালওয়ার = ক্ষতিকর সফটওয়্যার; সোশ্যাল মিডিয়া = Facebook।",
+      "source_ref": "bcs600#271",
+      "id": 16
+    },
+    {
+      "question": "দূরবর্তী স্থানে ইন্টারনেট সংযোগ নিতে কোনটি ব্যবহার হয়?",
+      "options": {
+        "a": "DSL",
+        "b": "Modem",
+        "c": "Satellite",
+        "d": "Dial – Up"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Satellite",
+      "explanation": "দুর্গম বা দূরবর্তী স্থানে তার-কেবল পৌঁছায় না, তাই স্যাটেলাইট সংযোগই ব্যবহৃত হয়। ✗ DSL = টেলিফোন তারে ব্রডব্যান্ড; Modem = সংকেত রূপান্তরকারী যন্ত্র; Dial-Up = ফোন লাইনে ধীরগতির সংযোগ।\n\n❗ বইয়ে উত্তর দেওয়া আছে Dial–Up — ভুল। দূরবর্তী/দুর্গম এলাকায় স্যাটেলাইট ব্যবহৃত হয়।",
+      "source_ref": "bcs600#293",
+      "id": 17
+    },
+    {
+      "question": "কম্পিউটারের Heart বলা হয় কোনটিকে?",
+      "options": {
+        "a": "Memory",
+        "b": "Monitor",
+        "c": "CPU",
+        "d": "Disc"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "CPU",
+      "explanation": "CPU (Central Processing Unit) সব হিসাব ও নিয়ন্ত্রণ চালায়, তাই একে কম্পিউটারের হৃৎপিণ্ড বা মস্তিষ্ক বলা হয়। ✗ Memory = তথ্য ধারণ; Monitor = আউটপুট পর্দা; Disc = স্থায়ী সংরক্ষণ মাধ্যম।",
+      "source_ref": "bcs600#329",
+      "id": 18
+    },
+    {
+      "question": "GPS এর পূর্ণরূপ কি?",
+      "options": {
+        "a": "General Poinfing System",
+        "b": "Global Processing System",
+        "c": "Global Positioning System",
+        "d": "General Positioning System"
+      },
+      "correct_answer": "c",
+      "correct_answer_text": "Global Positioning System",
+      "explanation": "GPS = Global Positioning System, স্যাটেলাইট সংকেত দিয়ে পৃথিবীর যেকোনো স্থানের অবস্থান নির্ণয় করে। ✗ বাকি তিনটিতে Global বা Positioning বদলে General/Processing বসানো, কোনোটিই সঠিক নয়।",
+      "source_ref": "bcs600#367",
+      "id": 19
+    },
+    {
+      "question": "RAM কি?",
+      "options": {
+        "a": "Random Access Memory",
+        "b": "Read Only Memory",
+        "c": "Reliable Memory",
+        "d": "Random Adaptive Memory"
+      },
+      "correct_answer": "a",
+      "correct_answer_text": "Random Access Memory",
+      "explanation": "RAM = Random Access Memory, অস্থায়ী বা ভোলাটাইল মেমরি, বিদ্যুৎ গেলে তথ্য মুছে যায়। ✗ Read Only Memory = ROM, স্থায়ী মেমরি; Reliable ও Random Adaptive Memory = প্রকৃত পরিভাষা নয়।",
+      "source_ref": "bcs600#368",
+      "id": 20
+    },
+    {
+      "question": "LAN কি?",
+      "options": {
+        "a": "Local Action Network",
+        "b": "Local Apple Network",
+        "c": "Local Action News",
+        "d": "Local Area Network"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Local Area Network",
+      "explanation": "LAN = Local Area Network, এক ভবন বা অফিসের সীমিত এলাকার নেটওয়ার্ক। ✗ বাকি তিনটিতে Area-র বদলে Action বা Apple বসানো, কোনোটিই নেটওয়ার্কিং পরিভাষা নয়।",
+      "source_ref": "bcs600#369",
+      "id": 21
+    },
+    {
+      "question": "WIFI এর পূর্ণরূপ কি?",
+      "options": {
+        "a": "Wireless Internet",
+        "b": "Wireless Field",
+        "c": "Wireless Fibre",
+        "d": "Wireless Fidelity"
+      },
+      "correct_answer": "d",
+      "correct_answer_text": "Wireless Fidelity",
+      "explanation": "Wi-Fi = Wireless Fidelity, IEEE 802.11 মান অনুযায়ী বেতার তরঙ্গে ইন্টারনেট সংযোগ দেয়। ✗ বাকি তিনটিতে Fidelity-র বদলে Internet/Field/Fibre বসানো, কোনোটিই প্রকৃত পূর্ণরূপ নয়।",
+      "source_ref": "bcs600#370",
+      "id": 22
+    }
+  ]
+}
