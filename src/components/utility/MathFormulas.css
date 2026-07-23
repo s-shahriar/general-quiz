@@ -936,6 +936,150 @@
   text-align: center;
 }
 
+/* ── Cover-and-recall study mode (math সূত্র route only) ───────────────── */
+.mf-cover-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+.mf-cover-btn:hover { background: var(--hover-bg); }
+.mf-cover-btn.on {
+  color: #8b5cf6;
+  border-color: rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.14);
+}
+
+/* Hint banner shown while cover mode is active */
+.mf-cover-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 14px;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--text-2);
+  background: rgba(139, 92, 246, 0.10);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+}
+.mf-cover-banner svg { flex-shrink: 0; color: #8b5cf6; }
+.mf-cover-banner strong { color: #8b5cf6; }
+
+/* A covered formula box: name stays, formula is blurred until tapped */
+.mf-f-box.mf-covered {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  /* Mobile: no 300ms delay, no double-tap zoom, no grey tap flash */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-f-box.mf-covered .val {
+  filter: blur(9px);
+  opacity: .45;
+  pointer-events: none;
+}
+.mf-f-box.mf-covered:hover,
+.mf-f-box.mf-covered:active {
+  border-color: rgba(139, 92, 246, 0.5);
+  background: rgba(139, 92, 246, 0.08);
+}
+.mf-cover-hint {
+  margin-left: auto;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #8b5cf6;
+  white-space: nowrap;
+  opacity: .85;
+}
+[data-theme="light"] .mf-cover-btn.on,
+[data-theme="light"] .mf-cover-banner strong,
+[data-theme="light"] .mf-cover-banner svg,
+[data-theme="light"] .mf-cover-hint { color: #6d28d9; }
+
+/* Comparison-table formula cells (.hl) and inline formulas (.mf-fi):
+   blurred until tapped. First column (shape name) stays visible as the cue. */
+.mf-cover-on .mf-cmp-table td.hl,
+.mf-cover-on .mf-fi {
+  cursor: pointer;
+  /* Mobile: instant tap, no double-tap zoom, no grey flash */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-cover-on .mf-cmp-table td.hl:not(.mf-revealed),
+.mf-cover-on .mf-fi:not(.mf-revealed) {
+  filter: blur(6px);
+  opacity: .5;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.mf-cover-on .mf-cmp-table td.hl:not(.mf-revealed) {
+  background: rgba(139, 92, 246, 0.07);
+  border-radius: 4px;
+}
+/* Tap feedback for touch (no :hover on mobile) */
+.mf-cover-on .mf-cmp-table td.hl:active { background: rgba(139, 92, 246, 0.16); }
+.mf-cover-on .mf-fi:active { outline: 2px solid rgba(139, 92, 246, 0.4); }
+/* Enlarge the small inline formula tap target without shifting layout */
+.mf-cover-on .mf-fi {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 1px 0;
+}
+
+/* Standalone KaTeX formulas (big display formulas across Log, Series, Quadratic,
+   Algebra, Unitary, Percentage, Real Numbers, Profit, Line) cover themselves. */
+.mf-tex-covered {
+  filter: blur(8px);
+  opacity: .5;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-tex.mf-tex-covered { display: inline-block; }
+
+/* Plain-text formula values that aren't Tex: Probability rows (.form), Venn
+   values (.mf-set-box-val), and any element tagged .mf-cv (one-off formulas).
+   Their label/condition sibling stays visible as the recall cue. */
+.mf-cover-on .mf-prob-item .form,
+.mf-cover-on .mf-set-box-val,
+.mf-cover-on .mf-cv {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-cover-on .mf-prob-item .form:not(.mf-revealed),
+.mf-cover-on .mf-set-box-val:not(.mf-revealed),
+.mf-cover-on .mf-cv:not(.mf-revealed) {
+  filter: blur(6px);
+  opacity: .5;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.mf-cover-on .mf-prob-item .form:active,
+.mf-cover-on .mf-set-box-val:active,
+.mf-cover-on .mf-cv:active { outline: 2px solid rgba(139, 92, 246, 0.4); border-radius: 4px; }
+
+/* Phones: bigger blur so short formulas aren't guessable, roomier table rows
+   for thumbs, and comfortable line-height on inline formulas */
+@media (max-width: 640px) {
+  .mf-cover-on .mf-cmp-table td.hl:not(.mf-revealed) { filter: blur(7px); }
+  .mf-cover-on .mf-f-box.mf-covered .val { filter: blur(11px); }
+  .mf-tex-covered { filter: blur(10px); }
+  .mf-cover-on .mf-cmp-table td { padding-top: 10px; padding-bottom: 10px; }
+  .mf-cover-hint { font-size: 11px; }
+}
+
 /* Filter mode: show only marked cards, drop empty sections and page chrome. */
 .mf-important-only .mf-sec-picker { display: none; }
 .mf-important-only .mf-card:not(.is-important) { display: none; }

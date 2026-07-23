@@ -1,8 +1,16 @@
 import katex from 'katex'
 import { AlertTriangle, Lightbulb, Star } from 'lucide-react'
-import { useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { useImportantContext } from '../../../contexts/ImportantContext.jsx'
 import { mathUidOfText } from '../../../lib/qid.js'
+
+// Cover-and-recall study mode. When ON, every FBox hides its formula value
+// (name stays visible) so you can try to recall it, then tap to reveal.
+const CoverCtx = createContext(false)
+export function CoverProvider({ value, children }) {
+  return <CoverCtx.Provider value={value}>{children}</CoverCtx.Provider>
+}
+export const useCover = () => useContext(CoverCtx)
 
 export function SectionHeader({ icon, title, sub }) {
   return (
@@ -61,15 +69,42 @@ export function CardTitle({ color, badge, badgeStyle, children }) {
 }
 
 export function Tex({ children }) {
+  const covered = useCover()
+  const [revealed, setRevealed] = useState(false)
+  // Re-hide on each (re)entry to cover mode for a fresh recall pass.
+  useEffect(() => { if (covered) setRevealed(false) }, [covered])
   const html = katex.renderToString(String(children), { throwOnError: false, displayMode: false })
-  return <span className="mf-tex" dangerouslySetInnerHTML={{ __html: html }} />
+  const hide = covered && !revealed
+  return (
+    <span
+      className={`mf-tex${hide ? ' mf-tex-covered' : ''}`}
+      onClick={covered ? (e) => { e.stopPropagation(); setRevealed(r => !r) } : undefined}
+      role={covered ? 'button' : undefined}
+      title={covered ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  )
 }
 
 export function FBox({ label, val, tex, highlight }) {
+  const covered = useCover()
+  const [revealed, setRevealed] = useState(false)
+  // Whenever cover mode is (re)enabled, start hidden again for a fresh pass.
+  useEffect(() => { if (covered) setRevealed(false) }, [covered])
+  // A Tex value covers itself (see Tex); FBox only covers plain-text values so
+  // we never double-blur. Plain vals have no self-cover, so FBox handles them.
+  const boxCover = covered && !tex
+  const hide = boxCover && !revealed
   return (
-    <div className={`mf-f-box${highlight ? ' highlight' : ''}`}>
+    <div
+      className={`mf-f-box${highlight ? ' highlight' : ''}${hide ? ' mf-covered' : ''}`}
+      onClick={boxCover ? () => setRevealed(r => !r) : undefined}
+      role={boxCover ? 'button' : undefined}
+      title={boxCover ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+    >
       <span className="label">{label}</span>
       <span className="val">{tex ? <Tex>{tex}</Tex> : val}</span>
+      {hide && <span className="mf-cover-hint">👆 দেখতে ট্যাপ</span>}
     </div>
   )
 }

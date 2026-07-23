@@ -1,12 +1,13 @@
 import 'katex/dist/katex.min.css'
-import { Bookmark, ChevronLeft, LayoutGrid, Moon, Star, Sun } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { Bookmark, ChevronLeft, Eye, EyeOff, LayoutGrid, Moon, Star, Sun } from 'lucide-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import HandToggle from '../shared/HandToggle.jsx'
 import { SECTIONS } from '../../data/utility/mathFormulasData'
 import CategorySidebar from '../CategorySidebar'
+import { CoverProvider } from './math-formulas/MathFormulaHelpers'
 import AlgebraSection from './math-formulas/sections/AlgebraSection'
 import CircleSection from './math-formulas/sections/CircleSection'
 import CurvedSection from './math-formulas/sections/CurvedSection'
@@ -35,6 +36,29 @@ export default function MathFormulas() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [activeSectionId, setActiveSectionId] = useState(SECTIONS[0].id)
   const [importantOnly, setImportantOnly] = useState(false)
+  const [cover, setCover] = useState(() => {
+    try { return localStorage.getItem('mf-cover') === '1' } catch { return false }
+  })
+
+  useEffect(() => {
+    try { localStorage.setItem('mf-cover', cover ? '1' : '0') } catch { /* ignore */ }
+  }, [cover])
+
+  // Cover mode also blurs comparison-table cells (.hl) and inline formulas
+  // (.mf-fi). Those are static JSX, not components, so we reveal them one at a
+  // time via click delegation, and clear all reveals whenever the mode toggles.
+  const wrapRef = useRef(null)
+  useEffect(() => {
+    wrapRef.current?.querySelectorAll('.mf-revealed')
+      .forEach(el => el.classList.remove('mf-revealed'))
+  }, [cover])
+  const onCoverClick = (e) => {
+    if (!cover) return
+    const el = e.target.closest(
+      '.mf-cmp-table td.hl, .mf-fi, .mf-prob-item .form, .mf-set-box-val, .mf-cv'
+    )
+    if (el && wrapRef.current?.contains(el)) el.classList.toggle('mf-revealed')
+  }
 
   // Math cards use 'm'-prefixed uids; count only those (the same Set also holds
   // question 'q' uids from the quiz routes).
@@ -85,13 +109,20 @@ export default function MathFormulas() {
         onSelect={(t) => scrollTo(t.id)}
       />
 
-      <div className="mf-wrap">
+      <div className={`mf-wrap${cover ? ' mf-cover-on' : ''}`} ref={wrapRef} onClick={onCoverClick}>
         <div className="mf-topbar">
           <button className="back-btn" onClick={() => navigate('/utility')}>
             <ChevronLeft size={15} /> হোম
           </button>
           <span className="mf-topbar-title">গণিত সূত্র সংকলন</span>
           <div className="topbar-right-actions mf-topbar-actions" style={{ display: 'flex', gap: '8px' }}>
+            <button
+              className={`mf-cover-btn${cover ? ' on' : ''}`}
+              onClick={() => setCover(v => !v)}
+              title={cover ? 'সূত্র দেখান (cover mode বন্ধ)' : 'সূত্র ঢেকে নিজেকে যাচাই করুন'}
+            >
+              {cover ? <Eye size={15} /> : <EyeOff size={15} />}
+            </button>
             <button
               className={`mf-imp-filter-btn${importantOnly ? ' on' : ''}`}
               onClick={() => setImportantOnly(v => !v)}
@@ -145,6 +176,14 @@ export default function MathFormulas() {
           </div>
         )}
 
+        {cover && (
+          <div className="mf-cover-banner">
+            <EyeOff size={15} />
+            <span>সূত্র ঢাকা আছে — মনে করার চেষ্টা করে, তারপর <strong>ট্যাপ করে</strong> মিলিয়ে নিন।</span>
+          </div>
+        )}
+
+        <CoverProvider value={cover}>
         <TriangleSection />
         <TrigSection />
         <TriCenterSection />
@@ -164,6 +203,7 @@ export default function MathFormulas() {
         <ProfitSection />
         <PercentageSection />
         <UnitarySection />
+        </CoverProvider>
 
       </div>
     </div>
