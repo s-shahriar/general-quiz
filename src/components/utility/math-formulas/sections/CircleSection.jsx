@@ -88,6 +88,38 @@ export default function CircleSection() {
             <strong>বৃত্তের ভেতরে বর্গ</strong> (অন্তর্লিখিত বর্গ): বর্গের <strong>কর্ণ</strong> = ব্যাস → <strong>a√2 = 2r</strong>।</p>
           </Mem>
         </Card>
+
+        <Card color="violet">
+          <CardTitle color="var(--mf-violet)">বৃত্তের ভেতরে আয়তক্ষেত্র (Rectangle in Circle)</CardTitle>
+          <div style={{textAlign:'center',margin:'10px 0'}}>
+            <svg width="160" height="150" viewBox="0 0 160 150">
+              <circle cx="80" cy="75" r="62" fill="rgba(91,164,245,.06)" stroke="#5ba4f5" strokeWidth="2"/>
+              <rect x="30" y="38" width="100" height="74" fill="rgba(167,139,250,.06)" stroke="#a78bfa" strokeWidth="2"/>
+              <line x1="30" y1="38" x2="130" y2="112" stroke="#f0a500" strokeWidth="1.8"/>
+              <line x1="130" y1="38" x2="30" y2="112" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2" opacity=".6"/>
+              <circle cx="80" cy="75" r="3.5" fill="#f0a500"/>
+              <text x="84" y="72" fill="#f0a500" fontSize="11" fontWeight="700">O</text>
+              <text x="76" y="33" fill="#a78bfa" fontSize="11" fontWeight="700">l</text>
+              <text x="133" y="78" fill="#a78bfa" fontSize="11" fontWeight="700">b</text>
+              <text x="20" y="35" fill="#8899aa" fontSize="11">D</text>
+              <text x="133" y="35" fill="#8899aa" fontSize="11">C</text>
+              <text x="133" y="122" fill="#8899aa" fontSize="11">B</text>
+              <text x="20" y="122" fill="#8899aa" fontSize="11">A</text>
+              <text x="34" y="146" fill="#f0a500" fontSize="10" fontWeight="700">কর্ণ = ব্যাস (d)</text>
+            </svg>
+          </div>
+          <FBox label="বৃত্তের ব্যাস = আয়তের কর্ণ" tex={"d = \\sqrt{l^2 + b^2}"} highlight/>
+          <FBox label="বৃত্তের ব্যাসার্ধ" tex={"r = \\dfrac{\\sqrt{l^2 + b^2}}{2}"}/>
+          <FBox label="ক্ষুদ্রতম বৃত্তের ক্ষেত্রফল" tex={"= \\pi r^2 = \\dfrac{\\pi(l^2 + b^2)}{4}"}/>
+          <div style={{fontSize:11,color:'var(--text-3)',padding:'4px 10px',marginBottom:4}}>
+            আয়তকে পুরো ঢাকা <strong>ক্ষুদ্রতম বৃত্ত</strong> চার কোণা ছুঁয়ে যায় → ব্যাস = <strong>কর্ণ</strong>।
+          </div>
+          <Mem title="💡 উদাহরণ: ১৬ × ১২ আয়তক্ষেত্র">
+            <p>সবচেয়ে ছোট বৃত্ত যা আয়তটিকে পুরো ঢাকে → ব্যাস = কর্ণ।<br/>
+            d = √(16² + 12²) = √400 = <strong>20</strong> → r = <strong>10</strong><br/>
+            ক্ষেত্রফল = π × 10² = <strong>100π</strong> বর্গফুট</p>
+          </Mem>
+        </Card>
       </div>
     </div>
   )

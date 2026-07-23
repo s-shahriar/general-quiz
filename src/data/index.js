@@ -7,9 +7,6 @@ import {
   Languages, Flag, Brain, FlaskConical, Cpu, Mountain, Scale, Calculator, Landmark, BookText
 } from 'lucide-react'
 
-// GK study notes stay bundled (reference content, not quizzed from the DB).
-import intlEconomicOrgs from './gk/intl_economic_orgs.json'
-
 // ─────────────────────────────────────────────────────────────
 //  Topic METADATA only. Each topic's `questions` array starts empty and is
 //  filled on demand from Supabase by data/contentLoader.js (keyed by `id`,
@@ -51,23 +48,13 @@ export const ENGLISH_TOPICS = [
 
 // GK: MCQs load from the DB; study notes come from the bundled JSON.
 // The five bcs600_* topics are the "গুরুত্বপূর্ণ সাধারণ জ্ঞান" question bank,
-// split by subject. intl_economic_orgs is study-notes only (no MCQs).
+// split by subject.
 export const GK_TOPICS = [
   { id: 'gk_bd_affairs',   module: 'gk', name: 'বাংলাদেশ বিষয়াবলি',         shortName: 'বাংলাদেশ',      icon: Flag,         color: '#22c55e', questions: [] },
   { id: 'gk_intl_affairs', module: 'gk', name: 'আন্তর্জাতিক বিষয়াবলি',      shortName: 'আন্তর্জাতিক',   icon: Globe,        color: '#f59e0b', questions: [] },
   { id: 'gk_science',      module: 'gk', name: 'সাধারণ বিজ্ঞান ও স্বাস্থ্য', shortName: 'বিজ্ঞান',        icon: FlaskConical, color: '#34d399', questions: [] },
   { id: 'gk_ict',          module: 'gk', name: 'কম্পিউটার ও তথ্যপ্রযুক্তি',  shortName: 'কম্পিউটার',      icon: Cpu,          color: '#60a5fa', questions: [] },
   { id: 'gk_lang_misc',    module: 'gk', name: 'ভাষা, সাহিত্য ও বিবিধ',      shortName: 'ভাষা ও বিবিধ',  icon: BookText,     color: '#f472b6', questions: [] },
-  {
-    id: intlEconomicOrgs.id,
-    module: 'gk',
-    name: intlEconomicOrgs.name,
-    shortName: intlEconomicOrgs.shortName,
-    icon: Landmark,
-    color: '#38bdf8',
-    questions: [],
-    study: intlEconomicOrgs.study || { groups: [] },
-  },
 ]
 
 export const BANGLA_SAHITYA_TOPICS = [

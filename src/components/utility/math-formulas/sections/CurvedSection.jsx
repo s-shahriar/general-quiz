@@ -65,7 +65,7 @@ export default function CurvedSection() {
         </Card>
 
         <Card color="gold">
-          <CardTitle>গোলক ও অর্ধগোলক</CardTitle>
+          <CardTitle>গোলক ও অর্ধগোলক (Sphere & Hemisphere)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="140" height="130" viewBox="0 0 140 130">
               <circle cx="38" cy="60" r="32" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
