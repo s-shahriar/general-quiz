@@ -22,7 +22,7 @@ export default function PercentageSection() {
             ].map(r => (
               <div key={r.shape} style={{padding:'6px 10px',borderRadius:7,background:r.bg,border:`1px solid ${r.border}`}}>
                 <div style={{color:r.color,fontWeight:700,marginBottom:2}}>{r.shape}</div>
-                <div style={{color:'var(--text-3)',fontSize:11}}>{r.formula}</div>
+                <div className="mf-cv" style={{color:'var(--text-3)',fontSize:11}}>{r.formula}</div>
               </div>
             ))}
           </div>
