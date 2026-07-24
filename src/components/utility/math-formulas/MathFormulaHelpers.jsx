@@ -68,8 +68,11 @@ export function CardTitle({ color, badge, badgeStyle, children }) {
   )
 }
 
-export function Tex({ children }) {
-  const covered = useCover()
+// `noCover` opts out of self-covering — used when a parent (e.g. FBox) owns the
+// cover/reveal so the whole card is one tap target, label included.
+export function Tex({ children, noCover }) {
+  const ctxCovered = useCover()
+  const covered = ctxCovered && !noCover
   const [revealed, setRevealed] = useState(false)
   // Re-hide on each (re)entry to cover mode for a fresh recall pass.
   useEffect(() => { if (covered) setRevealed(false) }, [covered])
@@ -86,25 +89,76 @@ export function Tex({ children }) {
   )
 }
 
+// Renders "LHS = RHS" with the LHS (through the first '=') visible as the recall
+// cue and only the RHS answer covered. The span itself is the tap target. Use for
+// standalone equation boxes where the left side names what you're solving for.
+export function CoverEq({ children }) {
+  const covered = useCover()
+  const [revealed, setRevealed] = useState(false)
+  useEffect(() => { if (covered) setRevealed(false) }, [covered])
+  const tex = String(children)
+  const i = tex.indexOf('=')
+  const lhs = i > -1 ? tex.slice(0, i + 1) : null
+  const rhs = i > -1 ? tex.slice(i + 1).trim() : tex
+  const hasCover = !!(covered && rhs)
+  const hide = hasCover && !revealed
+  return (
+    <span
+      className={`mf-eq${hide ? ' mf-covered' : ''}`}
+      onClick={hasCover ? (e) => { e.stopPropagation(); setRevealed(r => !r) } : undefined}
+      role={hasCover ? 'button' : undefined}
+      title={hasCover ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+    >
+      {lhs && <Tex noCover>{lhs}</Tex>}{lhs ? ' ' : ''}
+      <span className="mf-eq-rhs"><Tex noCover>{rhs}</Tex></span>
+    </span>
+  )
+}
+
+// A probability/definition row: a visible condition (cue) plus a formula. Pass
+// `lhs`+`rhs` to keep the formula's left side (e.g. "P(A∩B) =") visible and cover
+// only the answer, or `form` to cover the whole formula. The row taps to reveal.
+export function ProbForm({ cond, form, lhs, rhs }) {
+  const covered = useCover()
+  const [revealed, setRevealed] = useState(false)
+  useEffect(() => { if (covered) setRevealed(false) }, [covered])
+  const coverText = rhs != null ? rhs : form
+  const hasCover = !!(covered && coverText)
+  const hide = hasCover && !revealed
+  return (
+    <div className="mf-prob-item">
+      <div className="cond">{cond}</div>
+      <div
+        className={`form${hide ? ' mf-covered' : ''}`}
+        onClick={hasCover ? () => setRevealed(r => !r) : undefined}
+        role={hasCover ? 'button' : undefined}
+        title={hasCover ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+      >
+        {lhs != null && <span className="mf-form-lhs">{lhs} </span>}
+        <span className="mf-form-rhs">{coverText}</span>
+      </div>
+    </div>
+  )
+}
+
 export function FBox({ label, val, tex, highlight }) {
   const covered = useCover()
   const [revealed, setRevealed] = useState(false)
   // Whenever cover mode is (re)enabled, start hidden again for a fresh pass.
   useEffect(() => { if (covered) setRevealed(false) }, [covered])
-  // A Tex value covers itself (see Tex); FBox only covers plain-text values so
-  // we never double-blur. Plain vals have no self-cover, so FBox handles them.
-  const boxCover = covered && !tex
-  const hide = boxCover && !revealed
+  // FBox owns the cover for its value (plain OR formula) so the *whole* card —
+  // label included — is one tap target. The inner Tex opts out via `noCover` to
+  // avoid double-blur / a competing click zone.
+  const hide = covered && !revealed
   return (
     <div
       className={`mf-f-box${highlight ? ' highlight' : ''}${hide ? ' mf-covered' : ''}`}
-      onClick={boxCover ? () => setRevealed(r => !r) : undefined}
-      role={boxCover ? 'button' : undefined}
-      title={boxCover ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+      onClick={covered ? () => setRevealed(r => !r) : undefined}
+      role={covered ? 'button' : undefined}
+      title={covered ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
     >
       <span className="label">{label}</span>
-      <span className="val">{tex ? <Tex>{tex}</Tex> : val}</span>
-      {hide && <span className="mf-cover-hint">👆 দেখতে ট্যাপ</span>}
+      <span className="val">{tex ? <Tex noCover>{tex}</Tex> : val}</span>
     </div>
   )
 }
@@ -129,11 +183,38 @@ export function Warn({ title, children, style }) {
   )
 }
 
-export function IdItem({ n, star, children }) {
+export function IdItem({ n, star, children, tex }) {
+  const covered = useCover()
+  const [revealed, setRevealed] = useState(false)
+  useEffect(() => { if (covered) setRevealed(false) }, [covered])
+
+  // With `tex`, split "LHS = RHS" at the first '=': the left side (through '=')
+  // stays visible as the recall cue and only the answer (RHS) is covered. The
+  // whole row is one tap target. Without `tex`, render children unchanged.
+  let lhs = null, rhs = null
+  if (tex) {
+    const i = tex.indexOf('=')
+    if (i > -1) { lhs = tex.slice(0, i + 1); rhs = tex.slice(i + 1).trim() }
+    else { rhs = tex }
+  }
+  const hasCover = !!(tex && covered && rhs)
+  const hide = hasCover && !revealed
   return (
-    <div className="mf-id-item">
+    <div
+      className={`mf-id-item${hide ? ' mf-covered' : ''}`}
+      onClick={hasCover ? () => setRevealed(r => !r) : undefined}
+      role={hasCover ? 'button' : undefined}
+      title={hasCover ? (hide ? 'দেখতে ট্যাপ করুন' : 'আবার ঢাকতে ট্যাপ করুন') : undefined}
+    >
       <div className={`mf-id-num${star ? ' star' : ''}`}>{star ? '★' : n}</div>
-      <div className="mf-id-text">{children}</div>
+      <div className="mf-id-text">
+        {tex ? (
+          <>
+            {lhs && <Tex noCover>{lhs}</Tex>}{' '}
+            <span className="mf-id-rhs">{rhs && <Tex noCover>{rhs}</Tex>}</span>
+          </>
+        ) : children}
+      </div>
     </div>
   )
 }

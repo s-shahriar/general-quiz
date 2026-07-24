@@ -162,17 +162,17 @@ export default function QuadSection() {
           <tbody>
             <tr>
               <td>জায়গা ঢাকতে কতগুলো <strong>ইট / টাইলস / পাথর / ঘাস</strong> লাগবে (প্রতিটির মাপ দেওয়া)</td>
-              <td><strong style={{color:'var(--mf-gold)'}}>ক্ষেত্রফল</strong> <span style={{color:'var(--text-dim)'}}>(Area)</span></td>
+              <td className="hl"><strong style={{color:'var(--mf-gold)'}}>ক্ষেত্রফল</strong> <span style={{color:'var(--text-dim)'}}>(Area)</span></td>
               <td className="hl">মোট ক্ষেত্রফল ÷ প্রতিটির ক্ষেত্রফল</td>
             </tr>
             <tr>
               <td>চারপাশে <strong>বেড়া / তার / কাঁটা</strong> দিতে কতটুকু লাগবে, বা মাঠ একবার ঘুরতে কত পথ</td>
-              <td><strong style={{color:'var(--mf-blue)'}}>পরিসীমা</strong> <span style={{color:'var(--text-dim)'}}>(Perimeter)</span></td>
+              <td className="hl"><strong style={{color:'var(--mf-blue)'}}>পরিসীমা</strong> <span style={{color:'var(--text-dim)'}}>(Perimeter)</span></td>
               <td className="hl">সব বাহুর যোগফল <strong>(ক্ষেত্রফল নয়)</strong></td>
             </tr>
             <tr>
               <td>পাত্র / ট্যাংক / ঘর ভরতে কতটুকু <strong>পানি / গ্যাস / বালি</strong> লাগবে — মোট শূন্যস্থান</td>
-              <td><strong style={{color:'var(--mf-rose)'}}>আয়তন</strong> <span style={{color:'var(--text-dim)'}}>(Volume)</span></td>
+              <td className="hl"><strong style={{color:'var(--mf-rose)'}}>আয়তন</strong> <span style={{color:'var(--text-dim)'}}>(Volume)</span></td>
               <td className="hl">দৈর্ঘ্য × প্রস্থ × উচ্চতা</td>
             </tr>
           </tbody>

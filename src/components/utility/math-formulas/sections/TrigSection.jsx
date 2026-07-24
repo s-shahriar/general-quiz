@@ -65,7 +65,7 @@ export default function TrigSection() {
       <Card color="violet">
         <CardTitle color="var(--mf-violet)">দ্রুত রেফারেন্স — সম্পূর্ণ ছক</CardTitle>
         <div className="mf-table-scroll">
-          <table className="mf-cmp-table" style={{minWidth:320}}>
+          <table className="mf-cmp-table mf-no-cover" style={{minWidth:320}}>
             <thead>
               <tr><th>কোণ</th><th style={{color:'#0fdba8'}}>sin</th><th style={{color:'#5ba4f5'}}>cos</th><th style={{color:'#f06d7e'}}>tan</th></tr>
             </thead>

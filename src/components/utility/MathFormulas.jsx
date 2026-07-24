@@ -55,7 +55,7 @@ export default function MathFormulas() {
   const onCoverClick = (e) => {
     if (!cover) return
     const el = e.target.closest(
-      '.mf-cmp-table td.hl, .mf-fi, .mf-prob-item .form, .mf-set-box-val, .mf-cv'
+      '.mf-cmp-table:not(.mf-no-cover) td.hl, .mf-fi, .mf-set-box-val, .mf-cv'
     )
     if (el && wrapRef.current?.contains(el)) el.classList.toggle('mf-revealed')
   }

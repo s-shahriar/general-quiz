@@ -15,12 +15,13 @@ const PAGE_SIZE = 20
 // horizontal category chip-bar (pick one topic at a time — far easier to filter
 // than a long vertical list). Explanations are folded by default and expand on
 // demand, so long LiveMCQ explanations don't bury the list.
-export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHome, config }) {
+export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onRemoveMany, onHome, config }) {
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
-          totalLabel, removeHint, rowIcon, rowIconColor, showExplanation } = config
+          totalLabel, removeHint, removeAllLabel, rowIcon, rowIconColor, showExplanation } = config
   const [activeId, setActiveId] = useState(null)
   const [chipsOpen, setChipsOpen] = useState(false)
   const [page, setPage] = useState(1)
+  const [confirmOpen, setConfirmOpen] = useState(false)
   const { trashedIds } = useTrash()
 
   const grouped = topics.map(t => {
@@ -33,6 +34,15 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
 
   const total = grouped.reduce((s, g) => s + g.items.length, 0)
   const active = grouped.find(g => g.topic.id === activeId) || grouped[0]
+
+  // Bulk-remove every saved question in the *active* category (confirm-guarded via
+  // a styled modal — big, but reversible). Scoped per-category, not global.
+  const activeCount = active?.items.length ?? 0
+  const doRemoveActive = () => {
+    const ids = (active?.items ?? []).map(({ qid }) => qid)
+    if (ids.length) onRemoveMany(ids)
+    setConfirmOpen(false)
+  }
 
   // Paginate the active topic's saved questions (long lists — e.g. 190 nailed —
   // shouldn't render as one endless scroll).
@@ -107,6 +117,16 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
 
           {active && (
             <div className="nailed-screen-list anim-fade" style={{ '--c': active.topic.color }}>
+              <div className="nailed-cat-actions">
+                <span className="nailed-cat-actions-label" style={{ color: active.topic.color }}>
+                  {active.topic.name} · {activeItems.length}
+                </span>
+                {onRemoveMany && activeCount > 0 && (
+                  <button className="nailed-clear-all-btn" onClick={() => setConfirmOpen(true)}>
+                    <X size={12} /> {removeAllLabel || 'Remove all'}
+                  </button>
+                )}
+              </div>
               {totalPages > 1 && (
                 <div className="nailed-page-info">Page {curPage} of {totalPages} · {activeItems.length} questions</div>
               )}
@@ -125,6 +145,26 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onHom
             </div>
           )}
         </>
+      )}
+
+      {confirmOpen && active && (
+        <div className="trash-modal-backdrop" onClick={() => setConfirmOpen(false)}>
+          <div className="trash-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+            <div className="trash-modal-icon" style={{ color, background: `${color}1f` }}>
+              <Icon size={22} />
+            </div>
+            <h3 className="trash-modal-title">{removeAllLabel || 'Remove all'} — {active.topic.name}?</h3>
+            <p className="trash-modal-sub">
+              {activeCount} question{activeCount !== 1 ? 's' : ''} will be removed from this list. You can add them back anytime.
+            </p>
+            <div className="trash-modal-actions">
+              <button className="trash-btn-cancel" onClick={() => setConfirmOpen(false)}>Cancel</button>
+              <button className="trash-btn-confirm" onClick={doRemoveActive}>
+                <X size={14} /> {removeAllLabel || 'Remove all'}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )

@@ -12,6 +12,7 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
   const masteredCtx = useMasteredContext()
   const mastered = masteredProp ?? masteredCtx.value
   const onUnnail = onUnnailProp ?? masteredCtx.remove
+  const onUnnailMany = masteredCtx.removeMany
   const onHome = onHomeProp ?? (() => navigate('/'))
   // Scope to the section that opened this screen (?g=bangla…), else all general.
   const topics = topicsProp ?? GROUP_TOPICS[searchParams.get('g')] ?? ALL_TOPICS
@@ -26,6 +27,7 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
       topics={topics}
       savedSet={mastered}
       onRemove={onUnnail}
+      onRemoveMany={onUnnailMany}
       onHome={onHome}
       config={{
         icon: Star,
@@ -36,6 +38,7 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
         emptyHint: "Star questions in quiz mode and they'll appear here",
         totalLabel: (n, t) => `${n} question${n !== 1 ? 's' : ''} in ${t} topic${t !== 1 ? 's' : ''}`,
         removeHint: 'to un-nail',
+        removeAllLabel: 'Un-nail all',
         rowIcon: Star,
         rowIconColor: '#f59e0b',
         showExplanation: false,

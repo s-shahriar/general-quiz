@@ -1,4 +1,4 @@
-import { SectionHeader, Card, CardTitle, Tex, FBox } from '../MathFormulaHelpers'
+import { SectionHeader, Card, CardTitle, CoverEq, FBox } from '../MathFormulaHelpers'
 
 export default function QuadraticSection() {
   return (
@@ -15,12 +15,12 @@ export default function QuadraticSection() {
               "D = b^2-4ac",
             ].map(tex => (
               <div key={tex} className="mf-f-box highlight" style={{flex:'1 1 auto',alignItems:'center',justifyContent:'center',padding:'8px 12px',margin:0,textAlign:'center',minWidth:0}}>
-                <span className="val"><Tex>{tex}</Tex></span>
+                <span className="val"><CoverEq>{tex}</CoverEq></span>
               </div>
             ))}
           </div>
           <div className="mf-f-box highlight" style={{flexDirection:'row',alignItems:'center',justifyContent:'center',gap:8,padding:'10px 14px',margin:0}}>
-            <span className="val"><Tex>{"x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"}</Tex></span>
+            <span className="val"><CoverEq>{"x = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"}</CoverEq></span>
           </div>
         </Card>
 

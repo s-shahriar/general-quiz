@@ -16,9 +16,9 @@ export default function CurvedSection() {
           </thead>
           <tbody>
             <tr><td><strong style={{color:'var(--mf-blue)'}}>সিলিন্ডার</strong></td><td className="hl">πr²h</td><td className="hl">2πrh</td><td className="hl">2πr(r+h)</td><td>−</td></tr>
-            <tr><td><strong style={{color:'var(--mf-rose)'}}>Cone</strong></td><td className="hl">⅓πr²h</td><td className="hl">πrl</td><td className="hl">πr(r+l)</td><td>l = √(h²+r²)</td></tr>
+            <tr><td><strong style={{color:'var(--mf-rose)'}}>Cone</strong></td><td className="hl">⅓πr²h</td><td className="hl">πrl</td><td className="hl">πr(r+l)</td><td className="hl">l = √(h²+r²)</td></tr>
             <tr><td><strong style={{color:'var(--mf-gold)'}}>গোলক</strong></td><td className="hl">⁴⁄₃πr³</td><td>−</td><td className="hl">4πr²</td><td>−</td></tr>
-            <tr><td><strong style={{color:'var(--mf-violet)'}}>অর্ধগোলক</strong></td><td className="hl">⅔πr³</td><td className="hl">2πr²</td><td className="hl">3πr²</td><td>সমগ্র = বক্র + ভূমি</td></tr>
+            <tr><td><strong style={{color:'var(--mf-violet)'}}>অর্ধগোলক</strong></td><td className="hl">⅔πr³</td><td className="hl">2πr²</td><td className="hl">3πr²</td><td className="hl">সমগ্র = বক্র + ভূমি</td></tr>
           </tbody>
         </table></div>
       </Card>

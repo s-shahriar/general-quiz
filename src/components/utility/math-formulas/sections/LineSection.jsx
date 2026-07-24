@@ -41,7 +41,7 @@ export default function LineSection() {
             দুই রেখা <strong>a₁x + b₁y + c₁ = 0</strong> ও <strong>a₂x + b₂y + c₂ = 0</strong> সমান্তরাল হলে:
           </p>
           <div style={{padding:'12px 14px',borderRadius:10,background:'rgba(167,139,250,.1)',border:'1px solid rgba(167,139,250,.3)'}}>
-            <div style={{fontSize:15,marginBottom:8}}><Tex>{"\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}"}</Tex></div>
+            <div style={{fontSize:15,marginBottom:8}}><Tex noCover>{"\\dfrac{a_1}{a_2} = \\dfrac{b_1}{b_2} \\neq \\dfrac{c_1}{c_2}"}</Tex></div>
             <div style={{display:'flex',flexWrap:'wrap',gap:6,alignItems:'center',fontSize:12,color:'var(--text-3)'}}>
               <span>উদা: 3x+2ky−7=0 ∥ 2x+5y+1=0 হলে</span>
               <code style={{background:'rgba(167,139,250,.15)',padding:'2px 7px',borderRadius:5,color:'var(--mf-violet)',fontWeight:700}}>3/2 = 2k/5</code>

@@ -992,18 +992,9 @@
   border-color: rgba(139, 92, 246, 0.5);
   background: rgba(139, 92, 246, 0.08);
 }
-.mf-cover-hint {
-  margin-left: auto;
-  font-size: 10.5px;
-  font-weight: 600;
-  color: #8b5cf6;
-  white-space: nowrap;
-  opacity: .85;
-}
 [data-theme="light"] .mf-cover-btn.on,
 [data-theme="light"] .mf-cover-banner strong,
-[data-theme="light"] .mf-cover-banner svg,
-[data-theme="light"] .mf-cover-hint { color: #6d28d9; }
+[data-theme="light"] .mf-cover-banner svg { color: #6d28d9; }
 
 /* Comparison-table formula cells (.hl) and inline formulas (.mf-fi):
    blurred until tapped. First column (shape name) stays visible as the cue. */
@@ -1028,6 +1019,16 @@
 /* Tap feedback for touch (no :hover on mobile) */
 .mf-cover-on .mf-cmp-table td.hl:active { background: rgba(139, 92, 246, 0.16); }
 .mf-cover-on .mf-fi:active { outline: 2px solid rgba(139, 92, 246, 0.4); }
+/* Exception: some reference tables must always stay readable (never covered).
+   High specificity so it beats the base + mobile blur rules regardless of order. */
+.mf-cover-on .mf-cmp-table.mf-no-cover td.hl:not(.mf-revealed) {
+  filter: none;
+  opacity: 1;
+  background: none;
+  cursor: default;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
 /* Enlarge the small inline formula tap target without shifting layout */
 .mf-cover-on .mf-fi {
   display: inline-block;
@@ -1048,17 +1049,46 @@
 }
 .mf-tex.mf-tex-covered { display: inline-block; }
 
-/* Plain-text formula values that aren't Tex: Probability rows (.form), Venn
-   values (.mf-set-box-val), and any element tagged .mf-cv (one-off formulas).
-   Their label/condition sibling stays visible as the recall cue. */
-.mf-cover-on .mf-prob-item .form,
+/* Numbered identities (Algebra): the LHS "…=" stays visible as the cue, only the
+   RHS answer (.mf-id-rhs) is covered; the whole row is one tap target. */
+.mf-id-item.mf-covered {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-id-item.mf-covered .mf-id-rhs {
+  filter: blur(8px);
+  opacity: .5;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+.mf-id-item.mf-covered .mf-id-rhs { display: inline-block; }
+
+/* Standalone equation boxes (CoverEq): LHS "…=" visible, RHS covered. */
+.mf-eq.mf-covered {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-eq.mf-covered .mf-eq-rhs {
+  filter: blur(8px);
+  opacity: .5;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  display: inline-block;
+}
+
+/* Plain-text formula values that aren't Tex: Venn values (.mf-set-box-val) and
+   any element tagged .mf-cv (one-off formulas). Their label sibling stays visible
+   as the recall cue. */
 .mf-cover-on .mf-set-box-val,
 .mf-cover-on .mf-cv {
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
-.mf-cover-on .mf-prob-item .form:not(.mf-revealed),
 .mf-cover-on .mf-set-box-val:not(.mf-revealed),
 .mf-cover-on .mf-cv:not(.mf-revealed) {
   filter: blur(6px);
@@ -1066,9 +1096,24 @@
   user-select: none;
   -webkit-user-select: none;
 }
-.mf-cover-on .mf-prob-item .form:active,
 .mf-cover-on .mf-set-box-val:active,
 .mf-cover-on .mf-cv:active { outline: 2px solid rgba(139, 92, 246, 0.4); border-radius: 4px; }
+
+/* Probability rows (ProbForm): condition + formula-LHS stay visible, only the RHS
+   answer (.mf-form-rhs) is covered; the whole formula line is the tap target. */
+.mf-cover-on .mf-prob-item .form.mf-covered {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.mf-cover-on .mf-prob-item .form.mf-covered .mf-form-rhs {
+  filter: blur(6px);
+  opacity: .5;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  display: inline-block;
+}
 
 /* Phones: bigger blur so short formulas aren't guessable, roomier table rows
    for thumbs, and comfortable line-height on inline formulas */
@@ -1076,8 +1121,10 @@
   .mf-cover-on .mf-cmp-table td.hl:not(.mf-revealed) { filter: blur(7px); }
   .mf-cover-on .mf-f-box.mf-covered .val { filter: blur(11px); }
   .mf-tex-covered { filter: blur(10px); }
+  .mf-id-item.mf-covered .mf-id-rhs { filter: blur(10px); }
+  .mf-eq.mf-covered .mf-eq-rhs { filter: blur(10px); }
+  .mf-cover-on .mf-prob-item .form.mf-covered .mf-form-rhs { filter: blur(8px); }
   .mf-cover-on .mf-cmp-table td { padding-top: 10px; padding-bottom: 10px; }
-  .mf-cover-hint { font-size: 11px; }
 }
 
 /* Filter mode: show only marked cards, drop empty sections and page chrome. */

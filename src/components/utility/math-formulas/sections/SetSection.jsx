@@ -1,4 +1,4 @@
-import { SectionHeader, Card, CardTitle, FBox, Mem } from '../MathFormulaHelpers'
+import { SectionHeader, Card, CardTitle, FBox, Mem, ProbForm } from '../MathFormulaHelpers'
 
 export default function SetSection() {
   return (
@@ -66,17 +66,17 @@ export default function SetSection() {
 
         <Card color="violet">
           <CardTitle color="var(--mf-violet)">সম্ভাবনা (Probability)</CardTitle>
-          <div className="mf-prob-item"><div className="cond">সম্ভাবনার সংজ্ঞা</div><div className="form">P = অনুকূল ফলাফল / মোট ফলাফল</div></div>
-          <div className="mf-prob-item"><div className="cond">ছক্কা n বার নিক্ষেপ — মোট ফলাফল</div><div className="form">6ⁿ  (২ বার = 6² = 36 · ৩ বার = 6³ = 216)</div></div>
-          <div className="mf-prob-item"><div className="cond">কয়েন n বার নিক্ষেপ — মোট ফলাফল</div><div className="form">2ⁿ  (২ বার = 2² = 4 · ৩ বার = 2³ = 8)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন (Independent)</div><div className="form">P(A∩B) = P(A) · P(B)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B স্বাধীন হলে (সংযোগ)</div><div className="form">P(A∪B) = P(A) + P(B) − P(A) · P(B)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B বর্জনশীল — একসাথে ঘটে না, P(A∩B)=0</div><div className="form">P(A∪B) = P(A) + P(B)</div></div>
-          <div className="mf-prob-item"><div className="cond">A ও B সাধারণ — overlap থাকতে পারে (General)</div><div className="form">P(A∪B) = P(A) + P(B) − P(A∩B)</div></div>
-          <div className="mf-prob-item"><div className="cond">শর্তাধীন — A ঘটলে B এর সম্ভাবনা</div><div className="form">P(B|A) = P(A∩B) / P(A)</div></div>
-          <div className="mf-prob-item"><div className="cond">A না ঘটার সম্ভাবনা</div><div className="form">P(A') = 1 − P(A)</div></div>
-          <div className="mf-prob-item"><div className="cond">P(A'∩B')</div><div className="form">= P((A∪B)') = 1 − P(A∪B)</div></div>
-          <div className="mf-prob-item"><div className="cond">P(A'∪B')</div><div className="form">= P((A∩B)') = 1 − P(A∩B)</div></div>
+          <ProbForm cond="সম্ভাবনার সংজ্ঞা" lhs="P =" rhs="অনুকূল ফলাফল / মোট ফলাফল" />
+          <ProbForm cond="ছক্কা n বার নিক্ষেপ — মোট ফলাফল" form="6ⁿ  (২ বার = 6² = 36 · ৩ বার = 6³ = 216)" />
+          <ProbForm cond="কয়েন n বার নিক্ষেপ — মোট ফলাফল" form="2ⁿ  (২ বার = 2² = 4 · ৩ বার = 2³ = 8)" />
+          <ProbForm cond="A ও B স্বাধীন (Independent)" lhs="P(A∩B) =" rhs="P(A) · P(B)" />
+          <ProbForm cond="A ও B স্বাধীন হলে (সংযোগ)" lhs="P(A∪B) =" rhs="P(A) + P(B) − P(A) · P(B)" />
+          <ProbForm cond="A ও B বর্জনশীল — একসাথে ঘটে না, P(A∩B)=0" lhs="P(A∪B) =" rhs="P(A) + P(B)" />
+          <ProbForm cond="A ও B সাধারণ — overlap থাকতে পারে (General)" lhs="P(A∪B) =" rhs="P(A) + P(B) − P(A∩B)" />
+          <ProbForm cond="শর্তাধীন — A ঘটলে B এর সম্ভাবনা" lhs="P(B|A) =" rhs="P(A∩B) / P(A)" />
+          <ProbForm cond="A না ঘটার সম্ভাবনা" lhs="P(A') =" rhs="1 − P(A)" />
+          <ProbForm cond="P(A'∩B')" form="= P((A∪B)') = 1 − P(A∪B)" />
+          <ProbForm cond="P(A'∪B')" form="= P((A∩B)') = 1 − P(A∩B)" />
           <Mem title="💡 মনে রাখুন — গুলিয়ো না">
             <ul>
               <li><strong>দুই আলাদা জিনিস:</strong> সাধারণ ও বর্জনশীল = <strong>যোগ</strong> (A∪B); স্বাধীন = <strong>গুণ</strong> (A∩B)।</li>

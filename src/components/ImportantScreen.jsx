@@ -12,6 +12,7 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
   const importantCtx = useImportantContext()
   const important = importantProp ?? importantCtx.value
   const onUnmark = onUnmarkProp ?? importantCtx.remove
+  const onUnmarkMany = importantCtx.removeMany
   const onHome = onHomeProp ?? (() => navigate('/'))
   // Scope to the section that opened this screen (?g=bangla…), else all general.
   const topics = topicsProp ?? GROUP_TOPICS[searchParams.get('g')] ?? ALL_TOPICS
@@ -25,6 +26,7 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
       topics={topics}
       savedSet={important}
       onRemove={onUnmark}
+      onRemoveMany={onUnmarkMany}
       onHome={onHome}
       config={{
         icon: Bookmark,
@@ -35,6 +37,7 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
         emptyHint: "Bookmark questions in quiz mode and they'll appear here",
         totalLabel: (n, t) => `${n} question${n !== 1 ? 's' : ''} in ${t} topic${t !== 1 ? 's' : ''}`,
         removeHint: 'to remove',
+        removeAllLabel: 'Remove all',
         rowIcon: Bookmark,
         rowIconColor: '#ef4444',
         showExplanation: true,

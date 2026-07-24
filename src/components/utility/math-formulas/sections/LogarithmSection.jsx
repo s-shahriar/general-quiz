@@ -1,4 +1,4 @@
-import { SectionHeader, Card, CardTitle, Tex, Mem } from '../MathFormulaHelpers'
+import { SectionHeader, Card, CardTitle, CoverEq, Mem } from '../MathFormulaHelpers'
 
 export default function LogarithmSection() {
   return (
@@ -15,7 +15,7 @@ export default function LogarithmSection() {
             { tex: "a^{\\log_a b} = b",          note: ""                                },
           ].map(({tex, note}) => (
             <div key={tex} className="mf-log-row">
-              <span className="mf-log-tex"><Tex>{tex}</Tex></span>
+              <span className="mf-log-tex"><CoverEq>{tex}</CoverEq></span>
               {note && <span className="mf-log-note">{note}</span>}
             </div>
           ))}
@@ -31,7 +31,7 @@ export default function LogarithmSection() {
             { tex: "\\log_p q \\times \\log_m p = \\log_m q",  note: "p বাতিল"  },
           ].map(({tex, note}) => (
             <div key={tex} className="mf-log-row highlight">
-              <span className="mf-log-tex"><Tex>{tex}</Tex></span>
+              <span className="mf-log-tex"><CoverEq>{tex}</CoverEq></span>
               <span className="mf-log-badge">{note}</span>
             </div>
           ))}
