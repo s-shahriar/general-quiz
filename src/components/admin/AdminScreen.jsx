@@ -237,6 +237,7 @@ function ManagePanel() {
   const [cat, setCat] = useState('')
   const [deleting, setDeleting] = useState('')
   const [page, setPage] = useState(0)
+  const [confirm, setConfirm] = useState(null)   // row pending delete-confirmation
 
   useEffect(() => {
     let cancelled = false
@@ -262,16 +263,18 @@ function ManagePanel() {
   const setQuery = (v) => { setQ(v); setPage(0) }
   const setCategory = (v) => { setCat(v); setPage(0) }
 
-  async function onDelete(row) {
-    if (!row.favorite_id) return
-    if (!window.confirm(`Permanently delete this question (fav ${row.favorite_id})? This cannot be undone.`)) return
-    setDeleting(row.favorite_id); setError('')
+  async function doDelete() {
+    const row = confirm
+    if (!row?.favorite_id) return
+    setDeleting(row.favorite_id)
     try {
       await deleteFavoriteIds([row.favorite_id])
       invalidateModule('livemcq')
       setRows((prev) => prev.filter((r) => r.id !== row.id))
+      setConfirm(null)
     } catch (e) {
       setError(e.message || String(e))
+      setConfirm(null)
     } finally {
       setDeleting('')
     }
@@ -310,12 +313,52 @@ function ManagePanel() {
             </div>
             <div style={mSnippet}>{stripTags(r.question).slice(0, 160) || <em style={muted}>(image-only)</em>}</div>
           </div>
-          <button style={delBtn} disabled={deleting === r.favorite_id || !r.favorite_id} onClick={() => onDelete(r)}>
-            {deleting === r.favorite_id ? <Loader2 size={14} style={spin} /> : <Trash2 size={14} />}
+          <button style={delBtn} disabled={!r.favorite_id} onClick={() => setConfirm(r)} aria-label="Delete question">
+            <Trash2 size={14} />
           </button>
         </div>
       ))}
       <Pagination page={curPage} pageCount={pageCount} onPage={setPage} />
+      {confirm && (
+        <ConfirmDeleteModal
+          row={confirm}
+          busy={deleting === confirm.favorite_id}
+          onCancel={() => setConfirm(null)}
+          onConfirm={doDelete}
+        />
+      )}
+    </div>
+  )
+}
+
+// In-app delete confirmation (replaces window.confirm). Backdrop click / Esc
+// cancel; the primary action is destructive and shows progress while deleting.
+function ConfirmDeleteModal({ row, busy, onCancel, onConfirm }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape' && !busy) onCancel() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [busy, onCancel])
+
+  const snippet = stripTags(row.question).slice(0, 160)
+  return (
+    <div style={overlay} onClick={busy ? undefined : onCancel}>
+      <div style={modalCard} role="dialog" aria-modal="true" aria-labelledby="del-title" onClick={(e) => e.stopPropagation()}>
+        <div style={modalIcon}><AlertTriangle size={20} /></div>
+        <h3 id="del-title" style={modalTitle}>Delete this question?</h3>
+        <div style={modalMeta}>
+          {row.catName && <span style={catChip}>{row.catName}</span>}
+          <span style={fidTag}>fav {row.favorite_id}</span>
+        </div>
+        <div style={modalSnippet}>{snippet || <em style={muted}>(image-only)</em>}</div>
+        <p style={modalWarn}>This permanently removes it from the database. This cannot be undone.</p>
+        <div style={modalActions}>
+          <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
+          <button style={modalDeleteBtn} onClick={onConfirm} disabled={busy}>
+            {busy ? <Loader2 size={15} style={spin} /> : <Trash2 size={15} />} Delete
+          </button>
+        </div>
+      </div>
     </div>
   )
 }
@@ -407,6 +450,16 @@ const pagerRow = { display: 'flex', alignItems: 'center', justifyContent: 'cente
 const pagerBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 8, border: '1px solid var(--border)', background: 'transparent', color: on ? 'var(--text-2)' : 'var(--text-3)', cursor: on ? 'pointer' : 'not-allowed', opacity: on ? 1 : 0.45 })
 const pagerNum = (active) => ({ minWidth: 32, height: 32, padding: '0 8px', borderRadius: 8, border: `1px solid ${active ? 'var(--accent, #6366f1)' : 'var(--border)'}`, background: active ? 'var(--accent, #6366f1)' : 'transparent', color: active ? '#fff' : 'var(--text-2)', fontSize: '0.82rem', fontWeight: active ? 700 : 500, cursor: 'pointer' })
 const pagerGap = { color: 'var(--text-3)', padding: '0 2px', userSelect: 'none' }
+const overlay = { position: 'fixed', inset: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(2px)' }
+const modalCard = { width: '100%', maxWidth: 420, boxSizing: 'border-box', padding: 20, borderRadius: 14, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 20px 50px rgba(0,0,0,0.4)' }
+const modalIcon = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ef4444', background: 'rgba(239,68,68,0.14)', marginBottom: 12 }
+const modalTitle = { margin: '0 0 10px', fontSize: '1.02rem', fontWeight: 700, color: 'var(--text)' }
+const modalMeta = { display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap', marginBottom: 8 }
+const modalSnippet = { fontSize: '0.86rem', color: 'var(--text)', lineHeight: 1.4, padding: '8px 10px', borderRadius: 8, background: 'var(--card2)', border: '1px solid var(--border)', maxHeight: 96, overflow: 'auto' }
+const modalWarn = { margin: '12px 0 0', fontSize: '0.8rem', color: 'var(--text-3)' }
+const modalActions = { display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 18 }
+const modalCancelBtn = { padding: '9px 16px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer' }
+const modalDeleteBtn = { display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: '#ef4444', color: '#fff', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer' }
 const stickyFooter = { position: 'sticky', bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '12px 14px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 -6px 20px rgba(0,0,0,0.12)', marginTop: 6 }
 const insertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '10px 18px', borderRadius: 9, border: 'none', background: on ? '#22c55e' : 'var(--border)', color: on ? '#fff' : 'var(--text-3)', fontSize: '0.88rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
 const errorBox = { fontSize: '0.83rem', color: '#b91c1c', background: 'rgba(239,68,68,0.10)', padding: '9px 12px', borderRadius: 9 }
