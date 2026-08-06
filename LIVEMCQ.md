@@ -343,43 +343,95 @@ each sync — get the current count from §0/§8's baseline query.)*
 
 ---
 
-## 8. Syncing new favourites (adding more later) → INSERT INTO THE DB
+## 8. Syncing new favourites → TWO coexisting paths
 
 **Target = the Supabase `questions` table, NOT `public/lmdata/*.json` (§0).** No
 rebuild/redeploy is needed — the app reads the DB live, so new rows appear on the
 next load.
 
-1. **Baseline from the DB** (this is the dedup key — never the JSON files):
-   ```sql
-   select max((extra->>'favorite_id')::bigint) as db_max
-   from questions q join categories c on c.id=q.category_id where c.module='livemcq';
-   ```
-2. **Fetch** page 1 (newest 20) with the token; page 2, 3, … until an id drops
-   `≤ db_max` (newest-first):
-   ```bash
-   curl -s -H "Authorization: Token <TOKEN>" \
-     "https://livemcq.com/api/v1/central-favorite-list/?page=1"
-   ```
-   or run `livefav` on the phone (§9). New count ≈ `pagination.total_results −
-   db_count`.
-3. Keep only items with `favorite_id > db_max` (dedup).
-4. **Classify** each new question into one of the 13 categories (§4) → gives the
-   topic `slug` (`lm_banking`, `lm_math`, …) → look up the `category_id`:
-   `select id from categories where module='livemcq' and slug=$slug`.
-5. **Map API → DB row** (shape per §3): `answer 1→a…5→e` (`0`/absent → `null`);
-   `[option1..option5]` non-empty → `options` jsonb `{a..e}`; `correct_answer_text`
-   = the chosen option; `question`/`explanation` HTML **as-is**; `type='mcq'`;
-   `extra = {"favorite_id":"<id>"}` (**required — the dedup key**);
-   `sort_order` = that category's current max + 1.
-6. **`uid` = `uidOfText(question)`** from `src/lib/qid.js` — import that module so
-   the uid matches what the browser computes (do NOT invent a uid). A Node
-   generator + Supabase MCP `apply_migration` (batch INSERT) is the proven path.
-7. **Verify** (should match the API): re-run the baseline query —
-   `count(*)` = API `total_results`, `db_max` = API newest, and
-   `count(distinct extra->>'favorite_id')` = `count(*)` (0 duplicates).
+There are **two ways to sync, both fully supported — pick per sync**:
 
-The last-synced `favorite_id` baseline is **the DB `db_max`** (step 1) — nothing
-to record outside the repo.
+- **§8.A — AI-guided (existing, unchanged):** hand the livefav/API JSON to an AI
+  agent, which classifies each question (§4) and inserts via the Supabase MCP.
+  Use this when you're syncing *with* an AI.
+- **§8.B — no-AI, the in-app Admin panel:** do it yourself in the app — upload the
+  JSON, classify from a dropdown, click Insert. Use this when you want to sync
+  *without* an AI. Everything except the category choice is mechanical (dedup,
+  option/answer mapping, `uid`, `sort_order`), so there's no hand-editing SQL —
+  the thing that caused the option-corruption bug (§11).
+
+Both write through the same DB and dedup by `favorite_id`, so you can mix them
+freely across syncs.
+
+### 8.A No-AI path — the in-app LiveMCQ Admin panel
+
+#### The flow
+1. **Extract on the phone** with `livefav` (Termux, §9) → a JSON file of the newest
+   favourites (`favorite_id, slug, question, options[], answer, explanation`).
+   Transfer that file to your computer.
+2. **Open the app → account menu → “LiveMCQ Admin”** (only visible when signed in
+   as the owner) → **Import & classify** tab.
+3. **Upload the livefav JSON.** The panel dedups it against every stored
+   `favorite_id` (including recycle-binned rows) and shows **only the new
+   questions**, each rendered with `RichText` (Bengali/HTML/images intact).
+4. **Assign a category** to each new question from the 13-topic dropdown (§4).
+   You can change any choice before committing. Insert is blocked until every new
+   question has a category. The card flags edge cases for you: *no correct answer*
+   (`answer=0` → `correct_answer` null), *empty option before a filled one* (the
+   old misalignment bug), *answer index out of range*.
+5. **Click Insert.** The panel builds each row deterministically
+   (`src/lib/livemcqAdmin.js` → `toInsertRow`), computes `uid` with the app's own
+   `qid.js` (so it matches at render time), and calls the `admin_livemcq_insert`
+   RPC. New rows are live on the next load.
+6. **Delete** (retainers, mistakes) from the **Manage & delete** tab — search by
+   text or `favorite_id`, hit the trash icon. That calls `admin_livemcq_delete`.
+
+#### How ordering stays correct (no manual `sort_order`)
+Display is `sort_order DESC` and must track `favorite_id` (see
+[[ordering-latest-first]]). After any insert/delete, the RPC calls
+`admin_livemcq_renumber(cat)`, which rewrites `sort_order` for the whole category
+as the **dense ascending rank of `favorite_id`** — so the newest favourite lands
+on top and any old below-max backfill slots into its correct position, with **no
+positional shifting**. Because `(category_id, sort_order)` is UNIQUE across all
+rows, the renumber first vacates values into a disjoint negative range so the
+reassign can never collide mid-statement. Verify (should be 0):
+```sql
+with r as (select c.slug, rank() over (partition by c.slug order by q.sort_order) rs,
+       rank() over (partition by c.slug order by (q.extra->>'favorite_id')::bigint) rf
+  from questions q join categories c on c.id=q.category_id where c.module='livemcq')
+select sum(case when rs<>rf then 1 else 0 end) from r;
+```
+
+#### Access model (why the browser can write at all)
+`questions` and `categories` are **read-only** under RLS (public SELECT only) —
+the browser cannot write to them directly. The only write path is three
+`SECURITY DEFINER` functions, each of which rejects anyone whose `auth.uid()` is
+not the owner uid (`803521e1-…`, ksnkkc), so even a signed-in non-owner (there are
+none by design — see the account lockdown) cannot insert or delete:
+- `admin_livemcq_insert(rows jsonb)` — dedup by `favorite_id` (DB + within batch),
+  insert, renumber each touched category. Returns `{inserted, skipped, skipped_fids}`.
+- `admin_livemcq_delete(fids text[])` — hard-delete by `favorite_id`, renumber.
+- `admin_livemcq_renumber(cat uuid)` — internal; `EXECUTE` revoked from public.
+
+Migration: `admin_livemcq_rpcs` (general-quiz). UI: `src/components/admin/AdminScreen.jsx`,
+helpers in `src/lib/livemcqAdmin.js`, gated route `/admin` in `App.jsx`, entry link
+in `AccountButton.jsx`.
+
+### 8.B AI-guided path (existing, unchanged) — mapping reference
+Hand the livefav/API JSON to the AI agent and let it classify (§4) and insert via
+the Supabase MCP. This path stays fully supported. The mapping the agent applies:
+`answer 1→a…5→e` (`0`/absent → `null`); `[option1..option5]` non-empty → `options`
+`{a..e}`; `correct_answer_text` = chosen option; `question`/`explanation` HTML
+**as-is**; `type='mcq'`; `extra = {"favorite_id":"<id>"}` (**required dedup key**);
+`uid = uidOfText(question)` from `src/lib/qid.js` (never invent a uid). Baseline /
+verify with the DB `db_max`:
+```sql
+select count(*), max((extra->>'favorite_id')::bigint) as db_max
+from questions q join categories c on c.id=q.category_id where c.module='livemcq';
+```
+When inserting via SQL, mind `sort_order` (track `favorite_id`) and the corruption
+guard in §11 — or run the reconcile script after. The no-AI Admin panel (§8.A)
+handles both automatically.
 
 > **Legacy JSON path (deprecated):** the old flow appended to the PC master
 > `favourites_clean_categorized.json` and regenerated `public/lmdata/<file>.json`.
@@ -444,9 +496,11 @@ livefav -p 2       # newest 2 pages (40)
 livefav -n 5       # newest 5 questions
 ```
 Output → `Download/live_fav/livefav_<timestamp>.json` (clean shape:
-`favorite_id, slug, question, options[], answer, explanation`). Hand that file to
-the categorize step (§8). The script **re-reads the token each run**, so it keeps
-working after an app re-login.
+`favorite_id, slug, question, options[], answer, explanation`). This is exactly
+the file the **Admin panel's Import tab uploads** (§8.1). The Import parser also
+accepts a raw `central-favorite-list` page (`{question_list:[…]}` with
+`option1..5`/`exp`), so either shape works. The script **re-reads the token each
+run**, so it keeps working after an app re-login.
 
 ### 9.6 Termux gotchas recap
 - `curl` broken → `apt update && apt full-upgrade -y` (never `pkg upgrade`).
@@ -456,6 +510,15 @@ working after an app re-login.
   KernelSU.
 - Can't write to `Download/` → run `termux-setup-storage` and allow it.
 
+### 9.7 ⚠ Commit the script into the repo
+The authoritative copy lives on the phone at `$PREFIX/bin/livefav`; the PC copy
+`~/Downloads/livefav.sh` has gone missing. **Pull it into the repo** next time the
+phone is adb-connected so it is version-controlled, then commit `scripts/livefav.sh`:
+```bash
+adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
+  > scripts/livefav.sh
+```
+
 ---
 
 ## 10. File map (where things live)
@@ -464,14 +527,39 @@ working after an app re-login.
 |---|---|
 | **Supabase `questions` table** (`module='livemcq'`) | **the live source of truth** (§0) — what the app renders |
 | `src/data/contentLoader.js` | loads questions **from the DB** per module (lazy, paginated `.range()`) — the current loader |
-| `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; import it when inserting so client/DB uids match (§8) |
+| **`src/components/admin/AdminScreen.jsx`** | the in-app LiveMCQ Admin panel (Import & classify · Manage & delete) — §8 |
+| **`src/lib/livemcqAdmin.js`** | deterministic helpers: normalize livefav JSON, `toInsertRow`, dedup, RPC wrappers, `OWNER_UID` |
+| `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; the Admin panel computes it client-side so client/DB uids match (§8) |
+| DB RPCs `admin_livemcq_insert` / `_delete` / `_renumber` | the only write path to `questions` for livemcq; owner-gated (§8.3) |
 | `public/lmdata/*.json` | the 13 category files — **frozen original seed / backup only**, not read at runtime |
 | `src/data/index.js` → `LIVEMCQ_TOPICS` | topic metadata (name/icon/color); `questions:[]` filled from the DB |
 | `src/components/shared/RichText.jsx` | HTML/entity-safe renderer for math/figures |
-| `~/Downloads/livemcq_favourites/` (off-repo) | old PC master + per-category + summary (legacy) |
-| `~/Downloads/livefav.sh` (off-repo) | the Termux sync script source |
+| `scripts/livefav.sh` (to be committed — §9.7) | the Termux sync script source; pull from the phone |
 | ~~`src/data/livemcqLoader.js`, `src/hooks/useLiveMcq.js`~~ | **removed** in the Supabase migration (superseded by `contentLoader.js`) |
 
-To add more questions later: **INSERT rows into the Supabase `questions` table**
-(dedup by `favorite_id`, uid via `qid.js`) — see §8. No code changes or redeploy
-needed; the app reads the DB live.
+To add more questions later: **use the LiveMCQ Admin panel** (§8) — upload the
+livefav JSON, classify, Insert. No code changes or redeploy needed; the app reads
+the DB live.
+
+---
+
+## 11. ⚠ Option-corruption history + reconcile safety net
+
+A past **hand-edited** sync corrupted **option values** by stripping leading/
+trailing `a`/`u`/`0` characters (e.g. `"Austria"→"Austri"`, `"upon"→"pon"`,
+`"Tk. 18,000"→"Tk. 18,"`) — it hit **195 / 2075** questions, sometimes the correct
+answer itself. The Admin panel (§8) removes the root cause: options are mapped
+positionally in code (`toInsertRow`) and never hand-edited. The card also flags an
+**empty option before a filled one** so a genuine gap can't silently shift letters.
+
+`scripts/reconcile-livemcq.mjs` remains the **verify/repair net**: it rebuilds each
+question's options + `correct_answer` positionally from the authoritative API and
+updates any drift. Run it after a sync (dry run, then `--apply`):
+```bash
+LIVEMCQ_TOKEN=<token> node scripts/reconcile-livemcq.mjs           # dry run
+LIVEMCQ_TOKEN=<token> node scripts/reconcile-livemcq.mjs --apply   # write
+```
+It matches DB↔API by `favorite_id` and touches only options/`correct_answer`/
+`correct_answer_text` — never question text or `uid`. "N not found in API (skipped)"
+is the expected un-favourited-retainer count, not an error. **Keep the
+`LIVEMCQ_TOKEN` secret — never commit it.**

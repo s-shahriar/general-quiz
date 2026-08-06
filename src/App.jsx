@@ -25,6 +25,7 @@ const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas
 const UtilityFinancialTerms = lazy(() => import('./components/utility/FinancialTerms.jsx'))
 const VocabApp         = lazy(() => import('./components/vocab/VocabApp.jsx'))
 const RecycleBinScreen = lazy(() => import('./components/RecycleBinScreen.jsx'))
+const AdminScreen      = lazy(() => import('./components/admin/AdminScreen.jsx'))
 
 export default function App() {
   return (
@@ -123,6 +124,7 @@ function AppRoutes() {
           <Route path="/vocabulary" element={<VocabApp />} />
           <Route path="/vocabulary/*" element={<VocabApp />} />
           <Route path="/recycle-bin" element={<RecycleBinScreen />} />
+          <Route path="/admin" element={<AdminScreen />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

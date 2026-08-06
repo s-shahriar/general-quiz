@@ -4168,3 +4168,6 @@ button {
     white-space: nowrap;
   }
 }
+
+/* Admin panel loading spinner */
+@keyframes spin { to { transform: rotate(360deg); } }

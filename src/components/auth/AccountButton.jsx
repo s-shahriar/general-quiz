@@ -1,8 +1,9 @@
 import { useState, useRef, useLayoutEffect } from 'react'
-import { LogIn, LogOut, User, Check, CloudOff, Star, Bookmark, Trash2 } from 'lucide-react'
+import { LogIn, LogOut, User, Check, CloudOff, Star, Bookmark, Trash2, Wrench } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import { useProgressMeta } from '../../contexts/ProgressContext.jsx'
+import { isOwner } from '../../lib/livemcqAdmin.js'
 
 function GoogleIcon({ size = 17 }) {
   return (
@@ -113,6 +114,12 @@ export default function AccountButton() {
                   <Check size={13} style={{ color: '#22c55e', flexShrink: 0 }} />
                   {lastSaved ? `Saved ${timeAgo(lastSaved)}` : 'Synced across your devices'}
                 </div>
+
+                {isOwner(user) && (
+                  <button onClick={() => { navigate('/admin'); setOpen(false) }} style={{ ...signOutBtn, marginBottom: 8 }}>
+                    <Wrench size={15} /> LiveMCQ Admin
+                  </button>
+                )}
 
                 <button onClick={() => { navigate('/recycle-bin'); setOpen(false) }} style={{ ...signOutBtn, marginBottom: 8 }}>
                   <Trash2 size={15} /> Recycle Bin
