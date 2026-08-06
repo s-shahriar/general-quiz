@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, Loader2,
+  ChevronDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight,
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import RichText from '../shared/RichText.jsx'
@@ -190,23 +191,52 @@ function QuestionCard({ item, slug, onSlug, index }) {
         </div>
       )}
 
-      <select value={slug} onChange={(e) => onSlug(e.target.value)} style={catSelect(!slug)}>
-        <option value="" disabled>Select category…</option>
+      <StyledSelect
+        value={slug}
+        onChange={onSlug}
+        empty={!slug}
+        fullWidth
+        style={{ marginTop: 8 }}
+        placeholder="Select category…"
+        placeholderDisabled
+      />
+    </div>
+  )
+}
+
+// A native <select> restyled to look designed: no browser chrome, a custom
+// chevron, theme-aware control + option colors. Keeps native a11y/keyboard.
+function StyledSelect({ value, onChange, empty, fullWidth, style, placeholder, placeholderDisabled, includeAllLabel }) {
+  return (
+    <div style={{ position: 'relative', display: 'inline-block', width: fullWidth ? '100%' : 'auto', ...style }}>
+      <select
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        style={selectControl(empty, fullWidth)}
+      >
+        {placeholder != null && (
+          <option value="" disabled={!!placeholderDisabled} style={optionStyle}>{placeholder}</option>
+        )}
+        {includeAllLabel != null && <option value="" style={optionStyle}>{includeAllLabel}</option>}
         {CATEGORY_OPTIONS.map((c) => (
-          <option key={c.slug} value={c.slug}>{c.name}</option>
+          <option key={c.slug} value={c.slug} style={optionStyle}>{c.name}</option>
         ))}
       </select>
+      <ChevronDown size={15} style={selectChevron} />
     </div>
   )
 }
 
 // ── Manage / delete ────────────────────────────────────────────
+const PAGE_SIZE = 50
+
 function ManagePanel() {
   const [rows, setRows] = useState(null)
   const [error, setError] = useState('')
   const [q, setQ] = useState('')
   const [cat, setCat] = useState('')
   const [deleting, setDeleting] = useState('')
+  const [page, setPage] = useState(0)
 
   useEffect(() => {
     let cancelled = false
@@ -227,6 +257,11 @@ function ManagePanel() {
     })
   }, [rows, q, cat])
 
+  // Any change to the query/filter jumps back to the first page (reset in the
+  // handlers rather than an effect to avoid a cascading render).
+  const setQuery = (v) => { setQ(v); setPage(0) }
+  const setCategory = (v) => { setCat(v); setPage(0) }
+
   async function onDelete(row) {
     if (!row.favorite_id) return
     if (!window.confirm(`Permanently delete this question (fav ${row.favorite_id})? This cannot be undone.`)) return
@@ -245,24 +280,24 @@ function ManagePanel() {
   if (error) return <p style={errorBox}>{error}</p>
   if (!rows) return <p style={muted}><Loader2 size={14} style={spin} /> Loading rows…</p>
 
-  const cap = 200
-  const shown = filtered.slice(0, cap)
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
+  const curPage = Math.min(page, pageCount - 1)   // clamp (e.g. after deletes shrink the set)
+  const start = curPage * PAGE_SIZE
+  const shown = filtered.slice(start, start + PAGE_SIZE)
 
   return (
     <div>
       <div style={searchRow}>
         <div style={{ position: 'relative', flex: 1 }}>
           <Search size={15} style={{ position: 'absolute', left: 10, top: 10, color: 'var(--text-3)' }} />
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search text or favorite_id…" style={searchInput} />
+          <input value={q} onChange={(e) => setQuery(e.target.value)} placeholder="Search text or favorite_id…" style={searchInput} />
         </div>
-        <select value={cat} onChange={(e) => setCat(e.target.value)} style={{ ...catSelect(false), width: 'auto', margin: 0 }}>
-          <option value="">All categories</option>
-          {CATEGORY_OPTIONS.map((c) => <option key={c.slug} value={c.slug}>{c.name}</option>)}
-        </select>
+        <StyledSelect value={cat} onChange={setCategory} empty={false} includeAllLabel="All categories" />
       </div>
       <p style={muted}>
-        {filtered.length} match{filtered.length === 1 ? '' : 'es'} of {rows.length}
-        {filtered.length > cap ? ` · showing first ${cap}, refine search` : ''}
+        {filtered.length
+          ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== rows.length ? ` (filtered from ${rows.length})` : ''}</>
+          : <>No matches of {rows.length}</>}
       </p>
       {shown.map((r) => (
         <div key={r.id} style={mRow}>
@@ -280,6 +315,40 @@ function ManagePanel() {
           </button>
         </div>
       ))}
+      <Pagination page={curPage} pageCount={pageCount} onPage={setPage} />
+    </div>
+  )
+}
+
+// Windowed numeric pager: « ‹ 1 … 7 [8] 9 … 45 › »
+function Pagination({ page, pageCount, onPage }) {
+  if (pageCount <= 1) return null
+  const go = (p) => onPage(Math.max(0, Math.min(pageCount - 1, p)))
+
+  // page indices to render, with -1 marking an ellipsis gap
+  const around = 1
+  const set = new Set([0, pageCount - 1])
+  for (let p = page - around; p <= page + around; p++) if (p >= 0 && p < pageCount) set.add(p)
+  const nums = [...set].sort((a, b) => a - b)
+  const items = []
+  let prev = -1
+  for (const n of nums) {
+    if (n - prev > 1) items.push('gap-' + n)
+    items.push(n)
+    prev = n
+  }
+
+  return (
+    <div style={pagerRow}>
+      <button style={pagerBtn(page > 0)} disabled={page === 0} onClick={() => go(0)} aria-label="First page"><ChevronsLeft size={15} /></button>
+      <button style={pagerBtn(page > 0)} disabled={page === 0} onClick={() => go(page - 1)} aria-label="Previous page"><ChevronLeft size={15} /></button>
+      {items.map((it) =>
+        typeof it === 'number'
+          ? <button key={it} style={pagerNum(it === page)} onClick={() => go(it)} aria-current={it === page ? 'page' : undefined}>{it + 1}</button>
+          : <span key={it} style={pagerGap}>…</span>
+      )}
+      <button style={pagerBtn(page < pageCount - 1)} disabled={page === pageCount - 1} onClick={() => go(page + 1)} aria-label="Next page"><ChevronRight size={15} /></button>
+      <button style={pagerBtn(page < pageCount - 1)} disabled={page === pageCount - 1} onClick={() => go(pageCount - 1)} aria-label="Last page"><ChevronsRight size={15} /></button>
     </div>
   )
 }
@@ -324,7 +393,20 @@ const dangerTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSi
 const optRow = (correct) => ({ display: 'flex', alignItems: 'center', gap: 9, padding: '6px 9px', borderRadius: 8, marginBottom: 4, background: correct ? 'rgba(34,197,94,0.10)' : 'var(--card2)', fontSize: '0.88rem', color: 'var(--text)' })
 const optLetter = (correct) => ({ width: 20, height: 20, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.72rem', fontWeight: 700, background: correct ? '#22c55e' : 'var(--border)', color: correct ? '#fff' : 'var(--text-2)' })
 const expToggle = { background: 'none', border: 'none', color: 'var(--text-3)', fontSize: '0.8rem', cursor: 'pointer', padding: '2px 0', marginBottom: 4 }
-const catSelect = (empty) => ({ width: '100%', marginTop: 8, padding: '9px 11px', borderRadius: 9, border: `1px solid ${empty ? 'rgba(245,158,11,0.6)' : 'var(--border)'}`, background: 'var(--card2)', color: empty ? 'var(--text-3)' : 'var(--text)', fontSize: '0.85rem', cursor: 'pointer' })
+const selectControl = (empty, fullWidth) => ({
+  width: fullWidth ? '100%' : 'auto', boxSizing: 'border-box',
+  appearance: 'none', WebkitAppearance: 'none', MozAppearance: 'none',
+  padding: '9px 34px 9px 12px', borderRadius: 9,
+  border: `1px solid ${empty ? 'rgba(245,158,11,0.6)' : 'var(--border)'}`,
+  background: 'var(--card2)', color: empty ? 'var(--text-3)' : 'var(--text)',
+  fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.2, cursor: 'pointer', outline: 'none',
+})
+const selectChevron = { position: 'absolute', right: 11, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-3)', pointerEvents: 'none' }
+const optionStyle = { background: 'var(--card)', color: 'var(--text)' }
+const pagerRow = { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4, flexWrap: 'wrap', marginTop: 16 }
+const pagerBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 8, border: '1px solid var(--border)', background: 'transparent', color: on ? 'var(--text-2)' : 'var(--text-3)', cursor: on ? 'pointer' : 'not-allowed', opacity: on ? 1 : 0.45 })
+const pagerNum = (active) => ({ minWidth: 32, height: 32, padding: '0 8px', borderRadius: 8, border: `1px solid ${active ? 'var(--accent, #6366f1)' : 'var(--border)'}`, background: active ? 'var(--accent, #6366f1)' : 'transparent', color: active ? '#fff' : 'var(--text-2)', fontSize: '0.82rem', fontWeight: active ? 700 : 500, cursor: 'pointer' })
+const pagerGap = { color: 'var(--text-3)', padding: '0 2px', userSelect: 'none' }
 const stickyFooter = { position: 'sticky', bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '12px 14px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 -6px 20px rgba(0,0,0,0.12)', marginTop: 6 }
 const insertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '10px 18px', borderRadius: 9, border: 'none', background: on ? '#22c55e' : 'var(--border)', color: on ? '#fff' : 'var(--text-3)', fontSize: '0.88rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
 const errorBox = { fontSize: '0.83rem', color: '#b91c1c', background: 'rgba(239,68,68,0.10)', padding: '9px 12px', borderRadius: 9 }
