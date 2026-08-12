@@ -6,6 +6,7 @@ import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
 import HandToggle from './shared/HandToggle.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
+import { homePathForTopic } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
 import { shuffle } from '../lib/utils'
 import CategorySidebar from './CategorySidebar.jsx'
@@ -51,7 +52,7 @@ export default function QuizMode({
   if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
   const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
-  const goHome   = () => onHomeProp ? onHomeProp() : navigate('/')
+  const goHome   = () => onHomeProp ? onHomeProp() : navigate(homePathForTopic(topic))
   const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz')
 
   const q    = questions[idx]

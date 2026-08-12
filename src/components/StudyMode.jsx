@@ -6,6 +6,7 @@ import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useThemeContext } from '../contexts/ThemeContext.jsx'
 import HandToggle from './shared/HandToggle.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
+import { homePathForTopic } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
 import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
@@ -134,7 +135,7 @@ export default function StudyMode({
   }
 
   const goBack  = () => onBackProp ? onBackProp() : navigate(backTo || '/topic/' + topic.id)
-  const goHome  = () => onHomeProp ? onHomeProp() : navigate('/')
+  const goHome  = () => onHomeProp ? onHomeProp() : navigate(homePathForTopic(topic))
   const goNailed = () => {
     if (onNailedProp) return onNailedProp()
     const key = getGroupKey(topic)

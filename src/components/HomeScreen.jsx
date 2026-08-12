@@ -4,13 +4,13 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
+import { GROUP_PATHS } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
 import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
 import { useModuleReady } from '../data/contentLoader.js'
 
 const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান', livemcq: 'LiveMCQ' }
-const GROUP_PATHS  = { bangla: '/bangla-grammer', english: '/english-grammer', sahitya: '/sahitto', gk: '/gk', livemcq: '/livemcq' }
 
 export default function HomeScreen({ activeGroup = 'bangla' }) {
   const navigate = useNavigate()

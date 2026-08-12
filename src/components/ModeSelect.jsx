@@ -1,6 +1,7 @@
 import { useNavigate, useParams, Navigate } from 'react-router-dom'
 import { ChevronLeft, Brain, BookOpen } from 'lucide-react'
 import { ALL_TOPICS } from '../data/index.js'
+import { homePathForTopic } from '../data/groups.js'
 import { useModuleReady } from '../data/contentLoader.js'
 
 export default function ModeSelect() {
@@ -22,7 +23,7 @@ export default function ModeSelect() {
     : ready ? `${qCount} questions available` : 'লোড হচ্ছে…'
   return (
     <div className="mode-page anim-fade">
-      <button className="back-btn" onClick={() => navigate('/')}>
+      <button className="back-btn" onClick={() => navigate(homePathForTopic(topic))}>
         <ChevronLeft size={15} /> All Topics
       </button>
 
