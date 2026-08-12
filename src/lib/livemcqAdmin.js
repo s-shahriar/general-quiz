@@ -120,6 +120,11 @@ export async function fetchExistingFavoriteIds() {
   return set
 }
 
+// The suggester's training corpus is NOT fetched here — see livemcqKnowledge.js,
+// which serves it from a validated local cache and, when it really must load,
+// reuses the app's own `loadModule('livemcq')` rather than issuing a second
+// query for rows the app already downloads.
+
 // Load all livemcq rows for the Manage view (id + favorite_id + snippet + cat).
 export async function fetchLivemcqRows() {
   const rows = []
@@ -159,4 +164,17 @@ export async function deleteFavoriteIds(fids) {
   const { data, error } = await supabase.rpc('admin_livemcq_delete', { fids })
   if (error) throw error
   return data // { deleted }
+}
+
+// Move questions to another livemcq category. The RPC writes ONLY
+// questions.category_id and then renumbers the old + new categories; no other
+// question column is touched, and user_progress is keyed by uid so Nailed /
+// Important flags follow the question across the move.
+export async function setCategoryForFavoriteIds(fids, slug) {
+  const { data, error } = await supabase.rpc('admin_livemcq_set_category', {
+    fids,
+    new_slug: slug,
+  })
+  if (error) throw error
+  return data // { moved }
 }

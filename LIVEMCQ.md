@@ -374,17 +374,87 @@ freely across syncs.
 3. **Upload the livefav JSON.** The panel dedups it against every stored
    `favorite_id` (including recycle-binned rows) and shows **only the new
    questions**, each rendered with `RichText` (Bengali/HTML/images intact).
-4. **Assign a category** to each new question from the 13-topic dropdown (§4).
-   You can change any choice before committing. Insert is blocked until every new
-   question has a category. The card flags edge cases for you: *no correct answer*
+4. **Pick which questions to insert.** Every card has a checkbox (all ticked by
+   default). Insert acts on the **selected subset only**, so a 30-question file
+   can be worked through in several passes instead of all-or-nothing. Each card
+   also has its own **Insert** button for a one-off.
+5. **Assign a category** to each selected question from the 13-topic dropdown
+   (§4). **A category is mandatory** — pressing Insert (bulk or per-card) with any
+   selected question uncategorised inserts *nothing*, reddens the offenders and
+   scrolls to the first one. The card also flags edge cases: *no correct answer*
    (`answer=0` → `correct_answer` null), *empty option before a filled one* (the
    old misalignment bug), *answer index out of range*.
-5. **Click Insert.** The panel builds each row deterministically
+   Shortcuts: **Set category for N selected** applies one category in bulk, and
+   **Apply N suggestions** accepts the confident suggestions (§8.A.1) at once.
+6. **Click Insert.** The panel builds each row deterministically
    (`src/lib/livemcqAdmin.js` → `toInsertRow`), computes `uid` with the app's own
    `qid.js` (so it matches at render time), and calls the `admin_livemcq_insert`
-   RPC. New rows are live on the next load.
-6. **Delete** (retainers, mistakes) from the **Manage & delete** tab — search by
-   text or `favorite_id`, hit the trash icon. That calls `admin_livemcq_delete`.
+   RPC. Inserted questions leave the list; the rest stay for the next pass. New
+   rows are live on the next load.
+7. **Delete or recategorise** from the **Manage & delete** tab — search by text or
+   `favorite_id`, then hit the trash icon (`admin_livemcq_delete`) or the
+   folder icon / category chip to move it (`admin_livemcq_set_category`).
+
+#### 8.A.1 Category suggestions (still no AI)
+The panel suggests a category, but nothing about it is a model: it is a plain
+**tf-idf + k-nearest-neighbour text ranker** (`src/lib/livemcqClassify.js`) built
+in the browser over the questions you have **already classified**. No network
+call, no inference, nothing learned at runtime — the same machinery as a search
+box. It never auto-assigns: it renders a chip that stays inert until clicked, so
+every category that reaches the DB is still an explicit human choice.
+
+Bengali is suffix-inflecting, so each token is indexed both whole and as a
+4-char leading stem (শব্দ / শব্দের collapse to one feature). Neighbours vote
+weighted by similarity², and the winner's vote share is shown as a confidence.
+The card also shows the **closest stored question** it matched, so a suggestion
+can be judged instead of trusted.
+
+Measured by holding out 1/5 of the 2205 rows and indexing on the rest:
+
+| confidence | tier | n | correct |
+|---|---|---|---|
+| 90–100% | strong | 125 | 98.4% |
+| 75–90% | strong | 93 | 95.7% |
+| 60–75% | likely | 69 | 76.8% |
+| 34–60% | **weak** | 123 | 58.5% |
+
+Overall 82% correct on 93% of questions. **Apply-all only touches ≥60%**
+(`BULK_APPLY_MIN`) — that subset is 287/441 questions at **92.3%** correct. Weak
+suggestions still render, marked *low confidence*, but must be accepted one at a
+time. Accuracy is worst on the small, semantically overlapping categories
+(`lm_ict` 18%, `lm_science` 24%, `lm_mental_ability` 35% recall) — these are
+exactly the ones that surface as weak, so read the nearest-match line there.
+The ranker improves on its own as you classify more; there is no keyword list to
+maintain.
+
+#### 8.A.2 The knowledge cache (why it doesn't refetch 2205 rows)
+That corpus only changes when **this panel** writes to it, so it is cached
+instead of refetched. `src/lib/livemcqKnowledge.js` resolves it in three tiers,
+cheapest first:
+
+1. **In memory** — repeat imports in one session cost nothing.
+2. **`localStorage` + fingerprint** — one 51-byte request, no corpus download.
+3. **The app's own module cache** — when the corpus really must load, it calls
+   `loadModule('livemcq')`, which the quiz screens already use, so the rows are
+   *shared* rather than fetched twice. (The first version of this had its own
+   `fetchLabeledQuestions` query — a duplicate of a fetch the app already makes.)
+
+Staleness is decided by the server, never guessed. `livemcq_fingerprint()`
+returns `{n, sig}` where `sig` is an md5 over `(id, category_id)` for every live
+livemcq row — so an insert, a delete **or a recategorise** all invalidate the
+cache, including changes made from another browser. A `count`/`max(created_at)`
+probe would silently miss recategorises, since neither value moves.
+
+Measured on the real 2205 rows: **222 KiB** of JSON (~444 KiB as UTF-16, ~8.7% of
+a 5 MiB quota), **61 ms** to rebuild the index from cache, **9 ms** to score 30
+questions. Quota errors and corrupt entries are swallowed — the suggester just
+falls back to loading, it never blocks importing.
+
+The corpus is re-read after the fetch completes and persisted **only if the
+fingerprint still matches**; if a write landed mid-fetch the corpus is used but
+not cached, so a stale set can never be pinned as valid. Cache key
+`livemcq.knowledge.v1`; bump `FORMAT` in that file whenever the tokenizer or row
+shape changes, so old caches are rejected rather than scored under stale rules.
 
 #### How ordering stays correct (no manual `sort_order`)
 Display is `sort_order DESC` and must track `favorite_id` (see
@@ -404,18 +474,40 @@ select sum(case when rs<>rf then 1 else 0 end) from r;
 
 #### Access model (why the browser can write at all)
 `questions` and `categories` are **read-only** under RLS (public SELECT only) —
-the browser cannot write to them directly. The only write path is three
+the browser cannot write to them directly. The only write path is four
 `SECURITY DEFINER` functions, each of which rejects anyone whose `auth.uid()` is
 not the owner uid (`803521e1-…`, ksnkkc), so even a signed-in non-owner (there are
 none by design — see the account lockdown) cannot insert or delete:
 - `admin_livemcq_insert(rows jsonb)` — dedup by `favorite_id` (DB + within batch),
   insert, renumber each touched category. Returns `{inserted, skipped, skipped_fids}`.
 - `admin_livemcq_delete(fids text[])` — hard-delete by `favorite_id`, renumber.
+- `admin_livemcq_set_category(fids text[], new_slug text)` — recategorise.
+  Writes **only** `questions.category_id`; `uid`, `question`, `options`,
+  `correct_answer`, `correct_answer_text`, `explanation` and `extra` are never
+  referenced. Renumbers the old **and** new category. Returns `{moved}`.
+  ⚠ Because `(category_id, sort_order)` is UNIQUE, a moved row cannot carry its
+  old `sort_order` into the destination — it would collide with whatever holds
+  that slot. The function parks moved rows on distinct negative `sort_order`s
+  first and lets `admin_livemcq_renumber` hand out the real slots. Parking is
+  deliberately shallow (`-(1000000 + rn)`): renumber's own `-1000000000` pass
+  runs over those rows too and `sort_order` is `int4`.
+  Because `user_progress` is keyed by `uid` (a hash of the question text), a move
+  cannot detach a Nailed/Important flag.
 - `admin_livemcq_renumber(cat uuid)` — internal; `EXECUTE` revoked from public.
 
-Migration: `admin_livemcq_rpcs` (general-quiz). UI: `src/components/admin/AdminScreen.jsx`,
-helpers in `src/lib/livemcqAdmin.js`, gated route `/admin` in `App.jsx`, entry link
-in `AccountButton.jsx`.
+One further function is **read-only** and not part of the write path:
+- `livemcq_fingerprint()` — `STABLE`, *not* `SECURITY DEFINER`, granted to
+  `anon`/`authenticated`. Returns `{n, sig}` for the knowledge cache (§8.A.2).
+  It reads exactly what the caller could already `SELECT` under the public-read
+  policy, so it grants no new access.
+
+Migrations: `admin_livemcq_rpcs`, then `admin_livemcq_set_category` +
+`admin_livemcq_set_category_fix_sort_order_collision`, then
+`livemcq_fingerprint` (general-quiz).
+UI: `src/components/admin/AdminScreen.jsx`, helpers in `src/lib/livemcqAdmin.js`,
+suggester in `src/lib/livemcqClassify.js`, its cached corpus in
+`src/lib/livemcqKnowledge.js`, gated route `/admin` in `App.jsx`, entry link in
+`AccountButton.jsx`.
 
 ### 8.B AI-guided path (existing, unchanged) — mapping reference
 Hand the livefav/API JSON to the AI agent and let it classify (§4) and insert via
@@ -529,8 +621,10 @@ adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
 | `src/data/contentLoader.js` | loads questions **from the DB** per module (lazy, paginated `.range()`) — the current loader |
 | **`src/components/admin/AdminScreen.jsx`** | the in-app LiveMCQ Admin panel (Import & classify · Manage & delete) — §8 |
 | **`src/lib/livemcqAdmin.js`** | deterministic helpers: normalize livefav JSON, `toInsertRow`, dedup, RPC wrappers, `OWNER_UID` |
+| **`src/lib/livemcqClassify.js`** | no-AI category suggester: tf-idf + kNN over already-classified questions (§8.A.1) |
+| **`src/lib/livemcqKnowledge.js`** | the suggester's corpus: localStorage cache + server fingerprint, reuses `loadModule('livemcq')` (§8.A.2) |
 | `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; the Admin panel computes it client-side so client/DB uids match (§8) |
-| DB RPCs `admin_livemcq_insert` / `_delete` / `_renumber` | the only write path to `questions` for livemcq; owner-gated (§8.3) |
+| DB RPCs `admin_livemcq_insert` / `_delete` / `_set_category` / `_renumber` | the only write path to `questions` for livemcq; owner-gated (§8.3) |
 | `public/lmdata/*.json` | the 13 category files — **frozen original seed / backup only**, not read at runtime |
 | `src/data/index.js` → `LIVEMCQ_TOPICS` | topic metadata (name/icon/color); `questions:[]` filled from the DB |
 | `src/components/shared/RichText.jsx` | HTML/entity-safe renderer for math/figures |
