@@ -608,6 +608,14 @@ function ManagePanel({ dataVersion }) {
               {r.deleted && <span style={dangerTag}>recycle-binned</span>}
             </div>
             <div style={mSnippet}>{stripTags(r.question).slice(0, 160) || <em style={muted}>(image-only)</em>}</div>
+            {r.correct_answer && (
+              <div style={mAnswer}>
+                <span style={ansLetter}>{r.correct_answer}</span>
+                <span style={ansText}>
+                  {stripTags(r.correct_answer_text).slice(0, 120) || <em style={muted}>(no answer text)</em>}
+                </span>
+              </div>
+            )}
           </div>
           <button style={moveBtn} disabled={!r.favorite_id} onClick={() => setMoving(r)} aria-label="Change category">
             <FolderInput size={14} />
@@ -853,6 +861,9 @@ const mMeta = { display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap',
 const catChip = { fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-2)', background: 'var(--card2)', padding: '2px 8px', borderRadius: 20 }
 const catChipBtn = { display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-2)', background: 'var(--card2)', padding: '3px 8px', borderRadius: 20, border: '1px solid var(--border)', cursor: 'pointer' }
 const mSnippet = { fontSize: '0.84rem', color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }
+const mAnswer = { display: 'flex', alignItems: 'center', gap: 6, marginTop: 4, minWidth: 0 }
+const ansLetter = { width: 17, height: 17, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.64rem', fontWeight: 700, background: '#22c55e', color: '#fff' }
+const ansText = { fontSize: '0.79rem', color: '#15803d', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }
 const delBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: '#ef4444', cursor: 'pointer' }
 const moveBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', cursor: 'pointer' }
 const modalIconInfo = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent, #6366f1)', background: 'rgba(99,102,241,0.14)', marginBottom: 12 }

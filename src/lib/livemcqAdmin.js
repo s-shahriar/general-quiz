@@ -125,15 +125,19 @@ export async function fetchExistingFavoriteIds() {
 // reuses the app's own `loadModule('livemcq')` rather than issuing a second
 // query for rows the app already downloads.
 
-// Load all livemcq rows for the Manage view (id + favorite_id + snippet + cat).
+// Load all livemcq rows for the Manage view (favorite_id + snippet + answer +
+// cat), newest first.
 export async function fetchLivemcqRows() {
   const rows = []
   const pageSize = 1000
   for (let from = 0; ; from += pageSize) {
     const { data, error } = await supabase
       .from('questions')
-      .select('id,question,correct_answer,extra,sort_order,deleted_at,categories!inner(slug,name,module)')
+      .select('id,question,correct_answer,correct_answer_text,extra,sort_order,deleted_at,categories!inner(slug,name,module)')
       .eq('categories.module', 'livemcq')
+      // Paginate on the UNIQUE id: `sort_order` is per-category and non-unique,
+      // so ranging over it would skip/duplicate rows across page boundaries.
+      // Display order is applied below, once every row is in hand.
       .order('id')
       .range(from, from + pageSize - 1)
     if (error) throw error
@@ -143,6 +147,7 @@ export async function fetchLivemcqRows() {
         favorite_id: r.extra?.favorite_id != null ? String(r.extra.favorite_id) : null,
         question: r.question,
         correct_answer: r.correct_answer,
+        correct_answer_text: r.correct_answer_text,
         sort_order: r.sort_order,
         deleted: r.deleted_at != null,
         slug: r.categories.slug,
@@ -151,6 +156,16 @@ export async function fetchLivemcqRows() {
     }
     if (data.length < pageSize) break
   }
+  // Newest first — see [[ordering-latest-first]]. `sort_order` can't be used
+  // here: it is a per-category rank, so 0 means "oldest in ITS category", not
+  // "oldest overall". favorite_id is the only globally comparable recency key,
+  // and it is exactly what sort_order is derived from. Rows without one (there
+  // should be none) sink to the bottom rather than jumping to the top.
+  rows.sort((a, b) => {
+    const fa = a.favorite_id == null ? -1 : Number(a.favorite_id)
+    const fb = b.favorite_id == null ? -1 : Number(b.favorite_id)
+    return fb - fa
+  })
   return rows
 }
 
