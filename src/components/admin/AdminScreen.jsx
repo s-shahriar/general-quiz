@@ -138,7 +138,10 @@ function ImportPanel({ onInserted }) {
   // finished loading picks them up on the next render with no extra state.
   const hints = useMemo(() => {
     const m = new Map()
-    if (clf) for (const it of items) m.set(it.norm.favorite_id, clf.suggest(it.norm.question))
+    // The whole item, not just its text: the index scores question, options
+    // and explanation together, and `normalizeItem` has already parsed all
+    // three out of the import file.
+    if (clf) for (const it of items) m.set(it.norm.favorite_id, clf.suggest(it.norm))
     return m
   }, [clf, items])
 
@@ -178,7 +181,7 @@ function ImportPanel({ onInserted }) {
     setItems((prev) => prev.map((it) => ({ ...it, picked: on })))
   }
 
-  // Bulk-apply only touches suggestions confident enough to be right ~92% of
+  // Bulk-apply only touches suggestions confident enough to be right ~98% of
   // the time. Weak ones stay empty and must be accepted card by card.
   function applyAllHints() {
     setItems((prev) => prev.map((it) => {
@@ -448,6 +451,9 @@ function Suggestion({ hint, onApply }) {
         <div style={hintNearest} title={stripTags(hint.nearest.question)}>
           closest stored question: “{stripTags(hint.nearest.question).slice(0, 90)}”
         </div>
+        {hint.nearest.source !== 'livemcq' && (
+          <div style={hintSource}>matched against the {hint.nearest.source} module, not LiveMCQ</div>
+        )}
       </div>
       <button style={applyHintBtn(color)} onClick={onApply}>Apply</button>
     </div>
@@ -812,6 +818,10 @@ const cardInsertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', g
 const cardError = { display: 'flex', alignItems: 'center', gap: 6, margin: '8px 0 0', fontSize: '0.78rem', color: '#b91c1c' }
 const hintBox = { display: 'flex', alignItems: 'flex-start', gap: 8, padding: '8px 10px', borderRadius: 9, border: '1px dashed var(--border)', background: 'var(--card2)', marginTop: 8 }
 const hintNearest = { fontSize: '0.74rem', color: 'var(--text-3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }
+// A match can land on a relabelled row from another module (see
+// livemcqTraining.js). Say so — a neighbour from a different syllabus is
+// weaker evidence than a real LiveMCQ one, and only the reader can judge that.
+const hintSource = { fontSize: '0.7rem', color: 'var(--text-3)', fontStyle: 'italic', marginTop: 1 }
 const applyHintBtn = (color) => ({ flexShrink: 0, alignSelf: 'center', padding: '6px 11px', borderRadius: 8, border: 'none', background: color, color: '#fff', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer' })
 const weakTag = { marginLeft: 6, fontSize: '0.68rem', fontWeight: 600, color: '#b45309', background: 'rgba(245,158,11,0.16)', padding: '1px 6px', borderRadius: 20 }
 const qIndex = { fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-3)' }

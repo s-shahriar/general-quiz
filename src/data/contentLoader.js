@@ -29,6 +29,13 @@ function mapRow(r) {
   return { _id: id, uid, question, options, correct_answer, correct_answer_text, explanation, ...(extra || {}) }
 }
 
+// The topics belonging to one module, in display order. Each topic's `id` IS
+// the DB category slug, and its `questions` array is filled in place by
+// `loadModule`, so this is also how a caller reaches a module's loaded rows.
+export function topicsOfModule(moduleId) {
+  return MODULE_TOPICS[moduleId] || []
+}
+
 export function isModuleLoaded(moduleId) {
   return loaded.has(moduleId)
 }

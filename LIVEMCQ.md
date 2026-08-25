@@ -409,52 +409,126 @@ weighted by similarity², and the winner's vote share is shown as a confidence.
 The card also shows the **closest stored question** it matched, so a suggestion
 can be judged instead of trusted.
 
-Measured by holding out 1/5 of the 2205 rows and indexing on the rest:
+##### What a document is (the 2026-08 rework)
+The first version indexed the **question text alone** and scored 76.3% top-1.
+The single biggest change since is that a question is now indexed from three
+fields, each in its own feature space so they never merge:
+
+| field | weight | why |
+|---|---|---|
+| `question` | 1 | the ask itself |
+| `explanation` | 0.55 | **+18pp on its own** — see below |
+| `options` | 0.25 | the answer set; weak but real topical signal |
+
+The explanation is the surprise. LiveMCQ ships a worked, subject-specific
+writeup with *every* question — a গণিত one walks through a সমাধান, a ব্যাংকিং one
+names instruments and circulars — so it carries far more topical vocabulary than
+the one-line question. It is **not** a leak: `normalizeItem` already parses
+`explanation`/`exp` out of the import file, so every indexed field is in hand
+before a category is picked.
+
+Two smaller changes: votes are divided by their category's size^0.3, so গণিত
+(384 rows) stops out-massing English Literature (30) on tie-ish neighbourhoods
+(+2.5pp macro); and tokens with `df = 1` are dropped, which cuts the index ~55%
+for free. A shipped `$analogy` feature (`X : Y :: A : ?` ⇒ মানসিক দক্ষতা, never
+গণিত) lifts the weakest category 67.6% → 71.6% and leaves the other twelve
+bit-identical — but it rests on only 9 examples, so treat it as a notation rule,
+not a trend.
+
+##### What it also trains on (`src/lib/livemcqTraining.js`)
+The suggester now reads the **whole question database**, not just livemcq. The
+other modules were built around a different syllabus, so their categories do not
+line up — `somas`, `karak` and `sondhi` are three বাংলা topics but one LiveMCQ
+topic, and `vocab_p` has no counterpart at all. A foreign row therefore never
+carries its own category across: it is **relabelled** into a LiveMCQ category by
+an explicit map, or dropped.
+
+| source | → LiveMCQ | rows |
+|---|---|---|
+| whole `bangla` module | `lm_bangla_byakoron` | 597 |
+| whole `sahitya` module | `lm_bangla_sahitya` | 401 |
+| whole `english` module | `lm_english_grammar` | 378 |
+| `gk_bd_affairs` | `lm_bd_affairs` | 91 |
+| `gk_science` | `lm_science` | 103 |
+| `gk_intl_affairs` | `lm_intl_affairs` | 71 |
+| `gk_ict` | `lm_ict` | 22 |
+| `gk_lang_misc`, `vocab_*` | **dropped** | 1062 |
+
+`gk_lang_misc` is three subjects in one bucket; `vocab_*` ("Pellucid এর অর্থ কি?")
+has no LiveMCQ counterpart and its Bengali glosses make it look like বাংলা
+ব্যাকরণ to a bag-of-words index — folding it in cost precision for no gain. The
+map's targets are checked against `LIVEMCQ_TOPICS` at module load, so **a LiveMCQ
+import can only ever be suggested a LiveMCQ category** — verified end-to-end:
+0 out-of-set suggestions across all 2271 rows.
+
+Be honest about the payoff: at today's corpus size these 1663 rows are a **wash**
+(94.63% → 94.50% top-1; Apply-all 90.1%@97.90% → 91.0%@98.02%). They reinforce
+categories already at 99% while the ones that actually miss have no counterpart
+module. They earn their place only when a category is *thin* — with the livemcq
+corpus sampled down, the same rows are worth +1.5 to +3pp (10% of corpus:
+86.5% → 89.6%; 33%: 90.6% → 92.6%). That is the case they exist for: a new
+category, or a lopsided import week. Weight is 0.25 so they never outvote a real
+LiveMCQ neighbour.
+
+##### Measured now (5-fold over all 2271 livemcq rows)
 
 | confidence | tier | n | correct |
 |---|---|---|---|
-| 90–100% | strong | 125 | 98.4% |
-| 75–90% | strong | 93 | 95.7% |
-| 60–75% | likely | 69 | 76.8% |
-| 34–60% | **weak** | 123 | 58.5% |
+| 85–100% | strong | 1608 | 99.6% |
+| 60–85% | likely | 459 | 92.4% |
+| 34–60% | **weak** | 194 | 61.9% |
 
-Overall 82% correct on 93% of questions. **Apply-all only touches ≥60%**
-(`BULK_APPLY_MIN`) — that subset is 287/441 questions at **92.3%** correct. Weak
-suggestions still render, marked *low confidence*, but must be accepted one at a
-time. Accuracy is worst on the small, semantically overlapping categories
-(`lm_ict` 18%, `lm_science` 24%, `lm_mental_ability` 35% recall) — these are
-exactly the ones that surface as weak, so read the nearest-match line there.
-The ranker improves on its own as you classify more; there is no keyword list to
-maintain.
+**94.5% correct overall**, abstaining on 10 of 2271. **Apply-all only touches
+≥60%** (`BULK_APPLY_MIN`) — that subset is **91.0% of a batch at 98.0%
+precision** (was 65% at 92.6%). Weak suggestions still render, marked *low
+confidence*, but must be accepted one at a time.
 
-#### 8.A.2 The knowledge cache (why it doesn't refetch 2205 rows)
-That corpus only changes when **this panel** writes to it, so it is cached
-instead of refetched. `src/lib/livemcqKnowledge.js` resolves it in three tiers,
-cheapest first:
+Remaining weak spots are genuinely ambiguous rather than fixable by more data:
+`lm_mental_ability` 71.6% (puzzles that read as গণিত), and the
+বাংলাদেশ ↔ আন্তর্জাতিক ↔ ভূগোল triangle at 88–92%. Read the nearest-match line
+there. The ranker improves on its own as you classify more; there is no keyword
+list to maintain.
+
+#### 8.A.2 The knowledge cache (why it doesn't refetch the corpus)
+That corpus only changes when **the app** writes to it, so it is cached instead
+of refetched. `src/lib/livemcqKnowledge.js` resolves it in three tiers, cheapest
+first:
 
 1. **In memory** — repeat imports in one session cost nothing.
-2. **`localStorage` + fingerprint** — one 51-byte request, no corpus download.
+2. **IndexedDB + fingerprint** — one 51-byte request, no corpus download.
 3. **The app's own module cache** — when the corpus really must load, it calls
-   `loadModule('livemcq')`, which the quiz screens already use, so the rows are
-   *shared* rather than fetched twice. (The first version of this had its own
-   `fetchLabeledQuestions` query — a duplicate of a fetch the app already makes.)
+   `loadModule(m)` for each trained module, which the quiz screens already use,
+   so the rows are *shared* rather than fetched twice. (The first version of this
+   had its own `fetchLabeledQuestions` query — a duplicate of a fetch the app
+   already makes.)
 
-Staleness is decided by the server, never guessed. `livemcq_fingerprint()`
+**Why IndexedDB, since 2026-08.** The corpus used to be question text alone:
+2205 rows, ~222 KiB of JSON, a comfortable ~8.7% of a 5 MiB `localStorage`
+quota. Indexing options and explanations took the same corpus to **~5.5 MB**,
+which does not fit in `localStorage` on any browser and throws
+`QuotaExceededError` on write. Packing it down (hashed token ids, pruned
+vocabulary) reached ~3.4 MB — still most of a quota the whole app shares, and it
+would no longer hold the neighbour text the card displays. IndexedDB has no such
+ceiling and stores structured values without a JSON round-trip, so the corpus is
+kept as-is. Where IndexedDB is unavailable (private mode), the tier is skipped
+and the corpus rebuilds from the module cache each session — slower, never
+wrong. The old `livemcq.knowledge.v1` localStorage key is deleted on cache clear
+so it stops occupying quota.
+
+Staleness is decided by the server, never guessed. `classifier_fingerprint()`
 returns `{n, sig}` where `sig` is an md5 over `(id, category_id)` for every live
-livemcq row — so an insert, a delete **or a recategorise** all invalidate the
-cache, including changes made from another browser. A `count`/`max(created_at)`
-probe would silently miss recategorises, since neither value moves.
-
-Measured on the real 2205 rows: **222 KiB** of JSON (~444 KiB as UTF-16, ~8.7% of
-a 5 MiB quota), **61 ms** to rebuild the index from cache, **9 ms** to score 30
-questions. Quota errors and corrupt entries are swallowed — the suggester just
-falls back to loading, it never blocks importing.
+row **in all five trained modules** — so an insert, a delete **or a
+recategorise** all invalidate the cache, including changes made from another
+browser. It replaces `livemcq_fingerprint()` here for exactly one reason: the
+index now contains সাহিত্য and GK rows, and the livemcq-only hash would let an
+edit in those modules sit unnoticed. A `count`/`max(created_at)` probe would
+silently miss recategorises, since neither value moves.
 
 The corpus is re-read after the fetch completes and persisted **only if the
 fingerprint still matches**; if a write landed mid-fetch the corpus is used but
-not cached, so a stale set can never be pinned as valid. Cache key
-`livemcq.knowledge.v1`; bump `FORMAT` in that file whenever the tokenizer or row
-shape changes, so old caches are rejected rather than scored under stale rules.
+not cached, so a stale set can never be pinned as valid. Bump `FORMAT` in that
+file whenever the tokenizer or row shape changes, so old caches are rejected
+rather than scored under stale rules.
 
 #### How ordering stays correct (no manual `sort_order`)
 Display is `sort_order DESC` and must track `favorite_id` (see
@@ -496,18 +570,20 @@ none by design — see the account lockdown) cannot insert or delete:
 - `admin_livemcq_renumber(cat uuid)` — internal; `EXECUTE` revoked from public.
 
 One further function is **read-only** and not part of the write path:
-- `livemcq_fingerprint()` — `STABLE`, *not* `SECURITY DEFINER`, granted to
-  `anon`/`authenticated`. Returns `{n, sig}` for the knowledge cache (§8.A.2).
-  It reads exactly what the caller could already `SELECT` under the public-read
-  policy, so it grants no new access.
+- `classifier_fingerprint()` — `STABLE`, *not* `SECURITY DEFINER`, granted to
+  `anon`/`authenticated`. Returns `{n, sig}` over the five modules the suggester
+  trains on, for the knowledge cache (§8.A.2). It reads exactly what the caller
+  could already `SELECT` under the public-read policy, so it grants no new
+  access. `livemcq_fingerprint()` is the livemcq-only predecessor; it is still
+  defined but no longer called.
 
 Migrations: `admin_livemcq_rpcs`, then `admin_livemcq_set_category` +
 `admin_livemcq_set_category_fix_sort_order_collision`, then
-`livemcq_fingerprint` (general-quiz).
+`livemcq_fingerprint`, then `classifier_fingerprint` (general-quiz).
 UI: `src/components/admin/AdminScreen.jsx`, helpers in `src/lib/livemcqAdmin.js`,
-suggester in `src/lib/livemcqClassify.js`, its cached corpus in
-`src/lib/livemcqKnowledge.js`, gated route `/admin` in `App.jsx`, entry link in
-`AccountButton.jsx`.
+suggester in `src/lib/livemcqClassify.js`, what it is allowed to learn from in
+`src/lib/livemcqTraining.js`, its cached corpus in `src/lib/livemcqKnowledge.js`,
+gated route `/admin` in `App.jsx`, entry link in `AccountButton.jsx`.
 
 ### 8.B AI-guided path (existing, unchanged) — mapping reference
 Hand the livefav/API JSON to the AI agent and let it classify (§4) and insert via
@@ -621,8 +697,9 @@ adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
 | `src/data/contentLoader.js` | loads questions **from the DB** per module (lazy, paginated `.range()`) — the current loader |
 | **`src/components/admin/AdminScreen.jsx`** | the in-app LiveMCQ Admin panel (Import & classify · Manage & delete) — §8 |
 | **`src/lib/livemcqAdmin.js`** | deterministic helpers: normalize livefav JSON, `toInsertRow`, dedup, RPC wrappers, `OWNER_UID` |
-| **`src/lib/livemcqClassify.js`** | no-AI category suggester: tf-idf + kNN over already-classified questions (§8.A.1) |
-| **`src/lib/livemcqKnowledge.js`** | the suggester's corpus: localStorage cache + server fingerprint, reuses `loadModule('livemcq')` (§8.A.2) |
+| **`src/lib/livemcqClassify.js`** | no-AI category suggester: tf-idf + kNN over question + explanation + options of already-classified questions (§8.A.1) |
+| **`src/lib/livemcqTraining.js`** | what the suggester may learn from: the map that relabels other modules' rows into LiveMCQ categories, and the rule that its output can never leave that set (§8.A.1) |
+| **`src/lib/livemcqKnowledge.js`** | the suggester's corpus: IndexedDB cache + server fingerprint, reuses `loadModule()` across the trained modules (§8.A.2) |
 | `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; the Admin panel computes it client-side so client/DB uids match (§8) |
 | DB RPCs `admin_livemcq_insert` / `_delete` / `_set_category` / `_renumber` | the only write path to `questions` for livemcq; owner-gated (§8.3) |
 | `public/lmdata/*.json` | the 13 category files — **frozen original seed / backup only**, not read at runtime |
