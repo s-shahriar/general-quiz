@@ -1,10 +1,9 @@
-import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Moon, Star, Sun } from 'lucide-react'
+import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Star } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
-import { useThemeContext } from '../contexts/ThemeContext.jsx'
-import HandToggle from './shared/HandToggle.jsx'
+import TopbarActions from './shared/TopbarActions.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
@@ -30,7 +29,6 @@ export default function QuizMode({
   const ready = useModuleReady(topic?.module)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
   const { value: important, add: markImportant, remove: unmarkImportant } = useImportantContext()
-  const { theme, toggleTheme } = useThemeContext()
 
   const [selected, setSelected] = useState(null)
   const [revealed, setRevealed] = useState(false)
@@ -98,17 +96,13 @@ export default function QuizMode({
           <ChevronLeft size={15} /> Back
         </button>
         <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName || topic.name}</span>
-        <div className="topbar-right-actions">
-          <HandToggle />
-          <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
-            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
+        <TopbarActions>
           {getTopicGroup(topic).length > 1 && (
             <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse topics">
               <LayoutGrid size={16} />
             </button>
           )}
-        </div>
+        </TopbarActions>
       </div>
 
       <CategorySidebar

@@ -1,4 +1,5 @@
 import { BookOpen, Brain, ChevronLeft } from 'lucide-react'
+import TopbarActions from '../shared/TopbarActions.jsx'
 import { Navigate, Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../../contexts/MasteredContext.jsx'
@@ -65,9 +66,12 @@ function VocabModeSelect({ topic, navigate }) {
   const Icon = topic.icon
   return (
     <div className="mode-page anim-fade">
-      <button className="back-btn" onClick={() => navigate('/vocabulary')}>
-        <ChevronLeft size={15} /> Back
-      </button>
+      <div className="study-topbar">
+        <button className="back-btn" onClick={() => navigate('/vocabulary')}>
+          <ChevronLeft size={15} /> Back
+        </button>
+        <TopbarActions />
+      </div>
       <div className="mode-topic-hero">
         <div className="mode-icon-circle" style={{ background: `${topic.color}1a`, color: topic.color, boxShadow: `0 8px 40px ${topic.color}30, 0 0 0 1px ${topic.color}20` }}>
           <Icon size={38} />

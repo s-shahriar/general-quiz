@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import TopbarActions from '../shared/TopbarActions.jsx'
 import { useNavigate } from 'react-router-dom'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
 import { VOCAB_TOPICS } from '../../data/vocabTopics.js'
@@ -61,7 +62,10 @@ export default function VocabExamConfig() {
 
   return (
     <div className="exam-config-page anim-fade">
-      <button className="back-btn" onClick={() => navigate('/vocabulary')}><ChevronLeft size={15} /> Back</button>
+      <div className="study-topbar">
+        <button className="back-btn" onClick={() => navigate('/vocabulary')}><ChevronLeft size={15} /> Back</button>
+        <TopbarActions />
+      </div>
 
       <div className="exam-config-hero">
         <div className="exam-config-icon"><Zap size={30} /></div>

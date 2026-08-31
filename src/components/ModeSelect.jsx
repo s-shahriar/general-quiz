@@ -1,4 +1,5 @@
 import { useNavigate, useParams, Navigate } from 'react-router-dom'
+import TopbarActions from './shared/TopbarActions.jsx'
 import { ChevronLeft, Brain, BookOpen } from 'lucide-react'
 import { ALL_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
@@ -23,9 +24,12 @@ export default function ModeSelect() {
     : ready ? `${qCount} questions available` : 'লোড হচ্ছে…'
   return (
     <div className="mode-page anim-fade">
-      <button className="back-btn" onClick={() => navigate(homePathForTopic(topic))}>
-        <ChevronLeft size={15} /> All Topics
-      </button>
+      <div className="study-topbar">
+        <button className="back-btn" onClick={() => navigate(homePathForTopic(topic))}>
+          <ChevronLeft size={15} /> All Topics
+        </button>
+        <TopbarActions />
+      </div>
 
       <div className="mode-topic-hero">
         <div

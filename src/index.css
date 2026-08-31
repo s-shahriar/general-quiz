@@ -1658,6 +1658,30 @@ button {
   font-size: 0.72rem;
   font-weight: 600;
 }
+
+/* Q-number + (on the saved screens, when reading across topics) a topic badge. */
+.study-card-lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.study-topic-badge {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+/* List / Study reading-mode switch on the Important & Nailed screens. */
+.saved-view-bar {
+  margin-bottom: 12px;
+}
 .study-toggle {
   display: inline-flex;
   align-items: center;
@@ -3440,6 +3464,8 @@ button {
 .exam-stop-row {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 14px;
 }
 
@@ -4171,3 +4197,10 @@ button {
 
 /* Admin panel loading spinner */
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* Screens whose page shell isn't the study/quiz one still get the same sticky
+   control bar — pull it flush with the page's 28px top padding. */
+.mode-page > .study-topbar,
+.exam-config-page > .study-topbar {
+  margin: -28px -16px 20px -16px;
+}

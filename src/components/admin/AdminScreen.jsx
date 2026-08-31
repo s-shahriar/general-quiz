@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import TopbarActions from '../shared/TopbarActions.jsx'
 import { useNavigate } from 'react-router-dom'
 import {
   Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, Loader2,
@@ -48,6 +49,7 @@ export default function AdminScreen() {
       <div style={headerRow}>
         <button style={backBtn} onClick={() => navigate('/')}><ArrowLeft size={16} /> Back</button>
         <h1 style={h1}>LiveMCQ Admin</h1>
+        <TopbarActions style={{ marginLeft: 'auto' }} />
       </div>
       <div style={tabsRow}>
         <button style={tabBtn(tab === 'import')} onClick={() => go('import')}>Import &amp; classify</button>

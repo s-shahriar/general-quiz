@@ -1,4 +1,5 @@
 import { ArrowRight, Bookmark, Lightbulb, OctagonX, Star } from 'lucide-react'
+import TopbarActions from './shared/TopbarActions.jsx'
 import { useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
@@ -76,6 +77,7 @@ export default function ExamMode({
           <OctagonX size={15} />
           {stopConfirm ? 'Tap again to stop' : 'Stop Exam'}
         </button>
+        <TopbarActions />
       </div>
 
       <div className="quiz-progress-wrap">

@@ -1,18 +1,16 @@
-import { CheckCircle, ChevronLeft, LayoutGrid, Lightbulb, Bookmark, Moon, Search, Star, Sun, X, XCircle } from 'lucide-react'
+import { ChevronLeft, LayoutGrid, Bookmark, Search, Star, X } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
-import { useThemeContext } from '../contexts/ThemeContext.jsx'
-import HandToggle from './shared/HandToggle.jsx'
+import TopbarActions from './shared/TopbarActions.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
 import { focusScroll } from '../lib/focusScroll.js'
 import CategorySidebar from './CategorySidebar.jsx'
 import Pagination from './shared/Pagination'
-import RichText from './shared/RichText'
-import DeleteButton from './shared/DeleteButton.jsx'
+import StudyCard from './shared/StudyCard.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import useDebounce from '../hooks/useDebounce.js'
@@ -63,7 +61,6 @@ export default function StudyMode({
   const { value: mastered, add: onNail } = useMasteredContext()
   const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
   const { trashedIds } = useTrash()
-  const { theme, toggleTheme } = useThemeContext()
 
   const [filterImportant, setFilterImportant] = useState(false)
   const [sidebarOpen, setSidebarOpen]         = useState(false)
@@ -151,17 +148,13 @@ export default function StudyMode({
       <div className="study-topbar">
         <button className="back-btn" onClick={goBack}><ChevronLeft size={15} /> Back</button>
         <span className="study-title" style={{ color: topic.color }}>{topic.name}</span>
-        <div className="topbar-right-actions">
-          <HandToggle />
-          <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
-            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
+        <TopbarActions>
           {topics.length > 1 && (
             <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
               <LayoutGrid size={16} />
             </button>
           )}
-        </div>
+        </TopbarActions>
       </div>
 
       {topics.length > 1 && (
@@ -256,85 +249,6 @@ export default function StudyMode({
 
           {totalPages > 1 && <Pagination page={page} totalPages={totalPages} onPageChange={goTo} />}
         </>
-      )}
-    </div>
-  )
-}
-
-function StudyCard({ domId, question: q, index, color, nailed, isImportant, onNail, onMarkImportant, onUnmarkImportant }) {
-  const [shown, setShown]       = useState(false)
-  const [selected, setSelected] = useState(null)
-  // Questions may have 4 OR 5 options (LiveMCQ uses up to `e`); keep canonical order.
-  const opts = ['a','b','c','d','e'].filter(k => q.options?.[k])
-
-  const pick = (key) => {
-    if (shown) return
-    setSelected(key)
-    setShown(true)
-  }
-
-  return (
-    <div id={domId} className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
-      <div className="study-card-top">
-        <span className="study-qnum" style={{ color }}>Q{index + 1}</span>
-        <div className="study-card-actions">
-          <button
-            className={`nail-btn${nailed ? ' nailed' : ''}`}
-            onClick={onNail}
-            style={nailed ? { color, borderColor: `${color}60`, background: `${color}15` } : {}}
-          >
-            <Star size={12} fill={nailed ? 'currentColor' : 'none'} />
-            <span className="qmark-label">{nailed ? 'Nailed ✓' : 'Nail It'}</span>
-          </button>
-          <button
-            className={`nail-btn important-study-btn${isImportant ? ' nailed' : ''}`}
-            onClick={isImportant ? onUnmarkImportant : onMarkImportant}
-            title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
-            style={isImportant ? { color: '#ef4444', borderColor: 'rgba(239,68,68,0.4)', background: 'rgba(239,68,68,0.1)' } : {}}
-          >
-            <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
-            <span className="qmark-label">{isImportant ? 'Important ✓' : 'Important'}</span>
-          </button>
-          <DeleteButton question={q} className="nail-btn" size={12} />
-          {shown && (
-            <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
-              Hide
-            </button>
-          )}
-        </div>
-      </div>
-
-      <RichText as="div" className="study-question" html={q.question} />
-
-      <div className="study-options">
-        {opts.map(key => {
-          const isCorrect = key === q.correct_answer
-          const isWrong   = shown && key === selected && !isCorrect
-          let cls = 'study-opt study-opt-clickable'
-          if (shown) {
-            if (isCorrect)    cls += ' correct'
-            else if (isWrong) cls += ' wrong'
-            else              cls += ' dim'
-          }
-          return (
-            <button key={key} className={cls} style={isCorrect && shown ? { '--c': color } : {}} onClick={() => pick(key)}>
-              <span className="study-opt-key">{key.toUpperCase()}</span>
-              <RichText className="study-opt-text" html={q.options[key]} />
-              {shown && isCorrect && <CheckCircle size={13} style={{ color, marginLeft: 'auto', flexShrink: 0 }} />}
-              {shown && isWrong   && <XCircle size={13} style={{ color: '#ef4444', marginLeft: 'auto', flexShrink: 0 }} />}
-            </button>
-          )
-        })}
-      </div>
-
-      {shown && q.explanation && (
-        <div className="explanation-box anim-slide" style={{ '--c': color }}>
-          <div className="explanation-header">
-            <Lightbulb size={14} style={{ color, flexShrink: 0 }} />
-            <span className="explanation-label" style={{ color }}>Explanation</span>
-          </div>
-          <RichText as="div" className="explanation-text" html={q.explanation} />
-        </div>
       )}
     </div>
   )

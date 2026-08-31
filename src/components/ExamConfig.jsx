@@ -1,4 +1,5 @@
 import { ChevronLeft, Minus, Plus, Zap } from 'lucide-react'
+import TopbarActions from './shared/TopbarActions.jsx'
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
@@ -73,7 +74,10 @@ export default function ExamConfig() {
 
   return (
     <div className="exam-config-page anim-fade">
-      <button className="back-btn" onClick={() => navigate('/')}><ChevronLeft size={15} /> Back</button>
+      <div className="study-topbar">
+        <button className="back-btn" onClick={() => navigate('/')}><ChevronLeft size={15} /> Back</button>
+        <TopbarActions />
+      </div>
 
       <div className="exam-config-hero">
         <div className="exam-config-icon"><Zap size={30} /></div>

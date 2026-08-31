@@ -1,9 +1,8 @@
-import { ChevronLeft, Lightbulb, Info, AlertCircle, LayoutGrid, Moon, Sun } from 'lucide-react'
+import { ChevronLeft, Lightbulb, Info, AlertCircle, LayoutGrid } from 'lucide-react'
 import { useState } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { GK_TOPICS } from '../data/index.js'
-import { useThemeContext } from '../contexts/ThemeContext.jsx'
-import HandToggle from './shared/HandToggle.jsx'
+import TopbarActions from './shared/TopbarActions.jsx'
 import CategorySidebar from './CategorySidebar.jsx'
 
 // Render inline **bold** spans as highlighted keywords (the "marked words").
@@ -105,7 +104,6 @@ function Block({ block }) {
 export default function GkStudyMode() {
   const { topicId } = useParams()
   const navigate = useNavigate()
-  const { theme, toggleTheme } = useThemeContext()
   const topic = GK_TOPICS.find(t => t.id === topicId)
   const groups = topic?.study?.groups || []
   const [activeId, setActiveId] = useState(groups[0]?.id)
@@ -126,15 +124,11 @@ export default function GkStudyMode() {
           <ChevronLeft size={15} /> Back
         </button>
         <span className="study-title" style={{ color: topic.color }}>{topic.name}</span>
-        <div className="topbar-right-actions">
-          <HandToggle />
-          <button className="study-home-btn" onClick={toggleTheme} title="Toggle theme">
-            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
-          </button>
+        <TopbarActions>
           <button className="cat-browse-btn" onClick={() => setSidebarOpen(true)} title="Browse categories">
             <LayoutGrid size={16} />
           </button>
-        </div>
+        </TopbarActions>
       </div>
 
       <CategorySidebar
