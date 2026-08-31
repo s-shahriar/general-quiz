@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import { X, Lightbulb, ChevronDown, ChevronUp, List, BookOpen, Layers } from 'lucide-react'
-import RichText from './RichText'
+import { X, ChevronDown, ChevronUp, Layers } from 'lucide-react'
 import Pagination from './Pagination'
-import DeleteButton from './DeleteButton.jsx'
 import TopbarActions from './TopbarActions.jsx'
 import StudyCard from './StudyCard.jsx'
 import { uidOf } from '../../lib/qid.js'
@@ -20,29 +18,17 @@ const ALL_ID = '__all__'
 // Saved (Nailed / Important) questions, grouped by topic and browsed via a
 // horizontal category chip-bar (pick one topic at a time — far easier to filter
 // than a long vertical list), plus an "All topics" chip that reads straight
-// through the whole saved set.
-//
-// Two ways to read the list:
-//   • List  — the compact rows: question, answer, folded explanation.
-//   • Study — the same cards Study Mode uses: tap an option, get the answer and
-//     the explanation. Study Mode only ever covers one topic, so cards rendered
-//     here carry a topic badge whenever the view spans more than one.
-export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onRemoveMany, onHome, config }) {
+// through the whole saved set. Read as study cards — the same ones Study Mode
+// uses: tap an option, get the answer and the explanation. Study Mode only ever
+// covers one topic, so cards rendered here carry a topic badge whenever the
+// view spans more than one.
+export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, onHome, config }) {
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
-          totalLabel, removeHint, removeAllLabel, rowIcon, rowIconColor, showExplanation } = config
+          totalLabel, removeAllLabel } = config
   const [activeId, setActiveId] = useState(null)
   const [chipsOpen, setChipsOpen] = useState(false)
   const [page, setPage] = useState(1)
   const [confirmOpen, setConfirmOpen] = useState(false)
-  // Reading mode sticks per screen (Important vs Nailed) across visits.
-  const viewKey = `savedView:${title}`
-  const [view, setView] = useState(() => {
-    try { return localStorage.getItem(viewKey) === 'study' ? 'study' : 'list' } catch { return 'list' }
-  })
-  const setViewPersisted = (v) => {
-    setView(v)
-    try { localStorage.setItem(viewKey, v) } catch { /* private mode — view just won't stick */ }
-  }
   const { trashedIds } = useTrash()
   const nailApi = useMasteredContext()
   const importantApi = useImportantContext()
@@ -129,26 +115,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onRem
             <span className="nailed-screen-total-label">{totalLabel(total, grouped.length)}</span>
           </div>
           <div className="nailed-screen-hint">
-            {view === 'study'
-              ? <>Tap an option to reveal the answer</>
-              : <>Tap <X size={11} style={{ display: 'inline', verticalAlign: 'middle' }} /> {removeHint}</>}
-          </div>
-
-          <div className="study-filter-bar saved-view-bar">
-            <button
-              className={`study-filter-btn${view === 'list' ? ' active' : ''}`}
-              onClick={() => setViewPersisted('list')}
-              style={view === 'list' ? { borderColor: color, color, background: `${color}15` } : {}}
-            >
-              <List size={12} /> List
-            </button>
-            <button
-              className={`study-filter-btn${view === 'study' ? ' active' : ''}`}
-              onClick={() => setViewPersisted('study')}
-              style={view === 'study' ? { borderColor: color, color, background: `${color}15` } : {}}
-            >
-              <BookOpen size={12} /> Study
-            </button>
+            Tap an option to reveal the answer
           </div>
 
           {(() => {
@@ -209,37 +176,23 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onRem
                 <div className="nailed-page-info">Page {curPage} of {totalPages} · {activeItems.length} questions</div>
               )}
 
-              {view === 'study' ? (
-                <div className="study-list">
-                  {pageItems.map(({ q, qid, topic: t }, i) => (
-                    <StudyCard
-                      key={qid}
-                      domId={'saved-q-' + qid}
-                      question={q}
-                      index={(curPage - 1) * PAGE_SIZE + i}
-                      color={t.color}
-                      topicLabel={isAll ? (t.shortName || t.name) : null}
-                      nailed={nailApi.value.has(qid)}
-                      isImportant={importantApi.value.has(qid)}
-                      onNail={() => toggleNail(qid)}
-                      onMarkImportant={() => importantApi.add(qid)}
-                      onUnmarkImportant={() => importantApi.remove(qid)}
-                    />
-                  ))}
-                </div>
-              ) : (
-                pageItems.map(({ q, qid }) => (
-                  <SavedRow
+              <div className="study-list">
+                {pageItems.map(({ q, qid, topic: t }, i) => (
+                  <StudyCard
                     key={qid}
-                    q={q}
-                    qid={qid}
-                    rowIcon={rowIcon}
-                    rowIconColor={rowIconColor}
-                    showExplanation={showExplanation}
-                    onRemove={onRemove}
+                    domId={'saved-q-' + qid}
+                    question={q}
+                    index={(curPage - 1) * PAGE_SIZE + i}
+                    color={t.color}
+                    topicLabel={isAll ? (t.shortName || t.name) : null}
+                    nailed={nailApi.value.has(qid)}
+                    isImportant={importantApi.value.has(qid)}
+                    onNail={() => toggleNail(qid)}
+                    onMarkImportant={() => importantApi.add(qid)}
+                    onUnmarkImportant={() => importantApi.remove(qid)}
                   />
-                ))
-              )}
+                ))}
+              </div>
 
               {totalPages > 1 && <Pagination page={curPage} totalPages={totalPages} onPageChange={goToPage} />}
             </div>
@@ -266,39 +219,6 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemove, onRem
           </div>
         </div>
       )}
-    </div>
-  )
-}
-
-function SavedRow({ q, qid, rowIcon: RowIcon, rowIconColor, showExplanation, onRemove }) {
-  const [open, setOpen] = useState(false)   // explanation folded by default
-  return (
-    <div className="nailed-row">
-      <RowIcon size={11} fill="currentColor" style={{ color: rowIconColor, flexShrink: 0, marginTop: 3 }} />
-      <div className="nailed-row-body">
-        <RichText className="nailed-row-text" html={q.question} />
-        {q.correct_answer && q.options?.[q.correct_answer] && (
-          <div className="nailed-row-answer">
-            <span className="nailed-ans-key">{q.correct_answer.toUpperCase()}</span>
-            <RichText className="nailed-ans-text" html={q.options[q.correct_answer]} />
-          </div>
-        )}
-        {showExplanation && q.explanation && (
-          <>
-            <button className="nailed-exp-toggle" onClick={() => setOpen(v => !v)}>
-              <Lightbulb size={11} />
-              {open ? 'Hide explanation' : 'Show explanation'}
-            </button>
-            {open && <RichText as="div" className="nailed-row-explanation" html={q.explanation} />}
-          </>
-        )}
-      </div>
-      <div className="nailed-row-btns">
-        <button className="nailed-unnail-btn" onClick={() => onRemove(qid)} title="Remove from this list">
-          <X size={13} />
-        </button>
-        <DeleteButton question={q} className="nailed-unnail-btn" iconOnly size={13} />
-      </div>
     </div>
   )
 }

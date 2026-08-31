@@ -6,12 +6,11 @@ import { GROUP_TOPICS } from '../data/groups.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import { useAllModulesReady } from '../data/contentLoader.js'
 
-export default function NailedScreen({ topics: topicsProp, mastered: masteredProp, onUnnail: onUnnailProp, onHome: onHomeProp }) {
+export default function NailedScreen({ topics: topicsProp, mastered: masteredProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const masteredCtx = useMasteredContext()
   const mastered = masteredProp ?? masteredCtx.value
-  const onUnnail = onUnnailProp ?? masteredCtx.remove
   const onUnnailMany = masteredCtx.removeMany
   const onHome = onHomeProp ?? (() => navigate('/'))
   // Scope to the section that opened this screen (?g=bangla…), else all general.
@@ -26,7 +25,6 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
       key={lmReady ? 'lm-ready' : 'lm-wait'}
       topics={topics}
       savedSet={mastered}
-      onRemove={onUnnail}
       onRemoveMany={onUnnailMany}
       onHome={onHome}
       config={{
@@ -37,11 +35,7 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
         emptyText: 'No nailed questions yet',
         emptyHint: "Star questions in quiz mode and they'll appear here",
         totalLabel: (n, t) => `${n} question${n !== 1 ? 's' : ''} in ${t} topic${t !== 1 ? 's' : ''}`,
-        removeHint: 'to un-nail',
         removeAllLabel: 'Un-nail all',
-        rowIcon: Star,
-        rowIconColor: '#f59e0b',
-        showExplanation: false,
       }}
     />
   )

@@ -6,12 +6,11 @@ import { GROUP_TOPICS } from '../data/groups.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import { useAllModulesReady } from '../data/contentLoader.js'
 
-export default function ImportantScreen({ topics: topicsProp, important: importantProp, onUnmark: onUnmarkProp, onHome: onHomeProp }) {
+export default function ImportantScreen({ topics: topicsProp, important: importantProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const importantCtx = useImportantContext()
   const important = importantProp ?? importantCtx.value
-  const onUnmark = onUnmarkProp ?? importantCtx.remove
   const onUnmarkMany = importantCtx.removeMany
   const onHome = onHomeProp ?? (() => navigate('/'))
   // Scope to the section that opened this screen (?g=bangla…), else all general.
@@ -25,7 +24,6 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
       key={lmReady ? 'lm-ready' : 'lm-wait'}
       topics={topics}
       savedSet={important}
-      onRemove={onUnmark}
       onRemoveMany={onUnmarkMany}
       onHome={onHome}
       config={{
@@ -36,11 +34,7 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
         emptyText: 'No important questions yet',
         emptyHint: "Bookmark questions in quiz mode and they'll appear here",
         totalLabel: (n, t) => `${n} question${n !== 1 ? 's' : ''} in ${t} topic${t !== 1 ? 's' : ''}`,
-        removeHint: 'to remove',
         removeAllLabel: 'Remove all',
-        rowIcon: Bookmark,
-        rowIconColor: '#ef4444',
-        showExplanation: true,
       }}
     />
   )

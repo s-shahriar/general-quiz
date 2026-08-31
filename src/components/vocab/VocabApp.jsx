@@ -126,14 +126,14 @@ function VocabStudyModeWrapper({ topic }) {
 
 function VocabNailed() {
   const navigate = useNavigate()
-  const { value: mastered, remove: onUnnail } = useMasteredContext()
-  return <NailedScreen topics={VOCAB_TOPICS} mastered={mastered} onUnnail={onUnnail} onHome={() => navigate('/vocabulary')} />
+  const { value: mastered } = useMasteredContext()
+  return <NailedScreen topics={VOCAB_TOPICS} mastered={mastered} onHome={() => navigate('/vocabulary')} />
 }
 
 function VocabImportant() {
   const navigate = useNavigate()
-  const { value: important, remove: onUnmark } = useImportantContext()
-  return <ImportantScreen topics={VOCAB_TOPICS} important={important} onUnmark={onUnmark} onHome={() => navigate('/vocabulary')} />
+  const { value: important } = useImportantContext()
+  return <ImportantScreen topics={VOCAB_TOPICS} important={important} onHome={() => navigate('/vocabulary')} />
 }
 
 function VocabExamRun() {
