@@ -1,0 +1,304 @@
+/* Written » Data module — uses ICT quiz CSS variable system */
+
+.wd-root {
+  overflow-x: clip;
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+/* ── Top bar ─────────────────────────────────── */
+.wd-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px 80px;
+  box-sizing: border-box;
+}
+
+.wd-topbar {
+  position: sticky;
+  top: -16px;
+  z-index: 100;
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: -16px -20px 16px -20px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-md);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.wd-topbar-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: var(--text-2);
+}
+
+.wd-theme-toggle {
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-2);
+  transition: all 0.2s ease;
+}
+
+.wd-theme-toggle:hover {
+  background: var(--hover-bg);
+}
+
+/* ── Filter bar ──────────────────────────────── */
+.wd-filter-wrap {
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.wd-filter-btn {
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface-glass);
+  color: var(--text-3);
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  backdrop-filter: blur(4px);
+}
+.wd-filter-btn:hover {
+  color: var(--text-2);
+  border-color: var(--border-md);
+  background: var(--hover-bg);
+}
+.wd-filter-btn.active {
+  font-weight: 600;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ── Search ──────────────────────────────────── */
+.wd-search-wrap {
+  margin: 12px 0 0;
+  padding: 0;
+  position: relative;
+}
+.wd-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-3);
+  pointer-events: none;
+}
+.wd-search-input {
+  width: 100%;
+  background: var(--surface-glass);
+  border: 1px solid var(--border-md);
+  border-radius: 12px;
+  padding: 10px 14px 10px 38px;
+  color: var(--text);
+  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-size: max(16px, 1rem); /* prevent iOS Safari auto-zoom on focus */
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  backdrop-filter: blur(6px);
+}
+.wd-search-input:focus {
+  border-color: var(--border-bright);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.wd-search-input::placeholder {
+  color: var(--text-3);
+}
+
+/* ── Card Grid ───────────────────────────────── */
+.wd-grid {
+  max-width: 1100px;
+  margin: 16px auto 0;
+  padding: 0 0 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 14px;
+}
+
+.wd-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-3);
+  padding: 60px 20px;
+  font-size: 16px;
+}
+
+/* ── Card ────────────────────────────────────── */
+.wd-card {
+  background: var(--surface-glass);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+  cursor: default;
+}
+.wd-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--card-color, var(--accent));
+  border-radius: 3px 0 0 3px;
+}
+.wd-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    var(--shadow-md),
+    0 0 0 1px
+      color-mix(in srgb, var(--card-color, var(--accent)) 30%, transparent);
+  border-color: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 40%,
+    var(--border)
+  );
+  background: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 3%,
+    var(--surface-glass)
+  );
+}
+
+.wd-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.wd-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  background: color-mix(
+    in srgb,
+    var(--card-color, var(--accent)) 12%,
+    var(--elevated)
+  );
+  border: 1px solid var(--border);
+}
+.wd-card-serial {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-3);
+  background: var(--elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1px 7px;
+  flex-shrink: 0;
+}
+.wd-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.wd-card-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--card-color, var(--accent));
+  letter-spacing: 0.3px;
+}
+.wd-card-subtitle {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+.wd-card-body {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* body HTML content styles */
+.wd-card-body strong {
+  color: var(--card-color, var(--accent));
+  font-weight: 600;
+}
+.wd-card-body em {
+  color: #f59e0b;
+  font-style: normal;
+}
+.wd-card-body .warning {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* Mnemonic / "easy to remember" tip strip */
+.wd-card-tip {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--card-color, var(--accent)) 8%, var(--elevated));
+  border: 1px dashed color-mix(in srgb, var(--card-color, var(--accent)) 35%, var(--border));
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: var(--text-2);
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+.wd-card-tip-label {
+  flex-shrink: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .wd-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 641px) {
+  .wd-card-subtitle {
+    font-size: 12px;
+  }
+}
+
+/* Left-hand layout: mirror the bar and flip which side the actions hug. */
+.wd-topbar-actions { margin-left: auto; }
+[data-hand="left"] .wd-topbar { flex-direction: row-reverse; }
+[data-hand="left"] .wd-topbar-actions { margin-left: 0; margin-right: auto; }

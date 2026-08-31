@@ -1,4 +1,4 @@
-import { BookOpen, BookOpenText, Globe, Languages, Sparkles } from 'lucide-react'
+import { BookOpen, BookOpenText, Globe, Languages, PenSquare, Sparkles } from 'lucide-react'
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
@@ -50,6 +50,9 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
           </button>
           <button className={`module-btn${activeGroup === 'sahitya' ? ' active' : ''}`} onClick={() => navigate('/sahitto')}>
             <BookOpen size={15} /> বাংলা সাহিত্য
+          </button>
+          <button className="module-btn" onClick={() => navigate('/written')}>
+            <PenSquare size={15} /> Written
           </button>
           <button className={`module-btn${activeGroup === 'livemcq' ? ' active' : ''}`} onClick={() => navigate('/livemcq')}>
             <Sparkles size={15} /> LiveMCQ

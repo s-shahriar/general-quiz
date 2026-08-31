@@ -23,6 +23,8 @@ const ImportantScreen  = lazy(() => import('./components/ImportantScreen.jsx'))
 const UtilityHome      = lazy(() => import('./components/utility/HomeScreen.jsx'))
 const UtilityMathFormulas = lazy(() => import('./components/utility/MathFormulas.jsx'))
 const UtilityFinancialTerms = lazy(() => import('./components/utility/FinancialTerms.jsx'))
+const WrittenHome      = lazy(() => import('./components/written/HomeScreen.jsx'))
+const WrittenData      = lazy(() => import('./components/written/WrittenData.jsx'))
 const VocabApp         = lazy(() => import('./components/vocab/VocabApp.jsx'))
 const RecycleBinScreen = lazy(() => import('./components/RecycleBinScreen.jsx'))
 const AdminScreen      = lazy(() => import('./components/admin/AdminScreen.jsx'))
@@ -58,7 +60,9 @@ function AppRoutes() {
 
   const showNav = isGeneralHome ||
     location.pathname === '/vocabulary' ||
-    location.pathname === '/utility'
+    location.pathname === '/utility' ||
+    location.pathname === '/written' ||
+    location.pathname === '/written/data'
 
   return (
     <div className="app-root">
@@ -76,7 +80,7 @@ function AppRoutes() {
               { path: '/utility',       label: 'Utility',    short: 'Utility' },
             ].map(({ path, label, short }) => {
               const isActive = location.pathname === path ||
-                (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname === '/livemcq' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important')) ||
+                (path === '/' && (location.pathname === '/bangla-grammer' || location.pathname === '/english-grammer' || location.pathname === '/sahitto' || location.pathname === '/gk' || location.pathname === '/livemcq' || location.pathname.startsWith('/topic') || location.pathname === '/exam' || location.pathname.startsWith('/exam/') || location.pathname === '/nailed' || location.pathname === '/important' || location.pathname.startsWith('/written'))) ||
                 (path === '/vocabulary' && location.pathname.startsWith('/vocabulary')) ||
                 (path === '/utility' && (location.pathname === '/math' || location.pathname === '/financial'))
               return (
@@ -121,6 +125,8 @@ function AppRoutes() {
           <Route path="/utility" element={<UtilityHome />} />
           <Route path="/math" element={<UtilityMathFormulas />} />
           <Route path="/financial" element={<UtilityFinancialTerms />} />
+          <Route path="/written" element={<WrittenHome />} />
+          <Route path="/written/data" element={<WrittenData />} />
           <Route path="/vocabulary" element={<VocabApp />} />
           <Route path="/vocabulary/*" element={<VocabApp />} />
           <Route path="/recycle-bin" element={<RecycleBinScreen />} />
