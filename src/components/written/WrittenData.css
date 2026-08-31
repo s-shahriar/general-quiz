@@ -136,6 +136,7 @@
   padding: 0 0 80px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  align-items: start;
   gap: 14px;
 }
 
@@ -185,11 +186,6 @@
     in srgb,
     var(--card-color, var(--accent)) 40%,
     var(--border)
-  );
-  background: color-mix(
-    in srgb,
-    var(--card-color, var(--accent)) 3%,
-    var(--surface-glass)
   );
 }
 
@@ -245,11 +241,28 @@
   margin-top: 2px;
 }
 .wd-card-body {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   font-size: 13px;
   color: var(--text-2);
   line-height: 1.75;
   overflow-wrap: anywhere;
   word-break: break-word;
+}
+.wd-card-body li {
+  position: relative;
+  padding-left: 14px;
+}
+.wd-card-body li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--card-color, var(--accent));
 }
 
 /* body HTML content styles */
@@ -265,6 +278,74 @@
   color: #ef4444;
   font-weight: 600;
 }
+
+/* Resulting problems / benefits strip — attaches real-world consequences to a
+   raw figure so it isn't memorized in isolation. */
+.wd-card-effects {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+.wd-card-effects-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+}
+.wd-card-effects-chevron {
+  margin-left: auto;
+  transition: transform 0.18s ease;
+  opacity: 0.7;
+}
+.wd-card-effects-chevron.open {
+  transform: rotate(180deg);
+}
+.wd-card-effects ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.wd-card-effects li {
+  position: relative;
+  margin: 3px 0;
+  padding-left: 14px;
+}
+.wd-card-effects li::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--effect-color, currentColor);
+}
+.wd-card-issues {
+  --effect-color: #ef4444;
+  background: color-mix(in srgb, #ef4444 7%, var(--elevated));
+  border: 1px solid color-mix(in srgb, #ef4444 25%, var(--border));
+}
+.wd-card-issues .wd-card-effects-toggle { color: #ef4444; }
+.wd-card-issues li { color: var(--text-2); }
+.wd-card-benefits {
+  --effect-color: #22c55e;
+  background: color-mix(in srgb, #22c55e 7%, var(--elevated));
+  border: 1px solid color-mix(in srgb, #22c55e 25%, var(--border));
+}
+.wd-card-benefits .wd-card-effects-toggle { color: #22c55e; }
+.wd-card-benefits li { color: var(--text-2); }
 
 /* Mnemonic / "easy to remember" tip strip */
 .wd-card-tip {

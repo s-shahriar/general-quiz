@@ -1,16 +1,15 @@
 import { useState, useMemo } from 'react'
-import { ChevronLeft, Search, Sun, Moon, Lightbulb } from 'lucide-react'
+import { ChevronLeft, ChevronDown, Search, Sun, Moon, Lightbulb, AlertTriangle, CheckCircle2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import HandToggle from '../shared/HandToggle.jsx'
-import { DATA_CATEGORIES, DATA_CARDS } from '../../data/written/dataTopicData.js'
+import { useWrittenDataReady, getWrittenDataCategories, getWrittenDataCards } from '../../data/written/dataTopicLoader.js'
 import './WrittenData.css'
-
-const ALL_CATS = ['সব', ...Object.keys(DATA_CATEGORIES)]
 
 export default function WrittenData() {
   const navigate = useNavigate()
   const { theme, toggleTheme } = useThemeContext()
+  const ready = useWrittenDataReady()
 
   return (
     <div className="wd-root">
@@ -32,7 +31,9 @@ export default function WrittenData() {
           </div>
         </div>
 
-        <RefSection />
+        {ready
+          ? <RefSection />
+          : <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>}
       </div>
     </div>
   )
@@ -41,21 +42,24 @@ export default function WrittenData() {
 function RefSection() {
   const [search, setSearch] = useState('')
   const [activeCat, setActiveCat] = useState('সব')
+  const categories = getWrittenDataCategories()
+  const cards = getWrittenDataCards()
+  const allCats = useMemo(() => ['সব', ...Object.keys(categories)], [categories])
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim()
-    return DATA_CARDS.filter((c) => {
+    return cards.filter((c) => {
       const matchCat = activeCat === 'সব' || c.cat === activeCat
       if (!q) return matchCat
       return matchCat && (c.title + c.subtitle + c.body + c.cat + (c.tip || '')).toLowerCase().includes(q)
     })
-  }, [search, activeCat])
+  }, [cards, search, activeCat])
 
   return (
     <>
       <div className="wd-filter-wrap">
-        {ALL_CATS.map((cat) => {
-          const color = DATA_CATEGORIES[cat]
+        {allCats.map((cat) => {
+          const color = categories[cat]
           const isActive = activeCat === cat
           return (
             <button
@@ -89,7 +93,7 @@ function RefSection() {
 }
 
 function DataCard({ card }) {
-  const color = DATA_CATEGORIES[card.cat] || 'var(--accent)'
+  const color = getWrittenDataCategories()[card.cat] || 'var(--accent)'
   return (
     <div className="wd-card" style={{ '--card-color': color }}>
       <div className="wd-card-header">
@@ -102,13 +106,43 @@ function DataCard({ card }) {
           <div className="wd-card-subtitle">{card.subtitle}</div>
         </div>
       </div>
-      <div className="wd-card-body" dangerouslySetInnerHTML={{ __html: card.body }} />
+      <ul className="wd-card-body">
+        {card.body.split('<br>').map((line, i) => (
+          <li key={i} dangerouslySetInnerHTML={{ __html: line }} />
+        ))}
+      </ul>
+      {card.issues && <EffectSection kind="issues" items={card.issues} />}
+      {card.benefits && <EffectSection kind="benefits" items={card.benefits} />}
       {card.tip && (
         <div className="wd-card-tip">
           <Lightbulb size={13} className="wd-card-tip-label" />
           <span>{card.tip}</span>
         </div>
       )}
+    </div>
+  )
+}
+
+// Folded by default — a card can carry both an issues and a benefits list,
+// each unfolds independently so reading one doesn't force-open the other.
+function EffectSection({ kind, items }) {
+  const [open, setOpen] = useState(false)
+  const isIssue = kind === 'issues'
+  const Icon = isIssue ? AlertTriangle : CheckCircle2
+  const label = isIssue ? 'সমস্যা' : 'সুফল'
+  return (
+    <div className={`wd-card-effects wd-card-${kind}`}>
+      <button
+        type="button"
+        className="wd-card-effects-toggle"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        <Icon size={12} />
+        <span>{label}</span>
+        <ChevronDown size={13} className={`wd-card-effects-chevron${open ? ' open' : ''}`} />
+      </button>
+      {open && <ul>{items.map((it, i) => <li key={i}>{it}</li>)}</ul>}
     </div>
   )
 }

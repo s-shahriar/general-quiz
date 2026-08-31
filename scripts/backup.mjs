@@ -70,16 +70,25 @@ async function main() {
   // ── ALL content ──
   const categories = await fetchAll('categories', '*', 'id')
   const questions = await fetchAll('questions', '*', 'id')
+  const writtenCategories = await fetchAll('written_categories', '*', 'id')
+  const writtenCards = await fetchAll('written_cards', '*', 'id')
 
   // Integrity guard: the snapshot must be COMPLETE and DUPLICATE-FREE. A
   // pagination-on-non-unique-column bug once produced dupes + missing rows that
   // slipped through a weaker check, so fail loudly rather than publish garbage.
   const distinctQ = new Set(questions.map(q => q.id)).size
   const distinctC = new Set(categories.map(c => c.id)).size
+  const distinctWC = new Set(writtenCategories.map(c => c.id)).size
+  const distinctWCards = new Set(writtenCards.map(c => c.id)).size
   const { count: dbQ } = await db.from('questions').select('*', { count: 'exact', head: true })
   const { count: dbC } = await db.from('categories').select('*', { count: 'exact', head: true })
+  const { count: dbWC } = await db.from('written_categories').select('*', { count: 'exact', head: true })
+  const { count: dbWCards } = await db.from('written_cards').select('*', { count: 'exact', head: true })
   if (distinctQ !== questions.length || questions.length !== dbQ || distinctC !== categories.length || categories.length !== dbC) {
     throw new Error(`integrity check failed — questions ${questions.length}/${distinctQ} distinct vs DB ${dbQ}; categories ${categories.length}/${distinctC} vs DB ${dbC}`)
+  }
+  if (distinctWC !== writtenCategories.length || writtenCategories.length !== dbWC || distinctWCards !== writtenCards.length || writtenCards.length !== dbWCards) {
+    throw new Error(`integrity check failed — written_cards ${writtenCards.length}/${distinctWCards} distinct vs DB ${dbWCards}; written_categories ${writtenCategories.length}/${distinctWC} vs DB ${dbWC}`)
   }
 
   // Shrink guard: refuse to replace the single snapshot with a SMALLER dataset,
@@ -87,22 +96,30 @@ async function main() {
   // equality are fine. Set ALLOW_SHRINK=1 to override when a deletion is intended.
   const prev = previousCounts()
   if (prev && process.env.ALLOW_SHRINK !== '1') {
-    if (questions.length < prev.questions || categories.length < prev.categories) {
+    if (questions.length < prev.questions || categories.length < prev.categories ||
+        writtenCategories.length < (prev.writtenCategories ?? 0) || writtenCards.length < (prev.writtenCards ?? 0)) {
       throw new Error(
-        `shrink guard: current (${questions.length} questions / ${categories.length} categories) is smaller than ` +
-        `the last snapshot (${prev.questions} questions / ${prev.categories} categories). Refusing to overwrite the ` +
-        `backup. If this deletion is intentional, re-run with ALLOW_SHRINK=1.`)
+        `shrink guard: current (${questions.length} questions / ${categories.length} categories / ` +
+        `${writtenCategories.length} written categories / ${writtenCards.length} written cards) is smaller than ` +
+        `the last snapshot (${prev.questions} questions / ${prev.categories} categories / ` +
+        `${prev.writtenCategories ?? 0} written categories / ${prev.writtenCards ?? 0} written cards). Refusing to ` +
+        `overwrite the backup. If this deletion is intentional, re-run with ALLOW_SHRINK=1.`)
     }
-    console.log(`shrink guard OK — ${questions.length} ≥ ${prev.questions} questions, ${categories.length} ≥ ${prev.categories} categories`)
+    console.log(`shrink guard OK — ${questions.length} ≥ ${prev.questions} questions, ${categories.length} ≥ ${prev.categories} categories, ` +
+      `${writtenCategories.length} ≥ ${prev.writtenCategories ?? 0} written categories, ${writtenCards.length} ≥ ${prev.writtenCards ?? 0} written cards`)
   } else if (!prev) {
     console.log('shrink guard skipped — no previous snapshot to compare against')
   }
 
   writeFileSync(join(dir, 'content.json'), JSON.stringify({
-    counts: { categories: categories.length, questions: questions.length },
-    categories, questions,
+    counts: {
+      categories: categories.length, questions: questions.length,
+      writtenCategories: writtenCategories.length, writtenCards: writtenCards.length,
+    },
+    categories, questions, writtenCategories, writtenCards,
   }, null, 2))
-  console.log(`content.json → ${categories.length} categories, ${questions.length} questions`)
+  console.log(`content.json → ${categories.length} categories, ${questions.length} questions, ` +
+    `${writtenCategories.length} written categories, ${writtenCards.length} written cards`)
 
   // ── OWNER's cloud progress only ──
   const { data: { users }, error: uErr } = await db.auth.admin.listUsers({ perPage: 1000 })

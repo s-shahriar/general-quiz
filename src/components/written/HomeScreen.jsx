@@ -1,6 +1,5 @@
 import { PenSquare, Database } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
-import { DATA_CARDS } from '../../data/written/dataTopicData.js'
 
 const TOPICS = [
   {
@@ -8,7 +7,7 @@ const TOPICS = [
     path: '/written/data',
     icon: Database,
     name: 'Data',
-    description: `${DATA_CARDS.length}টি বিষয় — লিখিত পরীক্ষার তথ্য সংকলন`,
+    description: 'লিখিত পরীক্ষার তথ্য সংকলন',
     color: '#0ea5e9',
   },
 ]
