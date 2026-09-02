@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef, useLayoutEffect } from 'react'
 import { ChevronLeft, ChevronDown, Search, Sun, Moon, Lightbulb, AlertTriangle, CheckCircle2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
@@ -55,6 +55,8 @@ function RefSection() {
     })
   }, [cards, search, activeCat])
 
+  const gridRef = useMasonry(filtered)
+
   return (
     <>
       <div className="wd-filter-wrap">
@@ -83,13 +85,62 @@ function RefSection() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="wd-grid">
+      <div className="wd-grid" ref={gridRef}>
         {filtered.length === 0
           ? <div className="wd-no-results"><Search size={16} style={{ opacity: 0.4, marginRight: 6 }} />কোনো ফলাফল পাওয়া যায়নি</div>
-          : filtered.map((card) => <DataCard key={card.id} card={card} />)}
+          : filtered.map((card) => (
+              <div className="wd-masonry-item" key={card.id}>
+                <DataCard card={card} />
+              </div>
+            ))}
       </div>
     </>
   )
+}
+
+// ── Masonry ────────────────────────────────────
+// Must match .wd-grid's grid-auto-rows and gap in WrittenData.css.
+const ROW_HEIGHT = 8
+const GRID_GAP = 14
+
+// Gives each grid item a row span matching its content height, so cards pack
+// upwards instead of every row stretching to its tallest card. Re-measures on
+// resize and whenever a card grows or shrinks (e.g. সমস্যা/সুফল unfolding).
+function useMasonry(items) {
+  const gridRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const grid = gridRef.current
+    if (!grid) return
+
+    const cells = Array.from(grid.querySelectorAll(':scope > .wd-masonry-item'))
+    if (cells.length === 0) return
+
+    const layout = () => {
+      for (const cell of cells) {
+        const card = cell.firstElementChild
+        if (!card) continue
+        const height = card.getBoundingClientRect().height
+        const span = Math.max(1, Math.ceil((height + GRID_GAP) / (ROW_HEIGHT + GRID_GAP)))
+        cell.style.gridRowEnd = `span ${span}`
+      }
+    }
+
+    layout()
+
+    const observer = new ResizeObserver(layout)
+    for (const cell of cells) {
+      if (cell.firstElementChild) observer.observe(cell.firstElementChild)
+    }
+    window.addEventListener('resize', layout)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', layout)
+    }
+  }, [items])
+
+  return gridRef
 }
 
 function DataCard({ card }) {
