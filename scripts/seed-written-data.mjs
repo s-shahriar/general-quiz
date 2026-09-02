@@ -18,6 +18,7 @@ import { createClient } from '@supabase/supabase-js'
 import {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
+  Landmark, Gauge,
 } from 'lucide-react'
 import { DATA_CATEGORIES, DATA_CARDS } from '../src/data/written/dataTopicData.js'
 
@@ -62,6 +63,7 @@ const CATEGORY_SLUGS = {
 const ICON_BY_REF = new Map(Object.entries({
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
+  Landmark, Gauge,
 }))
 function iconName(iconComponent) {
   for (const [name, comp] of ICON_BY_REF) if (comp === iconComponent) return name

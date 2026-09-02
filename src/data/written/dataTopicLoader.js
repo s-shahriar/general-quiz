@@ -3,6 +3,7 @@ import { supabase } from '../../lib/supabase.js'
 import {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap, Database,
+  Landmark, Gauge,
 } from 'lucide-react'
 
 // Written » Data content lives in Supabase (written_categories + written_cards,
@@ -15,6 +16,7 @@ import {
 const ICON_MAP = {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap, Database,
+  Landmark, Gauge,
 }
 
 let categories = null   // { [name]: color }

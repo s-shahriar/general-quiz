@@ -148,8 +148,11 @@ Rules that keep the corpus consistent:
    - New category → add to `DATA_CATEGORIES` **and** add its latin slug to
      `CATEGORY_SLUGS` in `scripts/seed-written-data.mjs` (the script throws if a
      category has no slug mapped).
-   - New icon → import it in `dataTopicData.js` **and** add the same name to
-     `ICON_MAP` in `dataTopicLoader.js`, or it silently falls back to `Database`.
+   - New icon → it must be added in **three** places with the same plain name:
+     imported in `dataTopicData.js`, added to `ICON_MAP` in
+     `dataTopicLoader.js`, and added to `ICON_BY_REF` in
+     `seed-written-data.mjs`. Miss the loader and it silently falls back to
+     `Database`; miss the seed script and seeding throws.
 2. **Seed:** `node scripts/seed-written-data.mjs`
    It wipes and reinserts `topic='data'`, then verifies the row counts against
    the source file and exits non-zero on mismatch.
