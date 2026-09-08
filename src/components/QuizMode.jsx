@@ -14,6 +14,8 @@ import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
+import Highlightable from './shared/Highlightable.jsx'
+import { useHighlights } from '../contexts/HighlightContext.jsx'
 
 export default function QuizMode({
   topic: topicProp,
@@ -46,6 +48,10 @@ export default function QuizMode({
   const [score, setScore]       = useState(0)
   const [done, setDone]         = useState(false)
 
+  // Saved highlights, read here with the rest of the hooks — it must run
+  // before the early returns below or the hook order changes between renders.
+  const { getFor } = useHighlights()
+
   if (!topic) return <Navigate to="/" replace />
   if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
 
@@ -55,6 +61,8 @@ export default function QuizMode({
 
   const q    = questions[idx]
   const qid  = q ? uidOf(q) : null
+  // Block key 'explanation' — an MCQ answer has one text block, no index.
+  const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
 
@@ -161,7 +169,7 @@ export default function QuizMode({
         )}
 
         {revealed && q.explanation && (
-          <div className="explanation-box anim-slide" style={{ '--c': topic.color }}>
+          <div className="explanation-box anim-slide" data-hl-root={qid || undefined} style={{ '--c': topic.color }}>
             <div className="explanation-header">
               <Lightbulb size={14} style={{ color: topic.color, flexShrink: 0 }} />
               <span className="explanation-label" style={{ color: topic.color }}>ব্যাখ্যা</span>
@@ -169,7 +177,8 @@ export default function QuizMode({
                 {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
               </span>
             </div>
-            <RichText as="div" className="explanation-text" html={q.explanation} />
+            <Highlightable as="div" className="explanation-text"
+              block="explanation" html={q.explanation} highlights={hlExp} />
           </div>
         )}
       </div>

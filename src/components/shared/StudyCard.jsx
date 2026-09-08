@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Bookmark, CheckCircle, Lightbulb, Star, XCircle } from 'lucide-react'
 import RichText from './RichText'
+import Highlightable from './Highlightable.jsx'
+import { useHighlights } from '../../contexts/HighlightContext.jsx'
+import { uidOf } from '../../lib/qid.js'
 import DeleteButton from './DeleteButton.jsx'
 
 // One study-mode question card: prompt, tappable options that reveal the answer,
@@ -19,6 +22,14 @@ export default function StudyCard({
   onMarkImportant,
   onUnmarkImportant,
 }) {
+  // Explanations are highlightable, keyed by the question uid. Block key
+  // 'explanation' — an MCQ answer has one text block, so it needs no index.
+  // Questions here carry no _uid field — identity is derived from the text,
+  // the same way StudyMode and QuizMode derive it for the nailed/important flags.
+  const { getFor } = useHighlights()
+  const qid = uidOf(q)
+  const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
+
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
   // Questions may have 4 OR 5 options (LiveMCQ uses up to `e`); keep canonical order.
@@ -93,12 +104,13 @@ export default function StudyCard({
       </div>
 
       {shown && q.explanation && (
-        <div className="explanation-box anim-slide" style={{ '--c': color }}>
+        <div className="explanation-box anim-slide" style={{ '--c': color }} data-hl-root={qid || undefined}>
           <div className="explanation-header">
             <Lightbulb size={14} style={{ color, flexShrink: 0 }} />
             <span className="explanation-label" style={{ color }}>Explanation</span>
           </div>
-          <RichText as="div" className="explanation-text" html={q.explanation} />
+          <Highlightable as="div" className="explanation-text"
+            block="explanation" html={q.explanation} highlights={hlExp} />
         </div>
       )}
     </div>

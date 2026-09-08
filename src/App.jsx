@@ -10,6 +10,9 @@ import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext
 import { TrashProvider } from './contexts/TrashContext.jsx'
 import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
 import { HandProvider } from './contexts/HandContext.jsx'
+import { HighlightProvider } from './contexts/HighlightContext.jsx'
+import HighlightBar from './components/shared/HighlightBar.jsx'
+import HighlightSaveBar from './components/shared/HighlightSaveBar.jsx'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
 const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
@@ -36,7 +39,11 @@ export default function App() {
         <HandProvider>
           <ProgressProvider>
             <TrashProvider>
-              <AppRoutes />
+              <HighlightProvider>
+                <AppRoutes />
+                <HighlightBar />
+                <HighlightSaveBar />
+              </HighlightProvider>
             </TrashProvider>
           </ProgressProvider>
         </HandProvider>

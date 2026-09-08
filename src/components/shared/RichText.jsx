@@ -15,12 +15,16 @@ function decodeEntities(s) {
   return _ta.value
 }
 
-export default function RichText({ html, as: Tag = 'span', className }) {
+// Extra props (a `ref`, `data-hl-block`, …) pass straight through to the
+// rendered element, so a caller can hold on to the real node without wrapping
+// it in another div and disturbing the layout. React 19 treats `ref` as an
+// ordinary prop on function components, so no forwardRef is needed.
+export default function RichText({ html, as: Tag = 'span', className, ...rest }) {
   const s = html == null ? '' : String(html)
   if (TAG_RE.test(s)) {
     const cls = className ? `${className} rich` : 'rich'
-    return <Tag className={cls} dangerouslySetInnerHTML={{ __html: s }} />
+    return <Tag className={cls} dangerouslySetInnerHTML={{ __html: s }} {...rest} />
   }
   const text = ENT_RE.test(s) ? decodeEntities(s) : s
-  return <Tag className={className}>{text}</Tag>
+  return <Tag className={className} {...rest}>{text}</Tag>
 }

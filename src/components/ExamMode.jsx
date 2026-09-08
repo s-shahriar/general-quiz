@@ -9,6 +9,8 @@ import QuizOptions from './shared/QuizOptions'
 import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
+import Highlightable from './shared/Highlightable.jsx'
+import { useHighlights } from '../contexts/HighlightContext.jsx'
 
 export default function ExamMode({
   questions: questionsProp,
@@ -33,10 +35,16 @@ export default function ExamMode({
 
   const goHome = () => onHomeProp ? onHomeProp() : navigate('/')
 
+  // Saved highlights, read here with the rest of the hooks — it must run
+  // before the early returns below or the hook order changes between renders.
+  const { getFor } = useHighlights()
+
   if (!questions) return <Navigate to="/exam" replace />
 
   const q    = questions[idx]
   const qid  = q ? uidOf(q) : null
+  // Block key 'explanation' — an MCQ answer has one text block, no index.
+  const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
 
@@ -122,7 +130,7 @@ export default function ExamMode({
         )}
 
         {revealed && q.explanation && (
-          <div className="explanation-box anim-slide" style={{ '--c': accent }}>
+          <div className="explanation-box anim-slide" data-hl-root={qid || undefined} style={{ '--c': accent }}>
             <div className="explanation-header">
               <Lightbulb size={14} style={{ color: accent, flexShrink: 0 }} />
               <span className="explanation-label" style={{ color: accent }}>ব্যাখ্যা</span>
@@ -130,7 +138,8 @@ export default function ExamMode({
                 {isCorrect ? '✓ সঠিক' : '✗ ভুল'}
               </span>
             </div>
-            <RichText as="div" className="explanation-text" html={q.explanation} />
+            <Highlightable as="div" className="explanation-text"
+              block="explanation" html={q.explanation} highlights={hlExp} />
           </div>
         )}
       </div>

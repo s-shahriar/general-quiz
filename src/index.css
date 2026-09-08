@@ -4204,3 +4204,180 @@ button {
 .exam-config-page > .study-topbar {
   margin: -28px -16px 20px -16px;
 }
+
+/* ── PDF-style text highlights (MCQ explanations) ─────
+
+   Four colours so a mark can carry meaning: mint = got it, amber = revise,
+   rose = careful / common mistake, violet = definition.
+
+   Light and dark are tuned separately rather than sharing one alpha. On paper-
+   white a highlighter is an opaque wash, so light uses solid-ish colour. On the
+   app's deep navy an opaque wash destroys contrast and a yellow one goes muddy
+   olive, so dark uses a low-alpha tint of a COOLER, more saturated hue plus a
+   thin left edge to make the band read as deliberate rather than as a smudge.
+   Text colour is never overridden in either theme, so Bengali stays exactly as
+   readable as the prose around it. */
+
+:root {
+  --hl-mint:     rgba( 45, 212, 191, 0.34);
+  --hl-amber:    rgba(250, 204,  21, 0.44);
+  --hl-rose:     rgba(244, 114, 182, 0.32);
+  --hl-violet:   rgba(167, 139, 250, 0.34);
+  --hl-mint-e:   #0d9488;
+  --hl-amber-e:  #ca8a04;
+  --hl-rose-e:   #db2777;
+  --hl-violet-e: #7c3aed;
+}
+[data-theme='dark'] {
+  --hl-mint:     rgba( 45, 212, 191, 0.20);
+  --hl-amber:    rgba(251, 146,  60, 0.26);
+  --hl-rose:     rgba(244, 114, 182, 0.20);
+  --hl-violet:   rgba(167, 139, 250, 0.24);
+  --hl-mint-e:   #2dd4bf;
+  --hl-amber-e:  #fb923c;
+  --hl-rose-e:   #f472b6;
+  --hl-violet-e: #a78bfa;
+}
+
+.hl-mark {
+  color: inherit;
+  font: inherit;
+  border-radius: 2px;
+  padding: 0.06em 0.06em;
+  margin: 0 -0.06em;
+  cursor: pointer;
+  transition: background 0.15s;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.hl-c-mint   { background: var(--hl-mint);   box-shadow: inset 0.16em 0 0 var(--hl-mint-e); }
+.hl-c-amber  { background: var(--hl-amber);  box-shadow: inset 0.16em 0 0 var(--hl-amber-e); }
+.hl-c-rose   { background: var(--hl-rose);   box-shadow: inset 0.16em 0 0 var(--hl-rose-e); }
+.hl-c-violet { background: var(--hl-violet); box-shadow: inset 0.16em 0 0 var(--hl-violet-e); }
+
+/* Explanations here may contain real HTML — tables, sup/sub, figures. A mark
+   must not disturb any of it, so inside a table cell or a sup/sub it drops the
+   padding that would otherwise nudge the layout. */
+.explanation-text table .hl-mark,
+.explanation-text sup .hl-mark,
+.explanation-text sub .hl-mark {
+  padding: 0; margin: 0;
+}
+
+/* ── The floating colour bar ─────────────────────────────────────────────
+   Dots only, so the whole bar is ~200px and fits a 360px phone with room to
+   spare. Fixed-positioned because it is portalled to <body> and tracks a
+   selection rect. */
+.hl-bar {
+  position: fixed;
+  z-index: 4000;
+  display: flex; align-items: center; gap: 4px;
+  padding: 5px 8px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border-md);
+  box-shadow: var(--shadow-lg);
+  user-select: none; -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  animation: hlBarIn 0.12s ease-out;
+}
+@keyframes hlBarIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* 34px touch target with a 20px dot inside it — comfortable on a phone
+   without making the bar wide. */
+.hl-swatch {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: none; border: none;
+  position: relative;
+}
+/* The dot is filled with the SOLID hue, not the translucent wash the mark
+   uses — a low-alpha fill on the bar's own dark surface is barely visible, and
+   the dot has to be identifiable at a glance. */
+.hl-swatch::after {
+  content: '';
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.hl-swatch.hl-c-mint::after   { background: var(--hl-mint-e); }
+.hl-swatch.hl-c-amber::after  { background: var(--hl-amber-e); }
+.hl-swatch.hl-c-rose::after   { background: var(--hl-rose-e); }
+.hl-swatch.hl-c-violet::after { background: var(--hl-violet-e); }
+/* Selected colour: a ring in the surface colour, so it reads as chosen in both
+   themes without changing the dot's own hue. */
+.hl-swatch.on::after {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px currentColor;
+}
+.hl-swatch.on { color: var(--text-3); background: var(--hover-bg); }
+.hl-swatch:active { transform: scale(0.92); }
+/* The swatch background must never inherit the mark's inset edge. */
+.hl-bar .hl-swatch { box-shadow: none; }
+
+.hl-bar-sep { width: 1px; height: 22px; background: var(--border); margin: 0 3px; }
+.hl-bar-del {
+  width: 34px; height: 34px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-3); background: none;
+}
+.hl-bar-del:active { background: var(--hover-bg); color: #f87171; }
+
+/* ── The Save pill ───────────────────────────────────────────────────────
+   Bottom centre: every other fixed element in the app is anchored to the top,
+   so nothing collides, and the bottom edge is the easiest place to reach with
+   a thumb. The safe-area inset clears the Android gesture bar. */
+.hl-savebar {
+  position: fixed;
+  z-index: 3900;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  max-width: calc(100vw - 24px);
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 8px 7px 14px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border-md);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--text-2);
+  animation: hlSaveIn 0.18s ease-out;
+}
+@keyframes hlSaveIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.hl-savebar.has-error { border-color: rgba(248, 113, 113, 0.55); color: #f87171; }
+.hl-savebar.saved { color: var(--text-2); padding: 9px 16px; }
+.hl-savebar-msg {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 44vw;
+}
+.hl-savebar-undo {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-3); background: none; flex-shrink: 0;
+}
+.hl-savebar-undo:active { background: var(--hover-bg); }
+.hl-savebar-save {
+  display: flex; align-items: center; gap: 6px;
+  height: 32px; padding: 0 15px;
+  border-radius: 999px;
+  background: var(--accent); color: #fff;
+  font-size: 0.82rem; font-weight: 700;
+  flex-shrink: 0;
+}
+.hl-savebar-save:disabled { opacity: 0.65; }
+.hl-spin { animation: hlSpin 0.9s linear infinite; }
+@keyframes hlSpin { to { transform: rotate(360deg); } }
+
+/* Selection must stay enabled everywhere inside an answer, including on
+   touch devices where some resets disable it. Controls are excluded so a
+   long-press on a button selects nothing instead of grabbing its label. */
+.explanation-box, .explanation-box :not(button):not(button *):not(svg):not(svg *) {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
