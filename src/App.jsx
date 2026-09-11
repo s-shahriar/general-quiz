@@ -1,10 +1,11 @@
 import { Moon, Sun } from 'lucide-react'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import AccountButton from './components/auth/AccountButton.jsx'
 import HandToggle from './components/shared/HandToggle.jsx'
 import SyncOverlay from './components/SyncOverlay.jsx'
-import SyncStatus from './components/SyncStatus.jsx'
+import SyncStatus, { SyncButton } from './components/SyncStatus.jsx'
+import SyncDrawer from './components/SyncDrawer.jsx'
 import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
 import { ProgressProvider, useProgressSyncing } from './contexts/ProgressContext.jsx'
 import { TrashProvider } from './contexts/TrashContext.jsx'
@@ -57,6 +58,7 @@ function AppRoutes() {
   const { loading: authLoading } = useAuth()
   const syncing = useProgressSyncing()
   const location = useLocation()
+  const [syncOpen, setSyncOpen] = useState(false)
 
   const isGeneralHome = location.pathname === '/' ||
     location.pathname === '/bangla-grammer' ||
@@ -104,6 +106,7 @@ function AppRoutes() {
             })}
           </div>
           <div className="topbar-right-actions">
+            <SyncButton onClick={() => setSyncOpen(true)} />
             <AccountButton />
             <HandToggle className="theme-toggle-nav" size={17} />
             <button className="theme-toggle-nav" onClick={toggleTheme} title="Toggle theme">
@@ -143,7 +146,8 @@ function AppRoutes() {
       </Suspense>
 
       {(authLoading || syncing) && <SyncOverlay />}
-      <SyncStatus />
+      <SyncStatus onOpen={() => setSyncOpen(true)} />
+      <SyncDrawer open={syncOpen} onClose={() => setSyncOpen(false)} />
     </div>
   )
 }

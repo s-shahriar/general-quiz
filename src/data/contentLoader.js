@@ -5,6 +5,7 @@ import {
   BANGLA_SAHITYA_TOPICS, LIVEMCQ_TOPICS,
 } from './index.js'
 import { VOCAB_TOPICS } from './vocabTopics.js'
+import { rememberQuestion } from '../lib/questionLabels.js'
 
 // On-demand content: quiz questions live in Supabase and are fetched per module
 // (a module = one route group) the first time that route needs them. Fetched
@@ -53,6 +54,7 @@ export function loadModule(moduleId) {
   const topics = MODULE_TOPICS[moduleId]
   const p = (async () => {
     const bySlug = new Map()
+    const nameBySlug = new Map(topics.map(t => [t.id, t.name]))
     const pageSize = 1000
     // Paginate on the UNIQUE id — ordering by the non-unique sort_order would
     // skip/duplicate rows across page boundaries (>1000 rows). Per-category
@@ -70,6 +72,9 @@ export function loadModule(moduleId) {
         const slug = r.categories.slug
         if (!bySlug.has(slug)) bySlug.set(slug, [])
         bySlug.get(slug).push({ ...mapRow(r), _sort: r.sort_order })
+        // A uid is a one-way hash of the question text, so the sync drawer can
+        // only name a queued question if we remember its text as it lands.
+        rememberQuestion(r.uid, r.question, nameBySlug.get(slug) || slug)
       }
       if (data.length < pageSize) break
     }
@@ -102,7 +107,10 @@ export async function fetchQuestionsByUids(uids) {
       .is('deleted_at', null)
       .order('sort_order', { ascending: false })
     if (error) throw error
-    for (const r of data) out.push({ ...mapRow(r), _slug: r.categories.slug, _module: r.categories.module, _catName: r.categories.name })
+    for (const r of data) {
+      out.push({ ...mapRow(r), _slug: r.categories.slug, _module: r.categories.module, _catName: r.categories.name })
+      rememberQuestion(r.uid, r.question, r.categories.name)
+    }
   }
   return out
 }
