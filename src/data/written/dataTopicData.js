@@ -3,7 +3,7 @@
 import {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
-  Landmark, Gauge, Ship, CreditCard,
+  Landmark, Gauge, Ship, CreditCard, Layers,
 } from 'lucide-react'
 
 // Optional per-card `issues` (এর ফলে যেসব সমস্যা হয়) / `benefits` (এর সুফল) arrays —
@@ -127,12 +127,14 @@ export const DATA_CARDS = [
   {
     id: 10, cat: 'রাজস্ব ও আর্থিক খাত',
     title: 'খেলাপি ঋণ', subtitle: 'Default Loan', icon: ShieldAlert,
-    body: `সর্বোচ্চ — <strong>৬ লক্ষ ৭৭ হাজার কোটি টাকা</strong><br>মার্চ ২০২৬ — কমে <strong>৫ লক্ষ ৪৪ হাজার কোটি টাকা</strong> [BB]`,
-    tip: `৬.৭৭ লক্ষ কোটি থেকে কমে ৫.৪৪ লক্ষ কোটি — কমছে`,
+    body: `NPL = Non Performing Loan (খেলাপি ঋণ)<br>সর্বোচ্চ — <strong>৬ লক্ষ ৭৭ হাজার কোটি টাকা</strong><br>মার্চ ২০২৬ — <strong>৫ লক্ষ ৮৮ হাজার ৭০৪ কোটি টাকা</strong><br>জুন ২০২৬ — <strong>৬ লক্ষ ৬ হাজার ৫৫৫ কোটি টাকা</strong> [BB] — বিতরণ করা মোট ঋণের <strong>৩২.৭৮%</strong><br>প্রভিশন ঘাটতি — <strong>২ লক্ষ ২৭ হাজার কোটি টাকা+</strong><br>মোট খেলাপির <strong>~৭০%</strong> মাত্র <strong>১০টি ব্যাংকে</strong> কেন্দ্রীভূত<br>সর্বোচ্চ খেলাপির হার — <strong>FSIB ৯৬%</strong>, <strong>ইউনিয়ন ব্যাংক ৯৭%</strong><br>টাকার অঙ্কে শীর্ষে — <strong>ইসলামী ব্যাংক (~৭২ হাজার কোটি)</strong>, এরপর <strong>জনতা ব্যাংক</strong>`,
+    tip: `জুন ২০২৬-এ ৬ লক্ষ কোটি ছাড়াল — প্রতি ১০০ টাকা ঋণের ~৩৩ টাকাই খেলাপি`,
     issues: [
       'ব্যাংকের প্রকৃত ঋণদান ক্ষমতা কমে যায়, নতুন উদ্যোক্তারা ঋণবঞ্চিত হয়',
       'ব্যাংক খাতে তারল্য সংকট তৈরি করে',
       'প্রভিশনিং বাড়াতে হয় বলে ব্যাংকের মুনাফা ও মূলধন কমে যায়',
+      'বিশাল প্রভিশন ঘাটতি ব্যাংকের মূলধন ভিত্তি দুর্বল করে আমানতকারীর ঝুঁকি বাড়ায়',
+      'খেলাপি অল্প কিছু ব্যাংকে কেন্দ্রীভূত হওয়ায় ওই ব্যাংকগুলোতে আস্থার সংকট তৈরি হয়',
     ],
   },
   {
@@ -215,6 +217,22 @@ export const DATA_CARDS = [
       'GDP-র তুলনায় ঋণ অস্বাভাবিক না হলেও কিস্তি পরিশোধের চাপ প্রতি বছর বাড়ছে',
       'পরিশোধে ডলার খরচ হওয়ায় রিজার্ভের উপর সরাসরি টান পড়ে',
       'কম Tax-GDP অনুপাতের কারণে ঋণ পরিশোধে অভ্যন্তরীণ সম্পদ অপ্রতুল থেকে যায়',
+    ],
+  },
+  {
+    id: 18, cat: 'রাজস্ব ও আর্থিক খাত',
+    title: 'খেলাপি ঋণের শ্রেণিবিন্যাস ও প্রভিশন', subtitle: 'NPL Classification & Provisioning', icon: Layers,
+    body: `<strong>শ্রেণিবিন্যাস (মেয়াদোত্তীর্ণের সময় অনুযায়ী)</strong><br>SMA (Special Mention Account) — <strong>২ মাসের বেশি</strong>, ৩ মাসের কম<br>Sub-standard — <strong>৩ মাস+</strong><br>Doubtful — <strong>৬ মাস+</strong><br>Bad &amp; Loss — <strong>১২ মাস+</strong> (পুরোনো নিয়মে ছিল <strong>৯ মাস+</strong>)<br><br><strong>প্রভিশন (Provision)</strong><br>General Provision — Standard <strong>১%</strong>, SMA <strong>৫%</strong><br>Specific Provision — Sub-standard <strong>২০%</strong>, Doubtful <strong>৫০%</strong>, Bad &amp; Loss <strong>১০০%</strong>`,
+    tip: `সময়: ২ → ৩ → ৬ → ১২ মাস; প্রভিশন: ১ → ৫ → ২০ → ৫০ → ১০০ শতাংশ`,
+    issues: [
+      'শ্রেণিবিন্যাস কঠোর হওয়ায় খাতায় খেলাপির অঙ্ক হঠাৎ বড় দেখায়',
+      'উচ্চ হারে প্রভিশন রাখতে হওয়ায় ব্যাংকের মুনাফা ও বিতরণযোগ্য তহবিল কমে',
+      'প্রভিশন রাখতে না পারলে ঘাটতি জমে মূলধন পর্যাপ্ততা (CAR) ভেঙে পড়ে',
+    ],
+    benefits: [
+      'আন্তর্জাতিক মান (Basel III / IFRS 9) অনুযায়ী প্রকৃত চিত্র উঠে আসে',
+      'সময়মতো প্রভিশন রাখায় ভবিষ্যৎ লোকসান সামলানোর সক্ষমতা তৈরি হয়',
+      'ঋণ লুকানোর সুযোগ কমে, ব্যাংক খাতে স্বচ্ছতা বাড়ে',
     ],
   },
 ]
