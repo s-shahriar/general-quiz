@@ -420,6 +420,12 @@
   font-size: 12px;
   flex-shrink: 0;
 }
+/* A bolded label marks the row worth memorising; lift it out of the muted tone
+   so the weight actually reads at 12px. */
+.mf-f-box .label strong {
+  color: var(--text-2);
+  font-weight: 700;
+}
 .mf-f-box .val {
   color: var(--mf-gold2);
   font-weight: 600;

@@ -11,8 +11,8 @@ export default function SolidSection() {
           <StatBox val="8" label="কৌণিক বিন্দু (Vertex)" color="var(--mf-teal)"/>
           <StatBox val="12" label="ধার (Edge)" color="var(--mf-blue)"/>
         </div>
-        <FBox label="ঘনকের কর্ণ (মহাকর্ণ)" tex="= \\sqrt{3}\\,a" highlight/>
-        <FBox label="একটি তলের কর্ণ" tex="= \\sqrt{2}\\,a"/>
+        <FBox label={<strong>ঘনকের কর্ণ (মহাকর্ণ)</strong>} tex={"= \\sqrt{3}\\,a"} highlight/>
+        <FBox label="একটি তলের কর্ণ" tex={"= \\sqrt{2}\\,a"}/>
         <p style={{fontSize:13,color:'var(--text-3)',marginBottom:10}}>
           Euler সূত্র: F + V − E = 2 → 6 + 8 − 12 = 2 ✓ &nbsp;|&nbsp; প্রতিটিতে সমকোণ = <span className="mf-fi">24টি</span>
         </p>
