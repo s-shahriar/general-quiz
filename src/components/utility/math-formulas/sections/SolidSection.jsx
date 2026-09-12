@@ -1,4 +1,4 @@
-import { Card, CardTitle, Mem, SectionHeader, StatBox } from '../MathFormulaHelpers'
+import { Card, CardTitle, FBox, Mem, SectionHeader, StatBox } from '../MathFormulaHelpers'
 
 export default function SolidSection() {
   return (
@@ -11,6 +11,8 @@ export default function SolidSection() {
           <StatBox val="8" label="কৌণিক বিন্দু (Vertex)" color="var(--mf-teal)"/>
           <StatBox val="12" label="ধার (Edge)" color="var(--mf-blue)"/>
         </div>
+        <FBox label="ঘনকের কর্ণ (মহাকর্ণ)" tex="= \\sqrt{3}\\,a" highlight/>
+        <FBox label="একটি তলের কর্ণ" tex="= \\sqrt{2}\\,a"/>
         <p style={{fontSize:13,color:'var(--text-3)',marginBottom:10}}>
           Euler সূত্র: F + V − E = 2 → 6 + 8 − 12 = 2 ✓ &nbsp;|&nbsp; প্রতিটিতে সমকোণ = <span className="mf-fi">24টি</span>
         </p>
@@ -26,7 +28,7 @@ export default function SolidSection() {
             <tr><td>একটি তলের ক্ষেত্রফল</td><td className="hl">a²</td><td className="hl">ab বা bc বা ca</td></tr>
             <tr><td>সমগ্র পৃষ্ঠতল</td><td className="hl">6a²</td><td className="hl">2(ab + bc + ca)</td></tr>
             <tr><td>একটি তলের কর্ণ</td><td className="hl">√2 · a</td><td className="hl">√(a²+b²) ইত্যাদি</td></tr>
-            <tr><td>মহাকর্ণ / হেলান তলের উন্নতি</td><td className="hl">√3 · a</td><td className="hl">√(a² + b² + c²)</td></tr>
+            <tr><td>মহাকর্ণ (ঘনকের কর্ণ) / হেলান তলের উন্নতি</td><td className="hl">√3 · a</td><td className="hl">√(a² + b² + c²)</td></tr>
           </tbody>
         </table></div>
         <Mem title="💡 মনে রাখুন — ঘনক vs ঘনবস্তু" style={{marginTop:12}}>
