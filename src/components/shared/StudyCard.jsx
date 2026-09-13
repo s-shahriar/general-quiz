@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Bookmark, CheckCircle, Lightbulb, Star, XCircle } from 'lucide-react'
 import RichText from './RichText'
 import Highlightable from './Highlightable.jsx'
+import { guardHighlightClick } from '../../lib/textAnchor.js'
 import { useHighlights } from '../../contexts/HighlightContext.jsx'
 import { uidOf } from '../../lib/qid.js'
 import DeleteButton from './DeleteButton.jsx'
@@ -29,6 +30,8 @@ export default function StudyCard({
   const { getFor } = useHighlights()
   const qid = uidOf(q)
   const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
+  // The question is highlightable too, as its own block on the same uid.
+  const hlQ = qid ? getFor(qid).filter(h => h.block === 'q') : undefined
 
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
@@ -80,7 +83,9 @@ export default function StudyCard({
         </div>
       </div>
 
-      <RichText as="div" className="study-question" html={q.question} />
+      <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
+        <Highlightable as="div" className="study-question" block="q" html={q.question} highlights={hlQ} />
+      </div>
 
       <div className="study-options">
         {opts.map(key => {

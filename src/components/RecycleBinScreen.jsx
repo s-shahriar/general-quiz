@@ -4,6 +4,7 @@ import { Trash2, RotateCcw, ChevronLeft, AlertTriangle } from 'lucide-react'
 import RichText from './shared/RichText'
 import TopbarActions from './shared/TopbarActions.jsx'
 import { fetchDeletedQuestions } from '../lib/trashSync.js'
+import { pendingBinIds } from '../lib/offlineQueue.js'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import { useAuth } from '../contexts/AuthContext.jsx'
 
@@ -23,7 +24,7 @@ export default function RecycleBinScreen() {
     if (!user) { setItems([]); return }
     let live = true
     fetchDeletedQuestions()
-      .then(d => { if (live) setItems(d) })
+      .then(d => { if (live) { const busy = pendingBinIds(); setItems(d.filter(x => !busy.has(x._id))) } })
       .catch(e => { if (live) { setError(e.message); setItems([]) } })
     return () => { live = false }
   }, [user])

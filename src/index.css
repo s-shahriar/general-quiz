@@ -4250,17 +4250,20 @@ button {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
-.hl-c-mint   { background: var(--hl-mint);   box-shadow: inset 0.16em 0 0 var(--hl-mint-e); }
-.hl-c-amber  { background: var(--hl-amber);  box-shadow: inset 0.16em 0 0 var(--hl-amber-e); }
-.hl-c-rose   { background: var(--hl-rose);   box-shadow: inset 0.16em 0 0 var(--hl-rose-e); }
-.hl-c-violet { background: var(--hl-violet); box-shadow: inset 0.16em 0 0 var(--hl-violet-e); }
+.hl-c-mint   { background: var(--hl-mint); }
+.hl-c-amber  { background: var(--hl-amber); }
+.hl-c-rose   { background: var(--hl-rose); }
+.hl-c-violet { background: var(--hl-violet); }
 
-/* Explanations here may contain real HTML — tables, sup/sub, figures. A mark
-   must not disturb any of it, so inside a table cell or a sup/sub it drops the
-   padding that would otherwise nudge the layout. */
+/* Explanations and questions here may contain real HTML — tables, sup/sub,
+   figures. A mark must not disturb any of it, so inside a table cell or a
+   sup/sub it drops the padding that would otherwise nudge the layout. */
 .explanation-text table .hl-mark,
 .explanation-text sup .hl-mark,
-.explanation-text sub .hl-mark {
+.explanation-text sub .hl-mark,
+.hl-q-root table .hl-mark,
+.hl-q-root sup .hl-mark,
+.hl-q-root sub .hl-mark {
   padding: 0; margin: 0;
 }
 
@@ -4314,8 +4317,6 @@ button {
 }
 .hl-swatch.on { color: var(--text-3); background: var(--hover-bg); }
 .hl-swatch:active { transform: scale(0.92); }
-/* The swatch background must never inherit the mark's inset edge. */
-.hl-bar .hl-swatch { box-shadow: none; }
 
 .hl-bar-sep { width: 1px; height: 22px; background: var(--border); margin: 0 3px; }
 .hl-bar-del {
@@ -4373,14 +4374,20 @@ button {
 .hl-spin { animation: hlSpin 0.9s linear infinite; }
 @keyframes hlSpin { to { transform: rotate(360deg); } }
 
-/* Selection must stay enabled everywhere inside an answer, including on
-   touch devices where some resets disable it. Controls are excluded so a
-   long-press on a button selects nothing instead of grabbing its label. */
-.explanation-box, .explanation-box :not(button):not(button *):not(svg):not(svg *) {
+/* Selection must stay enabled everywhere inside an answer or a highlightable
+   question, including on touch devices where some resets disable it. Controls
+   are excluded so a long-press on a button selects nothing instead of grabbing
+   its label. */
+.explanation-box, .explanation-box :not(button):not(button *):not(svg):not(svg *),
+[data-hl-root], [data-hl-root] :not(button):not(button *):not(svg):not(svg *) {
   -webkit-user-select: text;
   user-select: text;
   -webkit-touch-callout: default;
 }
+
+/* Question highlight root. It only marks where a question's block lives and
+   must generate no box, so wrapping a question never changes its layout. */
+.hl-q-root { display: contents; }
 
 /* ══════════ Sync queue drawer ══════════ */
 

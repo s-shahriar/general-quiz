@@ -10,11 +10,11 @@ import { uidOf } from '../lib/qid.js'
 import { shuffle } from '../lib/utils'
 import CategorySidebar from './CategorySidebar.jsx'
 import QuizOptions from './shared/QuizOptions'
-import RichText from './shared/RichText'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
 import Highlightable from './shared/Highlightable.jsx'
+import { guardHighlightClick } from '../lib/textAnchor.js'
 import { useHighlights } from '../contexts/HighlightContext.jsx'
 
 export default function QuizMode({
@@ -63,6 +63,8 @@ export default function QuizMode({
   const qid  = q ? uidOf(q) : null
   // Block key 'explanation' — an MCQ answer has one text block, no index.
   const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
+  // The question is highlightable too, as its own block on the same uid.
+  const hlQ = qid ? getFor(qid).filter(h => h.block === 'q') : undefined
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
 
@@ -136,7 +138,9 @@ export default function QuizMode({
       </div>
 
       <div className="quiz-card anim-slide">
-        <RichText as="div" className="quiz-question" html={q.question} />
+        <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
+          <Highlightable as="div" className="quiz-question" block="q" html={q.question} highlights={hlQ} />
+        </div>
 
         <QuizOptions options={q.options} correctAnswer={q.correct_answer} selected={selected} revealed={revealed} accentColor={topic.color} onPick={pick} />
 
