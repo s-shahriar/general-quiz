@@ -98,10 +98,10 @@ export default function StudyCard({
             else              cls += ' dim'
           }
           return (
-            <button key={key} className={cls} style={isCorrect && shown ? { '--c': color } : {}} onClick={() => pick(key)}>
+            <button key={key} className={cls} onClick={() => pick(key)}>
               <span className="study-opt-key">{key.toUpperCase()}</span>
               <RichText className="study-opt-text" html={q.options[key]} />
-              {shown && isCorrect && <CheckCircle size={13} style={{ color, marginLeft: 'auto', flexShrink: 0 }} />}
+              {shown && isCorrect && <CheckCircle size={13} style={{ color: '#10b981', marginLeft: 'auto', flexShrink: 0 }} />}
               {shown && isWrong   && <XCircle size={13} style={{ color: '#ef4444', marginLeft: 'auto', flexShrink: 0 }} />}
             </button>
           )
