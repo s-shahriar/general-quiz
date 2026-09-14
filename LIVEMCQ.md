@@ -351,17 +351,18 @@ next load.
 
 There are **two ways to sync, both fully supported — pick per sync**:
 
-- **§8.A — AI-guided (existing, unchanged):** hand the livefav/API JSON to an AI
-  agent, which classifies each question (§4) and inserts via the Supabase MCP.
-  Use this when you're syncing *with* an AI.
-- **§8.B — no-AI, the in-app Admin panel:** do it yourself in the app — upload the
+- **§8.A — no-AI, the in-app Admin panel:** do it yourself in the app — upload the
   JSON, classify from a dropdown, click Insert. Use this when you want to sync
-  *without* an AI. Everything except the category choice is mechanical (dedup,
-  option/answer mapping, `uid`, `sort_order`), so there's no hand-editing SQL —
-  the thing that caused the option-corruption bug (§11).
+  *without* an AI. Everything except the category (and optional sub-topic) choice
+  is mechanical (dedup, option/answer mapping, `uid`, `sort_order`), so there's no
+  hand-editing SQL — the thing that caused the option-corruption bug (§11).
+- **§8.B — AI-guided (backend sync):** hand the livefav/API JSON to an AI agent,
+  which classifies each question (§4), picks its sub-topic where the category has
+  them (§8.C), and inserts via the Supabase MCP. Use this when you're syncing
+  *with* an AI.
 
 Both write through the same DB and dedup by `favorite_id`, so you can mix them
-freely across syncs.
+freely across syncs. **Sub-topics (§8.C)** apply to both paths.
 
 ### 8.A No-AI path — the in-app LiveMCQ Admin panel
 
@@ -386,14 +387,22 @@ freely across syncs.
    old misalignment bug), *answer index out of range*.
    Shortcuts: **Set category for N selected** applies one category in bulk, and
    **Apply N suggestions** accepts the confident suggestions (§8.A.1) at once.
+   **Sub-topic (optional, §8.C):** once a category is picked, a second dropdown
+   offers that category's sub-topics (today বাংলা ব্যাকরণ, English Grammar and
+   গণিত), with its own suggestion chip and an **Apply N sub-topic suggestions**
+   shortcut. Leaving it empty never blocks Insert. `+ নতুন sub-topic…` creates a
+   new one in place — a category with no list shows a `+ sub-topic যোগ করুন` link.
 6. **Click Insert.** The panel builds each row deterministically
    (`src/lib/livemcqAdmin.js` → `toInsertRow`), computes `uid` with the app's own
    `qid.js` (so it matches at render time), and calls the `admin_livemcq_insert`
    RPC. Inserted questions leave the list; the rest stay for the next pass. New
    rows are live on the next load.
-7. **Delete or recategorise** from the **Manage & delete** tab — search by text or
-   `favorite_id`, then hit the trash icon (`admin_livemcq_delete`) or the
-   folder icon / category chip to move it (`admin_livemcq_set_category`).
+7. **Delete, recategorise or set a sub-topic** from the **Manage & delete** tab —
+   search by text or `favorite_id`, then hit the trash icon (`admin_livemcq_delete`),
+   the folder icon / category chip to move it (`admin_livemcq_set_category`), or
+   the tag chip to set/clear its sub-topic (`admin_livemcq_set_subtopic`). With a
+   category selected, a second filter narrows the list by sub-topic (or *No
+   sub-topic*, to find unlabelled rows).
 
 #### 8.A.1 Category suggestions (still no AI)
 The panel suggests a category, but nothing about it is a model: it is a plain
@@ -470,22 +479,35 @@ corpus sampled down, the same rows are worth +1.5 to +3pp (10% of corpus:
 category, or a lopsided import week. Weight is 0.25 so they never outvote a real
 LiveMCQ neighbour.
 
-##### Measured now (5-fold over all 2271 livemcq rows)
+##### Measured now (2026-09-14 — 5-fold over the 2024 live livemcq rows)
+
+Re-measure any time with `node scripts/eval-livemcq-classifier.mjs` (add
+`--grid` to re-run the tuning search). It reads the live DB with the anon key,
+excludes recycle-binned rows, and builds each fold's index exactly the way the
+browser does. (The earlier 2271-row figures counted rows that have since been
+recycle-binned, so the two runs are not directly comparable.)
 
 | confidence | tier | n | correct |
 |---|---|---|---|
-| 85–100% | strong | 1608 | 99.6% |
-| 60–85% | likely | 459 | 92.4% |
-| 34–60% | **weak** | 194 | 61.9% |
+| 85–100% | strong | 1387 | 99.4% |
+| 60–85% | likely | 441 | 92.1% |
+| 34–60% | **weak** | 184 | 64.1% |
 
-**94.5% correct overall**, abstaining on 10 of 2271. **Apply-all only touches
-≥60%** (`BULK_APPLY_MIN`) — that subset is **91.0% of a batch at 98.0%
-precision** (was 65% at 92.6%). Weak suggestions still render, marked *low
-confidence*, but must be accepted one at a time.
+**94.0% correct overall** (macro 93.2%), abstaining on 12 of 2024. **Apply-all
+only touches ≥60%** (`BULK_APPLY_MIN`) — that subset is **90.3% of a batch at
+97.6% precision**. Weak suggestions still render, marked *low confidence*, but
+must be accepted one at a time.
+
+**Retrain (2026-09-14):** the grid over `k` ∈ {10, 15, 20} × explanation weight
+∈ {0.4, 0.55, 0.7} × `priorAlpha` ∈ {0.2, 0.3, 0.4} topped out at 94.4% — +0.4pp,
+inside the ~0.3–0.5pp plateau noted in `livemcqClassify.js`, and the best cell
+(`k=20`) lowers Apply-all coverage to 88.9%. Shipped settings are unchanged;
+the new rows since the last run are picked up automatically because the index is
+rebuilt from the DB, not trained offline.
 
 Remaining weak spots are genuinely ambiguous rather than fixable by more data:
-`lm_mental_ability` 71.6% (puzzles that read as গণিত), and the
-বাংলাদেশ ↔ আন্তর্জাতিক ↔ ভূগোল triangle at 88–92%. Read the nearest-match line
+`lm_mental_ability` 78.4% (puzzles that read as গণিত), and the
+বাংলাদেশ ↔ আন্তর্জাতিক ↔ বিজ্ঞান group at 88–90%. Read the nearest-match line
 there. The ranker improves on its own as you classify more; there is no keyword
 list to maintain.
 
@@ -516,10 +538,11 @@ wrong. The old `livemcq.knowledge.v1` localStorage key is deleted on cache clear
 so it stops occupying quota.
 
 Staleness is decided by the server, never guessed. `classifier_fingerprint()`
-returns `{n, sig}` where `sig` is an md5 over `(id, category_id)` for every live
-row **in all five trained modules** — so an insert, a delete **or a
-recategorise** all invalidate the cache, including changes made from another
-browser. It replaces `livemcq_fingerprint()` here for exactly one reason: the
+returns `{n, sig}` where `sig` is an md5 over `(id, category_id, extra.subtopic)`
+for every live row **in all five trained modules** — so an insert, a delete, a
+**recategorise or a sub-topic change** all invalidate the cache, including
+changes made from another browser. The cached corpus also carries each row's
+sub-topic label (`FORMAT = 3`). It replaces `livemcq_fingerprint()` here for exactly one reason: the
 index now contains সাহিত্য and GK rows, and the livemcq-only hash would let an
 edit in those modules sit unnoticed. A `count`/`max(created_at)` probe would
 silently miss recategorises, since neither value moves.
@@ -553,12 +576,16 @@ the browser cannot write to them directly. The only write path is four
 not the owner uid (`803521e1-…`, ksnkkc), so even a signed-in non-owner (there are
 none by design — see the account lockdown) cannot insert or delete:
 - `admin_livemcq_insert(rows jsonb)` — dedup by `favorite_id` (DB + within batch),
-  insert, renumber each touched category. Returns `{inserted, skipped, skipped_fids}`.
+  insert, renumber each touched category. Each row may carry an optional
+  `subtopic` slug, which must belong to that row's category (else the call
+  raises). Returns `{inserted, skipped, skipped_fids}`.
 - `admin_livemcq_delete(fids text[])` — hard-delete by `favorite_id`, renumber.
 - `admin_livemcq_set_category(fids text[], new_slug text)` — recategorise.
-  Writes **only** `questions.category_id`; `uid`, `question`, `options`,
-  `correct_answer`, `correct_answer_text`, `explanation` and `extra` are never
-  referenced. Renumbers the old **and** new category. Returns `{moved}`.
+  Writes `questions.category_id` and drops `extra.subtopic` (sub-topic lists are
+  per category, so the old one can't be valid in the new home); `uid`,
+  `question`, `options`, `correct_answer`, `correct_answer_text`, `explanation`
+  and `extra.favorite_id` are never touched. Renumbers the old **and** new
+  category. Returns `{moved}`.
   ⚠ Because `(category_id, sort_order)` is UNIQUE, a moved row cannot carry its
   old `sort_order` into the destination — it would collide with whatever holds
   that slot. The function parks moved rows on distinct negative `sort_order`s
@@ -567,30 +594,177 @@ none by design — see the account lockdown) cannot insert or delete:
   runs over those rows too and `sort_order` is `int4`.
   Because `user_progress` is keyed by `uid` (a hash of the question text), a move
   cannot detach a Nailed/Important flag.
-- `admin_livemcq_renumber(cat uuid)` — internal; `EXECUTE` revoked from public.
+- `admin_livemcq_set_subtopic(fids text[], new_subtopic text)` — set a sub-topic
+  (must belong to each row's category) or clear it with `null`/`''`. Writes
+  **only** `extra.subtopic`. Returns `{updated}`.
+- `admin_livemcq_add_subtopic(cat_slug text, sub_name text)` — create a sub-topic
+  under a livemcq category (latin names get a readable slug, others `st_<hash>`;
+  re-adding an existing name returns it). Returns `{slug, name, created}`.
+- `admin_livemcq_renumber(cat uuid)` — internal; `EXECUTE` revoked from public,
+  anon **and** authenticated (only `service_role` + the definer functions call
+  it). ⚠ Until 2026-09-14 it was in fact still executable by anon despite this
+  doc; fixed in migration `livemcq_admin_rpc_grants`.
+
+All six owner-gated RPCs above have `EXECUTE` revoked from `anon`/`public` and
+granted to `authenticated` — the owner check inside each body is still the real
+gate; the grant just keeps signed-out callers from reaching them at all.
 
 One further function is **read-only** and not part of the write path:
 - `classifier_fingerprint()` — `STABLE`, *not* `SECURITY DEFINER`, granted to
   `anon`/`authenticated`. Returns `{n, sig}` over the five modules the suggester
-  trains on, for the knowledge cache (§8.A.2). It reads exactly what the caller
+  trains on (hashing `id, category_id, extra.subtopic`), for the knowledge cache
+  (§8.A.2). It reads exactly what the caller
   could already `SELECT` under the public-read policy, so it grants no new
   access. `livemcq_fingerprint()` is the livemcq-only predecessor; it is still
   defined but no longer called.
 
 Migrations: `admin_livemcq_rpcs`, then `admin_livemcq_set_category` +
 `admin_livemcq_set_category_fix_sort_order_collision`, then
-`livemcq_fingerprint`, then `classifier_fingerprint` (general-quiz).
+`livemcq_fingerprint`, then `classifier_fingerprint`, then `livemcq_subtopics`
+(table + seed lists + sub-topic RPCs + sub-topic-aware fingerprint) and
+`livemcq_admin_rpc_grants` (general-quiz).
 UI: `src/components/admin/AdminScreen.jsx`, helpers in `src/lib/livemcqAdmin.js`,
+sub-topic lists in `src/lib/subtopics.js`,
 suggester in `src/lib/livemcqClassify.js`, what it is allowed to learn from in
 `src/lib/livemcqTraining.js`, its cached corpus in `src/lib/livemcqKnowledge.js`,
 gated route `/admin` in `App.jsx`, entry link in `AccountButton.jsx`.
 
-### 8.B AI-guided path (existing, unchanged) — mapping reference
+### 8.C Sub-topics (বাংলা ব্যাকরণ · English Grammar · গণিত)
+
+Three LiveMCQ categories are split one level further, so they can be studied the
+way the বাংলা / English modules are (সন্ধি, সমাস … / Voice, Narration …). A
+sub-topic is **optional** everywhere: a question without one still inserts,
+renders and counts — it just shows under *অন্যান্য* in the sub-topic view.
+
+#### Data model
+- **Lists:** table `subtopics(id, category_id → categories, slug, name, sort_order)`,
+  `unique(category_id, slug)`, public SELECT under RLS. Lists are **per category**
+  and created from the Admin panel (`admin_livemcq_add_subtopic`), so they are not
+  hard-coded in the bundle. Client: `src/lib/subtopics.js` (one fetch per session,
+  `useSubtopicLists()`).
+- **Assignment:** `questions.extra.subtopic = <subtopics.slug>` of the row's own
+  category. `contentLoader` spreads `extra`, so every screen already sees
+  `q.subtopic`. It plays no part in dedup, `uid`, ordering or progress.
+- **Moving category clears it** (`admin_livemcq_set_category`).
+- **Any category can get a list later** — create its first sub-topic from the
+  Admin panel; the Study switcher appears as soon as a category has one.
+
+#### The lists (seeded 2026-09-14) and what goes where
+Every existing question in these three categories (332 + 211 + 336, recycle-binned
+included) was labelled by reading it, on 2026-09-14. বাংলা / English reuse the
+sibling module's topic slugs so those modules can train the suggester.
+
+**`lm_bangla_byakoron` — বাংলা ব্যাকরণ**
+| slug | name | what goes here |
+|---|---|---|
+| `dhwoni_o_borno` | ধ্বনি ও বর্ণ | ধ্বনি/বর্ণ, মাত্রা, উচ্চারণের স্থান, যুক্তবর্ণ, অক্ষর; **সঠিক উচ্চারণ**; ছন্দের শ্বাসাঘাত |
+| `dhwoni_poriborton` | ধ্বনি পরিবর্তন | অপিনিহিতি, অভিশ্রুতি, স্বরসঙ্গতি, সমীভবন, বিপ্রকর্ষ … |
+| `notwo_bidhan` | ণত্ব ও ষত্ব বিধান | only when the ask is the **rule itself** |
+| `sondhi` | সন্ধি | সন্ধি বিচ্ছেদ / নিয়ম |
+| `uposhorgo` | উপসর্গ | |
+| `prokiti_protoy` | প্রকৃতি ও প্রত্যয় | কৃৎ/তদ্ধিত, ধাতু |
+| `somas` | সমাস | সমাস নির্ণয়, ব্যাসবাক্য |
+| `karak` | কারক ও বিভক্তি | কারক, বিভক্তি, অনুসর্গ |
+| `pod` | পদ | পদ প্রকরণ, লিঙ্গ, বচন, পুরুষ, কাল; নির্দেশক, বলক, ক্রিয়াবিভক্তি |
+| `shobdo` | শব্দ | শব্দের উৎস (তৎসম/দেশি/বিদেশি…), গঠন, দ্বিরুক্ত, যৌগিক/রূঢ়ি |
+| `poribhasha` | পরিভাষা | |
+| `banan_bakko` | বানান ও বাক্য শুদ্ধি | শুদ্ধ/অশুদ্ধ বানান (even if the explanation cites ণত্ব/ষত্ব), বাক্য শুদ্ধি, অপপ্রয়োগ, গুরুচণ্ডালী |
+| `somarthok_shobdo` | সমার্থক ও বিপরীত শব্দ | প্রতিশব্দ, বিপরীতার্থক, শব্দের অর্থ |
+| `bagdhara` | বাগধারা ও এককথায় প্রকাশ | বাগধারা, প্রবাদ, বাক্য সংকোচন |
+| `bakko` | বাক্য, বাচ্য ও উক্তি | বাক্যের প্রকার/অংশ, বাক্যের বর্গ, বাচ্য, উক্তি, যতিচিহ্ন |
+| `bhasha` | ভাষা, উপভাষা ও রীতি | ভাষার উৎপত্তি, উপভাষা, সাধু-চলিত, ব্যাকরণ গ্রন্থ/বৈয়াকরণ |
+
+**`lm_english_grammar` — English Grammar**
+| slug | name | what goes here |
+|---|---|---|
+| `parts_of_speech` | Parts of Speech | word class, gerund/participle/infinitive identification, **degree of comparison** |
+| `tense` | Tense | |
+| `right_form_of_verbs` | Right Form of Verbs | verb form in a blank, conditionals, subjunctive, modals |
+| `subject_verb` | Subject-Verb Agreement | blank-filling on agreement |
+| `voice` | Voice | |
+| `narration` | Narration | |
+| `transformation` | Transformation of Sentences | simple/complex/compound, clause & phrase types, **inversion**, sentence arrangement |
+| `tag_question` | Tag Question | |
+| `preposition` | Preposition | appropriate preposition, a fixed preposition after a word (dispense *with*) |
+| `determiner` | Determiner / Article | |
+| `error_correct` | Error Correction | "find the error" / "choose the correct sentence" — **even when the rule behind it is SVA, a determiner etc.** (format decides) |
+| `synonym_antonym` | Synonym & Antonym | |
+| `idioms` | Idioms & Phrases | idioms, proverbs, **meaning-changing phrasal verbs** (tide over, make off) |
+| `spelling` | Spelling | incl. questions whose options differ only by spelling |
+| `vocabulary` | Vocabulary | word meaning, one-word substitution, lexical blanks, foreign phrases (ad valorem) |
+
+**`lm_math` — গণিত** (8 types, grouped from all 336 questions)
+| slug | name | what goes here |
+|---|---|---|
+| `percent_profit` | শতকরা, লাভ-ক্ষতি ও সুদ | শতকরা, লাভ-ক্ষতি, ছাড়, VAT/কর, সরল ও চক্রবৃদ্ধি সুদ, "দাম x% কমায় y কেজি বেশি", পাস নম্বর % |
+| `ratio_average` | অনুপাত, গড় ও মিশ্রণ | অনুপাত-সমানুপাত, অংশীদারি ব্যবসা, মিশ্রণ/alligation (দুধ-পানি, দুই দামের মিশ্রণ), গড় (weighted, median, গড় ব্যবধান, জ্যামিতিক গড়), বয়স, চলক/ব্যস্ত অনুপাত |
+| `work_speed` | সময়-কাজ ও ট্রেন-নৌকা | কাজ ও সময়, নল-চৌবাচ্চা, গতি-দূরত্ব, ট্রেন, নৌকা-স্রোত (উজান-ভাটি) |
+| `number_theory` | সংখ্যা, ল.সা.গু-গ.সা.গু ও ভাগশেষ | ল.সা.গু/গ.সা.গু, ভাগশেষ ও বিভাজ্যতা, উৎপাদক/মৌলিক, মূলদ সংখ্যা, rounding / custom operator arithmetic |
+| `algebra` | বীজগণিত, সূচক-লগ ও ধারা | সমীকরণ ও দ্বিঘাত মূল, অভেদ, উৎপাদকে বিশ্লেষণ, ভাগশেষ উপপাদ্য, অসমতা/পরমমান, সূচক ও করণী, লগারিদম, ধারা (AP/GP), দ্বিপদী, limit; সরল সমীকরণে দাঁড়ানো word problem |
+| `geometry_trig` | জ্যামিতি ও ত্রিকোণমিতি | কোণ, ত্রিভুজের ধর্ম/সদৃশতা/পিথাগোরাস, বৃত্তের জ্যা ও অন্তর্বৃত্তের ব্যাসার্ধ, বহুভুজের কোণ, স্থানাঙ্ক জ্যামিতি (ঢাল, রেখা), ত্রিকোণমিতি ও উচ্চতা-দূরত্ব |
+| `mensuration` | পরিমিতি: ক্ষেত্রফল ও আয়তন | ক্ষেত্রফল/পরিসীমা/আয়তন/পৃষ্ঠতল (আয়ত, বর্গ, বৃত্ত, ঘনক, সিলিন্ডার, কোণক, গোলক), অন্তর্লিখিত আকৃতির ক্ষেত্রফল, চাপ/বৃত্তকলা, বেড়া-কার্পেট খরচ, গলিয়ে নতুন আকৃতি |
+| `probability_counting` | সম্ভাবনা, বিন্যাস-সমাবেশ ও সেট | সম্ভাবনা, বিন্যাস-সমাবেশ, handshake/team selection, সেট ও Venn (দুই বিষয়ে পাস %) |
+
+**Tie-breakers:** classify by **what the ask needs**, not what it mentions — a
+square-area % increase is `mensuration`; an alligation on profit % is
+`ratio_average`; a sum of two-digit numbers with remainder 2 is `number_theory`.
+
+#### Where a sub-topic gets set
+1. **Admin Import (§8.A step 5)** — optional dropdown + suggestion chip + Apply-all.
+2. **Admin Manage** — tag chip on each row (dashed *no sub-topic* when empty) →
+   modal; with a category selected, filter by sub-topic or *No sub-topic*.
+3. **AI-guided sync (§8.B)** — the agent **must** pick a sub-topic for every new
+   question in these three categories, using the rules above, and write it into
+   `extra`. Read the live slugs first (the owner may have added some):
+   ```sql
+   select c.slug as cat, s.slug, s.name from subtopics s
+   join categories c on c.id = s.category_id order by c.slug, s.sort_order;
+   ```
+   Never invent a slug. If nothing fits, leave `subtopic` out and say so in the
+   sync report (the owner can create one in the Admin panel).
+
+#### Sub-topic suggester (still no AI)
+The same tf-idf/kNN ranker as §8.A.1, but **one index per split category**,
+built by `assemble()` in `livemcqKnowledge.js` over that category's labelled
+rows — so it can only ever answer with that category's sub-topics, and a guess
+naming a sub-topic that is not on the live list is dropped. Cross-module rows:
+the বাংলা module's topics and the English module's topics carry across **as
+sub-topic labels** (same slugs, `SUBTOPIC_SIBLINGS` in `livemcqTraining.js`,
+weight `SUBTOPIC_CROSS_WEIGHT = 0.25`; English `pin_point` / `final_exam` are exam
+sets and excluded). গণিত has no sibling module and trains on LiveMCQ rows alone.
+
+Measured 2026-09-14 (5-fold, 780 labelled live rows, `scripts/eval-livemcq-classifier.mjs`):
+
+| category | n | top-1 | Apply-all (≥60%) |
+|---|---|---|---|
+| বাংলা ব্যাকরণ | 332 | 90.7% | 84.0% of a batch @ 98.6% |
+| English Grammar | 211 | 69.7% | 38.9% @ 95.1% |
+| গণিত | 237 | 79.7% | 67.5% @ 90.6% |
+| **all** | 780 | **81.7%** | 66.8% @ 95.6% |
+
+Tiers overall: strong 254 @ 99.2%, likely 267 @ 92.1%, weak 208 @ 66.8%.
+English is the weak one for a real reason: several sub-topics hold 1–4 examples
+(Voice, Tag Question, Determiner) and `error_correct` / `preposition` /
+`parts_of_speech` share vocabulary. In গণিত, `geometry_trig` (9/19) reads like
+`mensuration`. Both improve as questions get labelled. Grid (k × explanation
+weight × priorAlpha × cross weight) best was 82.2% — noise, with lower macro
+accuracy — so defaults are shared with the category index.
+
+#### Study view (LiveMCQ)
+On a LiveMCQ topic's **Study** page, a category with a sub-topic list gets a
+switch: **সব একসাথে** (default — unchanged) | **Sub-topic অনুযায়ী** → a grid of
+sub-topic cards with their un-nailed question counts (empty ones hidden,
+unlabelled ones under *অন্যান্য*) → tap one for its list, where the Important
+filter, search and pagination all work inside that sub-topic. Quiz mode still
+runs over the whole category.
+
+### 8.B AI-guided path (backend sync) — mapping reference
 Hand the livefav/API JSON to the AI agent and let it classify (§4) and insert via
 the Supabase MCP. This path stays fully supported. The mapping the agent applies:
 `answer 1→a…5→e` (`0`/absent → `null`); `[option1..option5]` non-empty → `options`
 `{a..e}`; `correct_answer_text` = chosen option; `question`/`explanation` HTML
-**as-is**; `type='mcq'`; `extra = {"favorite_id":"<id>"}` (**required dedup key**);
+**as-is**; `type='mcq'`; `extra = {"favorite_id":"<id>"}` (**required dedup key**)
+— plus `"subtopic":"<slug>"` for বাংলা ব্যাকরণ / English Grammar / গণিত (§8.C);
 `uid = uidOfText(question)` from `src/lib/qid.js` (never invent a uid). Baseline /
 verify with the DB `db_max`:
 ```sql
@@ -699,9 +873,11 @@ adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
 | **`src/lib/livemcqAdmin.js`** | deterministic helpers: normalize livefav JSON, `toInsertRow`, dedup, RPC wrappers, `OWNER_UID` |
 | **`src/lib/livemcqClassify.js`** | no-AI category suggester: tf-idf + kNN over question + explanation + options of already-classified questions (§8.A.1) |
 | **`src/lib/livemcqTraining.js`** | what the suggester may learn from: the map that relabels other modules' rows into LiveMCQ categories, and the rule that its output can never leave that set (§8.A.1) |
-| **`src/lib/livemcqKnowledge.js`** | the suggester's corpus: IndexedDB cache + server fingerprint, reuses `loadModule()` across the trained modules (§8.A.2) |
+| **`src/lib/livemcqKnowledge.js`** | the suggester's corpus: IndexedDB cache + server fingerprint, reuses `loadModule()` across the trained modules (§8.A.2); builds the per-category sub-topic indexes (§8.C) |
+| **Supabase `subtopics` table** + `src/lib/subtopics.js` | sub-topic lists per category and the session-cached client hook (§8.C) |
+| `scripts/eval-livemcq-classifier.mjs` | 5-fold CV (and `--grid` re-tuning) of the category and sub-topic suggesters against the live DB (§8.A.1, §8.C) |
 | `src/lib/qid.js` → `uidOfText()` | stable content-hash `uid`; the Admin panel computes it client-side so client/DB uids match (§8) |
-| DB RPCs `admin_livemcq_insert` / `_delete` / `_set_category` / `_renumber` | the only write path to `questions` for livemcq; owner-gated (§8.3) |
+| DB RPCs `admin_livemcq_insert` / `_delete` / `_set_category` / `_set_subtopic` / `_add_subtopic` / `_renumber` | the only write path to `questions` / `subtopics` for livemcq; owner-gated (§8.A access model) |
 | `public/lmdata/*.json` | the 13 category files — **frozen original seed / backup only**, not read at runtime |
 | `src/data/index.js` → `LIVEMCQ_TOPICS` | topic metadata (name/icon/color); `questions:[]` filled from the DB |
 | `src/components/shared/RichText.jsx` | HTML/entity-safe renderer for math/figures |
@@ -709,8 +885,8 @@ adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
 | ~~`src/data/livemcqLoader.js`, `src/hooks/useLiveMcq.js`~~ | **removed** in the Supabase migration (superseded by `contentLoader.js`) |
 
 To add more questions later: **use the LiveMCQ Admin panel** (§8) — upload the
-livefav JSON, classify, Insert. No code changes or redeploy needed; the app reads
-the DB live.
+livefav JSON, classify (category, plus sub-topic where offered), Insert. No code
+changes or redeploy needed; the app reads the DB live.
 
 ---
 

@@ -101,6 +101,41 @@ export function livemcqLabelFor(moduleId, slug) {
   return MODULE_TO_LIVEMCQ[moduleId] || CATEGORY_TO_LIVEMCQ[slug] || null
 }
 
+// ── Sub-topics ──────────────────────────────────────────────
+// Two of the three split LiveMCQ categories have a sibling module built on the
+// same syllabus, and that module's topics ARE the sub-topics: বাংলা module's
+// `somas` is বাংলা ব্যাকরণ → সমাস, English module's `voice` is English Grammar →
+// Voice. Same slugs on both sides, so a foreign row carries its topic across as
+// its sub-topic label. গণিত has no sibling and trains on LiveMCQ rows alone.
+//
+// English `pin_point` and `final_exam` are exam sets, not grammar topics, and
+// are left out; they still train the category index above.
+export const SUBTOPIC_CROSS_WEIGHT = 0.25
+
+const SUBTOPIC_SIBLINGS = {
+  bangla: new Set([
+    'dhwoni_o_borno', 'dhwoni_poriborton', 'notwo_bidhan', 'sondhi', 'uposhorgo',
+    'prokiti_protoy', 'somas', 'karak', 'pod', 'shobdo', 'poribhasha', 'banan_bakko',
+    'somarthok_shobdo',
+  ]),
+  english: new Set([
+    'parts_of_speech', 'tense', 'right_form_of_verbs', 'subject_verb', 'voice',
+    'narration', 'transformation', 'tag_question', 'preposition', 'determiner',
+    'error_correct',
+  ]),
+}
+
+/**
+ * The sub-topic a row should train as, or null.
+ * @param {string} moduleId  source module
+ * @param {string} slug      source category slug
+ * @param {object} q         the question (LiveMCQ rows carry `q.subtopic`)
+ */
+export function subtopicLabelFor(moduleId, slug, q) {
+  if (moduleId === 'livemcq') return q?.subtopic || null
+  return SUBTOPIC_SIBLINGS[moduleId]?.has(slug) ? slug : null
+}
+
 // The closure guarantee, checked rather than asserted in a comment: every
 // target above must be a live LiveMCQ topic id. If a topic is ever renamed in
 // data/index.js this fails loudly at load instead of silently suggesting a

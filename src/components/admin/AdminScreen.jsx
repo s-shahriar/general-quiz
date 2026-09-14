@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, Loader2,
   ChevronDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight,
-  Wand2, FolderInput, X, CircleAlert,
+  Wand2, FolderInput, X, CircleAlert, Tag, Plus,
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import RichText from '../shared/RichText.jsx'
@@ -14,9 +14,11 @@ import {
   extractRawItems, normalizeItem, toInsertRow,
   fetchExistingFavoriteIds, fetchLivemcqRows,
   insertRows, deleteFavoriteIds, setCategoryForFavoriteIds,
+  setSubtopicForFavoriteIds, addSubtopic,
 } from '../../lib/livemcqAdmin.js'
 import { BULK_APPLY_MIN } from '../../lib/livemcqClassify.js'
 import { getClassifier, clearKnowledgeCache } from '../../lib/livemcqKnowledge.js'
+import { fetchSubtopics, useSubtopicLists, subtopicName } from '../../lib/subtopics.js'
 
 const stripTags = (s) => (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 const catName = (slug) => CATEGORY_OPTIONS.find((c) => c.slug === slug)?.name || slug
@@ -83,6 +85,7 @@ function ImportPanel({ onInserted }) {
   const [missing, setMissing] = useState(() => new Set()) // fids flagged by a failed insert
   const [clf, setClf] = useState(null)         // { size, suggest } — local, no AI
   const [bulkSlug, setBulkSlug] = useState('')
+  const lists = useSubtopicLists()             // { [categorySlug]: [{ slug, name }] }
   const fileRef = useRef(null)
   const clfRequested = useRef(false)
 
@@ -122,7 +125,7 @@ function ImportPanel({ onInserted }) {
         if (existing.has(norm.favorite_id)) { dupInDb++; continue }
         if (seen.has(norm.favorite_id)) { dupInFile++; continue }
         seen.add(norm.favorite_id)
-        next.push({ norm, slug: '', picked: true })
+        next.push({ norm, slug: '', subtopic: '', picked: true })
       }
       setItems(next)
       setSummary({ total: raw.length, dupInDb, dupInFile, badFid, fresh: next.length })
@@ -147,6 +150,17 @@ function ImportPanel({ onInserted }) {
     return m
   }, [clf, items])
 
+  // Sub-topic suggestions exist only once a category is chosen, and only for a
+  // category that has a sub-topic list — the sub-topic index is per category.
+  const subHints = useMemo(() => {
+    const m = new Map()
+    if (clf?.suggestSubtopic) for (const it of items) {
+      const list = lists[it.slug]
+      if (it.slug && list?.length) m.set(it.norm.favorite_id, clf.suggestSubtopic(it.norm, it.slug, list))
+    }
+    return m
+  }, [clf, items, lists])
+
   const picked = useMemo(() => items.filter((it) => it.picked), [items])
   const pickedNoCat = useMemo(() => picked.filter((it) => !it.slug), [picked])
   const pickedReady = useMemo(() => picked.filter((it) => it.slug), [picked])
@@ -167,13 +181,16 @@ function ImportPanel({ onInserted }) {
     setItems((prev) => prev.map((it) => (it.norm.favorite_id === fid ? { ...it, ...changes } : it)))
   }, [])
 
+  // Sub-topic lists are per category, so a category change drops the sub-topic.
   const setSlug = useCallback((fid, slug) => {
-    patch(fid, { slug })
+    patch(fid, { slug, subtopic: '' })
     if (slug) setMissing((prev) => {
       if (!prev.has(fid)) return prev
       const nextSet = new Set(prev); nextSet.delete(fid); return nextSet
     })
   }, [patch])
+
+  const setSubtopic = useCallback((fid, subtopic) => patch(fid, { subtopic }), [patch])
 
   const togglePick = useCallback((fid) => {
     setItems((prev) => prev.map((it) => (it.norm.favorite_id === fid ? { ...it, picked: !it.picked } : it)))
@@ -193,10 +210,21 @@ function ImportPanel({ onInserted }) {
     setMissing(new Set())
   }
 
+  // Same bar as categories. Only fills questions that already have a category
+  // and no sub-topic yet; never overwrites a choice.
+  function applyAllSubHints() {
+    setItems((prev) => prev.map((it) => {
+      const h = subHints.get(it.norm.favorite_id)
+      return h && it.slug && !it.subtopic && h.confidence >= BULK_APPLY_MIN ? { ...it, subtopic: h.slug } : it
+    }))
+  }
+
   function applyBulk(slug) {
     setBulkSlug('')
     if (!slug) return
-    setItems((prev) => prev.map((it) => (it.picked ? { ...it, slug } : it)))
+    setItems((prev) => prev.map((it) => (
+      it.picked ? { ...it, slug, subtopic: it.slug === slug ? it.subtopic : '' } : it
+    )))
     setMissing(new Set())
   }
 
@@ -221,7 +249,7 @@ function ImportPanel({ onInserted }) {
     setBusy(true)
     try {
       const sent = new Set(subset.map((it) => it.norm.favorite_id))
-      const res = await insertRows(subset.map((it) => toInsertRow(it.norm, it.slug)))
+      const res = await insertRows(subset.map((it) => toInsertRow(it.norm, it.slug, it.subtopic)))
       invalidateModule('livemcq')
       // The corpus just grew, so the cached knowledge is stale by definition.
       // Dropping it here means the next file in this same session is scored
@@ -247,6 +275,10 @@ function ImportPanel({ onInserted }) {
   const hintable = items.filter((it) => {
     const h = hints.get(it.norm.favorite_id)
     return !it.slug && h && h.confidence >= BULK_APPLY_MIN
+  }).length
+  const subHintable = items.filter((it) => {
+    const h = subHints.get(it.norm.favorite_id)
+    return it.slug && !it.subtopic && h && h.confidence >= BULK_APPLY_MIN
   }).length
 
   return (
@@ -293,6 +325,11 @@ function ImportPanel({ onInserted }) {
                 <Wand2 size={14} /> Apply {hintable} suggestion{hintable === 1 ? '' : 's'}
               </button>
             )}
+            {subHintable > 0 && (
+              <button style={ghostBtn} onClick={applyAllSubHints} title="Fill every empty sub-topic with its suggestion">
+                <Tag size={14} /> Apply {subHintable} sub-topic suggestion{subHintable === 1 ? '' : 's'}
+              </button>
+            )}
             <StyledSelect
               value={bulkSlug}
               onChange={applyBulk}
@@ -311,11 +348,15 @@ function ImportPanel({ onInserted }) {
           item={it.norm}
           slug={it.slug}
           hint={hints.get(it.norm.favorite_id)}
+          subtopic={it.subtopic}
+          subList={lists[it.slug]}
+          subHint={subHints.get(it.norm.favorite_id)}
           picked={it.picked}
           flagged={missing.has(it.norm.favorite_id)}
           busy={busy}
           index={i + 1}
           onSlug={(s) => setSlug(it.norm.favorite_id, s)}
+          onSubtopic={(s) => setSubtopic(it.norm.favorite_id, s)}
           onToggle={() => togglePick(it.norm.favorite_id)}
           onInsertOne={() => insertSubset([it])}
         />
@@ -358,7 +399,10 @@ function ImportPanel({ onInserted }) {
   )
 }
 
-function QuestionCard({ item, slug, hint, picked, flagged, busy, index, onSlug, onToggle, onInsertOne }) {
+function QuestionCard({
+  item, slug, hint, subtopic, subList, subHint, picked, flagged, busy, index,
+  onSlug, onSubtopic, onToggle, onInsertOne,
+}) {
   const [showExp, setShowExp] = useState(false)
   const hintTaken = hint && slug === hint.slug
   return (
@@ -428,6 +472,21 @@ function QuestionCard({ item, slug, hint, picked, flagged, busy, index, onSlug, 
       {flagged && (
         <p style={cardError}><CircleAlert size={13} style={{ flexShrink: 0 }} /> Category is required.</p>
       )}
+
+      {/* Optional — never blocks Insert. Appears once a category is picked. */}
+      {slug && subHint && subtopic !== subHint.slug && (
+        <Suggestion
+          hint={subHint}
+          label="Sub-topic"
+          nameOf={(s) => subtopicName(subList, s)}
+          onApply={() => onSubtopic(subHint.slug)}
+        />
+      )}
+      {slug && (
+        <div style={subRow}>
+          <SubtopicPicker categorySlug={slug} list={subList} value={subtopic} onChange={onSubtopic} />
+        </div>
+      )}
     </div>
   )
 }
@@ -438,15 +497,16 @@ function QuestionCard({ item, slug, hint, picked, flagged, busy, index, onSlug, 
 const TIER_LABEL = { strong: 'Likely', likely: 'Probably', weak: 'Maybe' }
 const TIER_COLOR = { strong: '#22c55e', likely: 'var(--accent, #6366f1)', weak: '#f59e0b' }
 
-function Suggestion({ hint, onApply }) {
+function Suggestion({ hint, onApply, label, nameOf = catName }) {
   const pct = Math.round(hint.confidence * 100)
   const color = TIER_COLOR[hint.tier]
   return (
     <div style={hintBox}>
-      <Wand2 size={13} style={{ color, flexShrink: 0, marginTop: 2 }} />
+      {label ? <Tag size={13} style={{ color, flexShrink: 0, marginTop: 2 }} /> : <Wand2 size={13} style={{ color, flexShrink: 0, marginTop: 2 }} />}
       <div style={{ minWidth: 0, flex: 1 }}>
         <div style={{ fontSize: '0.8rem', color: 'var(--text-2)' }}>
-          {TIER_LABEL[hint.tier]} <b style={{ color: 'var(--text)' }}>{catName(hint.slug)}</b>
+          {label && <span style={hintLabel}>{label} · </span>}
+          {TIER_LABEL[hint.tier]} <b style={{ color: 'var(--text)' }}>{nameOf(hint.slug)}</b>
           <span style={{ color: 'var(--text-3)' }}> · {pct}% agreement</span>
           {hint.tier === 'weak' && <span style={weakTag}>low confidence</span>}
         </div>
@@ -464,7 +524,12 @@ function Suggestion({ hint, onApply }) {
 
 // A native <select> restyled to look designed: no browser chrome, a custom
 // chevron, theme-aware control + option colors. Keeps native a11y/keyboard.
-function StyledSelect({ value, onChange, empty, fullWidth, style, placeholder, placeholderDisabled, includeAllLabel, invalid, disabled }) {
+// `options` defaults to the 13 categories; sub-topic pickers pass their own.
+// `optional` drops the amber "needs a value" edge for fields that may stay empty.
+function StyledSelect({
+  value, onChange, empty, fullWidth, style, placeholder, placeholderDisabled, includeAllLabel,
+  invalid, disabled, options = CATEGORY_OPTIONS, optional,
+}) {
   return (
     <div style={{ position: 'relative', display: 'inline-block', width: fullWidth ? '100%' : 'auto', ...style }}>
       <select
@@ -472,13 +537,13 @@ function StyledSelect({ value, onChange, empty, fullWidth, style, placeholder, p
         onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
         aria-invalid={invalid || undefined}
-        style={selectControl(empty, fullWidth, invalid, disabled)}
+        style={selectControl(empty, fullWidth, invalid, disabled, optional)}
       >
         {placeholder != null && (
           <option value="" disabled={!!placeholderDisabled} style={optionStyle}>{placeholder}</option>
         )}
         {includeAllLabel != null && <option value="" style={optionStyle}>{includeAllLabel}</option>}
-        {CATEGORY_OPTIONS.map((c) => (
+        {options.map((c) => (
           <option key={c.slug} value={c.slug} style={optionStyle}>{c.name}</option>
         ))}
       </select>
@@ -487,8 +552,126 @@ function StyledSelect({ value, onChange, empty, fullWidth, style, placeholder, p
   )
 }
 
+// ── Sub-topic picker ───────────────────────────────────────────
+// Optional sub-topic for one question. Lists are per category and live in the
+// DB, so "+ নতুন sub-topic…" creates one in place (owner-gated RPC), refreshes
+// every mounted list and selects it. A category with no list yet shows just an
+// add link, so a first sub-topic can be started from any category.
+const NEW_SUB = '__new__'
+
+function SubtopicPicker({ categorySlug, list, value, onChange }) {
+  const [adding, setAdding] = useState(false)
+  const [name, setName] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState('')
+  const options = list || []
+
+  async function create() {
+    const nm = name.trim()
+    if (!nm || busy) return
+    setBusy(true); setErr('')
+    try {
+      const res = await addSubtopic(categorySlug, nm)
+      await fetchSubtopics({ force: true })
+      onChange(res.slug)
+      setAdding(false); setName('')
+    } catch (e) {
+      setErr(e.message || String(e))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  if (adding) {
+    return (
+      <div style={{ width: '100%' }}>
+        <div style={addRow}>
+          <input
+            autoFocus
+            value={name}
+            disabled={busy}
+            onChange={(e) => setName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') create()
+              if (e.key === 'Escape') { setAdding(false); setErr('') }
+            }}
+            placeholder={`নতুন sub-topic — ${catName(categorySlug)}`}
+            style={addInput}
+          />
+          <button style={ghostBtn} onClick={create} disabled={busy || !name.trim()}>
+            {busy ? <Loader2 size={14} style={spin} /> : <Plus size={14} />} Add
+          </button>
+          <button style={ghostBtn} onClick={() => { setAdding(false); setErr('') }} disabled={busy} aria-label="Cancel">
+            <X size={14} />
+          </button>
+        </div>
+        {err && <p style={cardError}><CircleAlert size={13} style={{ flexShrink: 0 }} /> {err}</p>}
+      </div>
+    )
+  }
+
+  if (!options.length) {
+    return (
+      <button style={linkBtn} onClick={() => setAdding(true)}>
+        <Plus size={12} style={{ verticalAlign: -2 }} /> sub-topic যোগ করুন
+      </button>
+    )
+  }
+
+  return (
+    <StyledSelect
+      value={value || ''}
+      onChange={(v) => (v === NEW_SUB ? setAdding(true) : onChange(v))}
+      empty={!value}
+      optional
+      fullWidth
+      options={[...options, { slug: NEW_SUB, name: '+ নতুন sub-topic…' }]}
+      placeholder="Sub-topic (ঐচ্ছিক)…"
+    />
+  )
+}
+
+// Sub-topic change from Manage. Same explicit-modal reasoning as categories.
+function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
+  const [sub, setSub] = useState(row.subtopic || '')
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape' && !busy) onCancel() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [busy, onCancel])
+
+  const changed = (sub || null) !== (row.subtopic || null)
+  return (
+    <div style={overlay} onClick={busy ? undefined : onCancel}>
+      <div style={modalCard} role="dialog" aria-modal="true" aria-labelledby="sub-title" onClick={(e) => e.stopPropagation()}>
+        <div style={modalIconInfo}><Tag size={20} /></div>
+        <h3 id="sub-title" style={modalTitle}>Sub-topic</h3>
+        <div style={modalMeta}>
+          <span style={catChip}>{row.catName}</span>
+          <span style={fidTag}>fav {row.favorite_id}</span>
+        </div>
+        <div style={modalSnippet}>{stripTags(row.question).slice(0, 160) || <em style={muted}>(image-only)</em>}</div>
+        <div style={{ marginTop: 14 }}>
+          <SubtopicPicker categorySlug={row.slug} list={list} value={sub} onChange={setSub} />
+        </div>
+        <p style={modalWarn}>
+          Only the sub-topic changes (leave it empty to remove it). The question, answer,
+          category and Nailed / Important flags are untouched.
+        </p>
+        <div style={modalActions}>
+          <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
+          <button style={modalMoveBtn(changed && !busy)} onClick={() => onConfirm(sub)} disabled={!changed || busy}>
+            {busy ? <Loader2 size={15} style={spin} /> : <Check size={15} />} Save
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ── Manage / delete ────────────────────────────────────────────
 const PAGE_SIZE = 50
+const NO_SUB = '__none__'
 
 function ManagePanel({ dataVersion }) {
   const [rows, setRows] = useState(null)
@@ -501,6 +684,10 @@ function ManagePanel({ dataVersion }) {
   const [moving, setMoving] = useState(null)     // row pending category change
   const [moveBusy, setMoveBusy] = useState(false)
   const [notice, setNotice] = useState('')
+  const [subFilter, setSubFilter] = useState('')  // '' all · NO_SUB · a sub-topic slug
+  const [subMoving, setSubMoving] = useState(null)
+  const [subBusy, setSubBusy] = useState(false)
+  const lists = useSubtopicLists()
 
   // Refetches when Import inserts rows. Existing rows stay on screen while the
   // new set loads, so a refresh doesn't blank the list.
@@ -517,16 +704,18 @@ function ManagePanel({ dataVersion }) {
     const needle = q.trim().toLowerCase()
     return rows.filter((r) => {
       if (cat && r.slug !== cat) return false
+      if (cat && subFilter && (subFilter === NO_SUB ? r.subtopic : r.subtopic !== subFilter)) return false
       if (!needle) return true
       return (r.favorite_id && r.favorite_id.includes(needle)) ||
         stripTags(r.question).toLowerCase().includes(needle)
     })
-  }, [rows, q, cat])
+  }, [rows, q, cat, subFilter])
 
   // Any change to the query/filter jumps back to the first page (reset in the
   // handlers rather than an effect to avoid a cascading render).
   const setQuery = (v) => { setQ(v); setPage(0) }
-  const setCategory = (v) => { setCat(v); setPage(0) }
+  const setCategory = (v) => { setCat(v); setSubFilter(''); setPage(0) }
+  const setSub = (v) => { setSubFilter(v); setPage(0) }
 
   async function doDelete() {
     const row = confirm
@@ -559,7 +748,8 @@ function ManagePanel({ dataVersion }) {
       // even though its size didn't change.
       clearKnowledgeCache()
       setRows((prev) => prev.map((r) => (
-        r.id === row.id ? { ...r, slug, catName: catName(slug) } : r
+        // The RPC also clears the sub-topic: lists are per category.
+        r.id === row.id ? { ...r, slug, catName: catName(slug), subtopic: null } : r
       )))
       setNotice(`Moved fav ${row.favorite_id} → ${catName(slug)}`)
       setMoving(null)
@@ -568,6 +758,29 @@ function ManagePanel({ dataVersion }) {
       setMoving(null)
     } finally {
       setMoveBusy(false)
+    }
+  }
+
+  // Sub-topic only — the RPC writes extra.subtopic and nothing else.
+  async function doSetSubtopic(sub) {
+    const row = subMoving
+    if (!row?.favorite_id || (sub || null) === (row.subtopic || null)) { setSubMoving(null); return }
+    setSubBusy(true); setError('')
+    try {
+      await setSubtopicForFavoriteIds([row.favorite_id], sub)
+      invalidateModule('livemcq')
+      // A sub-topic is a training label for the sub-topic suggester.
+      clearKnowledgeCache()
+      setRows((prev) => prev.map((r) => (r.id === row.id ? { ...r, subtopic: sub || null } : r)))
+      setNotice(sub
+        ? `fav ${row.favorite_id} → ${subtopicName(lists[row.slug], sub)}`
+        : `fav ${row.favorite_id}: sub-topic removed`)
+      setSubMoving(null)
+    } catch (e) {
+      setError(e.message || String(e))
+      setSubMoving(null)
+    } finally {
+      setSubBusy(false)
     }
   }
 
@@ -587,6 +800,15 @@ function ManagePanel({ dataVersion }) {
           <input value={q} onChange={(e) => setQuery(e.target.value)} placeholder="Search text or favorite_id…" style={searchInput} />
         </div>
         <StyledSelect value={cat} onChange={setCategory} empty={false} includeAllLabel="All categories" />
+        {cat && lists[cat]?.length > 0 && (
+          <StyledSelect
+            value={subFilter}
+            onChange={setSub}
+            empty={false}
+            includeAllLabel="All sub-topics"
+            options={[...lists[cat], { slug: NO_SUB, name: 'No sub-topic' }]}
+          />
+        )}
       </div>
       {notice && (
         <p style={okBox}>
@@ -611,6 +833,16 @@ function ManagePanel({ dataVersion }) {
               >
                 {r.catName} <ChevronDown size={11} style={{ opacity: 0.7 }} />
               </button>
+              {(r.subtopic || lists[r.slug]?.length > 0) && (
+                <button
+                  style={subChipBtn(!!r.subtopic)}
+                  disabled={!r.favorite_id}
+                  onClick={() => setSubMoving(r)}
+                  title="Change sub-topic"
+                >
+                  <Tag size={10} /> {r.subtopic ? subtopicName(lists[r.slug], r.subtopic) : 'no sub-topic'}
+                </button>
+              )}
               <span style={fidTag}>fav {r.favorite_id ?? '—'}</span>
               {r.correct_answer == null && <span style={warnTag}>no key</span>}
               {r.deleted && <span style={dangerTag}>recycle-binned</span>}
@@ -640,6 +872,15 @@ function ManagePanel({ dataVersion }) {
           busy={deleting === confirm.favorite_id}
           onCancel={() => setConfirm(null)}
           onConfirm={doDelete}
+        />
+      )}
+      {subMoving && (
+        <SubtopicModal
+          row={subMoving}
+          list={lists[subMoving.slug]}
+          busy={subBusy}
+          onCancel={() => setSubMoving(null)}
+          onConfirm={doSetSubtopic}
         />
       )}
       {moving && (
@@ -687,6 +928,7 @@ function MoveCategoryModal({ row, busy, onCancel, onConfirm }) {
         <p style={modalWarn}>
           Only the category changes. The question, options, answer, explanation and
           favorite_id are untouched, and Nailed / Important flags follow the question.
+          Its sub-topic is cleared, since sub-topic lists belong to a category.
         </p>
         <div style={modalActions}>
           <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
@@ -833,11 +1075,11 @@ const dangerTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSi
 const optRow = (correct) => ({ display: 'flex', alignItems: 'center', gap: 9, padding: '6px 9px', borderRadius: 8, marginBottom: 4, background: correct ? 'rgba(34,197,94,0.10)' : 'var(--card2)', fontSize: '0.88rem', color: 'var(--text)' })
 const optLetter = (correct) => ({ width: 20, height: 20, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.72rem', fontWeight: 700, background: correct ? '#22c55e' : 'var(--border)', color: correct ? '#fff' : 'var(--text-2)' })
 const expToggle = { background: 'none', border: 'none', color: 'var(--text-3)', fontSize: '0.8rem', cursor: 'pointer', padding: '2px 0', marginBottom: 4 }
-const selectControl = (empty, fullWidth, invalid, disabled) => ({
+const selectControl = (empty, fullWidth, invalid, disabled, optional) => ({
   width: fullWidth ? '100%' : 'auto', boxSizing: 'border-box',
   appearance: 'none', WebkitAppearance: 'none', MozAppearance: 'none',
   padding: '9px 34px 9px 12px', borderRadius: 9,
-  border: `1px solid ${invalid ? '#ef4444' : empty ? 'rgba(245,158,11,0.6)' : 'var(--border)'}`,
+  border: `1px solid ${invalid ? '#ef4444' : empty && !optional ? 'rgba(245,158,11,0.6)' : 'var(--border)'}`,
   background: invalid ? 'rgba(239,68,68,0.08)' : 'var(--card2)',
   color: empty ? 'var(--text-3)' : 'var(--text)',
   fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.2,
@@ -866,7 +1108,7 @@ const ghostInsertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', 
 const footerHint = { display: 'block', padding: 0, marginTop: 1, background: 'none', border: 'none', color: '#b45309', fontSize: '0.76rem', fontWeight: 600, textAlign: 'left', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }
 const errorBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.83rem', color: '#b91c1c', background: 'rgba(239,68,68,0.10)', padding: '9px 12px', borderRadius: 9 }
 const okBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.85rem', color: '#15803d', background: 'rgba(34,197,94,0.10)', padding: '9px 12px', borderRadius: 9 }
-const searchRow = { display: 'flex', gap: 8, marginBottom: 8 }
+const searchRow = { display: 'flex', gap: 8, marginBottom: 8, flexWrap: 'wrap' }
 const searchInput = { width: '100%', padding: '9px 11px 9px 32px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
 const mRow = { display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', borderRadius: 10, border: '1px solid var(--border)', background: 'var(--card)', marginBottom: 8 }
 const mMeta = { display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap', marginBottom: 3 }
@@ -882,3 +1124,13 @@ const modalIconInfo = { width: 40, height: 40, borderRadius: '50%', display: 'fl
 const modalMoveBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: on ? 'var(--accent, #6366f1)' : 'var(--border)', color: on ? '#fff' : 'var(--text-3)', fontSize: '0.85rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
 const noticeClose = { marginLeft: 'auto', display: 'inline-flex', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 2 }
 const spin = { animation: 'spin 1s linear infinite' }
+const subRow = { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }
+const addRow = { display: 'flex', alignItems: 'center', gap: 6, width: '100%' }
+const addInput = { flex: 1, minWidth: 0, padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
+const hintLabel = { fontWeight: 700, color: 'var(--text-3)' }
+const subChipBtn = (set) => ({
+  display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', fontWeight: 600, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
+  border: `1px ${set ? 'solid' : 'dashed'} var(--border)`,
+  background: set ? 'rgba(99,102,241,0.10)' : 'transparent',
+  color: set ? 'var(--accent, #6366f1)' : 'var(--text-3)',
+})

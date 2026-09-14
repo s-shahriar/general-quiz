@@ -42,16 +42,21 @@
 // Every constant below was picked by grid search against the live corpus, not
 // by taste. The surface is flat around these values — neighbouring settings
 // score within ~0.3pp — so they are chosen mid-plateau rather than at a peak.
-const W_QUESTION = 1
-const W_EXPLANATION = 0.55
-const W_OPTIONS = 0.25
-
-const K = 15             // neighbours polled per suggestion
-const SIM_POWER = 2      // vote weight = sim^SIM_POWER; a close match outvotes a vague one
-const PRIOR_ALPHA = 0.3  // see `prior` below — damps large categories
-const MIN_DF = 2         // drop tokens seen in only one document
-const MIN_SIM = 0.08     // below this the nearest match is noise
-const MIN_CONF = 0.34    // below this the neighbours disagree too much
+//
+// `buildClassifier(rows, overrides)` accepts any of these by name. The app never
+// passes overrides; scripts/eval-livemcq-classifier.mjs does, to re-run the
+// grid search whenever the corpus has grown.
+export const DEFAULTS = Object.freeze({
+  wQuestion: 1,
+  wExplanation: 0.55,
+  wOptions: 0.25,
+  k: 15,            // neighbours polled per suggestion
+  simPower: 2,      // vote weight = sim^simPower; a close match outvotes a vague one
+  priorAlpha: 0.3,  // see `prior` below — damps large categories
+  minDf: 2,         // drop tokens seen in only one document
+  minSim: 0.08,     // below this the nearest match is noise
+  minConf: 0.34,    // below this the neighbours disagree too much
+})
 
 // Bengali block + latin words. Single characters are dropped as noise.
 const TOKEN_RE = /[ঀ-৿]{2,}|[a-z][a-z0-9]+/g
@@ -120,7 +125,7 @@ function optionValues(options) {
 
 // Weighted term frequency across all three fields. Option and explanation
 // tokens are namespaced so they never merge with question tokens.
-function featureFreq(item) {
+function featureFreq(item, cfg) {
   const tf = new Map()
   const field = (text, prefix, weight) => {
     if (!text) return
@@ -131,10 +136,10 @@ function featureFreq(item) {
       else tf.set(key, { n: 1, w: weight })
     }
   }
-  field(item.question, '', W_QUESTION)
-  field(item.explanation, 'e:', W_EXPLANATION)
+  field(item.question, '', cfg.wQuestion)
+  field(item.explanation, 'e:', cfg.wExplanation)
   const opts = optionValues(item.options)
-  if (opts.length) field(opts.join('   '), 'o:', W_OPTIONS)
+  if (opts.length) field(opts.join('   '), 'o:', cfg.wOptions)
   // Case- and punctuation-sensitive, so it is matched on the raw question
   // rather than on anything `tokenize` has already flattened.
   if (ANALOGY_RE.test(stripTags(item.question))) tf.set('$analogy', { n: 1, w: W_ANALOGY })
@@ -174,17 +179,19 @@ export function tierOf(confidence) {
  *   cross-module training rows come in below 1 (see livemcqTraining.js).
  *   `source` is carried through to the suggestion untouched, so the UI can say
  *   where a matched neighbour came from.
+ * @param {Partial<typeof DEFAULTS>} [overrides]  tuning, for evaluation only
  * @returns {{ size: number, suggest: (item: object) => Suggestion|null }}
  *
  * Suggestion = { slug, confidence, tier, nearest: { question, slug, source, sim }, runnerUp }
  */
-export function buildClassifier(labeled) {
+export function buildClassifier(labeled, overrides) {
+  const cfg = { ...DEFAULTS, ...overrides }
   const docs = []          // { slug, question, source, w, tf }
   const df = new Map()
 
   for (const row of labeled || []) {
     if (!row || !row.slug) continue
-    const tf = featureFreq(row)
+    const tf = featureFreq(row, cfg)
     if (!tf.size) continue
     docs.push({ slug: row.slug, question: row.question, source: row.source, w: row.weight ?? 1, tf })
     for (const t of tf.keys()) df.set(t, (df.get(t) || 0) + 1)
@@ -195,7 +202,7 @@ export function buildClassifier(labeled) {
   // and at these corpus sizes those are overwhelmingly proper nouns, digits and
   // typos. Dropping them costs nothing measurable and cuts the index by ~55%.
   const idf = new Map()
-  for (const [t, n] of df) if (n >= MIN_DF) idf.set(t, Math.log(1 + N / n))
+  for (const [t, n] of df) if (n >= cfg.minDf) idf.set(t, Math.log(1 + N / n))
 
   // L2-normalized tf-idf vectors + an inverted index so scoring touches only
   // the documents that share a token with the query.
@@ -229,7 +236,7 @@ export function buildClassifier(labeled) {
 
   function suggest(item) {
     if (!N || !item) return null
-    const qtf = featureFreq(item)
+    const qtf = featureFreq(item, cfg)
     if (!qtf.size) return null
 
     let sq = 0
@@ -252,9 +259,9 @@ export function buildClassifier(labeled) {
     }
     if (!scores.size) return null
 
-    const ranked = [...scores.entries()].sort((a, b) => b[1] - a[1]).slice(0, K)
+    const ranked = [...scores.entries()].sort((a, b) => b[1] - a[1]).slice(0, cfg.k)
     const [bestIdx, bestSim] = ranked[0]
-    if (bestSim < MIN_SIM) return null
+    if (bestSim < cfg.minSim) return null
 
     // Neighbours vote, weighted by sim² so a close match outweighs a vague one,
     // by the document's own weight, and against its category's size.
@@ -262,14 +269,14 @@ export function buildClassifier(labeled) {
     let total = 0
     for (const [i, sim] of ranked) {
       const d = docs[i]
-      const w = Math.pow(sim, SIM_POWER) * d.w / Math.pow(prior.get(d.slug) || 1, PRIOR_ALPHA)
+      const w = Math.pow(sim, cfg.simPower) * d.w / Math.pow(prior.get(d.slug) || 1, cfg.priorAlpha)
       byCat.set(d.slug, (byCat.get(d.slug) || 0) + w)
       total += w
     }
     const order = [...byCat.entries()].sort((a, b) => b[1] - a[1])
     const [slug, top] = order[0]
     const confidence = total > 0 ? top / total : 0
-    if (confidence < MIN_CONF) return null
+    if (confidence < cfg.minConf) return null
 
     const near = docs[bestIdx]
     return {

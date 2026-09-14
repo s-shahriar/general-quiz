@@ -38,14 +38,17 @@
 import { supabase } from './supabase.js'
 import { isModuleLoaded, loadModule, topicsOfModule } from '../data/contentLoader.js'
 import { buildClassifier } from './livemcqClassify.js'
-import { TRAINING_MODULES, CROSS_MODULE_WEIGHT, livemcqLabelFor } from './livemcqTraining.js'
+import {
+  TRAINING_MODULES, CROSS_MODULE_WEIGHT, SUBTOPIC_CROSS_WEIGHT, livemcqLabelFor, subtopicLabelFor,
+} from './livemcqTraining.js'
 
 const DB_NAME = 'livemcq-knowledge'
 const STORE = 'corpus'
 const RECORD_KEY = 'current'
 // Bump when the corpus shape or the tokenizer changes, so old caches are
 // rejected instead of silently scoring under stale rules.
-const FORMAT = 2
+// 3: rows carry their sub-topic label (`t`).
+const FORMAT = 3
 // The pre-IndexedDB cache. Removed on first run so it stops occupying quota.
 const LEGACY_LOCALSTORAGE_KEY = 'livemcq.knowledge.v1'
 
@@ -135,6 +138,7 @@ async function corpusFromModules() {
           o: q.options || null,
           e: q.explanation || null,
           s: slug,
+          t: subtopicLabelFor(moduleId, t.id, q) || undefined,
           m: native ? undefined : moduleId,   // absent means "a real LiveMCQ row"
         })
       }
@@ -152,9 +156,35 @@ const toDoc = (r) => ({
   weight: r.m ? CROSS_MODULE_WEIGHT : 1,
 })
 
+// One index over every row for the category, plus one per split category over
+// that category's sub-topic-labelled rows. A sub-topic index only ever sees rows
+// of its own category, so it can only answer with that category's sub-topics.
+function assemble(rows) {
+  const clf = buildClassifier(rows.map(toDoc))
+  const byCategory = new Map()
+  for (const r of rows) {
+    if (!r.t) continue
+    if (!byCategory.has(r.s)) byCategory.set(r.s, [])
+    byCategory.get(r.s).push({ ...toDoc(r), slug: r.t, weight: r.m ? SUBTOPIC_CROSS_WEIGHT : 1 })
+  }
+  const subIndex = new Map([...byCategory].map(([cat, docs]) => [cat, buildClassifier(docs)]))
+  return {
+    size: clf.size,
+    suggest: clf.suggest,
+    // `allowed` is the category's live sub-topic list; a guess naming a
+    // sub-topic that is not on it is dropped rather than shown.
+    suggestSubtopic(item, categorySlug, allowed) {
+      const s = subIndex.get(categorySlug)?.suggest(item)
+      if (!s) return null
+      if (allowed && !allowed.some((a) => a.slug === s.slug)) return null
+      return s
+    },
+  }
+}
+
 /**
  * Get a ready classifier, doing the least work that is still correct.
- * @returns {Promise<{ size: number, suggest: Function }>}
+ * @returns {Promise<{ size: number, suggest: Function, suggestSubtopic: Function }>}
  */
 export function getClassifier() {
   if (inflight) return inflight
@@ -165,7 +195,7 @@ export function getClassifier() {
 
     const cached = await readCache()
     if (cached && cached.sig === fp.sig) {                    // tier 2
-      const clf = buildClassifier(cached.rows.map(toDoc))
+      const clf = assemble(cached.rows)
       memo = { sig: fp.sig, clf }
       return clf
     }
@@ -181,7 +211,7 @@ export function getClassifier() {
     } catch {
       sig = null
     }
-    const clf = buildClassifier(rows.map(toDoc))
+    const clf = assemble(rows)
     if (sig) { writeCache(sig, rows); memo = { sig, clf } }
     return clf
   })()

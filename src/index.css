@@ -1522,6 +1522,76 @@ button {
   font-weight: 700;
 }
 
+/* LiveMCQ sub-topic view (StudyMode) */
+.study-view-switch {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.study-view-switch button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.study-view-switch button:hover:not(.active) {
+  background: var(--hover-bg);
+}
+.subtopic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+}
+.subtopic-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.subtopic-card:hover {
+  border-color: var(--sub-color, var(--border-bright));
+  transform: translateY(-1px);
+}
+.subtopic-card-count {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.subtopic-crumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.subtopic-crumb-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
 .study-search-bar {
   display: flex;
   align-items: center;
@@ -3226,7 +3296,7 @@ button {
   right: 0;
   bottom: 0;
   z-index: 300;
-  width: 280px;
+  width: min(300px, 88vw);
   background: var(--surface-glass);
   border-left: 1px solid var(--border-md);
   box-shadow: -8px 0 40px rgba(0, 0, 0, 0.22);
@@ -3360,6 +3430,59 @@ button {
   border-radius: 6px;
   padding: 2px 6px;
   flex-shrink: 0;
+}
+
+/* Sub-topics of the current LiveMCQ category, nested under it */
+.cat-sidebar-subs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 2px 0 8px 22px;
+  padding-left: 10px;
+  border-left: 2px solid color-mix(in srgb, var(--tc) 30%, transparent);
+}
+.cat-sidebar-sub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 36px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: var(--text-2);
+  cursor: pointer;
+  transition:
+    background 0.16s,
+    color 0.16s,
+    border-color 0.16s;
+}
+.cat-sidebar-sub:hover:not(.current) {
+  background: color-mix(in srgb, var(--tc) 8%, transparent);
+  color: var(--tc);
+}
+.cat-sidebar-sub.current {
+  background: color-mix(in srgb, var(--tc) 12%, transparent);
+  border-color: color-mix(in srgb, var(--tc) 35%, transparent);
+  color: var(--tc);
+  font-weight: 600;
+  cursor: default;
+}
+.cat-sidebar-sub-name {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.cat-sidebar-sub-count {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--tc);
+  opacity: 0.85;
 }
 
 /* ── Module Nav Bar ────────────────────────────── */

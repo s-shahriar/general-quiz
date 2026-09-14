@@ -1,4 +1,4 @@
-import { ChevronLeft, LayoutGrid, Bookmark, Search, Star, X } from 'lucide-react'
+import { ChevronLeft, LayoutGrid, Bookmark, Search, Star, X, List, Tag } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
@@ -14,8 +14,10 @@ import StudyCard from './shared/StudyCard.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import useDebounce from '../hooks/useDebounce.js'
+import { useSubtopicLists } from '../lib/subtopics.js'
 
 const PAGE_SIZE = 20
+const NO_SUB = '__none__'   // questions without a (known) sub-topic
 
 function normalize(str) {
   return (str ?? '').toLowerCase().trim()
@@ -68,6 +70,19 @@ export default function StudyMode({
   const [page, setPage]                       = useState(1)
   const dQuery = useDebounce(query, 250)
 
+  // LiveMCQ categories that have a sub-topic list get a second way to browse.
+  // "All in one" stays the default; the switcher groups the same questions by
+  // sub-topic (a picker grid first, then that sub-topic's list).
+  const subLists = useSubtopicLists()
+  const subList = topic?.module === 'livemcq' ? (subLists[topic.id] || []) : []
+  const [view, setView] = useState('all')          // 'all' | 'subtopic'
+  const [activeSub, setActiveSub] = useState(null) // null = picker grid
+  const [prevTopicId, setPrevTopicId] = useState(topic?.id)
+  if (prevTopicId !== topic?.id) {
+    setPrevTopicId(topic?.id)
+    setActiveSub(null)
+  }
+
   const topics = topic ? getTopicGroup(topic, topicGroupProp) : []
 
   // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place
@@ -78,9 +93,24 @@ export default function StudyMode({
       .filter(({ q }) => q.options && q.correct_answer && !trashedIds.has(q._id))
   }, [topic, ready, trashedIds]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const nonNailed      = validQ.filter(({ qid }) => !mastered.has(qid))
-  const nailedCt       = validQ.length - nonNailed.length
+  const nonNailedAll   = validQ.filter(({ qid }) => !mastered.has(qid))
+  const nailedCt       = validQ.length - nonNailedAll.length
+
+  const bySub = view === 'subtopic' && subList.length > 0
+  const knownSub = (q) => subList.some((s) => s.slug === q.subtopic)
+  const inActiveSub = ({ q }) => (activeSub === NO_SUB ? !knownSub(q) : q.subtopic === activeSub)
+  const nonNailed = bySub && activeSub ? nonNailedAll.filter(inActiveSub) : nonNailedAll
   const importantCount = nonNailed.filter(({ qid }) => important?.has(qid)).length
+
+  // Picker cards, in the list's order; empty sub-topics are hidden. Built for
+  // any category with a list — the category sidebar lists them too.
+  const subCards = subList.length > 0
+    ? [
+        ...subList.map((s) => ({ slug: s.slug, name: s.name, n: nonNailedAll.filter(({ q }) => q.subtopic === s.slug).length })),
+        { slug: NO_SUB, name: 'অন্যান্য', n: nonNailedAll.filter(({ q }) => !knownSub(q)).length },
+      ].filter((c) => c.n > 0)
+    : []
+  const activeSubName = activeSub === NO_SUB ? 'অন্যান্য' : subList.find((s) => s.slug === activeSub)?.name
 
   const afterFilter = filterImportant
     ? nonNailed.filter(({ qid }) => important?.has(qid))
@@ -97,7 +127,7 @@ export default function StudyMode({
 
   // Reset to page 1 when the filter/search/topic changes (adjust state during
   // render — avoids setState-in-effect cascading renders).
-  const filterKey = `${dQuery}|${filterImportant}|${topic?.id}`
+  const filterKey = `${dQuery}|${filterImportant}|${topic?.id}|${view}|${activeSub}`
   const [prevKey, setPrevKey] = useState(filterKey)
   if (prevKey !== filterKey) {
     setPrevKey(filterKey)
@@ -164,7 +194,60 @@ export default function StudyMode({
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
           onSelect={goTopic}
+          subtopics={subCards.length ? subCards : undefined}
+          currentSubtopic={bySub ? activeSub : undefined}
+          onSelectSubtopic={(slug) => {
+            setView('subtopic')
+            setActiveSub(slug)
+            window.scrollTo({ top: 0 })
+          }}
         />
+      )}
+
+      {subList.length > 0 && (
+        <div className="study-view-switch" role="tablist" aria-label="View">
+          <button
+            role="tab"
+            aria-selected={!bySub}
+            className={!bySub ? 'active' : ''}
+            style={!bySub ? { color: topic.color, borderColor: topic.color, background: `${topic.color}15` } : undefined}
+            onClick={() => { setView('all'); setActiveSub(null) }}
+          >
+            <List size={13} /> সব একসাথে
+          </button>
+          <button
+            role="tab"
+            aria-selected={bySub}
+            className={bySub ? 'active' : ''}
+            style={bySub ? { color: topic.color, borderColor: topic.color, background: `${topic.color}15` } : undefined}
+            onClick={() => { setView('subtopic'); setActiveSub(null) }}
+          >
+            <Tag size={13} /> Sub-topic অনুযায়ী
+          </button>
+        </div>
+      )}
+
+      {bySub && !activeSub ? (
+        <div className="subtopic-grid">
+          {subCards.map((c) => (
+            <button
+              key={c.slug}
+              className="subtopic-card"
+              style={{ '--sub-color': topic.color }}
+              onClick={() => { setActiveSub(c.slug); window.scrollTo({ top: 0 }) }}
+            >
+              <span className="subtopic-card-name">{c.name}</span>
+              <span className="subtopic-card-count" style={{ color: topic.color }}>{c.n}</span>
+            </button>
+          ))}
+          {!subCards.length && <p className="study-search-meta">এই বিষয়ে পড়ার মতো কোনো প্রশ্ন বাকি নেই।</p>}
+        </div>
+      ) : (<>
+      {bySub && activeSub && (
+        <div className="subtopic-crumb">
+          <button className="back-btn" onClick={() => setActiveSub(null)}><ChevronLeft size={14} /> সব sub-topic</button>
+          <span className="subtopic-crumb-name" style={{ color: topic.color }}>{activeSubName}</span>
+        </div>
       )}
 
       <div className="study-filter-bar">
@@ -233,7 +316,7 @@ export default function StudyMode({
           <div className="study-list">
             {pageItems.map(({ q, qid }, i) => (
               <StudyCard
-                key={qid}
+                key={q._id ?? qid /* identical question texts share a uid */}
                 domId={'study-q-' + qid}
                 question={q}
                 index={(page - 1) * PAGE_SIZE + i}
@@ -250,6 +333,7 @@ export default function StudyMode({
           {totalPages > 1 && <Pagination page={page} totalPages={totalPages} onPageChange={goTo} />}
         </>
       )}
+      </>)}
     </div>
   )
 }

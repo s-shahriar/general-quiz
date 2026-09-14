@@ -76,10 +76,11 @@ export function normalizeItem(raw) {
   }
 }
 
-// Build the DB insert row for a normalized item + the chosen category slug.
-// uid is computed with the SAME qid.js the whole app uses, so it matches what
-// the browser derives at render time (Important/Nailed flags stay aligned).
-export function toInsertRow(item, slug) {
+// Build the DB insert row for a normalized item + the chosen category slug and
+// optional sub-topic slug. uid is computed with the SAME qid.js the whole app
+// uses, so it matches what the browser derives at render time (Important/Nailed
+// flags stay aligned).
+export function toInsertRow(item, slug, subtopic = '') {
   const opts = {}
   item.options.forEach((o, i) => {
     if (i < LETTERS.length) opts[LETTERS[i]] = o
@@ -95,6 +96,7 @@ export function toInsertRow(item, slug) {
     correct_answer,
     correct_answer_text,
     explanation: item.explanation || null,
+    subtopic: subtopic || null,
   }
 }
 
@@ -152,6 +154,7 @@ export async function fetchLivemcqRows() {
         deleted: r.deleted_at != null,
         slug: r.categories.slug,
         catName: r.categories.name,
+        subtopic: r.extra?.subtopic ?? null,
       })
     }
     if (data.length < pageSize) break
@@ -192,4 +195,26 @@ export async function setCategoryForFavoriteIds(fids, slug) {
   })
   if (error) throw error
   return data // { moved }
+}
+
+// Set (or clear, with '') the sub-topic of questions. The RPC writes ONLY
+// extra.subtopic and rejects a sub-topic that isn't in the row's category.
+export async function setSubtopicForFavoriteIds(fids, subtopic) {
+  const { data, error } = await supabase.rpc('admin_livemcq_set_subtopic', {
+    fids,
+    new_subtopic: subtopic || null,
+  })
+  if (error) throw error
+  return data // { updated }
+}
+
+// Create a sub-topic under a livemcq category. Re-adding an existing name
+// returns the existing one. Returns { slug, name, created }.
+export async function addSubtopic(categorySlug, name) {
+  const { data, error } = await supabase.rpc('admin_livemcq_add_subtopic', {
+    cat_slug: categorySlug,
+    sub_name: name,
+  })
+  if (error) throw error
+  return data
 }
