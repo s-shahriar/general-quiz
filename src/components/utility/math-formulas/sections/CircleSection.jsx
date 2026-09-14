@@ -120,6 +120,70 @@ export default function CircleSection() {
             ক্ষেত্রফল = π × 10² = <strong>100π</strong> বর্গফুট</p>
           </Mem>
         </Card>
+
+        <Card color="rose">
+          <CardTitle color="var(--mf-rose)">সমকোণী ত্রিভুজের অন্তর্বৃত্ত (Incircle of Right Triangle)</CardTitle>
+          <div style={{textAlign:'center',margin:'10px 0'}}>
+            <svg width="160" height="150" viewBox="0 0 160 150">
+              <polygon points="25,30 25,120 145,120" fill="rgba(240,108,126,.06)" stroke="#f06c7e" strokeWidth="2"/>
+              <circle cx="55" cy="90" r="30" fill="rgba(91,164,245,.07)" stroke="#5ba4f5" strokeWidth="2"/>
+              <path d="M 25 110 L 35 110 L 35 120" fill="none" stroke="#8899aa" strokeWidth="1.2"/>
+              <line x1="55" y1="90" x2="55" y2="120" stroke="#f0a500" strokeWidth="1.6"/>
+              <line x1="55" y1="90" x2="25" y2="90" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="55" y1="90" x2="79" y2="72" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <circle cx="55" cy="90" r="3.5" fill="#f0a500"/>
+              <text x="58" y="87" fill="#f0a500" fontSize="11" fontWeight="700">I</text>
+              <text x="58" y="110" fill="#f0a500" fontSize="11" fontWeight="700">r</text>
+              <text x="8" y="80" fill="#f06c7e" fontSize="12" fontWeight="700">b</text>
+              <text x="95" y="134" fill="#f06c7e" fontSize="12" fontWeight="700">a</text>
+              <text x="92" y="66" fill="#f06c7e" fontSize="12" fontWeight="700">c</text>
+              <text x="14" y="28" fill="#8899aa" fontSize="11">A</text>
+              <text x="12" y="134" fill="#8899aa" fontSize="11">C</text>
+              <text x="146" y="134" fill="#8899aa" fontSize="11">B</text>
+              <text x="40" y="148" fill="#f06c7e" fontSize="10" fontWeight="700">c = অতিভুজ, ∠C = 90°</text>
+            </svg>
+          </div>
+          <FBox label="অন্তর্বৃত্তের ব্যাসার্ধ" tex={"r = \\dfrac{a + b - c}{2}"} highlight/>
+          <FBox label="বিকল্প (ক্ষেত্রফল ÷ অর্ধপরিসীমা)" tex={"r = \\dfrac{ab}{a + b + c}"}/>
+          <FBox label="পরিবৃত্তের ব্যাসার্ধ (অতিভুজ = ব্যাস)" tex={"R = \\dfrac{c}{2}"}/>
+          <Mem title="💡 কেন a + b − c?">
+            <p>সমকোণী শীর্ষ C থেকে বৃত্তের দুই স্পর্শক-দৈর্ঘ্যই = <strong>r</strong>।<br/>
+            তাই অতিভুজ c = (a − r) + (b − r) → <strong>r = (a + b − c)/2</strong><br/>
+            উদাহরণ: 3-4-5 ত্রিভুজ → r = (3 + 4 − 5)/2 = <strong>1</strong></p>
+          </Mem>
+        </Card>
+
+        <Card color="blue">
+          <CardTitle color="var(--mf-blue)">সমবাহু ত্রিভুজের পরিবৃত্ত (Equilateral Triangle in Circle)</CardTitle>
+          <div style={{textAlign:'center',margin:'10px 0'}}>
+            <svg width="160" height="150" viewBox="0 0 160 150">
+              <circle cx="80" cy="78" r="58" fill="rgba(91,164,245,.06)" stroke="#5ba4f5" strokeWidth="2"/>
+              <polygon points="80,20 29.8,107 130.2,107" fill="rgba(240,165,0,.06)" stroke="#f0a500" strokeWidth="2"/>
+              <line x1="80" y1="78" x2="80" y2="20" stroke="#f06c7e" strokeWidth="1.8"/>
+              <line x1="80" y1="78" x2="80" y2="107" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="80" y1="78" x2="29.8" y2="107" stroke="#f06c7e" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <line x1="80" y1="78" x2="130.2" y2="107" stroke="#f06c7e" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <circle cx="80" cy="78" r="3.5" fill="#f06c7e"/>
+              <text x="85" y="82" fill="#f06c7e" fontSize="11" fontWeight="700">O</text>
+              <text x="84" y="52" fill="#f06c7e" fontSize="12" fontWeight="700">R</text>
+              <text x="84" y="100" fill="#0fdba8" fontSize="10" fontWeight="700">r</text>
+              <text x="76" y="121" fill="#f0a500" fontSize="12" fontWeight="700">a</text>
+              <text x="76" y="14" fill="#8899aa" fontSize="11">A</text>
+              <text x="14" y="116" fill="#8899aa" fontSize="11">B</text>
+              <text x="138" y="116" fill="#8899aa" fontSize="11">C</text>
+              <text x="38" y="148" fill="#5ba4f5" fontSize="10" fontWeight="700">শীর্ষ তিনটি বৃত্তের উপর</text>
+            </svg>
+          </div>
+          <FBox label="পরিবৃত্তের ব্যাসার্ধ" tex={"R = \\dfrac{a}{\\sqrt{3}}"} highlight/>
+          <FBox label="ত্রিভুজের উচ্চতা" tex={"h = \\dfrac{\\sqrt{3}}{2}a"}/>
+          <FBox label="কেন্দ্র O উচ্চতাকে 2 : 1 এ ভাগ করে" tex={"R = \\tfrac{2}{3}h,\\; r = \\tfrac{1}{3}h = \\dfrac{a}{2\\sqrt{3}}"}/>
+          <FBox label="পরিবৃত্তের ক্ষেত্রফল" tex={"= \\pi R^2 = \\dfrac{\\pi a^2}{3}"}/>
+          <Mem title="💡 মনে রাখুন: R = 2r">
+            <p>সমবাহু ত্রিভুজে পরিকেন্দ্র = অন্তঃকেন্দ্র = ভরকেন্দ্র (একই বিন্দু O)।<br/>
+            <strong>পরিবৃত্ত</strong> R = a/√3, <strong>অন্তর্বৃত্ত</strong> r = a/(2√3) → <strong>R = 2r</strong><br/>
+            উদাহরণ: a = 6 → R = 6/√3 = <strong>2√3</strong></p>
+          </Mem>
+        </Card>
       </div>
     </div>
   )
