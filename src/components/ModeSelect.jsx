@@ -1,15 +1,22 @@
+import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Navigate } from 'react-router-dom'
 import TopbarActions from './shared/TopbarActions.jsx'
-import { ChevronLeft, Brain, BookOpen } from 'lucide-react'
+import { ChevronLeft, Brain, BookOpen, Bookmark, Star, ListChecks, X } from 'lucide-react'
 import { ALL_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
 import { useModuleReady } from '../data/contentLoader.js'
+import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { uidOf } from '../lib/qid.js'
 
 export default function ModeSelect() {
   const { topicId } = useParams()
   const navigate = useNavigate()
   const topic = ALL_TOPICS.find(t => t.id === topicId)
   const ready = useModuleReady(topic?.module)
+  const { value: important } = useImportantContext()
+  const { value: mastered } = useMasteredContext()
+  const [chooser, setChooser] = useState(false)
 
   if (!topic) return <Navigate to="/" replace />
 
@@ -22,6 +29,24 @@ export default function ModeSelect() {
   const meta = isStudyNotes
     ? `${groupCount} টপিক${qCount ? ` · ${qCount} MCQ` : ''}`
     : ready ? `${qCount} questions available` : 'লোড হচ্ছে…'
+
+  // Same pool QuizMode draws from, so the counts shown are what you'll get.
+  const quizzable = topic.questions.filter(q => q.options && q.correct_answer)
+  let importantCt = 0
+  let nailedCt = 0
+  for (const q of quizzable) {
+    const id = uidOf(q)
+    if (important?.has(id)) importantCt++
+    if (mastered?.has(id)) nailedCt++
+  }
+
+  // Nothing marked in this topic → nothing to choose between; start straight away.
+  const startQuiz = () => {
+    if (noMcq) return
+    if (ready && (importantCt || nailedCt)) setChooser(true)
+    else navigate('quiz')
+  }
+
   return (
     <div className="mode-page anim-fade">
       <div className="study-topbar">
@@ -45,7 +70,7 @@ export default function ModeSelect() {
       <div className="mode-cards">
         <button
           className={`mode-card${noMcq ? ' mode-card-disabled' : ''}`}
-          onClick={() => !noMcq ? navigate('quiz') : null}
+          onClick={startQuiz}
           disabled={noMcq}
         >
           <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
@@ -72,6 +97,66 @@ export default function ModeSelect() {
             {isStudyNotes ? 'নোট পড়ো →' : 'Start Reading →'}
           </span>
         </button>
+      </div>
+
+      {chooser && (
+        <QuizPoolChooser
+          color={topic.color}
+          counts={{ all: quizzable.length, important: importantCt, nailed: nailedCt }}
+          onClose={() => setChooser(false)}
+          onPick={(set) => navigate(set === 'all' ? 'quiz' : `quiz?set=${set}`)}
+        />
+      )}
+    </div>
+  )
+}
+
+const POOLS = [
+  { key: 'all', icon: ListChecks, title: 'সব প্রশ্ন', sub: 'পুরো টপিক থেকে' },
+  { key: 'important', icon: Bookmark, title: 'শুধু Important', sub: 'যেগুলো Important করে রেখেছো' },
+  { key: 'nailed', icon: Star, title: 'শুধু Nailed It', sub: 'যেগুলো আয়ত্তে এসেছে — ঝালিয়ে নাও' },
+]
+
+// Which questions the MCQ quiz draws from. A centred card on desktop, a bottom
+// sheet on phones (CSS). Backdrop tap or Esc closes it.
+function QuizPoolChooser({ color, counts, onClose, onPick }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="trash-modal-backdrop quiz-pool-backdrop" onClick={onClose}>
+      <div
+        className="trash-modal quiz-pool-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="quiz-pool-title"
+        style={{ '--pc': color }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="quiz-pool-head">
+          <h3 id="quiz-pool-title" className="trash-modal-title">কোন প্রশ্নগুলো থেকে পরীক্ষা দেবে?</h3>
+          <button className="cat-sidebar-close" onClick={onClose} aria-label="Close"><X size={16} /></button>
+        </div>
+        <div className="quiz-pool-list">
+          {POOLS.map(({ key, icon: PoolIcon, title, sub }) => {
+            const n = counts[key]
+            return (
+              <button key={key} className={`quiz-pool-option pool-${key}`} disabled={!n} onClick={() => onPick(key)}>
+                <span className="quiz-pool-icon">
+                  <PoolIcon size={17} fill={key === 'all' ? 'none' : 'currentColor'} />
+                </span>
+                <span className="quiz-pool-text">
+                  <span className="quiz-pool-title">{title}</span>
+                  <span className="quiz-pool-sub">{n ? sub : 'এখনো কোনো প্রশ্ন নেই'}</span>
+                </span>
+                <span className="quiz-pool-count">{n}</span>
+              </button>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

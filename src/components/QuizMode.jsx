@@ -1,6 +1,6 @@
 import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Star } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import TopbarActions from './shared/TopbarActions.jsx'
@@ -16,6 +16,10 @@ import { useModuleReady } from '../data/contentLoader.js'
 import Highlightable from './shared/Highlightable.jsx'
 import { guardHighlightClick } from '../lib/textAnchor.js'
 import { useHighlights } from '../contexts/HighlightContext.jsx'
+
+// `?set=important|nailed` quizzes only the questions you've marked in this topic
+// (chosen on ModeSelect). No param = the whole topic, as before.
+const POOL_LABEL = { important: 'Important', nailed: 'Nailed' }
 
 export default function QuizMode({
   topic: topicProp,
@@ -35,14 +39,26 @@ export default function QuizMode({
   const [selected, setSelected] = useState(null)
   const [revealed, setRevealed] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [searchParams] = useSearchParams()
+  const setParam = searchParams.get('set')
+  const set = POOL_LABEL[setParam] ? setParam : null
 
-  // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place
-  const questions = useMemo(
-    () => topic
-      ? shuffle(topic.questions.filter(q => q.options && q.correct_answer))
-      : [],
-    [topic, ready] // eslint-disable-line react-hooks/exhaustive-deps
-  )
+  // lmReady dep forces recompute once lazy LiveMCQ questions are populated in place.
+  // A marked-set quiz also tracks its set, so it fills in once cloud progress lands.
+  const liveQuestions = useMemo(() => {
+    if (!topic) return []
+    const base = topic.questions.filter(q => q.options && q.correct_answer)
+    const pool = set === 'important' ? base.filter(q => important?.has(uidOf(q)))
+      : set === 'nailed' ? base.filter(q => mastered?.has(uidOf(q)))
+      : base
+    return shuffle(pool)
+  }, [topic, ready, set, set === 'important' ? important : null, set === 'nailed' ? mastered : null]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Frozen at the first answer: un-nailing or un-marking a question mid-quiz
+  // must not reshuffle or shrink the quiz you're in the middle of.
+  const [frozen, setFrozen] = useState(null)   // { key, list }
+  const quizKey = `${topic?.id}|${set || 'all'}`
+  const questions = frozen?.key === quizKey ? frozen.list : liveQuestions
 
   const [idx, setIdx]           = useState(0)
   const [score, setScore]       = useState(0)
@@ -57,7 +73,8 @@ export default function QuizMode({
 
   const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
   const goHome   = () => onHomeProp ? onHomeProp() : navigate(homePathForTopic(topic))
-  const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz')
+  // Switching topic from the sidebar keeps the chosen set.
+  const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz' + (set ? '?set=' + set : ''))
 
   const q    = questions[idx]
   const qid  = q ? uidOf(q) : null
@@ -70,6 +87,7 @@ export default function QuizMode({
 
   const pick = (key) => {
     if (revealed) return
+    if (frozen?.key !== quizKey) setFrozen({ key: quizKey, list: questions })
     setSelected(key)
     setRevealed(true)
     if (key === q.correct_answer) setScore(s => s + 1)
@@ -82,8 +100,26 @@ export default function QuizMode({
 
   const retry = () => { setIdx(0); setSelected(null); setRevealed(false); setScore(0); setDone(false) }
 
+  if (set && !questions.length) {
+    const Icon = set === 'important' ? Bookmark : Star
+    return (
+      <div className="quiz-page anim-fade">
+        <div className="quiz-topbar">
+          <button className="back-btn" onClick={goBack}><ChevronLeft size={15} /> Back</button>
+          <span className="quiz-topic-pill" style={{ color: topic.color }}>{topic.shortName || topic.name}</span>
+          <TopbarActions />
+        </div>
+        <div className="quiz-pool-empty">
+          <Icon size={38} className={`quiz-pool-empty-icon ${set}`} fill="currentColor" />
+          <p>{topic.name}-এ এখনো কোনো {POOL_LABEL[set]} প্রশ্ন নেই।</p>
+          <button className="back-btn" onClick={goBack}><ChevronLeft size={15} /> ফিরে যাও</button>
+        </div>
+      </div>
+    )
+  }
+
   if (!q || done) {
-    return <ScoreRingScreen score={score} total={questions.length} title="Quiz Complete!" accentColor={topic.color} onRetry={retry} onHome={goHome} />
+    return <ScoreRingScreen score={score} total={questions.length} title={set ? `${POOL_LABEL[set]} Quiz Complete!` : 'Quiz Complete!'} accentColor={topic.color} onRetry={retry} onHome={goHome} />
   }
 
   const progress  = ((idx + (revealed ? 1 : 0)) / questions.length) * 100
@@ -129,7 +165,10 @@ export default function QuizMode({
 
       <div className="quiz-progress-wrap">
         <div className="quiz-progress-header">
-          <span className="quiz-qnum">Question {idx + 1} of {questions.length}</span>
+          <span className="quiz-qnum">
+            Question {idx + 1} of {questions.length}
+            {set && <span className={`quiz-pool-tag ${set}`}>{POOL_LABEL[set]}</span>}
+          </span>
           <span className="quiz-pct">{Math.round(progress)}%</span>
         </div>
         <div className="quiz-progress-track">
