@@ -12,6 +12,7 @@ import CategorySidebar from './CategorySidebar.jsx'
 import QuizOptions from './shared/QuizOptions'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
+import QuestionEditButton from './shared/QuestionEditButton.jsx'
 import { useModuleReady } from '../data/contentLoader.js'
 import Highlightable from './shared/Highlightable.jsx'
 import { guardHighlightClick } from '../lib/textAnchor.js'
@@ -203,6 +204,7 @@ export default function QuizMode({
                 <span className="qmark-label">{isImportant ? 'Saved!' : 'Important'}</span>
               </button>
               <DeleteButton question={q} className="quiz-nail-btn" size={16} onDeleted={next} />
+              <QuestionEditButton question={q} categorySlug={topic.id} className="quiz-nail-btn" size={16} />
             </div>
             <button className="quiz-next-btn" onClick={next}>
               {idx + 1 >= questions.length ? 'ফলাফল দেখুন' : 'পরবর্তী প্রশ্ন'}

@@ -1,5 +1,6 @@
-// Offline-tolerant write queue for nail / important / delete, and for the
-// Recycle Bin's restore / delete-forever.
+// Offline-tolerant write queue for nail / important / delete, for the
+// Recycle Bin's restore / delete-forever, and for LiveMCQ topic moves and
+// sub-topic changes (questionEdits.js).
 //
 // Every one of those actions is optimistic in the UI and flows through here.
 // Flag writes are coalesced per question uid on a LAST-ACTION-WINS basis: if you
@@ -31,15 +32,24 @@
 import { bulkUpsert } from './progressSync.js'
 import { trashQuestion, restoreQuestion, purgeQuestion } from './trashSync.js'
 import { labelFor, textOf } from './questionLabels.js'
+import { setCategoryForFavoriteIds, setSubtopicForFavoriteIds } from './livemcqAdmin.js'
 
 const LS_KEY = (uid) => `gq_pq_${uid}`
 const DEBOUNCE_MS = 400
 // backoff schedule for server-reachable-but-failing; last value repeats.
 const BACKOFF_MS = [4000, 12000, 30000, 60000, 300000]
 const DONE_CAP = 50
-// Server call for each non-flag kind. A kind missing here is never sent.
-const RUN = { delete: trashQuestion, restore: restoreQuestion, purge: purgeQuestion }
+// Server call for each non-flag kind, given its entry. A kind missing here is never sent.
+const RUN = {
+  delete: (e) => trashQuestion(e.id),
+  restore: (e) => restoreQuestion(e.id),
+  purge: (e) => purgeQuestion(e.id),
+  move: (e) => setCategoryForFavoriteIds([e.meta.fid], e.meta.to),
+  subtopic: (e) => setSubtopicForFavoriteIds([e.meta.fid], e.meta.to),
+}
 const trashKey = (id) => `trash:${id}`
+const moveKey = (id) => `move:${id}`
+const subKey = (id) => `sub:${id}`
 
 // The loader module a question lives in: its _module where the loader sets one,
 // otherwise the uid's prefix, since uids are module-scoped.
@@ -76,8 +86,10 @@ function view(e) {
   // and by the time the drawer is open the content usually has landed.
   const meta = (!e.label || !e.cat) && e.uid ? labelFor(e.uid) : null
   return {
-    key: e.key, kind: e.kind, uid: e.uid, id: e.id, module: e.module, patch: e.patch,
-    label: e.label || meta?.text || '', cat: e.cat || meta?.cat || '',
+    key: e.key, kind: e.kind, uid: e.uid, id: e.id, module: e.module, patch: e.patch, meta: e.meta,
+    // A move names both topics in its own text, so it never falls back to the
+    // (pre-move) category the loader registered.
+    label: e.label || meta?.text || '', cat: e.kind === 'move' ? '' : (e.cat || meta?.cat || ''),
     at: e.at, attempts: e.attempts,
     err: e.err, syncedAt: e.syncedAt,
     state: e.syncedAt ? 'synced' : e.sending ? 'sending' : e.err ? 'failed' : 'queued',
@@ -108,7 +120,7 @@ function persist() {
     if (pending.size) {
       // Only the durable fields — `sending` / `err` / `syncedAt` describe one attempt.
       const rows = [...pending.values()].map((e) => ({
-        key: e.key, kind: e.kind, uid: e.uid, id: e.id, module: e.module, patch: e.patch,
+        key: e.key, kind: e.kind, uid: e.uid, id: e.id, module: e.module, patch: e.patch, meta: e.meta,
         label: e.label, cat: e.cat, at: e.at, attempts: e.attempts,
       }))
       localStorage.setItem(LS_KEY(userId), JSON.stringify(rows))
@@ -145,6 +157,7 @@ function makeEntry(e) {
     key: e.key, kind: e.kind, uid: e.uid || null, id: e.id || null,
     module: e.module || null,
     patch: e.patch || null,
+    meta: e.meta || null,         // move / subtopic: { fid, from, to, …Name }
     label: e.label || '', cat: e.cat || '',
     at: e.at || Date.now(), attempts: e.attempts || 0,
     sending: false, err: null, syncedAt: null,
@@ -239,6 +252,50 @@ export function enqueueBinAction(q, action) {
   afterEnqueue()
 }
 
+// A LiveMCQ topic move or sub-topic change. One entry per question per kind and
+// the latest target wins; while it is still waiting the ORIGINAL `from` is kept,
+// so the row reads as the whole change, and changing it back cancels the write.
+// The entry is re-inserted at the end: a sub-topic set after a move has to reach
+// the server after that move, because it is validated against the new topic.
+function enqueueEdit(kind, key, q, meta) {
+  if (!userId || !q?._id || !meta?.fid) return
+  const cur = pending.get(key)
+  const keepFrom = cur && !cur.sending
+  const merged = keepFrom
+    ? { ...meta, from: cur.meta.from, fromName: cur.meta.fromName, fromSub: cur.meta.fromSub, fromSubName: cur.meta.fromSubName }
+    : meta
+  pending.delete(key)
+  if (keepFrom && (merged.from || '') === (merged.to || '')) {
+    persist()
+    if (!pending.size) status = 'idle'
+    emit()
+    return
+  }
+  const uid = q.uid || q._uid || null
+  pending.set(key, makeEntry({
+    key, kind, id: q._id, uid, module: 'livemcq', meta: merged,
+    label: cur?.label || textOf(q) || labelFor(uid)?.text || '',
+    // A move names both topics in its own text; a sub-topic row adds the topic.
+    cat: kind === 'move' ? '' : (merged.catName || labelFor(uid)?.cat || ''),
+    at: keepFrom ? cur.at : Date.now(),
+  }))
+  afterEnqueue()
+}
+
+export function enqueueMove(q, meta) {
+  if (!q?._id) return
+  // The server clears the sub-topic on a move, so a sub-topic change still
+  // waiting for the old topic is moot — and would be rejected if it ran after.
+  const sub = pending.get(subKey(q._id))
+  if (sub && !sub.sending) pending.delete(subKey(q._id))
+  enqueueEdit('move', moveKey(q._id), q, meta)
+}
+
+export function enqueueSubtopic(q, meta) {
+  if (!q?._id) return
+  enqueueEdit('subtopic', subKey(q._id), q, meta)
+}
+
 // Ids whose Recycle Bin action has not landed yet. The bin re-reads the server,
 // which still lists them, so it hides these rather than offering them twice.
 export function pendingBinIds() {
@@ -307,6 +364,12 @@ function settle(entry, sentPatch) {
     cur.sending = false
     return false
   }
+  // A move / sub-topic whose target changed mid-flight: the newer target still
+  // has to go out.
+  if (cur.meta && sentPatch && cur.meta.to !== sentPatch.to) {
+    cur.sending = false
+    return false
+  }
   // A Recycle Bin decision changed mid-flight (restore became delete-forever):
   // the newer one still has to go out.
   if (cur.kind !== 'flag' && cur.kind !== entry.kind) {
@@ -343,7 +406,7 @@ async function flush() {
   // Snapshot the exact patches we're sending; anything the user changes mid-flight
   // stays queued and flushes on the next pass.
   const batch = [...pending.values()]
-  const sent = new Map(batch.map((e) => [e.key, e.patch ? { ...e.patch } : null]))
+  const sent = new Map(batch.map((e) => [e.key, e.patch ? { ...e.patch } : e.meta ? { to: e.meta.to } : null]))
   batch.forEach((e) => { e.sending = true })
   emit()
 
@@ -368,8 +431,8 @@ async function flush() {
   // gone, permission changed) must not strand the rest of the queue.
   for (const d of ops) {
     try {
-      await RUN[d.kind](d.id)
-      if (settle(d)) {
+      await RUN[d.kind](d)
+      if (settle(d, sent.get(d.key))) {
         landed++
         if (d.kind === 'restore' && d.module) restored.push(d.module)
       }

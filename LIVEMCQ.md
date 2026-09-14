@@ -713,6 +713,15 @@ square-area % increase is `mensuration`; an alligation on profit % is
 1. **Admin Import (§8.A step 5)** — optional dropdown + suggestion chip + Apply-all.
 2. **Admin Manage** — tag chip on each row (dashed *no sub-topic* when empty) →
    modal; with a category selected, filter by sub-topic or *No sub-topic*.
+2b. **On the go (owner only)** — the *Topic* button beside Delete on a LiveMCQ
+   Study card, a saved (Important / Nailed) card, or a quiz question after
+   answering, moves the question to another topic and/or sets its sub-topic.
+   The card updates at once (`src/lib/questionEdits.js` edits the loaded
+   content in place); the write goes through the offline queue as kind `move` /
+   `subtopic` → `admin_livemcq_set_category` / `_set_subtopic`, shows in the sync
+   drawer with **Undo** (undoing a move also restores the dropped sub-topic),
+   and survives being offline. A sub-topic change queued after a move is always
+   sent after it, since it is validated against the new topic.
 3. **AI-guided sync (§8.B)** — the agent **must** pick a sub-topic for every new
    question in these three categories, using the rules above, and write it into
    `extra`. Read the live slugs first (the owner may have added some):

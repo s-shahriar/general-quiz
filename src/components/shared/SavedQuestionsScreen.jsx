@@ -185,6 +185,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
                     index={(curPage - 1) * PAGE_SIZE + i}
                     color={t.color}
                     topicLabel={isAll ? (t.shortName || t.name) : null}
+                    categoryId={t.id}
                     nailed={nailApi.value.has(qid)}
                     isImportant={importantApi.value.has(qid)}
                     onNail={() => toggleNail(qid)}

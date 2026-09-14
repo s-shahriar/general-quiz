@@ -15,6 +15,7 @@ import { useModuleReady } from '../data/contentLoader.js'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import useDebounce from '../hooks/useDebounce.js'
 import { useSubtopicLists } from '../lib/subtopics.js'
+import { useContentEditsVersion } from '../lib/questionEdits.js'
 
 const PAGE_SIZE = 20
 const NO_SUB = '__none__'   // questions without a (known) sub-topic
@@ -63,6 +64,8 @@ export default function StudyMode({
   const { value: mastered, add: onNail } = useMasteredContext()
   const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
   const { trashedIds } = useTrash()
+  // Bumps when a question is moved to another topic on the go, so this list drops it.
+  const editsVersion = useContentEditsVersion()
 
   const [filterImportant, setFilterImportant] = useState(false)
   const [sidebarOpen, setSidebarOpen]         = useState(false)
@@ -91,7 +94,7 @@ export default function StudyMode({
     return topic.questions
       .map((q) => ({ q, qid: uidOf(q) }))
       .filter(({ q }) => q.options && q.correct_answer && !trashedIds.has(q._id))
-  }, [topic, ready, trashedIds]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topic, ready, trashedIds, editsVersion]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const nonNailedAll   = validQ.filter(({ qid }) => !mastered.has(qid))
   const nailedCt       = validQ.length - nonNailedAll.length
@@ -318,6 +321,7 @@ export default function StudyMode({
               <StudyCard
                 key={q._id ?? qid /* identical question texts share a uid */}
                 domId={'study-q-' + qid}
+                categoryId={topic.id}
                 question={q}
                 index={(page - 1) * PAGE_SIZE + i}
                 color={topic.color}

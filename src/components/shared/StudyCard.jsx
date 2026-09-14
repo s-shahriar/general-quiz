@@ -6,6 +6,7 @@ import { guardHighlightClick } from '../../lib/textAnchor.js'
 import { useHighlights } from '../../contexts/HighlightContext.jsx'
 import { uidOf } from '../../lib/qid.js'
 import DeleteButton from './DeleteButton.jsx'
+import QuestionEditButton from './QuestionEditButton.jsx'
 
 // One study-mode question card: prompt, tappable options that reveal the answer,
 // and the explanation. Shared by StudyMode (single topic) and the saved screens
@@ -17,6 +18,7 @@ export default function StudyCard({
   index,
   color,
   topicLabel,
+  categoryId,       // the topic this card is listed under — enables the Topic control on LiveMCQ
   nailed,
   isImportant,
   onNail,
@@ -75,6 +77,7 @@ export default function StudyCard({
             <span className="qmark-label">{isImportant ? 'Important ✓' : 'Important'}</span>
           </button>
           <DeleteButton question={q} className="nail-btn" size={12} />
+          <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="nail-btn" size={12} />
           {shown && (
             <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
               Hide

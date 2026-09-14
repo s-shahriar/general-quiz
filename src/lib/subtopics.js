@@ -53,6 +53,12 @@ export function useSubtopicLists() {
   return lists
 }
 
+// Synchronous read of whatever has loaded (`{}` before the first fetch), for
+// labels built outside React — the sync queue's rows.
+export function getSubtopicListsSnapshot() {
+  return cache || EMPTY
+}
+
 export function subtopicName(list, slug) {
   return list?.find((s) => s.slug === slug)?.name || slug
 }
