@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { AlertTriangle, Bookmark, BookmarkX, Check, Clock, Cloud, CloudOff, FolderInput, RefreshCw, RotateCcw, Star, StarOff, Tag, Trash2, Undo2, X } from 'lucide-react'
+import { AlertTriangle, Bookmark, BookmarkX, Check, Clock, Cloud, CloudOff, Flame, FolderInput, RefreshCw, RotateCcw, Star, StarOff, Tag, Trash2, Undo2, X } from 'lucide-react'
 import { subscribeQueue, flushNow } from '../lib/offlineQueue.js'
 import { changeSubtopic, findLivemcq, moveQuestion } from '../lib/questionEdits.js'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import { closeSyncDrawer, subscribeSyncDrawer } from '../lib/syncDrawerState.js'
@@ -43,13 +44,20 @@ function describe(it) {
   if (it.kind === 'subtopic') {
     return { Icon: Tag, color: '#0ea5e9', text: `Sub-topic: ${it.meta?.fromName || 'none'} → ${it.meta?.toName || 'none'}` }
   }
-  const { nailed, important } = it.patch || {}
+  const { nailed, important, weak } = it.patch || {}
   const parts = []
   if (nailed !== undefined) parts.push(nailed ? 'Nailed' : 'Un-nailed')
+  if (weak) parts.push('Marked weak')
   if (important !== undefined) parts.push(important ? 'Marked important' : 'Unmarked important')
-  // When both columns changed, the nail leads — the same order as the text.
+  if (weak === false) parts.push('Unmarked weak')
+  // Several columns can change in one action; the icon follows the one you
+  // tapped — the same one the text leads with. A cleared Weak that rides along
+  // with un-marking Important or nailing stays secondary.
   if (nailed !== undefined) {
     return { Icon: nailed ? Star : StarOff, color: nailed ? '#f59e0b' : OFF, filled: nailed, text: parts.join(' · ') }
+  }
+  if (weak || (weak === false && important === undefined)) {
+    return { Icon: Flame, color: weak ? '#f97316' : OFF, filled: weak, text: parts.join(' · ') }
   }
   if (important !== undefined) {
     return { Icon: important ? Bookmark : BookmarkX, color: important ? '#ef4444' : OFF, filled: important, text: parts.join(' · ') }
@@ -118,6 +126,7 @@ export default function SyncDrawer() {
   const [, setTick] = useState(0)
   const nail = useMasteredContext()
   const imp = useImportantContext()
+  const wk = useWeakContext()
   const trash = useTrash()
 
   useEffect(() => subscribeQueue((s) => setSnap(s)), [])
@@ -163,15 +172,20 @@ export default function SyncDrawer() {
       if (found.topic.id !== m.cat || (found.q.subtopic || '') !== (m.to || '')) return null
       return { run: () => changeSubtopic(found.q, m.cat, m.to, m.from) }
     }
-    const { nailed, important } = it.patch || {}
-    if (!it.uid || (nailed === undefined && important === undefined)) return null
+    const { nailed, important, weak } = it.patch || {}
+    if (!it.uid || (nailed === undefined && important === undefined && weak === undefined)) return null
     const inEffect = (nailed === undefined || nail.value.has(it.uid) === nailed)
       && (important === undefined || imp.value.has(it.uid) === important)
+      && (weak === undefined || wk.value.has(it.uid) === weak)
     if (!inEffect) return null
     return {
       run: () => {
         if (nailed !== undefined) (nailed ? nail.remove : nail.add)(it.uid)
+        // Weak sits inside Important: take Weak off before Important, and put
+        // Important back before Weak.
+        if (weak) wk.remove(it.uid)
         if (important !== undefined) (important ? imp.remove : imp.add)(it.uid)
+        if (weak === false) wk.add(it.uid)
       },
     }
   }
@@ -236,7 +250,7 @@ export default function SyncDrawer() {
             <div className="syncq-empty">
               <Check size={26} />
               <p>Nothing waiting</p>
-              <span>{snap.lastSavedAt ? `Last change saved ${ago(snap.lastSavedAt)}.` : 'Nail, important, delete, Recycle Bin and topic / sub-topic changes show up here until they reach the server.'}</span>
+              <span>{snap.lastSavedAt ? `Last change saved ${ago(snap.lastSavedAt)}.` : 'Nail, important, weak, delete, Recycle Bin and topic / sub-topic changes show up here until they reach the server.'}</span>
             </div>
           )}
         </div>

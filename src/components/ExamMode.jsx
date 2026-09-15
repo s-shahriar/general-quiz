@@ -1,9 +1,10 @@
-import { ArrowRight, Bookmark, Lightbulb, OctagonX, Star } from 'lucide-react'
+import { ArrowRight, Bookmark, Flame, Lightbulb, OctagonX, Star } from 'lucide-react'
 import TopbarActions from './shared/TopbarActions.jsx'
 import { useState } from 'react'
 import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { uidOf } from '../lib/qid.js'
 import QuizOptions from './shared/QuizOptions'
 import ScoreRingScreen from './shared/ScoreRingScreen'
@@ -21,6 +22,7 @@ export default function ExamMode({
   const navigate = useNavigate()
   const { value: mastered, add: onNail, remove: onUnnail } = useMasteredContext()
   const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
+  const { value: weak, add: onMarkWeak, remove: onUnmarkWeak } = useWeakContext()
 
   const routeState = location.state || {}
   const questions = questionsProp || routeState.questions
@@ -49,6 +51,7 @@ export default function ExamMode({
   const hlQ = qid ? getFor(qid).filter(h => h.block === 'q') : undefined
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
+  const isWeak = qid ? weak?.has(qid) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -124,6 +127,15 @@ export default function ExamMode({
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />
                 <span className="qmark-label">{isImportant ? 'Saved!' : 'Important'}</span>
               </button>
+              {isImportant && !isNailed && (
+                <button
+                  className={`quiz-weak-btn${isWeak ? ' marked' : ''}`}
+                  onClick={() => isWeak ? onUnmarkWeak(qid) : onMarkWeak(qid)}
+                >
+                  <Flame size={16} fill={isWeak ? 'currentColor' : 'none'} strokeWidth={1.8} />
+                  <span className="qmark-label">{isWeak ? 'Weak!' : 'Weak'}</span>
+                </button>
+              )}
               <DeleteButton question={q} className="quiz-nail-btn" size={16} onDeleted={next} />
             </div>
             <button className="quiz-next-btn" onClick={next}>

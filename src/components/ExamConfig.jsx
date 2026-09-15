@@ -3,6 +3,7 @@ import TopbarActions from './shared/TopbarActions.jsx'
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { useAllModulesReady } from '../data/contentLoader.js'
 import { uidOf } from '../lib/qid.js'
@@ -11,6 +12,7 @@ import { shuffle, validQ } from '../lib/utils'
 export default function ExamConfig() {
   const navigate = useNavigate()
   const { value: important } = useImportantContext()
+  const { value: weak } = useWeakContext()
   // Exam pools can span every module, so load all content when this screen opens.
   const ready = useAllModulesReady()
 
@@ -26,18 +28,24 @@ export default function ExamConfig() {
     : groupId === 'livemcq' ? LIVEMCQ_TOPICS
     : GK_TOPICS
 
-  // Important count is scoped to the SELECTED subject group, not all modules.
+  // Important / Weak counts are scoped to the SELECTED subject group, not all modules.
   const importantCount = useMemo(() =>
     filteredTopics.reduce((s, t) =>
       s + t.questions.filter(q => validQ(q) && important.has(uidOf(q))).length
     , 0)
   , [important, filteredTopics, groupId, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  const weakCount = useMemo(() =>
+    filteredTopics.reduce((s, t) =>
+      s + t.questions.filter(q => validQ(q) && weak.has(uidOf(q))).length
+    , 0)
+  , [weak, filteredTopics, groupId, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
+    if (topicId === 'weak') return weakCount
     if (topicId === 'all') return filteredTopics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return allTopics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, groupId, filteredTopics, importantCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topicId, groupId, filteredTopics, importantCount, weakCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
@@ -46,16 +54,17 @@ export default function ExamConfig() {
 
   const handleTopicChange = (val) => {
     setTopicId(val)
-    setCount(val === 'important' ? 9999 : 10)
+    setCount(val === 'important' || val === 'weak' ? 9999 : 10)
   }
 
   const handleStart = () => {
     let pool
-    if (topicId === 'important') {
+    if (topicId === 'important' || topicId === 'weak') {
+      const marked = topicId === 'weak' ? weak : important
       pool = filteredTopics.flatMap(t =>
         t.questions
           .map((q) => ({ ...q, _color: t.color, _label: t.shortName }))
-          .filter(q => validQ(q) && important.has(uidOf(q)))
+          .filter(q => validQ(q) && marked.has(uidOf(q)))
       )
     } else {
       const topics = topicId === 'all' ? filteredTopics : allTopics.filter(t => t.id === topicId)
@@ -66,6 +75,7 @@ export default function ExamConfig() {
     }
     const questions = shuffle(pool).slice(0, safeCount)
     const label = topicId === 'important' ? 'Important Questions'
+      : topicId === 'weak' ? 'Weak Questions'
       : topicId === 'all'
         ? (groupId === 'all' ? 'All Topics' : groupId === 'bangla' ? 'বাংলা ব্যাকরণ' : groupId === 'english' ? 'English Grammar' : groupId === 'sahitya' ? 'বাংলা সাহিত্য' : groupId === 'livemcq' ? 'LiveMCQ' : 'সাধারণ জ্ঞান')
         : allTopics.find(t => t.id === topicId)?.name
@@ -104,6 +114,9 @@ export default function ExamConfig() {
             <option value="all">All in Group (Random Mix)</option>
             <option value="important" disabled={importantCount === 0}>
               Important Questions ({importantCount} Q)
+            </option>
+            <option value="weak" disabled={weakCount === 0}>
+              Weak Questions ({weakCount} Q)
             </option>
             <optgroup label="────────────────">
               {filteredTopics.map(t => (

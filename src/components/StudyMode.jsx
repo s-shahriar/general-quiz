@@ -1,8 +1,9 @@
-import { ChevronLeft, LayoutGrid, Bookmark, Search, Star, X, List, Tag } from 'lucide-react'
+import { ChevronLeft, LayoutGrid, Bookmark, Flame, Search, Star, X, List, Tag } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams, useSearchParams, useLocation } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import TopbarActions from './shared/TopbarActions.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
@@ -63,11 +64,12 @@ export default function StudyMode({
   const ready = useModuleReady(topic?.module)
   const { value: mastered, add: onNail } = useMasteredContext()
   const { value: important, add: onMarkImportant, remove: onUnmarkImportant } = useImportantContext()
+  const { value: weak, add: onMarkWeak, remove: onUnmarkWeak } = useWeakContext()
   const { trashedIds } = useTrash()
   // Bumps when a question is moved to another topic on the go, so this list drops it.
   const editsVersion = useContentEditsVersion()
 
-  const [filterImportant, setFilterImportant] = useState(false)
+  const [filter, setFilter]                   = useState('all')   // 'all' | 'important' | 'weak'
   const [sidebarOpen, setSidebarOpen]         = useState(false)
   const [query, setQuery]                     = useState('')
   const [page, setPage]                       = useState(1)
@@ -104,6 +106,7 @@ export default function StudyMode({
   const inActiveSub = ({ q }) => (activeSub === NO_SUB ? !knownSub(q) : q.subtopic === activeSub)
   const nonNailed = bySub && activeSub ? nonNailedAll.filter(inActiveSub) : nonNailedAll
   const importantCount = nonNailed.filter(({ qid }) => important?.has(qid)).length
+  const weakCount = nonNailed.filter(({ qid }) => weak?.has(qid)).length
 
   // Picker cards, in the list's order; empty sub-topics are hidden. Built for
   // any category with a list — the category sidebar lists them too.
@@ -115,8 +118,8 @@ export default function StudyMode({
     : []
   const activeSubName = activeSub === NO_SUB ? 'অন্যান্য' : subList.find((s) => s.slug === activeSub)?.name
 
-  const afterFilter = filterImportant
-    ? nonNailed.filter(({ qid }) => important?.has(qid))
+  const afterFilter = filter === 'important' ? nonNailed.filter(({ qid }) => important?.has(qid))
+    : filter === 'weak' ? nonNailed.filter(({ qid }) => weak?.has(qid))
     : nonNailed
 
   const visible = useMemo(() => {
@@ -130,7 +133,7 @@ export default function StudyMode({
 
   // Reset to page 1 when the filter/search/topic changes (adjust state during
   // render — avoids setState-in-effect cascading renders).
-  const filterKey = `${dQuery}|${filterImportant}|${topic?.id}|${view}|${activeSub}`
+  const filterKey = `${dQuery}|${filter}|${topic?.id}|${view}|${activeSub}`
   const [prevKey, setPrevKey] = useState(filterKey)
   if (prevKey !== filterKey) {
     setPrevKey(filterKey)
@@ -255,19 +258,27 @@ export default function StudyMode({
 
       <div className="study-filter-bar">
         <button
-          className={`study-filter-btn${!filterImportant ? ' active' : ''}`}
-          onClick={() => setFilterImportant(false)}
-          style={!filterImportant ? { borderColor: topic.color, color: topic.color, background: `${topic.color}15` } : {}}
+          className={`study-filter-btn${filter === 'all' ? ' active' : ''}`}
+          onClick={() => setFilter('all')}
+          style={filter === 'all' ? { borderColor: topic.color, color: topic.color, background: `${topic.color}15` } : {}}
         >
           All ({nonNailed.length})
         </button>
         <button
-          className={`study-filter-btn${filterImportant ? ' active' : ''}`}
-          onClick={() => setFilterImportant(true)}
-          style={filterImportant ? { borderColor: '#ef4444', color: '#ef4444', background: 'rgba(239,68,68,0.12)' } : {}}
+          className={`study-filter-btn${filter === 'important' ? ' active' : ''}`}
+          onClick={() => setFilter('important')}
+          style={filter === 'important' ? { borderColor: '#ef4444', color: '#ef4444', background: 'rgba(239,68,68,0.12)' } : {}}
         >
-          <Bookmark size={11} fill={filterImportant ? 'currentColor' : 'none'} />
+          <Bookmark size={11} fill={filter === 'important' ? 'currentColor' : 'none'} />
           Important ({importantCount})
+        </button>
+        <button
+          className={`study-filter-btn${filter === 'weak' ? ' active' : ''}`}
+          onClick={() => setFilter('weak')}
+          style={filter === 'weak' ? { borderColor: '#f97316', color: '#f97316', background: 'rgba(249,115,22,0.12)' } : {}}
+        >
+          <Flame size={11} fill={filter === 'weak' ? 'currentColor' : 'none'} />
+          Weak ({weakCount})
         </button>
       </div>
 
@@ -293,7 +304,7 @@ export default function StudyMode({
         </p>
       )}
 
-      {nailedCt > 0 && !filterImportant && !query && (
+      {nailedCt > 0 && filter === 'all' && !query && (
         <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
           <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={goNailed} className="nailed-notice-link">Nailed It</button></span>
@@ -304,11 +315,13 @@ export default function StudyMode({
         <div className="study-all-nailed">
           {query
             ? <Search size={38} style={{ color: topic.color, opacity: 0.4, marginBottom: 12 }} />
-            : filterImportant
+            : filter === 'important'
               ? <Bookmark size={38} style={{ color: '#ef4444', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
-              : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
+              : filter === 'weak'
+                ? <Flame size={38} style={{ color: '#f97316', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
+                : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
           }
-          <p>{query ? 'No questions match your search.' : filterImportant ? 'No Important questions yet.' : 'All questions nailed! 🎉'}</p>
+          <p>{query ? 'No questions match your search.' : filter === 'important' ? 'No Important questions yet.' : filter === 'weak' ? 'No Weak questions yet.' : 'All questions nailed! 🎉'}</p>
           {query && <button className="back-btn" style={{ marginTop: 16 }} onClick={() => setQuery('')}>Clear search</button>}
           {!query && <button className="back-btn" style={{ marginTop: 16 }} onClick={goHome}>Go Home</button>}
         </div>
@@ -327,9 +340,12 @@ export default function StudyMode({
                 color={topic.color}
                 nailed={mastered.has(qid)}
                 isImportant={important?.has(qid)}
+                isWeak={weak?.has(qid)}
                 onNail={() => onNail(qid)}
                 onMarkImportant={() => onMarkImportant?.(qid)}
                 onUnmarkImportant={() => onUnmarkImportant?.(qid)}
+                onMarkWeak={() => onMarkWeak(qid)}
+                onUnmarkWeak={() => onUnmarkWeak(qid)}
               />
             ))}
           </div>

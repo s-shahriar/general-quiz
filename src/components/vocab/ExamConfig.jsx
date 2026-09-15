@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { ChevronLeft, Zap, Minus, Plus } from 'lucide-react'
 import { VOCAB_TOPICS } from '../../data/vocabTopics.js'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
+import { useWeakContext } from '../../contexts/WeakContext.jsx'
 import { useModuleReady } from '../../data/contentLoader.js'
 import { uidOf } from '../../lib/qid.js'
 import { shuffle, validQ } from '../../lib/utils'
@@ -12,6 +13,7 @@ export default function VocabExamConfig() {
   const navigate = useNavigate()
   const ready = useModuleReady('vocab')
   const { value: important } = useImportantContext()
+  const { value: weak } = useWeakContext()
   const topics = VOCAB_TOPICS
 
   const [topicId, setTopicId] = useState('all')
@@ -22,28 +24,35 @@ export default function VocabExamConfig() {
       s + t.questions.filter(q => validQ(q) && important.has(uidOf(q))).length
     , 0)
   , [important, topics, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  const weakCount = useMemo(() =>
+    topics.reduce((s, t) =>
+      s + t.questions.filter(q => validQ(q) && weak.has(uidOf(q))).length
+    , 0)
+  , [weak, topics, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const maxCount = useMemo(() => {
     if (topicId === 'important') return importantCount
+    if (topicId === 'weak') return weakCount
     if (topicId === 'all') return topics.reduce((s, t) => s + t.questions.filter(validQ).length, 0)
     return topics.find(t => t.id === topicId)?.questions.filter(validQ).length ?? 0
-  }, [topicId, topics, importantCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topicId, topics, importantCount, weakCount, ready]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const safeCount = Math.max(1, Math.min(count, maxCount))
   const adjust    = (delta) => setCount(c => Math.max(1, Math.min(c + delta, maxCount)))
 
   const handleTopicChange = (val) => {
     setTopicId(val)
-    setCount(val === 'important' ? 9999 : 10)
+    setCount(val === 'important' || val === 'weak' ? 9999 : 10)
   }
 
   const handleStart = () => {
     let pool
-    if (topicId === 'important') {
+    if (topicId === 'important' || topicId === 'weak') {
+      const marked = topicId === 'weak' ? weak : important
       pool = topics.flatMap(t =>
         t.questions
           .map((q) => ({ ...q, _color: t.color, _label: t.shortName }))
-          .filter(q => validQ(q) && important.has(uidOf(q)))
+          .filter(q => validQ(q) && marked.has(uidOf(q)))
       )
     } else {
       const selected = topicId === 'all' ? topics : topics.filter(t => t.id === topicId)
@@ -55,6 +64,7 @@ export default function VocabExamConfig() {
     }
     const questions = shuffle(pool).slice(0, safeCount)
     const label = topicId === 'important' ? 'Important Words'
+      : topicId === 'weak' ? 'Weak Words'
       : topicId === 'all' ? 'All Vocabulary'
       : topics.find(t => t.id === topicId)?.name
     navigate('/vocabulary/exam/run', { state: { questions, label } })
@@ -80,6 +90,9 @@ export default function VocabExamConfig() {
             <option value="all">All Letters (Random Mix)</option>
             <option value="important" disabled={importantCount === 0}>
               Important Words ({importantCount} Q)
+            </option>
+            <option value="weak" disabled={weakCount === 0}>
+              Weak Words ({weakCount} Q)
             </option>
             <optgroup label="────────────────">
               {topics.map(t => (

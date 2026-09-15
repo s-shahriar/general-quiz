@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { GROUP_PATHS } from '../data/groups.js'
 import { uidOf } from '../lib/qid.js'
@@ -17,6 +18,7 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
   const [searchParams] = useSearchParams()
   const { value: mastered } = useMasteredContext()
   const { value: important } = useImportantContext()
+  const { value: weak } = useWeakContext()
   const [searching, setSearching] = useState(false)
   const urlSearch = searchParams.get('search') || ''
   // activeGroup id matches the DB module name (bangla/english/sahitya/gk/livemcq).
@@ -28,6 +30,7 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
   // module must not inflate another module's card. Needs the module loaded.
   const totalNailed = allTopics.reduce((s, t) => s + t.questions.filter(q => mastered.has(uidOf(q))).length, 0)
   const totalImportant = allTopics.reduce((s, t) => s + t.questions.filter(q => important?.has(uidOf(q))).length, 0)
+  const totalWeak = allTopics.reduce((s, t) => s + t.questions.filter(q => weak?.has(uidOf(q))).length, 0)
 
   return (
     <div className="home anim-fade">
@@ -74,6 +77,7 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
           <ActionCardsRow
             totalNailed={totalNailed}
             totalImportant={totalImportant}
+            totalWeak={totalWeak}
             onExam={() => navigate('/exam')}
             onNailed={() => navigate('/nailed?g=' + activeGroup)}
             onImportant={() => navigate('/important?g=' + activeGroup)}

@@ -1080,10 +1080,11 @@ button {
   animation: none;
 }
 .qmark-label { white-space: nowrap; }
-/* Mobile: compact icon-only Nail/Important, Next fills the row */
+/* Mobile: compact icon-only Nail/Important/Weak, Next fills the row */
 @media (max-width: 540px) {
   .quiz-mark-btns .quiz-nail-btn,
-  .quiz-mark-btns .quiz-important-btn { padding: 10px; }
+  .quiz-mark-btns .quiz-important-btn,
+  .quiz-mark-btns .quiz-weak-btn { padding: 10px; }
   .quiz-revealed-actions .qmark-label { display: none; }
 }
 
@@ -1147,7 +1148,8 @@ button {
   flex: 0 0 auto;
 }
 .quiz-mark-btns .quiz-nail-btn,
-.quiz-mark-btns .quiz-important-btn {
+.quiz-mark-btns .quiz-important-btn,
+.quiz-mark-btns .quiz-weak-btn {
   flex: 0 0 auto;
   justify-content: center;
 }
@@ -1202,6 +1204,58 @@ button {
 }
 .quiz-important-btn.marked svg {
   filter: drop-shadow(0 0 4px rgba(239, 68, 68, 0.6));
+}
+
+/* ── Weak button in quiz/exam (only on Important, un-nailed questions) ── */
+.quiz-weak-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ea580c;
+  border: 1.5px solid rgba(249, 115, 22, 0.3);
+  background: rgba(249, 115, 22, 0.07);
+  transition: all 0.2s ease;
+  font-family: "Space Grotesk", sans-serif;
+}
+[data-theme="dark"] .quiz-weak-btn {
+  color: #fb923c;
+  border-color: rgba(251, 146, 60, 0.3);
+  background: rgba(249, 115, 22, 0.08);
+}
+.quiz-weak-btn:hover {
+  border-color: #f97316;
+  background: rgba(249, 115, 22, 0.14);
+  transform: translateY(-2px);
+}
+.quiz-weak-btn.marked {
+  color: #f97316;
+  background: rgba(249, 115, 22, 0.14);
+  border-color: rgba(249, 115, 22, 0.55);
+  box-shadow:
+    0 0 14px rgba(249, 115, 22, 0.25),
+    inset 0 0 8px rgba(249, 115, 22, 0.08);
+  font-weight: 700;
+}
+[data-theme="dark"] .quiz-weak-btn.marked {
+  color: #fb923c;
+  box-shadow:
+    0 0 14px rgba(251, 146, 60, 0.3),
+    inset 0 0 8px rgba(249, 115, 22, 0.1);
+}
+.quiz-weak-btn svg {
+  transition: transform 0.2s ease;
+}
+.quiz-weak-btn:hover svg {
+  transform: scale(1.2) rotate(-8deg);
+}
+.quiz-weak-btn.marked svg {
+  filter: drop-shadow(0 0 4px rgba(249, 115, 22, 0.6));
 }
 
 .quiz-next-btn {
@@ -4177,6 +4231,7 @@ button {
 }
 .pool-important .quiz-pool-icon { color: #ef4444; background: rgba(239,68,68,.12); }
 .pool-nailed .quiz-pool-icon { color: #f59e0b; background: rgba(245,158,11,.14); }
+.pool-weak .quiz-pool-icon { color: #f97316; background: rgba(249,115,22,.14); }
 .quiz-pool-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .quiz-pool-title { font-size: .9rem; font-weight: 700; }
 .quiz-pool-sub { font-size: .74rem; color: var(--text-3); line-height: 1.35; }
@@ -4189,6 +4244,10 @@ button {
 .quiz-pool-tag.important { background: rgba(239,68,68,.12); }
 .quiz-pool-tag.nailed, .quiz-pool-empty-icon.nailed { color: #f59e0b; }
 .quiz-pool-tag.nailed { background: rgba(245,158,11,.14); }
+.quiz-pool-tag.weak, .quiz-pool-empty-icon.weak { color: #f97316; }
+.quiz-pool-tag.weak { background: rgba(249,115,22,.14); }
+/* Important screen: "সব Important / শুধু Weak" switch under the top bar */
+.saved-weak-switch { margin: -10px 0 18px; }
 .quiz-pool-empty {
   display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
   padding: 64px 20px; color: var(--text-2); font-size: .9rem;
@@ -4293,7 +4352,7 @@ button {
 /* Mobile: collapse Nail It / Important / Delete action buttons to icons only. */
 @media (max-width: 540px) {
   .qmark-label { display: none; }
-  .quiz-nail-btn, .quiz-important-btn, .nail-btn { padding-left: 10px; padding-right: 10px; }
+  .quiz-nail-btn, .quiz-important-btn, .quiz-weak-btn, .nail-btn { padding-left: 10px; padding-right: 10px; }
 }
 
 /* ── Left-hand layout ──────────────────────────────────────────────

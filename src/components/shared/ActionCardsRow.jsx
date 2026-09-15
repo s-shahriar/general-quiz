@@ -1,6 +1,6 @@
 import { Zap, Star, Bookmark } from 'lucide-react'
 
-export default function ActionCardsRow({ totalNailed, totalImportant, onExam, onNailed, onImportant }) {
+export default function ActionCardsRow({ totalNailed, totalImportant, totalWeak, onExam, onNailed, onImportant }) {
   return (
     <div className="home-action-row home-action-row--3">
       <button className="action-card exam-card" onClick={onExam}>
@@ -38,7 +38,7 @@ export default function ActionCardsRow({ totalNailed, totalImportant, onExam, on
             <Bookmark size={20} fill="currentColor" className="ac-icon" />
           </div>
           <div className="ac-label">Important</div>
-          <div className="ac-sub">{totalImportant} saved</div>
+          <div className="ac-sub">{totalImportant} saved{totalWeak ? ` · ${totalWeak} weak` : ''}</div>
         </div>
         <div className="ac-footer ac-footer--important">
           View <span className="ac-arrow">→</span>

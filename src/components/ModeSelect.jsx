@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Navigate } from 'react-router-dom'
 import TopbarActions from './shared/TopbarActions.jsx'
-import { ChevronLeft, Brain, BookOpen, Bookmark, Star, ListChecks, X } from 'lucide-react'
+import { ChevronLeft, Brain, BookOpen, Bookmark, Flame, Star, ListChecks, X } from 'lucide-react'
 import { ALL_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
 import { useModuleReady } from '../data/contentLoader.js'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { uidOf } from '../lib/qid.js'
 
 export default function ModeSelect() {
@@ -16,6 +17,7 @@ export default function ModeSelect() {
   const ready = useModuleReady(topic?.module)
   const { value: important } = useImportantContext()
   const { value: mastered } = useMasteredContext()
+  const { value: weak } = useWeakContext()
   const [chooser, setChooser] = useState(false)
 
   if (!topic) return <Navigate to="/" replace />
@@ -33,10 +35,12 @@ export default function ModeSelect() {
   // Same pool QuizMode draws from, so the counts shown are what you'll get.
   const quizzable = topic.questions.filter(q => q.options && q.correct_answer)
   let importantCt = 0
+  let weakCt = 0
   let nailedCt = 0
   for (const q of quizzable) {
     const id = uidOf(q)
     if (important?.has(id)) importantCt++
+    if (weak?.has(id)) weakCt++
     if (mastered?.has(id)) nailedCt++
   }
 
@@ -102,7 +106,7 @@ export default function ModeSelect() {
       {chooser && (
         <QuizPoolChooser
           color={topic.color}
-          counts={{ all: quizzable.length, important: importantCt, nailed: nailedCt }}
+          counts={{ all: quizzable.length, important: importantCt, weak: weakCt, nailed: nailedCt }}
           onClose={() => setChooser(false)}
           onPick={(set) => navigate(set === 'all' ? 'quiz' : `quiz?set=${set}`)}
         />
@@ -114,6 +118,7 @@ export default function ModeSelect() {
 const POOLS = [
   { key: 'all', icon: ListChecks, title: 'সব প্রশ্ন', sub: 'পুরো টপিক থেকে' },
   { key: 'important', icon: Bookmark, title: 'শুধু Important', sub: 'যেগুলো Important করে রেখেছো' },
+  { key: 'weak', icon: Flame, title: 'শুধু Weak', sub: 'Important-এর মধ্যে যেগুলো এখনো পারো না' },
   { key: 'nailed', icon: Star, title: 'শুধু Nailed It', sub: 'যেগুলো আয়ত্তে এসেছে — ঝালিয়ে নাও' },
 ]
 

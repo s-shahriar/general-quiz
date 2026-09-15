@@ -1,4 +1,4 @@
-// Offline-tolerant write queue for nail / important / delete, for the
+// Offline-tolerant write queue for nail / important / weak / delete, for the
 // Recycle Bin's restore / delete-forever, and for LiveMCQ topic moves and
 // sub-topic changes (questionEdits.js).
 //
@@ -165,7 +165,7 @@ function makeEntry(e) {
 }
 
 function patchEq(a, b) {
-  return a?.nailed === b?.nailed && a?.important === b?.important
+  return a?.nailed === b?.nailed && a?.important === b?.important && a?.weak === b?.weak
 }
 
 export function subscribeQueue(fn) {
@@ -201,7 +201,8 @@ export function setQueueUser(uid) {
   if (pending.size) scheduleFlush(0)
 }
 
-// Record one flag change. `patch` is { nailed?:bool } or { important?:bool }.
+// Record one flag change. `patch` holds any of { nailed, important, weak } — one
+// action can change several at once (marking Weak also marks Important).
 // The readable label comes from the content loader's registry — the caller only
 // has a uid, and a uid is a one-way hash of the question text.
 export function enqueue(uid, patch) {

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Bookmark, CheckCircle, Lightbulb, Star, XCircle } from 'lucide-react'
+import { Bookmark, CheckCircle, Flame, Lightbulb, Star, XCircle } from 'lucide-react'
 import RichText from './RichText'
 import Highlightable from './Highlightable.jsx'
 import { guardHighlightClick } from '../../lib/textAnchor.js'
@@ -21,9 +21,12 @@ export default function StudyCard({
   categoryId,       // the topic this card is listed under — enables the Topic control on LiveMCQ
   nailed,
   isImportant,
+  isWeak,
   onNail,
   onMarkImportant,
   onUnmarkImportant,
+  onMarkWeak,
+  onUnmarkWeak,
 }) {
   // Explanations are highlightable, keyed by the question uid. Block key
   // 'explanation' — an MCQ answer has one text block, so it needs no index.
@@ -76,6 +79,18 @@ export default function StudyCard({
             <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
             <span className="qmark-label">{isImportant ? 'Important ✓' : 'Important'}</span>
           </button>
+          {/* Weak = an Important question you still can't answer, so only those offer it. */}
+          {isImportant && !nailed && onMarkWeak && (
+            <button
+              className={`nail-btn weak-study-btn${isWeak ? ' nailed' : ''}`}
+              onClick={isWeak ? onUnmarkWeak : onMarkWeak}
+              title={isWeak ? 'Weak — click to remove' : 'Mark as Weak — এখনো পারি না'}
+              style={isWeak ? { color: '#f97316', borderColor: 'rgba(249,115,22,0.4)', background: 'rgba(249,115,22,0.1)' } : {}}
+            >
+              <Flame size={12} fill={isWeak ? 'currentColor' : 'none'} />
+              <span className="qmark-label">{isWeak ? 'Weak ✓' : 'Weak'}</span>
+            </button>
+          )}
           <DeleteButton question={q} className="nail-btn" size={12} />
           <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="nail-btn" size={12} />
           {shown && (

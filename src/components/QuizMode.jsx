@@ -1,8 +1,9 @@
-import { ArrowRight, Bookmark, ChevronLeft, LayoutGrid, Lightbulb, Star } from 'lucide-react'
+import { ArrowRight, Bookmark, ChevronLeft, Flame, LayoutGrid, Lightbulb, Star } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
+import { useWeakContext } from '../contexts/WeakContext.jsx'
 import TopbarActions from './shared/TopbarActions.jsx'
 import { ALL_TOPICS, BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMCQ_TOPICS } from '../data/index.js'
 import { homePathForTopic } from '../data/groups.js'
@@ -18,9 +19,9 @@ import Highlightable from './shared/Highlightable.jsx'
 import { guardHighlightClick } from '../lib/textAnchor.js'
 import { useHighlights } from '../contexts/HighlightContext.jsx'
 
-// `?set=important|nailed` quizzes only the questions you've marked in this topic
-// (chosen on ModeSelect). No param = the whole topic, as before.
-const POOL_LABEL = { important: 'Important', nailed: 'Nailed' }
+// `?set=important|weak|nailed` quizzes only the questions you've marked in this
+// topic (chosen on ModeSelect). No param = the whole topic, as before.
+const POOL_LABEL = { important: 'Important', weak: 'Weak', nailed: 'Nailed' }
 
 export default function QuizMode({
   topic: topicProp,
@@ -36,6 +37,7 @@ export default function QuizMode({
   const ready = useModuleReady(topic?.module)
   const { value: mastered, add: nail, remove: unnail } = useMasteredContext()
   const { value: important, add: markImportant, remove: unmarkImportant } = useImportantContext()
+  const { value: weak, add: markWeak, remove: unmarkWeak } = useWeakContext()
 
   const [selected, setSelected] = useState(null)
   const [revealed, setRevealed] = useState(false)
@@ -49,11 +51,10 @@ export default function QuizMode({
   const liveQuestions = useMemo(() => {
     if (!topic) return []
     const base = topic.questions.filter(q => q.options && q.correct_answer)
-    const pool = set === 'important' ? base.filter(q => important?.has(uidOf(q)))
-      : set === 'nailed' ? base.filter(q => mastered?.has(uidOf(q)))
-      : base
+    const marked = set === 'important' ? important : set === 'weak' ? weak : set === 'nailed' ? mastered : null
+    const pool = marked ? base.filter(q => marked?.has(uidOf(q))) : base
     return shuffle(pool)
-  }, [topic, ready, set, set === 'important' ? important : null, set === 'nailed' ? mastered : null]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [topic, ready, set, set === 'important' ? important : null, set === 'weak' ? weak : null, set === 'nailed' ? mastered : null]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Frozen at the first answer: un-nailing or un-marking a question mid-quiz
   // must not reshuffle or shrink the quiz you're in the middle of.
@@ -85,6 +86,7 @@ export default function QuizMode({
   const hlQ = qid ? getFor(qid).filter(h => h.block === 'q') : undefined
   const isNailed = qid ? mastered?.has(qid) : false
   const isImportant = qid ? important?.has(qid) : false
+  const isWeak = qid ? weak?.has(qid) : false
 
   const pick = (key) => {
     if (revealed) return
@@ -102,7 +104,7 @@ export default function QuizMode({
   const retry = () => { setIdx(0); setSelected(null); setRevealed(false); setScore(0); setDone(false) }
 
   if (set && !questions.length) {
-    const Icon = set === 'important' ? Bookmark : Star
+    const Icon = set === 'important' ? Bookmark : set === 'weak' ? Flame : Star
     return (
       <div className="quiz-page anim-fade">
         <div className="quiz-topbar">
@@ -203,6 +205,16 @@ export default function QuizMode({
                 <Bookmark size={16} fill={isImportant ? 'currentColor' : 'none'} strokeWidth={1.8} />
                 <span className="qmark-label">{isImportant ? 'Saved!' : 'Important'}</span>
               </button>
+              {isImportant && !isNailed && (
+                <button
+                  className={`quiz-weak-btn${isWeak ? ' marked' : ''}`}
+                  onClick={() => isWeak ? unmarkWeak(qid) : markWeak(qid)}
+                  title={isWeak ? 'Weak — click to remove' : 'Mark as Weak — এখনো পারি না'}
+                >
+                  <Flame size={16} fill={isWeak ? 'currentColor' : 'none'} strokeWidth={1.8} />
+                  <span className="qmark-label">{isWeak ? 'Weak!' : 'Weak'}</span>
+                </button>
+              )}
               <DeleteButton question={q} className="quiz-nail-btn" size={16} onDeleted={next} />
               <QuestionEditButton question={q} categorySlug={topic.id} className="quiz-nail-btn" size={16} />
             </div>

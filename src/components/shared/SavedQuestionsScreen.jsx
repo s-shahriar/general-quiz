@@ -7,6 +7,7 @@ import { uidOf } from '../../lib/qid.js'
 import { useTrash } from '../../contexts/TrashContext.jsx'
 import { useMasteredContext } from '../../contexts/MasteredContext.jsx'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
+import { useWeakContext } from '../../contexts/WeakContext.jsx'
 
 // Below this many categories the chip grid collapses to ~2 rows with a toggle.
 const COLLAPSE_AFTER = 6
@@ -21,8 +22,9 @@ const ALL_ID = '__all__'
 // through the whole saved set. Read as study cards — the same ones Study Mode
 // uses: tap an option, get the answer and the explanation. Study Mode only ever
 // covers one topic, so cards rendered here carry a topic badge whenever the
-// view spans more than one.
-export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, onHome, config }) {
+// view spans more than one. `headerExtra` renders under the top bar (the
+// Important screen's Weak switch).
+export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, onHome, config, headerExtra }) {
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
           totalLabel, removeAllLabel } = config
   const [activeId, setActiveId] = useState(null)
@@ -32,6 +34,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
   const { trashedIds } = useTrash()
   const nailApi = useMasteredContext()
   const importantApi = useImportantContext()
+  const weakApi = useWeakContext()
 
   const grouped = topics.map(t => {
     const items = t.questions
@@ -101,6 +104,8 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
         </div>
         <TopbarActions />
       </div>
+
+      {headerExtra}
 
       {total === 0 ? (
         <div className="nailed-screen-empty">
@@ -191,6 +196,9 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
                     onNail={() => toggleNail(qid)}
                     onMarkImportant={() => importantApi.add(qid)}
                     onUnmarkImportant={() => importantApi.remove(qid)}
+                    isWeak={weakApi.value.has(qid)}
+                    onMarkWeak={() => weakApi.add(qid)}
+                    onUnmarkWeak={() => weakApi.remove(qid)}
                   />
                 ))}
               </div>

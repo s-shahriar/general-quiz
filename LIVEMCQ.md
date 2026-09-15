@@ -763,8 +763,8 @@ accuracy — so defaults are shared with the category index.
 On a LiveMCQ topic's **Study** page, a category with a sub-topic list gets a
 switch: **সব একসাথে** (default — unchanged) | **Sub-topic অনুযায়ী** → a grid of
 sub-topic cards with their un-nailed question counts (empty ones hidden,
-unlabelled ones under *অন্যান্য*) → tap one for its list, where the Important
-filter, search and pagination all work inside that sub-topic. Quiz mode still
+unlabelled ones under *অন্যান্য*) → tap one for its list, where the Important /
+Weak filters, search and pagination all work inside that sub-topic. Quiz mode still
 runs over the whole category.
 
 ### 8.B AI-guided path (backend sync) — mapping reference
