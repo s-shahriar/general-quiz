@@ -105,11 +105,18 @@ export default function AccountButton() {
                 </div>
 
                 <div style={statsRow}>
-                  <span style={stat}><Star size={13} style={{ color: '#f59e0b' }} /> {nailedCount} nailed</span>
-                  <span style={statDivider} />
-                  <span style={stat}><Bookmark size={13} style={{ color: '#ef4444' }} /> {importantCount} important</span>
-                  <span style={statDivider} />
-                  <span style={stat}><Flame size={13} style={{ color: '#f97316' }} /> {weakCount} weak</span>
+                  <span style={stat}>
+                    <span style={statValue}><Star size={13} style={{ color: '#f59e0b' }} /> {nailedCount}</span>
+                    <span style={statLabel}>nailed</span>
+                  </span>
+                  <span style={{ ...stat, ...statSplit }}>
+                    <span style={statValue}><Bookmark size={13} style={{ color: '#ef4444' }} /> {importantCount}</span>
+                    <span style={statLabel}>important</span>
+                  </span>
+                  <span style={{ ...stat, ...statSplit }}>
+                    <span style={statValue}><Flame size={13} style={{ color: '#f97316' }} /> {weakCount}</span>
+                    <span style={statLabel}>weak</span>
+                  </span>
                 </div>
 
                 <div style={syncNote}>
@@ -151,9 +158,16 @@ const idRow = { display: 'flex', alignItems: 'center', gap: 11, marginBottom: 12
 const fallbackAvatar = { width: 38, height: 38, borderRadius: '50%', background: 'rgba(99,102,241,0.15)', color: '#818cf8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }
 const nameText = { fontSize: '0.9rem', fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }
 const emailText = { fontSize: '0.78rem', color: 'var(--text-3)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }
-const statsRow = { display: 'flex', alignItems: 'center', gap: 10, padding: '9px 11px', borderRadius: 10, background: 'var(--card2)', marginBottom: 8 }
-const stat = { display: 'flex', alignItems: 'center', gap: 5, fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-2)' }
-const statDivider = { width: 1, alignSelf: 'stretch', background: 'var(--border)' }
+// Three equal columns with the count stacked over its label. On one row the
+// widest stat ("580 important") outgrew the panel — 256px less the panel and row
+// padding leaves ~110px of text for all three — so the labels wrapped and "weak"
+// clipped off the right edge. minmax(0, 1fr) lets a big count shrink its column
+// instead of pushing the others out.
+const statsRow = { display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', padding: '9px 2px', borderRadius: 10, background: 'var(--card2)', marginBottom: 8 }
+const stat = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, minWidth: 0, padding: '0 6px' }
+const statSplit = { borderLeft: '1px solid var(--border)' }
+const statValue = { display: 'flex', alignItems: 'center', gap: 4, fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-2)' }
+const statLabel = { fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-3)', lineHeight: 1.2 }
 const syncNote = { display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.76rem', color: 'var(--text-3)', marginBottom: 12 }
 const signOutBtn = { width: '100%', padding: '9px 12px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text)', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7 }
 const signInHead = { fontSize: '0.82rem', color: 'var(--text-3)', lineHeight: 1.5, margin: '0 0 12px' }
