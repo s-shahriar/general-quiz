@@ -150,30 +150,49 @@ function ImportPanel({ onInserted }) {
     return m
   }, [clf, items])
 
-  // Sub-topic suggestions exist only once a category is chosen, and only for a
-  // category that has a sub-topic list — the sub-topic index is per category.
+  // Sub-topic suggestions only exist for a category that has a sub-topic list —
+  // the sub-topic index is per category. Before a category is picked we score
+  // against the *suggested* one, so the Likely box can offer topic and sub-topic
+  // as a single choice instead of making you apply the category and come back.
   const subHints = useMemo(() => {
     const m = new Map()
     if (clf?.suggestSubtopic) for (const it of items) {
-      const list = lists[it.slug]
-      if (it.slug && list?.length) m.set(it.norm.favorite_id, clf.suggestSubtopic(it.norm, it.slug, list))
+      const slug = it.slug || hints.get(it.norm.favorite_id)?.slug
+      const list = lists[slug]
+      if (slug && list?.length) m.set(it.norm.favorite_id, clf.suggestSubtopic(it.norm, slug, list))
     }
     return m
-  }, [clf, items, lists])
+  }, [clf, items, lists, hints])
+
+  // Only বাংলা ব্যাকরণ, English Grammar and গণিত carry sub-topic lists. The other
+  // ten categories have none, so there is nothing to choose and a question in one
+  // of them is complete with a category alone — the sub-topic requirement below
+  // follows the list, not the category count.
+  const needsSub = useCallback((slug) => Boolean(lists[slug]?.length), [lists])
+  const isReady = useCallback(
+    (it) => Boolean(it.slug) && (!needsSub(it.slug) || Boolean(it.subtopic)),
+    [needsSub],
+  )
 
   const picked = useMemo(() => items.filter((it) => it.picked), [items])
   const pickedNoCat = useMemo(() => picked.filter((it) => !it.slug), [picked])
-  const pickedReady = useMemo(() => picked.filter((it) => it.slug), [picked])
+  const pickedNoSub = useMemo(
+    () => picked.filter((it) => it.slug && needsSub(it.slug) && !it.subtopic),
+    [picked, needsSub],
+  )
+  const pickedReady = useMemo(() => picked.filter(isReady), [picked, isReady])
   // A mixed selection gets both paths: insert the ready ones now, or insist on
-  // all of them and be shown exactly which are missing a category.
-  const canPartial = pickedNoCat.length > 0 && pickedReady.length > 0
+  // all of them and be shown exactly which are still incomplete.
+  const canPartial = pickedReady.length > 0 && pickedReady.length < picked.length
 
-  // Flag every uncategorised pick and scroll to the first — same treatment a
-  // refused insert gives, reachable without having to trigger the error.
+  // Flag every incomplete pick — no category, or no sub-topic where the category
+  // has a list — and scroll to the first. Same treatment a refused insert gives,
+  // reachable without having to trigger the error.
   function jumpToBlank() {
-    if (!pickedNoCat.length) return
-    setMissing(new Set(pickedNoCat.map((it) => it.norm.favorite_id)))
-    const el = document.getElementById('qc-' + pickedNoCat[0].norm.favorite_id)
+    const incomplete = picked.filter((it) => !isReady(it))
+    if (!incomplete.length) return
+    setMissing(new Set(incomplete.map((it) => it.norm.favorite_id)))
+    const el = document.getElementById('qc-' + incomplete[0].norm.favorite_id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
 
@@ -181,16 +200,38 @@ function ImportPanel({ onInserted }) {
     setItems((prev) => prev.map((it) => (it.norm.favorite_id === fid ? { ...it, ...changes } : it)))
   }, [])
 
+  const clearMissing = useCallback((fid) => setMissing((prev) => {
+    if (!prev.has(fid)) return prev
+    const next = new Set(prev); next.delete(fid); return next
+  }), [])
+
+  // Drop the flag from every card the bulk actions just completed. They can't
+  // clear the lot any more: filling a category that has sub-topics leaves the
+  // card incomplete, so what stays flagged has to be recomputed.
+  const unflagReady = useCallback((next) => {
+    const ready = new Set(next.filter(isReady).map((it) => it.norm.favorite_id))
+    setMissing((cur) => (cur.size ? new Set([...cur].filter((fid) => !ready.has(fid))) : cur))
+  }, [isReady])
+
   // Sub-topic lists are per category, so a category change drops the sub-topic.
+  // That can leave the card incomplete again, so the flag is re-evaluated by
+  // `isReady` rather than cleared here on the strength of the category alone.
   const setSlug = useCallback((fid, slug) => {
     patch(fid, { slug, subtopic: '' })
-    if (slug) setMissing((prev) => {
-      if (!prev.has(fid)) return prev
-      const nextSet = new Set(prev); nextSet.delete(fid); return nextSet
-    })
-  }, [patch])
+    if (slug && !needsSub(slug)) clearMissing(fid)
+  }, [patch, clearMissing, needsSub])
 
-  const setSubtopic = useCallback((fid, subtopic) => patch(fid, { subtopic }), [patch])
+  const setSubtopic = useCallback((fid, subtopic) => {
+    patch(fid, { subtopic })
+    if (subtopic) clearMissing(fid)
+  }, [patch, clearMissing])
+
+  // One suggestion, both fields: `setSlug` would drop the sub-topic that came
+  // with it, since changing category always clears the sub-topic.
+  const applyHint = useCallback((fid, slug, subtopic = '') => {
+    patch(fid, { slug, subtopic })
+    if (subtopic || !needsSub(slug)) clearMissing(fid)
+  }, [patch, clearMissing, needsSub])
 
   const togglePick = useCallback((fid) => {
     setItems((prev) => prev.map((it) => (it.norm.favorite_id === fid ? { ...it, picked: !it.picked } : it)))
@@ -201,31 +242,38 @@ function ImportPanel({ onInserted }) {
   }
 
   // Bulk-apply only touches suggestions confident enough to be right ~98% of
-  // the time. Weak ones stay empty and must be accepted card by card.
+  // the time. Weak ones stay empty and must be accepted card by card. The
+  // sub-topic guess rides along when it clears the same bar.
   function applyAllHints() {
-    setItems((prev) => prev.map((it) => {
+    const next = items.map((it) => {
       const h = hints.get(it.norm.favorite_id)
-      return h && !it.slug && h.confidence >= BULK_APPLY_MIN ? { ...it, slug: h.slug } : it
-    }))
-    setMissing(new Set())
+      if (!h || it.slug || h.confidence < BULK_APPLY_MIN) return it
+      const sh = subHints.get(it.norm.favorite_id)
+      return { ...it, slug: h.slug, subtopic: sh && sh.confidence >= BULK_APPLY_MIN ? sh.slug : '' }
+    })
+    setItems(next)
+    unflagReady(next)
   }
 
   // Same bar as categories. Only fills questions that already have a category
   // and no sub-topic yet; never overwrites a choice.
   function applyAllSubHints() {
-    setItems((prev) => prev.map((it) => {
+    const next = items.map((it) => {
       const h = subHints.get(it.norm.favorite_id)
       return h && it.slug && !it.subtopic && h.confidence >= BULK_APPLY_MIN ? { ...it, subtopic: h.slug } : it
-    }))
+    })
+    setItems(next)
+    unflagReady(next)
   }
 
   function applyBulk(slug) {
     setBulkSlug('')
     if (!slug) return
-    setItems((prev) => prev.map((it) => (
+    const next = items.map((it) => (
       it.picked ? { ...it, slug, subtopic: it.slug === slug ? it.subtopic : '' } : it
-    )))
-    setMissing(new Set())
+    ))
+    setItems(next)
+    unflagReady(next)
   }
 
   // Shared by the footer button and each card's own insert button. Refuses to
@@ -234,14 +282,24 @@ function ImportPanel({ onInserted }) {
     setError(''); setResult(null)
     if (!subset.length) { setError('Nothing selected — tick at least one question to insert.'); return }
 
+    // A sub-topic is only demanded where the category actually has a list, so
+    // the ten list-less categories insert on a category alone.
     const blanks = subset.filter((it) => !it.slug)
-    if (blanks.length) {
-      const fids = new Set(blanks.map((it) => it.norm.favorite_id))
-      setMissing(fids)
-      setError(blanks.length === 1
-        ? 'Category is required — this question has no category selected.'
-        : `Category is required — ${blanks.length} of the ${subset.length} selected questions have no category.`)
-      const el = document.getElementById('qc-' + blanks[0].norm.favorite_id)
+    const noSubs = subset.filter((it) => it.slug && needsSub(it.slug) && !it.subtopic)
+    const bad = [...blanks, ...noSubs]
+    if (bad.length) {
+      setMissing(new Set(bad.map((it) => it.norm.favorite_id)))
+      if (subset.length === 1) {
+        setError(blanks.length
+          ? 'Category is required — this question has no category selected.'
+          : 'Sub-topic is required — this category has sub-topics, so one must be chosen.')
+      } else {
+        const parts = []
+        if (blanks.length) parts.push(`${blanks.length} with no category`)
+        if (noSubs.length) parts.push(`${noSubs.length} with no sub-topic`)
+        setError(`Incomplete — ${parts.join(' and ')} of the ${subset.length} selected.`)
+      }
+      const el = document.getElementById('qc-' + bad[0].norm.favorite_id)
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
       return
     }
@@ -249,7 +307,11 @@ function ImportPanel({ onInserted }) {
     setBusy(true)
     try {
       const sent = new Set(subset.map((it) => it.norm.favorite_id))
-      const res = await insertRows(subset.map((it) => toInsertRow(it.norm, it.slug, it.subtopic)))
+      // A deliberate "no sub-topic" is stored as a sentinel so it reads as a
+      // choice on screen; the row itself gets a plain empty sub-topic.
+      const res = await insertRows(subset.map((it) => (
+        toInsertRow(it.norm, it.slug, it.subtopic === NO_SUB ? '' : it.subtopic)
+      )))
       invalidateModule('livemcq')
       // The corpus just grew, so the cached knowledge is stale by definition.
       // Dropping it here means the next file in this same session is scored
@@ -278,7 +340,7 @@ function ImportPanel({ onInserted }) {
   }).length
   const subHintable = items.filter((it) => {
     const h = subHints.get(it.norm.favorite_id)
-    return it.slug && !it.subtopic && h && h.confidence >= BULK_APPLY_MIN
+    return it.slug && needsSub(it.slug) && !it.subtopic && h && h.confidence >= BULK_APPLY_MIN
   }).length
 
   return (
@@ -342,25 +404,35 @@ function ImportPanel({ onInserted }) {
         </div>
       )}
 
-      {items.map((it, i) => (
-        <QuestionCard
-          key={it.norm.favorite_id}
-          item={it.norm}
-          slug={it.slug}
-          hint={hints.get(it.norm.favorite_id)}
-          subtopic={it.subtopic}
-          subList={lists[it.slug]}
-          subHint={subHints.get(it.norm.favorite_id)}
-          picked={it.picked}
-          flagged={missing.has(it.norm.favorite_id)}
-          busy={busy}
-          index={i + 1}
-          onSlug={(s) => setSlug(it.norm.favorite_id, s)}
-          onSubtopic={(s) => setSubtopic(it.norm.favorite_id, s)}
-          onToggle={() => togglePick(it.norm.favorite_id)}
-          onInsertOne={() => insertSubset([it])}
-        />
-      ))}
+      {items.map((it, i) => {
+        const h = hints.get(it.norm.favorite_id)
+        const sh = subHints.get(it.norm.favorite_id)
+        // Before a category is picked the sub-topic guess belongs to the
+        // suggested category, so its name resolves against that list.
+        const subOf = it.slug || h?.slug
+        return (
+          <QuestionCard
+            key={it.norm.favorite_id}
+            item={it.norm}
+            slug={it.slug}
+            hint={h}
+            subtopic={it.subtopic}
+            subList={lists[it.slug]}
+            subHint={sh}
+            subHintName={sh ? subtopicName(lists[subOf], sh.slug) : ''}
+            subRequired={needsSub(it.slug)}
+            picked={it.picked}
+            flagged={missing.has(it.norm.favorite_id)}
+            busy={busy}
+            index={i + 1}
+            onSlug={(s) => setSlug(it.norm.favorite_id, s)}
+            onSubtopic={(s) => setSubtopic(it.norm.favorite_id, s)}
+            onApplyHint={(s, sub) => applyHint(it.norm.favorite_id, s, sub)}
+            onToggle={() => togglePick(it.norm.favorite_id)}
+            onInsertOne={() => insertSubset([it])}
+          />
+        )
+      })}
 
       {items.length > 0 && (
         <div style={stickyFooter}>
@@ -368,13 +440,16 @@ function ImportPanel({ onInserted }) {
             <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text)' }}>
               {picked.length} of {items.length} selected
             </div>
-            {pickedNoCat.length ? (
+            {pickedNoCat.length || pickedNoSub.length ? (
               <button style={footerHint} onClick={jumpToBlank}>
-                {pickedNoCat.length} still need a category — show me
+                {[
+                  pickedNoCat.length && `${pickedNoCat.length} need a category`,
+                  pickedNoSub.length && `${pickedNoSub.length} need a sub-topic`,
+                ].filter(Boolean).join(' · ')} — show me
               </button>
             ) : (
               <div style={{ fontSize: '0.76rem', color: 'var(--text-3)' }}>
-                {picked.length ? 'all selected have a category' : 'nothing selected'}
+                {picked.length ? 'all selected are ready' : 'nothing selected'}
               </div>
             )}
           </div>
@@ -400,11 +475,15 @@ function ImportPanel({ onInserted }) {
 }
 
 function QuestionCard({
-  item, slug, hint, subtopic, subList, subHint, picked, flagged, busy, index,
-  onSlug, onSubtopic, onToggle, onInsertOne,
+  item, slug, hint, subtopic, subList, subHint, subHintName, subRequired,
+  picked, flagged, busy, index,
+  onSlug, onSubtopic, onApplyHint, onToggle, onInsertOne,
 }) {
   const [showExp, setShowExp] = useState(false)
   const hintTaken = hint && slug === hint.slug
+  // The sub-topic that rides along with the category suggestion — only while no
+  // category is picked, since after that the sub-topic gets its own box below.
+  const pairedSub = !slug && subHint ? subHint : null
   return (
     <div id={'qc-' + item.favorite_id} style={qCard(picked, flagged)}>
       <div style={qTop}>
@@ -448,7 +527,17 @@ function QuestionCard({
         </div>
       )}
 
-      {hint && !hintTaken && <Suggestion hint={hint} onApply={() => onSlug(hint.slug)} />}
+      {/* One box, both fields: the sub-topic guess is scored against the
+          suggested category, so Apply can settle topic and sub-topic together. */}
+      {hint && !hintTaken && (
+        <Suggestion
+          hint={hint}
+          subSlug={pairedSub ? pairedSub.slug : ''}
+          subName={subHintName}
+          subWeak={!!pairedSub && pairedSub.confidence < BULK_APPLY_MIN}
+          onApply={() => onApplyHint(hint.slug, pairedSub ? pairedSub.slug : '')}
+        />
+      )}
 
       <div style={cardActions}>
         <StyledSelect
@@ -470,10 +559,14 @@ function QuestionCard({
         </button>
       </div>
       {flagged && (
-        <p style={cardError}><CircleAlert size={13} style={{ flexShrink: 0 }} /> Category is required.</p>
+        <p style={cardError}>
+          <CircleAlert size={13} style={{ flexShrink: 0 }} />
+          {slug ? 'Sub-topic is required.' : 'Category is required.'}
+        </p>
       )}
 
-      {/* Optional — never blocks Insert. Appears once a category is picked. */}
+      {/* Appears once a category is picked. Required for the three categories
+          that have sub-topic lists; the rest only offer the add link. */}
       {slug && subHint && subtopic !== subHint.slug && (
         <Suggestion
           hint={subHint}
@@ -484,7 +577,14 @@ function QuestionCard({
       )}
       {slug && (
         <div style={subRow}>
-          <SubtopicPicker categorySlug={slug} list={subList} value={subtopic} onChange={onSubtopic} />
+          <SubtopicPicker
+            categorySlug={slug}
+            list={subList}
+            value={subtopic}
+            onChange={onSubtopic}
+            required={subRequired}
+            invalid={flagged && subRequired && !subtopic}
+          />
         </div>
       )}
     </div>
@@ -497,7 +597,7 @@ function QuestionCard({
 const TIER_LABEL = { strong: 'Likely', likely: 'Probably', weak: 'Maybe' }
 const TIER_COLOR = { strong: '#22c55e', likely: 'var(--accent, #6366f1)', weak: '#f59e0b' }
 
-function Suggestion({ hint, onApply, label, nameOf = catName }) {
+function Suggestion({ hint, onApply, label, nameOf = catName, subSlug, subName, subWeak }) {
   const pct = Math.round(hint.confidence * 100)
   const color = TIER_COLOR[hint.tier]
   return (
@@ -507,8 +607,12 @@ function Suggestion({ hint, onApply, label, nameOf = catName }) {
         <div style={{ fontSize: '0.8rem', color: 'var(--text-2)' }}>
           {label && <span style={hintLabel}>{label} · </span>}
           {TIER_LABEL[hint.tier]} <b style={{ color: 'var(--text)' }}>{nameOf(hint.slug)}</b>
+          {subSlug && <><span style={subArrow}>›</span><b style={{ color: 'var(--text)' }}>{subName}</b></>}
           <span style={{ color: 'var(--text-3)' }}> · {pct}% agreement</span>
           {hint.tier === 'weak' && <span style={weakTag}>low confidence</span>}
+          {/* The percentage above is the category's. Say so when the sub-topic
+              that rides along is the shakier half of the pair. */}
+          {subSlug && subWeak && <span style={weakTag}>sub-topic uncertain</span>}
         </div>
         <div style={hintNearest} title={stripTags(hint.nearest.question)}>
           closest stored question: “{stripTags(hint.nearest.question).slice(0, 90)}”
@@ -553,13 +657,18 @@ function StyledSelect({
 }
 
 // ── Sub-topic picker ───────────────────────────────────────────
-// Optional sub-topic for one question. Lists are per category and live in the
-// DB, so "+ নতুন sub-topic…" creates one in place (owner-gated RPC), refreshes
-// every mounted list and selects it. A category with no list yet shows just an
-// add link, so a first sub-topic can be started from any category.
+// Sub-topic for one question. Lists are per category and live in the DB, so
+// "+ নতুন sub-topic…" creates one in place (owner-gated RPC), refreshes every
+// mounted list and selects it. A category with no list yet shows just an add
+// link, so a first sub-topic can be started from any category.
+//
+// `required` (Import) makes the choice deliberate rather than optional — which
+// is why "কোনো sub-topic নয়" is a listed option and not just an empty select:
+// a blank must mean "not answered yet", never "decided against one".
 const NEW_SUB = '__new__'
+const NO_SUB = '__none__'
 
-function SubtopicPicker({ categorySlug, list, value, onChange }) {
+function SubtopicPicker({ categorySlug, list, value, onChange, required, invalid }) {
   const [adding, setAdding] = useState(false)
   const [name, setName] = useState('')
   const [busy, setBusy] = useState(false)
@@ -610,10 +719,13 @@ function SubtopicPicker({ categorySlug, list, value, onChange }) {
     )
   }
 
+  // A real control on its own row rather than a bare text link: as an unstyled
+  // inline button the icon and its label broke onto separate lines and ran past
+  // the card edge.
   if (!options.length) {
     return (
-      <button style={linkBtn} onClick={() => setAdding(true)}>
-        <Plus size={12} style={{ verticalAlign: -2 }} /> sub-topic যোগ করুন
+      <button style={addSubBtn} onClick={() => setAdding(true)}>
+        <Plus size={13} style={{ flexShrink: 0 }} /> sub-topic যোগ করুন
       </button>
     )
   }
@@ -623,10 +735,12 @@ function SubtopicPicker({ categorySlug, list, value, onChange }) {
       value={value || ''}
       onChange={(v) => (v === NEW_SUB ? setAdding(true) : onChange(v))}
       empty={!value}
-      optional
+      optional={!required}
+      invalid={invalid}
       fullWidth
-      options={[...options, { slug: NEW_SUB, name: '+ নতুন sub-topic…' }]}
-      placeholder="Sub-topic (ঐচ্ছিক)…"
+      options={[...options, { slug: NO_SUB, name: 'কোনো sub-topic নয়' }, { slug: NEW_SUB, name: '+ নতুন sub-topic…' }]}
+      placeholder={required ? 'Sub-topic বেছে নিন…' : 'Sub-topic (ঐচ্ছিক)…'}
+      placeholderDisabled={required}
     />
   )
 }
@@ -640,7 +754,10 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [busy, onCancel])
 
-  const changed = (sub || null) !== (row.subtopic || null)
+  // The picker's explicit "no sub-topic" is a UI sentinel; here it just means
+  // empty, so it never reaches the RPC as a literal value.
+  const chosen = sub === NO_SUB ? '' : sub
+  const changed = (chosen || null) !== (row.subtopic || null)
   return (
     <div style={overlay} onClick={busy ? undefined : onCancel}>
       <div style={modalCard} role="dialog" aria-modal="true" aria-labelledby="sub-title" onClick={(e) => e.stopPropagation()}>
@@ -660,7 +777,7 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
         </p>
         <div style={modalActions}>
           <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
-          <button style={modalMoveBtn(changed && !busy)} onClick={() => onConfirm(sub)} disabled={!changed || busy}>
+          <button style={modalMoveBtn(changed && !busy)} onClick={() => onConfirm(chosen)} disabled={!changed || busy}>
             {busy ? <Loader2 size={15} style={spin} /> : <Check size={15} />} Save
           </button>
         </div>
@@ -671,7 +788,6 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
 
 // ── Manage / delete ────────────────────────────────────────────
 const PAGE_SIZE = 50
-const NO_SUB = '__none__'
 
 function ManagePanel({ dataVersion }) {
   const [rows, setRows] = useState(null)
@@ -1125,6 +1241,8 @@ const modalMoveBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', ga
 const noticeClose = { marginLeft: 'auto', display: 'inline-flex', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 2 }
 const spin = { animation: 'spin 1s linear infinite' }
 const subRow = { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }
+const addSubBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 12px', borderRadius: 9, border: '1px dashed var(--border)', background: 'transparent', color: 'var(--accent, #6366f1)', fontSize: '0.8rem', fontWeight: 600, lineHeight: 1.2, whiteSpace: 'nowrap', cursor: 'pointer' }
+const subArrow = { color: 'var(--text-3)', margin: '0 5px' }
 const addRow = { display: 'flex', alignItems: 'center', gap: 6, width: '100%' }
 const addInput = { flex: 1, minWidth: 0, padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
 const hintLabel = { fontWeight: 700, color: 'var(--text-3)' }
