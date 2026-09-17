@@ -10,6 +10,28 @@ export default function PncSection() {
       </div>
       <div className="mf-grid2">
         <Card color="violet">
+          <CardTitle color="var(--mf-violet)">কখন বিন্যাস? (সাজানো)</CardTitle>
+          <ul className="mf-prop-list">
+            <li><strong>সাজানোর</strong> সংখ্যা নির্ণয়</li>
+            <li><strong>শব্দ</strong> গঠন</li>
+            <li><strong>সংখ্যা</strong> গঠন</li>
+            <li>বিন্যাস সংখ্যা নির্ণয়</li>
+            <li><strong>ক্রমানুসারে</strong> কোন কিছু</li>
+          </ul>
+        </Card>
+
+        <Card color="teal">
+          <CardTitle color="var(--mf-teal)">কখন সমাবেশ? (বাছাই)</CardTitle>
+          <ul className="mf-prop-list">
+            <li><strong>বাছাই</strong> সংখ্যা নির্ণয়</li>
+            <li><strong>দল, কমিটি, টিম</strong> গঠন</li>
+            <li><strong>ত্রিভুজ, বাহু, কর্ণ, রেখা</strong> ইত্যাদি</li>
+            <li>সমাবেশ সংখ্যা নির্ণয়</li>
+          </ul>
+        </Card>
+      </div>
+      <div className="mf-grid2">
+        <Card color="violet">
           <CardTitle color="var(--mf-violet)">বিন্যাস — Permutation (সাজানো)</CardTitle>
           <FBox label="nPr" tex={"= \\dfrac{n!}{(n-r)!}"}/>
           <FBox label="n বস্তু বৃত্তাকারে" val="= (n−1)!" highlight/>
