@@ -3,7 +3,7 @@
 import {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
-  Landmark, Gauge, Ship, CreditCard, Layers,
+  Landmark, Gauge, Ship, CreditCard, Layers, Zap, Flame,
 } from 'lucide-react'
 
 // Optional per-card `issues` (এর ফলে যেসব সমস্যা হয়) / `benefits` (এর সুফল) arrays —
@@ -17,6 +17,7 @@ export const DATA_CATEGORIES = {
   'বৈদেশিক খাত': '#22c55e',
   'রাজস্ব ও আর্থিক খাত': '#ef4444',
   'বাজেট': '#a78bfa',
+  'বিদ্যুৎ ও জ্বালানি': '#14b8a6',
 }
 
 export const DATA_CARDS = [
@@ -233,6 +234,28 @@ export const DATA_CARDS = [
       'আন্তর্জাতিক মান (Basel III / IFRS 9) অনুযায়ী প্রকৃত চিত্র উঠে আসে',
       'সময়মতো প্রভিশন রাখায় ভবিষ্যৎ লোকসান সামলানোর সক্ষমতা তৈরি হয়',
       'ঋণ লুকানোর সুযোগ কমে, ব্যাংক খাতে স্বচ্ছতা বাড়ে',
+    ],
+  },
+  {
+    id: 19, cat: 'বিদ্যুৎ ও জ্বালানি',
+    title: 'বিদ্যুৎ পরিস্থিতি', subtitle: 'Power Capacity, Generation & Shortfall', icon: Zap,
+    body: `উৎপাদন ক্ষমতা — <strong>~৩৩ হাজার MW</strong><br>গড় উৎপাদন — <strong>১৪-১৬ হাজার MW</strong> (14K-16K)<br>সাম্প্রতিক সর্বোচ্চ উৎপাদন — <strong>~১৭ হাজার MW</strong> (17K)<br>প্রতিদিন গড়ে ঘাটতি — <em class="warning">~৩,০০০ MW</em>`,
+    tip: `ক্ষমতা ৩৩ হাজার, উৎপাদন অর্ধেকের কাছাকাছি (১৪-১৭ হাজার) — বাকিটা বসে থাকা ক্ষমতা`,
+    issues: [
+      'বসিয়ে রাখা কেন্দ্রের ক্যাপাসিটি চার্জ গুনতে হয়, ভর্তুকির বোঝা বাড়ে',
+      'চাহিদার তুলনায় ঘাটতি থাকায় লোডশেডিংয়ে শিল্প উৎপাদন ও সেচ ব্যাহত হয়',
+      'জ্বালানি আমদানির ডলার সংকটে পূর্ণ ক্ষমতায় কেন্দ্র চালানো যায় না',
+    ],
+  },
+  {
+    id: 20, cat: 'বিদ্যুৎ ও জ্বালানি',
+    title: 'জ্বালানিভিত্তিক বিদ্যুৎ উৎপাদন', subtitle: 'Power Generation by Fuel', icon: Flame,
+    body: `গ্যাস — <strong>৪৩%</strong> (সবচেয়ে সস্তা, ইউনিটপ্রতি <strong>৩-৭ টাকা</strong>)<br>কয়লা — <strong>২৭%</strong><br>ফার্নেস অয়েল/ডিজেল — <strong>২০%</strong><br>অন্যান্য — <strong>১০%</strong> (নবায়নযোগ্য + আমদানি)`,
+    tip: `৪৩ + ২৭ + ২০ + ১০ = ১০০; গ্যাস ও কয়লা মিলেই ৭০%`,
+    issues: [
+      'উৎপাদনের সিংহভাগ জীবাশ্ম জ্বালানিনির্ভর, বিশ্ববাজারে দাম বাড়লেই খরচ লাফিয়ে বাড়ে',
+      'ফার্নেস অয়েল/ডিজেলে উৎপাদন খরচ কয়েক গুণ বেশি, তাই ভর্তুকি বাড়ে',
+      'নবায়নযোগ্যের অংশ খুবই কম, ফলে কার্বন নিঃসরণ ও আমদানিনির্ভরতা দুটোই থেকে যায়',
     ],
   },
 ]

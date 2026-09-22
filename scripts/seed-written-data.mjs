@@ -18,7 +18,7 @@ import { createClient } from '@supabase/supabase-js'
 import {
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
-  Landmark, Gauge, Ship, CreditCard, Layers,
+  Landmark, Gauge, Ship, CreditCard, Layers, Zap, Flame,
 } from 'lucide-react'
 import { DATA_CATEGORIES, DATA_CARDS } from '../src/data/written/dataTopicData.js'
 
@@ -54,6 +54,7 @@ const CATEGORY_SLUGS = {
   'বৈদেশিক খাত': 'external-sector',
   'রাজস্ব ও আর্থিক খাত': 'revenue-finance',
   'বাজেট': 'budget',
+  'বিদ্যুৎ ও জ্বালানি': 'power-energy',
 }
 
 // Explicit plain-name map (matches src/data/written/dataTopicLoader.js's
@@ -63,7 +64,7 @@ const CATEGORY_SLUGS = {
 const ICON_BY_REF = new Map(Object.entries({
   TrendingUp, TrendingDown, Users, Percent, HandCoins,
   Globe, ShoppingBag, PiggyBank, Wallet, ShieldAlert, Receipt, GraduationCap,
-  Landmark, Gauge, Ship, CreditCard, Layers,
+  Landmark, Gauge, Ship, CreditCard, Layers, Zap, Flame,
 }))
 function iconName(iconComponent) {
   for (const [name, comp] of ICON_BY_REF) if (comp === iconComponent) return name
