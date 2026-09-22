@@ -61,6 +61,12 @@ export default function LcmSection() {
         </IdItem>
 
         <IdItem n="৩">
+          <strong>যোগ করলে নিঃশেষে বিভাজ্য → ল.সা.গু − যোগকৃত সংখ্যা।</strong><br/>
+          কোন <strong>ক্ষুদ্রতম</strong> সংখ্যার সাথে <strong>a যোগ</strong> করলে যোগফল কয়েকটি সংখ্যা দিয়ে <strong>নিঃশেষে বিভাজ্য</strong> হলে → নির্ণেয় সংখ্যা = <strong>ল.সা.গু − a</strong>। (উল্টোটা: <strong>a বিয়োগ</strong> করলে বিভাজ্য হলে → <strong>ল.সা.গু + a</strong>)
+          <div style={exBox}><strong>উদাহরণ:</strong> কোন <strong>ক্ষুদ্রতম</strong> সংখ্যার সাথে <strong>৫</strong> যোগ করলে যোগফল <strong>১৬, ২৪ ও ৩২</strong> দিয়ে নিঃশেষে বিভাজ্য হবে? → (১৬, ২৪, ৩২-এর ল.সা.গু = <strong>৯৬</strong>) <strong>− ৫ = ৯১</strong>।</div>
+        </IdItem>
+
+        <IdItem n="৪">
           <strong>বৃহত্তম সংখ্যা → অবশিষ্ট বিয়োগ করে গ.সা.গু।</strong><br/>
           কোন <strong>বৃহত্তম</strong> সংখ্যা দিয়ে কয়েকটি সংখ্যাকে ভাগ করলে নির্দিষ্ট অবশিষ্ট থাকলে → প্রতিটি থেকে তার <strong>অবশিষ্ট বিয়োগ</strong> করে <strong>গ.সা.গু</strong> নাও।
           <div style={exBox}><strong>উদাহরণ:</strong> কোন <strong>বৃহত্তম</strong> সংখ্যা দিয়ে <strong>২৯, ৪০, ৫৫</strong> কে ভাগ করলে যথাক্রমে <strong>৩, ৪, ৫</strong> অবশিষ্ট থাকবে? → (২৯−৩), (৪০−৪), (৫৫−৫) = <strong>২৬, ৩৬, ৫০</strong> → এদের <strong>গ.সা.গু = উত্তর</strong>।</div>
@@ -70,6 +76,7 @@ export default function LcmSection() {
           <ul>
             <li>অবশিষ্ট <strong>একই</strong> → ল.সা.গু <strong>+</strong> অবশিষ্ট</li>
             <li>(ভাজক − অবশিষ্ট) <strong>সমান</strong> → ল.সা.গু <strong>−</strong> পার্থক্য</li>
+            <li><strong>যোগ</strong> করলে নিঃশেষে বিভাজ্য → ল.সা.গু <strong>−</strong> যোগকৃত সংখ্যা (বিয়োগ হলে <strong>+</strong>)</li>
             <li><strong>বৃহত্তম</strong> সংখ্যা (ভাগশেষসহ) → অবশিষ্ট বিয়োগ করে <strong>গ.সা.গু</strong></li>
           </ul>
         </Mem>
