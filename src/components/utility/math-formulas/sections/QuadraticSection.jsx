@@ -28,10 +28,10 @@ export default function QuadraticSection() {
           <CardTitle>④ D ও মূলের প্রকৃতি</CardTitle>
           <div style={{display:'flex',flexDirection:'column',gap:7}}>
             {[
-              {cond:'D > 0',          desc:'বাস্তব ও অসমান',   bg:'rgba(15,219,168,.12)',  border:'var(--mf-teal)',   tc:'var(--mf-teal)'  },
-              {cond:'D = 0',          desc:'বাস্তব ও সমান',    bg:'rgba(240,165,0,.12)',   border:'var(--mf-gold)',   tc:'var(--mf-gold2)' },
-              {cond:'D < 0',          desc:'জটিল (কাল্পনিক)', bg:'rgba(240,108,126,.12)', border:'var(--mf-rose)',   tc:'var(--mf-rose)'  },
-              {cond:'D > 0, পূর্ণবর্গ',desc:'মূলদ (Rational)', bg:'rgba(167,139,250,.12)', border:'var(--mf-violet)', tc:'var(--mf-violet)'},
+              {cond:'D > 0',          desc:'বাস্তব ও অসমান',   bg:'color-mix(in srgb, var(--mf-teal) 12%, transparent)',  border:'var(--mf-teal)',   tc:'var(--mf-teal)'  },
+              {cond:'D = 0',          desc:'বাস্তব ও সমান',    bg:'color-mix(in srgb, var(--mf-gold) 12%, transparent)',   border:'var(--mf-gold)',   tc:'var(--mf-gold2)' },
+              {cond:'D < 0',          desc:'জটিল (কাল্পনিক)', bg:'color-mix(in srgb, var(--mf-rose) 12%, transparent)', border:'var(--mf-rose)',   tc:'var(--mf-rose)'  },
+              {cond:'D > 0, পূর্ণবর্গ',desc:'মূলদ (Rational)', bg:'color-mix(in srgb, var(--mf-violet) 12%, transparent)', border:'var(--mf-violet)', tc:'var(--mf-violet)'},
             ].map(r => (
               <div key={r.cond} style={{display:'flex',alignItems:'center',gap:10,padding:'8px 12px',borderRadius:9,background:r.bg,border:`1px solid ${r.border}`}}>
                 <code style={{fontWeight:800,fontSize:13,color:r.tc,minWidth:100,whiteSpace:'nowrap'}}>{r.cond}</code>

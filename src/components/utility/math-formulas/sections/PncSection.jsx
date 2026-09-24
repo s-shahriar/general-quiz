@@ -46,7 +46,7 @@ export default function PncSection() {
           <FBox label="nCr" tex={"= \\dfrac{n!}{r!\\,(n-r)!}"}/>
           <FBox label="nC0 = nCn" val="= 1"/>
           <FBox label="nCr + nC(r-1)" val="= (n+1)Cr" highlight/>
-          <div style={{background:'var(--elevated)',borderRadius:8,padding:12,marginTop:10,borderLeft:'3px solid #f0a500'}}>
+          <div style={{background:'var(--elevated)',borderRadius:8,padding:12,marginTop:10,borderLeft:'3px solid var(--mf-gold)'}}>
             <div style={{color:'var(--mf-gold)',fontSize:13,fontWeight:700,marginBottom:8}}>Handshake ও Graph সমস্যা</div>
             <FBox label="n জনের Handshake" tex={"= \\dfrac{n(n-1)}{2}"}/>
             <FBox label="n জনের চিঠি (দু-দিকে)" val="= n(n−1)"/>

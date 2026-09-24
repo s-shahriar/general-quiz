@@ -216,7 +216,7 @@ export default function StudyMode({
             role="tab"
             aria-selected={!bySub}
             className={!bySub ? 'active' : ''}
-            style={!bySub ? { color: topic.color, borderColor: topic.color, background: `${topic.color}15` } : undefined}
+            style={!bySub ? { color: topic.color, borderColor: topic.color, background: `color-mix(in srgb, ${topic.color} 8%, transparent)` } : undefined}
             onClick={() => { setView('all'); setActiveSub(null) }}
           >
             <List size={13} /> সব একসাথে
@@ -225,7 +225,7 @@ export default function StudyMode({
             role="tab"
             aria-selected={bySub}
             className={bySub ? 'active' : ''}
-            style={bySub ? { color: topic.color, borderColor: topic.color, background: `${topic.color}15` } : undefined}
+            style={bySub ? { color: topic.color, borderColor: topic.color, background: `color-mix(in srgb, ${topic.color} 8%, transparent)` } : undefined}
             onClick={() => { setView('subtopic'); setActiveSub(null) }}
           >
             <Tag size={13} /> Sub-topic অনুযায়ী
@@ -260,14 +260,14 @@ export default function StudyMode({
         <button
           className={`study-filter-btn${filter === 'all' ? ' active' : ''}`}
           onClick={() => setFilter('all')}
-          style={filter === 'all' ? { borderColor: topic.color, color: topic.color, background: `${topic.color}15` } : {}}
+          style={filter === 'all' ? { borderColor: topic.color, color: topic.color, background: `color-mix(in srgb, ${topic.color} 8%, transparent)` } : {}}
         >
           All ({nonNailed.length})
         </button>
         <button
           className={`study-filter-btn${filter === 'important' ? ' active' : ''}`}
           onClick={() => setFilter('important')}
-          style={filter === 'important' ? { borderColor: '#ef4444', color: '#ef4444', background: 'rgba(239,68,68,0.12)' } : {}}
+          style={filter === 'important' ? { borderColor: 'var(--imp)', color: 'var(--imp)', background: 'color-mix(in srgb, var(--imp) 12%, transparent)' } : {}}
         >
           <Bookmark size={11} fill={filter === 'important' ? 'currentColor' : 'none'} />
           Important ({importantCount})
@@ -275,7 +275,7 @@ export default function StudyMode({
         <button
           className={`study-filter-btn${filter === 'weak' ? ' active' : ''}`}
           onClick={() => setFilter('weak')}
-          style={filter === 'weak' ? { borderColor: '#f97316', color: '#f97316', background: 'rgba(249,115,22,0.12)' } : {}}
+          style={filter === 'weak' ? { borderColor: 'var(--weak)', color: 'var(--weak)', background: 'color-mix(in srgb, var(--weak) 12%, transparent)' } : {}}
         >
           <Flame size={11} fill={filter === 'weak' ? 'currentColor' : 'none'} />
           Weak ({weakCount})
@@ -305,7 +305,7 @@ export default function StudyMode({
       )}
 
       {nailedCt > 0 && filter === 'all' && !query && (
-        <div className="nailed-notice" style={{ borderColor: `${topic.color}40`, color: topic.color }}>
+        <div className="nailed-notice" style={{ borderColor: `color-mix(in srgb, ${topic.color} 25%, transparent)`, color: topic.color }}>
           <Star size={13} fill="currentColor" />
           <span>{nailedCt} question{nailedCt !== 1 ? 's' : ''} Nailed — view in <button onClick={goNailed} className="nailed-notice-link">Nailed It</button></span>
         </div>
@@ -316,9 +316,9 @@ export default function StudyMode({
           {query
             ? <Search size={38} style={{ color: topic.color, opacity: 0.4, marginBottom: 12 }} />
             : filter === 'important'
-              ? <Bookmark size={38} style={{ color: '#ef4444', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
+              ? <Bookmark size={38} style={{ color: 'var(--imp)', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
               : filter === 'weak'
-                ? <Flame size={38} style={{ color: '#f97316', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
+                ? <Flame size={38} style={{ color: 'var(--weak)', opacity: 0.4, marginBottom: 12 }} fill="currentColor" />
                 : <Star size={38} style={{ color: topic.color, opacity: 0.5, marginBottom: 12 }} fill="currentColor" />
           }
           <p>{query ? 'No questions match your search.' : filter === 'important' ? 'No Important questions yet.' : filter === 'weak' ? 'No Weak questions yet.' : 'All questions nailed! 🎉'}</p>

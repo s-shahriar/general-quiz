@@ -13,15 +13,15 @@ export default function SeriesSection() {
           <div className="mf-series-card"><div className="step">n-তম পদ (Tₙ)</div><div className="formula"><Tex>{"T_n = a + (n-1)d"}</Tex></div></div>
           <div className="mf-series-card"><div className="step">n পদের সমষ্টি (Sₙ)</div><div className="formula"><Tex>{"S_n = \\dfrac{n}{2}\\bigl[2a+(n-1)d\\bigr]"}</Tex></div></div>
           <div className="mf-series-card"><div className="step">গাণিতিক গড় (AM)</div><div className="formula"><Tex>{"AM = \\dfrac{\\text{প্রথম পদ} + \\text{শেষ পদ}}{2}"}</Tex></div></div>
-          <div className="mf-series-card" style={{borderLeft:'3px solid #0fdba8'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-teal)'}}>
             <div className="step">ধারার সমষ্টি (প্রথম ও শেষ পদ দিয়ে)</div>
             <div className="formula"><Tex>{"\\text{ধারার সমষ্টি} = \\dfrac{\\text{শেষ পদ} + \\text{প্রথম পদ}}{2} \\times \\text{পদ সংখ্যা}"}</Tex></div>
           </div>
-          <div className="mf-series-card" style={{borderLeft:'3px solid #a78bfa'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-violet)'}}>
             <div className="step">পদ সংখ্যা (Number of Terms)</div>
             <div className="formula"><Tex>{"n = \\dfrac{\\text{শেষ পদ} - \\text{প্রথম পদ}}{\\text{সা. অন্তর}} + 1"}</Tex></div>
           </div>
-          <div style={{background:'var(--elevated)',borderRadius:8,padding:12,marginTop:10,borderLeft:'3px solid #0fdba8'}}>
+          <div style={{background:'var(--elevated)',borderRadius:8,padding:12,marginTop:10,borderLeft:'3px solid var(--mf-teal)'}}>
             <div style={{color:'var(--mf-teal)',fontSize:13,fontWeight:700,marginBottom:8}}>বিশেষ সমষ্টি সূত্র</div>
             <FBox label="1+2+...+n" tex={"= \\dfrac{n(n+1)}{2}"}/>
             <FBox label="1²+2²+...+n²" tex={"= \\dfrac{n(n+1)(2n+1)}{6}"}/>
@@ -42,7 +42,7 @@ export default function SeriesSection() {
             প্রথম পদ <span className="mf-fi">a</span>, সাধারণ অনুপাত <span className="mf-fi">r</span>, পদসংখ্যা <span className="mf-fi">n</span>
           </p>
           <div className="mf-series-card"><div className="step">n-তম পদ</div><div className="formula"><Tex>{"T_n = a \\cdot r^{n-1}"}</Tex></div></div>
-          <div className="mf-series-card" style={{borderLeft:'3px solid #f0a500'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-gold)'}}>
             <div className="step">n পদের সমষ্টি — r &gt; 1 হলে</div>
             <div className="formula"><Tex>{"S_n = \\dfrac{a(r^n-1)}{r-1}"}</Tex></div>
             <div style={{fontSize:12, color:'var(--text-3)', marginTop:6}}>
@@ -56,7 +56,7 @@ export default function SeriesSection() {
               যেমন: <strong>1 + 0.1 + 0.01 + ... + 0.00001</strong> → r = 0.1, শেষ আছে (সশীম)
             </div>
           </div>
-          <div className="mf-series-card" style={{borderLeft:'3px solid #f06d7e', background:'rgba(240,108,126,.06)'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-rose)', background:'color-mix(in srgb, var(--mf-rose) 6%, transparent)'}}>
             <div className="step">অশীম পদের সমষ্টি (S∞) — শর্ত: <strong style={{color:'var(--mf-rose)'}}>−1 &lt; r &lt; 1</strong></div>
             <div className="formula"><Tex>{"S_\\infty = \\dfrac{a}{1-r}"}</Tex></div>
             <div style={{fontSize:12, color:'var(--text-3)', marginTop:8, lineHeight:1.6}}>

@@ -73,7 +73,7 @@ function VocabModeSelect({ topic, navigate }) {
         <TopbarActions />
       </div>
       <div className="mode-topic-hero">
-        <div className="mode-icon-circle" style={{ background: `${topic.color}1a`, color: topic.color, boxShadow: `0 8px 40px ${topic.color}30, 0 0 0 1px ${topic.color}20` }}>
+        <div className="mode-icon-circle" style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color, boxShadow: `0 0 0 1px color-mix(in srgb, ${topic.color} 12%, transparent)` }}>
           <Icon size={38} />
         </div>
         <div className="mode-topic-name" style={{ color: topic.color }}>{topic.name}</div>
@@ -81,13 +81,13 @@ function VocabModeSelect({ topic, navigate }) {
       </div>
       <div className="mode-cards">
         <button className="mode-card" onClick={() => navigate('quiz')}>
-          <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}><Brain size={26} /></div>
+          <div className="mode-card-icon" style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color }}><Brain size={26} /></div>
           <h3>Quiz Mode</h3>
           <p>Answer questions one by one with instant feedback.</p>
           <span className="mode-card-cta" style={{ color: topic.color }}>Start Quiz →</span>
         </button>
         <button className="mode-card" onClick={() => navigate('study')}>
-          <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}><BookOpen size={26} /></div>
+          <div className="mode-card-icon" style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color }}><BookOpen size={26} /></div>
           <h3>Study Mode</h3>
           <p>Browse all Q&amp;As at your own pace.</p>
           <span className="mode-card-cta" style={{ color: topic.color }}>Start Reading →</span>

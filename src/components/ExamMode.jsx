@@ -73,12 +73,12 @@ export default function ExamMode({
   }
 
   if (!q || done) {
-    return <ScoreRingScreen score={score} total={questions.length} title="Exam Complete!" label={`${label} · ${questions.length} Q`} accentColor="#6366f1" onRetry={retry} onHome={goHome} />
+    return <ScoreRingScreen score={score} total={questions.length} title="Exam Complete!" label={`${label} · ${questions.length} Q`} onRetry={retry} onHome={goHome} />
   }
 
   const progress  = ((idx + (revealed ? 1 : 0)) / questions.length) * 100
   const isCorrect = selected === q.correct_answer
-  const accent = '#6366f1'
+  const accent = 'var(--accent)'
 
   return (
     <div className="quiz-page anim-fade exam-page">

@@ -106,21 +106,21 @@ export default function AccountButton() {
 
                 <div style={statsRow}>
                   <span style={stat}>
-                    <span style={statValue}><Star size={13} style={{ color: '#f59e0b' }} /> {nailedCount}</span>
+                    <span style={statValue}><Star size={13} style={{ color: 'var(--nail)' }} /> {nailedCount}</span>
                     <span style={statLabel}>nailed</span>
                   </span>
                   <span style={{ ...stat, ...statSplit }}>
-                    <span style={statValue}><Bookmark size={13} style={{ color: '#ef4444' }} /> {importantCount}</span>
+                    <span style={statValue}><Bookmark size={13} style={{ color: 'var(--imp)' }} /> {importantCount}</span>
                     <span style={statLabel}>important</span>
                   </span>
                   <span style={{ ...stat, ...statSplit }}>
-                    <span style={statValue}><Flame size={13} style={{ color: '#f97316' }} /> {weakCount}</span>
+                    <span style={statValue}><Flame size={13} style={{ color: 'var(--weak)' }} /> {weakCount}</span>
                     <span style={statLabel}>weak</span>
                   </span>
                 </div>
 
                 <div style={syncNote}>
-                  <Check size={13} style={{ color: '#22c55e', flexShrink: 0 }} />
+                  <Check size={13} style={{ color: 'var(--ok)', flexShrink: 0 }} />
                   {lastSaved ? `Saved ${timeAgo(lastSaved)}` : 'Synced across your devices'}
                 </div>
 
@@ -155,7 +155,7 @@ export default function AccountButton() {
 
 const backdrop = { position: 'fixed', inset: 0, zIndex: 1000 }
 const idRow = { display: 'flex', alignItems: 'center', gap: 11, marginBottom: 12 }
-const fallbackAvatar = { width: 38, height: 38, borderRadius: '50%', background: 'rgba(99,102,241,0.15)', color: '#818cf8', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }
+const fallbackAvatar = { width: 38, height: 38, borderRadius: '50%', background: 'color-mix(in srgb, var(--accent) 15%, transparent)', color: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }
 const nameText = { fontSize: '0.9rem', fontWeight: 600, color: 'var(--text)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }
 const emailText = { fontSize: '0.78rem', color: 'var(--text-3)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }
 // Three equal columns with the count stacked over its label. On one row the

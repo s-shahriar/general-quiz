@@ -512,7 +512,7 @@ function QuestionCard({
             <div key={i} style={optRow(correct)}>
               <span style={optLetter(correct)}>{LETTERS[i]}</span>
               <RichText html={o} as="span" />
-              {correct && <Check size={13} style={{ color: '#22c55e', marginLeft: 'auto', flexShrink: 0 }} />}
+              {correct && <Check size={13} style={{ color: 'var(--ok)', marginLeft: 'auto', flexShrink: 0 }} />}
             </div>
           )
         })}
@@ -595,7 +595,7 @@ function QuestionCard({
 // shows the neighbouring question it matched so the guess can be judged
 // rather than trusted. Weak suggestions say so.
 const TIER_LABEL = { strong: 'Likely', likely: 'Probably', weak: 'Maybe' }
-const TIER_COLOR = { strong: '#22c55e', likely: 'var(--accent, #6366f1)', weak: '#f59e0b' }
+const TIER_COLOR = { strong: 'var(--ok)', likely: 'var(--accent)', weak: 'var(--warn)' }
 
 function Suggestion({ hint, onApply, label, nameOf = catName, subSlug, subName, subWeak }) {
   const pct = Math.round(hint.confidence * 100)
@@ -1129,7 +1129,7 @@ function Shell({ children }) {
 function Gate({ icon, title, sub, onBack }) {
   return (
     <div style={{ textAlign: 'center', padding: '48px 16px', color: 'var(--text-3)' }}>
-      <div style={{ color: '#f59e0b', marginBottom: 10 }}>{icon}</div>
+      <div style={{ color: 'var(--warn)', marginBottom: 10 }}>{icon}</div>
       <h2 style={{ margin: '0 0 6px', color: 'var(--text)', fontSize: '1.05rem' }}>{title}</h2>
       <p style={{ margin: '0 0 16px', fontSize: '0.85rem' }}>{sub}</p>
       <button style={backBtn} onClick={onBack}><ArrowLeft size={16} /> Back to app</button>
@@ -1145,8 +1145,8 @@ const tabsRow = { display: 'flex', gap: 8, marginBottom: 16 }
 const tabBtn = (active) => ({
   padding: '8px 14px', borderRadius: 9, fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer',
   border: '1px solid var(--border)',
-  background: active ? 'var(--accent, #6366f1)' : 'transparent',
-  color: active ? '#fff' : 'var(--text-2)',
+  background: active ? 'var(--accent-2)' : 'transparent',
+  color: active ? 'var(--on-accent)' : 'var(--text-2)',
 })
 const backBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 12px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text)', fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }
 const muted = { fontSize: '0.82rem', color: 'var(--text-3)' }
@@ -1156,8 +1156,8 @@ const uploadBtn = { display: 'inline-flex', alignItems: 'center', gap: 8, paddin
 // Selected cards carry an accent edge; a card flagged by a failed insert turns
 // red so the offender is findable without reading every card.
 const qCard = (picked, flagged) => ({
-  border: `1px solid ${flagged ? '#ef4444' : picked ? 'var(--accent, #6366f1)' : 'var(--border)'}`,
-  boxShadow: picked && !flagged ? '0 0 0 1px var(--accent, #6366f1)' : 'none',
+  border: `1px solid ${flagged ? 'var(--bad)' : picked ? 'var(--accent)' : 'var(--border)'}`,
+  boxShadow: picked && !flagged ? '0 0 0 1px var(--accent)' : 'none',
   borderRadius: 12, padding: 14, marginBottom: 12,
   background: 'var(--card)', opacity: picked ? 1 : 0.72,
 })
@@ -1165,38 +1165,38 @@ const qTop = { display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', 
 const checkbox = (on) => ({
   width: 19, height: 19, flexShrink: 0, padding: 0, borderRadius: 5, cursor: 'pointer',
   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-  border: `1.5px solid ${on ? 'var(--accent, #6366f1)' : 'var(--border)'}`,
-  background: on ? 'var(--accent, #6366f1)' : 'transparent', color: '#fff',
+  border: `1.5px solid ${on ? 'var(--accent)' : 'var(--border)'}`,
+  background: on ? 'var(--accent-2)' : 'transparent', color: 'var(--on-accent)',
 })
 const toolbar = { display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', padding: '10px 12px', borderRadius: 11, border: '1px solid var(--border)', background: 'var(--card2)', marginBottom: 12 }
 const toolbarGroup = { display: 'flex', alignItems: 'center', gap: 8 }
 const toolbarSep = { color: 'var(--text-3)', fontSize: '0.8rem' }
-const linkBtn = { background: 'none', border: 'none', padding: 0, color: 'var(--accent, #6366f1)', fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }
+const linkBtn = { background: 'none', border: 'none', padding: 0, color: 'var(--accent)', fontSize: '0.82rem', fontWeight: 600, cursor: 'pointer' }
 const ghostBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '7px 11px', borderRadius: 8, border: '1px solid var(--border)', background: 'var(--card)', color: 'var(--text-2)', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer' }
 const cardActions = { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }
 const cardInsertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 6, flexShrink: 0, padding: '9px 13px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text-2)', fontSize: '0.8rem', fontWeight: 600, cursor: on ? 'pointer' : 'not-allowed', opacity: on ? 1 : 0.5 })
-const cardError = { display: 'flex', alignItems: 'center', gap: 6, margin: '8px 0 0', fontSize: '0.78rem', color: '#b91c1c' }
+const cardError = { display: 'flex', alignItems: 'center', gap: 6, margin: '8px 0 0', fontSize: '0.78rem', color: 'var(--bad)' }
 const hintBox = { display: 'flex', alignItems: 'flex-start', gap: 8, padding: '8px 10px', borderRadius: 9, border: '1px dashed var(--border)', background: 'var(--card2)', marginTop: 8 }
 const hintNearest = { fontSize: '0.74rem', color: 'var(--text-3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', marginTop: 2 }
 // A match can land on a relabelled row from another module (see
 // livemcqTraining.js). Say so — a neighbour from a different syllabus is
 // weaker evidence than a real LiveMCQ one, and only the reader can judge that.
 const hintSource = { fontSize: '0.7rem', color: 'var(--text-3)', fontStyle: 'italic', marginTop: 1 }
-const applyHintBtn = (color) => ({ flexShrink: 0, alignSelf: 'center', padding: '6px 11px', borderRadius: 8, border: 'none', background: color, color: '#fff', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer' })
-const weakTag = { marginLeft: 6, fontSize: '0.68rem', fontWeight: 600, color: '#b45309', background: 'rgba(245,158,11,0.16)', padding: '1px 6px', borderRadius: 20 }
+const applyHintBtn = (color) => ({ flexShrink: 0, alignSelf: 'center', padding: '6px 11px', borderRadius: 8, border: 'none', background: color, color: 'var(--on-solid)', fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer' })
+const weakTag = { marginLeft: 6, fontSize: '0.68rem', fontWeight: 600, color: 'var(--warn)', background: 'color-mix(in srgb, var(--warn) 16%, transparent)', padding: '1px 6px', borderRadius: 20 }
 const qIndex = { fontSize: '0.78rem', fontWeight: 700, color: 'var(--text-3)' }
 const fidTag = { fontSize: '0.72rem', color: 'var(--text-3)', background: 'var(--card2)', padding: '2px 7px', borderRadius: 20 }
-const warnTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', color: '#b45309', background: 'rgba(245,158,11,0.14)', padding: '2px 7px', borderRadius: 20 }
-const dangerTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', color: '#b91c1c', background: 'rgba(239,68,68,0.14)', padding: '2px 7px', borderRadius: 20 }
-const optRow = (correct) => ({ display: 'flex', alignItems: 'center', gap: 9, padding: '6px 9px', borderRadius: 8, marginBottom: 4, background: correct ? 'rgba(34,197,94,0.10)' : 'var(--card2)', fontSize: '0.88rem', color: 'var(--text)' })
-const optLetter = (correct) => ({ width: 20, height: 20, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.72rem', fontWeight: 700, background: correct ? '#22c55e' : 'var(--border)', color: correct ? '#fff' : 'var(--text-2)' })
+const warnTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', color: 'var(--warn)', background: 'color-mix(in srgb, var(--warn) 14%, transparent)', padding: '2px 7px', borderRadius: 20 }
+const dangerTag = { display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', color: 'var(--bad)', background: 'color-mix(in srgb, var(--bad) 14%, transparent)', padding: '2px 7px', borderRadius: 20 }
+const optRow = (correct) => ({ display: 'flex', alignItems: 'center', gap: 9, padding: '6px 9px', borderRadius: 8, marginBottom: 4, background: correct ? 'color-mix(in srgb, var(--ok) 10%, transparent)' : 'var(--card2)', fontSize: '0.88rem', color: 'var(--text)' })
+const optLetter = (correct) => ({ width: 20, height: 20, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.72rem', fontWeight: 700, background: correct ? 'var(--ok)' : 'var(--border)', color: correct ? 'var(--on-solid)' : 'var(--text-2)' })
 const expToggle = { background: 'none', border: 'none', color: 'var(--text-3)', fontSize: '0.8rem', cursor: 'pointer', padding: '2px 0', marginBottom: 4 }
 const selectControl = (empty, fullWidth, invalid, disabled, optional) => ({
   width: fullWidth ? '100%' : 'auto', boxSizing: 'border-box',
   appearance: 'none', WebkitAppearance: 'none', MozAppearance: 'none',
   padding: '9px 34px 9px 12px', borderRadius: 9,
-  border: `1px solid ${invalid ? '#ef4444' : empty && !optional ? 'rgba(245,158,11,0.6)' : 'var(--border)'}`,
-  background: invalid ? 'rgba(239,68,68,0.08)' : 'var(--card2)',
+  border: `1px solid ${invalid ? 'var(--bad)' : empty && !optional ? 'color-mix(in srgb, var(--warn) 60%, transparent)' : 'var(--border)'}`,
+  background: invalid ? 'color-mix(in srgb, var(--bad) 8%, transparent)' : 'var(--card2)',
   color: empty ? 'var(--text-3)' : 'var(--text)',
   fontSize: '0.85rem', fontWeight: 500, lineHeight: 1.2,
   cursor: disabled ? 'not-allowed' : 'pointer', opacity: disabled ? 0.55 : 1, outline: 'none',
@@ -1205,25 +1205,25 @@ const selectChevron = { position: 'absolute', right: 11, top: '50%', transform: 
 const optionStyle = { background: 'var(--card)', color: 'var(--text)' }
 const pagerRow = { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4, flexWrap: 'wrap', marginTop: 16 }
 const pagerBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 8, border: '1px solid var(--border)', background: 'transparent', color: on ? 'var(--text-2)' : 'var(--text-3)', cursor: on ? 'pointer' : 'not-allowed', opacity: on ? 1 : 0.45 })
-const pagerNum = (active) => ({ minWidth: 32, height: 32, padding: '0 8px', borderRadius: 8, border: `1px solid ${active ? 'var(--accent, #6366f1)' : 'var(--border)'}`, background: active ? 'var(--accent, #6366f1)' : 'transparent', color: active ? '#fff' : 'var(--text-2)', fontSize: '0.82rem', fontWeight: active ? 700 : 500, cursor: 'pointer' })
+const pagerNum = (active) => ({ minWidth: 32, height: 32, padding: '0 8px', borderRadius: 8, border: `1px solid ${active ? 'var(--accent)' : 'var(--border)'}`, background: active ? 'var(--accent-2)' : 'transparent', color: active ? 'var(--on-accent)' : 'var(--text-2)', fontSize: '0.82rem', fontWeight: active ? 700 : 500, cursor: 'pointer' })
 const pagerGap = { color: 'var(--text-3)', padding: '0 2px', userSelect: 'none' }
 const overlay = { position: 'fixed', inset: 0, zIndex: 1000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 16, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(2px)' }
 const modalCard = { width: '100%', maxWidth: 420, boxSizing: 'border-box', padding: 20, borderRadius: 14, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 20px 50px rgba(0,0,0,0.4)' }
-const modalIcon = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ef4444', background: 'rgba(239,68,68,0.14)', marginBottom: 12 }
+const modalIcon = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--bad)', background: 'color-mix(in srgb, var(--bad) 14%, transparent)', marginBottom: 12 }
 const modalTitle = { margin: '0 0 10px', fontSize: '1.02rem', fontWeight: 700, color: 'var(--text)' }
 const modalMeta = { display: 'flex', alignItems: 'center', gap: 7, flexWrap: 'wrap', marginBottom: 8 }
 const modalSnippet = { fontSize: '0.86rem', color: 'var(--text)', lineHeight: 1.4, padding: '8px 10px', borderRadius: 8, background: 'var(--card2)', border: '1px solid var(--border)', maxHeight: 96, overflow: 'auto' }
 const modalWarn = { margin: '12px 0 0', fontSize: '0.8rem', color: 'var(--text-3)' }
 const modalActions = { display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 18 }
 const modalCancelBtn = { padding: '9px 16px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer' }
-const modalDeleteBtn = { display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: '#ef4444', color: '#fff', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer' }
+const modalDeleteBtn = { display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: 'var(--bad)', color: 'var(--on-solid)', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer' }
 const stickyFooter = { position: 'sticky', bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '12px 14px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 -6px 20px rgba(0,0,0,0.12)', marginTop: 6 }
-const insertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '10px 18px', borderRadius: 9, border: 'none', background: on ? '#22c55e' : 'var(--border)', color: on ? '#fff' : 'var(--text-3)', fontSize: '0.88rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed', whiteSpace: 'nowrap' })
+const insertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '10px 18px', borderRadius: 9, border: 'none', background: on ? 'var(--ok)' : 'var(--border)', color: on ? 'var(--on-solid)' : 'var(--text-3)', fontSize: '0.88rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed', whiteSpace: 'nowrap' })
 const footerActions = { display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }
 const ghostInsertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', fontSize: '0.83rem', fontWeight: 600, cursor: on ? 'pointer' : 'not-allowed', whiteSpace: 'nowrap' })
-const footerHint = { display: 'block', padding: 0, marginTop: 1, background: 'none', border: 'none', color: '#b45309', fontSize: '0.76rem', fontWeight: 600, textAlign: 'left', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }
-const errorBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.83rem', color: '#b91c1c', background: 'rgba(239,68,68,0.10)', padding: '9px 12px', borderRadius: 9 }
-const okBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.85rem', color: '#15803d', background: 'rgba(34,197,94,0.10)', padding: '9px 12px', borderRadius: 9 }
+const footerHint = { display: 'block', padding: 0, marginTop: 1, background: 'none', border: 'none', color: 'var(--warn)', fontSize: '0.76rem', fontWeight: 600, textAlign: 'left', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }
+const errorBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.83rem', color: 'var(--bad)', background: 'color-mix(in srgb, var(--bad) 10%, transparent)', padding: '9px 12px', borderRadius: 9 }
+const okBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.85rem', color: 'var(--ok)', background: 'color-mix(in srgb, var(--ok) 10%, transparent)', padding: '9px 12px', borderRadius: 9 }
 const searchRow = { display: 'flex', gap: 8, marginBottom: 8, flexWrap: 'wrap' }
 const searchInput = { width: '100%', padding: '9px 11px 9px 32px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
 const mRow = { display: 'flex', alignItems: 'center', gap: 10, padding: '10px 12px', borderRadius: 10, border: '1px solid var(--border)', background: 'var(--card)', marginBottom: 8 }
@@ -1232,16 +1232,16 @@ const catChip = { fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-2)', b
 const catChipBtn = { display: 'inline-flex', alignItems: 'center', gap: 3, fontSize: '0.7rem', fontWeight: 600, color: 'var(--text-2)', background: 'var(--card2)', padding: '3px 8px', borderRadius: 20, border: '1px solid var(--border)', cursor: 'pointer' }
 const mSnippet = { fontSize: '0.84rem', color: 'var(--text)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }
 const mAnswer = { display: 'flex', alignItems: 'center', gap: 6, marginTop: 4, minWidth: 0 }
-const ansLetter = { width: 17, height: 17, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.64rem', fontWeight: 700, background: '#22c55e', color: '#fff' }
-const ansText = { fontSize: '0.79rem', color: '#15803d', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }
-const delBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: '#ef4444', cursor: 'pointer' }
+const ansLetter = { width: 17, height: 17, flexShrink: 0, borderRadius: '50%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.64rem', fontWeight: 700, background: 'var(--ok)', color: 'var(--on-accent)' }
+const ansText = { fontSize: '0.79rem', color: 'var(--ok)', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }
+const delBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--bad)', cursor: 'pointer' }
 const moveBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', cursor: 'pointer' }
-const modalIconInfo = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent, #6366f1)', background: 'rgba(99,102,241,0.14)', marginBottom: 12 }
-const modalMoveBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: on ? 'var(--accent, #6366f1)' : 'var(--border)', color: on ? '#fff' : 'var(--text-3)', fontSize: '0.85rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
+const modalIconInfo = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)', background: 'color-mix(in srgb, var(--accent) 14%, transparent)', marginBottom: 12 }
+const modalMoveBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: on ? 'var(--accent-2)' : 'var(--border)', color: on ? 'var(--on-accent)' : 'var(--text-3)', fontSize: '0.85rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
 const noticeClose = { marginLeft: 'auto', display: 'inline-flex', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 2 }
 const spin = { animation: 'spin 1s linear infinite' }
 const subRow = { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }
-const addSubBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 12px', borderRadius: 9, border: '1px dashed var(--border)', background: 'transparent', color: 'var(--accent, #6366f1)', fontSize: '0.8rem', fontWeight: 600, lineHeight: 1.2, whiteSpace: 'nowrap', cursor: 'pointer' }
+const addSubBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 12px', borderRadius: 9, border: '1px dashed var(--border)', background: 'transparent', color: 'var(--accent)', fontSize: '0.8rem', fontWeight: 600, lineHeight: 1.2, whiteSpace: 'nowrap', cursor: 'pointer' }
 const subArrow = { color: 'var(--text-3)', margin: '0 5px' }
 const addRow = { display: 'flex', alignItems: 'center', gap: 6, width: '100%' }
 const addInput = { flex: 1, minWidth: 0, padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
@@ -1249,6 +1249,6 @@ const hintLabel = { fontWeight: 700, color: 'var(--text-3)' }
 const subChipBtn = (set) => ({
   display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', fontWeight: 600, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
   border: `1px ${set ? 'solid' : 'dashed'} var(--border)`,
-  background: set ? 'rgba(99,102,241,0.10)' : 'transparent',
-  color: set ? 'var(--accent, #6366f1)' : 'var(--text-3)',
+  background: set ? 'color-mix(in srgb, var(--accent) 10%, transparent)' : 'transparent',
+  color: set ? 'var(--accent)' : 'var(--text-3)',
 })

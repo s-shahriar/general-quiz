@@ -29,7 +29,7 @@ export default function NailedScreen({ topics: topicsProp, mastered: masteredPro
       onHome={onHome}
       config={{
         icon: Star,
-        color: '#f59e0b',
+        color: 'var(--nail)',
         title: 'Nailed It',
         emptyIcon: Star,
         emptyText: 'No nailed questions yet',

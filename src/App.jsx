@@ -69,8 +69,7 @@ function AppRoutes() {
   const showNav = isGeneralHome ||
     location.pathname === '/vocabulary' ||
     location.pathname === '/utility' ||
-    location.pathname === '/written' ||
-    location.pathname === '/written/data'
+    location.pathname === '/written'
 
   return (
     <div className="app-root">

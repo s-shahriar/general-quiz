@@ -1,25 +1,24 @@
 import { useState } from 'react'
-import { X, ChevronDown, ChevronUp, Layers } from 'lucide-react'
+import { X } from 'lucide-react'
 import Pagination from './Pagination'
 import TopbarActions from './TopbarActions.jsx'
 import StudyCard from './StudyCard.jsx'
+import TopicSwitcher from './TopicSwitcher.jsx'
 import { uidOf } from '../../lib/qid.js'
 import { useTrash } from '../../contexts/TrashContext.jsx'
 import { useMasteredContext } from '../../contexts/MasteredContext.jsx'
 import { useImportantContext } from '../../contexts/ImportantContext.jsx'
 import { useWeakContext } from '../../contexts/WeakContext.jsx'
 
-// Below this many categories the chip grid collapses to ~2 rows with a toggle.
-const COLLAPSE_AFTER = 6
 const PAGE_SIZE = 20
 // Pseudo-topic id for the "All topics" chip — a saved list spans many topics,
 // so reading straight through all of them is the common case here.
 const ALL_ID = '__all__'
 
 // Saved (Nailed / Important) questions, grouped by topic and browsed via a
-// horizontal category chip-bar (pick one topic at a time — far easier to filter
-// than a long vertical list), plus an "All topics" chip that reads straight
-// through the whole saved set. Read as study cards — the same ones Study Mode
+// topic dropdown (pick one topic at a time — far easier to filter than a long
+// vertical list), plus an "All topics" entry that reads straight through the
+// whole saved set. Read as study cards — the same ones Study Mode
 // uses: tap an option, get the answer and the explanation. Study Mode only ever
 // covers one topic, so cards rendered here carry a topic badge whenever the
 // view spans more than one. `headerExtra` renders under the top bar (the
@@ -28,7 +27,6 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
   const { icon: Icon, color, title, emptyIcon: EmptyIcon, emptyText, emptyHint,
           totalLabel, removeAllLabel } = config
   const [activeId, setActiveId] = useState(null)
-  const [chipsOpen, setChipsOpen] = useState(false)
   const [page, setPage] = useState(1)
   const [confirmOpen, setConfirmOpen] = useState(false)
   const { trashedIds } = useTrash()
@@ -123,47 +121,13 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
             Tap an option to reveal the answer
           </div>
 
-          {(() => {
-            const collapsible = grouped.length > COLLAPSE_AFTER
-            return (
-              <>
-                <div className={`nailed-cat-bar${collapsible && !chipsOpen ? ' collapsed' : ''}`}>
-                  {multiTopic && (
-                    <button
-                      className={`nailed-cat-chip${isAll ? ' active' : ''}`}
-                      style={{ '--c': color }}
-                      onClick={() => { setActiveId(ALL_ID); setPage(1) }}
-                    >
-                      <span className="nailed-cat-chip-ic"><Layers size={16} /></span>
-                      <span className="nailed-cat-chip-name">All topics</span>
-                      <span className="nailed-cat-chip-count">{total}</span>
-                    </button>
-                  )}
-                  {grouped.map(({ topic: t, items }) => {
-                    const TIcon = t.icon
-                    const on = !isAll && active?.topic.id === t.id
-                    return (
-                      <button
-                        key={t.id}
-                        className={`nailed-cat-chip${on ? ' active' : ''}`}
-                        style={{ '--c': t.color }}
-                        onClick={() => { setActiveId(t.id); setPage(1) }}
-                      >
-                        {TIcon && <span className="nailed-cat-chip-ic"><TIcon size={16} /></span>}
-                        <span className="nailed-cat-chip-name">{t.shortName || t.name}</span>
-                        <span className="nailed-cat-chip-count">{items.length}</span>
-                      </button>
-                    )
-                  })}
-                </div>
-                {collapsible && (
-                  <button className="nailed-cat-toggle" onClick={() => setChipsOpen(v => !v)}>
-                    {chipsOpen ? <>Show less <ChevronUp size={13} /></> : <>Show all {grouped.length} categories <ChevronDown size={13} /></>}
-                  </button>
-                )}
-              </>
-            )
-          })()}
+          <TopicSwitcher
+            groups={grouped.map(g => ({ ...g, topic: { ...g.topic, name: g.topic.shortName || g.topic.name } }))}
+            activeId={isAll ? ALL_ID : active?.topic.id}
+            onSelect={id => { setActiveId(id); setPage(1) }}
+            allId={ALL_ID}
+            allColor={color}
+          />
 
           {activeItems.length > 0 && (
             <div className="nailed-screen-list anim-fade" style={{ '--c': activeColor }}>
@@ -212,7 +176,7 @@ export default function SavedQuestionsScreen({ topics, savedSet, onRemoveMany, o
       {confirmOpen && active && (
         <div className="trash-modal-backdrop" onClick={() => setConfirmOpen(false)}>
           <div className="trash-modal" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
-            <div className="trash-modal-icon" style={{ color, background: `${color}1f` }}>
+            <div className="trash-modal-icon" style={{ color, background: `color-mix(in srgb, ${color} 12%, transparent)` }}>
               <Icon size={22} />
             </div>
             <h3 className="trash-modal-title">{removeAllLabel || 'Remove all'} — {active.topic.name}?</h3>

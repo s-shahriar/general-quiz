@@ -25,15 +25,15 @@ export default function QuadSection() {
           <CardTitle>বর্গক্ষেত্র (Square)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="120" height="110" viewBox="0 0 120 110">
-              <rect x="15" y="8" width="90" height="90" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
-              <rect x="15" y="8" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="95" y="8" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="15" y="88" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="95" y="88" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <line x1="15" y1="8" x2="105" y2="98" stroke="#f0a500" strokeWidth="1.2" strokeDasharray="4,3" opacity=".5"/>
-              <text x="54" y="108" fill="#f0a500" fontSize="13" fontWeight="700">a</text>
-              <text x="2" y="58" fill="#f0a500" fontSize="13" fontWeight="700">a</text>
-              <text x="55" y="56" fill="#ffd166" fontSize="11">√2·a</text>
+              <rect x="15" y="8" width="90" height="90" fill="color-mix(in srgb, var(--mf-gold) 7%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
+              <rect x="15" y="8" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="95" y="8" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="15" y="88" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="95" y="88" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <line x1="15" y1="8" x2="105" y2="98" stroke="var(--mf-gold)" strokeWidth="1.2" strokeDasharray="4,3" opacity=".5"/>
+              <text x="54" y="108" fill="var(--mf-gold)" fontSize="13" fontWeight="700">a</text>
+              <text x="2" y="58" fill="var(--mf-gold)" fontSize="13" fontWeight="700">a</text>
+              <text x="55" y="56" fill="var(--mf-gold2)" fontSize="11">√2·a</text>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= a^2"}/>
@@ -50,15 +50,15 @@ export default function QuadSection() {
           <CardTitle color="var(--mf-blue)">আয়তক্ষেত্র (Rectangle)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="140" height="100" viewBox="0 0 140 100">
-              <rect x="10" y="12" width="120" height="72" fill="rgba(91,164,245,.07)" stroke="#5ba4f5" strokeWidth="2"/>
-              <rect x="10" y="12" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="120" y="12" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="10" y="74" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <rect x="120" y="74" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <line x1="10" y1="12" x2="130" y2="84" stroke="#5ba4f5" strokeWidth="1" strokeDasharray="4,3" opacity=".5"/>
-              <text x="56" y="95" fill="#5ba4f5" fontSize="13" fontWeight="700">a (দৈর্ঘ্য)</text>
-              <text x="131" y="55" fill="#5ba4f5" fontSize="12" fontWeight="700">b</text>
-              <text x="55" y="52" fill="#ffd166" fontSize="11">√(a²+b²)</text>
+              <rect x="10" y="12" width="120" height="72" fill="color-mix(in srgb, var(--mf-blue) 7%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <rect x="10" y="12" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="120" y="12" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="10" y="74" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <rect x="120" y="74" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <line x1="10" y1="12" x2="130" y2="84" stroke="var(--mf-blue)" strokeWidth="1" strokeDasharray="4,3" opacity=".5"/>
+              <text x="56" y="95" fill="var(--mf-blue)" fontSize="13" fontWeight="700">a (দৈর্ঘ্য)</text>
+              <text x="131" y="55" fill="var(--mf-blue)" fontSize="12" fontWeight="700">b</text>
+              <text x="55" y="52" fill="var(--mf-gold2)" fontSize="11">√(a²+b²)</text>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" val="= a × b"/>
@@ -75,21 +75,21 @@ export default function QuadSection() {
           <CardTitle color="var(--mf-teal)">রম্বস (Rhombus)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="130" height="110" viewBox="0 0 130 110">
-              <polygon points="65,5 120,55 65,105 10,55" fill="rgba(15,219,168,.06)" stroke="#0fdba8" strokeWidth="2"/>
-              <line x1="65" y1="5" x2="65" y2="105" stroke="#f0a500" strokeWidth="1.5" strokeDasharray="4,2"/>
-              <line x1="10" y1="55" x2="120" y2="55" stroke="#f0a500" strokeWidth="1.5" strokeDasharray="4,2"/>
-              <rect x="60" y="50" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <text x="65" y="45" fill="#f0a500" fontSize="11">d₁</text>
-              <text x="115" y="52" fill="#f0a500" fontSize="11">d₂</text>
-              <text x="66" y="25" fill="#0fdba8" fontSize="12">a</text>
-              <text x="66" y="88" fill="#0fdba8" fontSize="12">a</text>
+              <polygon points="65,5 120,55 65,105 10,55" fill="color-mix(in srgb, var(--mf-teal) 6%, transparent)" stroke="var(--mf-teal)" strokeWidth="2"/>
+              <line x1="65" y1="5" x2="65" y2="105" stroke="var(--mf-gold)" strokeWidth="1.5" strokeDasharray="4,2"/>
+              <line x1="10" y1="55" x2="120" y2="55" stroke="var(--mf-gold)" strokeWidth="1.5" strokeDasharray="4,2"/>
+              <rect x="60" y="50" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <text x="65" y="45" fill="var(--mf-gold)" fontSize="11">d₁</text>
+              <text x="115" y="52" fill="var(--mf-gold)" fontSize="11">d₂</text>
+              <text x="66" y="25" fill="var(--mf-teal)" fontSize="12">a</text>
+              <text x="66" y="88" fill="var(--mf-teal)" fontSize="12">a</text>
               {/* opposite angles equal: single arc (top & bottom), double arc (left & right) */}
-              <path d="M 54.64 14.42 A 14 14 0 0 0 75.36 14.42" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
-              <path d="M 54.64 95.58 A 14 14 0 0 1 75.36 95.58" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
-              <path d="M 18.14 47.60 A 11 11 0 0 1 18.14 62.40" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
-              <path d="M 21.10 44.91 A 15 15 0 0 1 21.10 65.09" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
-              <path d="M 111.86 47.60 A 11 11 0 0 0 111.86 62.40" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
-              <path d="M 108.90 44.91 A 15 15 0 0 0 108.90 65.09" fill="none" stroke="#0a9d78" strokeWidth="1.6"/>
+              <path d="M 54.64 14.42 A 14 14 0 0 0 75.36 14.42" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <path d="M 54.64 95.58 A 14 14 0 0 1 75.36 95.58" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <path d="M 18.14 47.60 A 11 11 0 0 1 18.14 62.40" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <path d="M 21.10 44.91 A 15 15 0 0 1 21.10 65.09" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <path d="M 111.86 47.60 A 11 11 0 0 0 111.86 62.40" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <path d="M 108.90 44.91 A 15 15 0 0 0 108.90 65.09" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{1}{2}\\,d_1 d_2"} highlight/>
@@ -107,19 +107,19 @@ export default function QuadSection() {
           <CardTitle color="var(--mf-violet)">সামান্তরিক (Parallelogram)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="150" height="100" viewBox="0 0 150 100">
-              <polygon points="25,88 140,88 125,12 10,12" fill="rgba(167,139,250,.06)" stroke="#a78bfa" strokeWidth="2"/>
-              <line x1="82.5" y1="12" x2="82.5" y2="88" stroke="#f0a500" strokeWidth="1.5" strokeDasharray="4,2"/>
-              <rect x="77.5" y="78" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <text x="70" y="97" fill="#a78bfa" fontSize="12">a (ভূমি)</text>
-              <text x="127" y="55" fill="#a78bfa" fontSize="12">b</text>
-              <text x="86" y="52" fill="#f0a500" fontSize="11">h</text>
+              <polygon points="25,88 140,88 125,12 10,12" fill="color-mix(in srgb, var(--mf-violet) 6%, transparent)" stroke="var(--mf-violet)" strokeWidth="2"/>
+              <line x1="82.5" y1="12" x2="82.5" y2="88" stroke="var(--mf-gold)" strokeWidth="1.5" strokeDasharray="4,2"/>
+              <rect x="77.5" y="78" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <text x="70" y="97" fill="var(--mf-violet)" fontSize="12">a (ভূমি)</text>
+              <text x="127" y="55" fill="var(--mf-violet)" fontSize="12">b</text>
+              <text x="86" y="52" fill="var(--mf-gold)" fontSize="11">h</text>
               {/* opposite angles equal: single arc (BL & TR), double arc (BR & TL) */}
-              <path d="M 39 88 A 14 14 0 0 0 22.29 74.26" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
-              <path d="M 111 12 A 14 14 0 0 0 127.71 25.74" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
-              <path d="M 129 88 A 11 11 0 0 1 137.87 77.21" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
-              <path d="M 125 88 A 15 15 0 0 1 137.10 73.28" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
-              <path d="M 21 12 A 11 11 0 0 1 12.13 22.79" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
-              <path d="M 25 12 A 15 15 0 0 1 12.90 26.72" fill="none" stroke="#7c3aed" strokeWidth="1.6"/>
+              <path d="M 39 88 A 14 14 0 0 0 22.29 74.26" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
+              <path d="M 111 12 A 14 14 0 0 0 127.71 25.74" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
+              <path d="M 129 88 A 11 11 0 0 1 137.87 77.21" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
+              <path d="M 125 88 A 15 15 0 0 1 137.10 73.28" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
+              <path d="M 21 12 A 11 11 0 0 1 12.13 22.79" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
+              <path d="M 25 12 A 15 15 0 0 1 12.90 26.72" fill="none" stroke="var(--mf-violet)" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" val="= ভূমি × উচ্চতা (a × h)" highlight/>
@@ -135,12 +135,12 @@ export default function QuadSection() {
           <CardTitle>ট্রাপিজিয়াম (Trapezium)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="150" height="100" viewBox="0 0 150 100">
-              <polygon points="30,88 120,88 100,15 50,15" fill="rgba(240,108,126,.06)" stroke="#f06d7e" strokeWidth="2"/>
-              <line x1="75" y1="15" x2="75" y2="88" stroke="#f0a500" strokeWidth="1.5" strokeDasharray="4,2"/>
-              <rect x="70" y="78" width="10" height="10" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <text x="52" y="11" fill="#f06d7e" fontSize="12">a (ছোট সমান্তরাল)</text>
-              <text x="52" y="98" fill="#f06d7e" fontSize="12">b (বড় সমান্তরাল)</text>
-              <text x="78" y="56" fill="#f0a500" fontSize="12">h</text>
+              <polygon points="30,88 120,88 100,15 50,15" fill="color-mix(in srgb, var(--mf-rose) 6%, transparent)" stroke="var(--mf-rose)" strokeWidth="2"/>
+              <line x1="75" y1="15" x2="75" y2="88" stroke="var(--mf-gold)" strokeWidth="1.5" strokeDasharray="4,2"/>
+              <rect x="70" y="78" width="10" height="10" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <text x="52" y="11" fill="var(--mf-rose)" fontSize="12">a (ছোট সমান্তরাল)</text>
+              <text x="52" y="98" fill="var(--mf-rose)" fontSize="12">b (বড় সমান্তরাল)</text>
+              <text x="78" y="56" fill="var(--mf-gold)" fontSize="12">h</text>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{1}{2}(a+b)h"} highlight/>

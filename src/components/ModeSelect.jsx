@@ -63,7 +63,7 @@ export default function ModeSelect() {
       <div className="mode-topic-hero">
         <div
           className="mode-icon-circle"
-          style={{ background: `${topic.color}1a`, color: topic.color, boxShadow: `0 8px 40px ${topic.color}30, 0 0 0 1px ${topic.color}20` }}
+          style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color, boxShadow: `0 0 0 1px color-mix(in srgb, ${topic.color} 12%, transparent)` }}
         >
           <Icon size={38} />
         </div>
@@ -77,7 +77,7 @@ export default function ModeSelect() {
           onClick={startQuiz}
           disabled={noMcq}
         >
-          <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
+          <div className="mode-card-icon" style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color }}>
             <Brain size={26} />
           </div>
           <h3>MCQ Mode</h3>
@@ -90,7 +90,7 @@ export default function ModeSelect() {
         </button>
 
         <button className="mode-card" onClick={() => navigate(isStudyNotes ? 'notes' : 'study')}>
-          <div className="mode-card-icon" style={{ background: `${topic.color}1a`, color: topic.color }}>
+          <div className="mode-card-icon" style={{ background: `color-mix(in srgb, ${topic.color} 10%, transparent)`, color: topic.color }}>
             <BookOpen size={26} />
           </div>
           <h3>Study Mode</h3>

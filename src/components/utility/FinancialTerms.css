@@ -2,7 +2,7 @@
 
 .ft-root {
   overflow-x: clip;
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   width: 100%;
   min-height: 100dvh;
   display: flex;
@@ -20,7 +20,7 @@
 
 .ft-topbar {
   position: sticky;
-  top: -16px;
+  top: 0;
   z-index: 100;
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
@@ -35,7 +35,7 @@
 }
 
 .ft-topbar-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: -0.02em;
@@ -52,7 +52,7 @@
 
 .theme-toggle-btn:hover {
   transform: scale(1.05);
-  border: 1px solid rgba(99, 102, 241, 0.22);
+  border: 1px solid var(--border-md);
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
@@ -90,11 +90,10 @@
   border: 1px solid var(--border);
   background: var(--surface-glass);
   color: var(--text-3);
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   cursor: pointer;
   transition: all 0.18s ease;
-  backdrop-filter: blur(4px);
 }
 .ft-filter-btn:hover {
   color: var(--text-2);
@@ -103,7 +102,7 @@
 }
 .ft-filter-btn.active {
   font-weight: 600;
-  color: #fff;
+  color: var(--on-accent);
   border-color: transparent;
 }
 
@@ -128,13 +127,12 @@
   border-radius: 12px;
   padding: 10px 14px 10px 38px;
   color: var(--text);
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: max(16px, 1rem); /* prevent iOS Safari auto-zoom on focus */
   outline: none;
   transition:
     border-color 0.2s,
     box-shadow 0.2s;
-  backdrop-filter: blur(6px);
 }
 .ft-search-input:focus {
   border-color: var(--border-bright);
@@ -170,8 +168,6 @@
   padding: 16px;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.22s ease,
@@ -231,11 +227,11 @@
   border: 1px solid var(--border);
 }
 .ft-card-title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--card-color, var(--accent));
-  letter-spacing: 0.3px;
+  letter-spacing: -0.01em;
 }
 .ft-card-subtitle {
   font-size: 11px;
@@ -243,9 +239,9 @@
   margin-top: 2px;
 }
 .ft-card-body {
-  font-size: 13px;
-  color: var(--text-2);
-  line-height: 1.75;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.8;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -256,14 +252,14 @@
   font-weight: 600;
 }
 .ft-card-body em {
-  color: #f59e0b;
+  color: var(--warn);
   font-style: normal;
 }
 .ft-card-body .highlight {
-  color: #0ea5e9;
+  color: var(--info);
 }
 .ft-card-body .warning {
-  color: #ef4444;
+  color: var(--bad);
   font-weight: 600;
 }
 

@@ -9,18 +9,18 @@ export default function CircleSection() {
           <CardTitle color="var(--mf-blue)">বৃত্ত (Circle)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <circle cx="80" cy="75" r="62" fill="rgba(91,164,245,.06)" stroke="#5ba4f5" strokeWidth="2"/>
-              <line x1="80" y1="75" x2="142" y2="75" stroke="#f0a500" strokeWidth="1.5"/>
-              <text x="105" y="70" fill="#f0a500" fontSize="13" fontWeight="700">r</text>
-              <circle cx="80" cy="75" r="4" fill="#f0a500"/>
-              <line x1="80" y1="75" x2="80" y2="13" stroke="#0fdba8" strokeWidth="1.5" strokeDasharray="3,2"/>
-              <line x1="80" y1="75" x2="129" y2="37" stroke="#0fdba8" strokeWidth="1.5" strokeDasharray="3,2"/>
-              <path d="M 80 57 A 18 18 0 0 1 94 64" fill="none" stroke="#0fdba8" strokeWidth="1.5"/>
-              <text x="86" y="57" fill="#0fdba8" fontSize="11">2θ</text>
-              <line x1="40" y1="122" x2="80" y2="13" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".7"/>
-              <line x1="40" y1="122" x2="129" y2="37" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".7"/>
-              <path d="M 45 109 A 14 14 0 0 0 50 112" fill="none" stroke="#a78bfa" strokeWidth="1.3"/>
-              <text x="26" y="118" fill="#a78bfa" fontSize="11">θ</text>
+              <circle cx="80" cy="75" r="62" fill="color-mix(in srgb, var(--mf-blue) 6%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <line x1="80" y1="75" x2="142" y2="75" stroke="var(--mf-gold)" strokeWidth="1.5"/>
+              <text x="105" y="70" fill="var(--mf-gold)" fontSize="13" fontWeight="700">r</text>
+              <circle cx="80" cy="75" r="4" fill="var(--mf-gold)"/>
+              <line x1="80" y1="75" x2="80" y2="13" stroke="var(--mf-teal)" strokeWidth="1.5" strokeDasharray="3,2"/>
+              <line x1="80" y1="75" x2="129" y2="37" stroke="var(--mf-teal)" strokeWidth="1.5" strokeDasharray="3,2"/>
+              <path d="M 80 57 A 18 18 0 0 1 94 64" fill="none" stroke="var(--mf-teal)" strokeWidth="1.5"/>
+              <text x="86" y="57" fill="var(--mf-teal)" fontSize="11">2θ</text>
+              <line x1="40" y1="122" x2="80" y2="13" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".7"/>
+              <line x1="40" y1="122" x2="129" y2="37" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".7"/>
+              <path d="M 45 109 A 14 14 0 0 0 50 112" fill="none" stroke="var(--mf-violet)" strokeWidth="1.3"/>
+              <text x="26" y="118" fill="var(--mf-violet)" fontSize="11">θ</text>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\pi r^2"}/>
@@ -42,11 +42,11 @@ export default function CircleSection() {
           <CardTitle>বহুভুজ (Polygon)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <polygon points="80,10 148,62 122,138 38,138 12,62" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
-              <path d="M 132 50 A 20 20 0 0 0 142 81" fill="none" stroke="#ffd166" strokeWidth="1.5"/>
-              <text x="119" y="70" fill="#ffd166" fontSize="11">θ</text>
-              <text x="62" y="82" fill="#f0a500" fontSize="12" fontWeight="700">n=5</text>
-              <text x="12" y="148" fill="#8899aa" fontSize="11">(5−2)×180 = 540°</text>
+              <polygon points="80,10 148,62 122,138 38,138 12,62" fill="color-mix(in srgb, var(--mf-gold) 7%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
+              <path d="M 132 50 A 20 20 0 0 0 142 81" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.5"/>
+              <text x="119" y="70" fill="var(--mf-gold2)" fontSize="11">θ</text>
+              <text x="62" y="82" fill="var(--mf-gold)" fontSize="12" fontWeight="700">n=5</text>
+              <text x="12" y="148" fill="var(--text-3)" fontSize="11">(5−2)×180 = 540°</text>
             </svg>
           </div>
           <FBox label="অভ্যন্তরীণ কোণের সমষ্টি" tex={"= (n-2)\\times 180^\\circ"}/>
@@ -65,18 +65,18 @@ export default function CircleSection() {
           <CardTitle color="var(--mf-teal)">বর্গের অন্তর্বৃত্ত (Circle in Square)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <rect x="27" y="20" width="106" height="106" fill="rgba(15,219,168,.05)" stroke="#0fdba8" strokeWidth="2"/>
-              <line x1="27" y1="20" x2="133" y2="126" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
-              <line x1="133" y1="20" x2="27" y2="126" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
-              <circle cx="80" cy="73" r="53" fill="rgba(91,164,245,.07)" stroke="#5ba4f5" strokeWidth="2"/>
-              <line x1="27" y1="73" x2="133" y2="73" stroke="#f0a500" strokeWidth="1.6"/>
-              <circle cx="80" cy="73" r="3.5" fill="#f0a500"/>
-              <text x="84" y="70" fill="#f0a500" fontSize="11" fontWeight="700">O</text>
-              <text x="16" y="16" fill="#8899aa" fontSize="11">D</text>
-              <text x="137" y="16" fill="#8899aa" fontSize="11">C</text>
-              <text x="137" y="138" fill="#8899aa" fontSize="11">B</text>
-              <text x="16" y="138" fill="#8899aa" fontSize="11">A</text>
-              <text x="40" y="145" fill="#0fdba8" fontSize="10" fontWeight="700">বাহু = ব্যাস (d)</text>
+              <rect x="27" y="20" width="106" height="106" fill="color-mix(in srgb, var(--mf-teal) 5%, transparent)" stroke="var(--mf-teal)" strokeWidth="2"/>
+              <line x1="27" y1="20" x2="133" y2="126" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <line x1="133" y1="20" x2="27" y2="126" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <circle cx="80" cy="73" r="53" fill="color-mix(in srgb, var(--mf-blue) 7%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <line x1="27" y1="73" x2="133" y2="73" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+              <circle cx="80" cy="73" r="3.5" fill="var(--mf-gold)"/>
+              <text x="84" y="70" fill="var(--mf-gold)" fontSize="11" fontWeight="700">O</text>
+              <text x="16" y="16" fill="var(--text-3)" fontSize="11">D</text>
+              <text x="137" y="16" fill="var(--text-3)" fontSize="11">C</text>
+              <text x="137" y="138" fill="var(--text-3)" fontSize="11">B</text>
+              <text x="16" y="138" fill="var(--text-3)" fontSize="11">A</text>
+              <text x="40" y="145" fill="var(--mf-teal)" fontSize="10" fontWeight="700">বাহু = ব্যাস (d)</text>
             </svg>
           </div>
           <FBox label="বর্গের একবাহু = বৃত্তের ব্যাস" tex={"a = d = 2r"} highlight/>
@@ -93,19 +93,19 @@ export default function CircleSection() {
           <CardTitle color="var(--mf-violet)">বৃত্তের ভেতরে আয়তক্ষেত্র (Rectangle in Circle)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <circle cx="80" cy="75" r="62" fill="rgba(91,164,245,.06)" stroke="#5ba4f5" strokeWidth="2"/>
-              <rect x="30" y="38" width="100" height="74" fill="rgba(167,139,250,.06)" stroke="#a78bfa" strokeWidth="2"/>
-              <line x1="30" y1="38" x2="130" y2="112" stroke="#f0a500" strokeWidth="1.8"/>
-              <line x1="130" y1="38" x2="30" y2="112" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2" opacity=".6"/>
-              <circle cx="80" cy="75" r="3.5" fill="#f0a500"/>
-              <text x="84" y="72" fill="#f0a500" fontSize="11" fontWeight="700">O</text>
-              <text x="76" y="33" fill="#a78bfa" fontSize="11" fontWeight="700">l</text>
-              <text x="133" y="78" fill="#a78bfa" fontSize="11" fontWeight="700">b</text>
-              <text x="20" y="35" fill="#8899aa" fontSize="11">D</text>
-              <text x="133" y="35" fill="#8899aa" fontSize="11">C</text>
-              <text x="133" y="122" fill="#8899aa" fontSize="11">B</text>
-              <text x="20" y="122" fill="#8899aa" fontSize="11">A</text>
-              <text x="34" y="146" fill="#f0a500" fontSize="10" fontWeight="700">কর্ণ = ব্যাস (d)</text>
+              <circle cx="80" cy="75" r="62" fill="color-mix(in srgb, var(--mf-blue) 6%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <rect x="30" y="38" width="100" height="74" fill="color-mix(in srgb, var(--mf-violet) 6%, transparent)" stroke="var(--mf-violet)" strokeWidth="2"/>
+              <line x1="30" y1="38" x2="130" y2="112" stroke="var(--mf-gold)" strokeWidth="1.8"/>
+              <line x1="130" y1="38" x2="30" y2="112" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2" opacity=".6"/>
+              <circle cx="80" cy="75" r="3.5" fill="var(--mf-gold)"/>
+              <text x="84" y="72" fill="var(--mf-gold)" fontSize="11" fontWeight="700">O</text>
+              <text x="76" y="33" fill="var(--mf-violet)" fontSize="11" fontWeight="700">l</text>
+              <text x="133" y="78" fill="var(--mf-violet)" fontSize="11" fontWeight="700">b</text>
+              <text x="20" y="35" fill="var(--text-3)" fontSize="11">D</text>
+              <text x="133" y="35" fill="var(--text-3)" fontSize="11">C</text>
+              <text x="133" y="122" fill="var(--text-3)" fontSize="11">B</text>
+              <text x="20" y="122" fill="var(--text-3)" fontSize="11">A</text>
+              <text x="34" y="146" fill="var(--mf-gold)" fontSize="10" fontWeight="700">কর্ণ = ব্যাস (d)</text>
             </svg>
           </div>
           <FBox label="বৃত্তের ব্যাস = আয়তের কর্ণ" tex={"d = \\sqrt{l^2 + b^2}"} highlight/>
@@ -125,22 +125,22 @@ export default function CircleSection() {
           <CardTitle color="var(--mf-rose)">সমকোণী ত্রিভুজের অন্তর্বৃত্ত (Incircle of Right Triangle)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <polygon points="25,30 25,120 145,120" fill="rgba(240,108,126,.06)" stroke="#f06c7e" strokeWidth="2"/>
-              <circle cx="55" cy="90" r="30" fill="rgba(91,164,245,.07)" stroke="#5ba4f5" strokeWidth="2"/>
-              <path d="M 25 110 L 35 110 L 35 120" fill="none" stroke="#8899aa" strokeWidth="1.2"/>
-              <line x1="55" y1="90" x2="55" y2="120" stroke="#f0a500" strokeWidth="1.6"/>
-              <line x1="55" y1="90" x2="25" y2="90" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="55" y1="90" x2="79" y2="72" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <circle cx="55" cy="90" r="3.5" fill="#f0a500"/>
-              <text x="58" y="87" fill="#f0a500" fontSize="11" fontWeight="700">I</text>
-              <text x="58" y="110" fill="#f0a500" fontSize="11" fontWeight="700">r</text>
-              <text x="8" y="80" fill="#f06c7e" fontSize="12" fontWeight="700">b</text>
-              <text x="95" y="134" fill="#f06c7e" fontSize="12" fontWeight="700">a</text>
-              <text x="92" y="66" fill="#f06c7e" fontSize="12" fontWeight="700">c</text>
-              <text x="14" y="28" fill="#8899aa" fontSize="11">A</text>
-              <text x="12" y="134" fill="#8899aa" fontSize="11">C</text>
-              <text x="146" y="134" fill="#8899aa" fontSize="11">B</text>
-              <text x="40" y="148" fill="#f06c7e" fontSize="10" fontWeight="700">c = অতিভুজ, ∠C = 90°</text>
+              <polygon points="25,30 25,120 145,120" fill="color-mix(in srgb, var(--mf-rose) 6%, transparent)" stroke="var(--mf-rose)" strokeWidth="2"/>
+              <circle cx="55" cy="90" r="30" fill="color-mix(in srgb, var(--mf-blue) 7%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <path d="M 25 110 L 35 110 L 35 120" fill="none" stroke="var(--text-3)" strokeWidth="1.2"/>
+              <line x1="55" y1="90" x2="55" y2="120" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+              <line x1="55" y1="90" x2="25" y2="90" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="55" y1="90" x2="79" y2="72" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <circle cx="55" cy="90" r="3.5" fill="var(--mf-gold)"/>
+              <text x="58" y="87" fill="var(--mf-gold)" fontSize="11" fontWeight="700">I</text>
+              <text x="58" y="110" fill="var(--mf-gold)" fontSize="11" fontWeight="700">r</text>
+              <text x="8" y="80" fill="var(--mf-rose)" fontSize="12" fontWeight="700">b</text>
+              <text x="95" y="134" fill="var(--mf-rose)" fontSize="12" fontWeight="700">a</text>
+              <text x="92" y="66" fill="var(--mf-rose)" fontSize="12" fontWeight="700">c</text>
+              <text x="14" y="28" fill="var(--text-3)" fontSize="11">A</text>
+              <text x="12" y="134" fill="var(--text-3)" fontSize="11">C</text>
+              <text x="146" y="134" fill="var(--text-3)" fontSize="11">B</text>
+              <text x="40" y="148" fill="var(--mf-rose)" fontSize="10" fontWeight="700">c = অতিভুজ, ∠C = 90°</text>
             </svg>
           </div>
           <FBox label="অন্তর্বৃত্তের ব্যাসার্ধ" tex={"r = \\dfrac{a + b - c}{2}"} highlight/>
@@ -157,21 +157,21 @@ export default function CircleSection() {
           <CardTitle color="var(--mf-blue)">সমবাহু ত্রিভুজের পরিবৃত্ত (Equilateral Triangle in Circle)</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="160" height="150" viewBox="0 0 160 150">
-              <circle cx="80" cy="78" r="58" fill="rgba(91,164,245,.06)" stroke="#5ba4f5" strokeWidth="2"/>
-              <polygon points="80,20 29.8,107 130.2,107" fill="rgba(240,165,0,.06)" stroke="#f0a500" strokeWidth="2"/>
-              <line x1="80" y1="78" x2="80" y2="20" stroke="#f06c7e" strokeWidth="1.8"/>
-              <line x1="80" y1="78" x2="80" y2="107" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="80" y1="78" x2="29.8" y2="107" stroke="#f06c7e" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
-              <line x1="80" y1="78" x2="130.2" y2="107" stroke="#f06c7e" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
-              <circle cx="80" cy="78" r="3.5" fill="#f06c7e"/>
-              <text x="85" y="82" fill="#f06c7e" fontSize="11" fontWeight="700">O</text>
-              <text x="84" y="52" fill="#f06c7e" fontSize="12" fontWeight="700">R</text>
-              <text x="84" y="100" fill="#0fdba8" fontSize="10" fontWeight="700">r</text>
-              <text x="76" y="121" fill="#f0a500" fontSize="12" fontWeight="700">a</text>
-              <text x="76" y="14" fill="#8899aa" fontSize="11">A</text>
-              <text x="14" y="116" fill="#8899aa" fontSize="11">B</text>
-              <text x="138" y="116" fill="#8899aa" fontSize="11">C</text>
-              <text x="38" y="148" fill="#5ba4f5" fontSize="10" fontWeight="700">শীর্ষ তিনটি বৃত্তের উপর</text>
+              <circle cx="80" cy="78" r="58" fill="color-mix(in srgb, var(--mf-blue) 6%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <polygon points="80,20 29.8,107 130.2,107" fill="color-mix(in srgb, var(--mf-gold) 6%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
+              <line x1="80" y1="78" x2="80" y2="20" stroke="var(--mf-rose)" strokeWidth="1.8"/>
+              <line x1="80" y1="78" x2="80" y2="107" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="80" y1="78" x2="29.8" y2="107" stroke="var(--mf-rose)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <line x1="80" y1="78" x2="130.2" y2="107" stroke="var(--mf-rose)" strokeWidth="1.2" strokeDasharray="2,2" opacity=".6"/>
+              <circle cx="80" cy="78" r="3.5" fill="var(--mf-rose)"/>
+              <text x="85" y="82" fill="var(--mf-rose)" fontSize="11" fontWeight="700">O</text>
+              <text x="84" y="52" fill="var(--mf-rose)" fontSize="12" fontWeight="700">R</text>
+              <text x="84" y="100" fill="var(--mf-teal)" fontSize="10" fontWeight="700">r</text>
+              <text x="76" y="121" fill="var(--mf-gold)" fontSize="12" fontWeight="700">a</text>
+              <text x="76" y="14" fill="var(--text-3)" fontSize="11">A</text>
+              <text x="14" y="116" fill="var(--text-3)" fontSize="11">B</text>
+              <text x="138" y="116" fill="var(--text-3)" fontSize="11">C</text>
+              <text x="38" y="148" fill="var(--mf-blue)" fontSize="10" fontWeight="700">শীর্ষ তিনটি বৃত্তের উপর</text>
             </svg>
           </div>
           <FBox label="পরিবৃত্তের ব্যাসার্ধ" tex={"R = \\dfrac{a}{\\sqrt{3}}"} highlight/>

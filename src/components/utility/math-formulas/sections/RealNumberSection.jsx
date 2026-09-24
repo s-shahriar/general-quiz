@@ -14,7 +14,7 @@ export default function RealNumberSection() {
             <div className="step">সূত্র — সংখ্যা N = pᵃ × qᵇ × rᶜ … হলে</div>
             <div className="formula"><Tex>{"\\text{মোট গুণনীয়ক} = (a+1)(b+1)(c+1)\\cdots"}</Tex></div>
           </div>
-          <div className="mf-series-card" style={{borderLeft:'3px solid #0fdba8'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-teal)'}}>
             <div className="step">উদাহরণ</div>
             <div className="formula"><Tex>{"72 = 2^3 \\times 3^2 \\Rightarrow (3+1)(2+1) = 4 \\times 3 = 12"}</Tex></div>
             <div style={{fontSize:12,color:'var(--text-3)',marginTop:6}}>অর্থাৎ <strong>৭২</strong>-এর মোট <strong>১২টি</strong> গুণনীয়ক আছে।</div>
@@ -30,7 +30,7 @@ export default function RealNumberSection() {
         <Card color="gold">
           <CardTitle>গুরুত্বপূর্ণ সংখ্যা-ধর্ম</CardTitle>
 
-          <div className="mf-series-card" style={{borderLeft:'3px solid #f0a500'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-gold)'}}>
             <div className="step">পরপর দুটি পূর্ণ সংখ্যার বর্গের পার্থক্য = x হলে</div>
             <div className="formula"><Tex>{"\\text{বড় সংখ্যা} = \\dfrac{x+1}{2}, \\quad \\text{ছোট সংখ্যা} = \\dfrac{x-1}{2}"}</Tex></div>
             <div style={{fontSize:12,color:'var(--text-3)',marginTop:6}}>
@@ -38,7 +38,7 @@ export default function RealNumberSection() {
             </div>
           </div>
 
-          <div className="mf-series-card" style={{borderLeft:'3px solid #a78bfa'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-violet)'}}>
             <div className="step">পরপর ৩টি ক্রমিক সংখ্যার ধর্ম</div>
             <ul className="mf-prop-list" style={{marginTop:4}}>
               <li><strong>যোগফল</strong> → সর্বদা <strong>৩ দ্বারা বিভাজ্য</strong></li>
@@ -46,7 +46,7 @@ export default function RealNumberSection() {
             </ul>
           </div>
 
-          <div className="mf-series-card" style={{borderLeft:'3px solid #0fdba8'}}>
+          <div className="mf-series-card" style={{borderLeft:'3px solid var(--mf-teal)'}}>
             <div className="step">২ অঙ্কের সংখ্যা Reverse (উল্টানো) করলে</div>
             <div className="formula"><Tex>{"\\text{অঙ্কদ্বয়ের পার্থক্য} = \\dfrac{\\text{দুই সংখ্যার পার্থক্য}}{9}"}</Tex></div>
             <div style={{fontSize:12,color:'var(--text-3)',marginTop:6}}>

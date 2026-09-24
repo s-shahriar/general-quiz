@@ -10,8 +10,8 @@ import { uidOf } from '../lib/qid.js'
 import SavedQuestionsScreen from './shared/SavedQuestionsScreen'
 import { useAllModulesReady } from '../data/contentLoader.js'
 
-const IMPORTANT_COLOR = '#ef4444'
-const WEAK_COLOR = '#f97316'
+const IMPORTANT_COLOR = 'var(--imp)'
+const WEAK_COLOR = 'var(--weak)'
 
 export default function ImportantScreen({ topics: topicsProp, important: importantProp, onHome: onHomeProp }) {
   const navigate = useNavigate()
@@ -37,7 +37,7 @@ export default function ImportantScreen({ topics: topicsProp, important: importa
   const importantCt = countIn(important)
   const weakCt = countIn(weakCtx.value)
 
-  const pill = (on, c) => (on ? { borderColor: c, color: c, background: `${c}1f` } : {})
+  const pill = (on, c) => (on ? { borderColor: c, color: c, background: `color-mix(in srgb, ${c} 12%, transparent)` } : {})
   const weakSwitch = (importantCt > 0 || weakOnly) && (
     <div className="study-filter-bar saved-weak-switch">
       <button className={`study-filter-btn${!weakOnly ? ' active' : ''}`} onClick={() => setWeakOnly(false)} style={pill(!weakOnly, IMPORTANT_COLOR)}>

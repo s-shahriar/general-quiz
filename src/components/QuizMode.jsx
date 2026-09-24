@@ -122,7 +122,7 @@ export default function QuizMode({
   }
 
   if (!q || done) {
-    return <ScoreRingScreen score={score} total={questions.length} title={set ? `${POOL_LABEL[set]} Quiz Complete!` : 'Quiz Complete!'} accentColor={topic.color} onRetry={retry} onHome={goHome} />
+    return <ScoreRingScreen score={score} total={questions.length} title={set ? `${POOL_LABEL[set]} Quiz Complete!` : 'Quiz Complete!'} onRetry={retry} onHome={goHome} />
   }
 
   const progress  = ((idx + (revealed ? 1 : 0)) / questions.length) * 100

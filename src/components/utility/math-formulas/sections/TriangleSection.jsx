@@ -21,16 +21,16 @@ export default function TriangleSection() {
           <CardTitle badge="Equilateral">সমবাহু ত্রিভুজ</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="120" height="100" viewBox="0 0 140 115">
-              <polygon points="70,10 130,110 10,110" fill="rgba(240,165,0,.06)" stroke="#f0a500" strokeWidth="2"/>
-              <text x="100" y="68" fill="#f0a500" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
-              <text x="25" y="68" fill="#f0a500" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
-              <text x="65" y="108" fill="#f0a500" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
-              <text x="60" y="28" fill="#ffd166" fontSize="9">60°</text>
-              <text x="15" y="105" fill="#ffd166" fontSize="9">60°</text>
-              <text x="108" y="105" fill="#ffd166" fontSize="9">60°</text>
-              <line x1="95" y1="57" x2="91" y2="65" stroke="#ffd166" strokeWidth="2"/>
-              <line x1="45" y1="57" x2="49" y2="65" stroke="#ffd166" strokeWidth="2"/>
-              <line x1="68" y1="110" x2="72" y2="110" stroke="#ffd166" strokeWidth="2"/>
+              <polygon points="70,10 130,110 10,110" fill="color-mix(in srgb, var(--mf-gold) 6%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
+              <text x="100" y="68" fill="var(--mf-gold)" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
+              <text x="25" y="68" fill="var(--mf-gold)" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
+              <text x="65" y="108" fill="var(--mf-gold)" fontSize="12" fontFamily="sans-serif" fontWeight="700">a</text>
+              <text x="60" y="28" fill="var(--mf-gold2)" fontSize="9">60°</text>
+              <text x="15" y="105" fill="var(--mf-gold2)" fontSize="9">60°</text>
+              <text x="108" y="105" fill="var(--mf-gold2)" fontSize="9">60°</text>
+              <line x1="95" y1="57" x2="91" y2="65" stroke="var(--mf-gold2)" strokeWidth="2"/>
+              <line x1="45" y1="57" x2="49" y2="65" stroke="var(--mf-gold2)" strokeWidth="2"/>
+              <line x1="68" y1="110" x2="72" y2="110" stroke="var(--mf-gold2)" strokeWidth="2"/>
             </svg>
           </div>
           <FBox label="পরিসীমা" val="= 3a"/>
@@ -44,22 +44,22 @@ export default function TriangleSection() {
         </Card>
 
         <Card color="blue">
-          <CardTitle badge="Isosceles" badgeStyle={{background:'rgba(91,164,245,.15)',color:'var(--mf-blue)',borderColor:'rgba(91,164,245,.3)'}}>সমদ্বিবাহু ত্রিভুজ</CardTitle>
+          <CardTitle badge="Isosceles" badgeStyle={{background:'color-mix(in srgb, var(--mf-blue) 15%, transparent)',color:'var(--mf-blue)',borderColor:'color-mix(in srgb, var(--mf-blue) 30%, transparent)'}}>সমদ্বিবাহু ত্রিভুজ</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="120" height="100" viewBox="0 0 140 115">
-              <polygon points="70,8 122,110 18,110" fill="rgba(91,164,245,.08)" stroke="#5ba4f5" strokeWidth="2"/>
-              <text x="99" y="61" fill="#5ba4f5" fontSize="12" fontWeight="700">a</text>
-              <text x="31" y="61" fill="#5ba4f5" fontSize="12" fontWeight="700">a</text>
+              <polygon points="70,8 122,110 18,110" fill="color-mix(in srgb, var(--mf-blue) 8%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
+              <text x="99" y="61" fill="var(--mf-blue)" fontSize="12" fontWeight="700">a</text>
+              <text x="31" y="61" fill="var(--mf-blue)" fontSize="12" fontWeight="700">a</text>
               {/* single ticks on the two equal sides */}
-              <line x1="43.0" y1="52.1" x2="50.2" y2="55.7" stroke="#5ba4f5" strokeWidth="1.6"/>
-              <line x1="89.8" y1="55.7" x2="97.0" y2="52.1" stroke="#5ba4f5" strokeWidth="1.6"/>
-              <line x1="70" y1="8" x2="70" y2="110" stroke="#ffd166" strokeWidth="1.5" strokeDasharray="4,3"/>
-              <text x="74" y="57" fill="#ffd166" fontSize="10" fontWeight="600">h</text>
-              <rect x="70" y="102" width="8" height="8" fill="none" stroke="#ffd166" strokeWidth="1.2"/>
-              <text x="55" y="108" fill="#5ba4f5" fontSize="12" fontWeight="700">b</text>
+              <line x1="43.0" y1="52.1" x2="50.2" y2="55.7" stroke="var(--mf-blue)" strokeWidth="1.6"/>
+              <line x1="89.8" y1="55.7" x2="97.0" y2="52.1" stroke="var(--mf-blue)" strokeWidth="1.6"/>
+              <line x1="70" y1="8" x2="70" y2="110" stroke="var(--mf-gold2)" strokeWidth="1.5" strokeDasharray="4,3"/>
+              <text x="74" y="57" fill="var(--mf-gold2)" fontSize="10" fontWeight="600">h</text>
+              <rect x="70" y="102" width="8" height="8" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.2"/>
+              <text x="55" y="108" fill="var(--mf-blue)" fontSize="12" fontWeight="700">b</text>
               {/* equal base angles: matching single arcs inside each corner */}
-              <path d="M 31 110 A 13 13 0 0 0 23.9 98.4" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
-              <path d="M 109 110 A 13 13 0 0 1 116.1 98.4" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
+              <path d="M 31 110 A 13 13 0 0 0 23.9 98.4" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+              <path d="M 109 110 A 13 13 0 0 1 116.1 98.4" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{b}{4}\\sqrt{4a^2-b^2}"} highlight/>
@@ -72,17 +72,17 @@ export default function TriangleSection() {
         </Card>
 
         <Card color="rose">
-          <CardTitle badge="Scalene / Heron" badgeStyle={{background:'rgba(240,108,126,.12)',color:'var(--mf-rose)',borderColor:'rgba(240,108,126,.25)'}}>বিষমবাহু ত্রিভুজ</CardTitle>
+          <CardTitle badge="Scalene / Heron" badgeStyle={{background:'color-mix(in srgb, var(--mf-rose) 12%, transparent)',color:'var(--mf-rose)',borderColor:'color-mix(in srgb, var(--mf-rose) 25%, transparent)'}}>বিষমবাহু ত্রিভুজ</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="120" height="100" viewBox="0 0 140 115">
-              <polygon points="15,106 118,106 82,14" fill="rgba(240,108,126,.08)" stroke="#f06d7e" strokeWidth="2"/>
-              <text x="30" y="65" fill="#f06d7e" fontSize="12" fontWeight="700">a</text>
-              <text x="103" y="65" fill="#f06d7e" fontSize="12" fontWeight="700">b</text>
-              <text x="60" y="104" fill="#f06d7e" fontSize="12" fontWeight="700">c</text>
+              <polygon points="15,106 118,106 82,14" fill="color-mix(in srgb, var(--mf-rose) 8%, transparent)" stroke="var(--mf-rose)" strokeWidth="2"/>
+              <text x="30" y="65" fill="var(--mf-rose)" fontSize="12" fontWeight="700">a</text>
+              <text x="103" y="65" fill="var(--mf-rose)" fontSize="12" fontWeight="700">b</text>
+              <text x="60" y="104" fill="var(--mf-rose)" fontSize="12" fontWeight="700">c</text>
               {/* three different-size angle arcs: all angles unequal; the biggest arc sits opposite the longest side */}
-              <path d="M 75.5 22.9 A 11 11 0 0 0 86.0 24.2" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
-              <path d="M 23 106 A 8 8 0 0 0 19.7 99.5" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
-              <path d="M 101 106 A 17 17 0 0 1 111.8 90.2" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
+              <path d="M 75.5 22.9 A 11 11 0 0 0 86.0 24.2" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+              <path d="M 23 106 A 8 8 0 0 0 19.7 99.5" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+              <path d="M 101 106 A 17 17 0 0 1 111.8 90.2" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
             </svg>
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\sqrt{s(s-a)(s-b)(s-c)}"} highlight/>
@@ -97,18 +97,18 @@ export default function TriangleSection() {
         <Card color="violet">
           <CardTitle color="var(--mf-violet)">ত্রিভুজ: ক্ষেত্রফল ও সর্বসমতার শর্ত</CardTitle>
 
-          <div style={{borderBottom:'1px solid rgba(167,139,250,.15)',paddingBottom:12,marginBottom:12}}>
+          <div style={{borderBottom:'1px solid color-mix(in srgb, var(--mf-violet) 15%, transparent)',paddingBottom:12,marginBottom:12}}>
             <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:8}}>
               <span style={{width:3,height:16,background:'var(--mf-violet)',borderRadius:2}}></span>
               <h4 style={{color:'var(--mf-violet)',fontSize:12,fontWeight:700,margin:0}}>দুই বাহু ও অন্তর্ভুক্ত কোণ দিয়ে ক্ষেত্রফল</h4>
             </div>
             <div style={{textAlign:'center',margin:'6px 0'}}>
               <svg width="120" height="85" viewBox="0 0 140 100">
-                <polygon points="8,90 132,90 45,12" fill="rgba(167,139,250,.06)" stroke="#a78bfa" strokeWidth="2"/>
-                <text x="68" y="98" fill="#a78bfa" fontSize="11" fontWeight="700">a</text>
-                <text x="8" y="52" fill="#a78bfa" fontSize="11" fontWeight="700">b</text>
-                <path d="M 24 90 A 14 14 0 0 0 16 78" fill="none" stroke="#f0a500" strokeWidth="1.6"/>
-                <text x="22" y="86" fill="#f0a500" fontSize="9" fontWeight="600">θ</text>
+                <polygon points="8,90 132,90 45,12" fill="color-mix(in srgb, var(--mf-violet) 6%, transparent)" stroke="var(--mf-violet)" strokeWidth="2"/>
+                <text x="68" y="98" fill="var(--mf-violet)" fontSize="11" fontWeight="700">a</text>
+                <text x="8" y="52" fill="var(--mf-violet)" fontSize="11" fontWeight="700">b</text>
+                <path d="M 24 90 A 14 14 0 0 0 16 78" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+                <text x="22" y="86" fill="var(--mf-gold)" fontSize="9" fontWeight="600">θ</text>
               </svg>
             </div>
             <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{1}{2}\\,ab\\sin\\theta"} highlight/>
@@ -141,12 +141,12 @@ export default function TriangleSection() {
           </div>
           <div style={{textAlign:'center',padding:10}}>
             <svg width="160" height="132" viewBox="0 0 160 132">
-              <polygon points="14,112 134,112 14,16" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
-              <rect x="14" y="100" width="12" height="12" fill="none" stroke="#ffd166" strokeWidth="1.5"/>
-              <text x="28" y="110" fill="#ffd166" fontSize="10">90°</text>
-              <text x="74" y="126" fill="#0fdba8" fontSize="12" textAnchor="middle">a (ভূমি)</text>
-              <text x="8" y="64" fill="#0fdba8" fontSize="12" textAnchor="middle" transform="rotate(-90,8,64)">b (লম্ব)</text>
-              <text x="82" y="55" fill="#f0a500" fontSize="11" fontWeight="700" textAnchor="middle" transform="rotate(40,82,55)">c = √(a²+b²)</text>
+              <polygon points="14,112 134,112 14,16" fill="color-mix(in srgb, var(--mf-gold) 7%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
+              <rect x="14" y="100" width="12" height="12" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.5"/>
+              <text x="28" y="110" fill="var(--mf-gold2)" fontSize="10">90°</text>
+              <text x="74" y="126" fill="var(--mf-teal)" fontSize="12" textAnchor="middle">a (ভূমি)</text>
+              <text x="8" y="64" fill="var(--mf-teal)" fontSize="12" textAnchor="middle" transform="rotate(-90,8,64)">b (লম্ব)</text>
+              <text x="82" y="55" fill="var(--mf-gold)" fontSize="11" fontWeight="700" textAnchor="middle" transform="rotate(40,82,55)">c = √(a²+b²)</text>
             </svg>
           </div>
         </div>

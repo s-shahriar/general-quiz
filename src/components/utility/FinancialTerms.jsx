@@ -62,7 +62,7 @@ function RefSection() {
               key={cat}
               className={`ft-filter-btn${isActive ? ' active' : ''}`}
               onClick={() => setActiveCat(cat)}
-              style={isActive ? { background: color || 'var(--accent)', borderColor: color || 'var(--accent)' } : {}}
+              style={isActive ? { background: `color-mix(in srgb, ${color || 'var(--accent)'} 16%, var(--surface))`, borderColor: 'transparent', color: color || 'var(--accent)' } : {}}
             >
               {cat}
             </button>

@@ -27,17 +27,17 @@ export default function ProfitSection() {
       <Card color="violet" style={{marginTop:14}}>
         <CardTitle color="var(--mf-violet)">বিশেষ সূত্র</CardTitle>
         <div style={{display:'flex',flexDirection:'column',gap:8}}>
-          <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(167,139,250,.08)',border:'1px solid rgba(167,139,250,.25)'}}>
+          <div style={{padding:'10px 12px',borderRadius:9,background:'color-mix(in srgb, var(--mf-violet) 8%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-violet) 25%, transparent)'}}>
             <div style={{fontSize:12,color:'var(--mf-violet)',fontWeight:700,marginBottom:6}}>সুদে-আসলে n গুণ হলে সুদের হার</div>
             <div style={{textAlign:'center',marginBottom:6}}><Tex>{"r = \\dfrac{n-1}{\\text{time}} \\times 100\\%"}</Tex></div>
             <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 5 বছরে 3 গুণ হলে → r = (3−1)/5 × 100 = <strong>40%</strong></div>
           </div>
-          <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(15,219,168,.08)',border:'1px solid rgba(15,219,168,.25)'}}>
+          <div style={{padding:'10px 12px',borderRadius:9,background:'color-mix(in srgb, var(--mf-teal) 8%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-teal) 25%, transparent)'}}>
             <div style={{fontSize:12,color:'var(--mf-teal)',fontWeight:700,marginBottom:4}}>n বছরে দ্বিগুণ হলে, তিন গুণ হতে লাগবে</div>
             <div className="mf-cv" style={{fontSize:15,fontWeight:700,color:'var(--mf-teal)',marginBottom:4,textAlign:'center'}}>2n বছর</div>
             <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: 4 বছরে দ্বিগুণ → তিন গুণ হতে 8 বছর</div>
           </div>
-          <div style={{padding:'10px 12px',borderRadius:9,background:'rgba(240,165,0,.08)',border:'1px solid rgba(240,165,0,.25)'}}>
+          <div style={{padding:'10px 12px',borderRadius:9,background:'color-mix(in srgb, var(--mf-gold) 8%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 25%, transparent)'}}>
             <div style={{fontSize:12,color:'var(--mf-gold2)',fontWeight:700,marginBottom:6}}>চক্রবৃদ্ধি — ধাপে ধাপে গুণ</div>
             <div style={{textAlign:'center',marginBottom:6}}><Tex>{"C = P\\left(1+\\dfrac{r}{100}\\right)^t"}</Tex></div>
             <div style={{fontSize:11,color:'var(--text-3)'}}>উদা: P=100, r=5%, t=2 → 100 × <strong>105/100 × 105/100</strong> = 110.25</div>

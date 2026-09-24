@@ -2,12 +2,11 @@
 
 .wd-root {
   overflow-x: clip;
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   width: 100%;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
 }
 
 /* ── Top bar ─────────────────────────────────── */
@@ -21,7 +20,7 @@
 
 .wd-topbar {
   position: sticky;
-  top: -16px;
+  top: 0;
   z-index: 100;
   background: var(--surface-glass);
   backdrop-filter: blur(12px);
@@ -36,7 +35,7 @@
 }
 
 .wd-topbar-title {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: -0.02em;
@@ -75,11 +74,10 @@
   border: 1px solid var(--border);
   background: var(--surface-glass);
   color: var(--text-3);
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: 12px;
   cursor: pointer;
   transition: all 0.18s ease;
-  backdrop-filter: blur(4px);
 }
 .wd-filter-btn:hover {
   color: var(--text-2);
@@ -88,7 +86,7 @@
 }
 .wd-filter-btn.active {
   font-weight: 600;
-  color: #fff;
+  color: var(--on-accent);
   border-color: transparent;
 }
 
@@ -113,13 +111,12 @@
   border-radius: 12px;
   padding: 10px 14px 10px 38px;
   color: var(--text);
-  font-family: "Noto Sans Bengali", "Inter", sans-serif;
+  font-family: var(--font-body);
   font-size: max(16px, 1rem); /* prevent iOS Safari auto-zoom on focus */
   outline: none;
   transition:
     border-color 0.2s,
     box-shadow 0.2s;
-  backdrop-filter: blur(6px);
 }
 .wd-search-input:focus {
   border-color: var(--border-bright);
@@ -165,8 +162,6 @@
   padding: 16px;
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.22s ease,
@@ -238,11 +233,11 @@
   flex-wrap: wrap;
 }
 .wd-card-title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--card-color, var(--accent));
-  letter-spacing: 0.3px;
+  letter-spacing: -0.01em;
 }
 .wd-card-subtitle {
   font-size: 11px;
@@ -253,9 +248,9 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 13px;
-  color: var(--text-2);
-  line-height: 1.75;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.8;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -280,11 +275,11 @@
   font-weight: 600;
 }
 .wd-card-body em {
-  color: #f59e0b;
+  color: var(--warn);
   font-style: normal;
 }
 .wd-card-body .warning {
-  color: #ef4444;
+  color: var(--bad);
   font-weight: 600;
 }
 
@@ -342,18 +337,18 @@
   background: var(--effect-color, currentColor);
 }
 .wd-card-issues {
-  --effect-color: #ef4444;
-  background: color-mix(in srgb, #ef4444 7%, var(--elevated));
-  border: 1px solid color-mix(in srgb, #ef4444 25%, var(--border));
+  --effect-color: var(--bad);
+  background: color-mix(in srgb, var(--bad) 7%, var(--elevated));
+  border: 1px solid color-mix(in srgb, var(--bad) 25%, var(--border));
 }
-.wd-card-issues .wd-card-effects-toggle { color: #ef4444; }
+.wd-card-issues .wd-card-effects-toggle { color: var(--bad); }
 .wd-card-issues li { color: var(--text-2); }
 .wd-card-benefits {
-  --effect-color: #22c55e;
-  background: color-mix(in srgb, #22c55e 7%, var(--elevated));
-  border: 1px solid color-mix(in srgb, #22c55e 25%, var(--border));
+  --effect-color: var(--ok);
+  background: color-mix(in srgb, var(--ok) 7%, var(--elevated));
+  border: 1px solid color-mix(in srgb, var(--ok) 25%, var(--border));
 }
-.wd-card-benefits .wd-card-effects-toggle { color: #22c55e; }
+.wd-card-benefits .wd-card-effects-toggle { color: var(--ok); }
 .wd-card-benefits li { color: var(--text-2); }
 
 /* Mnemonic / "easy to remember" tip strip */

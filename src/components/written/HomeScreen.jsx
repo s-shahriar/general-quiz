@@ -8,7 +8,7 @@ const TOPICS = [
     icon: Database,
     name: 'Data',
     description: 'লিখিত পরীক্ষার তথ্য সংকলন',
-    color: '#0ea5e9',
+    color: 'var(--topic-8)',
   },
 ]
 

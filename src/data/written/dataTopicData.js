@@ -12,12 +12,12 @@ import {
 // data gets benefits, some cards can carry neither.
 
 export const DATA_CATEGORIES = {
-  'সামষ্টিক অর্থনীতি': '#0ea5e9',
-  'জনসংখ্যা ও কর্মসংস্থান': '#f59e0b',
-  'বৈদেশিক খাত': '#22c55e',
-  'রাজস্ব ও আর্থিক খাত': '#ef4444',
-  'বাজেট': '#a78bfa',
-  'বিদ্যুৎ ও জ্বালানি': '#14b8a6',
+  'সামষ্টিক অর্থনীতি': 'var(--topic-8)',
+  'জনসংখ্যা ও কর্মসংস্থান': 'var(--topic-3)',
+  'বৈদেশিক খাত': 'var(--topic-5)',
+  'রাজস্ব ও আর্থিক খাত': 'var(--topic-1)',
+  'বাজেট': 'var(--topic-10)',
+  'বিদ্যুৎ ও জ্বালানি': 'var(--topic-6)',
 }
 
 export const DATA_CARDS = [

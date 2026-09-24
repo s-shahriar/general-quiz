@@ -16,8 +16,8 @@ export default function QuizOptions({ options, correctAnswer, selected, revealed
           <button key={key} className={cls} style={{ '--c': accentColor }} onClick={() => onPick(key)}>
             <span className="opt-key">{key.toUpperCase()}</span>
             <RichText className="opt-text" html={options[key]} />
-            {revealed && key === correctAnswer && <CheckCircle size={15} className="opt-icon" style={{ color: '#10b981' }} />}
-            {revealed && key === selected && key !== correctAnswer && <XCircle size={15} className="opt-icon" style={{ color: '#ef4444' }} />}
+            {revealed && key === correctAnswer && <CheckCircle size={15} className="opt-icon" style={{ color: 'var(--ok)' }} />}
+            {revealed && key === selected && key !== correctAnswer && <XCircle size={15} className="opt-icon" style={{ color: 'var(--bad)' }} />}
           </button>
         )
       })}

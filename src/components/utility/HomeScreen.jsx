@@ -8,7 +8,7 @@ const TOOLS = [
     icon: Calculator,
     name: 'গণিত সূত্র',
     description: '১২টি বিষয় — সম্পূর্ণ সূত্র সংকলন',
-    color: '#f0a500',
+    color: 'var(--topic-3)',
   },
   {
     id: 'financial_terms',
@@ -16,7 +16,7 @@ const TOOLS = [
     icon: Building2,
     name: 'ফিনান্সিয়াল টার্ম',
     description: '৫১টি টপিক + ৩৯টি কুইজ প্রশ্ন',
-    color: '#22c55e',
+    color: 'var(--topic-5)',
   },
 ]
 

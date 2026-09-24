@@ -6,16 +6,16 @@ export default function TriCenterSection() {
       <SectionHeader icon="⊙" title="ত্রিভুজের কেন্দ্র" sub="Incentre · Circumcentre · Centroid" />
       <div className="mf-grid3">
         <Card color="violet">
-          <CardTitle color="var(--mf-violet)" badge="Incentre" badgeStyle={{background:'rgba(167,139,250,.12)',color:'var(--mf-violet)',borderColor:'rgba(167,139,250,.3)'}}>অন্তঃকেন্দ্র</CardTitle>
+          <CardTitle color="var(--mf-violet)" badge="Incentre" badgeStyle={{background:'color-mix(in srgb, var(--mf-violet) 12%, transparent)',color:'var(--mf-violet)',borderColor:'color-mix(in srgb, var(--mf-violet) 30%, transparent)'}}>অন্তঃকেন্দ্র</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="140" height="120" viewBox="0 0 140 120">
-              <polygon points="70,8 128,112 12,112" fill="rgba(167,139,250,.06)" stroke="#a78bfa" strokeWidth="1.5"/>
-              <line x1="70" y1="8" x2="70" y2="112" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="12" y1="112" x2="99" y2="61" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="128" y1="112" x2="41" y2="61" stroke="#a78bfa" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <circle cx="70" cy="78" r="34" fill="none" stroke="#f0a500" strokeWidth="1.5" strokeDasharray="2,2"/>
-              <circle cx="70" cy="78" r="4" fill="#f0a500"/>
-              <text x="74" y="76" fill="#f0a500" fontSize="11">I</text>
+              <polygon points="70,8 128,112 12,112" fill="color-mix(in srgb, var(--mf-violet) 6%, transparent)" stroke="var(--mf-violet)" strokeWidth="1.5"/>
+              <line x1="70" y1="8" x2="70" y2="112" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="12" y1="112" x2="99" y2="61" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="128" y1="112" x2="41" y2="61" stroke="var(--mf-violet)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <circle cx="70" cy="78" r="34" fill="none" stroke="var(--mf-gold)" strokeWidth="1.5" strokeDasharray="2,2"/>
+              <circle cx="70" cy="78" r="4" fill="var(--mf-gold)"/>
+              <text x="74" y="76" fill="var(--mf-gold)" fontSize="11">I</text>
             </svg>
           </div>
           <ul className="mf-prop-list">
@@ -30,13 +30,13 @@ export default function TriCenterSection() {
           <CardTitle color="var(--mf-teal)" badge="Circumcentre">পরিকেন্দ্র</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="140" height="150" viewBox="0 0 140 150">
-              <polygon points="70,8 128,112 12,112" fill="rgba(15,219,168,.05)" stroke="#0fdba8" strokeWidth="1.5"/>
-              <line x1="70" y1="8" x2="70" y2="112" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="41" y1="60" x2="125" y2="106" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <line x1="99" y1="60" x2="15" y2="107" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,2"/>
-              <circle cx="70" cy="76" r="68" fill="none" stroke="#f0a500" strokeWidth="1.3" strokeDasharray="2,3"/>
-              <circle cx="70" cy="76" r="4" fill="#f0a500"/>
-              <text x="74" y="74" fill="#f0a500" fontSize="11">O</text>
+              <polygon points="70,8 128,112 12,112" fill="color-mix(in srgb, var(--mf-teal) 5%, transparent)" stroke="var(--mf-teal)" strokeWidth="1.5"/>
+              <line x1="70" y1="8" x2="70" y2="112" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="41" y1="60" x2="125" y2="106" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <line x1="99" y1="60" x2="15" y2="107" stroke="var(--mf-teal)" strokeWidth="1.2" strokeDasharray="3,2"/>
+              <circle cx="70" cy="76" r="68" fill="none" stroke="var(--mf-gold)" strokeWidth="1.3" strokeDasharray="2,3"/>
+              <circle cx="70" cy="76" r="4" fill="var(--mf-gold)"/>
+              <text x="74" y="74" fill="var(--mf-gold)" fontSize="11">O</text>
             </svg>
           </div>
           <ul className="mf-prop-list">
@@ -48,18 +48,18 @@ export default function TriCenterSection() {
         </Card>
 
         <Card color="rose">
-          <CardTitle badge="Centroid" badgeStyle={{background:'rgba(240,108,126,.12)',color:'var(--mf-rose)',borderColor:'rgba(240,108,126,.25)'}}>ভরকেন্দ্র</CardTitle>
+          <CardTitle badge="Centroid" badgeStyle={{background:'color-mix(in srgb, var(--mf-rose) 12%, transparent)',color:'var(--mf-rose)',borderColor:'color-mix(in srgb, var(--mf-rose) 25%, transparent)'}}>ভরকেন্দ্র</CardTitle>
           <div style={{textAlign:'center',margin:'10px 0'}}>
             <svg width="140" height="120" viewBox="0 0 140 120">
-              <polygon points="70,8 128,112 12,112" fill="rgba(240,108,126,.05)" stroke="#f06d7e" strokeWidth="1.5"/>
-              <line x1="70" y1="8" x2="70" y2="112" stroke="#f06d7e" strokeWidth="1.5" strokeDasharray="3,2"/>
-              <line x1="12" y1="112" x2="99" y2="60" stroke="#f06d7e" strokeWidth="1.5" strokeDasharray="3,2"/>
-              <line x1="128" y1="112" x2="41" y2="60" stroke="#f06d7e" strokeWidth="1.5" strokeDasharray="3,2"/>
-              <circle cx="70" cy="77" r="5" fill="#f06d7e"/>
-              <text x="75" y="75" fill="#f0a500" fontSize="11">G</text>
-              <circle cx="70" cy="112" r="3" fill="#ffd166"/>
-              <circle cx="99" cy="60" r="3" fill="#ffd166"/>
-              <circle cx="41" cy="60" r="3" fill="#ffd166"/>
+              <polygon points="70,8 128,112 12,112" fill="color-mix(in srgb, var(--mf-rose) 5%, transparent)" stroke="var(--mf-rose)" strokeWidth="1.5"/>
+              <line x1="70" y1="8" x2="70" y2="112" stroke="var(--mf-rose)" strokeWidth="1.5" strokeDasharray="3,2"/>
+              <line x1="12" y1="112" x2="99" y2="60" stroke="var(--mf-rose)" strokeWidth="1.5" strokeDasharray="3,2"/>
+              <line x1="128" y1="112" x2="41" y2="60" stroke="var(--mf-rose)" strokeWidth="1.5" strokeDasharray="3,2"/>
+              <circle cx="70" cy="77" r="5" fill="var(--mf-rose)"/>
+              <text x="75" y="75" fill="var(--mf-gold)" fontSize="11">G</text>
+              <circle cx="70" cy="112" r="3" fill="var(--mf-gold2)"/>
+              <circle cx="99" cy="60" r="3" fill="var(--mf-gold2)"/>
+              <circle cx="41" cy="60" r="3" fill="var(--mf-gold2)"/>
             </svg>
           </div>
           <ul className="mf-prop-list">
