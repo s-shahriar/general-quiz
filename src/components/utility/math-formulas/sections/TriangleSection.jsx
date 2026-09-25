@@ -175,7 +175,8 @@ export default function TriangleSection() {
             <FBox label="সূক্ষ্মকোণী হলে" val="বৃহত্তম বাহুর² < অন্য দুই বাহুর² যোগফল"/>
             <FBox label="স্থূলকোণী হলে" val="বৃহত্তম বাহুর² > অন্য দুই বাহুর² যোগফল"/>
           </div>
-          <div style={{textAlign:'center',padding:10}}>
+          <div>
+            <div style={{textAlign:'center',padding:'2px 0 6px'}}>
             <svg width="160" height="132" viewBox="0 0 160 132">
               <polygon points="14,112 134,112 14,16" fill="color-mix(in srgb, var(--mf-gold) 7%, transparent)" stroke="var(--mf-gold)" strokeWidth="2"/>
               <rect x="14" y="100" width="12" height="12" fill="none" stroke="var(--mf-gold2)" strokeWidth="1.5"/>
@@ -184,6 +185,27 @@ export default function TriangleSection() {
               <text x="8" y="64" fill="var(--mf-teal)" fontSize="12" textAnchor="middle" transform="rotate(-90,8,64)">b (লম্ব)</text>
               <text x="82" y="55" fill="var(--mf-gold)" fontSize="11" fontWeight="700" textAnchor="middle" transform="rotate(40,82,55)">c = √(a²+b²)</text>
             </svg>
+            </div>
+
+            <div style={{padding:'8px 10px',borderRadius:9,background:'color-mix(in srgb, var(--mf-gold) 8%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 25%, transparent)',marginBottom:8}}>
+              <div style={{fontSize:12,fontWeight:700,color:'var(--mf-gold2)',marginBottom:6}}>পিথাগোরিয়ান ট্রিপলেট — চিনলে হিসাব ছাড়াই উত্তর</div>
+              <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
+                {['3-4-5','5-12-13','8-15-17','7-24-25','9-40-41','20-21-29'].map(t => (
+                  <span key={t} style={{fontSize:11,fontWeight:700,color:'var(--mf-gold2)',background:'color-mix(in srgb, var(--mf-gold) 15%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 30%, transparent)',borderRadius:20,padding:'2px 9px'}}>{t}</span>
+                ))}
+              </div>
+              <div style={{fontSize:11,color:'var(--text-3)',marginTop:6}}>এদের <strong>গুণিতকও</strong> ট্রিপলেট: 6-8-10, 9-12-15, 10-24-26 …</div>
+            </div>
+
+            <FBox label="অতিভুজের উপর মধ্যমা" val="= ½ × অতিভুজ"/>
+            <FBox label="সমকোণ থেকে অতিভুজে লম্ব" tex={"h = \\dfrac{ab}{c}"}/>
+
+            <FBox label="45° – 45° – 90° (সমদ্বিবাহু)" val="বাহুর অনুপাত 1 : 1 : √2"/>
+            <FBox label="30° – 60° – 90°" val="বাহুর অনুপাত 1 : √3 : 2"/>
+
+            <div style={{fontSize:11,color:'var(--text-3)',padding:'8px 2px 0',lineHeight:1.6}}>
+              অন্তর্বৃত্তের ব্যাসার্ধ <strong>r = (a + b − c)/2</strong> &nbsp;·&nbsp; পরিবৃত্তের ব্যাসার্ধ <strong>R = অতিভুজ ÷ 2</strong> — বিস্তারিত <strong>বৃত্ত</strong> সেকশনে
+            </div>
           </div>
         </div>
       </Card>

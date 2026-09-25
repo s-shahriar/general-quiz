@@ -5,7 +5,7 @@ export default function QuadraticSection() {
     <div className="mf-section" id="quadratic">
       <SectionHeader icon="x²" title="দ্বিঘাত সমীকরণ" sub="Quadratic Equation · Roots · Discriminant" />
 
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))',gap:12}}>
         <Card color="blue">
           <CardTitle color="var(--mf-blue)">মানক রূপ: ax² + bx + c = 0 <span style={{fontWeight:400,fontSize:12,color:'var(--text-3)'}}>(α, β = দুটি মূল)</span></CardTitle>
           <div style={{display:'flex',flexWrap:'wrap',gap:8,marginBottom:10}}>

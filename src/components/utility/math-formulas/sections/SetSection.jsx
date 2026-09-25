@@ -46,7 +46,7 @@ export default function SetSection() {
         </div>
       </Card>
 
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))',gap:12}}>
         <Card color="gold">
           <CardTitle>সেট তত্ত্ব (Set Theory)</CardTitle>
           <FBox label="n(A∪B)" val="= n(A) + n(B) − n(A∩B)"/>

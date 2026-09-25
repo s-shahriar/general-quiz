@@ -129,6 +129,10 @@ export default function QuadSection() {
             <li><strong>বিপরীত কোণ সমান</strong>; সন্নিহিত দুই কোণ <strong>সম্পূরক (যোগ = 180°)</strong></li>
             <li>কর্ণদ্বয় পরস্পরকে সমদ্বিখণ্ডিত করে</li>
           </ul>
+          <Mem title="💡 সন্নিহিত কোণ — পাশাপাশি দুই কোণ" style={{marginTop:8}}>
+            <p>সন্নিহিত (পাশাপাশি) দুই কোণের সমষ্টি সবসময় <strong>180°</strong>, আর চার কোণ মিলে <strong>360°</strong>।</p>
+            <p style={{marginTop:4}}>তাই একটি কোণ জানলেই বাকি তিনটি পাওয়া যায় — এক কোণ <strong>70°</strong> হলে পাশের কোণ <strong>180° − 70° = 110°</strong>, আর বিপরীত কোণ আবার <strong>70°</strong>।</p>
+          </Mem>
         </Card>
 
         <Card color="rose">

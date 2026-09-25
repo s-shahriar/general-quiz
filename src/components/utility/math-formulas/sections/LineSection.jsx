@@ -5,7 +5,7 @@ export default function LineSection() {
     <div className="mf-section" id="line">
       <SectionHeader icon="∕" title="সরল রেখা" sub="Straight Line · Slope · Forms · Parallel & Perpendicular" />
 
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(min(100%,300px),1fr))',gap:12}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(min(100%,300px),1fr))',gap:12}}>
         <Card color="blue">
           <CardTitle color="var(--mf-blue)">মূল সূত্রসমূহ</CardTitle>
           {[

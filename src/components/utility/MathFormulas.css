@@ -236,7 +236,9 @@
 /* ── Content Wrap ────────────────────────────── */
 .mf-wrap {
   width: 100%;
-  max-width: 1100px;
+  /* wide enough that a 3-card row spreads across a desktop screen instead of
+     leaving a blank strip beside it; cards stay readable via the grid minmax */
+  max-width: 1440px;
   margin: 0 auto;
   padding: 20px 20px 80px; /* added 20px top padding */
   box-sizing: border-box;
@@ -282,12 +284,12 @@
 /* ── Grids ───────────────────────────────────── */
 .mf-grid2 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 16px;
 }
 .mf-grid3 {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 14px;
 }
 .mf-grid4 {
