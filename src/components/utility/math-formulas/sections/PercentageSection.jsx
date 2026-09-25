@@ -26,6 +26,15 @@ export default function PercentageSection() {
               </div>
             ))}
           </div>
+          <div style={{marginTop:10,padding:'10px 12px',borderRadius:9,background:'color-mix(in srgb, var(--mf-gold) 9%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 28%, transparent)'}}>
+            <div style={{fontSize:12,color:'var(--mf-gold2)',fontWeight:700,marginBottom:6}}>
+              উদা: বৃত্তের ব্যাসার্ধ (বা পরিধি) <strong>২০% কমলে</strong> ক্ষেত্রফল কত কমবে?
+            </div>
+            <div style={{textAlign:'center',margin:'4px 0'}}><Tex>{"-20 - 20 + \\dfrac{(-20)\\times(-20)}{100} = -40 + 4 = -36\\%"}</Tex></div>
+            <div style={{fontSize:11,color:'var(--text-3)',marginTop:5}}>
+              অর্থাৎ ক্ষেত্রফল <strong>৩৬% কমবে</strong>। কমার ক্ষেত্রে a ও b দুটোই <strong>ঋণাত্মক</strong> বসাতে হয় — ব্যাসার্ধ, ব্যাস বা পরিধি যেটাই কমুক, ক্ষেত্রফলে একই হিসাব।
+            </div>
+          </div>
         </Card>
 
         <Card color="teal">

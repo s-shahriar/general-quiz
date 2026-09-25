@@ -5,16 +5,47 @@ export default function TriangleSection() {
     <div className="mf-section" id="triangle">
       <SectionHeader icon="△" title="ত্রিভুজ — প্রকার, সর্বসমতা ও ক্ষেত্রফল" sub="Triangles · Congruence · Area Formulas" />
 
-      <Card color="teal" style={{marginBottom:16}}>
+      <div className="mf-grid2" style={{marginBottom:16}}>
+      <Card color="teal">
         <CardTitle color="var(--mf-teal)">ত্রিভুজের মূল ধর্মসমূহ</CardTitle>
         <ul className="mf-prop-list">
           <li>তিনটি অভ্যন্তরীণ কোণের সমষ্টি = <span className="mf-fi">180°</span></li>
           <li>বহিঃস্থ কোণ = অপর দুটি অন্তঃস্থ কোণের সমষ্টি</li>
           <li>যেকোনো দুই বাহুর যোগফল &gt; তৃতীয় বাহু</li>
+          <li>পরিসীমা = <strong>তিন বাহুর সমষ্টি</strong> = <span className="mf-fi">a + b + c</span></li>
           <li>কোণের সমদ্বিখণ্ডক বিপরীত বাহুকে পার্শ্ববর্তী দুই বাহুর অনুপাতে বিভক্ত করে (BD/DC = AB/AC)</li>
           <li>একটি কোণ বাহির হলে অপর দুটি কোণের সমষ্টির সমান হয়</li>
         </ul>
       </Card>
+
+      <Card color="violet">
+        <CardTitle color="var(--mf-violet)">কোণের সম্পর্ক — সন্নিহিত, পূরক, সম্পূরক</CardTitle>
+        <div style={{textAlign:'center',margin:'6px 0 10px'}}>
+          <svg width="200" height="122" viewBox="0 0 200 122">
+            <line x1="18" y1="88" x2="182" y2="88" stroke="var(--mf-violet)" strokeWidth="2"/>
+            <line x1="100" y1="88" x2="152" y2="26" stroke="var(--mf-violet)" strokeWidth="2"/>
+            <path d="M 66 88 A 34 34 0 0 1 122 62" fill="none" stroke="var(--mf-gold)" strokeWidth="1.6"/>
+            <path d="M 122 88 A 22 22 0 0 0 114 71" fill="none" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+            <circle cx="100" cy="88" r="3.5" fill="var(--mf-gold2)"/>
+            <text x="82" y="54" fill="var(--mf-gold)" fontSize="12" fontWeight="700">x°</text>
+            <text x="130" y="82" fill="var(--mf-teal)" fontSize="12" fontWeight="700">y°</text>
+            <text x="10" y="102" fill="var(--text-3)" fontSize="11">A</text>
+            <text x="176" y="102" fill="var(--text-3)" fontSize="11">B</text>
+            <text x="157" y="24" fill="var(--text-3)" fontSize="11">C</text>
+            <text x="93" y="104" fill="var(--mf-gold2)" fontSize="11" fontWeight="700">O</text>
+            <text x="48" y="118" fill="var(--mf-violet)" fontSize="11" fontWeight="700">x° + y° = 180°</text>
+          </svg>
+        </div>
+        <FBox label="সন্নিহিত কোণ (সরলরেখার উপর পাশাপাশি)" val="দুইটির সমষ্টি = 180°" highlight/>
+        <FBox label="পূরক কোণ (Complementary)" val="সমষ্টি = 90°"/>
+        <FBox label="সম্পূরক কোণ (Supplementary)" val="সমষ্টি = 180°"/>
+        <FBox label="বিপ্রতীপ কোণ (Vertically opposite)" val="পরস্পর সমান"/>
+        <Mem title="💡 মনে রাখুন">
+          <p>একটি সরলরেখার উপর পাশাপাশি দুই কোণ মিলে <strong>সরলকোণ</strong> তৈরি করে — তাই যোগফল সবসময় <strong>180°</strong>।</p>
+          <p style={{marginTop:4}}>একটি জানা থাকলে অন্যটি = <strong>180° − জানা কোণ</strong>। যেমন এক কোণ 115° হলে পাশেরটি 65°।</p>
+        </Mem>
+      </Card>
+      </div>
 
       <div className="mf-grid4" style={{marginBottom:16}}>
         <Card color="gold">
@@ -64,8 +95,10 @@ export default function TriangleSection() {
           </div>
           <FBox label="ক্ষেত্রফল" tex={"= \\dfrac{b}{4}\\sqrt{4a^2-b^2}"} highlight/>
           <FBox label="উচ্চতা h" tex={"= \\sqrt{a^2 - \\dfrac{b^2}{4}}"}/>
+          <FBox label="পরিসীমা" val="= 2a + b"/>
           <Mem title="💡 মনে রাখুন">
             <p><strong>b = ভূমি</strong>, <strong>a = সমান দুটি বাহু</strong></p>
+            <p style={{marginTop:4}}><strong>AB = AC → ∠B = ∠C</strong> — সমান বাহুর বিপরীত কোণ দুটি সমান। উল্টোটাও সত্য: দুই কোণ সমান হলে তাদের বিপরীত বাহু দুটিও সমান।</p>
             <p style={{marginTop:4}}><strong>কোণ:</strong> ভূমি সংলগ্ন দুই কোণ <strong>সমান</strong> (সমান বাহুর বিপরীত কোণ সমান) — এক পাশে 60° হলে অন্য পাশেও 60°।</p>
             <p style={{marginTop:4}}>শীর্ষকোণ জানা থাকলে → প্রতি ভূমিকোণ = <strong>(180° − শীর্ষকোণ) ÷ 2</strong></p>
           </Mem>
@@ -132,10 +165,13 @@ export default function TriangleSection() {
       </div>
 
       <Card color="gold" style={{marginTop:16}}>
-        <CardTitle>পিথাগোরাস সংক্রান্ত গুরুত্বপূর্ণ তথ্য</CardTitle>
+        <CardTitle>সমকোণী ত্রিভুজ ও পিথাগোরাস</CardTitle>
         <div className="mf-grid2">
           <div>
-            <FBox label="সমকোণী হলে" val="AB² + BC² = AC² (অতিভুজ²)"/>
+            <FBox label="দুই সূক্ষ্ম কোণের সমষ্টি" val="= 90° (= অপর কোণ, অর্থাৎ সমকোণ)"/>
+            <FBox label="পরিসীমা" val="= অতিভুজ + লম্ব + ভূমি"/>
+            <FBox label="ক্ষেত্রফল" val="= ½ × লম্ব × ভূমি"/>
+            <FBox label="সমকোণী হলে" val="AB² + BC² = AC² (অতিভুজ²)" highlight/>
             <FBox label="সূক্ষ্মকোণী হলে" val="বৃহত্তম বাহুর² < অন্য দুই বাহুর² যোগফল"/>
             <FBox label="স্থূলকোণী হলে" val="বৃহত্তম বাহুর² > অন্য দুই বাহুর² যোগফল"/>
           </div>

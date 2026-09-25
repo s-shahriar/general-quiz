@@ -184,6 +184,36 @@ export default function CircleSection() {
             উদাহরণ: a = 6 → R = 6/√3 = <strong>2√3</strong></p>
           </Mem>
         </Card>
+
+        <Card color="gold">
+          <CardTitle>বৃত্তের সমীকরণ (Equation of a Circle)</CardTitle>
+          <div style={{textAlign:'center',margin:'10px 0'}}>
+            <svg width="180" height="150" viewBox="0 0 180 150">
+              <line x1="12" y1="120" x2="172" y2="120" stroke="#8899aa" strokeWidth="1.2"/>
+              <line x1="32" y1="8" x2="32" y2="142" stroke="#8899aa" strokeWidth="1.2"/>
+              <circle cx="102" cy="72" r="38" fill="rgba(240,165,0,.07)" stroke="#f0a500" strokeWidth="2"/>
+              <line x1="102" y1="72" x2="102" y2="120" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,3"/>
+              <line x1="102" y1="72" x2="32" y2="72" stroke="#0fdba8" strokeWidth="1.2" strokeDasharray="3,3"/>
+              <line x1="102" y1="72" x2="140" y2="72" stroke="#f06c7e" strokeWidth="1.8"/>
+              <circle cx="102" cy="72" r="3.5" fill="#f06c7e"/>
+              <text x="104" y="62" fill="#f06c7e" fontSize="11" fontWeight="700">(h, k)</text>
+              <text x="118" y="86" fill="#f06c7e" fontSize="12" fontWeight="700">r</text>
+              <text x="96" y="134" fill="#0fdba8" fontSize="11" fontWeight="700">h</text>
+              <text x="18" y="68" fill="#0fdba8" fontSize="11" fontWeight="700">k</text>
+              <text x="19" y="134" fill="#8899aa" fontSize="11">O</text>
+            </svg>
+          </div>
+          <FBox label="কেন্দ্র (h, k), ব্যাসার্ধ r" tex={"(x-h)^2 + (y-k)^2 = r^2"} highlight/>
+          <FBox label="কেন্দ্র মূলবিন্দুতে (0, 0)" tex={"x^2 + y^2 = r^2"}/>
+          <FBox label="সাধারণ রূপ" tex={"x^2+y^2+2gx+2fy+c=0"}/>
+          <div style={{fontSize:11,color:'var(--text-3)',padding:'4px 10px',marginBottom:4}}>
+            সাধারণ রূপে কেন্দ্র = <strong>(−g, −f)</strong>, ব্যাসার্ধ = <strong>√(g² + f² − c)</strong>
+          </div>
+          <Mem title="💡 চিহ্ন উল্টো হয়">
+            <p>সমীকরণে <strong>(x − h)</strong> থাকলে কেন্দ্রের স্থানাঙ্ক <strong>+h</strong>।<br/>
+            যেমন (x − 3)² + (y + 2)² = 25 → কেন্দ্র <strong>(3, −2)</strong>, ব্যাসার্ধ <strong>√25 = 5</strong>।</p>
+          </Mem>
+        </Card>
       </div>
     </div>
   )

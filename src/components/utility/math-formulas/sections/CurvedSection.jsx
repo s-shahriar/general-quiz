@@ -3,7 +3,7 @@ import { SectionHeader, Card, CardTitle, FBox, Mem } from '../MathFormulaHelpers
 export default function CurvedSection() {
   return (
     <div className="mf-section" id="curved">
-      <SectionHeader icon="⬡" title="সিলিন্ডার · Cone · গোলক · অর্ধগোলক" sub="Cylinder · Cone · Sphere · Hemisphere" />
+      <SectionHeader icon="⬡" title="সিলিন্ডার (বেলন) · কোণক · গোলক · অর্ধগোলক" sub="Cylinder · Cone · Sphere · Hemisphere" />
       <div className="mf-legend">
         <span><strong>CSA</strong> Curved Surface Area (শুধু বাঁকা অংশ)</span>
         <span><strong>TSA</strong> Total Surface Area (সমগ্র পৃষ্ঠ)</span>
@@ -15,7 +15,7 @@ export default function CurvedSection() {
             <tr><th>আকৃতি</th><th>আয়তন</th><th>বক্রপৃষ্ঠ (CSA)</th><th>সমগ্র পৃষ্ঠতল (TSA)</th><th>বিশেষ</th></tr>
           </thead>
           <tbody>
-            <tr><td><strong style={{color:'var(--mf-blue)'}}>সিলিন্ডার</strong></td><td className="hl">πr²h</td><td className="hl">2πrh</td><td className="hl">2πr(r+h)</td><td>−</td></tr>
+            <tr><td><strong style={{color:'var(--mf-blue)'}}>সিলিন্ডার (বেলন)</strong></td><td className="hl">πr²h</td><td className="hl">2πrh</td><td className="hl">2πr(r+h)</td><td>−</td></tr>
             <tr><td><strong style={{color:'var(--mf-rose)'}}>Cone (কোণক)</strong></td><td className="hl">⅓πr²h</td><td className="hl">πrl</td><td className="hl">πr(r+l)</td><td className="hl">l = √(h²+r²)</td></tr>
             <tr><td><strong style={{color:'var(--mf-gold)'}}>গোলক</strong></td><td className="hl">⁴⁄₃πr³</td><td>−</td><td className="hl">4πr²</td><td>−</td></tr>
             <tr><td><strong style={{color:'var(--mf-violet)'}}>অর্ধগোলক</strong></td><td className="hl">⅔πr³</td><td className="hl">2πr²</td><td className="hl">3πr²</td><td className="hl">সমগ্র = বক্র + ভূমি</td></tr>
@@ -25,7 +25,7 @@ export default function CurvedSection() {
 
       <div className="mf-grid3">
         <Card color="blue">
-          <CardTitle color="var(--mf-blue)">সিলিন্ডার (Cylinder)</CardTitle>
+          <CardTitle color="var(--mf-blue)">সিলিন্ডার / বেলন (Cylinder)</CardTitle>
           <div style={{textAlign:'center',margin:'8px 0'}}>
             <svg width="120" height="130" viewBox="0 0 120 130">
               <ellipse cx="60" cy="28" rx="45" ry="14" fill="color-mix(in srgb, var(--mf-blue) 10%, transparent)" stroke="var(--mf-blue)" strokeWidth="2"/>
@@ -41,6 +41,7 @@ export default function CurvedSection() {
           <FBox label="আয়তন" tex={"= \\pi r^2 h"}/>
           <FBox label="বক্রপৃষ্ঠ (CSA)" tex={"= 2\\pi rh"}/>
           <FBox label="সমগ্র পৃষ্ঠ (TSA)" tex={"= 2\\pi r(r+h)"} highlight/>
+          <Mem title="💡 নামের মিল"><p>বাংলায় সিলিন্ডারকেই <strong>বেলন</strong> বলা হয় — প্রশ্নে "বেলন" দেখলে এই সূত্রগুলোই লাগবে।</p></Mem>
         </Card>
 
         <Card color="rose">

@@ -40,6 +40,37 @@ export default function SolidSection() {
           </ul>
         </Mem>
       </Card>
+
+      <Card color="teal" style={{marginTop:16}}>
+        <CardTitle color="var(--mf-teal)">চার দেয়ালের ক্ষেত্রফল (ঘর / কক্ষ)</CardTitle>
+        <div className="mf-grid2">
+          <div style={{textAlign:'center',padding:'6px 0'}}>
+            <svg width="200" height="150" viewBox="0 0 200 150">
+              <polygon points="30,60 130,60 130,128 30,128" fill="color-mix(in srgb, var(--mf-teal) 8%, transparent)" stroke="var(--mf-teal)" strokeWidth="2"/>
+              <line x1="30" y1="60" x2="62" y2="32" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <line x1="130" y1="60" x2="162" y2="32" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <line x1="62" y1="32" x2="162" y2="32" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <line x1="162" y1="32" x2="162" y2="100" stroke="var(--mf-teal)" strokeWidth="1.6"/>
+              <line x1="130" y1="128" x2="162" y2="100" stroke="var(--mf-teal)" strokeWidth="1.4" strokeDasharray="3,3" opacity="0.7"/>
+              <line x1="22" y1="60" x2="22" y2="128" stroke="var(--mf-gold2)" strokeWidth="1.3"/>
+              <text x="14" y="98" fill="var(--mf-gold2)" fontSize="11" fontWeight="700" transform="rotate(-90,14,98)">উচ্চতা h</text>
+              <text x="52" y="144" fill="var(--mf-gold)" fontSize="11" fontWeight="700">দৈর্ঘ্য l</text>
+              <text x="146" y="142" fill="var(--mf-gold)" fontSize="11" fontWeight="700">প্রস্থ b</text>
+            </svg>
+          </div>
+          <div>
+            <FBox label="চার দেয়ালের ক্ষেত্রফল" val="= 2(উচ্চতা × দৈর্ঘ্য) + 2(উচ্চতা × প্রস্থ)" highlight/>
+            <FBox label="সংক্ষেপে" tex={"= 2h(l + b)"}/>
+            <FBox label="ছাদ বা মেঝে যোগ করতে হলে" val="+ (দৈর্ঘ্য × প্রস্থ) — প্রতিটির জন্য একবার"/>
+            <FBox label="চার দেয়াল + ছাদ + মেঝে" val="= সমগ্র পৃষ্ঠতল = 2(lb + bh + hl)"/>
+          </div>
+        </div>
+        <Mem title="💡 উদাহরণ — দৈর্ঘ্য ৮ মি, প্রস্থ ৬ মি, উচ্চতা ৩ মি" style={{marginTop:12}}>
+          <p>চার দেয়াল = 2(3 × 8) + 2(3 × 6) = 48 + 36 = <strong>84 বর্গমিটার</strong><br/>
+          অথবা সরাসরি: 2h(l + b) = 2 × 3 × (8 + 6) = <strong>84 বর্গমিটার</strong></p>
+          <p style={{marginTop:4}}>রং করা বা কাগজ লাগানোর হিসাবে <strong>দরজা-জানালার ক্ষেত্রফল বাদ</strong> দিতে হয়। মেঝের কথা না বললে শুধু চার দেয়ালই ধরবে।</p>
+        </Mem>
+      </Card>
     </div>
   )
 }
