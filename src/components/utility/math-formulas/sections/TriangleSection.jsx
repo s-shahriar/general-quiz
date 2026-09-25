@@ -187,14 +187,14 @@ export default function TriangleSection() {
             </svg>
             </div>
 
-            <div style={{padding:'8px 10px',borderRadius:9,background:'color-mix(in srgb, var(--mf-gold) 8%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 25%, transparent)',marginBottom:8}}>
-              <div style={{fontSize:12,fontWeight:700,color:'var(--mf-gold2)',marginBottom:6}}>পিথাগোরিয়ান ট্রিপলেট — চিনলে হিসাব ছাড়াই উত্তর</div>
+            <div style={{padding:'10px 12px',borderRadius:9,background:'var(--elevated)',border:'1px solid var(--border)',borderLeft:'3px solid var(--mf-gold)',marginBottom:8}}>
+              <div style={{fontSize:12,fontWeight:700,color:'var(--text-2)',marginBottom:7}}>পিথাগোরিয়ান ট্রিপলেট — চিনলে হিসাব ছাড়াই উত্তর</div>
               <div style={{display:'flex',flexWrap:'wrap',gap:6}}>
                 {['3-4-5','5-12-13','8-15-17','7-24-25','9-40-41','20-21-29'].map(t => (
-                  <span key={t} style={{fontSize:11,fontWeight:700,color:'var(--mf-gold2)',background:'color-mix(in srgb, var(--mf-gold) 15%, transparent)',border:'1px solid color-mix(in srgb, var(--mf-gold) 30%, transparent)',borderRadius:20,padding:'2px 9px'}}>{t}</span>
+                  <span key={t} style={{fontSize:12,fontWeight:700,color:'var(--text)',background:'var(--surface)',border:'1px solid var(--border-md)',borderRadius:20,padding:'3px 10px'}}>{t}</span>
                 ))}
               </div>
-              <div style={{fontSize:11,color:'var(--text-3)',marginTop:6}}>এদের <strong>গুণিতকও</strong> ট্রিপলেট: 6-8-10, 9-12-15, 10-24-26 …</div>
+              <div style={{fontSize:11,color:'var(--text-3)',marginTop:7}}>এদের <strong>গুণিতকও</strong> ট্রিপলেট: 6-8-10, 9-12-15, 10-24-26 …</div>
             </div>
 
             <FBox label="অতিভুজের উপর মধ্যমা" val="= ½ × অতিভুজ"/>
