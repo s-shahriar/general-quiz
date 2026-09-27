@@ -137,21 +137,31 @@ export default function PncSection() {
             question={<>প্রথম অঙ্কে সব অঙ্ক বসে না — ০ বসতে পারে না, বা সংখ্যাটিকে নির্দিষ্ট মানের চেয়ে বড় হতে হয়।</>}
             steps={[
               <>আগে ধরে নাও সব অঙ্কই প্রথমে বসতে পারে → <strong>মোট বিন্যাস</strong></>,
-              <>প্রথম স্থানে কয়টি অঙ্ক <strong>চলে</strong> তার ভগ্নাংশ দিয়ে গুণ করো</>,
+              <>প্রথম স্থানে <strong>শর্ত পূরণ করে</strong> এমন কয়টি অঙ্ক বসে — সেই ভগ্নাংশ দিয়ে গুণ করো</>,
               <>সংখ্যার অঙ্কসংখ্যা একাধিক হলে প্রতিটির জন্য আলাদা হিসাব করে <strong>যোগ</strong> করো</>,
             ]}
             span
           >
-            <FBox label="মূল কৌশল" val="= মোট বিন্যাস × (প্রথমে বসতে পারে এমন অঙ্ক ÷ মোট অঙ্ক)" highlight/>
+            <FBox label="মূল কৌশল" val="= মোট বিন্যাস × (শর্ত পূরণ করে এমন অঙ্ক সংখ্যা ÷ মোট অঙ্ক সংখ্যা)" highlight/>
             <div className="mf-grid2" style={{marginTop:8,gap:8}}>
               <FBox label="0,3,4,5,6 দিয়ে ৩ অঙ্কের সংখ্যা (০ প্রথমে নয়)" tex={"= {}^5P_3 \\times \\tfrac{4}{5} = 48"}/>
               <FBox label="3,5,7,8,9 দিয়ে ৭০০০-এর বড় ৪ অঙ্কের সংখ্যা" tex={"= {}^5P_4 \\times \\tfrac{3}{5} = 72"}/>
-              <FBox label="0,3,5,6,8 দিয়ে ৫০০০-এর বড় — ৪ অঙ্কের" tex={"= {}^5P_4 \\times \\tfrac{3}{5} = 72"}/>
-              <FBox label="একই প্রশ্নে ৫ অঙ্কের" tex={"= {}^5P_5 \\times \\tfrac{4}{5} = 96"}/>
-              <FBox label="ঐ প্রশ্নের মোট সংখ্যা" val="= 72 + 96 = 168"/>
+              <div style={{gridColumn:'1 / -1',border:'1px solid var(--border)',borderRadius:10,padding:'10px 12px'}}>
+                <div style={{fontSize:12.5,fontWeight:700,color:'var(--text-2)',marginBottom:2}}>
+                  0,3,5,6,8 দিয়ে ৫০০০-এর বড় কতগুলো সংখ্যা গঠন করা যায়?
+                </div>
+                <div style={{fontSize:11.5,color:'var(--text-3)',marginBottom:7,lineHeight:1.6}}>
+                  এক প্রশ্ন, দুই অংশ — ৫০০০-এর বড় হতে পারে ৪ অঙ্কেরও, আবার ৫ অঙ্কেরও। দুটো আলাদা হিসাব করে <strong>যোগ</strong>।
+                </div>
+                <div className="mf-grid3" style={{gap:8}}>
+                  <FBox label="৪ অঙ্কের (প্রথমে 5, 6, 8)" tex={"= {}^5P_4 \\times \\tfrac{3}{5} = 72"}/>
+                  <FBox label="৫ অঙ্কের (প্রথমে ০ নয়)" tex={"= {}^5P_5 \\times \\tfrac{4}{5} = 96"}/>
+                  <FBox label="মোট" val="= 72 + 96 = 168" highlight/>
+                </div>
+              </div>
             </div>
             <div style={{fontSize:11.5,color:'var(--text-3)',marginTop:6,lineHeight:1.6}}>
-              ৭০০০-এর বড় হতে প্রথমে চলে 7, 8, 9 → ৫টির মধ্যে ৩টি, তাই <strong>3/5</strong>। ৫০০০-এর বড় ৪ অঙ্কের হতে প্রথমে চলে 5, 6, 8।
+              ৭০০০-এর বড় হতে প্রথমে বসতে পারে 7, 8, 9 → ৫টি অঙ্কের মধ্যে ৩টি শর্ত পূরণ করে, তাই <strong>3/5</strong>।
             </div>
           </TypeBlock>
 
