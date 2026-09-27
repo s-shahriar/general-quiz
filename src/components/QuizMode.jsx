@@ -15,8 +15,7 @@ import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
 import QuestionEditButton from './shared/QuestionEditButton.jsx'
 import MoreMenu from './shared/MoreMenu.jsx'
-import NoteButton from './shared/NoteButton.jsx'
-import NoteCallout from './shared/NoteCallout.jsx'
+import NoteControl from './shared/NoteControl.jsx'
 import NoteEditor from './shared/NoteEditor.jsx'
 import { useNoteEditor } from './shared/useNoteEditor.js'
 import { useModuleReady } from '../data/contentLoader.js'
@@ -179,7 +178,7 @@ export default function QuizMode({
         <div className="quiz-progress-header">
           <span className="quiz-qnum">
             Question {idx + 1} of {questions.length}
-            {qid && <NoteButton hasNote={Boolean(noteEditor.note)} onClick={noteEditor.openEditor} />}
+            {qid && <NoteControl uid={qid} noteEditor={noteEditor} />}
             {set && <span className={`quiz-pool-tag ${set}`}>{POOL_LABEL[set]}</span>}
           </span>
           <span className="quiz-pct">{Math.round(progress)}%</span>
@@ -190,8 +189,6 @@ export default function QuizMode({
       </div>
 
       <div className="quiz-card anim-slide">
-        <NoteCallout uid={qid} text={noteEditor.note} onEdit={noteEditor.openEditor} />
-
         <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
           <Highlightable as="div" className="quiz-question" block="q" html={q.question} highlights={hlQ} />
         </div>

@@ -8,8 +8,7 @@ import { uidOf } from '../../lib/qid.js'
 import DeleteButton from './DeleteButton.jsx'
 import QuestionEditButton from './QuestionEditButton.jsx'
 import MoreMenu from './MoreMenu.jsx'
-import NoteButton from './NoteButton.jsx'
-import NoteCallout from './NoteCallout.jsx'
+import NoteControl from './NoteControl.jsx'
 import NoteEditor from './NoteEditor.jsx'
 import { useNoteEditor } from './useNoteEditor.js'
 
@@ -60,7 +59,7 @@ export default function StudyCard({
       <div className="study-card-top">
         <span className="study-card-lead">
           <span className="study-qnum" style={{ color }}>Q{index + 1}</span>
-          {qid && <NoteButton hasNote={Boolean(noteEditor.note)} onClick={noteEditor.openEditor} />}
+          {qid && <NoteControl uid={qid} noteEditor={noteEditor} />}
           {topicLabel && (
             <span className="study-topic-badge" style={{ color, borderColor: `color-mix(in srgb, ${color} 33%, transparent)`, background: `color-mix(in srgb, ${color} 8%, transparent)` }}>
               {topicLabel}
@@ -111,8 +110,6 @@ export default function StudyCard({
           )}
         </div>
       </div>
-
-      <NoteCallout uid={qid} text={noteEditor.note} onEdit={noteEditor.openEditor} />
 
       <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
         <Highlightable as="div" className="study-question" block="q" html={q.question} highlights={hlQ} />

@@ -1,42 +1,21 @@
-import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { MoreVertical } from 'lucide-react'
+import { useFloatingPopover } from './useFloatingPopover.js'
 
 // Overflow menu for the row of per-question actions: houses the rarely-tapped
 // ones (Topic, Delete) behind one "⋯" trigger so the row itself only ever
 // shows the flags people toggle constantly (Nail It / Important / Weak).
 // Children are whatever action buttons the caller passes (DeleteButton,
-// QuestionEditButton, …) — each manages its own click behaviour and dialog, so
-// this only needs to close itself the instant something inside is clicked.
+// QuestionEditButton, …) — each manages its own click behaviour and dialog.
+//
+// Once opened, children stay mounted (just hidden via CSS) even after this
+// menu closes — closing used to unmount them outright, which raced with a
+// child's own click handler opening ITS dialog (Topic's "change topic"
+// sheet lives in QuestionEditButton's own state): the popup closed and tore
+// the child down in the same render before its dialog could ever show, so
+// tapping Topic (or, on a slower device, Delete) looked like it did nothing.
 export default function MoreMenu({ className = '', size = 14, children }) {
-  const [open, setOpen] = useState(false)
-  const [pos, setPos] = useState(null)
-  const btnRef = useRef(null)
-  const popRef = useRef(null)
-
-  useEffect(() => {
-    if (!open) return
-    const onDown = (e) => {
-      if (popRef.current?.contains(e.target) || btnRef.current?.contains(e.target)) return
-      setOpen(false)
-    }
-    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
-    document.addEventListener('pointerdown', onDown, true)
-    window.addEventListener('keydown', onKey)
-    window.addEventListener('resize', () => setOpen(false))
-    return () => {
-      document.removeEventListener('pointerdown', onDown, true)
-      window.removeEventListener('keydown', onKey)
-    }
-  }, [open])
-
-  const toggle = () => {
-    if (!open && btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect()
-      setPos({ top: r.bottom + 6, right: Math.max(8, window.innerWidth - r.right) })
-    }
-    setOpen(o => !o)
-  }
+  const { open, pos, btnRef, popRef, toggle, close } = useFloatingPopover()
 
   return (
     <>
@@ -51,13 +30,13 @@ export default function MoreMenu({ className = '', size = 14, children }) {
       >
         <MoreVertical size={size} strokeWidth={1.8} />
       </button>
-      {open && pos && createPortal(
+      {pos && createPortal(
         <div
           ref={popRef}
-          className="more-menu-pop"
+          className={`more-menu-pop${open ? '' : ' more-menu-pop-hidden'}`}
           role="menu"
           style={{ top: pos.top, right: pos.right }}
-          onClickCapture={() => setOpen(false)}
+          onClickCapture={close}
         >
           {children}
         </div>,
