@@ -14,6 +14,11 @@ import QuizOptions from './shared/QuizOptions'
 import ScoreRingScreen from './shared/ScoreRingScreen'
 import DeleteButton from './shared/DeleteButton.jsx'
 import QuestionEditButton from './shared/QuestionEditButton.jsx'
+import MoreMenu from './shared/MoreMenu.jsx'
+import NoteButton from './shared/NoteButton.jsx'
+import NoteCallout from './shared/NoteCallout.jsx'
+import NoteEditor from './shared/NoteEditor.jsx'
+import { useNoteEditor } from './shared/useNoteEditor.js'
 import { useModuleReady } from '../data/contentLoader.js'
 import Highlightable from './shared/Highlightable.jsx'
 import { guardHighlightClick } from '../lib/textAnchor.js'
@@ -66,9 +71,15 @@ export default function QuizMode({
   const [score, setScore]       = useState(0)
   const [done, setDone]         = useState(false)
 
-  // Saved highlights, read here with the rest of the hooks — it must run
-  // before the early returns below or the hook order changes between renders.
+  // Saved highlights and the note editor, read here with the rest of the
+  // hooks — they must run before the early returns below or the hook order
+  // changes between renders. `q`/`qid` move up with them for the same reason:
+  // useNoteEditor(qid) can't wait for the guards. `questions` is already
+  // guard-safe (empty array when there's no topic yet).
   const { getFor } = useHighlights()
+  const q    = questions[idx]
+  const qid  = q ? uidOf(q) : null
+  const noteEditor = useNoteEditor(qid)
 
   if (!topic) return <Navigate to="/" replace />
   if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
@@ -78,8 +89,6 @@ export default function QuizMode({
   // Switching topic from the sidebar keeps the chosen set.
   const goTopic  = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/quiz' + (set ? '?set=' + set : ''))
 
-  const q    = questions[idx]
-  const qid  = q ? uidOf(q) : null
   // Block key 'explanation' — an MCQ answer has one text block, no index.
   const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
   // The question is highlightable too, as its own block on the same uid.
@@ -170,6 +179,7 @@ export default function QuizMode({
         <div className="quiz-progress-header">
           <span className="quiz-qnum">
             Question {idx + 1} of {questions.length}
+            {qid && <NoteButton hasNote={Boolean(noteEditor.note)} onClick={noteEditor.openEditor} />}
             {set && <span className={`quiz-pool-tag ${set}`}>{POOL_LABEL[set]}</span>}
           </span>
           <span className="quiz-pct">{Math.round(progress)}%</span>
@@ -180,6 +190,8 @@ export default function QuizMode({
       </div>
 
       <div className="quiz-card anim-slide">
+        <NoteCallout uid={qid} text={noteEditor.note} onEdit={noteEditor.openEditor} />
+
         <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
           <Highlightable as="div" className="quiz-question" block="q" html={q.question} highlights={hlQ} />
         </div>
@@ -215,14 +227,27 @@ export default function QuizMode({
                   <span className="qmark-label">{isWeak ? 'Weak!' : 'Weak'}</span>
                 </button>
               )}
-              <DeleteButton question={q} className="quiz-nail-btn" size={16} onDeleted={next} />
-              <QuestionEditButton question={q} categorySlug={topic.id} className="quiz-nail-btn" size={16} />
+              {q._id && (
+                <MoreMenu className="quiz-nail-btn">
+                  <QuestionEditButton question={q} categorySlug={topic.id} className="more-menu-item" />
+                  <DeleteButton question={q} className="more-menu-item" size={14} onDeleted={next} />
+                </MoreMenu>
+              )}
             </div>
             <button className="quiz-next-btn" onClick={next}>
               {idx + 1 >= questions.length ? 'ফলাফল দেখুন' : 'পরবর্তী প্রশ্ন'}
               <ArrowRight size={16} />
             </button>
           </div>
+        )}
+
+        {noteEditor.open && (
+          <NoteEditor
+            initial={noteEditor.note}
+            onSave={noteEditor.save}
+            onRemove={noteEditor.remove}
+            onClose={noteEditor.closeEditor}
+          />
         )}
 
         {revealed && q.explanation && (

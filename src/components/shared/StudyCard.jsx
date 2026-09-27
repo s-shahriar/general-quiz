@@ -7,6 +7,11 @@ import { useHighlights } from '../../contexts/HighlightContext.jsx'
 import { uidOf } from '../../lib/qid.js'
 import DeleteButton from './DeleteButton.jsx'
 import QuestionEditButton from './QuestionEditButton.jsx'
+import MoreMenu from './MoreMenu.jsx'
+import NoteButton from './NoteButton.jsx'
+import NoteCallout from './NoteCallout.jsx'
+import NoteEditor from './NoteEditor.jsx'
+import { useNoteEditor } from './useNoteEditor.js'
 
 // One study-mode question card: prompt, tappable options that reveal the answer,
 // and the explanation. Shared by StudyMode (single topic) and the saved screens
@@ -37,6 +42,7 @@ export default function StudyCard({
   const hlExp = qid ? getFor(qid).filter(h => h.block === 'explanation') : undefined
   // The question is highlightable too, as its own block on the same uid.
   const hlQ = qid ? getFor(qid).filter(h => h.block === 'q') : undefined
+  const noteEditor = useNoteEditor(qid)
 
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
@@ -54,6 +60,7 @@ export default function StudyCard({
       <div className="study-card-top">
         <span className="study-card-lead">
           <span className="study-qnum" style={{ color }}>Q{index + 1}</span>
+          {qid && <NoteButton hasNote={Boolean(noteEditor.note)} onClick={noteEditor.openEditor} />}
           {topicLabel && (
             <span className="study-topic-badge" style={{ color, borderColor: `color-mix(in srgb, ${color} 33%, transparent)`, background: `color-mix(in srgb, ${color} 8%, transparent)` }}>
               {topicLabel}
@@ -91,8 +98,12 @@ export default function StudyCard({
               <span className="qmark-label">{isWeak ? 'Weak ✓' : 'Weak'}</span>
             </button>
           )}
-          <DeleteButton question={q} className="nail-btn" size={12} />
-          <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="nail-btn" size={12} />
+          {q._id && (
+            <MoreMenu className="nail-btn">
+              <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="more-menu-item" />
+              <DeleteButton question={q} className="more-menu-item" size={14} />
+            </MoreMenu>
+          )}
           {shown && (
             <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
               Hide
@@ -100,6 +111,8 @@ export default function StudyCard({
           )}
         </div>
       </div>
+
+      <NoteCallout uid={qid} text={noteEditor.note} onEdit={noteEditor.openEditor} />
 
       <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
         <Highlightable as="div" className="study-question" block="q" html={q.question} highlights={hlQ} />
@@ -135,6 +148,15 @@ export default function StudyCard({
           <Highlightable as="div" className="explanation-text"
             block="explanation" html={q.explanation} highlights={hlExp} />
         </div>
+      )}
+
+      {noteEditor.open && (
+        <NoteEditor
+          initial={noteEditor.note}
+          onSave={noteEditor.save}
+          onRemove={noteEditor.remove}
+          onClose={noteEditor.closeEditor}
+        />
       )}
     </div>
   )
