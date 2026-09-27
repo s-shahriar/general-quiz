@@ -1,5 +1,24 @@
 import { SectionHeader, Card, CardTitle, FBox, Mem } from '../MathFormulaHelpers'
 
+// One "question type" panel: what the question looks like, the steps, the answer.
+function TypeBlock({ accent, title, question, steps, children, span }) {
+  return (
+    <div style={{
+      background:'var(--elevated)', border:'1px solid var(--border)', borderLeft:`3px solid ${accent}`,
+      borderRadius:10, padding:'12px 14px', gridColumn: span ? '1 / -1' : undefined,
+    }}>
+      <div style={{fontSize:13,fontWeight:700,color:'var(--text-2)',marginBottom:4}}>{title}</div>
+      <div style={{fontSize:12,color:'var(--text-3)',marginBottom:8,lineHeight:1.6}}>{question}</div>
+      <div style={{fontSize:12.5,color:'var(--text-2)',lineHeight:1.9,marginBottom:6}}>
+        {steps.map((st, i) => (
+          <div key={i}><strong style={{color:accent}}>{['১','২','৩'][i]}.</strong> {st}</div>
+        ))}
+      </div>
+      {children}
+    </div>
+  )
+}
+
 export default function PncSection() {
   return (
     <div className="mf-section" id="pnc">
@@ -58,6 +77,106 @@ export default function PncSection() {
           </Mem>
         </Card>
       </div>
+
+      <Card color="gold" style={{marginTop:16}}>
+        <CardTitle>প্রশ্নের ধরন ও সমাধানের কৌশল</CardTitle>
+        <p style={{fontSize:12.5,color:'var(--text-3)',margin:'2px 0 12px',lineHeight:1.7}}>
+          বিন্যাসের প্রশ্ন ঘুরেফিরে এই পাঁচ ধরনেই আসে। ধরনটা চিনতে পারলে সূত্র বসানোই বাকি —
+          <strong> “পাশাপাশি নয়” মানে মোট থেকে “পাশাপাশি” বাদ</strong>।
+        </p>
+        <div className="mf-grid2">
+
+          <TypeBlock
+            accent="var(--mf-violet)"
+            title="Type 1 — নির্দিষ্ট অক্ষরগুলো পাশাপাশি নয়"
+            question={<>উদা: <strong>TRIANGLE</strong> শব্দের অক্ষরগুলো কত ভাবে সাজানো যায়, যাতে স্বরবর্ণ (A, I, E) কখনো পাশাপাশি না থাকে?</>}
+            steps={[
+              <>মোট বিন্যাস = <strong>8!</strong> (৮টি ভিন্ন অক্ষর)</>,
+              <>তিন স্বরবর্ণকে <strong>একসাথে</strong> ধরলে একক দাঁড়ায় ৬টি → <strong>6!</strong></>,
+              <>ঐ তিন স্বরবর্ণ নিজেদের মধ্যে সাজে <strong>3!</strong> ভাবে</>,
+            ]}
+          >
+            <FBox label="উত্তর = মোট − (একসাথে)" tex={"= 8! - (6! \\times 3!) = 36000"} highlight/>
+          </TypeBlock>
+
+          <TypeBlock
+            accent="var(--mf-teal)"
+            title="Type 2 — একই অক্ষর একাধিকবার, তবু পাশাপাশি নয়"
+            question={<>উদা: <strong>ARRANGE</strong> শব্দটি কত ভাবে সাজানো যায়, যাতে দুটি <strong>R</strong> পাশাপাশি না থাকে? (A দুবার, R দুবার)</>}
+            steps={[
+              <>মোট বিন্যাস = <strong>7! ÷ (2! × 2!)</strong> = 1260</>,
+              <>দুই R একসাথে ধরলে একক ৬টি, তাতে A দুবার → <strong>6! ÷ 2!</strong> = 360</>,
+              <>R দুটি অভিন্ন, তাই নিজেদের মধ্যে <strong>2! ÷ 2! = 1</strong></>,
+            ]}
+          >
+            <FBox label="উত্তর" tex={"= \\dfrac{7!}{2!\\,2!} - \\dfrac{6!}{2!} = 1260 - 360 = 900"} highlight/>
+            <div style={{fontSize:11.5,color:'var(--text-3)',marginTop:6,lineHeight:1.6}}>
+              সদৃশ প্রশ্ন: ৭টি <strong>ভিন্ন</strong> বই সাজাতে হবে, দুটি নির্দিষ্ট বই পাশাপাশি নয় → 7! − (6! × 2!) = <strong>3600</strong>
+            </div>
+          </TypeBlock>
+
+          <TypeBlock
+            accent="var(--mf-blue)"
+            title="Type 3 — স্বরবর্ণ নির্দিষ্ট স্থানে বসবে"
+            question={<>উদা: <strong>ARTICLE</strong> শব্দের স্বরবর্ণগুলো <strong>বিজোড় স্থানে</strong> রেখে কত ভাবে সাজানো যায়?</>}
+            steps={[
+              <>স্বরবর্ণ A, I, E = ৩টি; ব্যঞ্জনবর্ণ R, T, C, L = ৪টি</>,
+              <>বিজোড় স্থান ১, ৩, ৫, ৭ = ৪টি → ৪ স্থানে ৩ স্বরবর্ণ = <strong>⁴P₃</strong></>,
+              <>বাকি ৪ স্থানে ৪ ব্যঞ্জনবর্ণ = <strong>⁴P₄</strong></>,
+            ]}
+          >
+            <FBox label="উত্তর" tex={"= {}^4P_3 \\times {}^4P_4 = 24 \\times 24 = 576"} highlight/>
+            <div style={{fontSize:11.5,color:'var(--text-3)',marginTop:6,lineHeight:1.6}}>
+              স্বরবর্ণ ৩টি হলেও বিজোড় স্থান ৪টি — তাই একটি বিজোড় স্থান খালি থেকে যায়, সেটি ব্যঞ্জনবর্ণই পায়।
+            </div>
+          </TypeBlock>
+
+          <TypeBlock
+            accent="var(--mf-rose)"
+            title="Type 4 — অঙ্ক দিয়ে সংখ্যা গঠন (শর্তসহ)"
+            question={<>প্রথম অঙ্কে সব অঙ্ক বসে না — ০ বসতে পারে না, বা সংখ্যাটিকে নির্দিষ্ট মানের চেয়ে বড় হতে হয়।</>}
+            steps={[
+              <>আগে ধরে নাও সব অঙ্কই প্রথমে বসতে পারে → <strong>মোট বিন্যাস</strong></>,
+              <>প্রথম স্থানে কয়টি অঙ্ক <strong>চলে</strong> তার ভগ্নাংশ দিয়ে গুণ করো</>,
+              <>সংখ্যার অঙ্কসংখ্যা একাধিক হলে প্রতিটির জন্য আলাদা হিসাব করে <strong>যোগ</strong> করো</>,
+            ]}
+            span
+          >
+            <FBox label="মূল কৌশল" val="= মোট বিন্যাস × (প্রথমে বসতে পারে এমন অঙ্ক ÷ মোট অঙ্ক)" highlight/>
+            <div className="mf-grid2" style={{marginTop:8,gap:8}}>
+              <FBox label="0,3,4,5,6 দিয়ে ৩ অঙ্কের সংখ্যা (০ প্রথমে নয়)" tex={"= {}^5P_3 \\times \\tfrac{4}{5} = 48"}/>
+              <FBox label="3,5,7,8,9 দিয়ে ৭০০০-এর বড় ৪ অঙ্কের সংখ্যা" tex={"= {}^5P_4 \\times \\tfrac{3}{5} = 72"}/>
+              <FBox label="0,3,5,6,8 দিয়ে ৫০০০-এর বড় — ৪ অঙ্কের" tex={"= {}^5P_4 \\times \\tfrac{3}{5} = 72"}/>
+              <FBox label="একই প্রশ্নে ৫ অঙ্কের" tex={"= {}^5P_5 \\times \\tfrac{4}{5} = 96"}/>
+              <FBox label="ঐ প্রশ্নের মোট সংখ্যা" val="= 72 + 96 = 168"/>
+            </div>
+            <div style={{fontSize:11.5,color:'var(--text-3)',marginTop:6,lineHeight:1.6}}>
+              ৭০০০-এর বড় হতে প্রথমে চলে 7, 8, 9 → ৫টির মধ্যে ৩টি, তাই <strong>3/5</strong>। ৫০০০-এর বড় ৪ অঙ্কের হতে প্রথমে চলে 5, 6, 8।
+            </div>
+          </TypeBlock>
+
+          <TypeBlock
+            accent="var(--mf-gold)"
+            title="Type 5 — সমান ভাগে ভাগ করা"
+            question={<>উদা: <strong>৯ জন</strong> লোককে <strong>৩ জনের ৩ দলে</strong> ভাগ করা যায় কত ভাবে?</>}
+            steps={[
+              <>প্রথমে ভাগ করো: <strong>9! ÷ (3! × 3! × 3!)</strong> = 1680</>,
+              <>দলগুলোর আলাদা নাম/পরিচয় <strong>না থাকলে</strong> দলের ক্রম গোনা যাবে না → <strong>÷ 3!</strong></>,
+              <>দল আলাদা করে চিহ্নিত (দল ক, খ, গ) হলে ভাগ করার দরকার নেই</>,
+            ]}
+            span
+          >
+            <div className="mf-grid2" style={{gap:8}}>
+              <FBox label="দল অভিন্ন (নাম নেই)" tex={"= \\dfrac{9!}{3!\\,3!\\,3!} \\div 3! = 280"} highlight/>
+              <FBox label="দল আলাদা করে চিহ্নিত" tex={"= \\dfrac{9!}{3!\\,3!\\,3!} = 1680"}/>
+            </div>
+            <div style={{fontSize:11.5,color:'var(--text-3)',marginTop:6,lineHeight:1.6}}>
+              সাধারণ নিয়ম: n জনকে <strong>সমান r দলে</strong> ভাগ করলে শেষে <strong>÷ r!</strong> করতে হয় — দল বদলালেও ভাগটা একই থাকে বলে।
+            </div>
+          </TypeBlock>
+
+        </div>
+      </Card>
     </div>
   )
 }
