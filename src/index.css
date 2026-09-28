@@ -4437,6 +4437,20 @@ button {
   padding: 0; margin: 0;
 }
 
+/* A highlight spanning into a sup/sub gets its own separate <mark> nested
+   inside that sup/sub (applyRanges walks text nodes individually), so it
+   inherits sup/sub's smaller font-size and raised/dropped baseline. The
+   accent bar above is a box-shadow local to THIS element's own (now
+   shifted) box, so it lands at a visibly different height than the
+   surrounding text's bar instead of continuing smoothly along it. Drop it
+   here — the background fill alone still reads as highlighted. */
+.explanation-text sup .hl-mark,
+.explanation-text sub .hl-mark,
+.hl-q-root sup .hl-mark,
+.hl-q-root sub .hl-mark {
+  box-shadow: none;
+}
+
 /* ── The floating colour bar ─────────────────────────────────────────────
    Dots only, so the whole bar is ~200px and fits a 360px phone with room to
    spare. Fixed-positioned because it is portalled to <body> and tracks a
