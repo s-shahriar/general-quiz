@@ -42,7 +42,7 @@ export default function SolidSection() {
       </Card>
 
       <Card color="teal" style={{marginTop:16}}>
-        <CardTitle color="var(--mf-teal)">চার দেয়ালের ক্ষেত্রফল (ঘর / কক্ষ)</CardTitle>
+        <CardTitle color="var(--mf-teal)">চার দেয়ালের ক্ষেত্রফল (ঘর · ট্যাংক / চৌবাচ্চা)</CardTitle>
         <div className="mf-grid2">
           <div style={{textAlign:'center',padding:'6px 0'}}>
             <svg width="200" height="150" viewBox="0 0 200 150">
@@ -63,12 +63,60 @@ export default function SolidSection() {
             <FBox label="সংক্ষেপে" tex={"= 2h(l + b)"}/>
             <FBox label="ছাদ বা মেঝে যোগ করতে হলে" val="+ (দৈর্ঘ্য × প্রস্থ) — প্রতিটির জন্য একবার"/>
             <FBox label="চার দেয়াল + ছাদ + মেঝে" val="= সমগ্র পৃষ্ঠতল = 2(lb + bh + hl)"/>
+            <FBox label="ট্যাংক/চৌবাচ্চার দেয়াল ও তলা প্লাস্টার" val="= 2h(l + b) + (l × b)" highlight/>
           </div>
         </div>
+
+        <div className="mf-table-scroll" style={{marginTop:14}}><table className="mf-cmp-table">
+          <thead>
+            <tr><th>প্রশ্নে যা বলা হয়</th><th>যা হিসাব করবে</th><th>মনে রাখার কথা</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ঘরের <strong>চার দেয়ালে</strong> রং / চুনকাম / কাগজ লাগানো</td>
+              <td className="hl">2h(l + b)</td>
+              <td>দরজা-জানালার ক্ষেত্রফল <strong>বাদ</strong> দিতে হয়</td>
+            </tr>
+            <tr>
+              <td>চার দেয়াল <strong>+ ছাদ</strong> (সিলিং) রং</td>
+              <td className="hl">2h(l + b) + (l × b)</td>
+              <td>ছাদ একবারই যোগ হয়</td>
+            </tr>
+            <tr>
+              <td><strong>ট্যাংক / চৌবাচ্চা / পুকুরের</strong> ভেতরে প্লাস্টার বা টাইলস (উপর খোলা)</td>
+              <td className="hl">2h(l + b) + (l × b)</td>
+              <td>এখানে <strong>h = গভীরতা</strong>; উপরে ঢাকনা নেই বলে ছাদ ধরা হয় না</td>
+            </tr>
+            <tr>
+              <td>ঢাকনাসহ বাক্স, বা ঘরের <strong>সব তল</strong></td>
+              <td className="hl">2(lb + bh + hl)</td>
+              <td>ছাদ ও মেঝে দুটোই যোগ</td>
+            </tr>
+            <tr>
+              <td>শুধু <strong>মেঝেতে</strong> টাইলস / কার্পেট / মাদুর</td>
+              <td className="hl">l × b</td>
+              <td>উচ্চতা বা গভীরতা লাগে না</td>
+            </tr>
+            <tr>
+              <td>ঘর বা জমির <strong>চারপাশে</strong> বেড়া / তার / বর্ডার</td>
+              <td className="hl">2(l + b)</td>
+              <td>এটি <strong>পরিসীমা</strong>, ক্ষেত্রফল নয়</td>
+            </tr>
+          </tbody>
+        </table></div>
         <Mem title="💡 উদাহরণ — দৈর্ঘ্য ৮ মি, প্রস্থ ৬ মি, উচ্চতা ৩ মি" style={{marginTop:12}}>
           <p>চার দেয়াল = 2(3 × 8) + 2(3 × 6) = 48 + 36 = <strong>84 বর্গমিটার</strong><br/>
           অথবা সরাসরি: 2h(l + b) = 2 × 3 × (8 + 6) = <strong>84 বর্গমিটার</strong></p>
           <p style={{marginTop:4}}>রং করা বা কাগজ লাগানোর হিসাবে <strong>দরজা-জানালার ক্ষেত্রফল বাদ</strong> দিতে হয়। মেঝের কথা না বললে শুধু চার দেয়ালই ধরবে।</p>
+        </Mem>
+
+        <Mem title="💡 উদাহরণ — ট্যাংক: দৈর্ঘ্য ১২ মি, প্রস্থ ৮ মি, গভীরতা ৫ মি" style={{marginTop:12}}>
+          <p>দেয়াল ও তলা প্লাস্টার করতে বললে দুটো আলাদা হিসাব করে যোগ করতে হয়:</p>
+          <p style={{marginTop:4}}>নিচের তলার ক্ষেত্রফল = 12 × 8 = <strong>96 বর্গমিটার</strong><br/>
+          চার দেয়ালের ক্ষেত্রফল = 2h(l + b) = 2 × 5 × (12 + 8) = <strong>200 বর্গমিটার</strong><br/>
+          প্লাস্টারের মোট ক্ষেত্রফল = 96 + 200 = <strong>296 বর্গমিটার</strong></p>
+          <p style={{marginTop:4}}>প্রতি বর্গমিটার ৫০ পয়সা (০.৫০ টাকা) হলে খরচ = 296 × 0.50 = <strong>148 টাকা</strong></p>
+          <p style={{marginTop:4}}><strong>খেয়াল রাখো:</strong> তলার ক্ষেত্রফলে গভীরতা লাগে না — সেটি শুধু <strong>দৈর্ঘ্য × প্রস্থ</strong>। গভীরতা কেবল দেয়ালের হিসাবে বসে। উপরটা খোলা বলে ছাদ যোগ হয় না।</p>
         </Mem>
       </Card>
     </div>
