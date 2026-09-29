@@ -178,7 +178,6 @@ export default function QuizMode({
         <div className="quiz-progress-header">
           <span className="quiz-qnum">
             Question {idx + 1} of {questions.length}
-            {qid && <NoteControl uid={qid} noteEditor={noteEditor} />}
             {set && <span className={`quiz-pool-tag ${set}`}>{POOL_LABEL[set]}</span>}
           </span>
           <span className="quiz-pct">{Math.round(progress)}%</span>
@@ -189,6 +188,11 @@ export default function QuizMode({
       </div>
 
       <div className="quiz-card anim-slide">
+        {qid && (
+          <div className="quiz-note-row">
+            <NoteControl uid={qid} noteEditor={noteEditor} />
+          </div>
+        )}
         <div className="hl-q-root" data-hl-root={qid || undefined} onClick={qid ? guardHighlightClick : undefined}>
           <Highlightable as="div" className="quiz-question" block="q" html={q.question} highlights={hlQ} />
         </div>
