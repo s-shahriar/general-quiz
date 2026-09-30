@@ -37,7 +37,7 @@
 // ─────────────────────────────────────────────────────────────
 import { supabase } from './supabase.js'
 import { isModuleLoaded, loadModule, topicsOfModule } from '../data/contentLoader.js'
-import { buildClassifier } from './livemcqClassify.js'
+import { buildClassifier, SUBTOPIC_DEFAULTS } from './livemcqClassify.js'
 import {
   TRAINING_MODULES, CROSS_MODULE_WEIGHT, SUBTOPIC_CROSS_WEIGHT, livemcqLabelFor, subtopicLabelFor,
 } from './livemcqTraining.js'
@@ -167,7 +167,8 @@ function assemble(rows) {
     if (!byCategory.has(r.s)) byCategory.set(r.s, [])
     byCategory.get(r.s).push({ ...toDoc(r), slug: r.t, weight: r.m ? SUBTOPIC_CROSS_WEIGHT : 1 })
   }
-  const subIndex = new Map([...byCategory].map(([cat, docs]) => [cat, buildClassifier(docs)]))
+  // Sub-topics run on their own tuning — see SUBTOPIC_DEFAULTS.
+  const subIndex = new Map([...byCategory].map(([cat, docs]) => [cat, buildClassifier(docs, SUBTOPIC_DEFAULTS)]))
   return {
     size: clf.size,
     suggest: clf.suggest,

@@ -15,7 +15,7 @@ import { createHash } from 'node:crypto'
 import { readFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { buildClassifier, BULK_APPLY_MIN, DEFAULTS } from '../src/lib/livemcqClassify.js'
+import { buildClassifier, BULK_APPLY_MIN, DEFAULTS, SUBTOPIC_DEFAULTS } from '../src/lib/livemcqClassify.js'
 import {
   TRAINING_MODULES, CROSS_MODULE_WEIGHT, SUBTOPIC_CROSS_WEIGHT, livemcqLabelFor, subtopicLabelFor,
 } from '../src/lib/livemcqTraining.js'
@@ -130,7 +130,7 @@ function subtopicScore(opts, weight) {
     for (let f = 0; f < FOLDS; f++) {
       const train = nat.filter((r) => r.fold !== f).map((r) => doc(r, r.sub, 1))
       if (weight > 0) for (const r of frn) train.push(doc(r, r.sub, weight))
-      const clf = buildClassifier(train, opts)
+      const clf = buildClassifier(train, { ...SUBTOPIC_DEFAULTS, ...opts })
       for (const r of nat) if (r.fold === f) out.push({ gold: r.sub, s: clf.suggest(r) })
     }
     byCat[c] = summarize(out)
@@ -157,11 +157,12 @@ if (GRID) {
 
   console.log('\n── grid: sub-topic ──')
   const subGrid = []
-  for (const k of [5, 10, 15]) for (const wExplanation of [0.3, 0.55, 0.8]) for (const priorAlpha of [0, 0.3]) for (const weight of [0, 0.25, 0.5]) {
-    const opts = { k, wExplanation, priorAlpha }
+  for (const k of [10, 15]) for (const wSymbol of [0, 0.5, 0.75, 1]) for (const priorAlpha of [0, 0.3]) for (const weight of [0, 0.25, 0.5]) {
+    const opts = { k, wSymbol, priorAlpha }
     subGrid.push({ opts, weight, s: subtopicScore(opts, weight).total })
   }
   subGrid.sort((a, b) => b.s.acc - a.s.acc)
   for (const { opts, weight, s } of subGrid.slice(0, 8)) console.log(JSON.stringify(opts), `cross ${weight}`, `top-1 ${pct(s.acc)} macro ${pct(s.macro)} apply-all ${pct(s.bulkCoverage)}@${pct(s.bulkPrecision)}`)
-  console.log('defaults:', JSON.stringify(DEFAULTS))
+  console.log('category defaults:', JSON.stringify(DEFAULTS))
+  console.log('sub-topic defaults:', JSON.stringify(SUBTOPIC_DEFAULTS))
 }

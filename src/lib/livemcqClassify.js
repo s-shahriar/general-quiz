@@ -56,6 +56,43 @@ export const DEFAULTS = Object.freeze({
   minDf: 2,         // drop tokens seen in only one document
   minSim: 0.08,     // below this the nearest match is noise
   minConf: 0.34,    // below this the neighbours disagree too much
+  wSymbol: 0,       // maths notation as features — see SYMBOL_RE
+})
+
+// The sub-topic indexes (one per split category, built in livemcqKnowledge.js)
+// run on their own settings. They are a different problem from categories:
+// eight to sixteen small classes inside one subject, where the category
+// defaults were tuned for thirteen large ones across subjects.
+//
+//   wSymbol 0.75  maths notation (SYMBOL_RE). A trig item whose working is
+//                 mostly surd algebra — "tanθ = √2 − 1, rationalise" — had only
+//                 words that pointed at algebra; θ and tan now point back.
+//   priorAlpha 0  no damping of big sub-topics. Across categories the damping
+//                 stopped গণিত winning ties on sheer mass; inside one category
+//                 the big sub-topics are big because they are common, and
+//                 damping them only pushed guesses into rare ones.
+//   minConf 0.25  answer at lower agreement. The extra answers are 'weak'
+//                 (shown, never bulk-applied), and a visible guess beside the
+//                 question beats a blank dropdown.
+//
+// Measured 5-fold over the live corpus (2202 LiveMCQ rows, Sept 2026), against
+// running the sub-topic indexes on DEFAULTS:
+//
+//                     before    after
+//   all sub-topics    81.4%     84.6%
+//   গণিত              81.4%     84.6%   (জ্যামিতি ও ত্রিকোণমিতি 10/19 -> 13/19)
+//   English Grammar   65.2%     72.3%
+//   বাংলা ব্যাকরণ     92.6%     93.1%
+//   Apply-all         67.7% @ 95.8%  ->  68.0% @ 96.5%
+//
+// Chosen mid-plateau: wSymbol 0.5–1, k 10–15 and minConf 0.2–0.25 all land
+// within 0.4pp. The category index keeps DEFAULTS (wSymbol 0): notation moved
+// category accuracy nowhere (93.7 -> 93.6 at 1.0) and down past that.
+export const SUBTOPIC_DEFAULTS = Object.freeze({
+  ...DEFAULTS,
+  wSymbol: 0.75,
+  priorAlpha: 0,
+  minConf: 0.25,
 })
 
 // Bengali block + latin words. Single characters are dropped as noise.
@@ -94,6 +131,18 @@ const stripTags = (s) => (s || '').replace(/<[^>]+>/g, ' ')
 // all at that sample size — but it is not evidence of anything broader.
 const ANALOGY_RE = /::|\b[A-Z]{3,}\s*:\s*[A-Z]{3,}/
 const W_ANALOGY = 1.5
+
+// Maths notation, kept as features instead of being thrown away with the
+// punctuation. `TOKEN_RE` only sees letters and digits, so "tanθ", "√2",
+// "30°" and "∠ABC" reduce to "tan", "2", "30" and "abc" — and the one thing
+// that says "trigonometry" or "surd" or "geometry" is gone. Each symbol
+// becomes its own token ('#θ', '#√'), counted like a word and subject to the
+// same idf, so a symbol that is everywhere carries nothing and one that is
+// rare carries a lot. Trig function names get the same treatment when they
+// stand glued to an argument ("tanθ", "sin²A"), which the word regex splits
+// unpredictably.
+const SYMBOL_RE = /[θπ√∠△°%∞≤≥≠±×÷²³∴∵∑∫αβ!]|\b(?:sin|cos|tan|cot|sec|cosec|log|ln)(?=[θαβ²(\s\d]|$)/gi
+const TRIG_SYMBOLS = new Set(['θ', 'sin', 'cos', 'tan', 'cot', 'sec', 'cosec'])
 
 // Bengali is suffix-inflecting (শব্দ → শব্দের → শব্দগুলো), so a leading-edge
 // stem collapses those to one feature. Emitted ALONGSIDE the full token, not
@@ -140,6 +189,24 @@ function featureFreq(item, cfg) {
   field(item.explanation, 'e:', cfg.wExplanation)
   const opts = optionValues(item.options)
   if (opts.length) field(opts.join('   '), 'o:', cfg.wOptions)
+  if (cfg.wSymbol > 0) {
+    // One notation space across all three fields: a θ in the working is the
+    // same evidence as a θ in the question.
+    const text = [item.question, item.explanation, opts.join(' ')].map(stripTags).join(' ')
+    const bump = (key) => {
+      const cur = tf.get(key)
+      if (cur) cur.n++
+      else tf.set(key, { n: 1, w: cfg.wSymbol })
+    }
+    for (const m of text.normalize('NFC').matchAll(SYMBOL_RE)) {
+      const sym = m[0].toLowerCase()
+      bump('#' + sym)
+      // "tan" in one question and "sin" in another are, to a bag of words,
+      // unrelated; to a reader they are the same subject. Trig items are
+      // few (5 of 253 গণিত rows), so they share one extra feature.
+      if (TRIG_SYMBOLS.has(sym)) bump('#trig')
+    }
+  }
   // Case- and punctuation-sensitive, so it is matched on the raw question
   // rather than on anything `tokenize` has already flattened.
   if (ANALOGY_RE.test(stripTags(item.question))) tf.set('$analogy', { n: 1, w: W_ANALOGY })
