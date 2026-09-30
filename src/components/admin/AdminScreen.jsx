@@ -8,7 +8,10 @@ import {
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import RichText from '../shared/RichText.jsx'
-import { invalidateModule } from '../../data/contentLoader.js'
+import { invalidateModule, loadModule, topicsOfModule } from '../../data/contentLoader.js'
+import StudyCard from '../shared/StudyCard.jsx'
+import { uidOf } from '../../lib/qid.js'
+import { useMasteredContext, useImportantContext, useWeakContext } from '../../contexts/ProgressContext.jsx'
 import {
   CATEGORY_OPTIONS, LETTERS, isOwner,
   extractRawItems, normalizeItem, toInsertRow,
@@ -794,6 +797,7 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
 
 // ── Manage / delete ────────────────────────────────────────────
 const PAGE_SIZE = 50
+const STUDY_PAGE_SIZE = 20
 
 // "30 Sep, 12:09" in the viewer's own time zone.
 const importWhen = (iso) => new Date(iso).toLocaleString('en-GB', {
@@ -821,6 +825,13 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
   const [subBusy, setSubBusy] = useState(false)
   const [batch, setBatch] = useState('')          // import key; '' = the newest
   const lists = useSubtopicLists()
+  const nailApi = useMasteredContext()
+  const importantApi = useImportantContext()
+  const weakApi = useWeakContext()
+  // Last import reads as study cards, so it needs each question whole — its
+  // options and explanation — which the admin row list does not fetch. The
+  // app's own LiveMCQ module has them, keyed here by row id.
+  const [qById, setQById] = useState(null)
 
   // Refetches when Import inserts rows. Existing rows stay on screen while the
   // new set loads, so a refresh doesn't blank the list.
@@ -844,6 +855,28 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
     for (const r of rows) if (activeImport.ids.has(r.id)) n[r.slug] = (n[r.slug] || 0) + 1
     return CATEGORY_OPTIONS.filter((c) => n[c.slug]).map((c) => ({ slug: c.slug, name: `${c.name} (${n[c.slug]})` }))
   }, [activeImport, rows])
+
+  useEffect(() => {
+    if (!importsOnly || !activeImport) return
+    let cancelled = false
+    const build = () => {
+      const m = new Map()
+      for (const t of topicsOfModule('livemcq')) for (const q of t.questions || []) m.set(q._id, { q, topic: t })
+      return m
+    }
+    ;(async () => {
+      await loadModule('livemcq')
+      let m = build()
+      // Loaded before this import landed (or before a move): refetch once.
+      if ([...activeImport.ids].some((id) => !m.has(id))) {
+        invalidateModule('livemcq')
+        await loadModule('livemcq')
+        m = build()
+      }
+      if (!cancelled) setQById(m)
+    })().catch(() => { if (!cancelled) setQById(new Map()) })
+    return () => { cancelled = true }
+  }, [importsOnly, activeImport, dataVersion])
 
   const filtered = useMemo(() => {
     if (!rows) return []
@@ -936,10 +969,13 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
   if (!rows) return <p style={muted}><Loader2 size={14} style={spin} /> Loading rows…</p>
   if (importsOnly && !activeImport) return <p style={muted}>No imports yet.</p>
 
-  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
+  // Study cards are tall; a shorter page keeps one import easy to read through.
+  const pageSize = importsOnly ? STUDY_PAGE_SIZE : PAGE_SIZE
+  const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
   const curPage = Math.min(page, pageCount - 1)   // clamp (e.g. after deletes shrink the set)
-  const start = curPage * PAGE_SIZE
-  const shown = filtered.slice(start, start + PAGE_SIZE)
+  const start = curPage * pageSize
+  const shown = filtered.slice(start, start + pageSize)
+  const toggleNail = (qid) => (nailApi.value.has(qid) ? nailApi.remove(qid) : nailApi.add(qid))
 
   return (
     <div>
@@ -998,8 +1034,55 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
         {filtered.length
           ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== (activeImport ? activeImport.count : rows.length) ? ` (filtered from ${activeImport ? activeImport.count : rows.length})` : ''} · newest first</>
           : <>No matches of {activeImport ? activeImport.count : rows.length}</>}
+        {importsOnly && filtered.length > 0 && ' · tap an option to reveal the answer'}
       </p>
-      {shown.map((r) => (
+      {importsOnly && !qById && <p style={muted}><Loader2 size={14} style={spin} /> Loading questions…</p>}
+      {importsOnly && qById && shown.map((r, i) => {
+        const hit = qById.get(r.id)
+        if (!hit) return null
+        const { q, topic } = hit
+        const qid = uidOf(q)
+        return (
+          <div key={r.id} style={studyWrap}>
+            <div style={studyStrip}>
+              <button style={catChipBtn} disabled={!r.favorite_id} onClick={() => setMoving(r)} title="Change category">
+                {r.catName} <ChevronDown size={11} style={{ opacity: 0.7 }} />
+              </button>
+              {(r.subtopic || lists[r.slug]?.length > 0) && (
+                <button style={subChipBtn(!!r.subtopic)} disabled={!r.favorite_id} onClick={() => setSubMoving(r)} title="Change sub-topic">
+                  <Tag size={10} /> {r.subtopic ? subtopicName(lists[r.slug], r.subtopic) : 'no sub-topic'}
+                </button>
+              )}
+              <span style={fidTag}>fav {r.favorite_id ?? '—'}</span>
+              <span style={{ marginLeft: 'auto', display: 'inline-flex', gap: 6 }}>
+                <button style={moveBtn} disabled={!r.favorite_id} onClick={() => setMoving(r)} aria-label="Change category">
+                  <FolderInput size={14} />
+                </button>
+                <button style={delBtn} disabled={!r.favorite_id} onClick={() => setConfirm(r)} aria-label="Delete question">
+                  <Trash2 size={14} />
+                </button>
+              </span>
+            </div>
+            <StudyCard
+              domId={'import-q-' + r.id}
+              question={q}
+              index={start + i}
+              color={topic.color}
+              topicLabel={topic.shortName || topic.name}
+              categoryId={topic.id}
+              nailed={nailApi.value.has(qid)}
+              isImportant={importantApi.value.has(qid)}
+              onNail={() => toggleNail(qid)}
+              onMarkImportant={() => importantApi.add(qid)}
+              onUnmarkImportant={() => importantApi.remove(qid)}
+              isWeak={weakApi.value.has(qid)}
+              onMarkWeak={() => weakApi.add(qid)}
+              onUnmarkWeak={() => weakApi.remove(qid)}
+            />
+          </div>
+        )
+      })}
+      {(!importsOnly ? shown : (qById ? shown.filter((r) => !qById.has(r.id)) : [])).map((r) => (
         <div key={r.id} style={mRow}>
           <div style={{ minWidth: 0, flex: 1 }}>
             <div style={mMeta}>
@@ -1308,6 +1391,8 @@ const subArrow = { color: 'var(--text-3)', margin: '0 5px' }
 const addRow = { display: 'flex', alignItems: 'center', gap: 6, width: '100%' }
 const addInput = { flex: 1, minWidth: 0, padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
 const hintLabel = { fontWeight: 700, color: 'var(--text-3)' }
+const studyWrap = { marginBottom: 14 }
+const studyStrip = { display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap', padding: '0 4px 6px' }
 const importBar = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', padding: '12px 14px', marginBottom: 12, borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)' }
 const importTitle = { fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }
 const importSub = { fontSize: '0.8rem', color: 'var(--text-3)', marginTop: 2 }
