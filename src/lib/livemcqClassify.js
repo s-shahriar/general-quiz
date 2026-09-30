@@ -46,17 +46,38 @@
 // `buildClassifier(rows, overrides)` accepts any of these by name. The app never
 // passes overrides; scripts/eval-livemcq-classifier.mjs does, to re-run the
 // grid search whenever the corpus has grown.
+//
+// Re-tuned 2026-09-30 (5-fold, 2202 LiveMCQ rows + 1663 cross-module):
+//
+//                    before (k 15, wE 0.55, wO 0.25, pa 0.3, stem 4)   after
+//   top-1            93.7%                                            94.6%
+//   macro            92.8%                                            93.7%
+//   Apply-all        89.4% @ 97.8%                                    88.5% @ 98.2%
+//   বাংলাদেশ         204/245                                          210/245
+//   আন্তর্জাতিক      201/224                                          205/224
+//
+// The largest single step was the Bengali stem (see STEM_LEN): stems of 3 AND 5
+// letters beat 4 alone, because 5 separates words that 4 merges (বাংলাদেশ /
+// বাংলা…) while 3 still joins short inflected roots. Then more neighbours, a
+// heavier explanation and option weight, and slightly stronger size damping.
+// Plateau: k 20, wE 0.7, priorAlpha 0.4–0.5 and wOptions 0.4–0.55 all score
+// 94.5–94.6%; wE past 0.7 falls off (0.85: 94.3–94.5, 1.0: 93.9–94.3).
+//
+// Tried and dropped, each measured alone: years as features with Bengali and
+// Latin digits unified (flat, 93.7), an invented-operator puzzle feature
+// ("8 Ω 5 = 3048" — fires on 3 rows, flat), and maths notation (93.6 at 0.6).
 export const DEFAULTS = Object.freeze({
   wQuestion: 1,
-  wExplanation: 0.55,
-  wOptions: 0.25,
-  k: 15,            // neighbours polled per suggestion
+  wExplanation: 0.7,
+  wOptions: 0.4,
+  k: 20,            // neighbours polled per suggestion
   simPower: 2,      // vote weight = sim^simPower; a close match outvotes a vague one
-  priorAlpha: 0.3,  // see `prior` below — damps large categories
+  priorAlpha: 0.4,  // see `prior` below — damps large categories
   minDf: 2,         // drop tokens seen in only one document
   minSim: 0.08,     // below this the nearest match is noise
   minConf: 0.34,    // below this the neighbours disagree too much
   wSymbol: 0,       // maths notation as features — see SYMBOL_RE
+  stemLen: [3, 5],  // Bengali leading-edge stem length(s); 0 turns stems off
 })
 
 // The sub-topic indexes (one per split category, built in livemcqKnowledge.js)
@@ -74,24 +95,32 @@ export const DEFAULTS = Object.freeze({
 //   minConf 0.25  answer at lower agreement. The extra answers are 'weak'
 //                 (shown, never bulk-applied), and a visible guess beside the
 //                 question beats a blank dropdown.
+//   stemLen 4     the category's [3, 5] does not carry over: within one
+//                 category it scored 85.2–85.3 against 4's 85.9.
+//   k 20, wE 0.55, wO 0.4   by grid, as for categories.
 //
-// Measured 5-fold over the live corpus (2202 LiveMCQ rows, Sept 2026), against
-// running the sub-topic indexes on DEFAULTS:
+// Measured 5-fold over the live corpus (870 labelled rows, 2026-09-30),
+// against running the sub-topic indexes on the old shared DEFAULTS:
 //
 //                     before    after
-//   all sub-topics    81.4%     84.6%
-//   গণিত              81.4%     84.6%   (জ্যামিতি ও ত্রিকোণমিতি 10/19 -> 13/19)
-//   English Grammar   65.2%     72.3%
+//   all sub-topics    81.4%     85.9%
+//   গণিত              81.4%     85.0%   (জ্যামিতি ও ত্রিকোণমিতি 10/19 -> 13/19)
+//   English Grammar   65.2%     76.3%
 //   বাংলা ব্যাকরণ     92.6%     93.1%
-//   Apply-all         67.7% @ 95.8%  ->  68.0% @ 96.5%
+//   Apply-all         67.7% @ 95.8%  ->  64.8% @ 97.0%
 //
-// Chosen mid-plateau: wSymbol 0.5–1, k 10–15 and minConf 0.2–0.25 all land
-// within 0.4pp. The category index keeps DEFAULTS (wSymbol 0): notation moved
-// category accuracy nowhere (93.7 -> 93.6 at 1.0) and down past that.
+// Plateau: wSymbol 0.5–1 and minConf 0.2–0.25 land within 0.4pp; k 15 trades
+// 0.7pp of accuracy for +4pp Apply-all coverage. Keeping question-shape words
+// ("choose the correct sentence") and a fill-in-blank feature were tried for
+// English Grammar and moved it 0.1–0.4pp — noise, so not kept.
 export const SUBTOPIC_DEFAULTS = Object.freeze({
   ...DEFAULTS,
-  wSymbol: 0.75,
+  wExplanation: 0.55,
+  wOptions: 0.4,
+  k: 20,
   priorAlpha: 0,
+  stemLen: 4,
+  wSymbol: 0.75,
   minConf: 0.25,
 })
 
@@ -151,7 +180,7 @@ const TRIG_SYMBOLS = new Set(['θ', 'sin', 'cos', 'tan', 'cot', 'sec', 'cosec'])
 // the blind prefix also merges compounds that a suffix list cannot see.
 const STEM_LEN = 4
 
-export function tokenize(text) {
+export function tokenize(text, stemLen = STEM_LEN) {
   const s = stripTags(text).normalize('NFC').toLowerCase()
   const out = []
   const m = s.match(TOKEN_RE)
@@ -159,7 +188,11 @@ export function tokenize(text) {
   for (const t of m) {
     if (STOP.has(t)) continue
     out.push(t)
-    if (BENGALI_RE.test(t) && t.length >= STEM_LEN + 1) out.push(t.slice(0, STEM_LEN) + '~')
+    if (!BENGALI_RE.test(t)) continue
+    // One stem length, or several: each emits its own feature ('শব্দ~', 'শব্দে~5').
+    for (const n of Array.isArray(stemLen) ? stemLen : [stemLen]) {
+      if (n > 0 && t.length >= n + 1) out.push(t.slice(0, n) + (n === STEM_LEN ? '~' : '~' + n))
+    }
   }
   return out
 }
@@ -178,7 +211,7 @@ function featureFreq(item, cfg) {
   const tf = new Map()
   const field = (text, prefix, weight) => {
     if (!text) return
-    for (const t of tokenize(text)) {
+    for (const t of tokenize(text, cfg.stemLen ?? STEM_LEN)) {
       const key = prefix + t
       const cur = tf.get(key)
       if (cur) cur.n++
@@ -218,17 +251,20 @@ function featureFreq(item, cfg) {
 }
 
 // Confidence tiers, cut where measured accuracy actually falls off. Against
-// the live corpus (5-fold CV, 2271 livemcq rows) this scored:
+// the live corpus (5-fold CV, 2202 livemcq rows, 2026-09-30 settings) the
+// category index scored:
 //
 //   confidence    n     correct
-//   85-100%     1608      99.6%   -> 'strong'
-//   60-85%       459      92.4%   -> 'likely'
-//   34-60%       194      61.9%   -> 'weak'   (never bulk-applied)
+//   85-100%     1475      99.5%   -> 'strong'
+//   60-85%       474      93.9%   -> 'likely'
+//   34-60%       242      70.7%   -> 'weak'   (never bulk-applied)
+//
+// and the sub-topic indexes strong 100.0% · likely 94.2% · weak 67.6%.
 //
 // Only 'strong' and 'likely' are eligible for Apply-all; 'weak' still shows,
 // because a visible bad guess next to the real question is easy to reject,
 // but it has to be accepted one at a time. At the 0.6 cut, Apply-all covers
-// 91.0% of a fresh batch at 98.0% precision.
+// 88.5% of a fresh batch at 98.2% precision.
 export const BULK_APPLY_MIN = 0.6
 
 export function tierOf(confidence) {

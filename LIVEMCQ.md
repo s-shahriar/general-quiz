@@ -420,11 +420,20 @@ call, no inference, nothing learned at runtime — the same machinery as a searc
 box. It never auto-assigns: it renders a chip that stays inert until clicked, so
 every category that reaches the DB is still an explicit human choice.
 
-Bengali is suffix-inflecting, so each token is indexed both whole and as a
-4-char leading stem (শব্দ / শব্দের collapse to one feature). Neighbours vote
-weighted by similarity², and the winner's vote share is shown as a confidence.
-The card also shows the **closest stored question** it matched, so a suggestion
-can be judged instead of trusted.
+Bengali is suffix-inflecting, so each token is indexed both whole and as
+3- and 5-char leading stems (শব্দ / শব্দের collapse to one feature). Neighbours
+vote weighted by similarity², and the winner's vote share is shown as a
+confidence. The card also shows the **closest stored question** it matched, so a
+suggestion can be judged instead of trusted.
+
+**Re-tuned 2026-09-30** (5-fold, 2202 rows; full notes above `DEFAULTS` in
+`livemcqClassify.js`): top-1 93.7% → **94.6%**, macro 92.8% → 93.7%, Apply-all
+89.4% @ 97.8% → 88.5% @ **98.2%**. Now `stemLen [3, 5]`, `k 20`, explanation
+weight 0.7, options 0.4, `priorAlpha 0.4`. Biggest movers: বাংলাদেশ বিষয়াবলি
+204 → 212/245, মানসিক দক্ষতা 81 → 85/105. Tried and dropped: years as features
+(Bengali/Latin digits unified), an invented-operator puzzle feature, maths
+notation — each flat for categories. The field-weight table below is the
+2026-08 state.
 
 ##### What a document is (the 2026-08 rework)
 The first version indexed the **question text alone** and scored 76.3% top-1.
@@ -750,8 +759,10 @@ sub-topic labels** (same slugs, `SUBTOPIC_SIBLINGS` in `livemcqTraining.js`,
 weight `SUBTOPIC_CROSS_WEIGHT = 0.25`; English `pin_point` / `final_exam` are exam
 sets and excluded). গণিত has no sibling module and trains on LiveMCQ rows alone.
 
-**Own tuning since 2026-09-30** — `SUBTOPIC_DEFAULTS` in `livemcqClassify.js`;
-the category index keeps `DEFAULTS`. Three changes, each measured:
+**Own tuning since 2026-09-30** — `SUBTOPIC_DEFAULTS` in `livemcqClassify.js`,
+separate from the category index's `DEFAULTS`. Measured changes (plus, by grid,
+`k 20`, explanation 0.55, options 0.4, and stems of 4 — the category's `[3, 5]`
+scored lower here):
 
 - **Maths notation as features** (`wSymbol 0.75`, `SYMBOL_RE`): θ, √, π, °, ∠, %
   and trig/log function names become tokens instead of being dropped with the
@@ -769,14 +780,17 @@ Measured 2026-09-30 (5-fold, 870 labelled live rows, `scripts/eval-livemcq-class
 
 | category | n | top-1 before → after | Apply-all (≥60%) after |
 |---|---|---|---|
-| বাংলা ব্যাকরণ | 364 | 92.6% → 93.1% | 86.0% of a batch @ 98.7% |
-| English Grammar | 253 | 65.2% → 72.3% | 41.1% @ 93.3% |
-| গণিত | 253 | 81.4% → 84.6% | 68.8% @ 94.8% (`geometry_trig` 10/19 → 13/19) |
-| **all** | 870 | **81.4% → 84.6%** | 67.9% @ 96.6% (was 67.7% @ 95.8%) |
+| বাংলা ব্যাকরণ | 364 | 92.6% → 93.1% | 83.5% of a batch @ 99.0% |
+| English Grammar | 253 | 65.2% → 76.3% | 37.9% @ 94.8% |
+| গণিত | 253 | 81.4% → 85.0% | 64.8% @ 94.5% (`geometry_trig` 10/19 → 13/19) |
+| **all** | 870 | **81.4% → 85.9%** | 64.8% @ 97.0% (was 67.7% @ 95.8%) |
 
-Chosen mid-plateau: wSymbol 0.5–1, k 10–15 and minConf 0.2–0.25 all land within
-0.4pp. The notation feature is **not** used for categories — it moved category
-accuracy nowhere (93.7% → 93.6%) and down past weight 1.
+Tiers: strong 100.0%, likely 94.2%, weak 67.6%. Plateau: wSymbol 0.5–1 and
+minConf 0.2–0.25 within 0.4pp; `k 15` trades 0.7pp of accuracy for ~4pp more
+Apply-all coverage. The notation feature is **not** used for categories — it
+moved category accuracy nowhere. Keeping question-shape words ("choose the
+correct sentence") and a fill-in-blank feature were tried for English Grammar
+and moved it 0.1–0.4pp — noise, not kept.
 
 Still weak, for real reasons: English sub-topics with 1–6 examples (Voice, Tag
 Question, Determiner, Subject-Verb) and `error_correct` / `preposition` /
