@@ -402,7 +402,15 @@ freely across syncs. **Sub-topics (§8.C)** apply to both paths.
    the folder icon / category chip to move it (`admin_livemcq_set_category`), or
    the tag chip to set/clear its sub-topic (`admin_livemcq_set_subtopic`). With a
    category selected, a second filter narrows the list by sub-topic (or *No
-   sub-topic*, to find unlabelled rows).
+   sub-topic*, to find unlabelled rows). The list is **newest first by when a
+   row was added** (`created_at`, then `favorite_id` within one insert) — not by
+   `favorite_id` alone, which kept the hand-added `999000xxx` rows on top forever.
+8. **Check a fresh batch** in the **Last import** tab — the same list and the
+   same row actions, narrowed to one import: the newest by default, any earlier
+   one from the picker. Its category filter lists only the categories that
+   import touched, with counts. Rows inserted within 10 minutes of each other
+   count as one import (`groupImports` in `livemcqAdmin.js`), so a file inserted
+   in several passes still shows as one.
 
 #### 8.A.1 Category suggestions (still no AI)
 The panel suggests a category, but nothing about it is a model: it is a plain
@@ -742,22 +750,40 @@ sub-topic labels** (same slugs, `SUBTOPIC_SIBLINGS` in `livemcqTraining.js`,
 weight `SUBTOPIC_CROSS_WEIGHT = 0.25`; English `pin_point` / `final_exam` are exam
 sets and excluded). গণিত has no sibling module and trains on LiveMCQ rows alone.
 
-Measured 2026-09-14 (5-fold, 780 labelled live rows, `scripts/eval-livemcq-classifier.mjs`):
+**Own tuning since 2026-09-30** — `SUBTOPIC_DEFAULTS` in `livemcqClassify.js`;
+the category index keeps `DEFAULTS`. Three changes, each measured:
 
-| category | n | top-1 | Apply-all (≥60%) |
+- **Maths notation as features** (`wSymbol 0.75`, `SYMBOL_RE`): θ, √, π, °, ∠, %
+  and trig/log function names become tokens instead of being dropped with the
+  punctuation, and every trig symbol also counts toward one shared `#trig`
+  feature (only 5 of 253 গণিত rows are trig). The prompting case: *"If 1 + tanθ =
+  √2, then cotθ − 1 = ?"*, whose worked explanation is mostly surd
+  rationalising, was suggested as বীজগণিত (algebra) at 65% "likely" — Apply-all
+  territory. Held out, it now comes back জ্যামিতি ও ত্রিকোণমিতি (weak).
+- **No size damping** (`priorAlpha 0`): inside one category the big sub-topics
+  are big because they are common; damping only pushed guesses into rare ones.
+- **Answers at lower agreement** (`minConf 0.25`): the extra answers are
+  "weak" — shown, never bulk-applied.
+
+Measured 2026-09-30 (5-fold, 870 labelled live rows, `scripts/eval-livemcq-classifier.mjs`):
+
+| category | n | top-1 before → after | Apply-all (≥60%) after |
 |---|---|---|---|
-| বাংলা ব্যাকরণ | 332 | 90.7% | 84.0% of a batch @ 98.6% |
-| English Grammar | 211 | 69.7% | 38.9% @ 95.1% |
-| গণিত | 237 | 79.7% | 67.5% @ 90.6% |
-| **all** | 780 | **81.7%** | 66.8% @ 95.6% |
+| বাংলা ব্যাকরণ | 364 | 92.6% → 93.1% | 86.0% of a batch @ 98.7% |
+| English Grammar | 253 | 65.2% → 72.3% | 41.1% @ 93.3% |
+| গণিত | 253 | 81.4% → 84.6% | 68.8% @ 94.8% (`geometry_trig` 10/19 → 13/19) |
+| **all** | 870 | **81.4% → 84.6%** | 67.9% @ 96.6% (was 67.7% @ 95.8%) |
 
-Tiers overall: strong 254 @ 99.2%, likely 267 @ 92.1%, weak 208 @ 66.8%.
-English is the weak one for a real reason: several sub-topics hold 1–4 examples
-(Voice, Tag Question, Determiner) and `error_correct` / `preposition` /
-`parts_of_speech` share vocabulary. In গণিত, `geometry_trig` (9/19) reads like
-`mensuration`. Both improve as questions get labelled. Grid (k × explanation
-weight × priorAlpha × cross weight) best was 82.2% — noise, with lower macro
-accuracy — so defaults are shared with the category index.
+Chosen mid-plateau: wSymbol 0.5–1, k 10–15 and minConf 0.2–0.25 all land within
+0.4pp. The notation feature is **not** used for categories — it moved category
+accuracy nowhere (93.7% → 93.6%) and down past weight 1.
+
+Still weak, for real reasons: English sub-topics with 1–6 examples (Voice, Tag
+Question, Determiner, Subject-Verb) and `error_correct` / `preposition` /
+`parts_of_speech` sharing vocabulary; in গণিত, circle and triangle problems that
+could fairly be `geometry_trig` or `mensuration`. Every sub-topic you set or
+correct in the Admin panel is a training label, so both keep improving as
+questions get labelled.
 
 #### Study view (LiveMCQ)
 On a LiveMCQ topic's **Study** page, a category with a sub-topic list gets a
@@ -878,7 +904,7 @@ adb -s <device> shell su -c 'cat /data/data/com.termux/files/usr/bin/livefav' \
 |---|---|
 | **Supabase `questions` table** (`module='livemcq'`) | **the live source of truth** (§0) — what the app renders |
 | `src/data/contentLoader.js` | loads questions **from the DB** per module (lazy, paginated `.range()`) — the current loader |
-| **`src/components/admin/AdminScreen.jsx`** | the in-app LiveMCQ Admin panel (Import & classify · Manage & delete) — §8 |
+| **`src/components/admin/AdminScreen.jsx`** | the in-app LiveMCQ Admin panel (Import & classify · Last import · Manage & delete) — §8 |
 | **`src/lib/livemcqAdmin.js`** | deterministic helpers: normalize livefav JSON, `toInsertRow`, dedup, RPC wrappers, `OWNER_UID` |
 | **`src/lib/livemcqClassify.js`** | no-AI category suggester: tf-idf + kNN over question + explanation + options of already-classified questions (§8.A.1) |
 | **`src/lib/livemcqTraining.js`** | what the suggester may learn from: the map that relabels other modules' rows into LiveMCQ categories, and the rule that its output can never leave that set (§8.A.1) |

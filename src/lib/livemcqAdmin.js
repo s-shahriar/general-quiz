@@ -135,7 +135,7 @@ export async function fetchLivemcqRows() {
   for (let from = 0; ; from += pageSize) {
     const { data, error } = await supabase
       .from('questions')
-      .select('id,question,correct_answer,correct_answer_text,extra,sort_order,deleted_at,categories!inner(slug,name,module)')
+      .select('id,question,correct_answer,correct_answer_text,extra,sort_order,deleted_at,created_at,categories!inner(slug,name,module)')
       .eq('categories.module', 'livemcq')
       // Paginate on the UNIQUE id: `sort_order` is per-category and non-unique,
       // so ranging over it would skip/duplicate rows across page boundaries.
@@ -152,6 +152,7 @@ export async function fetchLivemcqRows() {
         correct_answer_text: r.correct_answer_text,
         sort_order: r.sort_order,
         deleted: r.deleted_at != null,
+        createdAt: r.created_at,
         slug: r.categories.slug,
         catName: r.categories.name,
         subtopic: r.extra?.subtopic ?? null,
@@ -159,17 +160,57 @@ export async function fetchLivemcqRows() {
     }
     if (data.length < pageSize) break
   }
-  // Newest first — see [[ordering-latest-first]]. `sort_order` can't be used
-  // here: it is a per-category rank, so 0 means "oldest in ITS category", not
-  // "oldest overall". favorite_id is the only globally comparable recency key,
-  // and it is exactly what sort_order is derived from. Rows without one (there
-  // should be none) sink to the bottom rather than jumping to the top.
-  rows.sort((a, b) => {
-    const fa = a.favorite_id == null ? -1 : Number(a.favorite_id)
-    const fb = b.favorite_id == null ? -1 : Number(b.favorite_id)
-    return fb - fa
-  })
+  rows.sort(newestFirst)
   return rows
+}
+
+// Newest first — see [[ordering-latest-first]] — by when the row was ADDED,
+// with favorite_id breaking ties inside one insert.
+//
+// favorite_id alone used to be the key, and it is wrong for hand-added rows:
+// those carry made-up ids in the 999000xxx range, so every one of them sorted
+// above every real import forever. A real batch inserted today landed on
+// page 3, under a week-old manual one. created_at is set by the insert itself
+// and is comparable across both kinds. Within one insert every row shares one
+// created_at (the transaction's now()), and favorite_id then orders them the
+// way LiveMCQ did. `sort_order` is still no use here: it is a per-category rank.
+function favNum(r) {
+  return r.favorite_id == null ? -1 : Number(r.favorite_id)
+}
+export function newestFirst(a, b) {
+  const ta = a.createdAt ? Date.parse(a.createdAt) : 0
+  const tb = b.createdAt ? Date.parse(b.createdAt) : 0
+  return tb - ta || favNum(b) - favNum(a)
+}
+
+// Rows inserted within this long of each other count as one import. A single
+// upload is often several calls — ticking a few, inserting, then the rest —
+// and on 27 Sep one import landed as two calls a second apart. Distinct imports
+// are hours or days apart, so the exact value barely matters.
+export const IMPORT_GAP_MS = 10 * 60 * 1000
+
+/**
+ * Group rows into imports, newest first.
+ * @param {Array<{id: string, createdAt: string}>} rows  as returned by fetchLivemcqRows
+ * @returns {Array<{ key: string, at: string, until: string, ids: Set<string>, count: number }>}
+ *   `key` is the import's first insert time; `ids` holds the rows' ids.
+ */
+export function groupImports(rows) {
+  const dated = rows.filter((r) => r.createdAt)
+    .sort((a, b) => Date.parse(a.createdAt) - Date.parse(b.createdAt))
+  const out = []
+  let cur = null
+  for (const r of dated) {
+    const t = Date.parse(r.createdAt)
+    if (!cur || t - Date.parse(cur.until) > IMPORT_GAP_MS) {
+      cur = { key: r.createdAt, at: r.createdAt, until: r.createdAt, ids: new Set(), count: 0 }
+      out.push(cur)
+    }
+    cur.until = r.createdAt
+    cur.ids.add(r.id)
+    cur.count++
+  }
+  return out.reverse()
 }
 
 export async function insertRows(rows) {

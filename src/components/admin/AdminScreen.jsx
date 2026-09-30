@@ -12,7 +12,7 @@ import { invalidateModule } from '../../data/contentLoader.js'
 import {
   CATEGORY_OPTIONS, LETTERS, isOwner,
   extractRawItems, normalizeItem, toInsertRow,
-  fetchExistingFavoriteIds, fetchLivemcqRows,
+  fetchExistingFavoriteIds, fetchLivemcqRows, groupImports,
   insertRows, deleteFavoriteIds, setCategoryForFavoriteIds,
   setSubtopicForFavoriteIds, addSubtopic,
 } from '../../lib/livemcqAdmin.js'
@@ -31,7 +31,7 @@ export default function AdminScreen() {
   // throw away a loaded file along with every tick and category choice on it.
   // `visited` keeps a panel out of the tree until it is first opened, so
   // Manage still doesn't fetch its 2205 rows unless you actually go there.
-  const [visited, setVisited] = useState({ import: true, manage: false })
+  const [visited, setVisited] = useState({ import: true, recent: false, manage: false })
   // Bumped when Import writes rows, so a mounted-but-hidden Manage refetches
   // instead of showing a list that predates the insert.
   const [dataVersion, setDataVersion] = useState(0)
@@ -55,11 +55,17 @@ export default function AdminScreen() {
       </div>
       <div style={tabsRow}>
         <button style={tabBtn(tab === 'import')} onClick={() => go('import')}>Import &amp; classify</button>
+        <button style={tabBtn(tab === 'recent')} onClick={() => go('recent')}>Last import</button>
         <button style={tabBtn(tab === 'manage')} onClick={() => go('manage')}>Manage &amp; delete</button>
       </div>
       {visited.import && (
         <div style={{ display: tab === 'import' ? 'block' : 'none' }}>
           <ImportPanel onInserted={() => setDataVersion((v) => v + 1)} />
+        </div>
+      )}
+      {visited.recent && (
+        <div style={{ display: tab === 'recent' ? 'block' : 'none' }}>
+          <ManagePanel dataVersion={dataVersion} importsOnly />
         </div>
       )}
       {visited.manage && (
@@ -789,7 +795,17 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
 // ── Manage / delete ────────────────────────────────────────────
 const PAGE_SIZE = 50
 
-function ManagePanel({ dataVersion }) {
+// "30 Sep, 12:09" in the viewer's own time zone.
+const importWhen = (iso) => new Date(iso).toLocaleString('en-GB', {
+  day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+})
+
+// The same list, two ways in. Manage shows every row, newest first. Last
+// import (`importsOnly`) narrows it to one import — the newest by default, any
+// earlier one from the picker — so a fresh batch can be checked and fixed
+// (a wrong category, a sub-topic the suggester missed) without paging past
+// everything else. Every row action works the same in both.
+function ManagePanel({ dataVersion, importsOnly = false }) {
   const [rows, setRows] = useState(null)
   const [error, setError] = useState('')
   const [q, setQ] = useState('')
@@ -803,6 +819,7 @@ function ManagePanel({ dataVersion }) {
   const [subFilter, setSubFilter] = useState('')  // '' all · NO_SUB · a sub-topic slug
   const [subMoving, setSubMoving] = useState(null)
   const [subBusy, setSubBusy] = useState(false)
+  const [batch, setBatch] = useState('')          // import key; '' = the newest
   const lists = useSubtopicLists()
 
   // Refetches when Import inserts rows. Existing rows stay on screen while the
@@ -815,23 +832,38 @@ function ManagePanel({ dataVersion }) {
     return () => { cancelled = true }
   }, [dataVersion])
 
+  const imports = useMemo(() => (importsOnly && rows ? groupImports(rows) : []), [importsOnly, rows])
+  // Falls back to the newest when the picked import is gone (all its rows
+  // deleted) or when a new insert lands and nothing was picked.
+  const activeImport = importsOnly ? (imports.find((b) => b.key === batch) || imports[0] || null) : null
+
+  // Categories present in this import, with how many of its rows each holds.
+  const importCats = useMemo(() => {
+    if (!activeImport) return null
+    const n = {}
+    for (const r of rows) if (activeImport.ids.has(r.id)) n[r.slug] = (n[r.slug] || 0) + 1
+    return CATEGORY_OPTIONS.filter((c) => n[c.slug]).map((c) => ({ slug: c.slug, name: `${c.name} (${n[c.slug]})` }))
+  }, [activeImport, rows])
+
   const filtered = useMemo(() => {
     if (!rows) return []
     const needle = q.trim().toLowerCase()
     return rows.filter((r) => {
+      if (activeImport && !activeImport.ids.has(r.id)) return false
       if (cat && r.slug !== cat) return false
       if (cat && subFilter && (subFilter === NO_SUB ? r.subtopic : r.subtopic !== subFilter)) return false
       if (!needle) return true
       return (r.favorite_id && r.favorite_id.includes(needle)) ||
         stripTags(r.question).toLowerCase().includes(needle)
     })
-  }, [rows, q, cat, subFilter])
+  }, [rows, q, cat, subFilter, activeImport])
 
   // Any change to the query/filter jumps back to the first page (reset in the
   // handlers rather than an effect to avoid a cascading render).
   const setQuery = (v) => { setQ(v); setPage(0) }
   const setCategory = (v) => { setCat(v); setSubFilter(''); setPage(0) }
   const setSub = (v) => { setSubFilter(v); setPage(0) }
+  const pickImport = (v) => { setBatch(v); setCat(''); setSubFilter(''); setPage(0) }
 
   async function doDelete() {
     const row = confirm
@@ -902,6 +934,7 @@ function ManagePanel({ dataVersion }) {
 
   if (error) return <p style={errorBox}>{error}</p>
   if (!rows) return <p style={muted}><Loader2 size={14} style={spin} /> Loading rows…</p>
+  if (importsOnly && !activeImport) return <p style={muted}>No imports yet.</p>
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const curPage = Math.min(page, pageCount - 1)   // clamp (e.g. after deletes shrink the set)
@@ -910,12 +943,41 @@ function ManagePanel({ dataVersion }) {
 
   return (
     <div>
+      {activeImport && (
+        <div style={importBar}>
+          <div style={{ minWidth: 0 }}>
+            <div style={importTitle}>
+              {activeImport === imports[0] ? 'Last import' : 'Import'} · {importWhen(activeImport.at)}
+            </div>
+            <div style={importSub}>
+              {activeImport.count} question{activeImport.count === 1 ? '' : 's'} across {importCats.length} categor{importCats.length === 1 ? 'y' : 'ies'}
+            </div>
+          </div>
+          {imports.length > 1 && (
+            <StyledSelect
+              value={activeImport.key}
+              onChange={pickImport}
+              empty={false}
+              options={imports.slice(0, 30).map((b, i) => ({
+                slug: b.key,
+                name: `${i === 0 ? 'Latest · ' : ''}${importWhen(b.at)} · ${b.count}`,
+              }))}
+            />
+          )}
+        </div>
+      )}
       <div style={searchRow}>
         <div style={{ position: 'relative', flex: 1 }}>
           <Search size={15} style={{ position: 'absolute', left: 10, top: 10, color: 'var(--text-3)' }} />
           <input value={q} onChange={(e) => setQuery(e.target.value)} placeholder="Search text or favorite_id…" style={searchInput} />
         </div>
-        <StyledSelect value={cat} onChange={setCategory} empty={false} includeAllLabel="All categories" />
+        <StyledSelect
+          value={cat}
+          onChange={setCategory}
+          empty={false}
+          includeAllLabel="All categories"
+          options={importCats || CATEGORY_OPTIONS}
+        />
         {cat && lists[cat]?.length > 0 && (
           <StyledSelect
             value={subFilter}
@@ -934,8 +996,8 @@ function ManagePanel({ dataVersion }) {
       )}
       <p style={muted}>
         {filtered.length
-          ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== rows.length ? ` (filtered from ${rows.length})` : ''}</>
-          : <>No matches of {rows.length}</>}
+          ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== (activeImport ? activeImport.count : rows.length) ? ` (filtered from ${activeImport ? activeImport.count : rows.length})` : ''} · newest first</>
+          : <>No matches of {activeImport ? activeImport.count : rows.length}</>}
       </p>
       {shown.map((r) => (
         <div key={r.id} style={mRow}>
@@ -1246,6 +1308,9 @@ const subArrow = { color: 'var(--text-3)', margin: '0 5px' }
 const addRow = { display: 'flex', alignItems: 'center', gap: 6, width: '100%' }
 const addInput = { flex: 1, minWidth: 0, padding: '8px 11px', borderRadius: 9, border: '1px solid var(--border)', background: 'var(--card2)', color: 'var(--text)', fontSize: '0.85rem' }
 const hintLabel = { fontWeight: 700, color: 'var(--text-3)' }
+const importBar = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', padding: '12px 14px', marginBottom: 12, borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)' }
+const importTitle = { fontSize: '0.95rem', fontWeight: 700, color: 'var(--text)' }
+const importSub = { fontSize: '0.8rem', color: 'var(--text-3)', marginTop: 2 }
 const subChipBtn = (set) => ({
   display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: '0.7rem', fontWeight: 600, padding: '3px 8px', borderRadius: 20, cursor: 'pointer',
   border: `1px ${set ? 'solid' : 'dashed'} var(--border)`,
