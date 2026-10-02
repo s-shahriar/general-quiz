@@ -45,6 +45,9 @@ export default function StudyCard({
 
   const [shown, setShown]       = useState(false)
   const [selected, setSelected] = useState(null)
+  // A wrong pick opens the explanation straight away; a correct one keeps it
+  // collapsed behind a button, so it's there only if you want it.
+  const [expOpen, setExpOpen]   = useState(false)
   // Questions may have 4 OR 5 options (LiveMCQ uses up to `e`); keep canonical order.
   const opts = ['a','b','c','d','e'].filter(k => q.options?.[k])
 
@@ -52,6 +55,7 @@ export default function StudyCard({
     if (shown) return
     setSelected(key)
     setShown(true)
+    setExpOpen(key !== q.correct_answer)
   }
 
   return (
@@ -136,7 +140,14 @@ export default function StudyCard({
         })}
       </div>
 
-      {shown && q.explanation && (
+      {shown && q.explanation && selected === q.correct_answer && (
+        <button className="study-toggle explanation-reveal" onClick={() => setExpOpen(o => !o)} style={{ color }}>
+          <Lightbulb size={12} />
+          {expOpen ? 'Hide explanation' : 'Show explanation'}
+        </button>
+      )}
+
+      {shown && expOpen && q.explanation && (
         <div className="explanation-box anim-slide" style={{ '--c': color }} data-hl-root={qid || undefined}>
           <div className="explanation-header">
             <Lightbulb size={14} style={{ color, flexShrink: 0 }} />
