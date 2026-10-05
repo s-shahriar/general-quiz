@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import TopbarActions from '../shared/TopbarActions.jsx'
 import { useNavigate } from 'react-router-dom'
 import {
-  Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, Loader2,
+  Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, 
   ChevronDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight,
   Wand2, FolderInput, X, CircleAlert, Tag, Plus, History, ListChecks,
 } from 'lucide-react'
@@ -22,6 +22,7 @@ import {
 import { BULK_APPLY_MIN } from '../../lib/livemcqClassify.js'
 import { getClassifier, clearKnowledgeCache } from '../../lib/livemcqKnowledge.js'
 import { fetchSubtopics, useSubtopicLists, subtopicName } from '../../lib/subtopics.js'
+import Loader from '../shared/Loader.jsx'
 
 const stripTags = (s) => (s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
 const catName = (slug) => CATEGORY_OPTIONS.find((c) => c.slug === slug)?.name || slug
@@ -44,7 +45,7 @@ export default function AdminScreen() {
     setVisited((v) => (v[next] ? v : { ...v, [next]: true }))
   }
 
-  if (loading) return <Shell><p style={muted}>Loading…</p></Shell>
+  if (loading) return <Shell><p style={muted}><Loader inline label="Loading…" /></p></Shell>
   if (!configured) return <Shell><Gate icon={<ShieldAlert size={28} />} title="Cloud not configured" sub="Supabase env is missing." onBack={() => navigate('/')} /></Shell>
   if (!user) return <Shell><Gate icon={<ShieldAlert size={28} />} title="Sign in required" sub="Sign in with the owner account to manage LiveMCQ content." onBack={() => navigate('/')} /></Shell>
   if (!isOwner(user)) return <Shell><Gate icon={<ShieldAlert size={28} />} title="Not authorized" sub="This area is restricted to the owner account." onBack={() => navigate('/')} /></Shell>
@@ -375,7 +376,7 @@ function ImportPanel({ onInserted }) {
         </span>
       </div>
 
-      {busy && !items.length && <p style={muted}><Loader2 size={14} style={spin} /> Reading…</p>}
+      {busy && !items.length && <p style={muted}><Loader inline size={14} /> Reading…</p>}
       {error && <p style={errorBox}><CircleAlert size={15} style={{ flexShrink: 0 }} /> {error}</p>}
       {result && (
         <p style={okBox}>
@@ -483,7 +484,7 @@ function ImportPanel({ onInserted }) {
               disabled={!picked.length || busy}
               onClick={() => insertSubset(canPartial ? pickedReady : picked)}
             >
-              {busy ? <Loader2 size={15} style={spin} /> : <Check size={15} />}
+              {busy ? <Loader inline size={15} /> : <Check size={15} />}
               {canPartial ? ` Insert ${pickedReady.length} ready` : ` Insert ${picked.length}`}
             </button>
           </div>
@@ -727,7 +728,7 @@ function SubtopicPicker({ categorySlug, list, value, onChange, required, invalid
             style={addInput}
           />
           <button style={ghostBtn} onClick={create} disabled={busy || !name.trim()}>
-            {busy ? <Loader2 size={14} style={spin} /> : <Plus size={14} />} Add
+            {busy ? <Loader inline size={14} /> : <Plus size={14} />} Add
           </button>
           <button style={ghostBtn} onClick={() => { setAdding(false); setErr('') }} disabled={busy} aria-label="Cancel">
             <X size={14} />
@@ -797,7 +798,7 @@ function SubtopicModal({ row, list, busy, onCancel, onConfirm }) {
         <div style={modalActions}>
           <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
           <button style={modalMoveBtn(changed && !busy)} onClick={() => onConfirm(chosen)} disabled={!changed || busy}>
-            {busy ? <Loader2 size={15} style={spin} /> : <Check size={15} />} Save
+            {busy ? <Loader inline size={15} /> : <Check size={15} />} Save
           </button>
         </div>
       </div>
@@ -976,7 +977,7 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
   }
 
   if (error) return <p style={errorBox}>{error}</p>
-  if (!rows) return <p style={muted}><Loader2 size={14} style={spin} /> Loading rows…</p>
+  if (!rows) return <p style={muted}><Loader inline size={14} /> Loading rows…</p>
   if (importsOnly && !activeImport) return <p style={muted}>No imports yet.</p>
 
   // Study cards are tall; a shorter page keeps one import easy to read through.
@@ -1046,7 +1047,7 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
           : <>No matches of {activeImport ? activeImport.count : rows.length}</>}
         {importsOnly && filtered.length > 0 && ' · tap an option to reveal the answer'}
       </p>
-      {importsOnly && !qById && <p style={muted}><Loader2 size={14} style={spin} /> Loading questions…</p>}
+      {importsOnly && !qById && <p style={muted}><Loader inline size={14} /> Loading questions…</p>}
       {importsOnly && qById && shown.map((r, i) => {
         const hit = qById.get(r.id)
         if (!hit) return null
@@ -1204,7 +1205,7 @@ function MoveCategoryModal({ row, busy, onCancel, onConfirm }) {
         <div style={modalActions}>
           <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
           <button style={modalMoveBtn(changed && !busy)} onClick={() => onConfirm(slug)} disabled={!changed || busy}>
-            {busy ? <Loader2 size={15} style={spin} /> : <FolderInput size={15} />} Move
+            {busy ? <Loader inline size={15} /> : <FolderInput size={15} />} Move
           </button>
         </div>
       </div>
@@ -1236,7 +1237,7 @@ function ConfirmDeleteModal({ row, busy, onCancel, onConfirm }) {
         <div style={modalActions}>
           <button style={modalCancelBtn} onClick={onCancel} disabled={busy}>Cancel</button>
           <button style={modalDeleteBtn} onClick={onConfirm} disabled={busy}>
-            {busy ? <Loader2 size={15} style={spin} /> : <Trash2 size={15} />} Delete
+            {busy ? <Loader inline size={15} /> : <Trash2 size={15} />} Delete
           </button>
         </div>
       </div>
@@ -1395,7 +1396,6 @@ const moveBtn = { flexShrink: 0, width: 34, height: 34, display: 'inline-flex', 
 const modalIconInfo = { width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)', background: 'color-mix(in srgb, var(--accent) 14%, transparent)', marginBottom: 12 }
 const modalMoveBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: on ? 'var(--accent-2)' : 'var(--border)', color: on ? 'var(--on-accent)' : 'var(--text-3)', fontSize: '0.85rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed' })
 const noticeClose = { marginLeft: 'auto', display: 'inline-flex', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: 2 }
-const spin = { animation: 'spin 1s linear infinite' }
 const subRow = { display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }
 const addSubBtn = { display: 'inline-flex', alignItems: 'center', gap: 6, padding: '8px 12px', borderRadius: 9, border: '1px dashed var(--border)', background: 'transparent', color: 'var(--accent)', fontSize: '0.8rem', fontWeight: 600, lineHeight: 1.2, whiteSpace: 'nowrap', cursor: 'pointer' }
 const subArrow = { color: 'var(--text-3)', margin: '0 5px' }

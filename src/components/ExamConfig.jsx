@@ -8,6 +8,7 @@ import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMC
 import { useAllModulesReady } from '../data/contentLoader.js'
 import { uidOf } from '../lib/qid.js'
 import { shuffle, validQ } from '../lib/utils'
+import Loader from './shared/Loader.jsx'
 
 export default function ExamConfig() {
   const navigate = useNavigate()
@@ -142,7 +143,7 @@ export default function ExamConfig() {
 
         <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0 || !ready}>
           <Zap size={16} />
-          {ready ? `Start Exam — ${safeCount} Questions` : 'লোড হচ্ছে…'}
+          {ready ? `Start Exam — ${safeCount} Questions` : <Loader inline label="লোড হচ্ছে…" />}
         </button>
       </div>
     </div>

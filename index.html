@@ -22,9 +22,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+    <style>
+      /* Pre-React splash: the same open-book mark as <Loader />, CSS only. */
+      html { background: #F4F0E9; } [data-theme="dark"] { background: #161310; }
+      .gq-splash { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #F4F0E9; color: #A86F17; }
+      [data-theme="dark"] .gq-splash { background: #161310; color: #F0BA66; }
+      .gq-splash svg { overflow: visible; }
+      .gq-splash path { stroke: currentColor; stroke-dasharray: 1; stroke-dashoffset: 1; animation: gq-sp 1.6s ease-in-out infinite; }
+      .gq-splash .l { opacity: .6; animation-delay: .3s; } .gq-splash .m { animation-delay: .7s; }
+      @keyframes gq-sp { 0% { stroke-dashoffset: 1; } 30%, 78% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+      @media (prefers-reduced-motion: reduce) { .gq-splash path { animation: none; stroke-dashoffset: 0; } }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="gq-splash" role="status" aria-label="Loading"><svg width="56" height="56" viewBox="0 0 48 48" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path pathLength="1" d="M24 13C18.5 10.2 11.5 10 6 12.4V36.6C11.5 34.4 18.5 34.8 24 38C29.5 34.8 36.5 34.4 42 36.6V12.4C36.5 10 29.5 10.2 24 13Z"/><path pathLength="1" d="M24 13V38"/><path class="l" pathLength="1" d="M10.5 19C14 18 17.5 18.1 20.5 19.2"/><path class="l" pathLength="1" d="M10.5 24.2C14 23.2 17.5 23.3 20.5 24.4"/><path class="l" pathLength="1" d="M10.5 29.4C13.5 28.6 16.5 28.7 19 29.5"/><path class="m" pathLength="1" d="M31 12.4V25L34.5 22.2L38 25V11.6"/></svg></div></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

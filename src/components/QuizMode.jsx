@@ -22,6 +22,7 @@ import { useModuleReady } from '../data/contentLoader.js'
 import Highlightable from './shared/Highlightable.jsx'
 import { guardHighlightClick } from '../lib/textAnchor.js'
 import { useHighlights } from '../contexts/HighlightContext.jsx'
+import Loader from './shared/Loader.jsx'
 
 // `?set=important|weak|nailed` quizzes only the questions you've marked in this
 // topic (chosen on ModeSelect). No param = the whole topic, as before.
@@ -81,7 +82,7 @@ export default function QuizMode({
   const noteEditor = useNoteEditor(qid)
 
   if (!topic) return <Navigate to="/" replace />
-  if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
+  if (!ready) return <Loader full label="লোড হচ্ছে…" />
 
   const goBack   = () => onBackProp ? onBackProp() : navigate('/topic/' + topic.id)
   const goHome   = () => onHomeProp ? onHomeProp() : navigate(homePathForTopic(topic))

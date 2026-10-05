@@ -14,6 +14,7 @@ import { HandProvider } from './contexts/HandContext.jsx'
 import { HighlightProvider } from './contexts/HighlightContext.jsx'
 import HighlightBar from './components/shared/HighlightBar.jsx'
 import HighlightSaveBar from './components/shared/HighlightSaveBar.jsx'
+import Loader from './components/shared/Loader.jsx'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
 const ModeSelect       = lazy(() => import('./components/ModeSelect.jsx'))
@@ -114,7 +115,7 @@ function AppRoutes() {
         </div>
       )}
 
-      <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>Loading…</div>}>
+      <Suspense fallback={<Loader full label="Loading…" />}>
         <Routes>
           <Route path="/" element={<HomeScreen activeGroup="bangla" />} />
           <Route path="/bangla-grammer" element={<HomeScreen activeGroup="bangla" />} />

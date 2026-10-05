@@ -10,6 +10,7 @@ import { uidOf } from '../lib/qid.js'
 import GroupSearch from './GroupSearch.jsx'
 import ActionCardsRow from './shared/ActionCardsRow'
 import { useModuleReady } from '../data/contentLoader.js'
+import Loader from './shared/Loader.jsx'
 
 const GROUP_LABELS = { bangla: 'বাংলা ব্যাকরণ', english: 'English Grammar', sahitya: 'বাংলা সাহিত্য', gk: 'সাধারণ জ্ঞান', livemcq: 'LiveMCQ' }
 
@@ -87,9 +88,7 @@ export default function HomeScreen({ activeGroup = 'bangla' }) {
             {activeGroup === 'bangla' ? 'বাংলা ব্যাকরণ — টপিক বেছে নাও' : activeGroup === 'english' ? 'English Grammar — Choose a Topic' : activeGroup === 'sahitya' ? 'বাংলা সাহিত্য — টপিক বেছে নাও' : activeGroup === 'livemcq' ? 'LiveMCQ — বিষয় বেছে নাও' : 'সাধারণ জ্ঞান — টপিক বেছে নাও'}
           </p>
           {!ready ? (
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '2.5rem', color: 'var(--text-3)', fontSize: '0.85rem' }}>
-              লোড হচ্ছে…
-            </div>
+            <Loader label="লোড হচ্ছে…" />
           ) : (
             <main className="topics-grid">
               {allTopics.map(t => <TopicCard key={t.id} topic={t} onClick={() => navigate('/topic/' + t.id)} />)}

@@ -5,6 +5,7 @@ import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import HandToggle from '../shared/HandToggle.jsx'
 import { useWrittenDataReady, getWrittenDataCategories, getWrittenDataCards } from '../../data/written/dataTopicLoader.js'
 import './WrittenData.css'
+import Loader from '../shared/Loader.jsx'
 
 export default function WrittenData() {
   const navigate = useNavigate()
@@ -33,7 +34,7 @@ export default function WrittenData() {
 
         {ready
           ? <RefSection />
-          : <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>}
+          : <Loader full label="লোড হচ্ছে…" />}
       </div>
     </div>
   )

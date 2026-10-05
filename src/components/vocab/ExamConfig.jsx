@@ -8,6 +8,7 @@ import { useWeakContext } from '../../contexts/WeakContext.jsx'
 import { useModuleReady } from '../../data/contentLoader.js'
 import { uidOf } from '../../lib/qid.js'
 import { shuffle, validQ } from '../../lib/utils'
+import Loader from '../shared/Loader.jsx'
 
 export default function VocabExamConfig() {
   const navigate = useNavigate()
@@ -118,7 +119,7 @@ export default function VocabExamConfig() {
 
         <button className="exam-start-btn" onClick={handleStart} disabled={maxCount === 0 || !ready}>
           <Zap size={16} />
-          {ready ? `Start Exam — ${safeCount} Questions` : 'লোড হচ্ছে…'}
+          {ready ? `Start Exam — ${safeCount} Questions` : <Loader inline label="লোড হচ্ছে…" />}
         </button>
       </div>
     </div>

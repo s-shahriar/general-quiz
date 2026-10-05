@@ -9,6 +9,7 @@ import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { uidOf } from '../lib/qid.js'
+import Loader from './shared/Loader.jsx'
 
 export default function ModeSelect() {
   const { topicId } = useParams()
@@ -30,7 +31,7 @@ export default function ModeSelect() {
   const noMcq = isStudyNotes && ready && !qCount
   const meta = isStudyNotes
     ? `${groupCount} টপিক${qCount ? ` · ${qCount} MCQ` : ''}`
-    : ready ? `${qCount} questions available` : 'লোড হচ্ছে…'
+    : ready ? `${qCount} questions available` : <Loader inline label="লোড হচ্ছে…" />
 
   // Same pool QuizMode draws from, so the counts shown are what you'll get.
   const quizzable = topic.questions.filter(q => q.options && q.correct_answer)

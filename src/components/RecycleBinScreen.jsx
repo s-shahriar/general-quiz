@@ -7,6 +7,7 @@ import { fetchDeletedQuestions } from '../lib/trashSync.js'
 import { pendingBinIds } from '../lib/offlineQueue.js'
 import { useTrash } from '../contexts/TrashContext.jsx'
 import { useAuth } from '../contexts/AuthContext.jsx'
+import Loader from './shared/Loader.jsx'
 
 // Recycle Bin: everything soft-deleted, newest first. Restore puts a question
 // back into its module; Delete forever removes the row permanently (two-tap
@@ -61,7 +62,7 @@ export default function RecycleBinScreen() {
           <button className="recycle-restore-btn" onClick={() => signInWithGoogle()}>Continue with Google</button>
         </div>
       ) : items === null ? (
-        <div className="recycle-empty"><p>Loading…</p></div>
+        <div className="recycle-empty"><Loader label="Loading…" /></div>
       ) : items.length === 0 ? (
         <div className="recycle-empty">
           <Trash2 size={34} />

@@ -4363,8 +4363,6 @@ button {
   }
 }
 
-/* Admin panel loading spinner */
-@keyframes spin { to { transform: rotate(360deg); } }
 
 /* Screens whose page shell isn't the study/quiz one still get the same sticky
    control bar — pull it flush with the page's 28px top padding. */
@@ -4559,8 +4557,6 @@ button {
   flex-shrink: 0;
 }
 .hl-savebar-save:disabled { opacity: 0.65; }
-.hl-spin { animation: hlSpin 0.9s linear infinite; }
-@keyframes hlSpin { to { transform: rotate(360deg); } }
 
 /* Selection must stay enabled everywhere inside an answer or a highlightable
    question, including on touch devices where some resets disable it. Controls
@@ -4962,4 +4958,38 @@ button {
 @media (max-width: 360px) {
   .module-btn { gap: 0; padding: 9px 4px; font-size: 0.78rem; }
   .module-btn svg { display: none; }
+}
+
+/* ── Branded loader (components/shared/Loader.jsx) ─────────────────────────
+   Open book whose lines write themselves; tokens follow the theme. */
+.gq-loader {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; padding: 2.5rem 1rem; color: var(--accent);
+}
+.gq-loader-full { min-height: 60vh; padding: 0; }
+.gq-loader-inline { display: inline-flex; flex-direction: row; gap: 8px; padding: 0; vertical-align: middle; }
+.gq-loader-label { margin: 0; color: var(--text-3); font-size: 0.86rem; letter-spacing: .2px; }
+.gq-loader-inline .gq-loader-label { font-size: inherit; }
+.sr-only-gq { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.gq-loader-mark { display: block; flex: none; overflow: visible; }
+.gq-loader-mark path { stroke: currentColor; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.gq-loader-mark .gq-ld-cover { stroke: var(--accent); animation: gq-ld-cover 1.6s ease-in-out infinite; }
+.gq-loader-mark .gq-ld-spine { stroke: var(--accent); opacity: .55; animation: gq-ld-cover 1.6s ease-in-out infinite; }
+.gq-loader-mark .gq-ld-line { stroke: var(--text-3); }
+.gq-loader-mark .gq-ld-l1 { animation: gq-ld-line 1.6s ease-in-out infinite .22s; }
+.gq-loader-mark .gq-ld-l2 { animation: gq-ld-line 1.6s ease-in-out infinite .36s; }
+.gq-loader-mark .gq-ld-l3 { animation: gq-ld-line 1.6s ease-in-out infinite .5s; }
+.gq-loader-mark .gq-ld-l4 { animation: gq-ld-line 1.6s ease-in-out infinite .64s; }
+.gq-loader-mark .gq-ld-mark { stroke: var(--accent-soft); animation: gq-ld-line 1.6s ease-in-out infinite .8s; }
+/* draw → hold → erase */
+@keyframes gq-ld-cover { 0% { stroke-dashoffset: 1; } 30%, 78% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+@keyframes gq-ld-line { 0%, 6% { stroke-dashoffset: 1; } 34%, 78% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+
+.gq-loader-bar { position: relative; height: 3px; width: 100%; overflow: hidden; border-radius: 3px; background: var(--accent-light); }
+.gq-loader-bar span { position: absolute; inset: 0 auto 0 0; width: 38%; border-radius: 3px; background: var(--accent-soft); animation: gq-ld-bar 1.3s ease-in-out infinite; }
+@keyframes gq-ld-bar { 0% { transform: translateX(-100%); } 100% { transform: translateX(270%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .gq-loader-mark path { animation: none !important; stroke-dashoffset: 0; }
+  .gq-loader-bar span { animation: none; width: 100%; opacity: .55; }
 }

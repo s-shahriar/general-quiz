@@ -17,6 +17,7 @@ import { useTrash } from '../contexts/TrashContext.jsx'
 import useDebounce from '../hooks/useDebounce.js'
 import { useSubtopicLists } from '../lib/subtopics.js'
 import { useContentEditsVersion } from '../lib/questionEdits.js'
+import Loader from './shared/Loader.jsx'
 
 const PAGE_SIZE = 20
 const NO_SUB = '__none__'   // questions without a (known) sub-topic
@@ -177,7 +178,7 @@ export default function StudyMode({
   const goTopic = (t) => onChangeTopicProp ? onChangeTopicProp(t) : navigate('/topic/' + t.id + '/study')
 
   if (!topic) return <Navigate to="/" replace />
-  if (!ready) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '60vh', color: 'var(--text-3)', fontSize: '0.85rem' }}>লোড হচ্ছে…</div>
+  if (!ready) return <Loader full label="লোড হচ্ছে…" />
 
   return (
     <div className="study-page anim-fade">
