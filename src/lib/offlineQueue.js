@@ -1,6 +1,6 @@
 // Offline-tolerant write queue for nail / important / weak / delete, for the
-// Recycle Bin's restore / delete-forever, and for LiveMCQ topic moves and
-// sub-topic changes (questionEdits.js).
+// Recycle Bin's restore / delete-forever, for LiveMCQ topic moves and sub-topic
+// changes (questionEdits.js), and for text highlights (HighlightContext.jsx).
 //
 // Every one of those actions is optimistic in the UI and flows through here.
 // Flag writes are coalesced per question uid on a LAST-ACTION-WINS basis: if you
@@ -10,6 +10,10 @@
 // they share one entry per question and the latest decision replaces the earlier. A debounced
 // flusher drains the queue: flags go out as one bulk upsert, deletes as one RPC
 // each, and a failure in either group cannot block the other.
+//
+// A highlight is keyed by its own id (minted client-side, so a retried insert is
+// an idempotent upsert): hl-add / hl-del / hl-color share one entry per highlight
+// and the latest action wins — add then remove before the flush sends nothing.
 //
 // Failure handling is deliberately un-aggressive:
 //   • offline (navigator.onLine === false) → do NOT poll; wait for the `online`
@@ -33,6 +37,7 @@ import { bulkUpsert } from './progressSync.js'
 import { trashQuestion, restoreQuestion, purgeQuestion } from './trashSync.js'
 import { labelFor, textOf } from './questionLabels.js'
 import { setCategoryForFavoriteIds, setSubtopicForFavoriteIds } from './livemcqAdmin.js'
+import { upsertHighlight, deleteHighlights, recolorHighlights } from './highlightSync.js'
 
 const LS_KEY = (uid) => `gq_pq_${uid}`
 const DEBOUNCE_MS = 400
@@ -46,10 +51,15 @@ const RUN = {
   purge: (e) => purgeQuestion(e.id),
   move: (e) => setCategoryForFavoriteIds([e.meta.fid], e.meta.to),
   subtopic: (e) => setSubtopicForFavoriteIds([e.meta.fid], e.meta.to),
+  'hl-add': (e) => upsertHighlight(userId, e.meta.row),
+  'hl-del': (e) => deleteHighlights([e.id]),
+  'hl-color': (e) => recolorHighlights([[e.id, e.meta.to]]),
 }
 const trashKey = (id) => `trash:${id}`
 const moveKey = (id) => `move:${id}`
 const subKey = (id) => `sub:${id}`
+const hlKey = (id) => `hl:${id}`
+const HL_LABEL_LEN = 90
 
 // The loader module a question lives in: its _module where the loader sets one,
 // otherwise the uid's prefix, since uids are module-scoped.
@@ -295,6 +305,95 @@ export function enqueueMove(q, meta) {
 export function enqueueSubtopic(q, meta) {
   if (!q?._id) return
   enqueueEdit('subtopic', subKey(q._id), q, meta)
+}
+
+// Text highlights. `row` is { id, uid, block, start, end, quote, color } — the id is
+// the final database id, so there is no temporary id to swap later. A highlight
+// has one entry whatever happens to it while it waits:
+//   • removed before its add was sent → both vanish, nothing is written;
+//   • recoloured before its add was sent → the add just carries the new colour;
+//   • recoloured back to the colour the server has → the write is cancelled;
+//   • removed after a recolour → one delete (keeping the server's colour so an
+//     undo of the delete can restore it).
+// An entry already in flight is never cancelled, only superseded: the newer one
+// goes out on the next pass (see settle).
+function hlEntry(kind, row, extra = {}) {
+  const meta = labelFor(row.uid)
+  const quote = String(row.quote || '').replace(/\s+/g, ' ').trim()
+  return makeEntry({
+    key: hlKey(row.id), kind, id: row.id, uid: row.uid, module: moduleOf(null, row.uid),
+    label: quote.length > HL_LABEL_LEN ? `${quote.slice(0, HL_LABEL_LEN - 1)}…` : quote,
+    cat: meta?.cat || '',
+    meta: { row, to: row.color, ...extra },
+    at: Date.now(),
+  })
+}
+
+function dropHighlightEntry(key) {
+  pending.delete(key)
+  persist()
+  if (!pending.size && !inFlight) status = 'idle'
+  emit()
+}
+
+export function enqueueHighlightAdd(row) {
+  if (!userId || !row?.id) return
+  const key = hlKey(row.id)
+  const cur = pending.get(key)
+  // Re-adding (undo of a delete) a highlight whose delete has not been sent:
+  // the server row is still there, so cancel the delete — only a colour that
+  // differs from the server's needs writing.
+  if (cur?.kind === 'hl-del' && !cur.sending) {
+    const serverColor = cur.meta.from
+    if (serverColor && serverColor !== row.color) {
+      pending.delete(key)
+      pending.set(key, hlEntry('hl-color', row, { from: serverColor }))
+      return afterEnqueue()
+    }
+    return dropHighlightEntry(key)
+  }
+  pending.set(key, hlEntry('hl-add', row))
+  afterEnqueue()
+}
+
+export function enqueueHighlightRemove(row) {
+  if (!userId || !row?.id) return
+  const key = hlKey(row.id)
+  const cur = pending.get(key)
+  if (cur?.kind === 'hl-add' && !cur.sending) return dropHighlightEntry(key)
+  pending.set(key, hlEntry('hl-del', row, { from: cur?.kind === 'hl-color' ? cur.meta.from : row.color }))
+  afterEnqueue()
+}
+
+// `row` already carries the NEW colour; `from` is the colour it had.
+export function enqueueHighlightColor(row, from) {
+  if (!userId || !row?.id) return
+  const key = hlKey(row.id)
+  const cur = pending.get(key)
+  if (cur?.kind === 'hl-add') {
+    pending.set(key, { ...cur, meta: { ...cur.meta, row: { ...cur.meta.row, color: row.color }, to: row.color }, at: Date.now() })
+    return afterEnqueue()
+  }
+  if (cur?.kind === 'hl-color' && !cur.sending) {
+    if (cur.meta.from === row.color) return dropHighlightEntry(key)
+    pending.set(key, hlEntry('hl-color', row, { from: cur.meta.from }))
+    return afterEnqueue()
+  }
+  pending.set(key, hlEntry('hl-color', row, { from }))
+  afterEnqueue()
+}
+
+// Highlight changes that have not reached the server, oldest first, as
+// { kind: 'add' | 'del' | 'color', row } — the context replays them over the rows
+// it fetches, so a reload (or a slow fetch) never shows a stale picture.
+export function pendingHighlightOps() {
+  const ops = []
+  for (const e of pending.values()) {
+    if (e.kind === 'hl-add') ops.push({ kind: 'add', row: e.meta.row })
+    else if (e.kind === 'hl-del') ops.push({ kind: 'del', row: e.meta.row })
+    else if (e.kind === 'hl-color') ops.push({ kind: 'color', row: e.meta.row })
+  }
+  return ops
 }
 
 // Ids whose Recycle Bin action has not landed yet. The bin re-reads the server,

@@ -1,182 +1,161 @@
 import { createContext, useContext, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useAuth } from './AuthContext.jsx'
+import { fetchHighlights, DEFAULT_COLOR } from '../lib/highlightSync.js'
 import {
-  fetchHighlights, insertHighlights, deleteHighlights, recolorHighlights, DEFAULT_COLOR,
-} from '../lib/highlightSync.js'
+  enqueueHighlightAdd, enqueueHighlightRemove, enqueueHighlightColor, pendingHighlightOps,
+} from '../lib/offlineQueue.js'
 
-// PDF-style text highlights across the Written / Extra / Viva / Code answers.
+// PDF-style text highlights across the quiz, vocab and written-data content.
 //
-// EDITING IS LOCAL. Highlighting, removing and recolouring only change memory —
-// no request is made until you press Save. That keeps a reading session at zero
-// network traffic and makes the whole thing work with no connection.
+// EDITING SAVES ITSELF. Highlighting, removing and recolouring update the page at
+// once and go through the same offline write queue as nail / important flags
+// (lib/offlineQueue.js): coalesced, flushed in the background, retried when the
+// connection returns, kept across a reload, and listed in the sync drawer — where
+// each one can be undone. There is no Save button.
 //
-// Three pending sets describe the unsaved work:
-//   adds    — new highlights, temporary ids
-//   deletes — ids of saved rows to drop
-//   edits   — id → new colour, for saved rows
-// The rendered set is `saved − deletes + adds`, with `edits` applied on top.
+// Every highlight gets its final database id the moment it is made (a UUID), so
+// there are no temporary ids to swap and a retried insert is an idempotent upsert.
 //
-// Pending work is mirrored to localStorage per user, so closing the tab with
-// unsaved highlights does not lose them; they are still pending on return.
+// The rendered set is a single optimistic map (uid -> highlights). On load it is
+// the server's rows with the still-pending queue entries replayed over them.
 
 const HighlightContext = createContext(null)
 const EMPTY = []
-const LS_KEY = (userId) => `ict_hl_pending_${userId}`
+const NONE = new Map()
+// Older builds kept unsaved work here until Save was pressed; it is migrated once.
+const LEGACY_KEY = (userId) => `ict_hl_pending_${userId}`
 
-function loadPending(userId) {
-  try {
-    const raw = localStorage.getItem(LS_KEY(userId))
-    if (!raw) return null
-    const p = JSON.parse(raw)
-    return {
-      adds: Array.isArray(p.adds) ? p.adds : [],
-      deletes: new Set(Array.isArray(p.deletes) ? p.deletes : []),
-      edits: new Map(Array.isArray(p.edits) ? p.edits : []),
-    }
-  } catch { return null }
+function newId() {
+  const c = globalThis.crypto
+  if (c?.randomUUID) return c.randomUUID()
+  const b = c?.getRandomValues ? c.getRandomValues(new Uint8Array(16)) : Array.from({ length: 16 }, () => Math.floor(Math.random() * 256))
+  b[6] = (b[6] & 0x0f) | 0x40; b[8] = (b[8] & 0x3f) | 0x80
+  const h = [...b].map(x => x.toString(16).padStart(2, '0')).join('')
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`
 }
 
-function savePending(userId, adds, deletes, edits) {
-  try {
-    if (!adds.length && !deletes.size && !edits.size) localStorage.removeItem(LS_KEY(userId))
-    else localStorage.setItem(LS_KEY(userId), JSON.stringify({
-      adds, deletes: [...deletes], edits: [...edits],
-    }))
-  } catch { /* private mode / quota — pending work simply is not mirrored */ }
+function cloneMap(m) {
+  const n = new Map()
+  for (const [uid, list] of m) n.set(uid, list)
+  return n
+}
+
+const withRow = (m, row) => { m.set(row.uid, [...(m.get(row.uid) || []).filter(h => h.id !== row.id), row]); return m }
+const withoutRow = (m, row) => {
+  const kept = (m.get(row.uid) || []).filter(h => h.id !== row.id)
+  if (kept.length) m.set(row.uid, kept); else m.delete(row.uid)
+  return m
+}
+
+// Server rows with the queue's unsent highlight changes laid on top.
+function replayPending(map) {
+  const out = cloneMap(map)
+  for (const op of pendingHighlightOps()) {
+    if (op.kind === 'del') withoutRow(out, op.row)
+    else withRow(out, op.row)         // add, or the recoloured row
+  }
+  return out
+}
+
+// One-off: turn unsaved work an older build left in localStorage into queue entries.
+function migrateLegacy(userId, fetched) {
+  let raw
+  try { raw = localStorage.getItem(LEGACY_KEY(userId)) } catch { return fetched }
+  if (!raw) return fetched
+  let p
+  try { p = JSON.parse(raw) } catch { p = null }
+  try { localStorage.removeItem(LEGACY_KEY(userId)) } catch { /* ignore */ }
+  if (!p) return fetched
+  const out = cloneMap(fetched)
+  const byId = new Map([...out.values()].flat().map(h => [h.id, h]))
+  for (const id of Array.isArray(p.deletes) ? p.deletes : []) {
+    const row = byId.get(id)
+    if (row) { enqueueHighlightRemove(row); withoutRow(out, row) }
+  }
+  for (const [id, color] of Array.isArray(p.edits) ? p.edits : []) {
+    const row = byId.get(id)
+    if (row && row.color !== color) { enqueueHighlightColor({ ...row, color }, row.color); withRow(out, { ...row, color }) }
+  }
+  for (const a of Array.isArray(p.adds) ? p.adds : []) {
+    if (!a?.uid || !a.block) continue
+    const row = { id: newId(), uid: a.uid, block: a.block, start: a.start, end: a.end, quote: a.quote, color: a.color || DEFAULT_COLOR }
+    enqueueHighlightAdd(row); withRow(out, row)
+  }
+  return out
 }
 
 export function HighlightProvider({ children }) {
   const { user } = useAuth()
-  const [saved, setSaved] = useState(() => new Map())
-  const [adds, setAdds] = useState([])
-  const [deletes, setDeletes] = useState(() => new Set())
-  const [edits, setEdits] = useState(() => new Map())
+  const [loaded, setRows] = useState(() => new Map())
+  // Signed out means nothing to show, whatever a previous session left in state.
+  const rows = user ? loaded : NONE
+  const rowsRef = useRef(rows)
   const [color, setColor] = useState(DEFAULT_COLOR)
-  const [status, setStatus] = useState('idle')     // idle | saving | error
-  const [error, setError] = useState(null)
-  const seq = useRef(0)
 
-  // Load saved highlights + any pending work left from a previous visit.
+  const commit = useCallback((next) => { rowsRef.current = next; setRows(next) }, [])
+
+  // Load the user's saved highlights, then replay whatever the queue has not sent.
   useEffect(() => {
-    if (!user) { setSaved(new Map()); setAdds([]); setDeletes(new Set()); setEdits(new Map()); return }
-    const p = loadPending(user.id)
-    if (p) { setAdds(p.adds); setDeletes(p.deletes); setEdits(p.edits) }
+    if (!user) { rowsRef.current = NONE; return }
     let cancelled = false
     fetchHighlights()
-      .then(m => { if (!cancelled) setSaved(m) })
-      .catch(e => { if (!cancelled) setError(e.message) })
+      .then(m => { if (!cancelled) commit(replayPending(migrateLegacy(user.id, m))) })
+      .catch(() => {})
     return () => { cancelled = true }
-  }, [user])
+  }, [user, commit])
 
-  useEffect(() => { if (user) savePending(user.id, adds, deletes, edits) }, [user, adds, deletes, edits])
-
-  // Warn before losing unsaved highlights on a tab close / refresh.
-  const dirtyCount = adds.length + deletes.size + edits.size
-  useEffect(() => {
-    if (!dirtyCount) return
-    const onBeforeUnload = (e) => { e.preventDefault(); e.returnValue = '' }
-    window.addEventListener('beforeunload', onBeforeUnload)
-    return () => window.removeEventListener('beforeunload', onBeforeUnload)
-  }, [dirtyCount])
-
-  // What the renderer sees: saved rows minus pending deletes, with pending
-  // colour edits applied, plus pending adds.
-  const byUid = useMemo(() => {
-    const out = new Map()
-    for (const [uid, list] of saved) {
-      const kept = list
-        .filter(h => !deletes.has(h.id))
-        .map(h => edits.has(h.id) ? { ...h, color: edits.get(h.id) } : h)
-      if (kept.length) out.set(uid, kept)
-    }
-    for (const a of adds) {
-      if (!out.has(a.uid)) out.set(a.uid, [])
-      out.set(a.uid, [...out.get(a.uid), a])
-    }
-    return out
-  }, [saved, adds, deletes, edits])
-
-  const getFor = useCallback((uid) => byUid.get(uid) || EMPTY, [byUid])
+  const getFor = useCallback((uid) => rows.get(uid) || EMPTY, [rows])
 
   const add = useCallback((uid, anchors, c) => {
     if (!uid || !anchors?.length) return
     const chosen = c || color
-    setAdds(list => [...list, ...anchors.map(a => ({
-      ...a, uid, color: chosen, id: `tmp-${Date.now()}-${seq.current++}`,
-    }))])
-  }, [color])
+    const next = cloneMap(rowsRef.current)
+    for (const a of anchors) {
+      const row = { id: newId(), uid, block: a.block, start: a.start, end: a.end, quote: a.quote, color: chosen }
+      withRow(next, row)
+      enqueueHighlightAdd(row)
+    }
+    commit(next)
+  }, [color, commit])
 
   const remove = useCallback((uid, ids) => {
     if (!ids?.length) return
-    const gone = new Set(ids)
-    setAdds(list => list.filter(a => !gone.has(a.id)))        // pending ones just vanish
-    setDeletes(d => {
-      const n = new Set(d)
-      for (const id of ids) if (!String(id).startsWith('tmp-')) n.add(id)
-      return n
-    })
-    setEdits(e => {                                            // an edit on a deleted row is moot
-      if (!ids.some(id => e.has(id))) return e
-      const n = new Map(e); for (const id of ids) n.delete(id); return n
-    })
-  }, [])
+    const next = cloneMap(rowsRef.current)
+    for (const row of (next.get(uid) || []).filter(h => ids.includes(h.id))) {
+      withoutRow(next, row)
+      enqueueHighlightRemove(row)
+    }
+    commit(next)
+  }, [commit])
 
   const recolor = useCallback((uid, ids, c) => {
     if (!ids?.length || !c) return
-    const set = new Set(ids)
-    setAdds(list => list.map(a => set.has(a.id) ? { ...a, color: c } : a))
-    setEdits(e => {
-      const n = new Map(e)
-      for (const id of ids) if (!String(id).startsWith('tmp-')) n.set(id, c)
-      return n
-    })
-  }, [])
-
-  const save = useCallback(async () => {
-    if (!user || !dirtyCount || status === 'saving') return false
-    setStatus('saving'); setError(null)
-    try {
-      const inserted = await insertHighlights(user.id, adds)
-      await deleteHighlights([...deletes])
-      await recolorHighlights([...edits])
-      setSaved(prev => {
-        const next = new Map()
-        for (const [uid, list] of prev) {
-          const kept = list
-            .filter(h => !deletes.has(h.id))
-            .map(h => edits.has(h.id) ? { ...h, color: edits.get(h.id) } : h)
-          if (kept.length) next.set(uid, kept)
-        }
-        for (const h of inserted) next.set(h.uid, [...(next.get(h.uid) || []), h])
-        return next
-      })
-      setAdds([]); setDeletes(new Set()); setEdits(new Map())
-      setStatus('idle')
-      return true
-    } catch (e) {
-      setError(e.message); setStatus('error')
-      return false                       // pending work is kept so Save can be retried
+    const next = cloneMap(rowsRef.current)
+    for (const row of (next.get(uid) || []).filter(h => ids.includes(h.id) && h.color !== c)) {
+      withRow(next, { ...row, color: c })
+      enqueueHighlightColor({ ...row, color: c }, row.color)
     }
-  }, [user, adds, deletes, edits, dirtyCount, status])
+    commit(next)
+  }, [commit])
 
-  const discard = useCallback(() => {
-    setAdds([]); setDeletes(new Set()); setEdits(new Map()); setError(null); setStatus('idle')
-  }, [])
+  // Put a removed highlight back under its own id (the sync drawer's Undo).
+  const restore = useCallback((row) => {
+    if (!row?.id) return
+    commit(withRow(cloneMap(rowsRef.current), row))
+    enqueueHighlightAdd(row)
+  }, [commit])
 
-  const value = {
-    getFor, add, remove, recolor, save, discard,
+  const value = useMemo(() => ({
+    getFor, add, remove, recolor, restore,
     color, setColor,
-    dirtyCount, status, error,
     canHighlight: Boolean(user),
-  }
+  }), [getFor, add, remove, recolor, restore, color, user])
   return <HighlightContext.Provider value={value}>{children}</HighlightContext.Provider>
 }
 
 export function useHighlights() {
   return useContext(HighlightContext) || {
-    getFor: () => EMPTY, add: () => {}, remove: () => {}, recolor: () => {},
-    save: async () => false, discard: () => {},
-    color: DEFAULT_COLOR, setColor: () => {},
-    dirtyCount: 0, status: 'idle', error: null, canHighlight: false,
+    getFor: () => EMPTY, add: () => {}, remove: () => {}, recolor: () => {}, restore: () => {},
+    color: DEFAULT_COLOR, setColor: () => {}, canHighlight: false,
   }
 }

@@ -2,8 +2,9 @@
 // question `uid` (uidOfText, see lib/qid.js) plus a block key inside that
 // item. RLS-scoped to the user, same as user_progress.
 //
-// Nothing here is called as you highlight — the context batches every change
-// and only flushes on an explicit Save. See contexts/HighlightContext.jsx.
+// Nothing here is called as you highlight: every add / remove / recolour is
+// optimistic in the context and flows through the offline write queue
+// (lib/offlineQueue.js), which calls the three writers below.
 
 import { supabase } from './supabase.js'
 
@@ -43,15 +44,15 @@ export async function fetchHighlights() {
   return byUid
 }
 
-export async function insertHighlights(userId, list) {
-  if (!list.length) return []
-  const rows = list.map(a => ({
-    user_id: userId, uid: a.uid, block: a.block,
-    start_off: a.start, end_off: a.end, quote: a.quote, color: a.color || DEFAULT_COLOR,
-  }))
-  const { data, error } = await supabase.from('user_highlights').insert(rows).select(COLS)
+// The id is minted on the client when the highlight is made, so the write is an
+// UPSERT on it: a retry after a lost response updates the same row instead of
+// inserting a second one.
+export async function upsertHighlight(userId, h) {
+  const { error } = await supabase.from('user_highlights').upsert({
+    id: h.id, user_id: userId, uid: h.uid, block: h.block,
+    start_off: h.start, end_off: h.end, quote: h.quote, color: h.color || DEFAULT_COLOR,
+  }, { onConflict: 'id' })
   if (error) throw error
-  return data.map(fromRow)
 }
 
 export async function deleteHighlights(ids) {

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { AlertTriangle, Bookmark, BookmarkX, Check, Clock, Cloud, CloudOff, Flame, FolderInput, RefreshCw, RotateCcw, Star, StarOff, Tag, Trash2, Undo2, X } from 'lucide-react'
+import { AlertTriangle, Bookmark, BookmarkX, Check, Clock, Cloud, CloudOff, Flame, FolderInput, Highlighter, RefreshCw, RotateCcw, Star, StarOff, Tag, Trash2, Undo2, X } from 'lucide-react'
 import { subscribeQueue, flushNow } from '../lib/offlineQueue.js'
 import { changeSubtopic, findLivemcq, moveQuestion } from '../lib/questionEdits.js'
 import { useImportantContext } from '../contexts/ImportantContext.jsx'
 import { useWeakContext } from '../contexts/WeakContext.jsx'
 import { useMasteredContext } from '../contexts/MasteredContext.jsx'
 import { useTrash } from '../contexts/TrashContext.jsx'
+import { useHighlights } from '../contexts/HighlightContext.jsx'
 import { closeSyncDrawer, subscribeSyncDrawer } from '../lib/syncDrawerState.js'
 
 // Right-hand drawer that shows the offline write queue, built on the same shell
@@ -38,6 +39,13 @@ function describe(it) {
   if (it.kind === 'delete') return { Icon: Trash2, color: 'var(--bad)', text: 'Moved to Recycle Bin' }
   if (it.kind === 'restore') return { Icon: RotateCcw, color: 'var(--ok)', text: 'Restored from Recycle Bin' }
   if (it.kind === 'purge') return { Icon: Trash2, color: 'var(--bad)', text: 'Deleted forever', filled: true }
+  if (it.kind === 'hl-add' || it.kind === 'hl-del' || it.kind === 'hl-color') {
+    const c = it.meta?.row?.color || 'mint'
+    const text = it.kind === 'hl-add' ? 'Highlight added'
+      : it.kind === 'hl-del' ? 'Highlight removed'
+      : `Highlight recolored · ${it.meta?.from || '—'} → ${it.meta?.to || c}`
+    return { Icon: Highlighter, color: it.kind === 'hl-del' ? OFF : `var(--hl-${c}-e)`, text }
+  }
   if (it.kind === 'move') {
     return { Icon: FolderInput, color: 'var(--accent)', text: `Topic: ${it.meta?.fromName || '—'} → ${it.meta?.toName || '—'}` }
   }
@@ -128,6 +136,7 @@ export default function SyncDrawer() {
   const imp = useImportantContext()
   const wk = useWeakContext()
   const trash = useTrash()
+  const hl = useHighlights()
 
   useEffect(() => subscribeQueue((s) => setSnap(s)), [])
   useEffect(() => subscribeSyncDrawer(setOpen), [])
@@ -154,6 +163,19 @@ export default function SyncDrawer() {
     const q = { _id: it.id, _uid: it.uid, _module: it.module, _catName: it.cat, question: it.label }
     if (it.kind === 'delete') return it.id && trash.isTrashed(it.id) ? { run: () => trash.restore(q) } : null
     if (it.kind === 'restore') return it.id && !trash.isTrashed(it.id) ? { run: () => trash.moveToBin(q) } : null
+    // Highlights: the inverse is offered only while the highlight is still in the
+    // state this change left it in. The row on the entry is the highlight itself,
+    // so a removed one comes back under its own id.
+    if (it.kind === 'hl-add' || it.kind === 'hl-del' || it.kind === 'hl-color') {
+      const row = it.meta?.row
+      if (!row) return null
+      const live = hl.getFor(row.uid).find((h) => h.id === row.id)
+      if (it.kind === 'hl-add') return live ? { run: () => hl.remove(row.uid, [row.id]) } : null
+      if (it.kind === 'hl-del') return live ? null : { run: () => hl.restore(row) }
+      return live && it.meta.from && live.color === it.meta.to
+        ? { run: () => hl.recolor(row.uid, [row.id], it.meta.from) }
+        : null
+    }
     // Topic / sub-topic: undo only while the question still sits where this
     // change put it. Undoing a move also restores the sub-topic it dropped.
     if (it.kind === 'move' || it.kind === 'subtopic') {
@@ -250,7 +272,7 @@ export default function SyncDrawer() {
             <div className="syncq-empty">
               <Check size={26} />
               <p>Nothing waiting</p>
-              <span>{snap.lastSavedAt ? `Last change saved ${ago(snap.lastSavedAt)}.` : 'Nail, important, weak, delete, Recycle Bin and topic / sub-topic changes show up here until they reach the server.'}</span>
+              <span>{snap.lastSavedAt ? `Last change saved ${ago(snap.lastSavedAt)}.` : 'Nail, important, weak, highlight, delete, Recycle Bin and topic / sub-topic changes show up here until they reach the server.'}</span>
             </div>
           )}
         </div>
