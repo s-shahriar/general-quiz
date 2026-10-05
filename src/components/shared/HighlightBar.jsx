@@ -8,8 +8,7 @@ import { useHighlights } from '../../contexts/HighlightContext.jsx'
 
 // Floating highlight bar, PDF-reader style: four colour dots, plus a bin when
 // the target is an existing mark. Nothing here touches the network — every
-// action updates the page at once and goes through the offline write queue, so
-// it saves itself and shows up in the sync drawer (see HighlightContext).
+// action edits local state and waits for Save (see HighlightSaveBar).
 //
 // Mobile is the primary case, which drives these decisions:
 //  • `selectionchange` (not mouseup) is what fires when Android's selection

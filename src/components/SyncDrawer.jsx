@@ -170,10 +170,10 @@ export default function SyncDrawer() {
       const row = it.meta?.row
       if (!row) return null
       const live = hl.getFor(row.uid).find((h) => h.id === row.id)
-      if (it.kind === 'hl-add') return live ? { run: () => hl.remove(row.uid, [row.id]) } : null
-      if (it.kind === 'hl-del') return live ? null : { run: () => hl.restore(row) }
+      if (it.kind === 'hl-add') return live ? { run: () => hl.undoAdd(row) } : null
+      if (it.kind === 'hl-del') return live ? null : { run: () => hl.undoRemove(row) }
       return live && it.meta.from && live.color === it.meta.to
-        ? { run: () => hl.recolor(row.uid, [row.id], it.meta.from) }
+        ? { run: () => hl.undoColor(row, it.meta.from) }
         : null
     }
     // Topic / sub-topic: undo only while the question still sits where this

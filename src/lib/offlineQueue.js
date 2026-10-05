@@ -11,9 +11,12 @@
 // flusher drains the queue: flags go out as one bulk upsert, deletes as one RPC
 // each, and a failure in either group cannot block the other.
 //
-// A highlight is keyed by its own id (minted client-side, so a retried insert is
-// an idempotent upsert): hl-add / hl-del / hl-color share one entry per highlight
-// and the latest action wins — add then remove before the flush sends nothing.
+// Highlights only enter this queue when the user presses Save (editing is local
+// until then — HighlightContext.jsx), or when the drawer's Undo reverses a saved
+// one. A highlight is keyed by its own id (minted client-side, so a retried insert
+// is an idempotent upsert): hl-add / hl-del / hl-color share one entry per
+// highlight and the latest action wins — add then remove before the flush sends
+// nothing.
 //
 // Failure handling is deliberately un-aggressive:
 //   • offline (navigator.onLine === false) → do NOT poll; wait for the `online`
@@ -335,6 +338,10 @@ function dropHighlightEntry(key) {
   if (!pending.size && !inFlight) status = 'idle'
   emit()
 }
+
+// Whether highlight changes can be queued yet (the queue is keyed to the signed-in user). Save checks this first, so it never
+// clears pending highlights that the queue would then silently ignore.
+export function highlightQueueReady() { return Boolean(userId) }
 
 export function enqueueHighlightAdd(row) {
   if (!userId || !row?.id) return

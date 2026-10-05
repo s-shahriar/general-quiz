@@ -2,9 +2,10 @@
 // question `uid` (uidOfText, see lib/qid.js) plus a block key inside that
 // item. RLS-scoped to the user, same as user_progress.
 //
-// Nothing here is called as you highlight: every add / remove / recolour is
-// optimistic in the context and flows through the offline write queue
-// (lib/offlineQueue.js), which calls the three writers below.
+// Nothing here is called as you highlight, and not even when you press Save:
+// editing is local until Save (contexts/HighlightContext.jsx), Save hands the
+// changes to the offline write queue (lib/offlineQueue.js), and that queue calls
+// the three writers below in the background.
 
 import { supabase } from './supabase.js'
 

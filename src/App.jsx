@@ -13,6 +13,7 @@ import { ThemeProvider, useThemeContext } from './contexts/ThemeContext.jsx'
 import { HandProvider } from './contexts/HandContext.jsx'
 import { HighlightProvider } from './contexts/HighlightContext.jsx'
 import HighlightBar from './components/shared/HighlightBar.jsx'
+import HighlightSaveBar from './components/shared/HighlightSaveBar.jsx'
 import Loader from './components/shared/Loader.jsx'
 
 const HomeScreen       = lazy(() => import('./components/HomeScreen.jsx'))
@@ -43,6 +44,7 @@ export default function App() {
               <HighlightProvider>
                 <AppRoutes />
                 <HighlightBar />
+                <HighlightSaveBar />
               </HighlightProvider>
             </TrashProvider>
           </ProgressProvider>
