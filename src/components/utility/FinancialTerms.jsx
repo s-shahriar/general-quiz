@@ -3,13 +3,12 @@ import { ChevronLeft, Search, Sun, Moon } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { useThemeContext } from '../../contexts/ThemeContext.jsx'
 import HandToggle from '../shared/HandToggle.jsx'
-import { FIN_CATEGORIES, FIN_CARDS } from '../../data/utility/finTermsData'
+import { getFinCategories, getFinCards, useFinTermsReady } from '../../data/utility/finTermsLoader'
 import './FinancialTerms.css'
-
-const ALL_CATS = ['সব', ...Object.keys(FIN_CATEGORIES)]
 
 export default function FinancialTerms() {
   const navigate = useNavigate()
+  const { ready, error } = useFinTermsReady()
   const { theme, toggleTheme } = useThemeContext()
 
   return (
@@ -32,13 +31,18 @@ export default function FinancialTerms() {
           </div>
         </div>
 
-        <RefSection />
+        {ready
+          ? <RefSection />
+          : <div className="ft-no-results">{error ? 'লোড করা যায়নি' : 'লোড হচ্ছে…'}</div>}
       </div>
     </div>
   )
 }
 
 function RefSection() {
+  const FIN_CATEGORIES = getFinCategories()
+  const FIN_CARDS = getFinCards()
+  const ALL_CATS = ['সব', ...Object.keys(FIN_CATEGORIES)]
   const [search, setSearch] = useState('')
   const [activeCat, setActiveCat] = useState('সব')
 
@@ -49,7 +53,7 @@ function RefSection() {
       if (!q) return matchCat
       return matchCat && (c.title + c.subtitle + c.body + c.cat).toLowerCase().includes(q)
     })
-  }, [search, activeCat])
+  }, [FIN_CARDS, search, activeCat])
 
   return (
     <>
@@ -89,6 +93,7 @@ function RefSection() {
 }
 
 function TermCard({ card }) {
+  const FIN_CATEGORIES = getFinCategories()
   const color = FIN_CATEGORIES[card.cat] || 'var(--accent)'
   return (
     <div className="ft-card" style={{ '--card-color': color }}>
