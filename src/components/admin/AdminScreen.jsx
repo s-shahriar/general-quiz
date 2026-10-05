@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   Upload, Trash2, Check, ArrowLeft, AlertTriangle, Search, ShieldAlert, Loader2,
   ChevronDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight,
-  Wand2, FolderInput, X, CircleAlert, Tag, Plus,
+  Wand2, FolderInput, X, CircleAlert, Tag, Plus, History, ListChecks,
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import RichText from '../shared/RichText.jsx'
@@ -57,9 +57,19 @@ export default function AdminScreen() {
         <TopbarActions style={{ marginLeft: 'auto' }} />
       </div>
       <div style={tabsRow}>
-        <button style={tabBtn(tab === 'import')} onClick={() => go('import')}>Import &amp; classify</button>
-        <button style={tabBtn(tab === 'recent')} onClick={() => go('recent')}>Last import</button>
-        <button style={tabBtn(tab === 'manage')} onClick={() => go('manage')}>Manage &amp; delete</button>
+        {[
+          ['import', Upload, 'Import & classify'],
+          ['recent', History, 'Last import'],
+          ['manage', ListChecks, 'Manage & delete'],
+        ].map(([key, Icon, label]) => (
+          <button
+            key={key} style={tabBtn(tab === key)} onClick={() => go(key)}
+            title={label} aria-label={label} aria-pressed={tab === key}
+          >
+            <Icon size={18} />
+            {tab === key && <span>{label}</span>}
+          </button>
+        ))}
       </div>
       {visited.import && (
         <div style={{ display: tab === 'import' ? 'block' : 'none' }}>
@@ -1288,7 +1298,8 @@ const headerRow = { display: 'flex', alignItems: 'center', gap: 12, marginBottom
 const h1 = { fontSize: '1.15rem', fontWeight: 700, color: 'var(--text)', margin: 0 }
 const tabsRow = { display: 'flex', gap: 8, marginBottom: 16 }
 const tabBtn = (active) => ({
-  padding: '8px 14px', borderRadius: 9, fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer',
+  display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 40,
+  padding: active ? '8px 16px' : '8px 14px', borderRadius: 9, fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer',
   border: '1px solid var(--border)',
   background: active ? 'var(--accent-2)' : 'transparent',
   color: active ? 'var(--on-accent)' : 'var(--text-2)',
