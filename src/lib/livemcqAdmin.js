@@ -15,6 +15,7 @@
 import { supabase } from './supabase.js'
 import { uidOfText } from './qid.js'
 import { LIVEMCQ_TOPICS } from '../data/index.js'
+import { mapRow } from '../data/contentLoader.js'
 
 export const OWNER_UID = '803521e1-00c9-4b8a-ab13-f6e6d126da2b'
 export const LETTERS = ['a', 'b', 'c', 'd', 'e']
@@ -183,34 +184,53 @@ export function newestFirst(a, b) {
   return tb - ta || favNum(b) - favNum(a)
 }
 
-// Rows inserted within this long of each other count as one import. A single
-// upload is often several calls — ticking a few, inserting, then the rest —
-// and on 27 Sep one import landed as two calls a second apart. Distinct imports
-// are hours or days apart, so the exact value barely matters.
-export const IMPORT_GAP_MS = 10 * 60 * 1000
+// ── Imports (the "Last import" view) ──────────────────────────────────────
+//
+// Grouping rows into imports used to happen here, over every livemcq row the
+// client had downloaded: the view cost two full-table reads (this module's row
+// list + the app's livemcq module, for the option text) to show one import's
+// dozen questions. Both now live in SQL — `livemcq_import_batches()` groups by
+// the same 10-minute insert gap and returns ~35 small rows, and
+// `livemcq_import_questions(key)` returns ONLY the picked import's questions,
+// whole. Switching import in the dropdown is one small query, not a rescan.
 
 /**
- * Group rows into imports, newest first.
- * @param {Array<{id: string, createdAt: string}>} rows  as returned by fetchLivemcqRows
- * @returns {Array<{ key: string, at: string, until: string, ids: Set<string>, count: number }>}
- *   `key` is the import's first insert time; `ids` holds the rows' ids.
+ * Every import, newest first — enough for the picker, nothing more.
+ * @returns {Promise<Array<{ key: string, at: string, until: string, count: number }>>}
+ *   `key` is the id of the import's earliest row; pass it to fetchImportQuestions.
  */
-export function groupImports(rows) {
-  const dated = rows.filter((r) => r.createdAt)
-    .sort((a, b) => Date.parse(a.createdAt) - Date.parse(b.createdAt))
-  const out = []
-  let cur = null
-  for (const r of dated) {
-    const t = Date.parse(r.createdAt)
-    if (!cur || t - Date.parse(cur.until) > IMPORT_GAP_MS) {
-      cur = { key: r.createdAt, at: r.createdAt, until: r.createdAt, ids: new Set(), count: 0 }
-      out.push(cur)
-    }
-    cur.until = r.createdAt
-    cur.ids.add(r.id)
-    cur.count++
-  }
-  return out.reverse()
+export async function fetchImportBatches() {
+  const { data, error } = await supabase.rpc('livemcq_import_batches')
+  if (error) throw error
+  return (data || []).map((b) => ({ key: b.key, at: b.at, until: b.until, count: b.n }))
+}
+
+/**
+ * One import's questions, whole (options + explanation), newest first.
+ * A null/unknown key returns the newest import — what the view opens on.
+ * Each entry is a manage row (as fetchLivemcqRows returns) plus `q`, the
+ * study-card question object, and `topic`, its livemcq topic.
+ */
+export async function fetchImportQuestions(key) {
+  const { data, error } = await supabase.rpc('livemcq_import_questions', { batch_key: key || null })
+  if (error) throw error
+  return (data || []).map((r) => ({
+    id: r.id,
+    favorite_id: r.extra?.favorite_id != null ? String(r.extra.favorite_id) : null,
+    question: r.question,
+    correct_answer: r.correct_answer,
+    correct_answer_text: r.correct_answer_text,
+    sort_order: r.sort_order,
+    deleted: r.deleted_at != null,
+    createdAt: r.created_at,
+    slug: r.slug,
+    catName: r.cat_name,
+    subtopic: r.extra?.subtopic ?? null,
+    // Soft-deleted rows are not study material — they fall back to the plain
+    // row list, exactly as they did when this came from the module cache.
+    q: r.deleted_at == null ? mapRow(r) : null,
+    topic: LIVEMCQ_TOPICS.find((t) => t.id === r.slug) || null,
+  }))
 }
 
 export async function insertRows(rows) {

@@ -8,14 +8,15 @@ import {
 } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext.jsx'
 import RichText from '../shared/RichText.jsx'
-import { invalidateModule, loadModule, topicsOfModule } from '../../data/contentLoader.js'
+import { invalidateModule } from '../../data/contentLoader.js'
 import StudyCard from '../shared/StudyCard.jsx'
 import { uidOf } from '../../lib/qid.js'
 import { useMasteredContext, useImportantContext, useWeakContext } from '../../contexts/ProgressContext.jsx'
 import {
   CATEGORY_OPTIONS, LETTERS, isOwner,
   extractRawItems, normalizeItem, toInsertRow,
-  fetchExistingFavoriteIds, fetchLivemcqRows, groupImports,
+  fetchExistingFavoriteIds, fetchLivemcqRows,
+  fetchImportBatches, fetchImportQuestions,
   insertRows, deleteFavoriteIds, setCategoryForFavoriteIds,
   setSubtopicForFavoriteIds, addSubtopic,
 } from '../../lib/livemcqAdmin.js'
@@ -888,67 +889,68 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
   const importantApi = useImportantContext()
   const weakApi = useWeakContext()
   // Last import reads as study cards, so it needs each question whole — its
-  // options and explanation — which the admin row list does not fetch. The
-  // app's own LiveMCQ module has them, keyed here by row id.
+  // options and explanation — which the manage row list does not fetch. The
+  // per-import fetch brings both, so this is just a lookup by row id.
   const [qById, setQById] = useState(null)
+  // Last import: the picker's batches (~35 tiny rows), never the questions.
+  const [imports, setImports] = useState(importsOnly ? null : [])
+  const [loadedKey, setLoadedKey] = useState(null)
 
-  // Refetches when Import inserts rows. Existing rows stay on screen while the
-  // new set loads, so a refresh doesn't blank the list.
+  // Manage loads every row; Last import loads only the batch list, and the
+  // questions of the one batch on screen (the effect below). Both refetch when
+  // Import inserts rows, with the old set left on screen until the new one
+  // lands so a refresh doesn't blank the list.
   useEffect(() => {
     let cancelled = false
-    fetchLivemcqRows()
-      .then((r) => { if (!cancelled) setRows(r) })
-      .catch((e) => { if (!cancelled) setError(e.message || String(e)) })
+    const p = importsOnly
+      ? fetchImportBatches().then((b) => { if (!cancelled) setImports(b) })
+      : fetchLivemcqRows().then((r) => { if (!cancelled) setRows(r) })
+    p.catch((e) => { if (!cancelled) setError(e.message || String(e)) })
     return () => { cancelled = true }
-  }, [dataVersion])
+  }, [importsOnly, dataVersion])
 
-  const imports = useMemo(() => (importsOnly && rows ? groupImports(rows) : []), [importsOnly, rows])
   // Falls back to the newest when the picked import is gone (all its rows
   // deleted) or when a new insert lands and nothing was picked.
-  const activeImport = importsOnly ? (imports.find((b) => b.key === batch) || imports[0] || null) : null
+  const activeImport = importsOnly ? ((imports || []).find((b) => b.key === batch) || (imports || [])[0] || null) : null
 
   // Categories present in this import, with how many of its rows each holds.
   const importCats = useMemo(() => {
-    if (!activeImport) return null
+    if (!activeImport || !rows) return null
     const n = {}
-    for (const r of rows) if (activeImport.ids.has(r.id)) n[r.slug] = (n[r.slug] || 0) + 1
+    for (const r of rows) n[r.slug] = (n[r.slug] || 0) + 1
     return CATEGORY_OPTIONS.filter((c) => n[c.slug]).map((c) => ({ slug: c.slug, name: `${c.name} (${n[c.slug]})` }))
   }, [activeImport, rows])
 
+  // One import, one query — picking another in the dropdown fetches just that
+  // one. The app's livemcq module is not loaded here at all. `loadedKey` says
+  // which import the rows on screen belong to, so the list can show a loader
+  // instead of the previous import's questions under the new import's header.
+  const activeKey = activeImport?.key || null
   useEffect(() => {
-    if (!importsOnly || !activeImport) return
+    if (!importsOnly || !activeKey) return
     let cancelled = false
-    const build = () => {
-      const m = new Map()
-      for (const t of topicsOfModule('livemcq')) for (const q of t.questions || []) m.set(q._id, { q, topic: t })
-      return m
-    }
-    ;(async () => {
-      await loadModule('livemcq')
-      let m = build()
-      // Loaded before this import landed (or before a move): refetch once.
-      if ([...activeImport.ids].some((id) => !m.has(id))) {
-        invalidateModule('livemcq')
-        await loadModule('livemcq')
-        m = build()
-      }
-      if (!cancelled) setQById(m)
-    })().catch(() => { if (!cancelled) setQById(new Map()) })
+    fetchImportQuestions(activeKey)
+      .then((list) => {
+        if (cancelled) return
+        setRows(list)
+        setQById(new Map(list.filter((r) => r.q && r.topic).map((r) => [r.id, { q: r.q, topic: r.topic }])))
+        setLoadedKey(activeKey)
+      })
+      .catch((e) => { if (!cancelled) setError(e.message || String(e)) })
     return () => { cancelled = true }
-  }, [importsOnly, activeImport, dataVersion])
+  }, [importsOnly, activeKey, dataVersion])
 
   const filtered = useMemo(() => {
     if (!rows) return []
     const needle = q.trim().toLowerCase()
     return rows.filter((r) => {
-      if (activeImport && !activeImport.ids.has(r.id)) return false
       if (cat && r.slug !== cat) return false
       if (cat && subFilter && (subFilter === NO_SUB ? r.subtopic : r.subtopic !== subFilter)) return false
       if (!needle) return true
       return (r.favorite_id && r.favorite_id.includes(needle)) ||
         stripTags(r.question).toLowerCase().includes(needle)
     })
-  }, [rows, q, cat, subFilter, activeImport])
+  }, [rows, q, cat, subFilter])
 
   // Any change to the query/filter jumps back to the first page (reset in the
   // handlers rather than an effect to avoid a cascading render).
@@ -1025,9 +1027,15 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
   }
 
   if (error) return <p style={errorBox}>{error}</p>
-  if (!rows) return <p style={muted}><Loader inline size={14} /> Loading rows…</p>
+  if (importsOnly ? !imports : !rows) return <p style={muted}><Loader inline size={14} /> Loading rows…</p>
   if (importsOnly && !activeImport) return <p style={muted}>No imports yet.</p>
 
+  // The picked import's questions are still on the wire: the bar is already
+  // right (it comes from the batch list), the list below it is not.
+  const batchLoading = importsOnly && (!rows || !qById || loadedKey !== activeKey)
+  // What the counts are "of": the import's own rows once they land, so a delete
+  // shows up immediately; the batch list's count until then.
+  const total = batchLoading ? activeImport.count : rows.length
   // Study cards are tall; a shorter page keeps one import easy to read through.
   const pageSize = importsOnly ? STUDY_PAGE_SIZE : PAGE_SIZE
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
@@ -1045,7 +1053,7 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
               {activeImport === imports[0] ? 'Last import' : 'Import'} · {importWhen(activeImport.at)}
             </div>
             <div style={importSub}>
-              {activeImport.count} question{activeImport.count === 1 ? '' : 's'} across {importCats.length} categor{importCats.length === 1 ? 'y' : 'ies'}
+              {total} question{total === 1 ? '' : 's'} across {importCats?.length ?? 0} categor{importCats?.length === 1 ? 'y' : 'ies'}
             </div>
           </div>
           {imports.length > 1 && (
@@ -1089,13 +1097,13 @@ function ManagePanel({ dataVersion, importsOnly = false }) {
           <button style={noticeClose} onClick={() => setNotice('')} aria-label="Dismiss"><X size={13} /></button>
         </p>
       )}
-      <p style={muted}>
+      {!batchLoading && <p style={muted}>
         {filtered.length
-          ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== (activeImport ? activeImport.count : rows.length) ? ` (filtered from ${activeImport ? activeImport.count : rows.length})` : ''} · newest first</>
-          : <>No matches of {activeImport ? activeImport.count : rows.length}</>}
+          ? <>Showing <b style={{ color: 'var(--text-2)' }}>{start + 1}–{start + shown.length}</b> of {filtered.length}{filtered.length !== total ? ` (filtered from ${total})` : ''} · newest first</>
+          : <>No matches of {total}</>}
         {importsOnly && filtered.length > 0 && ' · tap an option to reveal the answer'}
-      </p>
-      {importsOnly && !qById && <p style={muted}><Loader inline size={14} /> Loading questions…</p>}
+      </p>}
+      {batchLoading && <p style={muted}><Loader inline size={14} /> Loading questions…</p>}
       {importsOnly && qById && shown.map((r, i) => {
         const hit = qById.get(r.id)
         if (!hit) return null

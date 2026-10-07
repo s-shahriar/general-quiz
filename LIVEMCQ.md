@@ -409,8 +409,14 @@ freely across syncs. **Sub-topics (§8.C)** apply to both paths.
    same row actions, narrowed to one import: the newest by default, any earlier
    one from the picker. Its category filter lists only the categories that
    import touched, with counts. Rows inserted within 10 minutes of each other
-   count as one import (`groupImports` in `livemcqAdmin.js`), so a file inserted
-   in several passes still shows as one.
+   count as one import, so a file inserted in several passes still shows as one.
+   The grouping is **server-side** (`livemcq_import_batches()`, §13): the tab
+   loads the batch list (~35 tiny rows) and, for the one import on screen, its
+   questions whole (`livemcq_import_questions(key)`) — picking another import is
+   one small query. Until 2026-10-07 it grouped in the browser, which meant
+   downloading every livemcq row twice (the admin row list **and** the app's
+   livemcq module, for the option text) — ~6.6 MB over 6 requests to show a
+   dozen questions; it is ~32 KB over 2 now.
 
 #### 8.A.1 Category suggestions (still no AI)
 The panel suggests a category, but nothing about it is a model: it is a plain
@@ -626,7 +632,19 @@ All six owner-gated RPCs above have `EXECUTE` revoked from `anon`/`public` and
 granted to `authenticated` — the owner check inside each body is still the real
 gate; the grant just keeps signed-out callers from reaching them at all.
 
-One further function is **read-only** and not part of the write path:
+Three further functions are **read-only** and not part of the write path:
+- `livemcq_import_batches()` — `STABLE`, SECURITY INVOKER, granted to
+  `anon`/`authenticated`. Every import, newest first, as
+  `{key, at, until, n}`: the 10-minute insert-gap grouping the Last-import tab
+  used to do in the browser. `key` is the id of the import's **earliest row** —
+  a uuid survives the JSON round-trip exactly, where a timestamp's microseconds
+  may not.
+- `livemcq_import_questions(batch_key uuid default null)` — `STABLE`, SECURITY
+  INVOKER, same grants. One import's questions whole (options, explanation,
+  `extra`, `deleted_at`, category slug + name), newest first. A null or unknown
+  key returns the newest import, which is what the tab opens on. Both read
+  exactly what the public-read policy already exposes, soft-deleted rows
+  included (the admin list shows them), so they grant no new access.
 - `classifier_fingerprint()` — `STABLE`, *not* `SECURITY DEFINER`, granted to
   `anon`/`authenticated`. Returns `{n, sig}` over the five modules the suggester
   trains on (hashing `id, category_id, extra.subtopic`), for the knowledge cache
@@ -638,8 +656,8 @@ One further function is **read-only** and not part of the write path:
 Migrations: `admin_livemcq_rpcs`, then `admin_livemcq_set_category` +
 `admin_livemcq_set_category_fix_sort_order_collision`, then
 `livemcq_fingerprint`, then `classifier_fingerprint`, then `livemcq_subtopics`
-(table + seed lists + sub-topic RPCs + sub-topic-aware fingerprint) and
-`livemcq_admin_rpc_grants` (general-quiz).
+(table + seed lists + sub-topic RPCs + sub-topic-aware fingerprint),
+`livemcq_admin_rpc_grants` and `livemcq_import_batches` (general-quiz).
 UI: `src/components/admin/AdminScreen.jsx`, helpers in `src/lib/livemcqAdmin.js`,
 sub-topic lists in `src/lib/subtopics.js`,
 suggester in `src/lib/livemcqClassify.js`, what it is allowed to learn from in

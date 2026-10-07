@@ -25,7 +25,9 @@ export const ALL_MODULES = Object.keys(MODULE_TOPICS)
 const loaded = new Set()
 const inflight = new Map()
 
-function mapRow(r) {
+// A DB `questions` row → the shape the quiz/study components read. Exported so
+// the admin's per-import fetch can build the same objects without the module.
+export function mapRow(r) {
   const { id, uid, question, options, correct_answer, correct_answer_text, explanation, extra } = r
   return { _id: id, uid, question, options, correct_answer, correct_answer_text, explanation, ...(extra || {}) }
 }
