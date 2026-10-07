@@ -105,9 +105,11 @@ function ImportPanel({ onInserted }) {
   const [missing, setMissing] = useState(() => new Set()) // fids flagged by a failed insert
   const [clf, setClf] = useState(null)         // { size, suggest } — local, no AI
   const [bulkSlug, setBulkSlug] = useState('')
+  const [confirming, setConfirming] = useState(null) // the subset waiting on "Insert N questions?"
   const lists = useSubtopicLists()             // { [categorySlug]: [{ slug, name }] }
   const fileRef = useRef(null)
   const clfRequested = useRef(false)
+  const [clfLoading, setClfLoading] = useState(false) // drives the "Finding suggestions…" note
 
   // Ask for the classifier only when a file is actually opened — visiting the
   // tab to look around shouldn't cost anything. `getClassifier` decides for
@@ -118,9 +120,11 @@ function ImportPanel({ onInserted }) {
   function ensureClassifier() {
     if (clfRequested.current) return
     clfRequested.current = true
+    setClfLoading(true)
     getClassifier()
       .then(setClf)
       .catch(() => { /* suggestions are optional — manual selection still works */ })
+      .finally(() => setClfLoading(false))
   }
 
   async function onFile(e) {
@@ -298,7 +302,9 @@ function ImportPanel({ onInserted }) {
 
   // Shared by the footer button and each card's own insert button. Refuses to
   // send anything when a target has no category, and points at the offenders.
-  async function insertSubset(subset) {
+  // `ask`: the footer's bulk inserts stop at a confirmation once the subset is valid;
+  // a single card's Insert goes straight through.
+  async function insertSubset(subset, { ask = false } = {}) {
     setError(''); setResult(null)
     if (!subset.length) { setError('Nothing selected — tick at least one question to insert.'); return }
 
@@ -323,6 +329,7 @@ function ImportPanel({ onInserted }) {
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' })
       return
     }
+    if (ask) { setConfirming(subset); return }
 
     setBusy(true)
     try {
@@ -402,6 +409,9 @@ function ImportPanel({ onInserted }) {
             <button style={linkBtn} onClick={() => pickAll(false)}>Clear</button>
           </div>
           <div style={{ ...toolbarGroup, marginLeft: 'auto', flexWrap: 'wrap' }}>
+            {clfLoading && (
+              <span style={muted}><Loader inline size={13} /> Finding suggestions…</span>
+            )}
             {hintable > 0 && (
               <button style={ghostBtn} onClick={applyAllHints} title="Fill every empty category with its suggestion">
                 <Wand2 size={14} /> Apply {hintable} suggestion{hintable === 1 ? '' : 's'}
@@ -456,33 +466,35 @@ function ImportPanel({ onInserted }) {
 
       {items.length > 0 && (
         <div style={stickyFooter}>
-          <div style={{ minWidth: 0 }}>
-            <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text)' }}>
-              {picked.length} of {items.length} selected
-            </div>
+          <div style={footerTop}>
+            <span style={footerCount}>
+              <b style={{ color: 'var(--text)' }}>{picked.length}</b> of {items.length} selected
+            </span>
             {pickedNoCat.length || pickedNoSub.length ? (
-              <button style={footerHint} onClick={jumpToBlank}>
+              <button style={footerHint} onClick={jumpToBlank} title="Show the incomplete ones">
+                <CircleAlert size={13} style={{ flexShrink: 0 }} />
                 {[
-                  pickedNoCat.length && `${pickedNoCat.length} need a category`,
-                  pickedNoSub.length && `${pickedNoSub.length} need a sub-topic`,
-                ].filter(Boolean).join(' · ')} — show me
+                  pickedNoCat.length && `${pickedNoCat.length} need${pickedNoCat.length === 1 ? 's' : ''} a category`,
+                  pickedNoSub.length && `${pickedNoSub.length} need${pickedNoSub.length === 1 ? 's' : ''} a sub-topic`,
+                ].filter(Boolean).join(' · ')}
+                <ChevronRight size={13} style={{ flexShrink: 0 }} />
               </button>
             ) : (
-              <div style={{ fontSize: '0.76rem', color: 'var(--text-3)' }}>
-                {picked.length ? 'all selected are ready' : 'nothing selected'}
-              </div>
+              <span style={footerReady}>
+                {picked.length ? <><Check size={13} /> all ready</> : 'nothing selected'}
+              </span>
             )}
           </div>
           <div style={footerActions}>
             {canPartial && (
-              <button style={ghostInsertBtn(!busy)} disabled={busy} onClick={() => insertSubset(picked)}>
-                Insert all {picked.length}
+              <button style={ghostInsertBtn(!busy)} disabled={busy} onClick={() => insertSubset(picked, { ask: true })}>
+                All {picked.length}
               </button>
             )}
             <button
               style={insertBtn(picked.length > 0 && !busy)}
               disabled={!picked.length || busy}
-              onClick={() => insertSubset(canPartial ? pickedReady : picked)}
+              onClick={() => insertSubset(canPartial ? pickedReady : picked, { ask: true })}
             >
               {busy ? <Loader inline size={15} /> : <Check size={15} />}
               {canPartial ? ` Insert ${pickedReady.length} ready` : ` Insert ${picked.length}`}
@@ -490,6 +502,42 @@ function ImportPanel({ onInserted }) {
           </div>
         </div>
       )}
+
+      {confirming && (
+        <ConfirmInsertModal
+          subset={confirming}
+          onCancel={() => setConfirming(null)}
+          onConfirm={() => { const sub = confirming; setConfirming(null); insertSubset(sub) }}
+        />
+      )}
+    </div>
+  )
+}
+
+// The last stop before a bulk insert: how many, and into which categories.
+function ConfirmInsertModal({ subset, onCancel, onConfirm }) {
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onCancel() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onCancel])
+  const byCat = Object.entries(subset.reduce((m, it) => { m[it.slug] = (m[it.slug] || 0) + 1; return m }, {}))
+    .sort((a, b) => b[1] - a[1])
+  const n = subset.length
+  return (
+    <div style={overlay} onClick={onCancel}>
+      <div style={modalCard} role="dialog" aria-modal="true" aria-labelledby="ins-title" onClick={(e) => e.stopPropagation()}>
+        <div style={{ ...modalIcon, color: 'var(--ok)', background: 'color-mix(in srgb, var(--ok) 14%, transparent)' }}><Check size={20} /></div>
+        <h3 id="ins-title" style={modalTitle}>Insert {n} question{n === 1 ? '' : 's'}?</h3>
+        <div style={modalMeta}>
+          {byCat.map(([slug, c]) => <span key={slug} style={catChip}>{catName(slug)} · {c}</span>)}
+        </div>
+        <p style={modalWarn}>They go into the database and show up in the app straight away.</p>
+        <div style={modalActions}>
+          <button style={modalCancelBtn} onClick={onCancel}>Cancel</button>
+          <button style={insertBtn(true)} onClick={onConfirm}><Check size={15} /> Insert {n}</button>
+        </div>
+      </div>
     </div>
   )
 }
@@ -1374,11 +1422,14 @@ const modalWarn = { margin: '12px 0 0', fontSize: '0.8rem', color: 'var(--text-3
 const modalActions = { display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 18 }
 const modalCancelBtn = { padding: '9px 16px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer' }
 const modalDeleteBtn = { display: 'inline-flex', alignItems: 'center', gap: 7, padding: '9px 16px', borderRadius: 9, border: 'none', background: 'var(--bad)', color: 'var(--on-solid)', fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer' }
-const stickyFooter = { position: 'sticky', bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, padding: '12px 14px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 -6px 20px rgba(0,0,0,0.12)', marginTop: 6 }
+const stickyFooter = { position: 'sticky', bottom: 0, display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 14px', borderRadius: 12, border: '1px solid var(--border)', background: 'var(--card)', boxShadow: '0 -6px 20px rgba(0,0,0,0.12)', marginTop: 6 }
 const insertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 7, padding: '10px 18px', borderRadius: 9, border: 'none', background: on ? 'var(--ok)' : 'var(--border)', color: on ? 'var(--on-solid)' : 'var(--text-3)', fontSize: '0.88rem', fontWeight: 700, cursor: on ? 'pointer' : 'not-allowed', whiteSpace: 'nowrap' })
-const footerActions = { display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }
+const footerActions = { display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8 }
+const footerTop = { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }
+const footerCount = { fontSize: '0.85rem', color: 'var(--text-2)' }
+const footerReady = { display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: '0.78rem', color: 'var(--text-3)' }
 const ghostInsertBtn = (on) => ({ display: 'inline-flex', alignItems: 'center', gap: 6, padding: '10px 14px', borderRadius: 9, border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-2)', fontSize: '0.83rem', fontWeight: 600, cursor: on ? 'pointer' : 'not-allowed', whiteSpace: 'nowrap' })
-const footerHint = { display: 'block', padding: 0, marginTop: 1, background: 'none', border: 'none', color: 'var(--warn)', fontSize: '0.76rem', fontWeight: 600, textAlign: 'left', textDecoration: 'underline', textUnderlineOffset: 2, cursor: 'pointer' }
+const footerHint = { display: 'inline-flex', alignItems: 'center', gap: 5, padding: '5px 10px', borderRadius: 20, border: 'none', background: 'color-mix(in srgb, var(--warn) 14%, transparent)', color: 'var(--warn)', fontSize: '0.78rem', fontWeight: 600, cursor: 'pointer' }
 const errorBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.83rem', color: 'var(--bad)', background: 'color-mix(in srgb, var(--bad) 10%, transparent)', padding: '9px 12px', borderRadius: 9 }
 const okBox = { display: 'flex', alignItems: 'center', gap: 7, fontSize: '0.85rem', color: 'var(--ok)', background: 'color-mix(in srgb, var(--ok) 10%, transparent)', padding: '9px 12px', borderRadius: 9 }
 const searchRow = { display: 'flex', gap: 8, marginBottom: 8, flexWrap: 'wrap' }
