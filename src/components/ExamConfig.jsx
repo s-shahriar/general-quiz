@@ -8,6 +8,7 @@ import { BANGLA_SAHITYA_TOPICS, BANGLA_TOPICS, ENGLISH_TOPICS, GK_TOPICS, LIVEMC
 import { useAllModulesReady } from '../data/contentLoader.js'
 import { uidOf } from '../lib/qid.js'
 import { shuffle, validQ } from '../lib/utils'
+import { dedupeCopies } from '../lib/quizDeck.js'
 import Loader from './shared/Loader.jsx'
 
 export default function ExamConfig() {
@@ -74,7 +75,7 @@ export default function ExamConfig() {
           .filter(q => validQ(q))
       )
     }
-    const questions = shuffle(pool).slice(0, safeCount)
+    const questions = shuffle(dedupeCopies(pool, uidOf)).slice(0, safeCount)
     const label = topicId === 'important' ? 'Important Questions'
       : topicId === 'weak' ? 'Weak Questions'
       : topicId === 'all'

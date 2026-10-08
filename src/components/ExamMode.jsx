@@ -29,7 +29,9 @@ export default function ExamMode({
   const { value: weak, add: onMarkWeak, remove: onUnmarkWeak } = useWeakContext()
 
   const routeState = location.state || {}
-  const questions = questionsProp || routeState.questions
+  const examList = questionsProp || routeState.questions
+  const [removed, setRemoved] = useState(() => new Set())
+  const questions = examList && (removed.size ? examList.filter(x => !removed.has(x._id)) : examList)
   const label = labelProp || routeState.label
 
   const [idx, setIdx]           = useState(0)
@@ -69,6 +71,17 @@ export default function ExamMode({
   const next = () => {
     if (idx + 1 >= questions.length) { setDone(true); return }
     setIdx(i => i + 1); setSelected(null); setRevealed(false)
+  }
+
+  // Deleting a question mid-exam takes it out of the run: the total drops by
+  // one, a point already scored on it is taken back, and the next question
+  // slides into place — the exam carries on as if it had never been in it.
+  const dropCurrent = () => {
+    const rest = questions.length - 1
+    if (revealed && selected === q.correct_answer) setScore(s => s - 1)
+    setRemoved(r => new Set(r).add(q._id))
+    setSelected(null); setRevealed(false)
+    if (idx >= rest) { setIdx(Math.max(0, rest - 1)); setDone(true) }
   }
 
   const retry = () => { setIdx(0); setSelected(null); setRevealed(false); setScore(0); setDone(false) }
@@ -152,7 +165,7 @@ export default function ExamMode({
               )}
               {q._id && (
                 <MoreMenu className="quiz-nail-btn">
-                  <DeleteButton question={q} className="more-menu-item" size={14} onDeleted={next} />
+                  <DeleteButton question={q} className="more-menu-item" size={14} onDeleted={dropCurrent} />
                 </MoreMenu>
               )}
             </div>
