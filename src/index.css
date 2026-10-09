@@ -5003,3 +5003,11 @@ button {
   .gq-loader-mark path { animation: none !important; stroke-dashoffset: 0; }
   .gq-loader-bar span { animation: none; width: 100%; opacity: .55; }
 }
+
+/* A tall open study card repeats its flag controls at the end (StudyCard), so a
+   long explanation doesn't mean scrolling back up to mark the question. */
+.study-card-actions-end {
+  justify-content: flex-end;
+  margin-top: 12px; padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}

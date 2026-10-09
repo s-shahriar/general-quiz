@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Bookmark, CheckCircle, Flame, Lightbulb, Star, XCircle } from 'lucide-react'
 import RichText from './RichText'
 import Highlightable from './Highlightable.jsx'
@@ -58,8 +58,60 @@ export default function StudyCard({
     setExpOpen(key !== q.correct_answer)
   }
 
+  // The flag controls. A tall open card (long explanation) repeats them at its
+  // end, so they can be used without scrolling back up to the card's top.
+  const actions = (
+    <>
+      <button
+        className={`nail-btn${nailed ? ' nailed' : ''}`}
+        onClick={onNail}
+        title={nailed ? 'Nailed It — click to un-nail' : 'Mark as Nailed It'}
+        style={nailed ? { color, borderColor: `color-mix(in srgb, ${color} 38%, transparent)`, background: `color-mix(in srgb, ${color} 8%, transparent)` } : {}}
+      >
+        <Star size={12} fill={nailed ? 'currentColor' : 'none'} />
+        <span className="qmark-label">{nailed ? 'Nailed ✓' : 'Nail It'}</span>
+      </button>
+      <button
+        className={`nail-btn important-study-btn${isImportant ? ' nailed' : ''}`}
+        onClick={isImportant ? onUnmarkImportant : onMarkImportant}
+        title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
+        style={isImportant ? { color: 'var(--imp)', borderColor: 'color-mix(in srgb, var(--imp) 40%, transparent)', background: 'color-mix(in srgb, var(--imp) 10%, transparent)' } : {}}
+      >
+        <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
+        <span className="qmark-label">{isImportant ? 'Important ✓' : 'Important'}</span>
+      </button>
+      {/* Weak = an Important question you still can't answer, so only those offer it. */}
+      {isImportant && !nailed && onMarkWeak && (
+        <button
+          className={`nail-btn weak-study-btn${isWeak ? ' nailed' : ''}`}
+          onClick={isWeak ? onUnmarkWeak : onMarkWeak}
+          title={isWeak ? 'Weak — click to remove' : 'Mark as Weak — এখনো পারি না'}
+          style={isWeak ? { color: 'var(--weak)', borderColor: 'color-mix(in srgb, var(--weak) 40%, transparent)', background: 'color-mix(in srgb, var(--weak) 10%, transparent)' } : {}}
+        >
+          <Flame size={12} fill={isWeak ? 'currentColor' : 'none'} />
+          <span className="qmark-label">{isWeak ? 'Weak ✓' : 'Weak'}</span>
+        </button>
+      )}
+      {q._id && (
+        <MoreMenu className="nail-btn">
+          <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="more-menu-item" />
+          <DeleteButton question={q} className="more-menu-item" size={14} />
+        </MoreMenu>
+      )}
+    </>
+  )
+  const cardRef = useRef(null)
+  const [tall, setTall] = useState(false)
+  useEffect(() => {
+    const el = cardRef.current
+    if (!el || typeof ResizeObserver === 'undefined') return
+    const ro = new ResizeObserver(() => setTall(el.offsetHeight > window.innerHeight * 0.75))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
   return (
-    <div id={domId} className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
+    <div id={domId} ref={cardRef} className={`study-card${nailed ? ' study-card-nailed' : ''}`} style={{ '--c': color }}>
       <div className="study-card-top">
         <span className="study-card-lead">
           <span className="study-qnum" style={{ color }}>Q{index + 1}</span>
@@ -71,42 +123,7 @@ export default function StudyCard({
           )}
         </span>
         <div className="study-card-actions">
-          <button
-            className={`nail-btn${nailed ? ' nailed' : ''}`}
-            onClick={onNail}
-            title={nailed ? 'Nailed It — click to un-nail' : 'Mark as Nailed It'}
-            style={nailed ? { color, borderColor: `color-mix(in srgb, ${color} 38%, transparent)`, background: `color-mix(in srgb, ${color} 8%, transparent)` } : {}}
-          >
-            <Star size={12} fill={nailed ? 'currentColor' : 'none'} />
-            <span className="qmark-label">{nailed ? 'Nailed ✓' : 'Nail It'}</span>
-          </button>
-          <button
-            className={`nail-btn important-study-btn${isImportant ? ' nailed' : ''}`}
-            onClick={isImportant ? onUnmarkImportant : onMarkImportant}
-            title={isImportant ? 'Important — click to remove' : 'Mark as Important'}
-            style={isImportant ? { color: 'var(--imp)', borderColor: 'color-mix(in srgb, var(--imp) 40%, transparent)', background: 'color-mix(in srgb, var(--imp) 10%, transparent)' } : {}}
-          >
-            <Bookmark size={12} fill={isImportant ? 'currentColor' : 'none'} />
-            <span className="qmark-label">{isImportant ? 'Important ✓' : 'Important'}</span>
-          </button>
-          {/* Weak = an Important question you still can't answer, so only those offer it. */}
-          {isImportant && !nailed && onMarkWeak && (
-            <button
-              className={`nail-btn weak-study-btn${isWeak ? ' nailed' : ''}`}
-              onClick={isWeak ? onUnmarkWeak : onMarkWeak}
-              title={isWeak ? 'Weak — click to remove' : 'Mark as Weak — এখনো পারি না'}
-              style={isWeak ? { color: 'var(--weak)', borderColor: 'color-mix(in srgb, var(--weak) 40%, transparent)', background: 'color-mix(in srgb, var(--weak) 10%, transparent)' } : {}}
-            >
-              <Flame size={12} fill={isWeak ? 'currentColor' : 'none'} />
-              <span className="qmark-label">{isWeak ? 'Weak ✓' : 'Weak'}</span>
-            </button>
-          )}
-          {q._id && (
-            <MoreMenu className="nail-btn">
-              <QuestionEditButton question={q} categorySlug={categoryId || q._slug} className="more-menu-item" />
-              <DeleteButton question={q} className="more-menu-item" size={14} />
-            </MoreMenu>
-          )}
+          {actions}
           {shown && (
             <button className="study-toggle" onClick={() => { setShown(false); setSelected(null) }} style={{ color }}>
               Hide
@@ -155,6 +172,13 @@ export default function StudyCard({
           </div>
           <Highlightable as="div" className="explanation-text"
             block="explanation" html={q.explanation} highlights={hlExp} />
+        </div>
+      )}
+
+      {tall && shown && (
+        <div className="study-card-actions study-card-actions-end">
+          {qid && <NoteControl uid={qid} noteEditor={noteEditor} />}
+          {actions}
         </div>
       )}
 
